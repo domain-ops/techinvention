@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import dnaLogo from '../../assets/images/dark_dna_logo_sharp.png';
+const dnaLogo = "/techinvention/TechInvention-gif.gif";
 
 interface SectionDNAProps {
     className?: string;

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { MagicText } from '../../../../components/ui/magic-text';
 import TextReveal from '../../../../components/Common/TextReveal';
 import { SplitTitle } from '../../../../components/Common/SplitTitle';
-import logoDNA from '../../../../assets/images/TechInvention Logo (DNA).png';
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 
 const GlobalProjects = () => {

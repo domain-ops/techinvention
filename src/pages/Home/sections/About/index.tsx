@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 // Using the local CEO portrait and another image for the second profile
 import ceoPortrait from '../../../../assets/images/ceo/syed_ahmed.jpg';
 import elenaPortrait from '../../../../assets/images/testimonial_1.png';
-import logoDNA from '../../../../assets/images/TechInvention Logo (DNA).png';
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const About = () => {
     const { t } = useLanguage();

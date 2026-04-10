@@ -4,7 +4,7 @@ import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import TextReveal from '../../../../components/Common/TextReveal';
 import { SplitTitle } from '../../../../components/Common/SplitTitle';
 import { motion } from 'framer-motion';
-import logoDNA from '../../../../assets/images/TechInvention Logo (DNA).png';
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const VialIcon = ({ color = "currentColor", className = "" }) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke={color} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" className={className}>
