@@ -2,8 +2,6 @@ import React from 'react';
 import Hero from './sections/Hero';
 import OneHealth from './sections/OneHealth';
 import About from './sections/About';
-import Stats from './sections/Stats';
-
 import Horizon from './sections/Horizon';
 import Facilities from './sections/Facilities';
 import AtAGlanceVideo from './sections/AtAGlanceVideo';
@@ -26,7 +24,6 @@ const Home = () => {
             {/* <FloatingDNA /> temporrily removed by request */}
             <Hero />
             <OneHealth />
-            <Stats />
             <About />
             <Horizon />
             <VaccinePipeline />

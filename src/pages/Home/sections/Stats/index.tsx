@@ -6,6 +6,7 @@ import { Trophy, ClipboardPlus, Star, Globe } from 'lucide-react';
 import HospitalImage from '../../../../assets/images/hospital image.webp';
 import { motion, useInView, animate, useScroll, useTransform } from 'framer-motion';
 
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 // Helper component to animate numbers on scroll
 const AnimatedCounter = ({ valueStr }: { valueStr: string }) => {
@@ -68,7 +69,7 @@ const StatBox = ({ icon: Icon, valueStr, label, delay, className = "" }: any) =>
                 <div className="text-4xl lg:text-5xl font-medium tracking-tight mb-2 text-black">
                     <AnimatedCounter valueStr={valueStr} />
                 </div>
-                <div className="text-sm lg:text-base font-medium tracking-wide transition-opacity text-black opacity-80 group-hover:opacity-100">
+                <div className="text-base lg:text-base font-medium tracking-wide transition-opacity text-black opacity-80 group-hover:opacity-100">
                     {label}
                 </div>
             </div>
@@ -87,22 +88,22 @@ const Stats = () => {
     const videoScale = useTransform(scrollYProgress, [0, 1], [1, 2.5]);
 
     return (
-        <section className="-mt-8 lg:-mt-12 pt-16 md:pt-24 lg:pt-32 pb-12 md:pb-24 lg:pb-32 relative bg-white z-20 rounded-t-[2rem] lg:rounded-t-[3rem] shadow-[0_-15px_40px_rgba(0,0,0,0.03)]">
+        <div className="pt-20 md:pt-24 lg:pt-32 relative z-20 w-full mt-12 md:mt-16">
             {/* Background elements */}
-            <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+            <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent" />
             
-
-            
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 block">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
                         
                         {/* Text and Stats Column */}
                         <div className="flex flex-col">
-                            <div className="mb-12">
-                                <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em]  text-[11px] mb-4 block animate-fade-in">{t.header?.tag || "Our Impact"}</span>
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-brand-primary leading-tight tracking-tighter  mb-6">{t.header?.title1 || "Measuring "} <br/><span className="text-brand-secondary">{t.header?.title2 || "Excellence"}</span>
-                                </h2>
-                                <p className="text-black text-lg leading-relaxed max-w-xl">{t.header?.desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
+                            <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
+                                <div className="max-w-xl">
+                                    <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em]  text-[11px] mb-4 block animate-fade-in">{t.header?.tag || "Our Impact"}</span>
+                                    <h2 className="text-3xl sm:text-2xl md:text-3xl font-medium tracking-tight text-brand-primary leading-tight tracking-tighter  mb-6">{t.header?.title1 || "Measuring "} <br/><span className="text-brand-secondary">{t.header?.title2 || "Excellence"}</span>
+                                    </h2>
+                                    <p className="text-black text-base md:text-base leading-relaxed">{t.header?.desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
+                                </div>
                             </div>
                             
                             <div className="grid grid-cols-2 gap-4 w-full max-w-2xl">
@@ -124,7 +125,7 @@ const Stats = () => {
 
                     </div>
             </div>
-        </section>
+        </div>
     );
 };
 

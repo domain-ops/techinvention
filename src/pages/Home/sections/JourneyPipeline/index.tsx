@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../../../context/LanguageContext';
+import { motion } from 'framer-motion';
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const UserGroupIcon = ({ color, className }: { color: string, className?: string }) => (
   <svg viewBox="0 0 100 100" className={className} fill={color}>
@@ -30,19 +32,35 @@ const JourneyPipeline = () => {
     ]) as { title: string, desc: string }[];
 
     return (
-        <section id="journey-pipeline" className="relative py-16 md:py-24 bg-white overflow-hidden">
+        <section id="journey-pipeline" className="py-16 md:py-20 relative bg-white overflow-hidden">
             {/* max-w-7xl allows it to expand to 1280px on large screens */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative w-full overflow-x-auto pb-8 scrollbar-hide">
                 
                 {/* Header Title */}
-                <div className="mb-16 flex flex-col items-start sticky left-0 min-w-[300px]">
-                    <span className="text-[10px] md:text-xs font-semibold tracking-[0.4em] text-[#2F62A4] mb-3 uppercase">
-                        {t('journeyPipeline.tag') as string}
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight">
-                        <span className="text-[#2F62A4]">{t('journeyPipeline.title1') as string}</span>
-                        <span className="text-[#6D8337]">{t('journeyPipeline.title2') as string}</span>
-                    </h2>
+                <div className="mb-16 flex flex-col md:flex-row md:items-center justify-between sticky left-0 min-w-[300px] gap-8">
+                    <div className="flex flex-col items-start">
+                        <span className="text-[10px] md:text-xs font-semibold tracking-[0.4em] text-[#2F62A4] mb-3 uppercase">
+                            {t('journeyPipeline.tag') as string}
+                        </span>
+                        <h2 className="text-2xl md:text-3xl font-medium tracking-tight">
+                            <span className="text-[#2F62A4]">{t('journeyPipeline.title1') as string}</span>
+                            <span className="text-[#6D8337]">{t('journeyPipeline.title2') as string}</span>
+                        </h2>
+                    </div>
+                    {/* Animated Inline Logo aligned with title */}
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                        <motion.img 
+                            src={logoDNA}
+                            alt="TechInvention Logo"
+                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ 
+                                opacity: { duration: 1.2, ease: "easeOut" },
+                                scale: { duration: 1.2, ease: "easeOut" }
+                            }}
+                        />
+                    </div>
                 </div>
 
                 {/* Fluid Fixed-Aspect Container (Desktop) */}
@@ -53,24 +71,24 @@ const JourneyPipeline = () => {
                     {/* viewBox perfectly maps the exact geometric layout lines directly to the container overlay */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" width="100%" height="100%" viewBox="0 0 1024 600" preserveAspectRatio="none">
                         {/* Top-Left Yellow Line (to Phase 1) */}
-                        <path d="M 100 210 L 100 230 L 342 230 L 342 260" fill="none" stroke="#87A840" strokeWidth="2.5" strokeLinejoin="round" />
+                        <path d="M 100 210 L 100 230 L 350 230 L 350 270" fill="none" stroke="#87A840" strokeWidth="2.5" strokeLinejoin="round" />
                         <circle cx="100" cy="210" r="5.5" fill="#87A840" stroke="#fff" strokeWidth="2" />
 
                         {/* Top-Right Yellow Line (to Phase 2) */}
-                        <path d="M 850 210 L 850 230 L 466 230 L 466 260" fill="none" stroke="#87A840" strokeWidth="2.5" strokeLinejoin="round" />
+                        <path d="M 850 210 L 850 230 L 445 230 L 445 270" fill="none" stroke="#87A840" strokeWidth="2.5" strokeLinejoin="round" />
                         <circle cx="850" cy="210" r="5.5" fill="#87A840" stroke="#fff" strokeWidth="2" />
 
                         {/* Bottom-Left Blue/Dark Line (to Phase 3) */}
-                        <path d="M 400 390 L 400 370 L 590 370 L 590 340" fill="none" stroke="#2065B3" strokeWidth="2.5" strokeLinejoin="round" />
+                        <path d="M 400 390 L 400 370 L 540 370 L 540 330" fill="none" stroke="#2065B3" strokeWidth="2.5" strokeLinejoin="round" />
                         <circle cx="400" cy="390" r="5.5" fill="#fff" stroke="#2065B3" strokeWidth="3" />
 
                         {/* Bottom-Right Pink Line (to Phase 4) */}
-                        <path d="M 850 390 L 850 370 L 714 370 L 714 340" fill="none" stroke="#1755A6" strokeWidth="2.5" strokeLinejoin="round" />
+                        <path d="M 850 390 L 850 370 L 636 370 L 636 330" fill="none" stroke="#1755A6" strokeWidth="2.5" strokeLinejoin="round" />
                         <circle cx="850" cy="390" r="5.5" fill="#fff" stroke="#1755A6" strokeWidth="3" />
                     </svg>
 
                     {/* Syringe Component */}
-                    <div className="absolute flex items-center z-20" 
+                    <div className="absolute flex items-center z-20 origin-center scale-[0.75]" 
                          style={{ top: '43.333%', left: '14.648%', width: '68.359%', height: '13.333%' }}>
                         
                         {/* Plunger Handle */}
@@ -105,7 +123,7 @@ const JourneyPipeline = () => {
                     
                     {/* Top Left Text Block */}
                     <div className="absolute" style={{ top: '8.333%', left: '4.882%', width: '34.179%' }}>
-                        <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[0].title}</h3>
+                        <h3 className="font-bold text-[clamp(15px,1.5vw,20px)] mb-2 text-[#000]">{boxes[0].title}</h3>
                         <div className="w-full h-[2px] bg-[#87A840] mb-3"></div>
                         <div className="flex justify-between items-start gap-2">
                             <p className="text-[clamp(11px,1.2vw,14px)] leading-relaxed text-gray-700 font-medium max-w-[70%]">
@@ -117,7 +135,7 @@ const JourneyPipeline = () => {
 
                     {/* Top Right Text Block */}
                     <div className="absolute" style={{ top: '8.333%', left: '53.71%', width: '34.179%' }}>
-                        <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[1].title}</h3>
+                        <h3 className="font-bold text-[clamp(15px,1.5vw,20px)] mb-2 text-[#000]">{boxes[1].title}</h3>
                         <div className="w-full h-[2px] bg-[#87A840] mb-3"></div>
                         <div className="flex justify-between items-start gap-2">
                             <p className="text-[clamp(11px,1.2vw,14px)] leading-relaxed text-gray-700 font-medium max-w-[70%]">
@@ -129,7 +147,7 @@ const JourneyPipeline = () => {
 
                     {/* Bottom Left Text Block */}
                     <div className="absolute" style={{ top: '68.333%', left: '4.882%', width: '34.179%' }}>
-                        <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[2].title}</h3>
+                        <h3 className="font-bold text-[clamp(15px,1.5vw,20px)] mb-2 text-[#000]">{boxes[2].title}</h3>
                         <div className="w-full h-[1px] bg-black/30 mb-4"></div>
                         <div className="flex items-start gap-4">
                             <UserGroupIcon color="#2065B3" className="w-[70px] shrink-0 border border-[#2065B3]/20 p-2 rounded-xl bg-white" />
@@ -141,7 +159,7 @@ const JourneyPipeline = () => {
 
                     {/* Bottom Right Text Block */}
                     <div className="absolute" style={{ top: '68.333%', left: '53.71%', width: '34.179%' }}>
-                        <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[3].title}</h3>
+                        <h3 className="font-bold text-[clamp(15px,1.5vw,20px)] mb-2 text-[#000]">{boxes[3].title}</h3>
                         <div className="w-full h-[1px] bg-[#1755A6] mb-4"></div>
                         <div className="flex items-start gap-4">
                             <div className="relative shrink-0 w-[60px] h-[60px] border-[2px] border-[#1755A6] rounded-full flex items-center justify-center bg-white">
@@ -160,7 +178,7 @@ const JourneyPipeline = () => {
                 <div className="lg:hidden w-full max-w-2xl mx-auto flex flex-col gap-10 mt-8">
                     
                     {/* Mobile Syringe Graphic */}
-                    <div className="w-full aspect-[800/150] relative mb-6">
+                    <div className="w-full max-w-[85%] mx-auto aspect-[800/120] relative mb-6">
                         <div className="absolute flex items-center w-full h-full left-0 top-0">
                             {/* Plunger Handle */}
                             <div className="w-[10%] h-[50%] flex items-center justify-end">
@@ -197,9 +215,9 @@ const JourneyPipeline = () => {
                         <div className="inline-block px-3 py-1 bg-[#5C7625] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[0]}
                         </div>
-                        <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[0].title}</h3>
+                        <h3 className="font-bold text-[clamp(16px,4vw,20px)] mb-3 text-[#000]">{boxes[0].title}</h3>
                         <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">
+                            <p className="text-base leading-relaxed text-gray-700 font-medium">
                                 {boxes[0].desc}
                             </p>
                             <UserGroupIcon color="#5C7625" className="w-[60px] shrink-0" />
@@ -212,9 +230,9 @@ const JourneyPipeline = () => {
                         <div className="inline-block px-3 py-1 bg-[#87A840] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[1]}
                         </div>
-                        <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[1].title}</h3>
+                        <h3 className="font-bold text-[clamp(16px,4vw,20px)] mb-3 text-[#000]">{boxes[1].title}</h3>
                         <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">
+                            <p className="text-base leading-relaxed text-gray-700 font-medium">
                                 {boxes[1].desc}
                             </p>
                             <UserGroupIcon color="#87A840" className="w-[60px] shrink-0" />
@@ -227,9 +245,9 @@ const JourneyPipeline = () => {
                         <div className="inline-block px-3 py-1 bg-[#2065B3] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[2]}
                         </div>
-                        <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[2].title}</h3>
+                        <h3 className="font-bold text-[clamp(16px,4vw,20px)] mb-3 text-[#000]">{boxes[2].title}</h3>
                         <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">
+                            <p className="text-base leading-relaxed text-gray-700 font-medium">
                                 {boxes[2].desc}
                             </p>
                             <UserGroupIcon color="#2065B3" className="w-[60px] shrink-0 border border-[#2065B3]/20 p-2 rounded-xl bg-white" />
@@ -242,9 +260,9 @@ const JourneyPipeline = () => {
                         <div className="inline-block px-3 py-1 bg-[#1755A6] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[3]}
                         </div>
-                        <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[3].title}</h3>
+                        <h3 className="font-bold text-[clamp(16px,4vw,20px)] mb-3 text-[#000]">{boxes[3].title}</h3>
                         <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">
+                            <p className="text-base leading-relaxed text-gray-700 font-medium">
                                 {boxes[3].desc}
                             </p>
                             <div className="relative shrink-0 w-[60px] h-[60px] border-[2px] border-[#1755A6] rounded-full flex items-center justify-center bg-white">

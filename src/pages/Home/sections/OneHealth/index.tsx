@@ -11,7 +11,9 @@ import innovationImg from '../../../../assets/images/one_health_innovation.png';
 
 import TextReveal from '../../../../components/Common/TextReveal';
 import { SplitTitle } from '../../../../components/Common/SplitTitle';
+import { motion } from 'framer-motion';
 
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const OneHealth = () => {
     const { t } = useLanguage();
@@ -37,29 +39,42 @@ const OneHealth = () => {
     ];
 
     return (
-        <section id="one-health" className="py-24 lg:py-32 bg-white relative border-y border-slate-100 scroll-mt-20">
+        <section id="one-health" className="py-16 md:py-20 bg-white relative border-y border-slate-100 scroll-mt-20">
             
 
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header Section */}
-                <ScrollReveal direction="up">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-                        <div className="w-full">
-                            <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em] text-[11px] mb-4 block animate-fade-in">
-                                {t('oneHealth.tag')}
-                            </span>
-                            <div className="mt-4">
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight leading-tight tracking-tighter animate-fade-in lg:whitespace-nowrap">
-                                    <SplitTitle title={t('oneHealth.title').replace('{bioInnovation}', t('oneHealth.bioInnovation'))} />
-                                </h2>
-                            </div>
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
+                    <ScrollReveal direction="up" className="w-full">
+                        <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em] text-[11px] mb-4 block animate-fade-in">
+                            {t('oneHealth.tag')}
+                        </span>
+                        <div className="mt-4">
+                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight leading-tight tracking-tighter animate-fade-in lg:whitespace-nowrap">
+                                <SplitTitle title={t('oneHealth.title').replace('{bioInnovation}', t('oneHealth.bioInnovation'))} />
+                            </h2>
                         </div>
+                    </ScrollReveal>
+                    
+                    {/* Animated Inline Logo aligned with title */}
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                        <motion.img 
+                            src={logoDNA}
+                            alt="TechInvention Logo"
+                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ 
+                                opacity: { duration: 1.2, ease: "easeOut" },
+                                scale: { duration: 1.2, ease: "easeOut" }
+                            }}
+                        />
                     </div>
-                </ScrollReveal>
+                </div>
 
                 {/* Accordion Slider Section */}
                 <ScrollReveal direction="up" delay={0.2}>
-                    <div className="relative z-10 min-h-[600px] lg:min-h-[700px]">
+                    <div className="relative z-10 w-full">
                         <AccordionSlider slides={slides} />
                     </div>
                 </ScrollReveal>

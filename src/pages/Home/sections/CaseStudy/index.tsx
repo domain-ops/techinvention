@@ -9,6 +9,8 @@ import vaccineImg from '../../../../assets/images/case-study/vaccine_lab.png';
 import diagnosticImg from '../../../../assets/images/case-study/diagnostic_test.png';
 import biotechImg from '../../../../assets/images/case-study/biotech_research.png';
 
+const logoDNA = "/techinvention/TechInvention-gif.gif";
+
 const FEATURES = [
   {
     id: "vaccines",
@@ -121,18 +123,34 @@ const CaseStudy = () => {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 bg-brand-primary/5 border-y border-brand-primary/10 relative">
+    <section className="py-16 md:py-20 w-full bg-brand-primary/5 border-y border-brand-primary/10 relative">
         
 
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 relative z-10">
-            <ScrollReveal direction="up" delay={0.2} className="text-left">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tighter text-brand-primary mb-5">
-                    {t('caseStudy.titlePrefix')} <span className="text-brand-secondary">{t('caseStudy.titleHighlight')}</span>
-                </h2>
-                <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
-                    {t('caseStudy.desc')}
-                </p>
-            </ScrollReveal>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                <ScrollReveal direction="up" delay={0.2} className="text-left">
+                    <h2 className="text-3xl sm:text-2xl md:text-3xl font-medium tracking-tighter text-brand-primary mb-5">
+                        {t('caseStudy.titlePrefix')} <span className="text-brand-secondary">{t('caseStudy.titleHighlight')}</span>
+                    </h2>
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl">
+                        {t('caseStudy.desc')}
+                    </p>
+                </ScrollReveal>
+                {/* Animated Inline Logo aligned with title */}
+                <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                    <motion.img 
+                        src={logoDNA}
+                        alt="TechInvention Logo"
+                        className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ 
+                            opacity: { duration: 1.2, ease: "easeOut" },
+                            scale: { duration: 1.2, ease: "easeOut" }
+                        }}
+                    />
+                </div>
+            </div>
         </div>
 
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
@@ -174,7 +192,7 @@ const CaseStudy = () => {
                                         <div className={cn("flex items-center justify-center transition-colors duration-500", isActive ? "text-white" : "text-brand-primary/60 group-hover:text-brand-primary")}>
                                             <feature.icon size={22} strokeWidth={2} />
                                         </div>
-                                        <span className="font-semibold text-sm md:text-base tracking-wide uppercase">
+                                        <span className="font-semibold text-base md:text-base tracking-wide uppercase">
                                             {t(`caseStudy.features.${index}.label`)}
                                         </span>
                                     </button>

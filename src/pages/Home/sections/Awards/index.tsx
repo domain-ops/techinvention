@@ -2,12 +2,15 @@ import React from 'react';
 import { useLanguage } from '../../../../context/LanguageContext';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import awardImage from '../../../../assets/images/Award+Section-Top100Tech+24.webp';
+import { motion } from 'framer-motion';
+
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const Awards = () => {
     const { t } = useLanguage();
 
     return (
-        <section id="awards" className="relative py-16 md:py-24 bg-white border-t border-slate-100 overflow-hidden">
+        <section id="awards" className="py-16 md:py-20 relative bg-white border-t border-slate-100 overflow-hidden">
             
             {/* Inline styles for seamless marquee and pause-on-hover */}
             <style>{`
@@ -28,18 +31,34 @@ const Awards = () => {
             `}</style>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full mb-12">
-                <ScrollReveal direction="up">
-                    <div className="text-center md:text-left">
-                        <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary mb-4 block uppercase">
-                            {t('awards.tag') as string}
-                        </span>
-                        <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-brand-primary tracking-wide">
-                            {(t('awards.title') as string).split('{latestNews}')[0]}
-                            <span className="font-medium text-brand-secondary">{t('awards.accolades') as string}</span>
-                            {(t('awards.title') as string).split('{latestNews}')[1] || ''}
-                        </h2>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                    <ScrollReveal direction="up">
+                        <div className="text-center md:text-left">
+                            <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary mb-4 block uppercase">
+                                {t('awards.tag') as string}
+                            </span>
+                            <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-brand-primary tracking-wide">
+                                {(t('awards.title') as string).split('{latestNews}')[0]}
+                                <span className="font-medium text-brand-secondary">{t('awards.accolades') as string}</span>
+                                {(t('awards.title') as string).split('{latestNews}')[1] || ''}
+                            </h2>
+                        </div>
+                    </ScrollReveal>
+                    {/* Animated Inline Logo aligned with title */}
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                        <motion.img 
+                            src={logoDNA}
+                            alt="TechInvention Logo"
+                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ 
+                                opacity: { duration: 1.2, ease: "easeOut" },
+                                scale: { duration: 1.2, ease: "easeOut" }
+                            }}
+                        />
                     </div>
-                </ScrollReveal>
+                </div>
             </div>
 
             {/* Infinite Looping Slider */}

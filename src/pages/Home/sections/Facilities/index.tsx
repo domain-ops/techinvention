@@ -37,7 +37,7 @@ const Facilities = () => {
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + slideData.length) % slideData.length);
 
     return (
-        <section id="infrastructure" className="w-full bg-gray-50 py-24 pb-32 relative overflow-hidden border-y border-gray-200">
+        <section id="infrastructure" className="py-16 md:py-20 w-full bg-gray-50 relative overflow-hidden border-y border-gray-200">
             <div className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16">
 
                 <div className="relative bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 flex flex-col-reverse md:flex-row min-h-[600px] xl:w-11/12 mx-auto">

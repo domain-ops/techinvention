@@ -113,9 +113,8 @@ export default function ProductSlider() {
 
     return (
         <ScrollReveal direction="up">
-            <section
-            id="product-slider"
-            className="carousel-wrapper"
+            <section id="product-slider"
+            className="py-16 md:py-20 carousel-wrapper"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 onTouchStart={handleTouchStart}

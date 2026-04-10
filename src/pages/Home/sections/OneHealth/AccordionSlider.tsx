@@ -19,7 +19,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
     const [expandedIndex, setExpandedIndex] = useState<number>(0);
 
     return (
-        <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[700px] w-full min-h-[600px] lg:min-h-[700px] opacity-100">
+        <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[500px] w-full min-h-[500px] lg:min-h-[500px] opacity-100">
             {slides.map((slide, index) => (
                 <motion.div
                     key={index}
@@ -27,7 +27,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                     animate={{
                         flex: expandedIndex === index ? 5 : 1,
                         height: expandedIndex === index ? 'auto' : '90px',
-                        minHeight: expandedIndex === index ? '500px' : '90px',
+                        minHeight: expandedIndex === index ? '400px' : '90px',
                     }}
                     transition={{
                         duration: 0.7,
@@ -70,7 +70,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                     <span className="text-white/80 text-[10px] sm:text-[11px] font-medium tracking-tight  tracking-[0.4em] mb-4 block">
                                         {slide.tag}
                                     </span>
-                                    <h4 className="text-white text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-tight mb-6  tracking-tighter">
+                                    <h4 className="text-white text-3xl sm:text-2xl md:text-3xl font-medium tracking-tight leading-tight mb-6  tracking-tighter">
                                         {slide.title}
                                     </h4>
                                     <p className="text-white/90 text-lg sm:text-base font-medium leading-relaxed mb-10 max-w-md">
@@ -100,7 +100,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                     exit={{ opacity: 0 }}
                                     className="h-full flex items-center lg:items-end lg:justify-start"
                                 >
-                                    <div className="lg:-rotate-90 lg:whitespace-nowrap lg:origin-left font-medium tracking-tight text-white/50  tracking-[0.4em] text-lg lg:translate-x-6 lg:-translate-y-8 transition-all duration-500 group-hover:text-white group-hover:scale-105">
+                                    <div className="lg:-rotate-90 lg:whitespace-nowrap lg:origin-left font-medium tracking-tight text-white drop-shadow-lg tracking-[0.4em] text-lg lg:translate-x-6 lg:-translate-y-8 transition-all duration-500 group-hover:scale-105">
                                         {slide.title}
                                     </div>
                                 </motion.div>

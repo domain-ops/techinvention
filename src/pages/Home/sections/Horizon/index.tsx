@@ -5,12 +5,13 @@ import { useLanguage } from '../../../../context/LanguageContext';
 import horizonImg from '../../../../assets/images/hor.jpg';
 import gcmcImg from '../../../../assets/images/banner1.jpg';
 import { LocationCard } from '../../../../components/ui/location-card';
+import { motion } from 'framer-motion';
 
 const Horizon = () => {
     const { t } = useLanguage();
 
     return (
-        <section id="gcmc-innovation-bento" className="relative py-24 md:py-32 bg-brand-primary/5 border-y border-brand-primary/10">
+        <section id="gcmc-innovation-bento" className="py-16 md:py-20 relative bg-brand-primary/5 border-y border-brand-primary/10">
             {/* Background Texture */}
             <div className="absolute inset-0 noise-texture opacity-[0.02] mix-blend-overlay pointer-events-none" />
 

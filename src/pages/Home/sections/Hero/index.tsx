@@ -6,11 +6,11 @@ import { useLanguage } from '../../../../context/LanguageContext';
 import { Typewriter } from '../../../../components/ui/typewriter-text';
 import { MagneticText } from '../../../../components/ui/morphing-cursor';
 
-import diagnosticBg from '../../../../assets/images/diagnostics_hero_hq.png';
-import vaccineBg from '../../../../assets/images/vaccine_hero_hq.png';
-import biotherapeuticsBg from '../../../../assets/images/biotherapeutics_hero_hq.png';
+import banner1 from '../../../../assets/images/banner-imge-1.jpg';
+import banner2 from '../../../../assets/images/banner-imge-2.jpg';
+import banner3 from '../../../../assets/images/banner-imge-3.jpeg';
 
-const bgImages = [diagnosticBg, vaccineBg, biotherapeuticsBg];
+const bgImages = [banner1, banner2, banner3];
 
 // Reusable Staggered Text Reveal Component with Hover
 const RevealText = ({ text, delay = 0, className = "" }: { text: string, delay?: number, className?: string }) => {
@@ -59,7 +59,7 @@ const Hero = () => {
     const secondaryCta = t('hero.secondaryCta') as string || "Partner With Us";
 
     return (
-        <section id="hero" className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-slate-900">
+        <section id="hero" className="py-16 md:py-20 relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Dynamic Background Images */}
             <div className="absolute inset-0 z-0 overflow-hidden bg-black">
                 <AnimatePresence mode="popLayout">
@@ -105,7 +105,7 @@ const Hero = () => {
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 flex flex-col justify-center items-center text-center pt-24 pb-16">
                 
                 {/* Main Headline (Perfectly centered Grid layout eliminates wobble during typing) */}
-                <div className="w-full mb-16 sm:mb-24 drop-shadow-2xl grid grid-cols-[1fr_auto_1fr] items-center gap-2 md:gap-4 whitespace-nowrap leading-[1.2]">
+                <div className="w-full mb-8 sm:mb-10 drop-shadow-2xl grid grid-cols-[1fr_auto_1fr] items-center gap-2 md:gap-4 whitespace-nowrap leading-[1.2]">
                     <div className="flex justify-end text-[4.5vw] sm:text-[3.5vw] md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-widest sm:tracking-[0.15em] text-white uppercase drop-shadow-xl">
                         <MagneticText 
                             text={<RevealText text={brandName} delay={0.2} />}
@@ -126,8 +126,15 @@ const Hero = () => {
                     </motion.div>
                 </div>
 
-
-
+                {/* Subtitle */}
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+                    className="text-white/95 drop-shadow-lg text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-12 sm:mb-16 max-w-3xl text-center"
+                >
+                    Enabling One Health through Bio-Innovation.
+                </motion.p>
 
                 {/* Call to Actions */}
                 <motion.div
@@ -140,7 +147,7 @@ const Hero = () => {
                         href="#about"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="group relative flex items-center justify-center gap-3 sm:gap-4 bg-brand-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-lg font-medium tracking-tight transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-[0_10px_30px_rgba(25,85,166,0.3)] overflow-hidden w-full sm:w-auto"
+                        className="group relative flex items-center justify-center gap-3 sm:gap-4 bg-brand-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-medium tracking-tight transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-[0_10px_30px_rgba(25,85,166,0.3)] overflow-hidden w-full sm:w-auto"
                     >
                         <span className="relative z-10 tracking-widest text-[10px] sm:text-[10px] uppercase">
                             {primaryCta}
@@ -159,7 +166,7 @@ const Hero = () => {
                         href="#contact"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="group flex items-center justify-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-lg font-medium tracking-tight transition-all duration-300 hover:bg-white/20 hover:shadow-lg w-full sm:w-auto drop-shadow-md"
+                        className="group flex items-center justify-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-medium tracking-tight transition-all duration-300 hover:bg-white/20 hover:shadow-lg w-full sm:w-auto drop-shadow-md"
                     >
                         <span className="tracking-widest text-[10px] sm:text-[10px] uppercase">
                             {secondaryCta}

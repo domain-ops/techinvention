@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
-import corporateImg from '../../../assets/images/about_corporate.png';
-import labImg from '../../../assets/images/about_lab.png';
+import corporateImg from '../../../assets/images/banner-imge-1.jpg';
+import labImg from '../../../assets/images/banner-imge-2.jpg';
 import TextReveal from '../../../components/Common/TextReveal';
 
 interface AboutBannerProps {

@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 // Using the local CEO portrait and another image for the second profile
 import ceoPortrait from '../../../../assets/images/ceo/syed_ahmed.jpg';
 import elenaPortrait from '../../../../assets/images/testimonial_1.png';
+import Stats from '../Stats';
+
 const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const About = () => {
@@ -32,7 +34,7 @@ const About = () => {
     const displayProfiles = profiles.slice(0, 2);
 
     return (
-        <section id="about" className="relative bg-brand-primary/5 py-16 md:py-24 border-y border-brand-primary/10">
+        <section id="about" className="py-16 md:py-20 relative bg-brand-primary/5 border-y border-brand-primary/10">
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
@@ -40,13 +42,13 @@ const About = () => {
                         <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
                             {t('about.leadership.title') as string || "Our Leadership"}
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-medium tracking-wide whitespace-nowrap">
+                        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide whitespace-nowrap">
                             <SplitTitle title={t('about.leadership.tagline') as string || "Lorem Ipsum"} />
                         </h2>
                     </ScrollReveal>
 
-                    {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-24 sm:w-28 lg:w-32 mr-8 lg:mr-16">
+                    {/* Animated Inline Logo */}
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
                         <motion.img 
                             src={logoDNA}
                             alt="TechInvention Logo"
@@ -91,7 +93,7 @@ const About = () => {
                                     <div className="mb-auto mt-8 hidden md:block">
                                         <div className="w-10 h-1 bg-white/50 rounded-full" />
                                     </div>
-                                    <p className="text-white/95 text-base md:text-lg leading-relaxed line-clamp-4 lg:line-clamp-6 mb-8 font-medium">
+                                    <p className="text-white/95 text-base md:text-base leading-relaxed line-clamp-4 lg:line-clamp-6 mb-8 font-medium">
                                         "{profile.message || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}"
                                     </p>
 
@@ -131,6 +133,8 @@ const About = () => {
                     ))}
                 </div>
             </div>
+
+            <Stats />
 
             {/* Subtle Noise Texture for tactile feel */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.02] noise-texture mix-blend-overlay" />

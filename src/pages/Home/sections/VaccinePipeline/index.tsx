@@ -36,7 +36,7 @@ const VaccinePipeline = () => {
     if (!pipelineData.length) return null;
 
     return (
-        <section id="vaccine-pipeline" className="relative py-24 md:py-32 bg-brand-primary/5 overflow-hidden border-t border-brand-primary/10">
+        <section id="vaccine-pipeline" className="pt-16 md:pt-20 pb-4 md:pb-8 relative bg-brand-primary/5 overflow-hidden border-t border-brand-primary/10">
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
                     <div className="max-w-3xl">
@@ -45,13 +45,13 @@ const VaccinePipeline = () => {
                                 {t('vaccinePipeline.tag') || "R&D INNOVATION"}
                             </span>
                         </ScrollReveal>
-                        <h2 className="text-4xl md:text-5xl font-medium tracking-wide mb-6">
+                        <h2 className="text-2xl md:text-3xl font-medium tracking-wide mb-6">
                             <SplitTitle title={t('vaccinePipeline.title').replace('{pipeline}', t('vaccinePipeline.pipeline'))} />
                         </h2>
                     </div>
 
                     {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-24 sm:w-28 lg:w-32 mr-8 lg:mr-16">
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
                         <motion.img 
                             src={logoDNA}
                             alt="TechInvention Logo"
@@ -119,7 +119,7 @@ const VaccinePipeline = () => {
                                             </div>
 
                                             {/* Tracking Line Area */}
-                                            <div className="relative flex items-center py-6 w-full pr-12 pl-16 pointer-events-none">
+                                            <div className="relative flex items-center py-6 w-full pr-12 pl-0 pointer-events-none">
                                                 <div className="relative w-full h-24 flex items-center">
                                                     
                                                     {/* Central tracking line connecting nodes */}
@@ -131,27 +131,18 @@ const VaccinePipeline = () => {
                                                         className="h-1.5 z-10 rounded-full"
                                                         style={{ backgroundColor: item.color }}
                                                     />
-                                                    
-                                                    {/* Large Left Start Node Bubble */}
-                                                    <motion.div 
-                                                        initial={{ scale: 0 }}
-                                                        whileInView={{ scale: 1 }}
-                                                        viewport={{ once: true }}
-                                                        transition={{ type: "spring", duration: 0.8 }}
-                                                        className="absolute -left-12 w-20 h-20 flex flex-col items-center justify-center bg-white rounded-full shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border-[3px] border-slate-50 z-20 flex-shrink-0"
-                                                    >
-                                                        <VialIcon className="w-8 h-8 md:w-10 md:h-10 text-brand-primary" />
-                                                    </motion.div>
 
-                                                    {/* End Node Circle (Empty Ring) */}
+                                                    {/* End Node Vial (Tip of progress) */}
                                                     <motion.div 
                                                         initial={{ opacity: 0, scale: 0 }}
                                                         whileInView={{ opacity: 1, scale: 1 }}
                                                         viewport={{ once: true }}
                                                         transition={{ duration: 0.5, delay: 1.6 }}
-                                                        className="absolute w-5 h-5 rounded-full bg-white border-[3px] z-20"
-                                                        style={{ left: lineWidthPercent, borderColor: item.color, transform: 'translateX(-50%)' }}
-                                                    />
+                                                        className="absolute z-20"
+                                                        style={{ left: lineWidthPercent, transform: 'translateX(-25%)' }}
+                                                    >
+                                                        <VialIcon className="w-7 h-7" color={item.color} />
+                                                    </motion.div>
 
                                                     {/* Sub-label next to end node */}
                                                     <motion.div
@@ -159,8 +150,8 @@ const VaccinePipeline = () => {
                                                         whileInView={{ opacity: 1, x: 0 }}
                                                         viewport={{ once: true }}
                                                         transition={{ delay: 1.8 }}
-                                                        className="absolute text-[11px] text-black font-medium tracking-tight whitespace-nowrap z-30"
-                                                        style={{ left: `calc(${lineWidthPercent} + 1.25rem)` }}
+                                                        className="absolute text-[12px] text-black font-semibold tracking-tight whitespace-nowrap z-30"
+                                                        style={{ left: `calc(${lineWidthPercent} + 28px)` }}
                                                     >
                                                         {idx % 2 === 0 ? t('vaccinePipeline.targetAdults') as string : t('vaccinePipeline.targetInfants') as string}
                                                     </motion.div>
@@ -241,9 +232,11 @@ const VaccinePipeline = () => {
                                             whileInView={{ opacity: 1, scale: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 1.6 }}
-                                            className="absolute w-4 h-4 rounded-full bg-white border-[3px] top-1/2 -translate-y-1/2 shadow-sm"
-                                            style={{ left: lineWidthPercent, borderColor: item.color, transform: 'translate(-50%, -50%)' }}
-                                        />
+                                            className="absolute top-1/2 shadow-sm z-10"
+                                            style={{ left: lineWidthPercent, transform: 'translate(-25%, -50%)' }}
+                                        >
+                                            <VialIcon className="w-5 h-5 bg-white rounded-full drop-shadow-sm" color={item.color} />
+                                        </motion.div>
                                     </div>
                                 </div>
 

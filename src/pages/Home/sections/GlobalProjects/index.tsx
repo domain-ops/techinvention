@@ -14,7 +14,7 @@ const GlobalProjects = () => {
     const { t } = useLanguage();
 
     return (
-        <section id="global-projects" className="relative py-12 md:py-24 bg-white">
+        <section id="global-projects" className="py-16 md:py-20 relative bg-white">
             <div className="max-w-[1400px] mx-auto px-6 relative z-10">
                 {/* Header Content */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-16 gap-8">
@@ -26,7 +26,7 @@ const GlobalProjects = () => {
                         </ScrollReveal>
 
                         <div className="mt-4 mb-6">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-medium tracking-wide mb-6">
+                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide mb-6">
                                 <SplitTitle title={t('globalProjects.title').replace('{partners}', t('globalProjects.partners'))} />
                             </h2>
                         </div>
@@ -34,13 +34,13 @@ const GlobalProjects = () => {
                         <div className="max-w-2xl">
                             <MagicText
                                 text={t('globalProjects.desc')}
-                                className="font-medium tracking-tight text-brand-content text-lg md:text-xl lg:text-[1.35rem] leading-relaxed text-left lg:text-justify"
+                                className="font-medium tracking-tight text-brand-content text-base md:text-lg lg:text-[1.35rem] leading-relaxed text-left lg:text-justify"
                             />
                         </div>
                     </div>
 
                     {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-24 sm:w-28 lg:w-32 mr-8 lg:mr-16">
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
                         <motion.img 
                             src={logoDNA}
                             alt="TechInvention Logo"
@@ -66,25 +66,25 @@ const GlobalProjects = () => {
                                 <div className="relative flex items-center justify-center w-4 h-4">
                                     <div className="w-2.5 h-2.5 rounded-full bg-[#1e40af]"></div>
                                 </div>
-                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Consultancy Projects</span>
+                                <span className="text-base font-medium text-gray-700 dark:text-gray-300">Consultancy Projects</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="relative flex items-center justify-center w-4 h-4">
                                     <div className="w-2.5 h-2.5 rounded-full bg-[#4d7c0f]"></div>
                                 </div>
-                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Channel Partners</span>
+                                <span className="text-base font-medium text-gray-700 dark:text-gray-300">Channel Partners</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="relative flex items-center justify-center w-4 h-4">
                                     <div className="w-2.5 h-2.5 rounded-full bg-[#eab308]"></div>
                                 </div>
-                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Technology Transfer Projects</span>
+                                <span className="text-base font-medium text-gray-700 dark:text-gray-300">Technology Transfer Projects</span>
                             </div>
                             <div className="flex items-center gap-3 mt-1 pt-3 border-t border-gray-200 dark:border-white/10">
                                 <div className="relative flex items-center justify-center w-4 h-4">
                                     <div className="w-2.5 h-2.5 rounded-full bg-slate-800 dark:bg-white"></div>
                                 </div>
-                                <span className="text-sm font-bold text-gray-900 dark:text-white">TechInvention</span>
+                                <span className="text-base font-bold text-gray-900 dark:text-white">TechInvention</span>
                             </div>
                         </div>
                     </div>

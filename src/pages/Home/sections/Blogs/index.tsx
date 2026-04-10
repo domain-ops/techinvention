@@ -10,23 +10,40 @@ import diagnosticImg from '../../../../assets/images/case-study/diagnostic_test.
 import biotechImg from '../../../../assets/images/case-study/biotech_research.png';
 
 const IMAGES = [vaccineImg, diagnosticImg, biotechImg];
+const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const Blogs = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="relative w-full py-20 md:py-32 bg-brand-primary/5 border-t border-brand-primary/10">
+        <section className="py-16 md:py-20 relative w-full bg-brand-primary/5 border-t border-brand-primary/10">
             <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header */}
-                <ScrollReveal direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tighter text-brand-primary mb-5">
-                        {t('blogs.titlePrefix')} <span className="text-brand-secondary">{t('blogs.titleHighlight')}</span>
-                    </h2>
-                    <p className="text-gray-600 text-lg md:text-xl">
-                        {t('blogs.desc')}
-                    </p>
-                </ScrollReveal>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 max-w-7xl mx-auto mb-16">
+                    <ScrollReveal direction="up" delay={0.1} className="text-center md:text-left max-w-3xl">
+                        <h2 className="text-3xl sm:text-2xl md:text-3xl font-medium tracking-tighter text-brand-primary mb-5">
+                            {t('blogs.titlePrefix')} <span className="text-brand-secondary">{t('blogs.titleHighlight')}</span>
+                        </h2>
+                        <p className="text-gray-600 text-base md:text-lg">
+                            {t('blogs.desc')}
+                        </p>
+                    </ScrollReveal>
+                    {/* Animated Inline Logo aligned with title */}
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                        <motion.img 
+                            src={logoDNA}
+                            alt="TechInvention Logo"
+                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ 
+                                opacity: { duration: 1.2, ease: "easeOut" },
+                                scale: { duration: 1.2, ease: "easeOut" }
+                            }}
+                        />
+                    </div>
+                </div>
 
                 {/* Grid */}
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -62,14 +79,14 @@ const Blogs = () => {
                                         {t(`blogs.items.${idx}.title`)}
                                     </h3>
                                     
-                                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-8 line-clamp-3">
+                                    <p className="text-gray-600 text-base md:text-base leading-relaxed mb-8 line-clamp-3">
                                         {t(`blogs.items.${idx}.excerpt`)}
                                     </p>
                                     
                                     <div className="mt-auto">
                                         <Link 
                                             to="/blog" 
-                                            className="inline-flex items-center gap-2 text-brand-primary font-semibold text-sm hover:text-brand-secondary transition-colors group/link"
+                                            className="inline-flex items-center gap-2 text-brand-primary font-semibold text-base hover:text-brand-secondary transition-colors group/link"
                                         >
                                             {t('blogs.readMore')}
                                             <ArrowRight className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" />

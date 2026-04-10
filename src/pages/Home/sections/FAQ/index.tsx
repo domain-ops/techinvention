@@ -7,6 +7,8 @@ import { SplitTitle } from '../../../../components/Common/SplitTitle';
 import { cn } from '../../../../lib/utils';
 
 
+const logoDNA = "/techinvention/TechInvention-gif.gif";
+
 interface FAQItemProps {
     question: string;
     answer: string;
@@ -34,7 +36,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
                         <HelpCircle size={16} />
                     </span>
                     <h3 className={cn(
-                        "text-lg md:text-xl font-medium tracking-tight transition-colors duration-300 tracking-tight leading-tight",
+                        "text-base md:text-lg font-medium tracking-tight transition-colors duration-300 tracking-tight leading-tight",
                         isOpen ? "text-brand-primary" : "text-brand-content group-hover:text-brand-primary/80"
                     )}>
                         {question}
@@ -60,7 +62,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
                         transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                         <div className="pb-8 pl-12 pr-6 md:pr-12">
-                            <p className="text-black text-lg leading-relaxed font-medium tracking-tight">
+                            <p className="text-black text-base md:text-base leading-relaxed font-medium tracking-tight">
                                 {answer}
                             </p>
                         </div>
@@ -80,26 +82,42 @@ const FAQSection = () => {
     if (!faqData || !faqData.items) return null;
 
     return (
-        <section id="faq" className="py-24 w-full flex justify-center items-center px-4 md:px-6 bg-white relative">
+        <section id="faq" className="py-16 md:py-20 w-full flex justify-center items-center px-4 md:px-6 bg-white relative">
 
             <div className="w-full max-w-5xl z-10 relative">
                 {/* Header */}
-                <div className="text-center mb-16 md:mb-20">
-                    <ScrollReveal direction="up">
-                        <span className="text-brand-primary text-[11px] font-medium tracking-[0.4em] uppercase mb-4 block">
-                            {faqData.tag || "FAQ"}
-                        </span>
-                    </ScrollReveal>
-                    <ScrollReveal direction="up" delay={0.1}>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-medium tracking-wide mb-6">
-                            <SplitTitle title={faqData.title} />
-                        </h2>
-                    </ScrollReveal>
-                    <ScrollReveal direction="up" delay={0.2}>
-                        <p className="text-brand-content text-lg md:text-xl lg:text-[1.35rem] max-w-3xl mx-auto leading-relaxed tracking-tight">
-                            {faqData.subtitle}
-                        </p>
-                    </ScrollReveal>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16 md:mb-20">
+                    <div className="text-center md:text-left">
+                        <ScrollReveal direction="up">
+                            <span className="text-brand-primary text-[11px] font-medium tracking-[0.4em] uppercase mb-4 block">
+                                {faqData.tag || "FAQ"}
+                            </span>
+                        </ScrollReveal>
+                        <ScrollReveal direction="up" delay={0.1}>
+                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide mb-6">
+                                <SplitTitle title={faqData.title} />
+                            </h2>
+                        </ScrollReveal>
+                        <ScrollReveal direction="up" delay={0.2}>
+                            <p className="text-brand-content text-base md:text-lg lg:text-[1.35rem] max-w-3xl mx-auto md:mx-0 leading-relaxed tracking-tight">
+                                {faqData.subtitle}
+                            </p>
+                        </ScrollReveal>
+                    </div>
+                    {/* Animated Inline Logo aligned with title */}
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                        <motion.img 
+                            src={logoDNA}
+                            alt="TechInvention Logo"
+                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ 
+                                opacity: { duration: 1.2, ease: "easeOut" },
+                                scale: { duration: 1.2, ease: "easeOut" }
+                            }}
+                        />
+                    </div>
                 </div>
 
                 {/* FAQ List */}

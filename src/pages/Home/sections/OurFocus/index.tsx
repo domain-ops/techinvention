@@ -25,7 +25,7 @@ const OurFocus = () => {
     ];
 
     return (
-        <section className="w-full bg-white relative z-20 py-16 pb-24">
+        <section className="py-16 md:py-20 w-full bg-white relative z-20">
             <div className="max-w-5xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 w-full">
                     {items.map((item, index) => (
