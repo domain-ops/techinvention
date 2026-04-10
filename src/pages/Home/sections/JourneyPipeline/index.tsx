@@ -53,20 +53,20 @@ const JourneyPipeline = () => {
                     {/* viewBox perfectly maps the exact geometric layout lines directly to the container overlay */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" width="100%" height="100%" viewBox="0 0 1024 600" preserveAspectRatio="none">
                         {/* Top-Left Yellow Line (to Phase 1) */}
-                        <path d="M 100 210 L 100 230 L 342 230 L 342 260" fill="none" stroke="#FFD100" strokeWidth="2.5" strokeLinejoin="round" />
-                        <circle cx="100" cy="210" r="5.5" fill="#FFD100" stroke="#fff" strokeWidth="2" />
+                        <path d="M 100 210 L 100 230 L 342 230 L 342 260" fill="none" stroke="#87A840" strokeWidth="2.5" strokeLinejoin="round" />
+                        <circle cx="100" cy="210" r="5.5" fill="#87A840" stroke="#fff" strokeWidth="2" />
 
                         {/* Top-Right Yellow Line (to Phase 2) */}
-                        <path d="M 850 210 L 850 230 L 466 230 L 466 260" fill="none" stroke="#FFD100" strokeWidth="2.5" strokeLinejoin="round" />
-                        <circle cx="850" cy="210" r="5.5" fill="#FFD100" stroke="#fff" strokeWidth="2" />
+                        <path d="M 850 210 L 850 230 L 466 230 L 466 260" fill="none" stroke="#87A840" strokeWidth="2.5" strokeLinejoin="round" />
+                        <circle cx="850" cy="210" r="5.5" fill="#87A840" stroke="#fff" strokeWidth="2" />
 
                         {/* Bottom-Left Blue/Dark Line (to Phase 3) */}
-                        <path d="M 400 390 L 400 370 L 590 370 L 590 340" fill="none" stroke="#17438E" strokeWidth="2.5" strokeLinejoin="round" />
-                        <circle cx="400" cy="390" r="5.5" fill="#fff" stroke="#17438E" strokeWidth="3" />
+                        <path d="M 400 390 L 400 370 L 590 370 L 590 340" fill="none" stroke="#2065B3" strokeWidth="2.5" strokeLinejoin="round" />
+                        <circle cx="400" cy="390" r="5.5" fill="#fff" stroke="#2065B3" strokeWidth="3" />
 
                         {/* Bottom-Right Pink Line (to Phase 4) */}
-                        <path d="M 850 390 L 850 370 L 714 370 L 714 340" fill="none" stroke="#D136B0" strokeWidth="2.5" strokeLinejoin="round" />
-                        <circle cx="850" cy="390" r="5.5" fill="#fff" stroke="#D136B0" strokeWidth="3" />
+                        <path d="M 850 390 L 850 370 L 714 370 L 714 340" fill="none" stroke="#1755A6" strokeWidth="2.5" strokeLinejoin="round" />
+                        <circle cx="850" cy="390" r="5.5" fill="#fff" stroke="#1755A6" strokeWidth="3" />
                     </svg>
 
                     {/* Syringe Component */}
@@ -88,10 +88,10 @@ const JourneyPipeline = () => {
                             <div className="w-[4%] h-full bg-[#333] flex-shrink-0"></div>
                             {/* Phases Container */}
                             <div className="flex flex-grow text-white text-[clamp(8px,1vw,12px)] font-bold tracking-widest text-center uppercase">
-                                <div className="flex-1 bg-[#FFA400] flex items-center justify-center border-r border-white/20">{phases[0]}</div>
-                                <div className="flex-1 bg-[#FFD100] flex items-center justify-center text-[#333] border-r border-[#333]/10">{phases[1]}</div>
-                                <div className="flex-1 bg-[#17438E] flex items-center justify-center border-r border-white/20">{phases[2]}</div>
-                                <div className="flex-1 bg-[#8B45B5] flex items-center justify-center">{phases[3]}</div>
+                                <div className="flex-1 bg-[#5C7625] flex items-center justify-center border-r border-white/20">{phases[0]}</div>
+                                <div className="flex-1 bg-[#87A840] flex items-center justify-center text-white border-r border-white/20">{phases[1]}</div>
+                                <div className="flex-1 bg-[#2065B3] flex items-center justify-center border-r border-white/20">{phases[2]}</div>
+                                <div className="flex-1 bg-[#1755A6] flex items-center justify-center">{phases[3]}</div>
                             </div>
                         </div>
                         
@@ -106,24 +106,24 @@ const JourneyPipeline = () => {
                     {/* Top Left Text Block */}
                     <div className="absolute" style={{ top: '8.333%', left: '4.882%', width: '34.179%' }}>
                         <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[0].title}</h3>
-                        <div className="w-full h-[2px] bg-[#FFD100] mb-3"></div>
+                        <div className="w-full h-[2px] bg-[#87A840] mb-3"></div>
                         <div className="flex justify-between items-start gap-2">
                             <p className="text-[clamp(11px,1.2vw,14px)] leading-relaxed text-gray-700 font-medium max-w-[70%]">
                                 {boxes[0].desc}
                             </p>
-                            <UserGroupIcon color="#FFA400" className="w-[80px]" />
+                            <UserGroupIcon color="#5C7625" className="w-[80px]" />
                         </div>
                     </div>
 
                     {/* Top Right Text Block */}
                     <div className="absolute" style={{ top: '8.333%', left: '53.71%', width: '34.179%' }}>
                         <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[1].title}</h3>
-                        <div className="w-full h-[2px] bg-[#FFD100] mb-3"></div>
+                        <div className="w-full h-[2px] bg-[#87A840] mb-3"></div>
                         <div className="flex justify-between items-start gap-2">
                             <p className="text-[clamp(11px,1.2vw,14px)] leading-relaxed text-gray-700 font-medium max-w-[70%]">
                                 {boxes[1].desc}
                             </p>
-                            <UserGroupIcon color="#FFD100" className="w-[80px]" />
+                            <UserGroupIcon color="#87A840" className="w-[80px]" />
                         </div>
                     </div>
 
@@ -132,7 +132,7 @@ const JourneyPipeline = () => {
                         <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[2].title}</h3>
                         <div className="w-full h-[1px] bg-black/30 mb-4"></div>
                         <div className="flex items-start gap-4">
-                            <UserGroupIcon color="#15428F" className="w-[70px] shrink-0 border border-[#15428F]/20 p-2 rounded-xl bg-white" />
+                            <UserGroupIcon color="#2065B3" className="w-[70px] shrink-0 border border-[#2065B3]/20 p-2 rounded-xl bg-white" />
                             <p className="text-[clamp(11px,1.2vw,14px)] leading-relaxed text-gray-700 font-medium max-w-[75%]">
                                 {boxes[2].desc}
                             </p>
@@ -142,11 +142,11 @@ const JourneyPipeline = () => {
                     {/* Bottom Right Text Block */}
                     <div className="absolute" style={{ top: '68.333%', left: '53.71%', width: '34.179%' }}>
                         <h3 className="font-bold text-[clamp(18px,2vw,24px)] mb-2 text-[#000]">{boxes[3].title}</h3>
-                        <div className="w-full h-[1px] bg-[#8B45B5] mb-4"></div>
+                        <div className="w-full h-[1px] bg-[#1755A6] mb-4"></div>
                         <div className="flex items-start gap-4">
-                            <div className="relative shrink-0 w-[60px] h-[60px] border-[2px] border-[#9747FF] rounded-full flex items-center justify-center bg-white">
-                                <UserIcon color="#9747FF" className="w-[40px]" />
-                                <span className="absolute -right-2 top-[35%] text-[#9747FF] bg-white leading-none">➔</span>
+                            <div className="relative shrink-0 w-[60px] h-[60px] border-[2px] border-[#1755A6] rounded-full flex items-center justify-center bg-white">
+                                <UserIcon color="#1755A6" className="w-[40px]" />
+                                <span className="absolute -right-2 top-[35%] text-[#1755A6] bg-white leading-none">➔</span>
                             </div>
                             <p className="text-[clamp(11px,1.2vw,14px)] leading-relaxed text-gray-700 font-medium max-w-[75%]">
                                 {boxes[3].desc}
@@ -177,10 +177,10 @@ const JourneyPipeline = () => {
                                 <div className="w-[4%] h-full bg-[#333] flex-shrink-0"></div>
                                 {/* Phases Container */}
                                 <div className="flex flex-grow text-white text-[clamp(8px,2.5vw,14px)] font-bold tracking-widest text-center uppercase">
-                                    <div className="flex-1 bg-[#FFA400] flex items-center justify-center border-r border-white/20 px-1">{phases[0]}</div>
-                                    <div className="flex-1 bg-[#FFD100] flex items-center justify-center text-[#333] border-r border-[#333]/10 px-1">{phases[1]}</div>
-                                    <div className="flex-1 bg-[#17438E] flex items-center justify-center border-r border-white/20 px-1">{phases[2]}</div>
-                                    <div className="flex-1 bg-[#8B45B5] flex items-center justify-center px-1">{phases[3]}</div>
+                                    <div className="flex-1 bg-[#5C7625] flex items-center justify-center border-r border-white/20 px-1">{phases[0]}</div>
+                                    <div className="flex-1 bg-[#87A840] flex items-center justify-center text-white border-r border-white/20 px-1">{phases[1]}</div>
+                                    <div className="flex-1 bg-[#2065B3] flex items-center justify-center border-r border-white/20 px-1">{phases[2]}</div>
+                                    <div className="flex-1 bg-[#1755A6] flex items-center justify-center px-1">{phases[3]}</div>
                                 </div>
                             </div>
                             
@@ -192,9 +192,9 @@ const JourneyPipeline = () => {
                     </div>
 
                     {/* Phase 1 */}
-                    <div className="relative pl-8 border-l-2 border-[#FFA400]">
-                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#FFA400] border-4 border-white"></div>
-                        <div className="inline-block px-3 py-1 bg-[#FFA400] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
+                    <div className="relative pl-8 border-l-2 border-[#5C7625]">
+                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#5C7625] border-4 border-white"></div>
+                        <div className="inline-block px-3 py-1 bg-[#5C7625] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[0]}
                         </div>
                         <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[0].title}</h3>
@@ -202,14 +202,14 @@ const JourneyPipeline = () => {
                             <p className="text-sm leading-relaxed text-gray-700 font-medium">
                                 {boxes[0].desc}
                             </p>
-                            <UserGroupIcon color="#FFA400" className="w-[60px] shrink-0" />
+                            <UserGroupIcon color="#5C7625" className="w-[60px] shrink-0" />
                         </div>
                     </div>
 
                     {/* Phase 2 */}
-                    <div className="relative pl-8 border-l-2 border-[#FFD100]">
-                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#FFD100] border-4 border-white"></div>
-                        <div className="inline-block px-3 py-1 bg-[#FFD100] rounded text-[#333] text-xs font-bold tracking-widest mb-3 uppercase">
+                    <div className="relative pl-8 border-l-2 border-[#87A840]">
+                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#87A840] border-4 border-white"></div>
+                        <div className="inline-block px-3 py-1 bg-[#87A840] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[1]}
                         </div>
                         <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[1].title}</h3>
@@ -217,14 +217,14 @@ const JourneyPipeline = () => {
                             <p className="text-sm leading-relaxed text-gray-700 font-medium">
                                 {boxes[1].desc}
                             </p>
-                            <UserGroupIcon color="#FFD100" className="w-[60px] shrink-0" />
+                            <UserGroupIcon color="#87A840" className="w-[60px] shrink-0" />
                         </div>
                     </div>
 
                     {/* Phase 3 */}
-                    <div className="relative pl-8 border-l-2 border-[#17438E]">
-                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#17438E] border-4 border-white"></div>
-                        <div className="inline-block px-3 py-1 bg-[#17438E] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
+                    <div className="relative pl-8 border-l-2 border-[#2065B3]">
+                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#2065B3] border-4 border-white"></div>
+                        <div className="inline-block px-3 py-1 bg-[#2065B3] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[2]}
                         </div>
                         <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[2].title}</h3>
@@ -232,14 +232,14 @@ const JourneyPipeline = () => {
                             <p className="text-sm leading-relaxed text-gray-700 font-medium">
                                 {boxes[2].desc}
                             </p>
-                            <UserGroupIcon color="#17438E" className="w-[60px] shrink-0 border border-[#15428F]/20 p-2 rounded-xl bg-white" />
+                            <UserGroupIcon color="#2065B3" className="w-[60px] shrink-0 border border-[#2065B3]/20 p-2 rounded-xl bg-white" />
                         </div>
                     </div>
 
                     {/* Phase 4 */}
-                    <div className="relative pl-8 border-l-2 border-[#8B45B5]">
-                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#8B45B5] border-4 border-white"></div>
-                        <div className="inline-block px-3 py-1 bg-[#8B45B5] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
+                    <div className="relative pl-8 border-l-2 border-[#1755A6]">
+                        <div className="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-[#1755A6] border-4 border-white"></div>
+                        <div className="inline-block px-3 py-1 bg-[#1755A6] rounded text-white text-xs font-bold tracking-widest mb-3 uppercase">
                             {phases[3]}
                         </div>
                         <h3 className="font-bold text-[clamp(18px,5vw,24px)] mb-3 text-[#000]">{boxes[3].title}</h3>
@@ -247,9 +247,9 @@ const JourneyPipeline = () => {
                             <p className="text-sm leading-relaxed text-gray-700 font-medium">
                                 {boxes[3].desc}
                             </p>
-                            <div className="relative shrink-0 w-[60px] h-[60px] border-[2px] border-[#9747FF] rounded-full flex items-center justify-center bg-white">
-                                <UserIcon color="#9747FF" className="w-[40px]" />
-                                <span className="absolute -right-2 top-[35%] text-[#9747FF] bg-white leading-none">➔</span>
+                            <div className="relative shrink-0 w-[60px] h-[60px] border-[2px] border-[#1755A6] rounded-full flex items-center justify-center bg-white">
+                                <UserIcon color="#1755A6" className="w-[40px]" />
+                                <span className="absolute -right-2 top-[35%] text-[#1755A6] bg-white leading-none">➔</span>
                             </div>
                         </div>
                     </div>

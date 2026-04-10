@@ -1,12 +1,14 @@
 import React from 'react';
 import Hero from './sections/Hero';
-import Stats from './sections/Stats';
+import OneHealth from './sections/OneHealth';
 import About from './sections/About';
+import Stats from './sections/Stats';
+
 import Horizon from './sections/Horizon';
 import Facilities from './sections/Facilities';
 import AtAGlanceVideo from './sections/AtAGlanceVideo';
 import CaseStudy from './sections/CaseStudy';
-import OneHealth from './sections/OneHealth';
+
 import GlobalProjects from './sections/GlobalProjects';
 import Testimonials from './sections/Testimonials/TestimonialsAnimated';
 import ProductSlider from './sections/ProductSlider';
@@ -23,21 +25,24 @@ const Home = () => {
         <div className="relative">
             {/* <FloatingDNA /> temporrily removed by request */}
             <Hero />
-            <About />
-            <Stats />
-            <AtAGlanceVideo />
             <OneHealth />
-            {/* <ProductSlider /> temporrily removed by request */}
-            <VaccinePipeline />
-            <JourneyPipeline />
+            <Stats />
+            <About />
             <Horizon />
+            <VaccinePipeline />
+
+            <AtAGlanceVideo />
+            {/* <ProductSlider /> temporrily removed by request */}
+
+            <JourneyPipeline />
+
             <Awards />
             <CaseStudy />
             <GlobalProjects />
             <Testimonials />
             <FAQSection />
             <Blogs />
-            <CTASection />
+            {/* <CTASection /> */}
         </div>
     );
 };

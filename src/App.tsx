@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar';
@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 import MembershipPage from './pages/Membership';
 import CertificationPage from './pages/Certification';
 import SearchPage from './pages/Search';
-
 function AppContent() {
     const { pathname } = useLocation();
     const lenisRef = React.useRef<Lenis | null>(null);
