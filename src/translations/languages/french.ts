@@ -13,7 +13,7 @@ export const french = {
         contactUs: "Contactez-nous",
         searchPlaceholder: "Rechercher TechInvention...",
         products: "Produits",
-        solutions: "Solutions",
+        solutions: "Services",
         learn: "Apprendre",
         company: "Entreprise",
         support: "Support",
@@ -46,7 +46,8 @@ export const french = {
         whitePapers: "Livres blancs",
         newsMedia: "Nouvelles et médias",
         faqs: "FAQ",
-        technicalSupport: "Support technique"
+        technicalSupport: "Support technique",
+        strategicAdvisory: "Conseil Technique Stratégique"
     },
 
     video: {
@@ -628,6 +629,75 @@ export const french = {
         tag: "Aperçus",
         title1: "TechInvention en un ",
         title2: "coup d'œil"
+    },
+    strategicAdvisory: {
+        tag: "Strategic Technical Advisory",
+        title: "Strategic Technical Advisory",
+        intro: "We offer our expertise and support in capacity building to enable local manufacturing of biologics and vaccines in low- and middle-income countries.",
+        sections: [
+            {
+                title: "Project Feasibility",
+                content: "To enable indigenous manufacturing of vaccines and biologics, we work with you to understand your needs, focus areas, the scope of the study, as well as timelines. Our extensive and in-depth knowledge facilitates us to tailor-make comprehensive feasibility studies to support you in making well-informed decisions on project viability and project staging based on priorities, which would ensure Return on Investment (ROI) in the long run.\n\nPrior to starting the study, we conduct reality checks to identify the regions that can pose the most significant risk. With the help of our project feasibility report, you will be able to garner support from all stakeholders and, if necessary, secure project funding.",
+                deliverablesTitle: "Our deliverables include:",
+                deliverables: [
+                    "Feasibility study",
+                    "Dipstick study",
+                    "Audit and assessment report",
+                    "Review and evaluation report",
+                    "Gap analysis report",
+                    "Techno-commercial analysis report"
+                ]
+            },
+            {
+                title: "Project Planning",
+                content: "Leveraging our team’s industry experience in research, trends, market access, and commercialization, we work with you to map cohesive strategies to deliver your project successfully.\nWe support you through every milestone of the project to ensure you benefit from maximum value at every stage.",
+                deliverablesTitle: "Our deliverables include:",
+                deliverables: [
+                    "Market analysis",
+                    "Product portfolio analysis and planning",
+                    "Brand planning and marketing strategy",
+                    "Conceptual design studies"
+                ]
+            },
+            {
+                title: "Technology Tie-up",
+                content: "Through our network and partnerships with highly reputable and well-established manufacturers, we assist you in securing long-term supply contracts of high-quality yet affordable ready-to-fill bulk as well as concentrated bulk to be formulated in the categories of vaccines, plasma products, equine-based immunoglobulins, and biosimilars.",
+                deliverablesTitle: "Our deliverables include:",
+                deliverables: [
+                    "Detailed due diligence of the bulk provider including capacities, compliance, and costs",
+                    "Technology transfers including but not limited to formulation and analytical methods",
+                    "Customisation of CTD dossiers wherever required",
+                    "Support in consistency/validation batches, stability, clinical trials and securing product registrations"
+                ]
+            },
+            {
+                title: "Design Engineering",
+                content: "We deliver compliant and cost effective engineering designs that meet the highest standards of Good Manufacturing Practices (GMP) while optimising capital and operational costs to make the project as well as product affordable. Our project expertise supports flawless and timebound execution which is of paramount importance when developing and manufacturing high end biologics.\n\nOur network of partners includes engineering firms and equipment manufacturers, who have been thoroughly vetted to ensure timely and successful completion of projects.",
+                deliverablesTitle: "Our deliverables include:",
+                deliverables: [
+                    "Architectural design",
+                    "Structural engineering",
+                    "Conceptual, basic and detailed engineering in all internal aspects",
+                    "Cleanrooms",
+                    "Equipment supply",
+                    "Space management and cost optimisations",
+                    "Building information systems and automation"
+                ]
+            },
+            {
+                title: "QMS, WHO-PQ Support",
+                content: "International regulatory guidelines and protocols can be a minefield, even for experienced professionals. Institutionalisation of Quality Management Systems (QMS) is the mainstay for consistent quality delivery. We, at TechInvention, combine quality assurance (QA) with our deep and broad knowledge of the industry, operational expertise and approval protocols accumulated over decades to enable you to put a robust QMS in place.\n\nWe help you assess the programmatic suitability of a vaccine for prequalification, the adequacy, completeness, and accuracy of the data in the product summary file, the gap analysis of manufacturing facilities, and the adequacy of the clinical development program for prequalification (PQ).\n\nWe support you through the process and requirements for vaccines considered for WHO PQ, as well as the handling of procedures, methods, and documentation involved in the testing of the vaccine samples at WHO-appointed laboratories. We conduct an overall assessment of your readiness for the WHO PQ, with a focus on the QMS.\n\nWhile our success stories include clients who have secured WHO pre-qualification for specific vaccine candidates, our domain expertise extends across biologics to support specific audits and product registrations in key markets.",
+                deliverablesTitle: "Our deliverables include:",
+                deliverables: [
+                    "Gap analysis of plant and product undergoing WHO PQ as per WHO TRS",
+                    "Mock audit of all QMS systems",
+                    "Compliance to internal audit and mock audit observations",
+                    "Pre-evaluation meeting with WHO for PQs",
+                    "Internal notes during WHO audit for preparing an action plan and training notes",
+                    "Post audit follow-up/re-audit CAPA submission and compliance"
+                ]
+            }
+        ]
     }
 };
 

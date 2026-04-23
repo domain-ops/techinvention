@@ -84,6 +84,7 @@ const Navbar = () => {
                         { name: t('megaMenu.oneHealth'), href: '/' },
                         { name: t('megaMenu.rnd'), href: '/' },
                         { name: t('megaMenu.manufacturing'), href: '/' },
+                        { name: t('megaMenu.strategicAdvisory'), href: '/strategic-technical-advisory' },
                     ]
                 },
             ],

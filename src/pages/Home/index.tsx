@@ -27,7 +27,6 @@ const Home = () => {
             <About />
             <Horizon />
             <VaccinePipeline />
-
             <AtAGlanceVideo />
             {/* <ProductSlider /> temporrily removed by request */}
 

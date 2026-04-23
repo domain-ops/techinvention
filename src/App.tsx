@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 import MembershipPage from './pages/Membership';
 import CertificationPage from './pages/Certification';
 import SearchPage from './pages/Search';
+import StrategicTechnicalAdvisoryPage from './pages/StrategicTechnicalAdvisory';
 function AppContent() {
     const { pathname } = useLocation();
     const lenisRef = React.useRef<Lenis | null>(null);
@@ -71,6 +72,7 @@ function AppContent() {
                     <Route path="/membership" element={<MembershipPage />} />
                     <Route path="/certification" element={<CertificationPage />} />
                     <Route path="/search" element={<SearchPage />} />
+                    <Route path="/strategic-technical-advisory" element={<StrategicTechnicalAdvisoryPage />} />
                 </Routes>
                 <Footer />
             </div>
