@@ -60,7 +60,7 @@
   }
 
   p {
-    @apply font-medium tracking-tight text-brand-content text-lg md:text-xl leading-relaxed;
+    @apply font-medium tracking-tight text-brand-content text-[20px] leading-relaxed;
   }
 
   /* Custom elegant scrollbar */
