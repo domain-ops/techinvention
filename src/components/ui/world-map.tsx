@@ -104,13 +104,13 @@ export function WorldMap({
                   cx={projectPoint(dot.start.lat, dot.start.lng).x}
                   cy={projectPoint(dot.start.lat, dot.start.lng).y}
                   r="3.5"
-                  fill={isDark ? "#ffffff" : "#000000"}
+                  fill="#5C7625"
                 />
                 <circle
                   cx={projectPoint(dot.start.lat, dot.start.lng).x}
                   cy={projectPoint(dot.start.lat, dot.start.lng).y}
                   r="3.5"
-                  fill={isDark ? "#ffffff" : "#000000"}
+                  fill="#5C7625"
                   opacity="0.6"
                 >
                   <animate
