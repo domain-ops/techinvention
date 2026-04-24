@@ -22,10 +22,10 @@ const Blogs = () => {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 max-w-7xl mx-auto mb-16">
                     <ScrollReveal direction="up" delay={0.1} className="text-center md:text-left max-w-3xl">
-                        <h2 className="text-3xl sm:text-2xl md:text-3xl font-medium tracking-tighter text-brand-primary mb-5">
+                        <h2 className="text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
                             {t('blogs.titlePrefix')} <span className="text-brand-secondary">{t('blogs.titleHighlight')}</span>
                         </h2>
-                        <p className="text-gray-600 text-base md:text-lg">
+                        <p className="text-gray-600 text-[18px] ">
                             {t('blogs.desc')}
                         </p>
                     </ScrollReveal>
@@ -75,11 +75,11 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                     
-                                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-4 group-hover:text-brand-primary transition-colors duration-300 line-clamp-3 leading-snug">
+                                    <h3 className="text-[18px] font-bold text-gray-900 mb-4 group-hover:text-brand-primary transition-colors duration-300 line-clamp-3 leading-snug">
                                         {t(`blogs.items.${idx}.title`)}
                                     </h3>
                                     
-                                    <p className="text-gray-600 text-base md:text-base leading-relaxed mb-8 line-clamp-3">
+                                    <p className="text-gray-600 text-[18px] leading-relaxed mb-8 line-clamp-3">
                                         {t(`blogs.items.${idx}.excerpt`)}
                                     </p>
                                     

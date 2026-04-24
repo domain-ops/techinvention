@@ -87,7 +87,7 @@ const SearchPage = () => {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="mb-12">
-                        <h1 className="text-3xl md:text-5xl font-medium tracking-tight text-brand-primary mb-4">
+                        <h1 className="text-[36px] font-medium tracking-tight text-brand-primary mb-4">
                             {t.navbar?.searchPlaceholder || 'Search Results'}
                         </h1>
                         <p className="text-gray-600 text-lg">
@@ -116,7 +116,7 @@ const SearchPage = () => {
                                         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-300">
                                             {result.title}
                                         </h2>
-                                        <p className="text-sm md:text-base text-gray-600 line-clamp-2 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                                        <p className="text-[18px] text-gray-600 line-clamp-2 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
                                             ...{result.snippet}...
                                         </p>
                                     </Link>

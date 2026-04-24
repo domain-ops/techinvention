@@ -45,7 +45,7 @@ const VaccinePipeline = () => {
                                 {t('vaccinePipeline.tag') || "R&D INNOVATION"}
                             </span>
                         </ScrollReveal>
-                        <h2 className="text-2xl md:text-3xl font-medium tracking-wide mb-6">
+                        <h2 className="text-[36px] font-medium tracking-wide mb-6">
                             <SplitTitle title={t('vaccinePipeline.title').replace('{pipeline}', t('vaccinePipeline.pipeline'))} />
                         </h2>
                     </div>
@@ -202,7 +202,7 @@ const VaccinePipeline = () => {
                                         <VialIcon className="w-8 h-8 text-brand-primary" />
                                     </div>
                                     <div className="flex flex-col justify-center pt-1">
-                                        <h3 className="text-lg md:text-base font-medium text-black leading-tight">
+                                        <h3 className="text-[18px] font-medium text-black leading-tight">
                                             {item.name}
                                         </h3>
                                         <span className="text-base text-black font-medium tracking-tight mt-1">
@@ -213,7 +213,7 @@ const VaccinePipeline = () => {
 
                                 {/* Tracking Bar */}
                                 <div className="w-full relative mt-2 mb-2">
-                                    <div className="flex justify-between text-[10px] md:text-base text-black mb-3 px-1">
+                                    <div className="flex justify-between text-[18px] text-black mb-3 px-1">
                                         <span>{t('vaccinePipeline.phases.preClinical') as string}</span>
                                         <span>{t('vaccinePipeline.phases.phase3') as string}</span>
                                         <span className="font-bold text-brand-primary">{t('vaccinePipeline.phases.approved') as string}</span>

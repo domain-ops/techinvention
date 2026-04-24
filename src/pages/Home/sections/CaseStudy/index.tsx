@@ -129,10 +129,10 @@ const CaseStudy = () => {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 relative z-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                 <ScrollReveal direction="up" delay={0.2} className="text-left">
-                    <h2 className="text-3xl sm:text-2xl md:text-3xl font-medium tracking-tighter text-brand-primary mb-5">
+                    <h2 className="text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
                         {t('caseStudy.titlePrefix')} <span className="text-brand-secondary">{t('caseStudy.titleHighlight')}</span>
                     </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl">
+                    <p className="text-gray-600 text-[18px] max-w-2xl">
                         {t('caseStudy.desc')}
                     </p>
                 </ScrollReveal>
@@ -192,7 +192,7 @@ const CaseStudy = () => {
                                         <div className={cn("flex items-center justify-center transition-colors duration-500", isActive ? "text-white" : "text-brand-primary/60 group-hover:text-brand-primary")}>
                                             <feature.icon size={22} strokeWidth={2} />
                                         </div>
-                                        <span className="font-semibold text-base md:text-base tracking-wide uppercase">
+                                        <span className="font-semibold text-[18px] tracking-wide uppercase">
                                             {t(`caseStudy.features.${index}.label`)}
                                         </span>
                                     </button>

@@ -40,7 +40,7 @@ const CTASection = () => {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-black text-lg md:text-xl max-w-2xl mb-12 leading-relaxed font-medium tracking-tight text-center">
+                        <p className="text-black text-[18px] max-w-2xl mb-12 leading-relaxed font-medium tracking-tight text-center">
                             {t('cta.desc')}
                         </p>
 

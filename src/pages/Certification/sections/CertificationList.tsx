@@ -46,7 +46,7 @@ const CertificationList = () => {
                     <div className="mb-6">
                         <TextReveal
                             text={t('certifications.title').replace('{certifications}', t('certifications.certifications'))}
-                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-brand-content leading-tight tracking-tighter  justify-center text-center"
+                            className="text-[36px] lg:text-6xl font-medium tracking-tight text-brand-content leading-tight tracking-tighter  justify-center text-center"
                         />
                     </div>
                     <div className="mx-auto max-w-3xl">
@@ -96,11 +96,11 @@ const CertificationList = () => {
                                             <span className="text-black font-medium tracking-tight text-[10px] tracking-[0.2em]  italic">Verified</span>
                                         </div>
 
-                                        <h3 className="text-2xl md:text-3xl font-medium tracking-tight text-brand-content  tracking-tighter mb-4 italic leading-[1.1]">
+                                        <h3 className="text-[36px] font-medium tracking-tight text-brand-content  tracking-tighter mb-4 italic leading-[1.1]">
                                             {name}
                                         </h3>
 
-                                        <p className="text-black text-base md:text-lg leading-relaxed font-medium">
+                                        <p className="text-black text-[18px] leading-relaxed font-medium">
                                             {info}
                                         </p>
                                     </div>

@@ -46,12 +46,12 @@ const TestimonialsAnimated = () => {
                             </span>
                         </ScrollReveal>
                         <ScrollReveal direction="up" delay={0.1}>
-                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight leading-tight tracking-tighter mb-6">
+                            <h2 className="text-[36px] font-medium tracking-tight leading-tight tracking-tighter mb-6">
                                 <SplitTitle title={t('testimonials.title') as string} />
                             </h2>
                         </ScrollReveal>
                         <ScrollReveal direction="up" delay={0.2}>
-                            <p className="text-black max-w-2xl mx-auto md:mx-0 text-base md:text-lg leading-relaxed font-medium tracking-tight">
+                            <p className="text-black max-w-2xl mx-auto md:mx-0 text-[18px] leading-relaxed font-medium tracking-tight">
                                 {t('testimonials.subtitle')}
                             </p>
                         </ScrollReveal>

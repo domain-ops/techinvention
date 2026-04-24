@@ -54,7 +54,7 @@ export function CTASection() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-black text-lg md:text-xl max-w-2xl mb-12 leading-relaxed font-medium tracking-tight">
+                        <p className="text-black text-[18px] max-w-2xl mb-12 leading-relaxed font-medium tracking-tight">
                             Join the global network of health innovators. We bridge the gap between scientific excellence and equitable access to life-critical vaccines.
                         </p>
 

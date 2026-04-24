@@ -93,12 +93,12 @@ export const LocationCard = ({
         >
           <div>
             <h3 className="text-3xl font-bold tracking-tight mb-2 text-white drop-shadow-md">{city}</h3>
-            <p className="text-sm md:text-base text-white/90 font-medium drop-shadow-md">{address}</p>
+            <p className="text-[18px] text-white/90 font-medium drop-shadow-md">{address}</p>
           </div>
           
           <div className="overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] max-h-0 opacity-0 group-hover:max-h-[300px] group-hover:opacity-100 group-hover:mt-6">
              <div className="w-10 h-1 bg-white/40 rounded-full mb-5" />
-             <p className="text-sm md:text-base text-white/95 leading-relaxed">
+             <p className="text-[18px] text-white/95 leading-relaxed">
                {description}
              </p>
              {link && (

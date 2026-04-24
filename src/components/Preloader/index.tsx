@@ -56,7 +56,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
                         {['L', 'O', 'A', 'D', 'I', 'N', 'G', '.', '.', '.'].map((letter, i) => (
                             <motion.span
                                 key={i}
-                                className="text-white font-bold text-lg md:text-xl tracking-[0.3em] font-montserrat"
+                                className="text-white font-bold text-[18px] tracking-[0.3em] font-montserrat"
                                 initial={{ opacity: 0.2 }}
                                 animate={{ opacity: 1 }}
                                 transition={{

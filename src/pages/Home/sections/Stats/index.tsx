@@ -38,7 +38,7 @@ const AnimatedCounter = ({ valueStr }: { valueStr: string }) => {
     return (
         <span className="flex items-baseline gap-1">
             <span ref={ref}>0</span>
-            <span className="text-3xl lg:text-5xl font-medium tracking-tight text-brand-primary">{suffix}</span>
+            <span className="text-[36px] font-medium tracking-tight text-brand-primary">{suffix}</span>
         </span>
     );
 };
@@ -66,10 +66,10 @@ const StatBox = ({ icon: Icon, valueStr, label, delay, className = "" }: any) =>
             </div>
             
             <div className="relative z-10 transform group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
-                <div className="text-4xl lg:text-5xl font-medium tracking-tight mb-2 text-black">
+                <div className="text-[36px] font-medium tracking-tight mb-2 text-black">
                     <AnimatedCounter valueStr={valueStr} />
                 </div>
-                <div className="text-base lg:text-base font-medium tracking-wide transition-opacity text-black opacity-80 group-hover:opacity-100">
+                <div className="text-[18px] font-medium tracking-wide transition-opacity text-black opacity-80 group-hover:opacity-100">
                     {label}
                 </div>
             </div>
@@ -100,9 +100,9 @@ const Stats = () => {
                             <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
                                 <div className="max-w-xl">
                                     <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em]  text-[11px] mb-4 block animate-fade-in">{t.header?.tag || "Our Impact"}</span>
-                                    <h2 className="text-3xl sm:text-2xl md:text-3xl font-medium tracking-tight text-brand-primary leading-tight tracking-tighter  mb-6">{t.header?.title1 || "Measuring "} <br/><span className="text-brand-secondary">{t.header?.title2 || "Excellence"}</span>
+                                    <h2 className="text-[36px] font-medium tracking-tight text-brand-primary leading-tight tracking-tighter  mb-6">{t.header?.title1 || "Measuring "} <br/><span className="text-brand-secondary">{t.header?.title2 || "Excellence"}</span>
                                     </h2>
-                                    <p className="text-black text-base md:text-base leading-relaxed">{t.header?.desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
+                                    <p className="text-black text-[18px] leading-relaxed">{t.header?.desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
                                 </div>
                             </div>
                             

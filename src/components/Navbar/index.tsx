@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../assets/images/brand_logo.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage, Language } from '../../context/LanguageContext';
 import { Globe, ChevronDown, Menu, X, Search, Bell, ShoppingCart, User, Grid } from 'lucide-react';
 import MegaMenuContent from './MegaMenuContent';
@@ -15,6 +15,12 @@ const Navbar = () => {
     const [openMobileMenus, setOpenMobileMenus] = useState<string[]>([]);
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        setActiveMegaMenu(null);
+        setIsMenuOpen(false);
+    }, [location.pathname]);
 
     const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter' && searchQuery.trim()) {

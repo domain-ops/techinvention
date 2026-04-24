@@ -67,13 +67,13 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                     transition={{ duration: 0.5, delay: 0.1 }}
                                     className="max-w-xl"
                                 >
-                                    <span className="text-white/80 text-[10px] sm:text-[11px] font-medium tracking-tight  tracking-[0.4em] mb-4 block">
+                                    <span className="text-white/80 text-[18px] font-medium tracking-tight  tracking-[0.4em] mb-4 block">
                                         {slide.tag}
                                     </span>
-                                    <h4 className="text-white text-3xl sm:text-2xl md:text-3xl font-medium tracking-tight leading-tight mb-6  tracking-tighter">
+                                    <h4 className="text-white text-[36px] font-medium tracking-tight leading-tight mb-6  tracking-tighter">
                                         {slide.title}
                                     </h4>
-                                    <p className="text-white/90 text-lg sm:text-base font-medium leading-relaxed mb-10 max-w-md">
+                                    <p className="text-white/90 text-[18px] font-medium leading-relaxed mb-10 max-w-md">
                                         {slide.desc}
                                     </p>
                                     <motion.button 

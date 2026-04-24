@@ -34,10 +34,10 @@ const TestimonialCard = ({ name, role, content, image }: TestimonialCardProps) =
                         />
                     </div>
                     <div>
-                        <h4 className="text-base md:text-lg font-medium tracking-tight text-brand-content  tracking-widest leading-tight mb-1">
+                        <h4 className="text-[18px] font-medium tracking-tight text-brand-content  tracking-widest leading-tight mb-1">
                             {name}
                         </h4>
-                        <p className="text-base md:text-lg text-brand-primary font-medium tracking-tight tracking-wide  opacity-80">
+                        <p className="text-[18px] text-brand-primary font-medium tracking-tight tracking-wide  opacity-80">
                             {role}
                         </p>
                     </div>
@@ -45,7 +45,7 @@ const TestimonialCard = ({ name, role, content, image }: TestimonialCardProps) =
 
                 <div className="relative flex-grow">
                     <Quote className="absolute -top-4 -left-4 text-brand-primary/10 h-10 w-10 md:h-12 md:w-12 -z-10" />
-                    <p className="text-base md:text-lg text-black leading-relaxed font-medium tracking-tight italic italic-quote">
+                    <p className="text-[18px] text-black leading-relaxed font-medium tracking-tight italic italic-quote">
                         "{content}"
                     </p>
                 </div>
@@ -106,7 +106,7 @@ const Testimonials = () => {
                     <div className="mb-6">
                         <TextReveal
                             text={t('testimonials.title')}
-                            className="text-3xl sm:text-2xl md:text-3xl lg:text-6xl font-medium tracking-tight text-brand-content leading-tight tracking-tighter  justify-center text-center"
+                            className="text-[36px] lg:text-6xl font-medium tracking-tight text-brand-content leading-tight tracking-tighter  justify-center text-center"
                         />
                     </div>
                     <motion.p
@@ -114,7 +114,7 @@ const Testimonials = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-black max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium tracking-tight"
+                        className="text-black max-w-2xl mx-auto text-[18px] leading-relaxed font-medium tracking-tight"
                     >
                         {t('testimonials.subtitle')}
                     </motion.p>

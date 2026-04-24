@@ -37,7 +37,7 @@ const TeamSection = () => {
                         </div>
                         <TextReveal
                             text={t('about.leadership.team.cta')}
-                            className="text-black text-lg md:text-xl font-medium max-w-3xl leading-relaxed mx-auto"
+                            className="text-black text-[18px] font-medium max-w-3xl leading-relaxed mx-auto"
                         />
                     </ScrollReveal>
                 </div>
@@ -102,7 +102,7 @@ const MemberCard = ({ member, image }: { member: any, image: string }) => (
                         </p>
                     </div>
 
-                    <p className="text-white text-lg lg:text-base font-medium leading-relaxed italic line-clamp-6 mb-8">
+                    <p className="text-white text-[18px] font-medium leading-relaxed italic line-clamp-6 mb-8">
                         "{member.bio}"
                     </p>
 

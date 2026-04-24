@@ -42,7 +42,7 @@ const About = () => {
                         <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
                             {t('about.leadership.title') as string || "Our Leadership"}
                         </span>
-                        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide whitespace-nowrap">
+                        <h2 className="text-[36px] font-medium tracking-wide whitespace-nowrap">
                             <SplitTitle title={t('about.leadership.tagline') as string || "Lorem Ipsum"} />
                         </h2>
                     </ScrollReveal>
@@ -93,7 +93,7 @@ const About = () => {
                                     <div className="mb-auto mt-8 hidden md:block">
                                         <div className="w-10 h-1 bg-white/50 rounded-full" />
                                     </div>
-                                    <p className="text-white/95 text-base md:text-base leading-relaxed line-clamp-4 lg:line-clamp-6 mb-8 font-medium">
+                                    <p className="text-white/95 text-[18px] leading-relaxed line-clamp-4 lg:line-clamp-6 mb-8 font-medium">
                                         "{profile.message || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}"
                                     </p>
 
@@ -116,10 +116,10 @@ const About = () => {
 
                                 {/* Always Visible: Name and Role */}
                                 <div className="relative transform transition-transform duration-500 ease-out group-hover:-translate-y-32 group-hover:opacity-0 md:group-hover:-translate-y-48">
-                                    <h3 className="text-2xl md:text-3xl lg:text-3xl font-medium text-white mb-2 md:mb-3 tracking-tight">
+                                    <h3 className="text-[36px] font-medium text-white mb-2 md:mb-3 tracking-tight">
                                         {profile.name}
                                     </h3>
-                                    <p className="text-white group-hover:text-white/80 font-medium tracking-[0.2em] text-[10px] md:text-[11px] uppercase transition-colors duration-500">
+                                    <p className="text-white group-hover:text-white/80 font-medium tracking-[0.2em] text-[18px] uppercase transition-colors duration-500">
                                         {profile.role}
                                     </p>
                                 </div>

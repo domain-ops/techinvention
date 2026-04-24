@@ -52,11 +52,11 @@ const Facilities = () => {
                                 transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
                                 className="flex flex-col h-full"
                             >
-                                <h3 className="text-5xl lg:text-[4rem] font-bold mb-6 tracking-tight uppercase text-gray-900 md:text-left text-center">
+                                <h3 className="text-[36px] font-bold mb-6 tracking-tight uppercase text-gray-900 md:text-left text-center">
                                     {slideData[currentIndex].title}
                                 </h3>
                                 
-                                <p className="text-gray-900 font-medium text-lg lg:text-xl tracking-wide mb-8 leading-relaxed max-w-lg md:text-left text-center">
+                                <p className="text-gray-900 font-medium text-[18px] tracking-wide mb-8 leading-relaxed max-w-lg md:text-left text-center">
                                     {slideData[currentIndex].subtitleParts.map(part => part.letter + part.rest).join('')}
                                 </p>
                                 

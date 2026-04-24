@@ -57,7 +57,7 @@ const CTA = () => {
                             <div className="flex flex-col items-start lg:pl-10">
                                 <ScrollReveal direction="right" delay={0.3}>
                                     <p
-                                        className="text-[11px] md:text-[12px] text-black mb-10 leading-relaxed font-medium tracking-tight  tracking-wider"
+                                        className="text-[18px] text-black mb-10 leading-relaxed font-medium tracking-tight  tracking-wider"
                                     >
                                         {t('cta.desc')}
                                     </p>

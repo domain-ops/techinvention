@@ -26,7 +26,7 @@ const GlobalProjects = () => {
                         </ScrollReveal>
 
                         <div className="mt-4 mb-6">
-                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide mb-6">
+                            <h2 className="text-[36px] font-medium tracking-wide mb-6">
                                 <SplitTitle title={t('globalProjects.title').replace('{partners}', t('globalProjects.partners'))} />
                             </h2>
                         </div>
@@ -34,7 +34,7 @@ const GlobalProjects = () => {
                         <div className="max-w-2xl">
                             <MagicText
                                 text={t('globalProjects.desc')}
-                                className="font-medium tracking-tight text-brand-content text-base md:text-lg lg:text-[1.35rem] leading-relaxed text-left lg:text-justify"
+                                className="font-medium tracking-tight text-brand-content text-[18px] leading-relaxed text-left lg:text-justify"
                             />
                         </div>
                     </div>

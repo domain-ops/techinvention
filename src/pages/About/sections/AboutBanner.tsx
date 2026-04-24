@@ -33,7 +33,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenu
                     <TextReveal
                         text={displayTitle}
                         mode="light"
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-[1.1] tracking-tighter justify-center text-center md:whitespace-nowrap"
+                        className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-[1.1] tracking-tighter justify-center text-center md:whitespace-normal"
                     />
                 </div>
 

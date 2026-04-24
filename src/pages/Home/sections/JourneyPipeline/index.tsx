@@ -42,7 +42,7 @@ const JourneyPipeline = () => {
                         <span className="text-[10px] md:text-xs font-semibold tracking-[0.4em] text-[#2F62A4] mb-3 uppercase">
                             {t('journeyPipeline.tag') as string}
                         </span>
-                        <h2 className="text-2xl md:text-3xl font-medium tracking-tight">
+                        <h2 className="text-[36px] font-medium tracking-tight">
                             <span className="text-[#2F62A4]">{t('journeyPipeline.title1') as string}</span>
                             <span className="text-[#6D8337]">{t('journeyPipeline.title2') as string}</span>
                         </h2>

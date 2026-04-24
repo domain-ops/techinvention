@@ -36,7 +36,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
                         <HelpCircle size={16} />
                     </span>
                     <h3 className={cn(
-                        "text-base md:text-lg font-medium tracking-tight transition-colors duration-300 tracking-tight leading-tight",
+                        "text-[18px] font-medium tracking-tight transition-colors duration-300 tracking-tight leading-tight",
                         isOpen ? "text-brand-primary" : "text-brand-content group-hover:text-brand-primary/80"
                     )}>
                         {question}
@@ -62,7 +62,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
                         transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                         <div className="pb-8 pl-12 pr-6 md:pr-12">
-                            <p className="text-black text-base md:text-base leading-relaxed font-medium tracking-tight">
+                            <p className="text-black text-[18px] leading-relaxed font-medium tracking-tight">
                                 {answer}
                             </p>
                         </div>
@@ -94,12 +94,12 @@ const FAQSection = () => {
                             </span>
                         </ScrollReveal>
                         <ScrollReveal direction="up" delay={0.1}>
-                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide mb-6">
+                            <h2 className="text-[36px] font-medium tracking-wide mb-6">
                                 <SplitTitle title={faqData.title} />
                             </h2>
                         </ScrollReveal>
                         <ScrollReveal direction="up" delay={0.2}>
-                            <p className="text-brand-content text-base md:text-lg lg:text-[1.35rem] max-w-3xl mx-auto md:mx-0 leading-relaxed tracking-tight">
+                            <p className="text-brand-content text-[18px] max-w-3xl mx-auto md:mx-0 leading-relaxed tracking-tight">
                                 {faqData.subtitle}
                             </p>
                         </ScrollReveal>

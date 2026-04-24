@@ -51,14 +51,14 @@ const VisionMissionValues = () => {
                             <div className="mb-10">
                                 <TextReveal
                                     text={t('about.vision.headline').replace('{future}', t('about.vision.future'))}
-                                    className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-[0.95]"
+                                    className="text-[36px] md:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-[0.95]"
                                 />
                             </div>
                             <div className="relative">
                                 <div className="absolute -left-6 top-0 bottom-0 w-1 bg-brand-primary/10 rounded-full" />
                                 <TextReveal
                                     text={t('about.vision.desc')}
-                                    className="text-black text-lg md:text-xl font-medium leading-relaxed whitespace-pre-line text-left"
+                                    className="text-black text-[18px] font-medium leading-relaxed whitespace-pre-line text-left"
                                 />
                             </div>
                         </div>
@@ -101,14 +101,14 @@ const VisionMissionValues = () => {
                             <div className="mb-10">
                                 <TextReveal
                                     text={t('about.mission.headline').replace('{equityGap}', t('about.mission.equityGap'))}
-                                    className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-[0.95]"
+                                    className="text-[36px] md:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-[0.95]"
                                 />
                             </div>
                             <div className="relative">
                                 <div className="absolute -right-6 top-0 bottom-0 w-1 bg-brand-primary/10 rounded-full hidden lg:block" />
                                 <TextReveal
                                     text={t('about.mission.desc')}
-                                    className="text-black text-lg md:text-xl font-medium leading-relaxed whitespace-pre-line text-left lg:text-right"
+                                    className="text-black text-[18px] font-medium leading-relaxed whitespace-pre-line text-left lg:text-right"
                                 />
                             </div>
                         </div>
@@ -124,7 +124,7 @@ const VisionMissionValues = () => {
                     </span>
                     <TextReveal
                         text={t('about.values.tagline')}
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-tight max-w-4xl mx-auto justify-center text-center"
+                        className="text-[36px] lg:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-tight max-w-4xl mx-auto justify-center text-center"
                     />
                 </div>
 

@@ -16,7 +16,7 @@ const CompanyStory = () => {
                         <div className="mb-16">
                             <MagicText
                                 text={`"${t('about.story.mandelaQuote')}"`}
-                                className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-brand-content leading-tight tracking-tight italic text-justify"
+                                className="text-[36px] font-medium tracking-tight text-brand-content leading-tight tracking-tight italic text-justify"
                             />
                             <div className="w-16 h-1 bg-brand-primary mt-8 rounded-full" />
                         </div>
@@ -27,14 +27,14 @@ const CompanyStory = () => {
                         <ScrollReveal direction="up" delay={0.2}>
                             <MagicText
                                 text={t('about.story.commitment')}
-                                className="font-medium tracking-tight text-brand-content text-lg md:text-xl lg:text-[1.35rem] leading-relaxed text-justify"
+                                className="font-medium tracking-tight text-brand-content text-[18px] leading-relaxed text-justify"
                             />
                         </ScrollReveal>
 
                         <ScrollReveal direction="up" delay={0.3}>
                             <MagicText
                                 text={t('about.story.expertise')}
-                                className="font-medium tracking-tight text-brand-content text-lg md:text-xl lg:text-[1.35rem] leading-relaxed text-justify"
+                                className="font-medium tracking-tight text-brand-content text-[18px] leading-relaxed text-justify"
                             />
                         </ScrollReveal>
                     </div>

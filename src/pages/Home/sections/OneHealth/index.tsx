@@ -50,7 +50,7 @@ const OneHealth = () => {
                             {t('oneHealth.tag')}
                         </span>
                         <div className="mt-4">
-                            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight leading-tight tracking-tighter animate-fade-in lg:whitespace-nowrap">
+                            <h2 className="text-[36px] font-medium tracking-tight leading-tight tracking-tighter animate-fade-in lg:whitespace-nowrap">
                                 <SplitTitle title={t('oneHealth.title').replace('{bioInnovation}', t('oneHealth.bioInnovation'))} />
                             </h2>
                         </div>

@@ -37,7 +37,7 @@ const Awards = () => {
                             <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary mb-4 block uppercase">
                                 {t('awards.tag') as string}
                             </span>
-                            <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-brand-primary tracking-wide">
+                            <h2 className="text-[36px] font-medium tracking-tight text-brand-primary tracking-wide">
                                 {(t('awards.title') as string).split('{latestNews}')[0]}
                                 <span className="font-medium text-brand-secondary">{t('awards.accolades') as string}</span>
                                 {(t('awards.title') as string).split('{latestNews}')[1] || ''}

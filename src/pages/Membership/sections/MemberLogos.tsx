@@ -36,7 +36,7 @@ const MemberLogos = () => {
                     <div className="mb-6">
                         <TextReveal
                             text={t('membership.membersTitle')}
-                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-brand-content leading-tight tracking-tighter  justify-center text-center"
+                            className="text-[36px] lg:text-6xl font-medium tracking-tight text-brand-content leading-tight tracking-tighter  justify-center text-center"
                         />
                     </div>
                     <div className="mx-auto max-w-3xl">
