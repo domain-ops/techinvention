@@ -45,7 +45,10 @@ export const english = {
         newsMedia: "News & Media",
         faqs: "FAQs",
         technicalSupport: "Technical Support",
-        strategicAdvisory: "Strategic Technical Advisory"
+        strategicAdvisory: "Strategic & Technical Advisory",
+        globalAccess: "Global Access",
+        cdmo: "CDMO",
+        successfulProjects: "Successful Projects"
     },
     video: {
         tagline: "Experience the Future of Biotech Innovation"

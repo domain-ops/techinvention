@@ -87,10 +87,10 @@ const Navbar = () => {
                 {
                     title: t('megaMenu.services'),
                     links: [
-                        { name: t('megaMenu.oneHealth'), href: '/' },
-                        { name: t('megaMenu.rnd'), href: '/' },
-                        { name: t('megaMenu.manufacturing'), href: '/' },
                         { name: t('megaMenu.strategicAdvisory'), href: '/strategic-technical-advisory' },
+                        { name: t('megaMenu.globalAccess'), href: '/' },
+                        { name: t('megaMenu.cdmo'), href: '/' },
+                        { name: t('megaMenu.successfulProjects'), href: '/' },
                     ]
                 },
             ],
