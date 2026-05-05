@@ -10,18 +10,20 @@ interface AboutBannerProps {
     title?: string;
     parentMenu?: string;
     parentMenuLink?: string;
+    image?: string;
 }
 
-const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenuLink }) => {
+const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenuLink, image }) => {
     const { t } = useLanguage();
     const displayTitle = title || t('navbar.about');
+    const displayImage = image || labImg;
 
     return (
         <section className="relative h-[85vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Background Images Layered */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src={labImg}
+                    src={displayImage}
                     alt="Background"
                     className="w-full h-full object-cover object-top"
                 />
