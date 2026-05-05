@@ -62,9 +62,9 @@ export function CTASection() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="group relative flex items-center gap-4 bg-brand-primary text-white px-10 py-5 rounded-full text-lg font-medium tracking-tight transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-2xl overflow-hidden"
+                            className="group relative flex items-center gap-3 md:gap-4 bg-brand-primary text-white px-6 py-3.5 md:px-10 md:py-5 rounded-full text-base md:text-lg font-medium tracking-tight transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-2xl overflow-hidden"
                         >
-                            <span className="relative z-10  tracking-[0.2em] text-[11px]">
+                            <span className="relative z-10 tracking-[0.2em] text-[10px] md:text-[11px] uppercase font-bold">
                                 Start Partnership
                             </span>
                             <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">

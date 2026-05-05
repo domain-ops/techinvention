@@ -25,7 +25,7 @@ const MemberLogos = () => {
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <div className="mb-4">

@@ -9,8 +9,8 @@ const Footer = () => {
     return (
         <footer className="bg-brand-accent pt-24 pb-12 border-t border-brand-gray-light/20">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
-                    <div className="md:col-span-1">
+                <div className="flex flex-col md:flex-row gap-12 md:gap-16 mb-24">
+                    <div className="md:w-1/4">
                         <div className="flex items-center gap-2 mb-8">
                             <img
                                 src={logoImg}
@@ -18,42 +18,44 @@ const Footer = () => {
                                 className="h-16 w-auto object-contain"
                             />
                         </div>
-                        <p className="text-black text-[11px] font-medium tracking-tight leading-relaxed max-w-xs  tracking-wider">
+                        <p className="text-black text-[11px] font-medium tracking-tight leading-relaxed max-w-xs tracking-wider">
                             {t('footer.desc')}
                         </p>
                     </div>
 
-                    <div>
-                        <h4 className="text-lg font-medium tracking-tight  tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
-                        <ul className="space-y-4 text-[11px] text-black font-medium tracking-tight  tracking-wider">
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.0.title')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.1.title')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.2.title')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.3.title')}</li>
-                        </ul>
-                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12 md:w-3/4">
+                        <div>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
+                            <ul className="space-y-4 text-[11px] text-black font-medium tracking-tight tracking-wider">
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.0.title')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.1.title')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.2.title')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('solutions.items.3.title')}</li>
+                            </ul>
+                        </div>
 
-                    <div>
-                        <h4 className="text-lg font-medium tracking-tight  tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
-                        <ul className="space-y-4 text-[11px] text-black font-medium tracking-tight  tracking-wider">
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('megaMenu.aboutUs')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('map.tag')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('homeStats.header.tag')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('megaMenu.pipeline')}</li>
-                        </ul>
-                    </div>
+                        <div>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
+                            <ul className="space-y-4 text-[11px] text-black font-medium tracking-tight tracking-wider">
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('megaMenu.aboutUs')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('map.tag')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('homeStats.header.tag')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('megaMenu.pipeline')}</li>
+                            </ul>
+                        </div>
 
-                    <div>
-                        <h4 className="text-lg font-medium tracking-tight  tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
-                        <ul className="space-y-4 text-[11px] text-black font-medium tracking-tight  tracking-wider">
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('footer.linkedin')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('footer.twitter')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('navbar.contactUs')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('footer.partnerPortal')}</li>
-                            <li className="hover:text-brand-primary transition-colors cursor-pointer">
-                                <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
-                            </li>
-                        </ul>
+                        <div className="col-span-2 sm:col-span-1">
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
+                            <ul className="space-y-4 text-[11px] text-black font-medium tracking-tight tracking-wider">
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('footer.linkedin')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('footer.twitter')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('navbar.contactUs')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer">{t('footer.partnerPortal')}</li>
+                                <li className="hover:text-brand-primary transition-colors cursor-pointer break-all">
+                                    <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 

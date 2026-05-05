@@ -105,18 +105,10 @@ const Navbar = () => {
             label: t('navbar.company'),
             sections: [
                 {
-                    title: t('megaMenu.aboutUs'),
+                    title: t('navbar.company'),
                     links: [
-                        { name: t('megaMenu.vision'), href: '/' },
-                        { name: t('megaMenu.team'), href: '/' },
-                        { name: t('megaMenu.careers'), href: '/' },
-                    ]
-                },
-                {
-                    title: t('megaMenu.credentials'),
-                    links: [
-                        { name: t('megaMenu.certifications'), href: '/' },
-                        { name: t('megaMenu.memberships'), href: '/' },
+                        { name: t('megaMenu.aboutUs'), href: '/about' },
+                        { name: t('megaMenu.certifications'), href: '/certification' },
                     ]
                 }
             ],
@@ -155,7 +147,7 @@ const Navbar = () => {
         }
     };
 
-    const mainNavItems = ['products', 'solutions', 'learn', 'company', 'support'];
+    const mainNavItems = ['home', 'company', 'products', 'solutions', 'contactUs'];
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
@@ -169,26 +161,46 @@ const Navbar = () => {
                     {/* Main Navigation */}
                     <nav className="hidden lg:flex items-center">
                         <ul className="flex items-center gap-8">
-                            {mainNavItems.map((item) => (
+                            {mainNavItems.map((item) => {
+                                const hasDropdown = !!megaMenusData[item];
+                                const label = megaMenusData[item]?.label || t(`navbar.${item}`) || item;
+                                
+                                return (
                                 <li 
                                     key={item}
                                     className="relative"
-                                    onMouseEnter={() => setActiveMegaMenu(item)}
-                                    onMouseLeave={() => setActiveMegaMenu(null)}
+                                    onMouseEnter={() => hasDropdown && setActiveMegaMenu(item)}
+                                    onMouseLeave={() => hasDropdown && setActiveMegaMenu(null)}
                                 >
-                                    <button className={`px-2 py-2 text-[14px] font-medium tracking-[0.2em] transition-all relative  ${activeMegaMenu === item ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}>
-                                        {megaMenusData[item]?.label || item}
-                                        {activeMegaMenu === item && (
-                                            <motion.div 
-                                                layoutId="activeNav"
-                                                className="absolute bottom-[-10px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
-                                            />
-                                        )}
-                                    </button>
+                                    {hasDropdown ? (
+                                        <button className={`px-2 py-2 text-[14px] font-medium tracking-wide transition-all relative flex items-center gap-1 ${activeMegaMenu === item ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}>
+                                            {label}
+                                            <ChevronDown size={14} className={`transition-transform duration-300 ${activeMegaMenu === item ? 'rotate-180' : ''}`} />
+                                            {activeMegaMenu === item && (
+                                                <motion.div 
+                                                    layoutId="activeNav"
+                                                    className="absolute bottom-[-10px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
+                                                />
+                                            )}
+                                        </button>
+                                    ) : (
+                                        <Link 
+                                            to={item === 'home' ? '/' : `/${item.toLowerCase()}`}
+                                            className={`px-2 py-2 text-[14px] font-medium tracking-wide transition-all relative flex items-center gap-1 ${location.pathname === (item === 'home' ? '/' : `/${item.toLowerCase()}`) ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}
+                                        >
+                                            {label}
+                                            {location.pathname === (item === 'home' ? '/' : `/${item.toLowerCase()}`) && (
+                                                <motion.div 
+                                                    layoutId="activeNav"
+                                                    className="absolute bottom-[-10px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
+                                                />
+                                            )}
+                                        </Link>
+                                    )}
 
                                     {/* Mega Menu Flyout */}
                                     <AnimatePresence>
-                                        {activeMegaMenu === item && megaMenusData[item] && (
+                                        {activeMegaMenu === item && hasDropdown && (
                                             <motion.div
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
@@ -206,7 +218,7 @@ const Navbar = () => {
                                         )}
                                     </AnimatePresence>
                                 </li>
-                            ))}
+                            )})}
                         </ul>
                     </nav>
 
@@ -283,17 +295,32 @@ const Navbar = () => {
                         className="fixed inset-0 top-20 md:top-24 z-[4800] lg:hidden bg-white overflow-y-auto"
                     >
                         <div className="flex flex-col p-6 divide-y divide-gray-100 pb-32">
-                            {mainNavItems.map(item => (
+                            {mainNavItems.map(item => {
+                                const hasDropdown = !!megaMenusData[item];
+                                const label = megaMenusData[item]?.label || t(`navbar.${item}`) || item;
+
+                                return (
                                 <div key={item} className="py-4">
-                                    <button 
-                                        onClick={() => toggleMobileMenu(item)}
-                                        className="w-full flex items-center justify-between outline-none"
-                                    >
-                                        <span className="text-lg font-medium tracking-widest text-black">{megaMenusData[item]?.label}</span>
-                                        <ChevronDown size={16} className={`text-gray-400 transition-transform duration-300 ${openMobileMenus.includes(item) ? 'rotate-180' : ''}`} />
-                                    </button>
+                                    {hasDropdown ? (
+                                        <button 
+                                            onClick={() => toggleMobileMenu(item)}
+                                            className="w-full flex items-center justify-between outline-none"
+                                        >
+                                            <span className="text-lg font-medium tracking-wide text-black">{label}</span>
+                                            <ChevronDown size={16} className={`text-gray-400 transition-transform duration-300 ${openMobileMenus.includes(item) ? 'rotate-180' : ''}`} />
+                                        </button>
+                                    ) : (
+                                        <Link 
+                                            to={item === 'home' ? '/' : `/${item.toLowerCase()}`}
+                                            onClick={() => setIsMenuOpen(false)}
+                                            className="w-full flex items-center justify-between outline-none"
+                                        >
+                                            <span className="text-lg font-medium tracking-wide text-black">{label}</span>
+                                        </Link>
+                                    )}
+                                    
                                     <AnimatePresence>
-                                        {openMobileMenus.includes(item) && megaMenusData[item] && (
+                                        {openMobileMenus.includes(item) && hasDropdown && (
                                             <motion.div
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
@@ -302,27 +329,27 @@ const Navbar = () => {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="mt-4 flex flex-col gap-3 pl-2 border-l border-gray-100">
-                                            {megaMenusData[item].sections.map((sec: any, sIdx: number) => (
-                                                <div key={sIdx}>
-                                                    <span className="text-[13px] font-medium tracking-tight text-brand-primary  tracking-widest">{sec.title}</span>
-                                                    {sec.links.map((link: any, lIdx: number) => (
-                                                        <Link 
-                                                            key={lIdx} 
-                                                            to={link.href} 
-                                                            className="block py-2 text-[14px] font-medium tracking-tight text-black"
-                                                            onClick={() => setIsMenuOpen(false)}
-                                                        >
-                                                            {link.name}
-                                                        </Link>
+                                                    {megaMenusData[item].sections.map((sec: any, sIdx: number) => (
+                                                        <div key={sIdx}>
+                                                            <span className="text-[13px] font-medium tracking-tight text-brand-primary tracking-widest uppercase">{sec.title}</span>
+                                                            {sec.links.map((link: any, lIdx: number) => (
+                                                                <Link 
+                                                                    key={lIdx} 
+                                                                    to={link.href} 
+                                                                    className="block py-2 text-[14px] font-medium tracking-tight text-black"
+                                                                    onClick={() => setIsMenuOpen(false)}
+                                                                >
+                                                                    {link.name}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
                                                     ))}
-                                                </div>
-                                            ))}
                                                 </div>
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
                                 </div>
-                            ))}
+                            )})}
                         </div>
                     </motion.div>
                 )}

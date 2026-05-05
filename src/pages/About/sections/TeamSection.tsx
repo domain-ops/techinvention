@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
-import TextReveal from '../../../components/Common/TextReveal';
-import { ArrowRight } from 'lucide-react';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import images
 import member1 from '../../../assets/images/team/member_1.png';
@@ -13,121 +12,107 @@ import member4 from '../../../assets/images/team/member_4.png';
 
 const TeamSection = () => {
     const { t } = useLanguage();
+    const sliderRef = useRef<HTMLDivElement>(null);
 
     const teamMembersData = t('about.leadership.team.members') || [];
     const memberImages = [member1, member2, member3, member4];
 
-    // Create a doubled list for seamless infinite loop
-    const doubledMembers = [...teamMembersData, ...teamMembersData];
-    const doubledImages = [...memberImages, ...memberImages];
+    const slide = (direction: 'left' | 'right') => {
+        if (sliderRef.current) {
+            const scrollAmount = window.innerWidth > 768 ? 350 : 280;
+            sliderRef.current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
-        <section className="py-32 bg-slate-50 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 mb-24">
-                <div className="text-center">
+        <section className="py-12 md:py-20 bg-slate-50 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div className="text-left flex-1">
                     <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em]  text-[11px] mb-6 block">
+                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
                             {t('about.leadership.team.title')}
                         </span>
-                        <div className="mb-8">
-                            <TextReveal
-                                text={t('about.leadership.team.tagline')}
-                                className="text-4xl md:text-6xl font-medium tracking-tight text-brand-content  tracking-tighter leading-tight justify-center"
-                            />
+                        <div className="mb-4">
+                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
+                                <SplitTitle title={t('about.leadership.team.tagline')} />
+                            </h2>
                         </div>
-                        <TextReveal
-                            text={t('about.leadership.team.cta')}
-                            className="text-black text-[18px] font-medium max-w-3xl leading-relaxed mx-auto"
-                        />
+                        <p className="text-[#475569] text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
+                            {t('about.leadership.team.cta')}
+                        </p>
                     </ScrollReveal>
                 </div>
             </div>
 
-            {/* Infinite Looping Slider */}
-            <div className="relative w-full">
-                <div className="flex">
-                    <motion.div
-                        className="flex gap-8 px-4"
-                        animate={{
-                            x: [0, "-50%"],
-                        }}
-                        transition={{
-                            duration: 25,
-                            ease: "linear",
-                            repeat: Infinity,
-                        }}
-                        style={{ width: "fit-content" }}
-                        // Pause on hover for easier interaction
-                        whileHover={{ animationPlayState: "paused" }}
-                    >
-                        {doubledMembers.map((member: any, idx: number) => (
-                            <div key={idx} className="w-[300px] md:w-[400px] shrink-0">
-                                <MemberCard member={member} image={doubledImages[idx]} />
-                            </div>
-                        ))}
-                    </motion.div>
+            {/* Slider Layout (Mobile) / Grid Layout (Desktop) */}
+            <div className="w-full md:max-w-7xl md:mx-auto md:px-6">
+                <div 
+                    ref={sliderRef}
+                    className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto md:overflow-visible gap-6 md:gap-x-8 md:gap-y-16 pb-12 md:pb-0 snap-x snap-mandatory md:snap-none px-[20vw] md:px-0"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                    <style>{`
+                        .flex::-webkit-scrollbar {
+                            display: none;
+                        }
+                    `}</style>
+                    {teamMembersData.map((member: any, idx: number) => (
+                        <div key={idx} className="min-w-[60vw] md:min-w-0 snap-center md:snap-align-none">
+                            <ScrollReveal direction="up" delay={idx * 0.1}>
+                                <MemberCard member={member} image={memberImages[idx % memberImages.length]} />
+                            </ScrollReveal>
+                        </div>
+                    ))}
+                    {/* Add an empty div for padding-right equivalent on mobile */}
+                    <div className="min-w-[12px] md:hidden flex-shrink-0" aria-hidden="true" />
                 </div>
+            </div>
+
+            {/* Slider Controls (CTAs) - Bottom (Mobile Only) */}
+            <div className="max-w-7xl mx-auto px-6 mt-4 md:hidden">
+                <ScrollReveal direction="up">
+                    <div className="flex items-center justify-center gap-4">
+                        <button 
+                            onClick={() => slide('left')}
+                            className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all duration-300 group bg-white"
+                            aria-label="Previous slide"
+                        >
+                            <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform text-slate-700 group-hover:text-white" />
+                        </button>
+                        <button 
+                            onClick={() => slide('right')}
+                            className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all duration-300 group bg-white"
+                            aria-label="Next slide"
+                        >
+                            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-slate-700 group-hover:text-white" />
+                        </button>
+                    </div>
+                </ScrollReveal>
             </div>
         </section>
     );
 };
 
 const MemberCard = ({ member, image }: { member: any, image: string }) => (
-    <motion.div
-        className="group relative bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 h-[450px] md:h-[550px] flex flex-col transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)]"
-    >
-        {/* Card Background Image */}
-        <div className="absolute inset-0 overflow-hidden">
+    <div className="flex flex-col items-center text-center">
+        <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 bg-slate-200">
             <img
                 src={image}
                 alt={member.name}
-                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
+                loading="lazy"
             />
-
-            {/* Blue Reveal Mask */}
-            <div className="absolute inset-0 bg-brand-primary/95 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col justify-end p-10 lg:p-12">
-                <div className="relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        className="w-16 h-1 bg-white/40 rounded-full mb-6"
-                    />
-
-                    <div className="mb-6">
-                        <h3 className="text-3xl font-medium tracking-tight text-white  tracking-tight mb-2">
-                            {member.name}
-                        </h3>
-                        <p className="text-white text-[10px] font-medium tracking-tight  tracking-[0.4em]">
-                            {member.role}
-                        </p>
-                    </div>
-
-                    <p className="text-white text-[18px] font-medium leading-relaxed italic line-clamp-6 mb-8">
-                        "{member.bio}"
-                    </p>
-
-                    <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group/btn hover:bg-white hover:border-white transition-all duration-300">
-                            <ArrowRight size={18} className="text-white group-hover/btn:text-brand-primary -rotate-45" />
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-
-        {/* Static Float Label (Entries) */}
-        <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:opacity-0 transition-all duration-500 transform group-hover:translate-y-4">
-            <h3 className="text-2xl font-medium tracking-tight text-white  tracking-tight">
-                {member.name}
-            </h3>
-            <div className="flex items-center gap-3 mt-2">
-                <div className="w-6 h-1 bg-white rounded-full" />
-                <p className="text-white text-[10px] font-medium tracking-tight  tracking-[0.3em]">
-                    {member.role}
-                </p>
-            </div>
-        </div>
-    </motion.div>
+        <h3 className="text-[17px] md:text-[19px] font-medium text-brand-content mb-2 tracking-tight">
+            {member.name}
+        </h3>
+        <p className="text-[12px] md:text-[13px] font-bold text-black uppercase tracking-wider">
+            {member.role}
+        </p>
+    </div>
 );
 
 export default TeamSection;

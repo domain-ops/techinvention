@@ -16,16 +16,17 @@ const CTASection = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <section id="cta" className="py-24 w-full flex justify-center items-center px-4 md:px-6 bg-white relative">
+        <section id="cta" className="py-20 w-full flex justify-center items-center px-4 md:px-6 bg-white relative">
 
             <div
-                className="w-full max-w-7xl relative"
+                className="w-full max-w-5xl relative"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <div className="relative overflow-hidden rounded-[48px] border border-brand-border bg-gray-200 shadow-sm min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center duration-500">
-                    <ScrollReveal direction="up" className="relative z-10 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
-                        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/5 px-4 py-1.5 text-lg font-medium tracking-tight text-brand-primary backdrop-blur-sm  tracking-widest">
+                <div className="relative overflow-hidden rounded-[48px] border border-brand-border bg-slate-50 shadow-sm py-16 md:py-24 flex flex-col items-center justify-center duration-500">
+                    
+                    <ScrollReveal direction="up" className="relative z-10 px-6 max-w-3xl mx-auto text-center flex flex-col items-center">
+                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/5 px-4 py-1.5 text-sm font-medium tracking-tight text-brand-primary backdrop-blur-sm tracking-widest">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
@@ -34,13 +35,13 @@ const CTASection = () => {
                         </div>
 
                         {/* Headline */}
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight tracking-tighter mb-8 leading-[1.05] text-center">
+                        <h2 className="text-[36px] font-medium tracking-wide mb-4 leading-tight text-center">
                             <span className="text-brand-primary text-[#1955A6]">{t('cta.title')}</span>{' '}
                             <span className="text-brand-secondary text-[#5C7625]">{t('cta.titleHighlight')}</span>
                         </h2>
 
                         {/* Description */}
-                        <p className="text-black text-[18px] max-w-2xl mb-12 leading-relaxed font-medium tracking-tight text-center">
+                        <p className="text-black text-[18px] max-w-2xl mb-8 leading-relaxed font-medium tracking-tight text-center">
                             {t('cta.desc')}
                         </p>
 
@@ -48,9 +49,9 @@ const CTASection = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="group relative flex items-center gap-4 bg-brand-primary text-white px-10 py-5 rounded-full text-lg font-medium tracking-tight transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-2xl overflow-hidden"
+                            className="group relative flex items-center gap-3 bg-brand-primary text-white px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-xl overflow-hidden"
                         >
-                            <span className="relative z-10  tracking-[0.2em] text-[11px]">
+                            <span className="relative z-10 text-[13px] font-bold uppercase tracking-widest">
                                 {t('cta.startPartnership')}
                             </span>
                             <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
