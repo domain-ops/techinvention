@@ -4,10 +4,10 @@ import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import AccordionSlider from './AccordionSlider';
 
 // Import images
-import ecoImg from '../../../../assets/images/one_health_ecosystem.png';
-import surveillanceImg from '../../../../assets/images/one_health_surveillance.png';
-import infraImg from '../../../../assets/images/one_health_infrastructure.png';
-import innovationImg from '../../../../assets/images/one_health_innovation.png';
+import ecoImg from "../../../../assets/images/one_health_ecosystem.png";
+import surveillanceImg from "../../../../assets/images/one_health_ecosystem.png"; // Placeholder for one_health_surveillance.png
+import infraImg from "../../../../assets/images/one_health_infrastructure.png";
+import innovationImg from "../../../../assets/images/one_health_infrastructure.png"; // Placeholder for one_health_innovation.png
 
 import TextReveal from '../../../../components/Common/TextReveal';
 import { SplitTitle } from '../../../../components/Common/SplitTitle';

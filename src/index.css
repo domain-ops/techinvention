@@ -22,8 +22,13 @@
 
   body {
     @apply bg-brand-background text-brand-content antialiased font-sans;
-    cursor: default;
     overflow-x: hidden;
+  }
+
+  @media (pointer: fine) {
+    *, *::before, *::after {
+      cursor: none !important;
+    }
   }
 
   h1,

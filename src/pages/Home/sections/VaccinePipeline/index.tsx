@@ -35,9 +35,15 @@ const VaccinePipeline = () => {
 
     if (!pipelineData.length) return null;
 
+    const bioData = (t('biotherapeuticsPipeline.items') as any[]) || [
+        { name: "Recombinant Human Erythropoietin", phase: "Phase 3", color: "#2065B3", desc: "For treatment of anemia" },
+        { name: "Pegfilgrastim", phase: "Pre-clinical", color: "#87A840", desc: "For neutropenia treatment" }
+    ];
+
     return (
         <section id="vaccine-pipeline" className="pt-16 md:pt-20 pb-4 md:pb-8 relative bg-brand-primary/5 overflow-hidden border-t border-brand-primary/10">
-            <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                {/* GLOBAL SECTION HEADER */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
                     <div className="max-w-3xl">
                         <ScrollReveal direction="up">
@@ -46,12 +52,12 @@ const VaccinePipeline = () => {
                             </span>
                         </ScrollReveal>
                         <h2 className="text-[36px] font-medium tracking-wide mb-6">
-                            <SplitTitle title={t('vaccinePipeline.title').replace('{pipeline}', t('vaccinePipeline.pipeline'))} />
+                            <SplitTitle title={t('vaccinePipeline.title')?.replace('{pipeline}', t('vaccinePipeline.pipeline') as string) || "R&D Vaccine & Biotherapeutics Pipeline"} />
                         </h2>
                     </div>
 
                     {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
+                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8">
                         <motion.img 
                             src={logoDNA}
                             alt="TechInvention Logo"
@@ -66,11 +72,16 @@ const VaccinePipeline = () => {
                     </div>
                 </div>
 
+                <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-8">
+                    
+                    {/* LEFT COLUMN: VACCINE PIPELINE */}
+                    <div className="xl:col-span-8 flex flex-col pt-4">
+
                 {/* DESKTOP LAYOUT (Horizontal Timeline) */}
-                <div className="hidden lg:block w-full overflow-x-auto pb-8 scrollbar-hide">
-                    <div className="min-w-[1024px]">
+                <div className="hidden lg:block w-full pb-8 pr-4">
+                    <div className="w-full">
                         {/* Table Header (Phases) */}
-                        <div className="grid grid-cols-[200px_480px_300px] gap-0 text-[13px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
+                        <div className="grid grid-cols-[160px_400px_220px] xl:grid-cols-[180px_420px_240px] gap-0 text-[11px] xl:text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
                             <div>{/* Empty for row label */}</div>
                             
                             {/* Phase Columns Container */}
@@ -89,7 +100,7 @@ const VaccinePipeline = () => {
                         <div className="relative mt-8">
                             
                             {/* Vertical Dotted Guide Lines (Background Layer) */}
-                            <div className="absolute inset-0 grid grid-cols-[200px_480px_300px] gap-0 pointer-events-none pb-8 h-full z-0">
+                            <div className="absolute inset-0 grid grid-cols-[160px_400px_220px] xl:grid-cols-[180px_420px_240px] gap-0 pointer-events-none pb-8 h-full z-0">
                                 <div></div>
                                 <div className="grid grid-cols-5 w-full pr-12 h-full">
                                     <div className="border-l border-dotted border-slate-300"></div>
@@ -111,10 +122,10 @@ const VaccinePipeline = () => {
                                     return (
                                         <div 
                                             key={idx} 
-                                            className={`grid grid-cols-[200px_480px_300px] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
+                                            className={`grid grid-cols-[160px_400px_220px] xl:grid-cols-[180px_420px_240px] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
                                         >
                                             {/* Left Text Label */}
-                                            <div className="pr-6 flex items-center justify-end text-right text-base text-black py-6 border-r border-transparent">
+                                            <div className="pr-4 xl:pr-6 flex items-center justify-end text-right text-[14px] xl:text-[15px] font-medium text-black py-4 border-r border-transparent">
                                                 {item.name}
                                             </div>
 
@@ -253,8 +264,74 @@ const VaccinePipeline = () => {
                             </motion.div>
                         );
                     })}
+                    </div>
                 </div>
+                {/* End Left Column */}
 
+                {/* RIGHT COLUMN: BIOTHERAPEUTICS PIPELINE */}
+                <div className="xl:col-span-4 flex flex-col xl:border-l xl:border-slate-300/50 xl:pl-8">
+                    <div className="flex-1 w-full flex justify-start items-center relative pt-4 pb-12 pl-0 sm:pl-8">
+                        
+                        {/* Syringe Graphic */}
+                        <div className="w-24 h-[500px] flex flex-col items-center z-10 relative drop-shadow-xl shrink-0">
+                            {/* Plunger Handle */}
+                            <div className="w-12 h-6 border-4 border-slate-300 rounded-t-md bg-slate-50" />
+                            <div className="w-4 h-10 bg-slate-200 border-x-4 border-slate-300" />
+                            
+                            {/* Syringe Barrel */}
+                            <div className="w-full flex-1 border-4 border-slate-300 rounded-b-[40px] bg-white flex flex-col overflow-hidden relative">
+                                <div className="w-full h-5 bg-[#333] shrink-0" />
+                                
+                                {/* Phase Sections */}
+                                <div className="flex-1 w-full flex items-center justify-center text-white text-[11px] font-bold tracking-widest uppercase border-b border-white/20 text-center px-1 leading-tight" style={{backgroundColor: bioData[0]?.color || '#2065B3'}}>
+                                    {bioData[0]?.phase || 'PHASE 3'}
+                                </div>
+                                <div className="flex-1 w-full flex items-center justify-center text-white text-[11px] font-bold tracking-widest uppercase text-center px-1 leading-tight" style={{backgroundColor: bioData[1]?.color || '#87A840'}}>
+                                    {bioData[1]?.phase || 'PRE-CLINICAL'}
+                                </div>
+                            </div>
+                            
+                            {/* Needle */}
+                            <div className="w-6 h-6 bg-slate-300 rounded-b-sm border-2 border-slate-400" />
+                            <div className="w-1 h-16 bg-slate-400 rounded-b-full shadow-sm" />
+                        </div>
+
+                        {/* Labels Container - positioned relative to the right of the syringe */}
+                        <div className="relative h-[500px] flex-1 ml-6 sm:ml-12 pointer-events-none">
+                            
+                            {/* Item 1 (Top Phase) */}
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className="absolute top-[130px] left-0 w-full flex flex-col items-start"
+                            >
+                                <div className="w-8 sm:w-16 h-[2px] bg-slate-300 absolute -left-8 sm:-left-16 top-[14px]" />
+                                <h3 className="font-bold text-lg leading-tight mb-1 text-slate-800 pr-4">{bioData[0]?.name}</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed pr-4">{bioData[0]?.desc}</p>
+                            </motion.div>
+
+                            {/* Item 2 (Bottom Phase) */}
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="absolute top-[320px] left-0 w-full flex flex-col items-start"
+                            >
+                                <div className="w-8 sm:w-16 h-[2px] bg-slate-300 absolute -left-8 sm:-left-16 top-[14px]" />
+                                <h3 className="font-bold text-lg leading-tight mb-1 text-slate-800 pr-4">{bioData[1]?.name}</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed pr-4">{bioData[1]?.desc}</p>
+                            </motion.div>
+
+                        </div>
+
+                    </div>
+                </div>
+                {/* End Right Column */}
+
+                </div> {/* End Grid */}
             </div>
         </section>
     );

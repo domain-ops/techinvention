@@ -3,7 +3,7 @@ import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import { useLanguage } from '../../../../context/LanguageContext';
 
 import horizonImg from '../../../../assets/images/hor.jpg';
-import gcmcImg from '../../../../assets/images/banner1.jpg';
+import gcmcImg from '../../../../assets/images/banner-imge-1.jpg';
 import { LocationCard } from '../../../../components/ui/location-card';
 import { motion } from 'framer-motion';
 

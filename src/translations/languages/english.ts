@@ -18,6 +18,7 @@ export const english = {
         learn: "Learn",
         company: "Company",
         support: "Support",
+        spotlight: "Spotlight",
     },
     megaMenu: {
         vaccines: "Vaccines",
@@ -408,7 +409,7 @@ export const english = {
     },
     vaccinePipeline: {
         tag: "R&D Innovations",
-        title: "R&D Vaccine {pipeline}",
+        title: "R&D Vaccine & Biotherapeutics {pipeline}",
         pipeline: "Pipeline",
         phases: {
             preClinical: "Pre-clinical",
@@ -439,6 +440,14 @@ export const english = {
             { name: "Malaria Vaccine", progress: 75, color: "#EF4444" },
             { name: "Tuberculosis Vaccine", progress: 85, color: "#6366F1", note: "Licensing agreement" },
             { name: "Hepatitis B Vaccine", progress: 55, color: "#F59E0B" }
+        ]
+    },
+    biotherapeuticsPipeline: {
+        title: "Biotherapeutics {pipeline}",
+        pipeline: "Pipeline",
+        items: [
+            { name: "Recombinant Human Erythropoietin", phase: "Phase 3", color: "#2065B3", desc: "For treatment of anemia" },
+            { name: "Pegfilgrastim", phase: "Pre-clinical", color: "#87A840", desc: "For neutropenia treatment" }
         ]
     },
     journeyPipeline: {
@@ -549,28 +558,70 @@ export const english = {
         accolades: "Accolades",
         items: [
             {
-                year: "2024",
-                title: "Everest Group PEAK Matrix",
-                desc: "Revenue Cycle Management Operations Sixth Consecutive Year",
-                image: "award_everest"
+                year: "2025",
+                title: "SME Biopharma Company of the Year",
+                desc: "India Vaccine Leaders Conclave 2025",
+                image: "award_ivlc_2025"
             },
             {
                 year: "2024",
-                title: "Top 100 Healthcare Technology Companies",
-                desc: "The Healthcare Technology Report 2024",
-                image: "award_healthcare"
+                title: "Excellence in Bio-innovation",
+                desc: "Fortune Leadership Awards 2024",
+                image: "award_fortune_2024"
+            },
+            {
+                year: "2024",
+                title: "Health Entrepreneur Award",
+                desc: "Exemplars of Excellence 2024 Biopharma Edition",
+                image: "award_exemplars_2024"
+            },
+            {
+                year: "2024",
+                title: "Forbes ‘Select 200’",
+                desc: "We have earned a coveted spot in the Forbes India SELECT 200, a prestigious recognition of companies with game-changing global business potential!",
+                image: "award_forbes_2024"
+            },
+            {
+                year: "2024",
+                title: "Startup 50 Trailblazers",
+                desc: "Dun & Bradstreet Startup 50 Trailblazers 2024",
+                image: "award_dun_bradstreet"
             },
             {
                 year: "2023",
-                title: "Excellence in Innovation",
-                desc: "The Economic Times 2023",
-                image: "award_inno"
+                title: "Summit Star",
+                desc: "Summit Star 2023",
+                image: "award_summit_star"
             },
             {
-                year: "2023",
-                title: "CSO 100 Winner",
-                desc: "Winner 2023",
-                image: "award_cso"
+                year: "2022",
+                title: "SME of the Year Award",
+                desc: "India SME Excellence Awards in the Healthcare Sector",
+                image: "award_sme_excellence"
+            },
+            {
+                year: "2022",
+                title: "Finalist NSA 2021",
+                desc: "Policy Advocacy to the honorable PM of India",
+                image: "award_nsa_2021"
+            },
+            {
+                year: "2020",
+                title: "Top 10 Best Biotechnology Companies",
+                desc: "SwiftNLift Magazine 2020",
+                image: "award_swiftnlift_2020"
+            },
+            {
+                year: "2019",
+                title: "Best Company of the Year",
+                desc: "Startup City Magazine in Biotech Sector 2019",
+                image: "award_startup_city_2019"
+            },
+            {
+                year: "2019",
+                title: "Time2Leap Awards (MSME Edition)",
+                desc: "Ministry of MSME Leading Single Specialty Services Company of the Year",
+                image: "award_time2leap_2019"
             }
         ]
     },

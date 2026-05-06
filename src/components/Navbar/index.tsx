@@ -138,16 +138,27 @@ const Navbar = () => {
                 {
                     title: t('megaMenu.helpContact'),
                     links: [
-                        { name: t('navbar.contactUs'), href: '/' },
+                        { name: t('navbar.contactUs'), href: '/contact-us' },
                         { name: t('megaMenu.faqs'), href: '/' },
                         { name: t('megaMenu.technicalSupport'), href: '/' },
                     ]
                 }
             ]
+        },
+        spotlight: {
+            label: t('navbar.spotlight'),
+            simpleLinks: [
+                { name: "Awards", href: "/awards" },
+                { name: "TechInsights", href: "/" },
+                { name: "Media", href: "/" },
+                { name: "Press Releases", href: "/" },
+                { name: "Global Forums", href: "/" },
+                { name: "Publications", href: "/" },
+            ]
         }
     };
 
-    const mainNavItems = ['home', 'company', 'products', 'solutions', 'contactUs'];
+    const mainNavItems = ['home', 'company', 'products', 'solutions', 'spotlight', 'contactUs'];
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
@@ -185,11 +196,11 @@ const Navbar = () => {
                                         </button>
                                     ) : (
                                         <Link 
-                                            to={item === 'home' ? '/' : `/${item.toLowerCase()}`}
-                                            className={`px-2 py-2 text-[14px] font-medium tracking-wide transition-all relative flex items-center gap-1 ${location.pathname === (item === 'home' ? '/' : `/${item.toLowerCase()}`) ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}
+                                            to={item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`}
+                                            className={`px-2 py-2 text-[14px] font-medium tracking-wide transition-all relative flex items-center gap-1 ${location.pathname === (item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`) ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}
                                         >
                                             {label}
-                                            {location.pathname === (item === 'home' ? '/' : `/${item.toLowerCase()}`) && (
+                                            {location.pathname === (item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`) && (
                                                 <motion.div 
                                                     layoutId="activeNav"
                                                     className="absolute bottom-[-10px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
@@ -201,20 +212,42 @@ const Navbar = () => {
                                     {/* Mega Menu Flyout */}
                                     <AnimatePresence>
                                         {activeMegaMenu === item && hasDropdown && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="fixed top-[80px] md:top-[96px] left-0 right-0 bg-white shadow-2xl border-t border-gray-100 z-[4900]"
-                                            >
-                                                <div className="border-b border-gray-100 bg-gray-50/30">
-                                                    <MegaMenuContent 
-                                                        sections={megaMenusData[item].sections} 
-                                                        featured={megaMenusData[item].featured}
-                                                    />
-                                                </div>
-                                            </motion.div>
+                                            megaMenusData[item].simpleLinks ? (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: 10 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    className="absolute top-[50px] left-0 mt-2 bg-white shadow-lg border border-gray-100 z-[4900] min-w-[220px]"
+                                                >
+                                                    <div className="flex flex-col">
+                                                        {megaMenusData[item].simpleLinks.map((link: any, idx: number) => (
+                                                            <Link
+                                                                key={idx}
+                                                                to={link.href}
+                                                                className="px-6 py-4 text-[15px] font-medium text-black hover:text-brand-primary hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors"
+                                                            >
+                                                                {link.name}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                </motion.div>
+                                            ) : (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: 10 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    className="fixed top-[80px] md:top-[96px] left-0 right-0 bg-white shadow-2xl border-t border-gray-100 z-[4900]"
+                                                >
+                                                    <div className="border-b border-gray-100 bg-gray-50/30">
+                                                        <MegaMenuContent 
+                                                            sections={megaMenusData[item].sections} 
+                                                            featured={megaMenusData[item].featured}
+                                                        />
+                                                    </div>
+                                                </motion.div>
+                                            )
                                         )}
                                     </AnimatePresence>
                                 </li>
@@ -311,7 +344,7 @@ const Navbar = () => {
                                         </button>
                                     ) : (
                                         <Link 
-                                            to={item === 'home' ? '/' : `/${item.toLowerCase()}`}
+                                            to={item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`}
                                             onClick={() => setIsMenuOpen(false)}
                                             className="w-full flex items-center justify-between outline-none"
                                         >
@@ -329,21 +362,34 @@ const Navbar = () => {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="mt-4 flex flex-col gap-3 pl-2 border-l border-gray-100">
-                                                    {megaMenusData[item].sections.map((sec: any, sIdx: number) => (
-                                                        <div key={sIdx}>
-                                                            <span className="text-[13px] font-medium tracking-tight text-brand-primary tracking-widest uppercase">{sec.title}</span>
-                                                            {sec.links.map((link: any, lIdx: number) => (
-                                                                <Link 
-                                                                    key={lIdx} 
-                                                                    to={link.href} 
-                                                                    className="block py-2 text-[14px] font-medium tracking-tight text-black"
-                                                                    onClick={() => setIsMenuOpen(false)}
-                                                                >
-                                                                    {link.name}
-                                                                </Link>
-                                                            ))}
-                                                        </div>
-                                                    ))}
+                                                    {megaMenusData[item].simpleLinks ? (
+                                                        megaMenusData[item].simpleLinks.map((link: any, lIdx: number) => (
+                                                            <Link 
+                                                                key={lIdx} 
+                                                                to={link.href} 
+                                                                className="block py-2 text-[14px] font-medium tracking-tight text-black hover:text-brand-primary"
+                                                                onClick={() => setIsMenuOpen(false)}
+                                                            >
+                                                                {link.name}
+                                                            </Link>
+                                                        ))
+                                                    ) : (
+                                                        megaMenusData[item].sections.map((sec: any, sIdx: number) => (
+                                                            <div key={sIdx}>
+                                                                <span className="text-[13px] font-medium tracking-tight text-brand-primary tracking-widest uppercase">{sec.title}</span>
+                                                                {sec.links.map((link: any, lIdx: number) => (
+                                                                    <Link 
+                                                                        key={lIdx} 
+                                                                        to={link.href} 
+                                                                        className="block py-2 text-[14px] font-medium tracking-tight text-black hover:text-brand-primary"
+                                                                        onClick={() => setIsMenuOpen(false)}
+                                                                    >
+                                                                        {link.name}
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
+                                                        ))
+                                                    )}
                                                 </div>
                                             </motion.div>
                                         )}

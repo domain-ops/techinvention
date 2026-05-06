@@ -11,7 +11,6 @@ import GlobalProjects from './sections/GlobalProjects';
 import Testimonials from './sections/Testimonials/TestimonialsAnimated';
 import ProductSlider from './sections/ProductSlider';
 import VaccinePipeline from './sections/VaccinePipeline';
-import JourneyPipeline from './sections/JourneyPipeline';
 import Awards from './sections/Awards';
 import FAQSection from './sections/FAQ';
 import Blogs from './sections/Blogs';
@@ -30,7 +29,6 @@ const Home = () => {
             <AtAGlanceVideo />
             {/* <ProductSlider /> temporrily removed by request */}
 
-            <JourneyPipeline />
 
             <Awards />
             <CaseStudy />

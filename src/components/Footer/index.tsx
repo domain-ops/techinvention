@@ -59,15 +59,15 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-brand-gray-light/20 text-[10px]  tracking-widest text-brand-gray-light font-medium tracking-tight">
-                    <div className="flex gap-8 mb-4 md:mb-0">
-                        <span>© {currentYear} {t('common.brandName') as string}</span>
-                        <span>{t('footer.allRightsReserved')}</span>
+                <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-brand-gray-light/20 text-[10px] tracking-widest text-brand-gray-light font-medium tracking-tight">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 mb-6 md:mb-0">
+                        <span className="whitespace-nowrap">© {currentYear} {t('common.brandName') as string}</span>
+                        <span className="whitespace-nowrap">{t('footer.allRightsReserved')}</span>
                     </div>
-                    <div className="flex gap-8">
-                        <span className="hover:text-brand-content transition-colors cursor-pointer">{t('footer.privacyPolicy')}</span>
-                        <span className="hover:text-brand-content transition-colors cursor-pointer">{t('footer.termsOfService')}</span>
-                        <span className="hover:text-brand-content transition-colors cursor-pointer">{t('footer.globalCompliance')}</span>
+                    <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
+                        <span className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.privacyPolicy')}</span>
+                        <span className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.termsOfService')}</span>
+                        <span className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.globalCompliance')}</span>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/Common/ScrollToTop';
+import CustomCursor from './components/CustomCursor';
 import Home from './pages/Home';
 import AboutPage from './pages/About';
 import gsap from 'gsap';
@@ -16,6 +17,9 @@ import MembershipPage from './pages/Membership';
 import CertificationPage from './pages/Certification';
 import SearchPage from './pages/Search';
 import StrategicTechnicalAdvisoryPage from './pages/StrategicTechnicalAdvisory';
+import ContactPage from './pages/Contact';
+import AwardsPage from './pages/Awards';
+
 function AppContent() {
     const { pathname } = useLocation();
     const lenisRef = React.useRef<Lenis | null>(null);
@@ -63,6 +67,7 @@ function AppContent() {
 
     return (
         <main className="relative min-h-screen bg-brand-background font-inter">
+            <CustomCursor />
             <Navbar />
 
             <div id="content-smooth" className="relative z-10">
@@ -73,6 +78,8 @@ function AppContent() {
                     <Route path="/certification" element={<CertificationPage />} />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/strategic-technical-advisory" element={<StrategicTechnicalAdvisoryPage />} />
+                    <Route path="/contact-us" element={<ContactPage />} />
+                    <Route path="/awards" element={<AwardsPage />} />
                 </Routes>
                 <Footer />
             </div>
