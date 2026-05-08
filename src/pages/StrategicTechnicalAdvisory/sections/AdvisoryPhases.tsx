@@ -89,7 +89,7 @@ const AdvisoryPhases = () => {
                                 {/* Image Section (Full Width Banner) */}
                                 <div className="w-full relative group mb-10">
                                     <div className="absolute inset-0 bg-brand-primary/5 rounded-[2rem] transform translate-y-3 -z-10 transition-transform duration-500 group-hover:translate-y-4"></div>
-                                    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 z-10 border border-slate-100 bg-white">
+                                    <div className="relative w-full h-[220px] md:h-[280px] lg:h-[360px] rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 z-10 border border-slate-100 bg-white">
                                         <img 
                                             src={image} 
                                             alt={phase.title} 
