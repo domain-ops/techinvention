@@ -37,7 +37,7 @@ const VaccinePipeline = () => {
 
     const bioData = (t('biotherapeuticsPipeline.items') as any[]) || [
         { name: "Recombinant Human Erythropoietin", phase: "Phase 3", color: "#2065B3", desc: "For treatment of anemia" },
-        { name: "Pegfilgrastim", phase: "Pre-clinical", color: "#87A840", desc: "For neutropenia treatment" }
+        { name: "Pegfilgrastim", phase: "Phase 1", color: "#87A840", desc: "For neutropenia treatment" }
     ];
 
     return (
@@ -273,7 +273,7 @@ const VaccinePipeline = () => {
                     <div className="flex-1 w-full flex justify-start items-center relative pt-4 pb-12 pl-0 sm:pl-8">
                         
                         {/* Syringe Graphic */}
-                        <div className="w-24 h-[500px] flex flex-col items-center z-10 relative drop-shadow-xl shrink-0">
+                        <div className="w-24 h-[700px] flex flex-col items-center z-10 relative drop-shadow-xl shrink-0">
                             {/* Plunger Handle */}
                             <div className="w-12 h-6 border-4 border-slate-300 rounded-t-md bg-slate-50" />
                             <div className="w-4 h-10 bg-slate-200 border-x-4 border-slate-300" />
@@ -287,7 +287,7 @@ const VaccinePipeline = () => {
                                     {bioData[0]?.phase || 'PHASE 3'}
                                 </div>
                                 <div className="flex-1 w-full flex items-center justify-center text-white text-[11px] font-bold tracking-widest uppercase text-center px-1 leading-tight" style={{backgroundColor: bioData[1]?.color || '#87A840'}}>
-                                    {bioData[1]?.phase || 'PRE-CLINICAL'}
+                                    {bioData[1]?.phase || 'PHASE 1'}
                                 </div>
                             </div>
                             
@@ -297,7 +297,7 @@ const VaccinePipeline = () => {
                         </div>
 
                         {/* Labels Container - positioned relative to the right of the syringe */}
-                        <div className="relative h-[500px] flex-1 ml-6 sm:ml-12 pointer-events-none">
+                        <div className="relative h-[700px] flex-1 ml-6 sm:ml-12 pointer-events-none">
                             
                             {/* Item 1 (Top Phase) */}
                             <motion.div 
@@ -305,7 +305,7 @@ const VaccinePipeline = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
-                                className="absolute top-[130px] left-0 w-full flex flex-col items-start"
+                                className="absolute top-[180px] left-0 w-full flex flex-col items-start"
                             >
                                 <div className="w-8 sm:w-16 h-[2px] bg-slate-300 absolute -left-8 sm:-left-16 top-[14px]" />
                                 <h3 className="font-bold text-lg leading-tight mb-1 text-slate-800 pr-4">{bioData[0]?.name}</h3>
@@ -318,7 +318,7 @@ const VaccinePipeline = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className="absolute top-[320px] left-0 w-full flex flex-col items-start"
+                                className="absolute top-[460px] left-0 w-full flex flex-col items-start"
                             >
                                 <div className="w-8 sm:w-16 h-[2px] bg-slate-300 absolute -left-8 sm:-left-16 top-[14px]" />
                                 <h3 className="font-bold text-lg leading-tight mb-1 text-slate-800 pr-4">{bioData[1]?.name}</h3>

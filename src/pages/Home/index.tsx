@@ -11,7 +11,7 @@ import GlobalProjects from './sections/GlobalProjects';
 import Testimonials from './sections/Testimonials/TestimonialsAnimated';
 import ProductSlider from './sections/ProductSlider';
 import VaccinePipeline from './sections/VaccinePipeline';
-import Awards from './sections/Awards';
+import ClientLogos from '../About/sections/ClientLogos';
 import FAQSection from './sections/FAQ';
 import Blogs from './sections/Blogs';
 import CTASection from '../../components/CTASection';
@@ -30,7 +30,7 @@ const Home = () => {
             {/* <ProductSlider /> temporrily removed by request */}
 
 
-            <Awards />
+            <ClientLogos />
             <CaseStudy />
             <GlobalProjects />
             <Testimonials />

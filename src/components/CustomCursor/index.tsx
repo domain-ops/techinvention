@@ -65,7 +65,7 @@ const CustomCursor: React.FC = () => {
             style={{
                 width: '50px',
                 height: '50px',
-                opacity: isVisible ? 1 : 0
+                opacity: (isVisible && !isHovering) ? 1 : 0
             }}
             animate={{
                 x: mousePosition.x - 25, // center the 50px box

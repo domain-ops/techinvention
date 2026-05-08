@@ -26,8 +26,14 @@
   }
 
   @media (pointer: fine) {
-    *, *::before, *::after {
-      cursor: none !important;
+    html, body {
+      cursor: none;
+    }
+    *:not(a, a *, button, button *, [role="button"], [role="button"] *, .cursor-pointer, .cursor-pointer *) {
+      cursor: none;
+    }
+    a, button, [role="button"], .cursor-pointer {
+      cursor: pointer !important;
     }
   }
 
