@@ -1,60 +1,95 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // We can use a relevant image from the assets
-import heroImage from '../../../../src/assets/images/about_manufacturing.png';
+import heroImage from '../../../../src/assets/images/indian_biotech_advisory.png';
 
 const AdvisoryHeader = () => {
     const { t } = useLanguage();
     
+    // Staggered text variants
+    const title = t('strategicAdvisory.title') || "Strategic Technical Advisory";
+    const words = title.split(' ');
+    
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.12,
+                delayChildren: 0.3
+            }
+        }
+    };
+    
+    const childVariants = {
+        hidden: { opacity: 0, y: 50, rotateX: -20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            rotateX: 0,
+            transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }
+        }
+    };
+
     return (
-        <section className="relative w-full h-[70vh] min-h-[500px] max-h-[800px] flex items-center overflow-hidden">
-            {/* Full-bleed Background Image */}
+        <section className="relative w-full h-[80vh] min-h-[500px] md:min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-900">
+            {/* Background Images Layered */}
             <div className="absolute inset-0 z-0">
-                <img 
-                    src={heroImage} 
-                    alt="Strategic Advisory" 
-                    className="w-full h-full object-cover object-center" 
+                <img
+                    src={heroImage}
+                    alt="Strategic Advisory"
+                    className="w-full h-full object-cover object-center"
                 />
+                {/* Dark Overlay for Text Legibility */}
+                <div className="absolute inset-0 bg-black/50" />
             </div>
 
-            {/* Gradient Overlay for Text Legibility (Dark on left, fading to right) */}
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
-
             {/* Content Container */}
-            <div className="w-full max-w-7xl mx-auto px-6 relative z-20 pt-24 md:pt-32">
-                <motion.div 
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="max-w-2xl flex flex-col items-start"
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col items-center justify-center pt-20 md:pt-16">
+                    
+                {/* Staggered Animated Title */}
+                <motion.h1 
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-[1.2] mb-4 md:mb-6 drop-shadow-lg flex flex-wrap justify-center gap-x-2 md:gap-x-3 gap-y-1 md:gap-y-2 text-center"
+                    style={{ perspective: "1000px" }}
                 >
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.2] mb-6 drop-shadow-lg max-w-2xl">
-                        {t('strategicAdvisory.title') || "Strategic Technical Advisory"}
-                    </h1>
+                    {words.map((word: string, index: number) => (
+                        <motion.span key={index} variants={childVariants} className="inline-block">
+                            {word}
+                        </motion.span>
+                    ))}
+                </motion.h1>
 
-                    {/* Breadcrumbs */}
-                    <div className="flex items-center gap-2 text-slate-300 text-sm md:text-base font-medium mb-6 drop-shadow-md">
-                        <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                        <span>›</span>
-                        <span className="cursor-default">Services</span>
-                        <span>›</span>
-                        <span className="text-white">{t('strategicAdvisory.title') || "Strategic Technical Advisory"}</span>
-                    </div>
+                {/* Breadcrumbs - Fade In */}
+                <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-white/80 text-[10px] sm:text-xs md:text-sm font-medium mb-8 md:mb-12 drop-shadow-md uppercase tracking-[0.15em] md:tracking-widest text-center"
+                >
+                    <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                    <span className="text-white/60">/</span>
+                    <span className="text-white">{title}</span>
+                </motion.div>
 
+                {/* Consult Button - Fade Up */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                >
                     <Link 
                         to="/contact-us"
-                        className="group relative flex items-center justify-center bg-white text-[#1755A6] hover:bg-slate-50 px-8 py-3.5 sm:px-10 sm:py-4 rounded-full text-[13px] sm:text-[14px] font-bold tracking-widest uppercase transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden w-auto border border-transparent"
+                        className="group relative flex items-center justify-center bg-brand-primary text-white hover:bg-[#1755A6] px-6 py-3 md:px-8 md:py-3.5 rounded-full text-[10px] md:text-[12px] font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase transition-colors duration-300 shadow-xl shadow-brand-primary/20 w-auto"
                     >
-                        <span className="relative z-10 transition-transform duration-300 group-hover:-translate-x-1">CONSULT WITH US</span>
-                        
-                        <div className="relative overflow-hidden w-5 h-5 ml-3 flex items-center">
-                            <ArrowRight className="absolute w-5 h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-[150%] text-[#1755A6]" strokeWidth={2.5} />
-                            <ArrowRight className="absolute w-5 h-5 -translate-x-[150%] transition-transform duration-300 ease-in-out group-hover:translate-x-0 text-[#1755A6]" strokeWidth={2.5} />
-                        </div>
+                        <span className="relative z-10">CONSULT WITH US</span>
+                        <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 ml-2 md:ml-3 group-hover:translate-x-1 transition-transform duration-300 text-white flex-shrink-0" strokeWidth={2.5} />
                     </Link>
                 </motion.div>
             </div>

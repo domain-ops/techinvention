@@ -1,12 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
-import TextReveal from '../../../components/Common/TextReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 // --- IMAGE REGISTRY ---
-// Change image paths here to update them throughout the component
 import bradstreet from '../../../assets/images/certifications/Bradstreet.png';
 import cert2 from '../../../assets/images/certifications/Cert_2-702x1024.jpeg';
 import cert3 from '../../../assets/images/certifications/Cert_3-713x1024.jpeg';
@@ -18,11 +16,6 @@ import cert8 from '../../../assets/images/certifications/Cert_8.png';
 import cert9 from '../../../assets/images/certifications/Cert_9.png';
 import iso from '../../../assets/images/certifications/ISO-655x1024.jpg';
 
-/**
- * Configuration for certifications.
- * Each 'id' corresponds exactly to the key in our translation files.
- * This makes it extremely easy to reorder or swap images.
- */
 const CERT_CONFIG = [
     {
         id: 'dnb',
@@ -96,66 +89,99 @@ const CERT_CONFIG = [
     }
 ];
 
+const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
+    <div className="relative w-full rounded-[2rem] overflow-hidden group transition-all duration-700 hover:-translate-y-2 cursor-pointer aspect-[3/4] md:aspect-[4/5] lg:h-[500px]">
+        {/* Image Container */}
+        <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+            <img 
+                src={cert.image} 
+                alt={cert.name}
+                className="max-w-full max-h-full object-contain drop-shadow-2xl mix-blend-multiply"
+            />
+        </div>
+
+        {/* Hover Reveal Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 translate-y-8 group-hover:translate-y-0">
+            <div className="flex items-center gap-3 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                <div className="h-[2px] w-8 bg-white/80"></div>
+                <span className="text-white font-mono text-sm tracking-widest font-bold">
+                    {cert.year}
+                </span>
+            </div>
+            <h3 className="text-2xl font-light text-white mb-3 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                {cert.name}
+            </h3>
+            <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 line-clamp-4 md:line-clamp-6">
+                {cert.info}
+            </p>
+        </div>
+    </div>
+);
+
 const CertificationList = () => {
     const { t } = useLanguage();
+    const containerRef = useRef<HTMLElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    // Parallax Transforms for the 3 columns
+    const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+    const y2 = useTransform(scrollYProgress, [0, 1], ["15%", "-10%"]);
+    const y3 = useTransform(scrollYProgress, [0, 1], ["-10%", "20%"]);
+
+    // Split array into 3 columns
+    const col1 = CERT_CONFIG.filter((_, i) => i % 3 === 0);
+    const col2 = CERT_CONFIG.filter((_, i) => i % 3 === 1);
+    const col3 = CERT_CONFIG.filter((_, i) => i % 3 === 2);
 
     return (
-        <section className="py-12 md:py-20 bg-white relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-left mb-12 md:mb-16">
+        <section ref={containerRef} className="bg-[#fafafa] py-32 relative selection:bg-brand-primary selection:text-white overflow-hidden">
+            {/* Background ambient lighting */}
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+                <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[150px]" />
+                <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[150px]" />
+            </div>
+
+            <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
+                <div className="text-center mb-32 max-w-4xl mx-auto">
                     <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
+                        <span className="text-brand-primary font-mono tracking-[0.2em] text-sm mb-4 block uppercase">
                             {t('certifications.tag')}
                         </span>
-                        <div className="mb-4">
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
-                                <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
-                            </h2>
-                        </div>
-                        <p className="text-[#475569] text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 tracking-tight mb-8">
+                            <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
+                        </h2>
+                        <p className="text-gray-500 text-xl font-light leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </ScrollReveal>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                    {CERT_CONFIG.map((cert, index) => {
-                        return (
-                            <ScrollReveal
-                                key={cert.id}
-                                direction="up"
-                                delay={0.05 * index}
-                            >
-                                <div className="group relative w-full h-[360px] [perspective:1000px] cursor-pointer">
-                                    <div className="w-full h-full relative transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                                        
-                                        {/* Front of Card (Image) */}
-                                        <div className="absolute inset-0 w-full h-full bg-white border border-slate-200 shadow-sm p-8 flex items-center justify-center [backface-visibility:hidden]">
-                                            <img
-                                                src={cert.image}
-                                                alt={cert.name}
-                                                className="w-full h-full object-contain"
-                                            />
-                                        </div>
+                {/* Parallax Masonry Grid (Desktop) */}
+                <div className="hidden lg:grid grid-cols-3 gap-8 group/grid relative pb-32">
+                    <motion.div style={{ y: y1 }} className="flex flex-col gap-8 pt-12">
+                        {col1.map((cert) => <CertificationCard key={cert.id} cert={cert} />)}
+                    </motion.div>
+                    
+                    <motion.div style={{ y: y2 }} className="flex flex-col gap-8 -mt-24">
+                        {col2.map((cert) => <CertificationCard key={cert.id} cert={cert} />)}
+                    </motion.div>
+                    
+                    <motion.div style={{ y: y3 }} className="flex flex-col gap-8 pt-32">
+                        {col3.map((cert) => <CertificationCard key={cert.id} cert={cert} />)}
+                    </motion.div>
+                </div>
 
-                                        {/* Back of Card (Text) */}
-                                        <div className="absolute inset-0 w-full h-full bg-brand-primary text-white p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-y-auto">
-                                            <span className="bg-white/10 text-white px-4 py-1 rounded-full font-medium tracking-widest text-[10px] mb-4">
-                                                {cert.year}
-                                            </span>
-                                            <h3 className="text-[18px] md:text-[20px] font-medium mb-4 leading-tight text-white">
-                                                {cert.name}
-                                            </h3>
-                                            <p className="text-[13px] md:text-[14px] text-white/90 leading-relaxed font-medium">
-                                                {cert.info}
-                                            </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-                        );
-                    })}
+                {/* Stacked Grid (Mobile/Tablet) */}
+                <div className="lg:hidden flex flex-col gap-8">
+                    {CERT_CONFIG.map((cert) => (
+                        <ScrollReveal key={cert.id} direction="up" delay={0.1}>
+                            <CertificationCard cert={cert} />
+                        </ScrollReveal>
+                    ))}
                 </div>
             </div>
         </section>
@@ -163,3 +189,4 @@ const CertificationList = () => {
 };
 
 export default CertificationList;
+

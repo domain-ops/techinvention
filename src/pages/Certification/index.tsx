@@ -8,7 +8,7 @@ import certBannerImg from '../../assets/images/banner-imge-1.jpg';
 const CertificationPage = () => {
     const { t } = useLanguage();
     return (
-        <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
+        <div className="min-h-screen bg-brand-background text-brand-content">
             <AboutHeader title="Certification" image={certBannerImg} />
             <CertificationList />
             <CTASection />
