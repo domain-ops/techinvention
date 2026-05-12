@@ -75,6 +75,8 @@ const AdvisoryHeader = () => {
                 >
                     <Link to="/" className="hover:text-white transition-colors">Home</Link>
                     <span className="text-white/60">/</span>
+                    <span className="text-white/80">{t('megaMenu.services')}</span>
+                    <span className="text-white/60">/</span>
                     <span className="text-white">{title}</span>
                 </motion.div>
 
