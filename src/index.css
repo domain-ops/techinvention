@@ -17,12 +17,12 @@
 @layer base {
   html {
     scroll-behavior: initial;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-brand-background text-brand-content antialiased font-sans;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   @media (pointer: fine) {

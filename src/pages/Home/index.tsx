@@ -1,8 +1,8 @@
 import React from 'react';
 import Hero from './sections/Hero';
 import OneHealth from './sections/OneHealth';
+import HorizonGCMC from './sections/HorizonGCMC';
 import About from './sections/About';
-import Horizon from './sections/Horizon';
 import Facilities from './sections/Facilities';
 import AtAGlanceVideo from './sections/AtAGlanceVideo';
 import CaseStudy from './sections/CaseStudy';
@@ -23,8 +23,8 @@ const Home = () => {
             {/* <FloatingDNA /> temporrily removed by request */}
             <Hero />
             <OneHealth />
+            <HorizonGCMC />
             <About />
-            <Horizon />
             <VaccinePipeline />
             <AtAGlanceVideo />
             {/* <ProductSlider /> temporrily removed by request */}
