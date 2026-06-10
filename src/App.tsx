@@ -20,6 +20,14 @@ import StrategicTechnicalAdvisoryPage from './pages/StrategicTechnicalAdvisory';
 import ContactPage from './pages/Contact';
 import AwardsPage from './pages/Awards';
 
+import RNDPage from './pages/RND';
+import VaccinesPage from './pages/Vaccines';
+import DiagnosticsPage from './pages/Diagnostics';
+import ConsultingPage from './pages/Consulting';
+import ProductsPage from './pages/Products';
+import CareersPage from './pages/Careers';
+import GmpTrainingPage from './pages/GmpTraining';
+
 function AppContent() {
     const { pathname } = useLocation();
     const lenisRef = React.useRef<Lenis | null>(null);
@@ -80,6 +88,14 @@ function AppContent() {
                     <Route path="/strategic-technical-advisory" element={<StrategicTechnicalAdvisoryPage />} />
                     <Route path="/contact-us" element={<ContactPage />} />
                     <Route path="/awards" element={<AwardsPage />} />
+                    
+                    <Route path="/rnd" element={<RNDPage />} />
+                    <Route path="/rnd/vaccines" element={<VaccinesPage />} />
+                    <Route path="/rnd/diagnostics" element={<DiagnosticsPage />} />
+                    <Route path="/consulting" element={<ConsultingPage />} />
+                    <Route path="/products" element={<ProductsPage />} />
+                    <Route path="/careers" element={<CareersPage />} />
+                    <Route path="/gmp-training" element={<GmpTrainingPage />} />
                 </Routes>
                 <Footer />
             </div>

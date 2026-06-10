@@ -19,7 +19,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenu
     const displayImage = image || labImg;
 
     return (
-        <section className="relative h-[85vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-slate-900">
+        <section className="relative w-full h-screen min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Background Images Layered */}
             <div className="absolute inset-0 z-0">
                 <img

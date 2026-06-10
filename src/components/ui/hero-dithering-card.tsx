@@ -5,11 +5,9 @@ import { ArrowRight } from "lucide-react";
 import { useState, Suspense, lazy } from "react";
 import { cn } from "@/lib/utils";
 
-/*
 const Dithering = lazy(() =>
     import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
 );
-*/
 
 export function CTASection() {
     const [isHovered, setIsHovered] = useState(false);
@@ -24,16 +22,15 @@ export function CTASection() {
                 <div className="relative overflow-hidden rounded-[48px] border border-brand-border bg-white shadow-sm min-h-[500px] md:min-h-[600px] flex flex-col items-center justify-center duration-500">
                     <Suspense fallback={<div className="absolute inset-0 bg-slate-50" />}>
                         <div className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-multiply transition-opacity duration-500">
-                            {/* Shader temporarily disabled for debugging */}
-                            {/* <Dithering
-                                colorBack="#FFFFFF"
-                                colorFront="#1755A6"  // brand-primary
+                            <Dithering
+                                colorBack="#00000000"
+                                colorFront="#1955A6"  // brand-primary
                                 shape="warp"
                                 type="4x4"
                                 speed={isHovered ? 0.6 : 0.2}
-                                className="size-full"
+                                className="w-full h-full absolute inset-0"
                                 minPixelRatio={1}
-                            /> */}
+                            />
                         </div>
                     </Suspense>
 

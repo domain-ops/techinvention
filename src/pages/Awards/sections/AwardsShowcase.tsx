@@ -163,7 +163,7 @@ const AwardsShowcase = () => {
                                             </div>
                                             <div className="overflow-hidden flex-1">
                                                 <motion.h2 
-                                                    className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-tighter transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                                                    className={`text-xl md:text-2xl lg:text-3xl font-light tracking-tight transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                                                         isActive ? 'translate-x-4 lg:translate-x-8 text-brand-primary' : 'text-gray-400 group-hover:text-gray-600'
                                                     }`}
                                                     initial={{ y: 40, opacity: 0 }}

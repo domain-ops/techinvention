@@ -1,13 +1,15 @@
-import React from 'react';
-import AboutBanner from '../About/sections/AboutBanner';
+import React, { useEffect } from 'react';
+import ContactHero from './sections/ContactHero';
 import ContactSection from './sections/ContactSection';
 
 const ContactPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="bg-brand-background min-h-screen">
-            <AboutBanner 
-                title="Contact Us" 
-            />
+            <ContactHero />
 
             <ContactSection />
         </div>

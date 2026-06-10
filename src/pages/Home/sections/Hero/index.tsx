@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, ArrowRight } from 'lucide-react';
 
 import { useLanguage } from '../../../../context/LanguageContext';
 import { Typewriter } from '../../../../components/ui/typewriter-text';
@@ -43,8 +42,6 @@ const Hero = () => {
     const { t } = useLanguage();
     const [activeWordIndex, setActiveWordIndex] = useState(0);
 
-    const bannerTitle = t('about.banner.title') as string;
-    const bannerSubtitle = t('about.banner.subtitle') as string;
     const brandName = t('common.brandName') as string || "TechInvention";
 
     const rotatingWords = Array.isArray(t('hero.rotatingWords')) ? t('hero.rotatingWords') as string[] : [
@@ -54,9 +51,6 @@ const Hero = () => {
         "Research",
         "Excellence"
     ];
-    
-    const primaryCta = t('hero.primaryCta') as string || "Discover Our Impact";
-    const secondaryCta = t('hero.secondaryCta') as string || "Partner With Us";
 
     return (
         <section id="hero" className="py-16 md:py-20 relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-slate-900">
@@ -125,33 +119,6 @@ const Hero = () => {
                         <Typewriter text={rotatingWords} delay={1500} deleteSpeed={30} speed={60} loop cursor="" onWordChange={(idx) => setActiveWordIndex(idx)} />
                     </motion.div>
                 </div>
-
-                {/* Call to Actions */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
-                    className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full px-4 sm:px-0 mt-12"
-                >
-                    <motion.a 
-                        href="#contact"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="group relative flex items-center justify-center gap-3 sm:gap-4 bg-brand-primary text-white px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-[15px] sm:text-[16px] font-medium tracking-tight transition-all duration-300 hover:bg-brand-secondary hover:shadow-[0_10px_30px_rgba(92,118,37,0.3)] overflow-hidden w-full sm:w-auto"
-                    >
-                        <span className="relative z-10 tracking-widest uppercase">
-                            {secondaryCta}
-                        </span>
-                        
-                        <div className="relative z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/20 group-hover:bg-white/30 transition-colors overflow-hidden">
-                            <Activity className="w-4 h-4 opacity-80 group-hover:opacity-100 transition-opacity" strokeWidth={2.5} />
-                        </div>
-
-                        {/* Button Shine Effect */}
-                        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
-                    </motion.a>
-                </motion.div>
-
             </div>
 
         </section>

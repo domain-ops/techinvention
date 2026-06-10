@@ -1,0 +1,240 @@
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Send, CheckCircle2, Upload, AlertCircle, ArrowLeft } from 'lucide-react';
+
+interface ApplyFormProps {
+    selectedJobTitle: string | null;
+    onCancel: () => void;
+}
+
+export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps) {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [experience, setExperience] = useState('');
+    const [currentCompany, setCurrentCompany] = useState('');
+    const [message, setMessage] = useState('');
+    const [fileName, setFileName] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        // Reset state on job change
+        setSubmitted(false);
+        setError('');
+    }, [selectedJobTitle]);
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files && e.target.files.length > 0) {
+            setFileName(e.target.files[0].name);
+            setError('');
+        }
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        if (!name || !email || !phone || !experience || !fileName) {
+            setError('Please fill in all required fields (*) and upload your resume.');
+            return;
+        }
+
+        setLoading(true);
+        setError('');
+
+        // Simulate API post
+        setTimeout(() => {
+            setLoading(false);
+            setSubmitted(true);
+        }, 1500);
+    };
+
+    if (!selectedJobTitle) return null;
+
+    return (
+        <section id="apply-form-section" className="py-24 bg-white relative overflow-hidden font-sans border-b border-slate-100">
+            {/* Background elements */}
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-brand-primary/3 blur-3xl pointer-events-none" />
+
+            <div className="max-w-[800px] mx-auto px-6 relative z-10 text-left">
+                
+                {/* Back Button */}
+                <button 
+                    onClick={onCancel}
+                    className="inline-flex items-center gap-2 text-slate-500 hover:text-brand-primary transition-colors mb-8 font-bold text-sm"
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    Back to All Openings
+                </button>
+
+                <div className="bg-white border border-slate-200/60 rounded-[2rem] p-8 md:p-12 shadow-2xl">
+                    <div className="border-b border-slate-100 pb-6 mb-8">
+                        <span className="text-brand-primary font-bold uppercase tracking-wider text-xs">Job Application</span>
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-2 leading-tight">
+                            Job Application Form
+                        </h2>
+                    </div>
+
+                    <AnimatePresence mode="wait">
+                        {!submitted ? (
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                {/* Selected Position (Read-Only) */}
+                                <div className="flex flex-col gap-2">
+                                    <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Applying Position</label>
+                                    <input 
+                                        type="text" 
+                                        value={selectedJobTitle || ''} 
+                                        disabled
+                                        className="w-full bg-slate-100 border border-slate-200/80 rounded-xl px-4 py-3 text-sm text-slate-600 font-semibold cursor-not-allowed"
+                                    />
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    {/* Name */}
+                                    <div className="flex flex-col gap-2">
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
+                                        <input 
+                                            type="text" 
+                                            value={name} 
+                                            onChange={e => setName(e.target.value)}
+                                            placeholder="John Doe" 
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                        />
+                                    </div>
+                                    
+                                    {/* Email */}
+                                    <div className="flex flex-col gap-2">
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
+                                        <input 
+                                            type="email" 
+                                            value={email} 
+                                            onChange={e => setEmail(e.target.value)}
+                                            placeholder="johndoe@email.com" 
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    {/* Phone */}
+                                    <div className="flex flex-col gap-2">
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Contact Number *</label>
+                                        <input 
+                                            type="tel" 
+                                            value={phone} 
+                                            onChange={e => setPhone(e.target.value)}
+                                            placeholder="+91 98765 43210" 
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                        />
+                                    </div>
+                                    
+                                    {/* Experience */}
+                                    <div className="flex flex-col gap-2">
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Years of Experience *</label>
+                                        <input 
+                                            type="text" 
+                                            value={experience} 
+                                            onChange={e => setExperience(e.target.value)}
+                                            placeholder="e.g. 4 Years" 
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Current Company */}
+                                <div className="flex flex-col gap-2">
+                                    <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Current Company / Organization (Optional)</label>
+                                    <input 
+                                        type="text" 
+                                        value={currentCompany} 
+                                        onChange={e => setCurrentCompany(e.target.value)}
+                                        placeholder="Current employer name" 
+                                        className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                    />
+                                </div>
+
+                                {/* Cover Letter / message */}
+                                <div className="flex flex-col gap-2">
+                                    <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Cover Letter / Message (Optional)</label>
+                                    <textarea 
+                                        rows={4} 
+                                        value={message} 
+                                        onChange={e => setMessage(e.target.value)}
+                                        placeholder="Write a brief cover letter or notes regarding your application..." 
+                                        className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400 resize-none"
+                                    />
+                                </div>
+
+                                {/* File Upload */}
+                                <div className="flex flex-col gap-2">
+                                    <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Upload Resume (PDF, DOC) *</label>
+                                    <div className="relative group cursor-pointer border border-dashed border-slate-200 hover:border-brand-primary transition-colors rounded-xl p-4 flex items-center justify-center gap-3 bg-slate-50">
+                                        <input 
+                                            type="file" 
+                                            accept=".pdf,.doc,.docx"
+                                            onChange={handleFileChange}
+                                            className="absolute inset-0 opacity-0 cursor-pointer"
+                                        />
+                                        <Upload className="w-5 h-5 text-slate-400 group-hover:text-brand-primary transition-colors" />
+                                        <span className="text-xs text-slate-500 font-semibold truncate max-w-xs">
+                                            {fileName || "Drag & drop or browse resume"}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {error && (
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: -10 }} 
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className="flex items-center gap-2 text-red-500 text-xs font-semibold"
+                                    >
+                                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                                        <span>{error}</span>
+                                    </motion.div>
+                                )}
+
+                                <div className="flex gap-4 pt-4">
+                                    <button 
+                                        type="button"
+                                        onClick={onCancel}
+                                        className="flex-1 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition-all duration-300 text-sm"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button 
+                                        type="submit" 
+                                        disabled={loading}
+                                        className="flex-[2] py-4 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 text-sm"
+                                    >
+                                        {loading ? 'Submitting...' : 'Submit Application'}
+                                        <Send className="w-4 h-4" />
+                                    </button>
+                                </div>
+                            </form>
+                        ) : (
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="py-12 text-center"
+                            >
+                                <div className="w-16 h-16 bg-[#5C7625]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <CheckCircle2 className="w-8 h-8 text-[#5C7625]" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-3">Application Submitted Successfully!</h3>
+                                <p className="text-slate-600 font-semibold text-sm max-w-sm mx-auto mb-8 leading-relaxed">
+                                    Thank you for applying, {name}. We have received your application for the {selectedJobTitle} position. Our HR team will review your resume and contact you soon.
+                                </p>
+                                <button 
+                                    onClick={onCancel}
+                                    className="px-8 py-3.5 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white rounded-full text-sm font-bold shadow-md transition-all"
+                                >
+                                    Back to All Openings
+                                </button>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </div>
+        </section>
+    );
+}

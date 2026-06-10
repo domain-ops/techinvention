@@ -2,14 +2,15 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { cn } from "@/lib/utils";
 
 import { useLanguage } from "../../context/LanguageContext";
 import ScrollReveal from "../../components/Common/ScrollReveal";
 
-
-
+const Dithering = lazy(() =>
+    import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
+);
 
 const CTASection = () => {
     const { t } = useLanguage();
@@ -24,15 +25,21 @@ const CTASection = () => {
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <div className="relative overflow-hidden rounded-[48px] border border-brand-border bg-slate-50 shadow-sm py-16 md:py-24 flex flex-col items-center justify-center duration-500">
+                    <Suspense fallback={<div className="absolute inset-0 bg-slate-50" />}>
+                        <div className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-multiply transition-opacity duration-500">
+                            <Dithering
+                                colorBack="#00000000" // Transparent
+                                colorFront="#1955A6"  // brand-primary
+                                shape="warp"
+                                type="4x4"
+                                speed={isHovered ? 0.6 : 0.2}
+                                className="w-full h-full absolute inset-0"
+                                minPixelRatio={1}
+                            />
+                        </div>
+                    </Suspense>
                     
                     <ScrollReveal direction="up" className="relative z-10 px-6 max-w-3xl mx-auto text-center flex flex-col items-center">
-                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/5 px-4 py-1.5 text-sm font-medium tracking-tight text-brand-primary backdrop-blur-sm tracking-widest">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
-                            </span>
-                            {t('cta.tag')}
-                        </div>
 
                         {/* Headline */}
                         <h2 className="text-[36px] font-medium tracking-wide mb-4 leading-tight text-center">

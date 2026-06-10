@@ -1,196 +1,254 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, AlertCircle, Send, Download } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, Phone, Mail, Send, HelpCircle, Briefcase, FileSignature } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
+
+const ENQUIRY_CARDS = [
+    {
+        icon: Briefcase,
+        title: 'Business Development',
+        desc: 'Explore strategic partnerships, technology licensing, and product collaborations.',
+        email: 'bd@techinvention.biz',
+        color: '#1955A6',
+    },
+    {
+        icon: FileSignature,
+        title: 'Advisory & Consulting',
+        desc: 'Inquire about product development, regulatory strategy, and QMS support.',
+        email: 'advisory@techinvention.biz',
+        color: '#5C7625',
+    },
+    {
+        icon: HelpCircle,
+        title: 'General Support',
+        desc: 'Get answers to general questions about our technologies and operations.',
+        email: 'connect@techinvention.biz',
+        color: '#1955A6',
+    },
+];
 
 const ContactSection = () => {
-    // Basic form state
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
-        subject: '',
+        enquiryType: 'Business Development',
+        organisation: '',
         message: ''
     });
+    const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // In a real app, handle API call
-        console.log('Form submitted:', formData);
-        alert('Thank you for contacting us. We will get back to you shortly.');
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+        setSubmitted(true);
+        setTimeout(() => {
+            setSubmitted(false);
+            setFormData({ name: '', email: '', phone: '', enquiryType: 'Business Development', organisation: '', message: '' });
+        }, 3000);
     };
 
     return (
-        <section className="py-16 md:py-24 bg-brand-background relative">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-20 bg-brand-background relative font-sans overflow-hidden">
+            {/* Background Orbs */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-primary/3 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-brand-secondary/3 blur-3xl pointer-events-none" />
+
+            <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-                    
-                    {/* Left Column - Contact Info */}
-                    <div className="lg:col-span-5 flex flex-col gap-8">
-                        <ScrollReveal>
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase">
-                                Get In Touch
+                {/* 1. Enquiry Cards Section */}
+                <div className="mb-24">
+                    <div className="mb-12">
+                        <ScrollReveal direction="up">
+                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
+                                Select Your Department
                             </span>
-                            <h2 className="text-[32px] md:text-[42px] font-medium tracking-tight text-brand-content mb-6 leading-tight">
-                                We're here to help you innovate.
+                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-4">
+                                <SplitTitle title="Direct Contact Routing" />
                             </h2>
-                            <p className="text-[#475569] text-[16px] leading-relaxed mb-8">
-                                Whether you have questions about our services, partnerships, or require assistance, our team is ready to provide you with the answers you need.
+                            <p className="text-black font-medium text-[16px] md:text-[18px] max-w-2xl leading-relaxed text-left">
+                                Reach out to the specific department handling your target area to ensure a rapid response.
                             </p>
                         </ScrollReveal>
-
-                        {/* Contact Details Grid */}
-                        <div className="grid grid-cols-1 gap-6">
-                            <ScrollReveal delay={0.1}>
-                                <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                    <div className="bg-brand-primary/10 p-3 rounded-full text-brand-primary shrink-0">
-                                        <MapPin size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-medium text-lg text-brand-content mb-2">Corporate Office</h3>
-                                        <p className="text-slate-600 leading-relaxed text-sm">
-                                            #1004, The Summit Business Park, <br/>
-                                            Off WEH Metro Station, Andheri Kurla Road, <br/>
-                                            Andheri East, Mumbai 400093. INDIA
-                                        </p>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-
-                            <ScrollReveal delay={0.2}>
-                                <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                    <div className="bg-brand-primary/10 p-3 rounded-full text-brand-primary shrink-0">
-                                        <Phone size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-medium text-lg text-brand-content mb-2">Phone</h3>
-                                        <a href="tel:+912240052123" className="text-slate-600 hover:text-brand-primary transition-colors text-sm font-medium block">
-                                            +91 2240052123
-                                        </a>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-
-                            <ScrollReveal delay={0.3}>
-                                <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                    <div className="bg-brand-primary/10 p-3 rounded-full text-brand-primary shrink-0">
-                                        <Mail size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-medium text-lg text-brand-content mb-2">Email</h3>
-                                        <a href="mailto:connect@techinvention.biz" className="text-slate-600 hover:text-brand-primary transition-colors text-sm font-medium block">
-                                            connect@techinvention.biz
-                                        </a>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-
-                        </div>
                     </div>
 
-                    {/* Right Column - Contact Form */}
-                    <div className="lg:col-span-7">
-                        <ScrollReveal delay={0.3}>
-                            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-slate-100 h-full">
-                                <h3 className="text-2xl font-medium text-brand-content mb-8">Send us a message</h3>
-                                
-                                <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div className="flex flex-col gap-2">
-                                            <label htmlFor="name" className="text-sm font-medium text-slate-700">Full Name *</label>
-                                            <input 
-                                                type="text" 
-                                                id="name" 
-                                                name="name" 
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
-                                                placeholder="John Doe"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col gap-2">
-                                            <label htmlFor="email" className="text-sm font-medium text-slate-700">Email Address *</label>
-                                            <input 
-                                                type="email" 
-                                                id="email" 
-                                                name="email" 
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
-                                                placeholder="john@example.com"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div className="flex flex-col gap-2">
-                                            <label htmlFor="phone" className="text-sm font-medium text-slate-700">Phone Number</label>
-                                            <input 
-                                                type="tel" 
-                                                id="phone" 
-                                                name="phone" 
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
-                                                placeholder="+91 98765 43210"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col gap-2">
-                                            <label htmlFor="subject" className="text-sm font-medium text-slate-700">Subject *</label>
-                                            <input 
-                                                type="text" 
-                                                id="subject" 
-                                                name="subject" 
-                                                value={formData.subject}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
-                                                placeholder="How can we help?"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-col gap-2">
-                                        <label htmlFor="message" className="text-sm font-medium text-slate-700">Message *</label>
-                                        <textarea 
-                                            id="message" 
-                                            name="message" 
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            required
-                                            rows={6}
-                                            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all resize-none"
-                                            placeholder="Please describe your inquiry in detail..."
-                                        ></textarea>
-                                    </div>
-
-                                    <button 
-                                        type="submit" 
-                                        className="group bg-brand-primary text-white font-medium rounded-full px-8 py-4 flex items-center justify-center gap-3 hover:bg-brand-primary/90 transition-all mt-4 w-full md:w-auto md:self-start"
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {ENQUIRY_CARDS.map((card, i) => {
+                            const CardIcon = card.icon;
+                            return (
+                                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+                                    <div 
+                                        className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
                                     >
-                                        <span>Send Message</span>
-                                        <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-                                    </button>
-                                </form>
-                            </div>
-                        </ScrollReveal>
-
-
+                                        <div 
+                                            className="absolute top-0 left-0 w-full h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+                                            style={{ backgroundColor: card.color }}
+                                        />
+                                        <div 
+                                            className="w-14 h-14 rounded-full flex items-center justify-center mb-6 transition-colors duration-300"
+                                            style={{ backgroundColor: `${card.color}10`, color: card.color }}
+                                        >
+                                            <CardIcon className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{card.title}</h3>
+                                        <p className="text-slate-500 text-[14px] leading-relaxed font-medium mb-6 flex-1">{card.desc}</p>
+                                        <a 
+                                            href={`mailto:${card.email}`}
+                                            className="text-[13px] font-bold tracking-wider uppercase flex items-center gap-2 group-hover:underline"
+                                            style={{ color: card.color }}
+                                        >
+                                            <span>{card.email}</span>
+                                        </a>
+                                    </div>
+                                </ScrollReveal>
+                            );
+                        })}
                     </div>
                 </div>
 
-                {/* Google Maps Full Width */}
-                <div className="mt-16 md:mt-24">
-                    <ScrollReveal>
-                        <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-md border border-slate-200">
+                {/* 2. Contact Form Section */}
+                <div className="mb-24">
+                    <div className="mb-12">
+                        <ScrollReveal direction="up">
+                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
+                                Get In Touch
+                            </span>
+                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-4">
+                                <SplitTitle title="Contact Form" />
+                            </h2>
+                            <p className="text-black font-medium text-[16px] md:text-[18px] max-w-2xl leading-relaxed text-left">
+                                Send us a message and our team will get back to you as soon as possible.
+                            </p>
+                        </ScrollReveal>
+                    </div>
+
+                    <ScrollReveal direction="up">
+                        <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-slate-200/60 shadow-sm max-w-4xl">
+                            <AnimatePresence mode="wait">
+                                {submitted ? (
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0 }}
+                                        className="text-center py-12 flex flex-col items-center gap-4"
+                                    >
+                                        <div className="w-16 h-16 rounded-full bg-brand-secondary/10 text-brand-secondary flex items-center justify-center mb-2">
+                                            <Send className="w-6 h-6" />
+                                        </div>
+                                        <h4 className="text-xl font-bold text-slate-900">Message Received!</h4>
+                                        <p className="text-slate-500 text-[15px] font-medium max-w-sm">
+                                            Thank you for contacting us. Our team will get back to you shortly.
+                                        </p>
+                                    </motion.div>
+                                ) : (
+                                    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                            <div className="flex flex-col gap-2">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="name" 
+                                                    required 
+                                                    value={formData.name} 
+                                                    onChange={handleChange}
+                                                    placeholder="e.g. John Doe"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col gap-2">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
+                                                <input 
+                                                    type="email" 
+                                                    name="email" 
+                                                    required 
+                                                    value={formData.email} 
+                                                    onChange={handleChange}
+                                                    placeholder="e.g. john@company.com"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                            <div className="flex flex-col gap-2">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="organisation" 
+                                                    value={formData.organisation} 
+                                                    onChange={handleChange}
+                                                    placeholder="e.g. Acme Biotech"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col gap-2">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
+                                                <select 
+                                                    name="enquiryType" 
+                                                    required 
+                                                    value={formData.enquiryType} 
+                                                    onChange={handleChange}
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50 cursor-pointer"
+                                                >
+                                                    <option value="Business Development">Business Development</option>
+                                                    <option value="Advisory & Consulting">Advisory & Consulting</option>
+                                                    <option value="General Support">General Support</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex flex-col gap-2">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Message *</label>
+                                            <textarea 
+                                                name="message" 
+                                                required 
+                                                rows={5}
+                                                value={formData.message} 
+                                                onChange={handleChange}
+                                                placeholder="Describe your enquiry here..."
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none resize-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
+                                            />
+                                        </div>
+
+                                        <motion.button 
+                                            type="submit" 
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            className="group w-full md:w-fit flex items-center justify-center gap-3 bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-brand-primary/95 hover:shadow-lg transition-all duration-300"
+                                        >
+                                            <span>Send Message</span>
+                                            <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </motion.button>
+                                    </form>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    </ScrollReveal>
+                </div>
+
+                {/* 3. Location Section */}
+                <div className="mb-24">
+                    <div className="mb-12">
+                        <ScrollReveal direction="up">
+                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
+                                Find Us
+                            </span>
+                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-4">
+                                <SplitTitle title="Location & Address" />
+                            </h2>
+                            <p className="text-black font-medium text-[16px] md:text-[18px] max-w-2xl leading-relaxed text-left">
+                                Visit our corporate office or contact us directly via phone and email.
+                            </p>
+                        </ScrollReveal>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                        {/* Map Container */}
+                        <div className="lg:col-span-7 h-[400px] lg:h-auto min-h-[350px] rounded-[2rem] overflow-hidden shadow-sm border border-slate-200/60">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9048386186835!2d72.86241037562846!3d19.11183355084931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83c2afc12fb%3A0x6e3c0f64b9fc0724!2sThe%20Summit%20Business%20Bay!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" 
                                 width="100%" 
@@ -201,62 +259,71 @@ const ContactSection = () => {
                                 referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
-                    </ScrollReveal>
+
+                        {/* Address and details */}
+                        <div className="lg:col-span-5 flex flex-col gap-4 justify-between">
+                            <ScrollReveal direction="up" delay={0.1} className="h-full">
+                                <div className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
+                                    <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
+                                        <MapPin className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Corporate Office</h4>
+                                        <p className="text-slate-600 text-[14px] font-medium leading-relaxed">
+                                            #1004, The Summit Business Park,<br />
+                                            Off WEH Metro Station, Andheri Kurla Road,<br />
+                                            Andheri East, Mumbai 400093. INDIA
+                                        </p>
+                                    </div>
+                                </div>
+                            </ScrollReveal>
+
+                            <ScrollReveal direction="up" delay={0.2} className="h-full">
+                                <div className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
+                                    <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
+                                        <Phone className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Phone Inquiry</h4>
+                                        <a href="tel:+912240052123" className="text-slate-600 hover:text-brand-primary text-[14px] font-medium leading-relaxed transition-colors block">
+                                            +91 2240052123
+                                        </a>
+                                    </div>
+                                </div>
+                            </ScrollReveal>
+
+                            <ScrollReveal direction="up" delay={0.3} className="h-full">
+                                <div className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
+                                    <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
+                                        <Mail className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Email Address</h4>
+                                        <a href="mailto:connect@techinvention.biz" className="text-slate-600 hover:text-brand-primary text-[14px] font-medium leading-relaxed transition-colors block">
+                                            connect@techinvention.biz
+                                        </a>
+                                    </div>
+                                </div>
+                            </ScrollReveal>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Additional Action Cards After Map */}
-                <ScrollReveal delay={0.2}>
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-                        
-                        {/* Adverse Event Card */}
-                        <div className="flex items-start gap-4 p-6 bg-rose-50 rounded-2xl shadow-sm border border-rose-100 hover:shadow-md transition-shadow relative overflow-hidden h-full">
-                            <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
-                                <AlertCircle size={80} />
-                            </div>
-                            <div className="bg-rose-100 p-3 rounded-full text-rose-600 shrink-0 relative z-10 hidden sm:block">
-                                <AlertCircle size={24} />
-                            </div>
-                            <div className="relative z-10 w-full">
-                                <div className="flex items-center gap-3 mb-3">
-                                    <div className="bg-rose-100 p-2 rounded-full text-rose-600 shrink-0 sm:hidden">
-                                        <AlertCircle size={20} />
-                                    </div>
-                                    <h3 className="font-medium text-lg text-brand-content">Adverse Event Reporting</h3>
-                                </div>
-                                <div className="flex flex-col gap-1 text-sm text-slate-600">
-                                    <span className="flex items-center gap-2">
-                                        Toll-free: <a href="tel:18008902590" className="font-medium text-slate-800 hover:text-rose-600 transition-colors">18008902590</a>
-                                    </span>
-                                    <span className="flex items-start md:items-center gap-2 flex-col md:flex-row">
-                                        Email: <a href="mailto:feedback@techinvention.biz" className="font-medium text-slate-800 hover:text-rose-600 transition-colors break-all">feedback@techinvention.biz</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Download Form Card */}
-                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 bg-slate-50 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow h-full gap-5">
-                            <div className="flex flex-col flex-1">
-                                <div className="bg-brand-primary/10 p-2.5 rounded-full text-brand-primary mb-3 w-fit">
-                                    <Download size={20} />
-                                </div>
-                                <h3 className="font-medium text-lg text-brand-content mb-2">AE Reporting Form</h3>
-                                <p className="text-sm text-slate-500 mb-0">
-                                    Please complete the Adverse Event reporting form and submit it to our team.
-                                </p>
-                            </div>
-                            <a 
-                                href="#"
-                                onClick={(e) => { e.preventDefault(); alert('PDF not found. Please place the PDF file in src/assets/pdf/ and update the link.'); }}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="shrink-0 inline-flex items-center justify-center gap-2 bg-brand-primary text-white font-medium px-6 py-2.5 rounded-xl text-sm hover:bg-brand-primary/90 transition-colors shadow-sm w-full sm:w-auto mt-4 sm:mt-0"
-                            >
-                                <Download size={18} />
-                                <span>Download Form</span>
-                            </a>
-                        </div>
-
+                {/* 4. Footer CTA: Final Contact Reinforcement */}
+                <ScrollReveal direction="up">
+                    <div className="bg-slate-50 rounded-[2.5rem] border border-slate-200/60 p-8 md:p-12 text-center max-w-4xl mx-auto shadow-sm">
+                        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                            Ready to Build the Future of Global Health?
+                        </h3>
+                        <p className="text-slate-600 text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed mb-6">
+                            Let's collaborate to bring accessible vaccines, diagnostics, and customized biotech solutions to emerging markets worldwide.
+                        </p>
+                        <a 
+                            href="mailto:connect@techinvention.biz"
+                            className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold px-8 py-3.5 rounded-full text-[12px] uppercase tracking-wider hover:bg-brand-primary/95 transition-all shadow-md hover:shadow-lg"
+                        >
+                            <span>Initiate Collaboration</span>
+                        </a>
                     </div>
                 </ScrollReveal>
 

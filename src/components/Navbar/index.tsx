@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../assets/images/brand_logo.png';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage, Language } from '../../context/LanguageContext';
-import { Globe, ChevronDown, Menu, X, Search, Bell, ShoppingCart, User, Grid } from 'lucide-react';
+import { Globe, ChevronDown, Menu, X, Search, Phone, Mail } from 'lucide-react';
 import MegaMenuContent from './MegaMenuContent';
 
 const Navbar = () => {
@@ -55,155 +55,140 @@ const Navbar = () => {
     ];
 
     const megaMenusData: Record<string, any> = {
-        products: {
-            label: t('navbar.products'),
-            sections: [
-                {
-                    title: t('megaMenu.vaccines'),
-                    links: [
-                        { name: t('megaMenu.humanVaccines'), href: '/', description: t('hero.slides.0.desc') }, // Reusing slide desc if possible or just leaving plain
-                        { name: t('megaMenu.animalVaccines'), href: '/' },
-                        { name: t('megaMenu.pipeline'), href: '/' },
-                    ]
-                },
-                {
-                    title: t('megaMenu.diagnostics'),
-                    links: [
-                        { name: t('megaMenu.molecular'), href: '/' },
-                        { name: t('megaMenu.rapidTest'), href: '/' },
-                    ]
-                },
-            ],
-            featured: {
-                title: t('megaMenu.ipPortfolio'),
-                description: t('hero.slides.3.desc'),
-                image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=800&auto=format&fit=crop',
-                link: '/'
-            }
-        },
-        solutions: {
-            label: t('navbar.solutions'),
-            sections: [
-                {
-                    title: t('megaMenu.services'),
-                    links: [
-                        { name: t('megaMenu.strategicAdvisory'), href: '/strategic-technical-advisory' },
-                        { name: t('megaMenu.globalAccess'), href: '/' },
-                        { name: t('megaMenu.cdmo'), href: '/' },
-                        { name: t('megaMenu.successfulProjects'), href: '/' },
-                    ]
-                },
-            ],
-            featured: {
-                title: t('common.testimonials'),
-                description: t('testimonials.subtitle'),
-                image: 'https://images.unsplash.com/photo-1576091160550-217359f4ecf8?q=80&w=800&auto=format&fit=crop',
-                link: '/'
-            }
-        },
-        company: {
-            label: t('navbar.company'),
-            sections: [
-                {
-                    title: t('navbar.company'),
-                    links: [
-                        { name: t('megaMenu.aboutUs'), href: '/about' },
-                        { name: t('megaMenu.certifications'), href: '/certification' },
-                    ]
-                }
-            ],
-            featured: {
-                title: t('about.leadership.title'),
-                description: t('about.leadership.tagline'),
-                image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop',
-                link: '/'
-            }
-        },
-        learn: {
-            label: t('navbar.learn'),
-            sections: [
-                {
-                    title: t('megaMenu.knowledgeCenter'),
-                    links: [
-                        { name: t('megaMenu.caseStudies'), href: '/' },
-                        { name: t('megaMenu.whitePapers'), href: '/' },
-                        { name: t('megaMenu.newsMedia'), href: '/' },
-                    ]
-                }
-            ]
-        },
-        support: {
-            label: t('navbar.support'),
-            sections: [
-                {
-                    title: t('megaMenu.helpContact'),
-                    links: [
-                        { name: t('navbar.contactUs'), href: '/contact-us' },
-                        { name: t('megaMenu.faqs'), href: '/' },
-                        { name: t('megaMenu.technicalSupport'), href: '/' },
-                    ]
-                }
-            ]
-        },
-        spotlight: {
-            label: t('navbar.spotlight'),
+        rnd: {
             simpleLinks: [
-                { name: "Awards", href: "/awards" },
-                { name: "TechInsights", href: "/" },
-                { name: "Media", href: "/" },
-                { name: "Press Releases", href: "/" },
-                { name: "Global Forums", href: "/" },
-                { name: "Publications", href: "/" },
+                { name: 'Vaccines', href: '/rnd/vaccines' },
+                { name: 'Diagnostics', href: '/rnd/diagnostics' }
+            ]
+        },
+        cdmo: {
+            simpleLinks: [
+                { name: 'GCMC', href: '/cdmo/gcmc' }
             ]
         }
     };
 
-    const mainNavItems = ['home', 'company', 'products', 'solutions', 'spotlight', 'contactUs'];
+    const mainNavItems = [
+        { key: 'home', label: 'Home', href: '/' },
+        { key: 'company', label: 'Company', href: '/about' },
+        { key: 'rnd', label: 'R&D', href: '/rnd' },
+        { key: 'cdmo', label: 'CDMO', href: '/cdmo' },
+        { key: 'consulting', label: 'Consulting', href: '/consulting' },
+        { key: 'products', label: 'Products', href: '/products' },
+        { key: 'contact', label: 'Contact Us', href: '/contact-us' },
+        { key: 'careers', label: 'Career', href: '/careers' },
+        { key: 'gmp', label: 'GMP Training Unit', href: '/gmp-training' },
+    ];
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
-            <div className="max-w-[1440px] mx-auto w-full h-20 md:h-24 flex items-center px-4 md:px-8 gap-8">
+            
+            {/* Top Utility Bar - Hidden on Mobile */}
+            <div className="hidden lg:flex w-full bg-brand-primary/5 border-b border-gray-100 h-10 items-center justify-between px-4 md:px-8">
+                <div className="flex items-center gap-6 text-[13px] font-medium text-brand-gray-dark">
+                    <a href="mailto:info@techinvention.biz" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
+                        <Mail size={14} />
+                        info@techinvention.biz
+                    </a>
+                    <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
+                        <Phone size={14} />
+                        +91 123 456 7890
+                    </a>
+                </div>
+                
+                <div className="flex items-center gap-6">
+                    {/* Search Bar in Top Bar */}
+                    <div className="flex w-[240px] relative group items-center bg-white rounded-full px-3 py-1 shadow-sm border border-gray-100">
+                        <Search size={14} className="text-gray-400 group-focus-within:text-brand-primary transition-colors" />
+                        <input 
+                            type="text" 
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            onKeyDown={handleSearch}
+                            placeholder={t('navbar.searchPlaceholder') || "Search TechInvention..."}
+                            className="w-full bg-transparent border-none py-0.5 pl-2 pr-2 text-[12px] font-medium focus:outline-none focus:ring-0 text-black placeholder:text-gray-400"
+                        />
+                    </div>
+
+                    {/* Language Switcher in Top Bar - Hidden for now as requested */}
+                    <div className="relative hidden">
+                        <button 
+                            onClick={() => setIsLangOpen(!isLangOpen)}
+                            className="flex items-center gap-1.5 text-[13px] font-medium text-brand-gray-dark hover:text-brand-primary transition-colors"
+                        >
+                            <Globe size={14} className="text-brand-primary" />
+                            <span>{language === 'en' ? 'English' : language === 'hi' ? 'Hindi' : language === 'ar' ? 'Arabic' : language === 'es' ? 'Spanish' : 'French'}</span>
+                            <ChevronDown size={14} className={`transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
+                        </button>
+
+                        <AnimatePresence>
+                            {isLangOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    className="absolute right-0 mt-3 w-40 bg-white shadow-xl border border-gray-100 py-2 z-[6000] rounded-xl overflow-hidden"
+                                >
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setLanguage(lang.code);
+                                                setIsLangOpen(false);
+                                            }}
+                                            className={`w-full text-left px-5 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${language === lang.code ? 'bg-brand-primary/10 text-brand-primary' : 'text-black hover:bg-gray-50 hover:text-brand-primary'}`}
+                                        >
+                                            {lang.label}
+                                        </button>
+                                    ))}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </div>
+
+            <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 {/* Logo */}
                 <Link to="/" className="flex-shrink-0">
                     <img src={logoImg} alt="Brand Logo" className="h-8 md:h-12 w-auto" />
                 </Link>
 
-                <div className="ml-auto flex items-center gap-8">
-                    {/* Main Navigation */}
-                    <nav className="hidden lg:flex items-center">
-                        <ul className="flex items-center gap-8">
-                            {mainNavItems.map((item) => {
-                                const hasDropdown = !!megaMenusData[item];
-                                const label = megaMenusData[item]?.label || t(`navbar.${item}`) || item;
+                <div className="flex items-center gap-8">
+                    {/* Main Navigation - Now with larger font since we have more space! */}
+                    <nav className="hidden xl:flex items-center ml-auto">
+                        <ul className="flex items-center gap-3 2xl:gap-6">
+                            {mainNavItems.map((navItem) => {
+                                const hasDropdown = megaMenusData[navItem.key] && (megaMenusData[navItem.key].sections || megaMenusData[navItem.key].simpleLinks);
                                 
                                 return (
                                 <li 
-                                    key={item}
+                                    key={navItem.key}
                                     className="relative"
-                                    onMouseEnter={() => hasDropdown && setActiveMegaMenu(item)}
+                                    onMouseEnter={() => hasDropdown && setActiveMegaMenu(navItem.key)}
                                     onMouseLeave={() => hasDropdown && setActiveMegaMenu(null)}
                                 >
                                     {hasDropdown ? (
-                                        <button className={`px-2 py-2 text-[14px] font-medium tracking-wide transition-all relative flex items-center gap-1 ${activeMegaMenu === item ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}>
-                                            {label}
-                                            <ChevronDown size={14} className={`transition-transform duration-300 ${activeMegaMenu === item ? 'rotate-180' : ''}`} />
-                                            {activeMegaMenu === item && (
+                                        <Link to={navItem.href} className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}>
+                                            {navItem.label}
+                                            <ChevronDown size={14} className={`transition-transform duration-300 ${activeMegaMenu === navItem.key ? 'rotate-180' : ''}`} />
+                                            {activeMegaMenu === navItem.key && (
                                                 <motion.div 
                                                     layoutId="activeNav"
-                                                    className="absolute bottom-[-10px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
+                                                    className="absolute bottom-[-22px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
                                                 />
                                             )}
-                                        </button>
+                                        </Link>
                                     ) : (
                                         <Link 
-                                            to={item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`}
-                                            className={`px-2 py-2 text-[14px] font-medium tracking-wide transition-all relative flex items-center gap-1 ${location.pathname === (item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`) ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}
+                                            to={navItem.href}
+                                            className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap ${location.pathname === navItem.href ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}
                                         >
-                                            {label}
-                                            {location.pathname === (item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`) && (
+                                            {navItem.label}
+                                            {location.pathname === navItem.href && (
                                                 <motion.div 
                                                     layoutId="activeNav"
-                                                    className="absolute bottom-[-10px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
+                                                    className="absolute bottom-[-22px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
                                                 />
                                             )}
                                         </Link>
@@ -211,17 +196,17 @@ const Navbar = () => {
 
                                     {/* Mega Menu Flyout */}
                                     <AnimatePresence>
-                                        {activeMegaMenu === item && hasDropdown && (
-                                            megaMenusData[item].simpleLinks ? (
+                                        {activeMegaMenu === navItem.key && hasDropdown && (
+                                            megaMenusData[navItem.key].simpleLinks ? (
                                                 <motion.div
                                                     initial={{ opacity: 0, y: 10 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     exit={{ opacity: 0, y: 10 }}
                                                     transition={{ duration: 0.2 }}
-                                                    className="absolute top-[50px] left-0 mt-2 bg-white shadow-lg border border-gray-100 z-[4900] min-w-[220px]"
+                                                    className="absolute top-[60px] left-0 mt-2 bg-white shadow-lg border border-gray-100 z-[4900] min-w-[220px]"
                                                 >
                                                     <div className="flex flex-col">
-                                                        {megaMenusData[item].simpleLinks.map((link: any, idx: number) => (
+                                                        {megaMenusData[navItem.key].simpleLinks.map((link: any, idx: number) => (
                                                             <Link
                                                                 key={idx}
                                                                 to={link.href}
@@ -238,12 +223,12 @@ const Navbar = () => {
                                                     animate={{ opacity: 1, y: 0 }}
                                                     exit={{ opacity: 0, y: 10 }}
                                                     transition={{ duration: 0.2 }}
-                                                    className="fixed top-[80px] md:top-[96px] left-0 right-0 bg-white shadow-2xl border-t border-gray-100 z-[4900]"
+                                                    className="fixed top-[120px] left-0 right-0 bg-white shadow-2xl border-t border-gray-100 z-[4900]"
                                                 >
                                                     <div className="border-b border-gray-100 bg-gray-50/30">
                                                         <MegaMenuContent 
-                                                            sections={megaMenusData[item].sections} 
-                                                            featured={megaMenusData[item].featured}
+                                                            sections={megaMenusData[navItem.key].sections} 
+                                                            featured={megaMenusData[navItem.key].featured}
                                                         />
                                                     </div>
                                                 </motion.div>
@@ -255,65 +240,11 @@ const Navbar = () => {
                         </ul>
                     </nav>
 
-                    {/* Right Side Actions: Search & Language */}
-                    <div className="flex items-center gap-6">
-                        {/* Search Bar */}
-                        <div className="hidden md:flex w-[200px] lg:w-[240px] relative group">
-                            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-black group-focus-within:text-brand-primary transition-colors">
-                                <Search size={16} />
-                            </div>
-                            <input 
-                                type="text" 
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                onKeyDown={handleSearch}
-                                placeholder={t('navbar.searchPlaceholder') || "Search TechInvention..."}
-                                className="w-full bg-gray-50 border border-transparent group-hover:border-gray-100 rounded-full py-2 pl-10 pr-4 text-[14px] font-medium focus:outline-none focus:ring-1 focus:ring-brand-primary focus:bg-white transition-all shadow-sm"
-                            />
-                        </div>
-
-                        <div className="flex items-center gap-4">
-                            {/* Language Switcher */}
-                            <div className="hidden relative">
-                                <button 
-                                    onClick={() => setIsLangOpen(!isLangOpen)}
-                                    className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 hover:border-brand-primary hover:bg-brand-primary/5 transition-all text-black"
-                                >
-                                    <Globe size={18} className="text-brand-primary" />
-                                    <span className="text-[14px] font-medium  tracking-widest hidden sm:inline">{language === 'en' ? 'English' : language === 'hi' ? 'Hindi' : language === 'ar' ? 'Arabic' : language === 'es' ? 'Spanish' : 'French'}</span>
-                                    <ChevronDown size={14} className={`transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
-                                </button>
-
-                                <AnimatePresence>
-                                    {isLangOpen && (
-                                        <motion.div
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: 10 }}
-                                            className="absolute right-0 mt-3 w-40 bg-white shadow-2xl border border-gray-100 py-2 z-[6000] rounded-xl overflow-hidden"
-                                        >
-                                            {languages.map((lang) => (
-                                                <button
-                                                    key={lang.code}
-                                                    onClick={() => {
-                                                        setLanguage(lang.code);
-                                                        setIsLangOpen(false);
-                                                    }}
-                                                    className={`w-full text-left px-5 py-3 text-[14px] font-medium tracking-tight  tracking-widest transition-colors ${language === lang.code ? 'bg-brand-primary/10 text-brand-primary' : 'text-black hover:bg-gray-50 hover:text-brand-primary'}`}
-                                                >
-                                                    {lang.label}
-                                                </button>
-                                            ))}
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-
-                            {/* Mobile Toggle */}
-                            <button className="lg:hidden p-2 rounded-lg hover:bg-gray-50 text-black" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                            </button>
-                        </div>
+                    {/* Mobile Toggle & Search (Visible on small screens where top bar is hidden) */}
+                    <div className="flex items-center gap-4 xl:hidden">
+                        <button className="p-2 rounded-lg hover:bg-gray-50 text-black" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -325,35 +256,34 @@ const Navbar = () => {
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
-                        className="fixed inset-0 top-20 md:top-24 z-[4800] lg:hidden bg-white overflow-y-auto"
+                        className="fixed inset-0 top-[64px] md:top-[80px] z-[4800] xl:hidden bg-white overflow-y-auto"
                     >
                         <div className="flex flex-col p-6 divide-y divide-gray-100 pb-32">
-                            {mainNavItems.map(item => {
-                                const hasDropdown = !!megaMenusData[item];
-                                const label = megaMenusData[item]?.label || t(`navbar.${item}`) || item;
+                            {mainNavItems.map(navItem => {
+                                const hasDropdown = megaMenusData[navItem.key] && (megaMenusData[navItem.key].sections || megaMenusData[navItem.key].simpleLinks);
 
                                 return (
-                                <div key={item} className="py-4">
+                                <div key={navItem.key} className="py-4">
                                     {hasDropdown ? (
                                         <button 
-                                            onClick={() => toggleMobileMenu(item)}
+                                            onClick={() => toggleMobileMenu(navItem.key)}
                                             className="w-full flex items-center justify-between outline-none"
                                         >
-                                            <span className="text-lg font-medium tracking-wide text-black">{label}</span>
-                                            <ChevronDown size={16} className={`text-gray-400 transition-transform duration-300 ${openMobileMenus.includes(item) ? 'rotate-180' : ''}`} />
+                                            <span className="text-lg font-medium tracking-wide text-black">{navItem.label}</span>
+                                            <ChevronDown size={16} className={`text-gray-400 transition-transform duration-300 ${openMobileMenus.includes(navItem.key) ? 'rotate-180' : ''}`} />
                                         </button>
                                     ) : (
                                         <Link 
-                                            to={item === 'home' ? '/' : item === 'contactUs' ? '/contact-us' : `/${item.toLowerCase()}`}
+                                            to={navItem.href}
                                             onClick={() => setIsMenuOpen(false)}
                                             className="w-full flex items-center justify-between outline-none"
                                         >
-                                            <span className="text-lg font-medium tracking-wide text-black">{label}</span>
+                                            <span className="text-lg font-medium tracking-wide text-black">{navItem.label}</span>
                                         </Link>
                                     )}
                                     
                                     <AnimatePresence>
-                                        {openMobileMenus.includes(item) && hasDropdown && (
+                                        {openMobileMenus.includes(navItem.key) && hasDropdown && (
                                             <motion.div
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
@@ -362,8 +292,8 @@ const Navbar = () => {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="mt-4 flex flex-col gap-3 pl-2 border-l border-gray-100">
-                                                    {megaMenusData[item].simpleLinks ? (
-                                                        megaMenusData[item].simpleLinks.map((link: any, lIdx: number) => (
+                                                    {megaMenusData[navItem.key].simpleLinks ? (
+                                                        megaMenusData[navItem.key].simpleLinks.map((link: any, lIdx: number) => (
                                                             <Link 
                                                                 key={lIdx} 
                                                                 to={link.href} 
@@ -374,7 +304,7 @@ const Navbar = () => {
                                                             </Link>
                                                         ))
                                                     ) : (
-                                                        megaMenusData[item].sections.map((sec: any, sIdx: number) => (
+                                                        megaMenusData[navItem.key].sections.map((sec: any, sIdx: number) => (
                                                             <div key={sIdx}>
                                                                 <span className="text-[13px] font-medium tracking-tight text-brand-primary tracking-widest uppercase">{sec.title}</span>
                                                                 {sec.links.map((link: any, lIdx: number) => (

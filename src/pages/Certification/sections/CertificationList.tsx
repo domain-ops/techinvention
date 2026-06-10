@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
@@ -121,18 +122,19 @@ const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
 const CertificationList = () => {
     const { t } = useLanguage();
     const containerRef = useRef<HTMLElement>(null);
+    const [activeIdx, setActiveIdx] = useState(0);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
 
-    // Parallax Transforms for the 3 columns
-    const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-    const y2 = useTransform(scrollYProgress, [0, 1], ["15%", "-10%"]);
-    const y3 = useTransform(scrollYProgress, [0, 1], ["-10%", "20%"]);
+    // Parallax Transforms for the 3 columns (Subtle scroll effect without breaking layout)
+    const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
+    const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
+    const y3 = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
 
-    // Split array into 3 columns
+    // Split array into 3 columns for Masonry layout
     const col1 = CERT_CONFIG.filter((_, i) => i % 3 === 0);
     const col2 = CERT_CONFIG.filter((_, i) => i % 3 === 1);
     const col3 = CERT_CONFIG.filter((_, i) => i % 3 === 2);
@@ -148,40 +150,82 @@ const CertificationList = () => {
             <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
                 <div className="text-center mb-32 max-w-4xl mx-auto">
                     <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-mono tracking-[0.2em] text-sm mb-4 block uppercase">
-                            {t('certifications.tag')}
-                        </span>
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 tracking-tight mb-8">
-                            <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
-                        </h2>
-                        <p className="text-gray-500 text-xl font-light leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                        <div className="flex flex-col items-center text-center">
+                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase">
+                                {t('certifications.tag')}
+                            </span>
+                            <div className="mb-4">
+                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
+                                    <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
+                                </h2>
+                            </div>
+                            <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
                     </ScrollReveal>
                 </div>
 
                 {/* Parallax Masonry Grid (Desktop) */}
-                <div className="hidden lg:grid grid-cols-3 gap-8 group/grid relative pb-32">
-                    <motion.div style={{ y: y1 }} className="flex flex-col gap-8 pt-12">
+                <div className="hidden lg:grid grid-cols-3 gap-8 group/grid relative pb-16">
+                    <motion.div style={{ y: y1 }} className="flex flex-col gap-8">
                         {col1.map((cert) => <CertificationCard key={cert.id} cert={cert} />)}
                     </motion.div>
                     
-                    <motion.div style={{ y: y2 }} className="flex flex-col gap-8 -mt-24">
+                    <motion.div style={{ y: y2 }} className="flex flex-col gap-8">
                         {col2.map((cert) => <CertificationCard key={cert.id} cert={cert} />)}
                     </motion.div>
                     
-                    <motion.div style={{ y: y3 }} className="flex flex-col gap-8 pt-32">
+                    <motion.div style={{ y: y3 }} className="flex flex-col gap-8">
                         {col3.map((cert) => <CertificationCard key={cert.id} cert={cert} />)}
                     </motion.div>
                 </div>
 
-                {/* Stacked Grid (Mobile/Tablet) */}
-                <div className="lg:hidden flex flex-col gap-8">
-                    {CERT_CONFIG.map((cert) => (
-                        <ScrollReveal key={cert.id} direction="up" delay={0.1}>
-                            <CertificationCard cert={cert} />
-                        </ScrollReveal>
-                    ))}
+                {/* Mobile/Tablet Slider (lg:hidden) */}
+                <div className="lg:hidden flex flex-col items-center gap-6 relative">
+                    <div className="relative w-full max-w-sm mx-auto overflow-hidden px-4">
+                        <motion.div
+                            key={activeIdx}
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="w-full"
+                        >
+                            <CertificationCard cert={CERT_CONFIG[activeIdx]} />
+                        </motion.div>
+                    </div>
+
+                    {/* Navigation Buttons and Dots */}
+                    <div className="flex items-center gap-4 mt-2">
+                        <button
+                            onClick={() => setActiveIdx((prev) => (prev - 1 + CERT_CONFIG.length) % CERT_CONFIG.length)}
+                            className="p-3 bg-white border border-slate-200/80 shadow-md rounded-full text-slate-800 active:scale-95 transition-all cursor-pointer"
+                            aria-label="Previous certificate"
+                        >
+                            <ChevronLeft className="w-5 h-5" />
+                        </button>
+                        
+                        {/* Dots */}
+                        <div className="flex gap-1.5 max-w-[150px] overflow-x-auto py-1 scrollbar-none">
+                            {CERT_CONFIG.map((_, idx) => (
+                                <button
+                                    key={idx}
+                                    onClick={() => setActiveIdx(idx)}
+                                    className={`h-2 rounded-full transition-all duration-300 ${
+                                        idx === activeIdx ? 'w-5 bg-[#1955A6]' : 'w-2 bg-slate-300'
+                                    }`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={() => setActiveIdx((prev) => (prev + 1) % CERT_CONFIG.length)}
+                            className="p-3 bg-white border border-slate-200/80 shadow-md rounded-full text-slate-800 active:scale-95 transition-all cursor-pointer"
+                            aria-label="Next certificate"
+                        >
+                            <ChevronRight className="w-5 h-5" />
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

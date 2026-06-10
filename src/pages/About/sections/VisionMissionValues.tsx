@@ -43,7 +43,7 @@ const VisionMissionValues = () => {
                                     <SplitTitle title="Purpose & Principles" />
                                 </h2>
                             </div>
-                            <p className="text-[#475569] text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
+                            <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
                                 The foundation of our organization is built on a clear vision for the future, a driving mission for today, and the core values that guide our every step.
                             </p>
                         </ScrollReveal>
@@ -77,7 +77,7 @@ const VisionMissionValues = () => {
                                 </h3>
                             </div>
                             
-                            <p className="text-lg text-slate-600 leading-relaxed max-w-xl mt-auto">
+                            <p className="text-lg text-black font-medium leading-relaxed max-w-xl mt-auto">
                                 {t('about.vision.desc')}
                             </p>
                         </div>
@@ -110,13 +110,18 @@ const VisionMissionValues = () => {
 
                     {/* VALUES SECTION (Spans full width) */}
                     <div className="lg:col-span-12 mt-8 md:mt-12">
-                        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10 gap-4">
-                            <div>
-                                <h3 className="text-3xl font-medium text-slate-900">
-                                    {t('about.values.title') || "Our Core Values"}
-                                </h3>
-                                <p className="text-slate-500 mt-2 text-lg">The principles that drive our innovation</p>
+                        <div className="mb-10 text-left">
+                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
+                                Core Principles
+                            </span>
+                            <div className="mb-4">
+                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
+                                    <SplitTitle title={t('about.values.title') || "Our Values"} />
+                                </h2>
                             </div>
+                            <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
+                                The principles that drive our innovation
+                            </p>
                         </div>
 
                         {values && values.length > 0 && (
@@ -143,7 +148,7 @@ const VisionMissionValues = () => {
                                                 {val.title}
                                             </h4>
                                             
-                                            <p className="text-slate-600 text-[15px] leading-relaxed mt-auto">
+                                            <p className="text-black text-[15px] leading-relaxed mt-auto font-medium">
                                                 {val.desc}
                                             </p>
                                         </motion.div>

@@ -31,12 +31,12 @@ const AdvisoryHeader = () => {
             opacity: 1,
             y: 0,
             rotateX: 0,
-            transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }
+            transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] as const }
         }
-    };
+    } as const;
 
     return (
-        <section className="relative w-full h-[80vh] min-h-[500px] md:min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-900">
+        <section className="relative w-full h-screen min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Background Images Layered */}
             <div className="absolute inset-0 z-0">
                 <img
