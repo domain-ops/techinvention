@@ -1,5 +1,4 @@
 import AboutHeader from './sections/AboutBanner';
-import AboutVideo from './sections/AboutVideo';
 import CompanyStory from './sections/CompanyStory';
 import OfficeEnvironment from './sections/OfficeEnvironment';
 import VisionMissionValues from './sections/VisionMissionValues';
@@ -10,7 +9,6 @@ import Responsibility from './sections/Responsibility';
 import Spotlight from './sections/Spotlight';
 import MediaCentre from '../Home/sections/Blogs';
 import CTASection from '../../components/CTASection';
-
 import { useSEO } from '../../lib/useSEO';
 
 const AboutPage = () => {
@@ -23,9 +21,6 @@ const AboutPage = () => {
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
             {/* 1. Company Landing Hero */}
             <AboutHeader title="About Techinvention" />
-
-            {/* Brand Video showcase below header */}
-            <AboutVideo />
 
             {/* 2. About Section */}
             <CompanyStory />

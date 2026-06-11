@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import techInventionVideo from '../../../assets/videos/TechInvention-Video.mp4';
 
 interface AboutBannerProps {
     title?: string;
@@ -10,17 +11,46 @@ interface AboutBannerProps {
     subtitle?: string;
 }
 
-const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenuLink, image, subtitle }) => {
+const AboutBanner: React.FC<AboutBannerProps> = ({ 
+    title, 
+    parentMenu, 
+    parentMenuLink, 
+    image, 
+    subtitle
+}) => {
     const { t } = useLanguage();
+    const videoRef = useRef<HTMLVideoElement>(null);
     
     // Default page title for About Us if none is passed
     const pageTitle = title || t('navbar.company') || 'About TechInvention';
     
+    // Determine default subtitle based on title if not explicitly passed
+    let defaultSubtitle = subtitle;
+    if (!subtitle) {
+        if (pageTitle.toLowerCase().includes('about')) {
+            defaultSubtitle = "We design, build, and deliver advanced bioprocesses, diagnostics, and vaccine platforms to secure equitable access to life-critical medical countermeasures.";
+        } else if (pageTitle.toLowerCase().includes('member') || pageTitle.toLowerCase().includes('association')) {
+            defaultSubtitle = "Collaborating with leading global health organisations, pharmaceutical associations, and research bodies to advance biotechnology innovation.";
+        } else {
+            defaultSubtitle = "Advancing global health through biotechnology, specialized diagnostics, and clinical manufacturing consulting.";
+        }
+    }
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 2.0; // Play at double speed
+        }
+    }, [pageTitle]);
+
+    const isAboutPage = pageTitle.toLowerCase().includes('about');
+
     return (
-        <section className={`relative w-full h-[380px] md:h-[520px] flex items-center overflow-hidden pt-20 md:pt-28 ${
-            image ? 'bg-slate-900' : 'bg-white'
+        <section className={`relative w-full overflow-hidden ${
+            image 
+                ? 'h-[380px] md:h-[520px] flex items-center bg-slate-900 pt-20 md:pt-28' 
+                : 'min-h-[450px] md:min-h-[550px] flex items-center bg-slate-50 pt-32 pb-16 md:pt-40 md:pb-20 lg:pt-44'
         }`}>
-            {/* Background Image or Career-style Ambient Glows */}
+            {/* Background elements */}
             {image ? (
                 <div className="absolute inset-0 z-0">
                     <img
@@ -28,7 +58,6 @@ const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenu
                         alt={pageTitle}
                         className="w-full h-full object-cover object-center"
                     />
-                    {/* Dark overlay for readability */}
                     <div className="absolute inset-0 bg-black/45 z-10" />
                 </div>
             ) : (
@@ -39,14 +68,48 @@ const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenu
                 </>
             )}
 
-            {/* Content Container - Left Aligned to match Navbar Logo */}
-            <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 md:px-8 text-left">
-                {/* Page Title */}
-                <h1 className={`text-4xl sm:text-5xl md:text-[56px] font-medium tracking-wide leading-[1.15] ${
-                    image ? 'text-white' : 'text-slate-950 font-sans'
-                }`}>
-                    {image ? pageTitle : <SplitTitle title={pageTitle} />}
-                </h1>
+            <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 md:px-8">
+                {image ? (
+                    /* Traditional Banner with Image Overlay */
+                    <div className="text-left w-full">
+                        <h1 className="text-4xl sm:text-5xl md:text-[56px] font-medium tracking-wide leading-[1.15] text-white">
+                            {pageTitle}
+                        </h1>
+                    </div>
+                ) : (
+                    /* Center-aligned layout with conditional embedded half-width video player below */
+                    <div className="flex flex-col items-center text-center w-full">
+                        <div className="max-w-3xl mx-auto flex flex-col items-center">
+                            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-medium tracking-wide leading-[1.15] text-slate-950 font-sans mb-6 text-center">
+                                <SplitTitle title={pageTitle} />
+                            </h1>
+                            
+                            {defaultSubtitle && (
+                                <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed max-w-2xl font-medium mb-10 text-center">
+                                    {defaultSubtitle}
+                                </p>
+                            )}
+                        </div>
+
+                        {/* Center-aligned, wider video player for About page */}
+                        {isAboutPage && (
+                            <div className="w-full max-w-6xl mx-auto mt-6">
+                                <div className="relative aspect-video w-full overflow-hidden shadow-[0_15px_40px_rgba(23,85,166,0.1)] border border-slate-100 bg-slate-950 rounded-none">
+                                    <video
+                                        ref={videoRef}
+                                        src={techInventionVideo}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload="auto"
+                                        className="w-full h-full object-cover object-center [transform:translate3d(0,0,0)] [backface-visibility:hidden]"
+                                    />
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
         </section>
     );
