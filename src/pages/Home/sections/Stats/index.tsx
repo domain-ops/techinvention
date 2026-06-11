@@ -52,7 +52,7 @@ const StatBox = ({ icon: Icon, valueStr, label, delay, className = "" }: any) =>
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.6, delay }}
             whileHover={{ y: -5, scale: 1.02 }}
-            className={`flex-1 bg-white border border-slate-100 shadow-[0_5px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_25px_50px_rgba(23,85,166,0.15)] hover:border-brand-primary/30 rounded-[1.5rem] p-6 relative overflow-hidden group transition-all duration-500 ease-out min-w-[140px] ${className}`}
+            className={`flex-1 bg-white border border-slate-100 shadow-[0_5px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_25px_50px_rgba(23,85,166,0.15)] hover:border-brand-primary/30 rounded-none p-6 relative overflow-hidden group transition-all duration-500 ease-out min-w-[140px] ${className}`}
         >
             {/* Background elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/[0.01] via-transparent to-brand-primary/[0.01] group-hover:from-brand-primary/[0.04] group-hover:to-brand-primary/[0.08] transition-all duration-500" />
@@ -114,7 +114,7 @@ const Stats = () => {
                         </div>
 
                         {/* Image Column */}
-                        <div className="relative h-[300px] sm:h-[400px] lg:h-[800px] rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-2xl group">
+                        <div className="relative h-[300px] sm:h-[400px] lg:h-[800px] rounded-none lg:rounded-none overflow-hidden shadow-2xl group">
                             <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700" />
                             <img 
                                 src={HospitalImage} 

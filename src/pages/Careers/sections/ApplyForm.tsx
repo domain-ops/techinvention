@@ -68,7 +68,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                     Back to All Openings
                 </button>
 
-                <div className="bg-white border border-slate-200/60 rounded-[2rem] p-8 md:p-12 shadow-2xl">
+                <div className="bg-white border border-slate-200/60 rounded-none p-8 md:p-12 shadow-2xl">
                     <div className="border-b border-slate-100 pb-6 mb-8">
                         <span className="text-brand-primary font-bold uppercase tracking-wider text-xs">Job Application</span>
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-2 leading-tight">
@@ -86,7 +86,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                         type="text" 
                                         value={selectedJobTitle || ''} 
                                         disabled
-                                        className="w-full bg-slate-100 border border-slate-200/80 rounded-xl px-4 py-3 text-sm text-slate-600 font-semibold cursor-not-allowed"
+                                        className="w-full bg-slate-100 border border-slate-200/80 rounded-none px-4 py-3 text-sm text-slate-600 font-semibold cursor-not-allowed"
                                     />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -98,7 +98,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                             value={name} 
                                             onChange={e => setName(e.target.value)}
                                             placeholder="John Doe" 
-                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>
                                     
@@ -110,7 +110,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                             value={email} 
                                             onChange={e => setEmail(e.target.value)}
                                             placeholder="johndoe@email.com" 
-                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                             value={phone} 
                                             onChange={e => setPhone(e.target.value)}
                                             placeholder="+91 98765 43210" 
-                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>
                                     
@@ -136,7 +136,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                             value={experience} 
                                             onChange={e => setExperience(e.target.value)}
                                             placeholder="e.g. 4 Years" 
-                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                            className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                         value={currentCompany} 
                                         onChange={e => setCurrentCompany(e.target.value)}
                                         placeholder="Current employer name" 
-                                        className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
+                                        className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                     />
                                 </div>
 
@@ -161,14 +161,14 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                         value={message} 
                                         onChange={e => setMessage(e.target.value)}
                                         placeholder="Write a brief cover letter or notes regarding your application..." 
-                                        className="w-full bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400 resize-none"
+                                        className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400 resize-none"
                                     />
                                 </div>
 
                                 {/* File Upload */}
                                 <div className="flex flex-col gap-2">
                                     <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Upload Resume (PDF, DOC) *</label>
-                                    <div className="relative group cursor-pointer border border-dashed border-slate-200 hover:border-brand-primary transition-colors rounded-xl p-4 flex items-center justify-center gap-3 bg-slate-50">
+                                    <div className="relative group cursor-pointer border border-dashed border-slate-200 hover:border-brand-primary transition-colors rounded-none p-4 flex items-center justify-center gap-3 bg-slate-50">
                                         <input 
                                             type="file" 
                                             accept=".pdf,.doc,.docx"
@@ -197,14 +197,14 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                     <button 
                                         type="button"
                                         onClick={onCancel}
-                                        className="flex-1 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition-all duration-300 text-sm"
+                                        className="flex-1 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-none transition-all duration-300 text-sm"
                                     >
                                         Cancel
                                     </button>
                                     <button 
                                         type="submit" 
                                         disabled={loading}
-                                        className="flex-[2] py-4 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 text-sm"
+                                        className="flex-[2] py-4 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white font-bold rounded-none transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 text-sm"
                                     >
                                         {loading ? 'Submitting...' : 'Submit Application'}
                                         <Send className="w-4 h-4" />

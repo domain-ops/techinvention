@@ -96,7 +96,7 @@ const AdvisoryPhases = () => {
                                         whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
                                         viewport={{ once: true, margin: "-50px" }}
                                         transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
-                                        className="w-full mt-4 rounded-2xl overflow-hidden shadow-md border border-slate-100/50"
+                                        className="w-full mt-4 rounded-none overflow-hidden shadow-md border border-slate-100/50"
                                     >
                                         <motion.img 
                                             whileHover={{ scale: 1.02 }}

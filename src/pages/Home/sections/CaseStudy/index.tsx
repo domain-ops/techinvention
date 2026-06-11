@@ -224,7 +224,7 @@ const CaseStudy = () => {
                                         pointerEvents: isActive ? "auto" : "none",
                                     }}
                                     transition={{ type: "spring", stiffness: 260, damping: 25, mass: 0.8 }}
-                                    className="absolute inset-x-4 lg:inset-0 aspect-[4/5] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-[6px] md:border-8 border-white bg-white origin-center shadow-xl"
+                                    className="absolute inset-x-4 lg:inset-0 aspect-[4/5] rounded-none md:rounded-none overflow-hidden border-[6px] md:border-8 border-white bg-white origin-center shadow-xl"
                                 >
                                     <div className="relative w-full h-full group">
                                         <img

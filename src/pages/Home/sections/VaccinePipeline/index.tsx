@@ -203,7 +203,7 @@ const VaccinePipeline = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-slate-50 rounded-3xl p-6 border border-slate-100 shadow-sm relative overflow-hidden flex flex-col gap-6"
+                                className="bg-slate-50 rounded-none p-6 border border-slate-100 shadow-sm relative overflow-hidden flex flex-col gap-6"
                             >
                                 {/* Header: VAX ID & Name */}
                                 <div className="flex items-start gap-4">
@@ -253,7 +253,7 @@ const VaccinePipeline = () => {
 
                                 {/* Milestones */}
                                 {item.note && (
-                                    <div className="bg-white rounded-xl p-4 border border-slate-100">
+                                    <div className="bg-white rounded-none p-4 border border-slate-100">
                                         <p className="font-medium text-[11px] text-black mb-2">{t('vaccinePipeline.milestonesTitleShort') as string}</p>
                                         <ul className="text-[11px] font-medium tracking-tight text-black list-disc pl-4 space-y-1">
                                             <li>{item.note}</li>

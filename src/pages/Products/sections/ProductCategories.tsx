@@ -53,10 +53,10 @@ export default function ProductCategories() {
                             transition={{ duration: 0.5, delay: index * 0.15 }}
                             whileHover={{ y: -8 }}
                             onClick={() => scrollToSection(cat.id)}
-                            className={`bg-white border border-slate-200/80 rounded-2xl p-6 text-slate-800 text-left cursor-pointer transition-all duration-300 flex flex-col justify-between h-[190px] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.02)] group ${cat.hoverGlow}`}
+                            className={`bg-white border border-slate-200/80 rounded-none p-6 text-slate-800 text-left cursor-pointer transition-all duration-300 flex flex-col justify-between h-[190px] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.02)] group ${cat.hoverGlow}`}
                         >
                             <div className="flex items-start justify-between">
-                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${cat.iconBg}`}>
+                                <div className={`w-12 h-12 rounded-none flex items-center justify-center border ${cat.iconBg}`}>
                                     {cat.icon}
                                 </div>
                             </div>

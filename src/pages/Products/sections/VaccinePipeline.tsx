@@ -191,11 +191,11 @@ export default function VaccinePipeline() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="bg-white rounded-2xl p-6 border border-slate-200/60 shadow-sm relative overflow-hidden flex flex-col gap-6 text-left"
+                                    className="bg-white rounded-none p-6 border border-slate-200/60 shadow-sm relative overflow-hidden flex flex-col gap-6 text-left"
                                 >
                                     {/* Header: VAX ID & Name */}
                                     <div className="flex items-start gap-4">
-                                        <div className="w-14 h-14 flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 z-20 shrink-0">
+                                        <div className="w-14 h-14 flex items-center justify-center bg-slate-50 rounded-none border border-slate-100 z-20 shrink-0">
                                             <VialIcon className="w-8 h-8 text-brand-primary" />
                                         </div>
                                         <div className="flex flex-col justify-center pt-1">
@@ -239,7 +239,7 @@ export default function VaccinePipeline() {
 
                                     {/* Milestones */}
                                     {item.note && (
-                                        <div className="bg-slate-50 rounded-xl p-4 border border-slate-200/60">
+                                        <div className="bg-slate-50 rounded-none p-4 border border-slate-200/60">
                                             <p className="font-bold text-[10px] uppercase tracking-wider text-slate-500 mb-2">{t('vaccinePipeline.milestonesTitleShort') as string}</p>
                                             <ul className="text-xs font-medium text-slate-700 list-disc pl-4 space-y-1">
                                                 <li>{item.note}</li>

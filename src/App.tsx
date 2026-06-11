@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './components/Navbar';
@@ -33,44 +33,51 @@ function AppContent() {
     const lenisRef = React.useRef<Lenis | null>(null);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.history.scrollRestoration = 'manual';
+        }
+
         const lenis = new Lenis({
-            duration: 1.2,
+            duration: 1.4,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             orientation: 'vertical',
             gestureOrientation: 'vertical',
             smoothWheel: true,
-            wheelMultiplier: 1,
+            wheelMultiplier: 1.1,
             infinite: false,
         });
 
         lenisRef.current = lenis;
 
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-
         lenis.on('scroll', ScrollTrigger.update);
 
-        gsap.ticker.add((time) => {
+        // Sync Lenis with GSAP ScrollTrigger ticker
+        const updatePhysics = (time: number) => {
             lenis.raf(time * 1000);
-        });
+        };
+        gsap.ticker.add(updatePhysics);
 
         gsap.ticker.lagSmoothing(0);
 
         return () => {
+            gsap.ticker.remove(updatePhysics);
             lenis.destroy();
         };
     }, []);
 
     // Handle scroll to top on route change
-    useEffect(() => {
+    useLayoutEffect(() => {
+        // Kill existing scroll triggers to prevent layout shifts & callback fires during transition
+        ScrollTrigger.getAll().forEach(t => t.kill());
+
         if (lenisRef.current) {
             lenisRef.current.scrollTo(0, { immediate: true });
         }
         window.scrollTo(0, 0);
+
+        // Clear ScrollTrigger cache & memory for the fresh page
+        ScrollTrigger.clearScrollMemory();
+        ScrollTrigger.refresh();
     }, [pathname]);
 
     return (

@@ -212,7 +212,7 @@ export default function CurrentOpenings({ onSelectJob }: { onSelectJob: (jobTitl
                                                             transition={{ duration: 0.25 }}
                                                             className="overflow-hidden"
                                                         >
-                                                            <div className="pb-6 pt-2 px-5 md:px-7 bg-white/60 backdrop-blur-md rounded-2xl border border-brand-border my-3 shadow-sm text-left">
+                                                            <div className="pb-6 pt-2 px-5 md:px-7 bg-white/60 backdrop-blur-md rounded-none border border-brand-border my-3 shadow-sm text-left">
                                                                 <div className="flex flex-wrap gap-2.5 mb-4 text-[10px] uppercase tracking-wider text-slate-700 font-bold">
                                                                     <span className="bg-[#1955A6]/8 px-2.5 py-1 rounded-full text-[#1955A6]">
                                                                         Code: {job.formulaCode}

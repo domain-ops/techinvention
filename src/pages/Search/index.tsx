@@ -43,11 +43,18 @@ const pathToRoute = (path: string, t: any): { url: string; title: string, catego
     return { url: '/', title: 'Related Content', category: 'General' };
 };
 
+import { useSEO } from '../../lib/useSEO';
+
 const SearchPage = () => {
     const [searchParams] = useSearchParams();
     const query = searchParams.get('q') || '';
     const { language } = useLanguage();
     const t = translations[language];
+
+    useSEO(
+        'Search | TechInvention',
+        'Search our website to find information about our products, research and development, consulting services, and latest insights.'
+    );
 
     const results = useMemo(() => {
         if (!query.trim() || query.length < 2) return [];
@@ -106,7 +113,7 @@ const SearchPage = () => {
                                     <Link 
                                         key={idx} 
                                         to={result.url}
-                                        className="bg-white rounded-2xl p-6 md:p-8 shadow-[0_5px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:shadow-[0_15px_40px_rgba(25,85,166,0.08)] hover:border-brand-primary/20 transition-all duration-500 ease-out group block"
+                                        className="bg-white rounded-none p-6 md:p-8 shadow-[0_5px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:shadow-[0_15px_40px_rgba(25,85,166,0.08)] hover:border-brand-primary/20 transition-all duration-500 ease-out group block"
                                     >
                                         <div className="flex items-center gap-2 mb-3">
                                             <span className="text-[10px] font-bold tracking-widest uppercase bg-brand-primary/5 text-brand-primary px-3 py-1 rounded-full">
@@ -122,7 +129,7 @@ const SearchPage = () => {
                                     </Link>
                                 ))
                             ) : (
-                                <div className="bg-white rounded-[2rem] p-12 text-center border border-slate-100 shadow-[0_5px_20px_rgba(0,0,0,0.03)]">
+                                <div className="bg-white rounded-none p-12 text-center border border-slate-100 shadow-[0_5px_20px_rgba(0,0,0,0.03)]">
                                     <div className="w-20 h-20 bg-brand-primary/5 rounded-full flex flex-col items-center justify-center mx-auto mb-6 text-brand-primary overflow-hidden relative">
                                         <div className="absolute inset-0 bg-brand-primary/10 animate-ping opacity-20 hidden group-hover:block" />
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>

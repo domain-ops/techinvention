@@ -134,7 +134,7 @@ export default function CategoryFilter() {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.4 }}
                                 key={product.id}
-                                className="group bg-white rounded-2xl overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 flex flex-col h-full"
+                                className="group bg-white rounded-none overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 flex flex-col h-full"
                             >
                                 <div className="h-52 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-[#1955A6]/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
@@ -143,7 +143,7 @@ export default function CategoryFilter() {
                                         alt={product.title} 
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                     />
-                                    <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-sm">
+                                    <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm p-3 rounded-none shadow-sm">
                                         {product.icon}
                                     </div>
                                 </div>

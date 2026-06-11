@@ -77,7 +77,7 @@ export default function MolecularDiagnosticKits() {
                         <motion.div 
                             key={product.id}
                             variants={cardVariants}
-                            className="bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 group flex flex-col border border-slate-200/60 h-full text-left"
+                            className="bg-white rounded-none overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 group flex flex-col border border-slate-200/60 h-full text-left"
                         >
                             <div className="h-52 overflow-hidden relative">
                                 <div className="absolute inset-0 bg-[#5C7625]/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
@@ -86,7 +86,7 @@ export default function MolecularDiagnosticKits() {
                                     alt={product.title}
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
-                                <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur p-3 rounded-xl shadow-sm text-brand-secondary">
+                                <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur p-3 rounded-none shadow-sm text-brand-secondary">
                                     <Activity className="w-5 h-5 text-[#5C7625]" />
                                 </div>
                             </div>

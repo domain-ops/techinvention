@@ -10,8 +10,15 @@ import EmployeeTestimonials from './sections/EmployeeTestimonials';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { useSEO } from '../../lib/useSEO';
+
 export default function CareersPage() {
     const [selectedJob, setSelectedJob] = useState<string | null>(null);
+
+    useSEO(
+        'Careers at TechInvention | Join Our Biotech Team',
+        'Explore career opportunities at TechInvention. Join a diverse team of scientists, researchers, and experts advancing global health biotechnology.'
+    );
 
     useEffect(() => {
         window.scrollTo(0, 0);

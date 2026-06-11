@@ -90,7 +90,7 @@ const Spotlight = () => {
                                 className={`${item.colSpan} h-[400px] md:h-[450px]`}
                             >
                                 <motion.div 
-                                    className={`relative w-full h-full rounded-[2rem] overflow-hidden group cursor-pointer ${
+                                    className={`relative w-full h-full rounded-none overflow-hidden group cursor-pointer ${
                                         isSolidDark 
                                             ? 'bg-brand-primary text-white' 
                                             : !isImageHeavy 

@@ -151,11 +151,11 @@ export default function LifeAtTechInvention() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                                className="group relative bg-white border border-slate-200/60 rounded-2xl p-7 text-left shadow-sm hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between"
+                                className="group relative bg-white border border-slate-200/60 rounded-none p-7 text-left shadow-sm hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between"
                             >
                                 <div>
                                     {/* Icon Container */}
-                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border ${pillar.bg} transition-all duration-300 group-hover:scale-105`}>
+                                    <div className={`w-14 h-14 rounded-none flex items-center justify-center mb-6 border ${pillar.bg} transition-all duration-300 group-hover:scale-105`}>
                                         <Icon className="w-6 h-6" style={{ color: pillar.color }} strokeWidth={1.75} />
                                     </div>
                                     
@@ -238,7 +238,7 @@ export default function LifeAtTechInvention() {
                                                 setActiveIndex(index);
                                             }
                                         }}
-                                        className="absolute w-[260px] sm:w-[360px] md:w-[480px] h-[320px] sm:h-[420px] md:h-[540px] rounded-[2rem] overflow-hidden shadow-2xl bg-white border border-slate-200/50 cursor-pointer group"
+                                        className="absolute w-[260px] sm:w-[360px] md:w-[480px] h-[320px] sm:h-[420px] md:h-[540px] rounded-none overflow-hidden shadow-2xl bg-white border border-slate-200/50 cursor-pointer group"
                                     >
                                         <img 
                                             src={item.image} 
@@ -272,7 +272,7 @@ export default function LifeAtTechInvention() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="mt-16 bg-[#FAFAFA] border border-slate-200/60 rounded-3xl p-8 md:p-12 text-left"
+                    className="mt-16 bg-[#FAFAFA] border border-slate-200/60 rounded-none p-8 md:p-12 text-left"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div className="lg:col-span-8">

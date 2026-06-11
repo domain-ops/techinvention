@@ -80,7 +80,7 @@ export default function LateralFlowAssays() {
                         <motion.div 
                             key={product.id}
                             variants={cardVariants}
-                            className="bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 group border border-slate-200/60 flex flex-col h-full text-left"
+                            className="bg-white rounded-none overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 group border border-slate-200/60 flex flex-col h-full text-left"
                         >
                             <div className="h-52 overflow-hidden relative">
                                 <div className="absolute inset-0 bg-[#1955A6]/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>

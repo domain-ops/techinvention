@@ -82,16 +82,16 @@ export default function DiagnosticProducts() {
                     </div>
 
                     <div ref={imageRef} className="relative">
-                        <div className="absolute inset-0 bg-[#5C7625]/10 transform rotate-3 rounded-[2rem] -z-10"></div>
-                        <div className="absolute inset-0 bg-white transform -rotate-3 rounded-[2rem] -z-10 shadow-xl border border-slate-200/60"></div>
-                        <div className="rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl relative">
+                        <div className="absolute inset-0 bg-[#5C7625]/10 transform rotate-3 rounded-none -z-10"></div>
+                        <div className="absolute inset-0 bg-white transform -rotate-3 rounded-none -z-10 shadow-xl border border-slate-200/60"></div>
+                        <div className="rounded-none overflow-hidden border-8 border-white shadow-2xl relative">
                             <img 
                                 src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                                 alt="Laboratory Diagnostics" 
                                 className="w-full h-[550px] object-cover"
                             />
                             {/* Floating overlay card */}
-                            <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl p-6 flex items-center justify-between border border-slate-200/60">
+                            <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md rounded-none shadow-xl p-6 flex items-center justify-between border border-slate-200/60">
                                 <div>
                                     <h4 className="text-lg font-bold text-slate-900 mb-1">Precision Assays</h4>
                                     <p className="text-xs text-slate-500 font-bold uppercase tracking-wider m-0">Gold standard performance</p>

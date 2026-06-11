@@ -24,7 +24,7 @@ const Responsibility = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <ScrollReveal direction="left">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                        <div className="relative rounded-none overflow-hidden shadow-2xl aspect-[4/3]">
                             <img 
                                 src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200" 
                                 alt="Environmental Responsibility" 
@@ -36,13 +36,13 @@ const Responsibility = () => {
 
                     <ScrollReveal direction="right">
                         <div className="space-y-8">
-                            <div className="bg-brand-background p-8 rounded-2xl border border-brand-primary/10">
+                            <div className="bg-brand-background p-8 rounded-none border border-brand-primary/10">
                                 <h3 className="text-2xl font-semibold mb-3 text-brand-primary">Sustainable Operations</h3>
                                 <p className="text-brand-gray-dark">
                                     Our GMP-like facilities are thoughtfully designed with innovative concepts aimed at enabling environmentally responsible production.
                                 </p>
                             </div>
-                            <div className="bg-brand-background p-8 rounded-2xl border border-brand-primary/10">
+                            <div className="bg-brand-background p-8 rounded-none border border-brand-primary/10">
                                 <h3 className="text-2xl font-semibold mb-3 text-brand-primary">Community Impact</h3>
                                 <p className="text-brand-gray-dark">
                                     Through strategic initiatives and global partnerships, we aim to make vaccines and biotherapeutics accessible to underserved populations.

@@ -40,7 +40,7 @@ const Facilities = () => {
         <section id="infrastructure" className="py-16 md:py-20 w-full bg-gray-50 relative overflow-hidden border-y border-gray-200">
             <div className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16">
 
-                <div className="relative bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 flex flex-col-reverse md:flex-row min-h-[600px] xl:w-11/12 mx-auto">
+                <div className="relative bg-white rounded-none shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 flex flex-col-reverse md:flex-row min-h-[600px] xl:w-11/12 mx-auto">
                     {/* Content Side */}
                     <div className="w-full md:w-1/2 px-8 pt-16 pb-32 md:p-16 lg:p-24 flex flex-col justify-center relative">
                         <AnimatePresence mode="wait">

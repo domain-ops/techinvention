@@ -24,9 +24,9 @@ interface TestimonialCardProps {
 const TestimonialCard = ({ name, role, content, image }: TestimonialCardProps) => {
     return (
         <div className="flex-shrink-0 w-[320px] md:w-[450px] px-4">
-            <div className="bg-white/40 backdrop-blur-xl border border-black/5 rounded-3xl p-8 md:p-10 shadow-xl shadow-black/5 hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-500 group h-full flex flex-col">
+            <div className="bg-white/40 backdrop-blur-xl border border-black/5 rounded-none p-8 md:p-10 shadow-xl shadow-black/5 hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-500 group h-full flex flex-col">
                 <div className="flex items-center gap-6 mb-8">
-                    <div className="relative h-20 w-20 md:h-24 md:w-24 rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 shadow-lg group-hover:shadow-brand-primary/20">
+                    <div className="relative h-20 w-20 md:h-24 md:w-24 rounded-none overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 shadow-lg group-hover:shadow-brand-primary/20">
                         <img
                             src={testimonialImages[image]}
                             alt={name}

@@ -72,7 +72,7 @@ export default function GmpTestimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className="bg-white border border-slate-200/60 rounded-[2rem] p-8 text-left relative flex flex-col justify-between group hover:shadow-xl hover:border-slate-300 transition-all duration-500"
+                            className="bg-white border border-slate-200/60 rounded-none p-8 text-left relative flex flex-col justify-between group hover:shadow-xl hover:border-slate-300 transition-all duration-500"
                         >
                             <div>
                                 <Quote className="w-10 h-10 text-brand-primary/10 mb-6 group-hover:text-brand-primary/20 transition-colors" />

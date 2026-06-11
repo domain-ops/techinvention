@@ -1,5 +1,7 @@
 import AboutHeader from './sections/AboutBanner';
+import AboutVideo from './sections/AboutVideo';
 import CompanyStory from './sections/CompanyStory';
+import OfficeEnvironment from './sections/OfficeEnvironment';
 import VisionMissionValues from './sections/VisionMissionValues';
 import TeamSection from './sections/TeamSection';
 import CertificationList from '../Certification/sections/CertificationList';
@@ -9,14 +11,25 @@ import Spotlight from './sections/Spotlight';
 import MediaCentre from '../Home/sections/Blogs';
 import CTASection from '../../components/CTASection';
 
+import { useSEO } from '../../lib/useSEO';
+
 const AboutPage = () => {
+    useSEO(
+        'About TechInvention | Our Journey & Vision',
+        "Learn about TechInvention's journey, vision, mission, and leadership team dedicated to global health innovation and biotechnology solutions."
+    );
+
     return (
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
             {/* 1. Company Landing Hero */}
-            <AboutHeader />
+            <AboutHeader title="About Techinvention" />
+
+            {/* Brand Video showcase below header */}
+            <AboutVideo />
 
             {/* 2. About Section */}
             <CompanyStory />
+            <OfficeEnvironment />
             <VisionMissionValues />
 
             {/* 3. Leadership / Team Section */}

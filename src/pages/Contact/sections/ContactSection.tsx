@@ -82,7 +82,7 @@ const ContactSection = () => {
                             return (
                                 <ScrollReveal key={i} direction="up" delay={i * 0.1}>
                                     <div 
-                                        className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
+                                        className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
                                     >
                                         <div 
                                             className="absolute top-0 left-0 w-full h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
@@ -127,7 +127,7 @@ const ContactSection = () => {
                     </div>
 
                     <ScrollReveal direction="up">
-                        <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-slate-200/60 shadow-sm max-w-4xl">
+                        <div className="bg-white rounded-none p-8 md:p-12 border border-slate-200/60 shadow-sm max-w-4xl">
                             <AnimatePresence mode="wait">
                                 {submitted ? (
                                     <motion.div 
@@ -248,7 +248,7 @@ const ContactSection = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                         {/* Map Container */}
-                        <div className="lg:col-span-7 h-[400px] lg:h-auto min-h-[350px] rounded-[2rem] overflow-hidden shadow-sm border border-slate-200/60">
+                        <div className="lg:col-span-7 h-[400px] lg:h-auto min-h-[350px] rounded-none overflow-hidden shadow-sm border border-slate-200/60">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9048386186835!2d72.86241037562846!3d19.11183355084931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83c2afc12fb%3A0x6e3c0f64b9fc0724!2sThe%20Summit%20Business%20Bay!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" 
                                 width="100%" 
@@ -263,7 +263,7 @@ const ContactSection = () => {
                         {/* Address and details */}
                         <div className="lg:col-span-5 flex flex-col gap-4 justify-between">
                             <ScrollReveal direction="up" delay={0.1} className="h-full">
-                                <div className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
+                                <div className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
                                         <MapPin className="w-5 h-5" />
                                     </div>
@@ -279,7 +279,7 @@ const ContactSection = () => {
                             </ScrollReveal>
 
                             <ScrollReveal direction="up" delay={0.2} className="h-full">
-                                <div className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
+                                <div className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
                                         <Phone className="w-5 h-5" />
                                     </div>
@@ -293,7 +293,7 @@ const ContactSection = () => {
                             </ScrollReveal>
 
                             <ScrollReveal direction="up" delay={0.3} className="h-full">
-                                <div className="bg-white rounded-[2rem] p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
+                                <div className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
                                     <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
                                         <Mail className="w-5 h-5" />
                                     </div>
@@ -309,23 +309,6 @@ const ContactSection = () => {
                     </div>
                 </div>
 
-                {/* 4. Footer CTA: Final Contact Reinforcement */}
-                <ScrollReveal direction="up">
-                    <div className="bg-slate-50 rounded-[2.5rem] border border-slate-200/60 p-8 md:p-12 text-center max-w-4xl mx-auto shadow-sm">
-                        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                            Ready to Build the Future of Global Health?
-                        </h3>
-                        <p className="text-slate-600 text-sm md:text-base font-medium max-w-2xl mx-auto leading-relaxed mb-6">
-                            Let's collaborate to bring accessible vaccines, diagnostics, and customized biotech solutions to emerging markets worldwide.
-                        </p>
-                        <a 
-                            href="mailto:connect@techinvention.biz"
-                            className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold px-8 py-3.5 rounded-full text-[12px] uppercase tracking-wider hover:bg-brand-primary/95 transition-all shadow-md hover:shadow-lg"
-                        >
-                            <span>Initiate Collaboration</span>
-                        </a>
-                    </div>
-                </ScrollReveal>
 
             </div>
         </section>

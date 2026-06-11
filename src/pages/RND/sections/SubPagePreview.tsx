@@ -45,7 +45,7 @@ const SubPagePreview = () => {
                         <ScrollReveal key={card.id} direction="up" delay={idx * 0.2}>
                             <div 
                                 onClick={() => navigate(card.link)}
-                                className={`group cursor-pointer rounded-[2rem] p-10 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden`}
+                                className={`group cursor-pointer rounded-none p-10 lg:p-16 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100 bg-white relative overflow-hidden`}
                             >
                                 <div className={`absolute top-0 right-0 w-64 h-64 ${card.color} rounded-full blur-[80px] -mr-32 -mt-32 transition-transform duration-700 group-hover:scale-150`} />
                                 

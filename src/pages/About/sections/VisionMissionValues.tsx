@@ -1,8 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
-import { Lightbulb, ShieldCheck, Users, Target, Globe2, Heart, Zap, Rocket } from 'lucide-react';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 import visionImg from '../../../../src/assets/images/about_corporate.png';
 
@@ -15,19 +13,32 @@ const QuoteIcon = ({ className }: { className?: string }) => (
 
 const VisionMissionValues = () => {
     const { t } = useLanguage();
-    
-    // Safely type cast the values to handle both array and object formats during translation transition
-    const rawValues = t('about.values.items');
-    const values = Array.isArray(rawValues) ? rawValues : [];
 
-    // Map icons to the values array based on index
-    const valueIcons = [Lightbulb, ShieldCheck, Users, Globe2, Target, Heart, Zap, Rocket];
+    const values = [
+        {
+            number: "01",
+            title: "LOREM IPSUM DOLOR SIT AMET",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            number: "02",
+            title: "CONSECTETUR ADIPISCING ELIT",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            number: "03",
+            title: "SED DO EIUSMOD TEMPOR",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            number: "04",
+            title: "INCIDIDUNT UT LABORE ET",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ];
 
     return (
-        <section className="py-20 md:py-32 bg-[#FAFAFA] relative overflow-hidden font-sans">
-            {/* Background Decorations */}
-            <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-brand-primary/[0.02] to-transparent pointer-events-none" />
-            <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-brand-primary/[0.03] rounded-full blur-3xl pointer-events-none" />
+        <section className="py-20 md:py-32 bg-white relative overflow-hidden font-sans">
             
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
@@ -53,7 +64,7 @@ const VisionMissionValues = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
                     
                     {/* VISION BENTO BOX */}
-                    <div className="lg:col-span-7 bg-white rounded-[2rem] p-10 md:p-14 border border-slate-200/60 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden group">
+                    <div className="lg:col-span-7 bg-white rounded-none p-10 md:p-14 border border-slate-200/60 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden group">
                         
                         {/* Decorative Background Image */}
                         <div className="absolute inset-0 w-full h-full hidden sm:block opacity-60 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none">
@@ -84,7 +95,7 @@ const VisionMissionValues = () => {
                     </div>
 
                     {/* MISSION BENTO BOX */}
-                    <div className="lg:col-span-5 bg-gradient-to-br from-brand-primary to-[#104085] rounded-[2rem] p-10 md:p-14 text-white relative overflow-hidden group shadow-xl">
+                    <div className="lg:col-span-5 bg-gradient-to-br from-brand-primary to-[#104085] rounded-none p-10 md:p-14 text-white relative overflow-hidden group shadow-xl">
                         {/* Background Element */}
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700 ease-out select-none pointer-events-none">
                             <QuoteIcon className="w-32 h-32 md:w-40 md:h-40" />
@@ -109,8 +120,9 @@ const VisionMissionValues = () => {
                     </div>
 
                     {/* VALUES SECTION (Spans full width) */}
-                    <div className="lg:col-span-12 mt-8 md:mt-12">
-                        <div className="mb-10 text-left">
+                    <div className="lg:col-span-12 mt-24 md:mt-32 relative">
+
+                        <div className="mb-16 text-left relative z-10">
                             <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
                                 Core Principles
                             </span>
@@ -119,50 +131,28 @@ const VisionMissionValues = () => {
                                     <SplitTitle title={t('about.values.title') || "Our Values"} />
                                 </h2>
                             </div>
-                            <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
-                                The principles that drive our innovation
-                            </p>
                         </div>
 
-                        {values && values.length > 0 && (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                {values.map((val: any, idx: number) => {
-                                    const Icon = valueIcons[idx % valueIcons.length];
-                                    return (
-                                        <motion.div 
-                                            key={idx}
-                                            initial={{ opacity: 0, y: 20 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                            whileHover={{ y: -8 }}
-                                            className="bg-white rounded-[1.5rem] p-8 md:p-10 border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
-                                        >
-                                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary to-[#87A840] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                                            
-                                            <div className="w-14 h-14 rounded-full bg-brand-primary/5 flex items-center justify-center text-brand-primary mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300 shrink-0">
-                                                <Icon className="w-6 h-6" />
-                                            </div>
-                                            
-                                            <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-primary transition-colors shrink-0">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-20 relative z-10">
+                            {values.map((val, idx) => (
+                                <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
+                                    <div className="flex gap-8 items-start">
+                                        <span className="text-[28px] md:text-[34px] font-extrabold text-slate-900 leading-none shrink-0 w-12">
+                                            {val.number}
+                                        </span>
+                                        <div className="flex flex-col gap-3">
+                                            <h4 className="text-[15px] md:text-[16px] font-extrabold tracking-wider text-slate-900 uppercase leading-snug">
                                                 {val.title}
                                             </h4>
-                                            
-                                            <p className="text-black text-[15px] leading-relaxed mt-auto font-medium">
+                                            <p className="text-slate-500 text-[14px] md:text-[15px] leading-[1.8] font-medium">
                                                 {val.desc}
                                             </p>
-                                        </motion.div>
-                                    );
-                                })}
-                            </div>
-                        )}
-                        
-                        {/* Footer text */}
-                        <div className="mt-12 flex justify-center">
-                            <p className="text-slate-400 text-xs tracking-widest uppercase font-bold bg-white py-2 px-6 rounded-full border border-slate-200 shadow-sm">
-                                {t('about.values.footer') || "Innovation • Integrity • Impact"}
-                            </p>
+                                        </div>
+                                    </div>
+                                </ScrollReveal>
+                            ))}
                         </div>
+                        
                     </div>
                 </div>
 

@@ -24,7 +24,7 @@ export default function VeterinaryDiagnostics() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl relative group">
+                        <div className="rounded-none overflow-hidden border border-white/20 shadow-2xl relative group">
                             <img 
                                 src={livestockVaccinesImg} 
                                 alt="Veterinary Diagnostics" 
@@ -34,7 +34,7 @@ export default function VeterinaryDiagnostics() {
                             
                             {/* Overlay Card */}
                             <div className="absolute bottom-8 left-8 right-8">
-                                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex items-center justify-between shadow-xl">
+                                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-none flex items-center justify-between shadow-xl">
                                     <div className="text-left">
                                         <div className="text-white font-bold text-xl mb-1">Animal Health</div>
                                         <div className="text-white/80 font-bold uppercase tracking-wider text-xs">Comprehensive testing solutions</div>
@@ -69,8 +69,8 @@ export default function VeterinaryDiagnostics() {
                                 { title: "Livestock Health Monitoring", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor." },
                                 { title: "Zoonotic Disease Surveillance", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor." }
                             ].map((item, idx) => (
-                                <div key={idx} className="flex items-start gap-5 p-5 rounded-[1.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm text-left">
-                                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <div key={idx} className="flex items-start gap-5 p-5 rounded-none bg-white/5 border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm text-left">
+                                    <div className="w-12 h-12 rounded-none bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                                         <HeartPulse className="w-5 h-5 text-[#87A840]" />
                                     </div>
                                     <div>

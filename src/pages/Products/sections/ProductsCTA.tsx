@@ -18,7 +18,7 @@ export default function ProductsCTA() {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <div className="relative overflow-hidden rounded-[48px] border border-slate-200/60 bg-slate-50 py-16 md:py-24 flex flex-col items-center justify-center duration-500">
+                <div className="relative overflow-hidden rounded-none border border-slate-200/60 bg-slate-50 py-16 md:py-24 flex flex-col items-center justify-center duration-500">
                     <Suspense fallback={<div className="absolute inset-0 bg-slate-50" />}>
                         <div className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-multiply transition-opacity duration-500">
                             <Dithering

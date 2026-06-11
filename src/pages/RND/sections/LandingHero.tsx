@@ -66,9 +66,9 @@ const LandingHero = () => {
                     transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
                     className="hidden lg:block lg:col-span-5 relative"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl transform rotate-3 scale-105 blur-sm" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-none transform rotate-3 scale-105 blur-sm" />
                     
-                    <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+                    <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-none p-8 shadow-2xl">
                         <h3 className="text-white font-medium text-xl mb-6 flex items-center justify-between">
                             R&D Capabilities
                             <Activity className="text-brand-secondary w-5 h-5" />
@@ -79,7 +79,7 @@ const LandingHero = () => {
                                 { icon: <Dna className="w-6 h-6 text-blue-400" />, title: 'Molecular Diagnostics', desc: 'Rapid, point-of-care detection systems.' },
                                 { icon: <Beaker className="w-6 h-6 text-teal-400" />, title: 'Vaccine Innovation', desc: 'Preclinical to Phase III clinical pipelines.' },
                             ].map((item, i) => (
-                                <div key={i} className="flex gap-4 p-4 rounded-2xl bg-black/20 hover:bg-black/30 transition-colors border border-white/5">
+                                <div key={i} className="flex gap-4 p-4 rounded-none bg-black/20 hover:bg-black/30 transition-colors border border-white/5">
                                     <div className="flex-shrink-0 mt-1">{item.icon}</div>
                                     <div>
                                         <h4 className="text-white font-medium mb-1">{item.title}</h4>

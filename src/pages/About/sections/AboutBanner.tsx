@@ -1,66 +1,52 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
-import labImg from '../../../assets/images/banner-imge-2.jpg';
-import TextReveal from '../../../components/Common/TextReveal';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 interface AboutBannerProps {
     title?: string;
     parentMenu?: string;
     parentMenuLink?: string;
     image?: string;
+    subtitle?: string;
 }
 
-const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenuLink, image }) => {
+const AboutBanner: React.FC<AboutBannerProps> = ({ title, parentMenu, parentMenuLink, image, subtitle }) => {
     const { t } = useLanguage();
-    const displayTitle = title || t('navbar.about');
-    const displayImage = image || labImg;
-
+    
+    // Default page title for About Us if none is passed
+    const pageTitle = title || t('navbar.company') || 'About TechInvention';
+    
     return (
-        <section className="relative w-full h-screen min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-900">
-            {/* Background Images Layered */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src={displayImage}
-                    alt="Background"
-                    className="w-full h-full object-cover object-top"
-                />
-                {/* Light overlay to ensure white text readability without hiding the image */}
-                <div className="absolute inset-0 bg-black/40" />
-            </div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-6 text-center pt-24 w-full">
-                <div className="mx-auto w-full max-w-7xl">
-                    <TextReveal
-                        text={displayTitle}
-                        mode="light"
-                        className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-[1.1] tracking-tighter justify-center text-center md:whitespace-normal"
+        <section className={`relative w-full h-[380px] md:h-[520px] flex items-center overflow-hidden pt-20 md:pt-28 ${
+            image ? 'bg-slate-900' : 'bg-white'
+        }`}>
+            {/* Background Image or Career-style Ambient Glows */}
+            {image ? (
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={image}
+                        alt={pageTitle}
+                        className="w-full h-full object-cover object-center"
                     />
+                    {/* Dark overlay for readability */}
+                    <div className="absolute inset-0 bg-black/45 z-10" />
                 </div>
+            ) : (
+                <>
+                    {/* Ambient background decoration - extremely subtle light glows matching careers page style */}
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#1955A6]/5 blur-[100px] pointer-events-none z-0" />
+                    <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-[#5C7625]/5 blur-[100px] pointer-events-none z-0" />
+                </>
+            )}
 
-                {/* Breadcrumb Structure */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex items-center justify-center gap-2 flex-wrap text-center text-white/60 text-[11px] font-medium tracking-tight tracking-[0.4em] mt-6 md:mt-8"
-                >
-                    <Link to="/" className="hover:text-white transition-colors">{t('navbar.home')}</Link>
-                    {parentMenu && (
-                        <>
-                            <ChevronRight size={12} className="opacity-40" />
-                            {parentMenuLink ? (
-                                <Link to={parentMenuLink} className="hover:text-white transition-colors">{parentMenu}</Link>
-                            ) : (
-                                <span className="text-white/80">{parentMenu}</span>
-                            )}
-                        </>
-                    )}
-                    <ChevronRight size={12} className="opacity-40" />
-                    <span className="text-white/90">{displayTitle}</span>
-                </motion.div>
+            {/* Content Container - Left Aligned to match Navbar Logo */}
+            <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 md:px-8 text-left">
+                {/* Page Title */}
+                <h1 className={`text-4xl sm:text-5xl md:text-[56px] font-medium tracking-wide leading-[1.15] ${
+                    image ? 'text-white' : 'text-slate-950 font-sans'
+                }`}>
+                    {image ? pageTitle : <SplitTitle title={pageTitle} />}
+                </h1>
             </div>
         </section>
     );

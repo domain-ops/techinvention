@@ -78,7 +78,7 @@ export default function GmpSubjects() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="bg-[#F8FAFC] border border-slate-200/50 hover:border-slate-300 rounded-[2rem] p-8 text-left relative flex flex-col justify-between group hover:bg-white hover:shadow-2xl transition-all duration-500"
+                                className="bg-[#F8FAFC] border border-slate-200/50 hover:border-slate-300 rounded-none p-8 text-left relative flex flex-col justify-between group hover:bg-white hover:shadow-2xl transition-all duration-500"
                             >
                                 <div>
                                     {/* Icon with primary/secondary alternating vibe */}
