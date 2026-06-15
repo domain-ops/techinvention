@@ -41,19 +41,30 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                     <motion.img
                         src={slide.image}
                         alt={slide.title}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute top-0 left-0 h-full w-[115%] max-w-none object-cover"
                         initial={false}
                         animate={{
-                            scale: expandedIndex === index ? 1.1 : 1,
+                            x: expandedIndex === index ? '-10%' : '0%',
+                            filter: expandedIndex === index ? 'blur(2px)' : 'blur(0px)'
                         }}
-                        transition={{ duration: 1.2 }}
+                        transition={{
+                            x: { 
+                                duration: 15, 
+                                ease: "easeInOut", 
+                                repeat: expandedIndex === index ? Infinity : 0, 
+                                repeatType: "reverse" 
+                            },
+                            filter: { duration: 1.2 }
+                        }}
                     />
 
                     {/* Content Overlay (The "Blue Color") */}
                     <motion.div
                         className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 z-10"
                         animate={{
-                            backgroundColor: expandedIndex === index ? 'rgba(23, 85, 166, 0.92)' : 'rgba(0,0,0,0.4)'
+                            backgroundColor: expandedIndex === index 
+                                ? index % 2 === 0 ? 'rgba(25, 85, 166, 0.92)' : 'rgba(92, 118, 37, 0.92)'
+                                : 'rgba(0,0,0,0.4)'
                         }}
                         transition={{ duration: 0.5 }}
                     >

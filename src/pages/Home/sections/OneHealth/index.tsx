@@ -43,34 +43,7 @@ const OneHealth = () => {
             
 
             <div className="max-w-7xl mx-auto px-6">
-                {/* Header Section */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
-                    <ScrollReveal direction="up" className="w-full">
-                        <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em] text-[11px] mb-4 block animate-fade-in">
-                            {t('oneHealth.tag')}
-                        </span>
-                        <div className="mt-4">
-                            <h2 className="text-[36px] font-medium tracking-tight leading-tight tracking-tighter animate-fade-in lg:whitespace-nowrap">
-                                <SplitTitle title={t('oneHealth.title').replace('{bioInnovation}', t('oneHealth.bioInnovation'))} />
-                            </h2>
-                        </div>
-                    </ScrollReveal>
-                    
-                    {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
-                        <motion.img 
-                            src={logoDNA}
-                            alt="TechInvention Logo"
-                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ 
-                                opacity: { duration: 1.2, ease: "easeOut" },
-                                scale: { duration: 1.2, ease: "easeOut" }
-                            }}
-                        />
-                    </div>
-                </div>
+
 
                 {/* Accordion Slider Section */}
                 <ScrollReveal direction="up" delay={0.2}>

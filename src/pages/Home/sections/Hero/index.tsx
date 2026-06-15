@@ -41,7 +41,7 @@ const RevealText = ({ text, delay = 0, className = "" }: { text: string, delay?:
 const SlidingWord = ({ words, activeIndex }: { words: string[], activeIndex: number }) => {
     const activeWord = words[activeIndex] || "";
     return (
-        <span className="relative inline-flex overflow-hidden h-[1.3em] py-1 items-center justify-center md:justify-start w-full">
+        <span className="relative inline-flex overflow-hidden h-[1.3em] py-1 items-center justify-center w-full min-w-max">
             {/* Invisible layout guide to keep the container from collapsing */}
             <span className="opacity-0 select-none pointer-events-none invisible">
                 {activeWord}
@@ -56,7 +56,7 @@ const SlidingWord = ({ words, activeIndex }: { words: string[], activeIndex: num
                         duration: 0.8,
                         ease: [0.16, 1, 0.3, 1] // premium bezier curve for smooth slide up
                     }}
-                    className="absolute left-0 right-0 md:left-0 md:right-auto text-center md:text-left whitespace-nowrap font-bold"
+                    className="absolute inset-0 flex items-center justify-center whitespace-nowrap font-bold"
                 >
                     {activeWord}
                 </motion.span>
@@ -133,9 +133,9 @@ const Hero = () => {
             {/* Hero Main Content */}
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 flex flex-col justify-center items-center text-center pt-24 pb-16">
                 
-                {/* Main Headline (Stacks vertically on mobile, perfectly centered Grid on desktop) */}
-                <div className="w-full mb-8 sm:mb-10 drop-shadow-2xl flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center gap-2 md:gap-4 leading-[1.2]">
-                    <div className="flex justify-center md:justify-end text-[34px] md:text-[44px] lg:text-[48px] font-light tracking-widest text-white uppercase drop-shadow-xl w-full">
+                {/* Main Headline (Stacks vertically on mobile, horizontally centered on desktop) */}
+                <div className="w-full mb-2 sm:mb-3 drop-shadow-2xl flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 leading-[1.2]">
+                    <div className="flex justify-center text-[34px] md:text-[44px] lg:text-[48px] font-light tracking-widest text-white uppercase drop-shadow-xl">
                         <MagneticText 
                             text={<RevealText text={brandName} delay={0.2} />}
                             hoverText={brandName}
@@ -149,11 +149,21 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.8, duration: 0.5 }}
-                        className="flex justify-center md:justify-start text-white text-[34px] md:text-[44px] lg:text-[48px] font-bold tracking-tight w-full drop-shadow-xl"
+                        className="flex justify-center text-white text-[34px] md:text-[44px] lg:text-[48px] font-bold tracking-tight drop-shadow-xl"
                     >
                         <SlidingWord words={rotatingWords} activeIndex={activeWordIndex} />
                     </motion.div>
                 </div>
+
+                {/* Tagline */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.2, duration: 0.8 }}
+                    className="mt-2 md:mt-4 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-medium tracking-wider inline-block text-white drop-shadow-lg"
+                >
+                    Enabling One Health through <br className="block sm:hidden" /> Bio-Innovation.
+                </motion.div>
             </div>
 
         </section>
