@@ -76,9 +76,9 @@ const Navbar = () => {
         { key: 'cdmo', label: 'CDMO', href: '/cdmo' },
         { key: 'consulting', label: 'Consulting', href: '/consulting' },
         { key: 'products', label: 'Products', href: '/products' },
-        { key: 'contact', label: 'Contact Us', href: '/contact-us' },
         { key: 'careers', label: 'Career', href: '/careers' },
-        { key: 'gmp', label: 'GMP Training Unit', href: '/gmp-training' },
+        { key: 'gmp', label: 'Training', href: '/gmp-training' },
+        { key: 'contact', label: 'Contact Us', href: '/contact-us' },
     ];
 
     return (
@@ -152,7 +152,7 @@ const Navbar = () => {
             <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 {/* Logo */}
                 <Link to="/" className="flex-shrink-0">
-                    <img src={logoImg} alt="Brand Logo" className="h-8 md:h-12 w-auto" />
+                    <img src={logoImg} alt="Brand Logo" className="h-10 md:h-16 w-auto" />
                 </Link>
 
                 <div className="flex items-center gap-8">

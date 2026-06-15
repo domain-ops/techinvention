@@ -4,8 +4,7 @@ import OneHealth from './sections/OneHealth';
 import HorizonGCMC from './sections/HorizonGCMC';
 import About from './sections/About';
 import Facilities from './sections/Facilities';
-import AtAGlanceVideo from './sections/AtAGlanceVideo';
-import CaseStudy from './sections/CaseStudy';
+
 
 import GlobalProjects from './sections/GlobalProjects';
 import Testimonials from './sections/Testimonials/TestimonialsAnimated';
@@ -33,12 +32,10 @@ const Home = () => {
             <HorizonGCMC />
             <About />
             <VaccinePipeline />
-            <AtAGlanceVideo />
             {/* <ProductSlider /> temporrily removed by request */}
 
 
             <ClientLogos />
-            <CaseStudy />
             <GlobalProjects />
             <Testimonials />
             <FAQSection />

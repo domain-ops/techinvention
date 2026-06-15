@@ -7,7 +7,6 @@ import CertificationList from '../Certification/sections/CertificationList';
 import AwardsShowcase from '../Awards/sections/AwardsShowcase';
 import Responsibility from './sections/Responsibility';
 import Spotlight from './sections/Spotlight';
-import MediaCentre from '../Home/sections/Blogs';
 import CTASection from '../../components/CTASection';
 import { useSEO } from '../../lib/useSEO';
 
@@ -40,8 +39,7 @@ const AboutPage = () => {
             {/* 6. Spotlight (Hidden for now as requested) */}
             {/* <Spotlight /> */}
 
-            {/* 7. Media Centre */}
-            <MediaCentre />
+            {/* 7. Media Centre (Removed) */}
 
             <CTASection />
         </div>

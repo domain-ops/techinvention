@@ -4,6 +4,7 @@ import ServiceGrid from './ServiceGrid';
 import MethodologySection from './MethodologySection';
 import ExperienceSection from './ExperienceSection';
 import SectorFocus from './SectorFocus';
+import CaseStudy from '../../Home/sections/CaseStudy';
 import CTASection from '../../../components/CTASection';
 
 const ConsultingContent = () => {
@@ -14,6 +15,7 @@ const ConsultingContent = () => {
             <MethodologySection />
             <ExperienceSection />
             <SectorFocus />
+            <CaseStudy />
             <CTASection />
         </div>
     );

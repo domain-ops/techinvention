@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { InfiniteSlider } from '../../../components/ui/infinite-slider';
 
 import t1 from '../../../assets/images/testimonial_1.png';
 import t2 from '../../../assets/images/testimonial_2.png';
@@ -25,6 +26,24 @@ const testimonials = [
         quote: "Designing molecular diagnostics kits that are field-deployable and affordable requires outside-the-box thinking. Our team culture encourages us to experiment and scale up rapidly.",
         name: "Dr. Kevin Smith",
         role: "Lead Developer, Molecular Diagnostics",
+        image: t3
+    },
+    {
+        quote: "The collaborative environment here is unmatched. Working alongside top-tier scientists from around the world has truly accelerated my career growth.",
+        name: "Maria Gonzalez",
+        role: "Senior Bioengineer",
+        image: t1
+    },
+    {
+        quote: "I value the company's commitment to sustainability and health equity. Every project we undertake feels like a step towards a better future.",
+        name: "David Chen",
+        role: "Clinical Trial Manager",
+        image: t2
+    },
+    {
+        quote: "From state-of-the-art facilities to a supportive leadership team, TechInvention provides everything needed to turn innovative ideas into reality.",
+        name: "Dr. Sarah Williams",
+        role: "Director of R&D",
         image: t3
     }
 ];
@@ -50,7 +69,7 @@ export default function EmployeeTestimonials() {
                                 </h2>
                             </ScrollReveal>
                         </div>
-                        <div className="max-w-md text-left">
+                        <div className="max-w-md text-left flex flex-col lg:items-end gap-6">
                             <ScrollReveal direction="up" delay={0.2}>
                                 <p className="text-black font-medium text-[16px] md:text-[18px] leading-relaxed">
                                     Hear directly from the scientists, developers, and project leaders driving innovation across our divisions.
@@ -60,37 +79,35 @@ export default function EmployeeTestimonials() {
                     </div>
                 </div>
 
-                {/* Testimonial Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map((test, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className="bg-slate-50 border border-slate-200/60 rounded-none p-8 text-left relative flex flex-col justify-between group hover:bg-white hover:shadow-xl hover:border-slate-200 transition-all duration-500"
-                        >
-                            <div>
-                                <Quote className="w-10 h-10 text-brand-primary/10 mb-6 group-hover:text-brand-primary/20 transition-colors" />
-                                <p className="text-black text-[15px] leading-relaxed font-semibold italic mb-8">
-                                    "{test.quote}"
-                                </p>
-                            </div>
-                            
-                            <div className="flex items-center gap-4 border-t border-slate-100 pt-6">
-                                <img 
-                                    src={test.image} 
-                                    alt={test.name} 
-                                    className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm"
-                                />
+                {/* Infinite Slider */}
+                <div className="-mx-6 px-6 pb-8">
+                    <InfiniteSlider gap={24} duration={60} durationOnHover={1000000}>
+                        {testimonials.map((test, index) => (
+                            <div
+                                key={index}
+                                className="w-[85vw] md:w-[380px] lg:w-[400px] h-[350px] bg-slate-50 border border-slate-200/60 p-8 text-left relative flex flex-col justify-between group hover:bg-white hover:shadow-xl hover:border-slate-200 transition-all duration-500"
+                            >
                                 <div>
-                                    <h4 className="text-slate-900 font-bold text-base leading-snug">{test.name}</h4>
-                                    <p className="text-brand-primary text-xs font-bold uppercase tracking-wider">{test.role}</p>
+                                    <Quote className="w-10 h-10 text-brand-primary/10 mb-6 group-hover:text-brand-primary/20 transition-colors" />
+                                    <p className="text-black text-[14px] leading-relaxed font-semibold italic mb-8">
+                                        "{test.quote}"
+                                    </p>
+                                </div>
+                                
+                                <div className="flex items-center gap-4 border-t border-slate-100 pt-6 mt-auto">
+                                    <img 
+                                        src={test.image} 
+                                        alt={test.name} 
+                                        className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm"
+                                    />
+                                    <div>
+                                        <h4 className="text-slate-900 font-bold text-base leading-snug">{test.name}</h4>
+                                        <p className="text-brand-primary text-xs font-bold uppercase tracking-wider">{test.role}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </motion.div>
-                    ))}
+                        ))}
+                    </InfiniteSlider>
                 </div>
 
             </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
-import heroImg from '../../../assets/images/careers_hero_new.png';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
@@ -43,22 +42,7 @@ export default function CareersHero() {
                     </motion.div>
                 </div>
 
-                {/* Visual Section - Large stacked image below */}
-                <motion.div 
-                    initial={{ opacity: 0, scale: 0.98, y: 30 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    className="w-full"
-                >
-                    <div className="relative rounded-none overflow-hidden border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-slate-50 p-2 md:p-3">
-                        <div className="absolute inset-0 bg-[#1955A6]/2 z-10 pointer-events-none rounded-none" />
-                        <img 
-                            src={heroImg} 
-                            alt="TechInvention team collaborating in a modern workplace" 
-                            className="w-full h-auto min-h-[300px] md:min-h-[480px] lg:max-h-[640px] object-cover rounded-none"
-                        />
-                    </div>
-                </motion.div>
+
             </div>
         </section>
     );

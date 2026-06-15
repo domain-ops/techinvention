@@ -60,56 +60,6 @@ const ContactSection = () => {
 
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
-                {/* 1. Enquiry Cards Section */}
-                <div className="mb-24">
-                    <div className="mb-12">
-                        <ScrollReveal direction="up">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Select Your Department
-                            </span>
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-4">
-                                <SplitTitle title="Direct Contact Routing" />
-                            </h2>
-                            <p className="text-black font-medium text-[16px] md:text-[18px] max-w-2xl leading-relaxed text-left">
-                                Reach out to the specific department handling your target area to ensure a rapid response.
-                            </p>
-                        </ScrollReveal>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {ENQUIRY_CARDS.map((card, i) => {
-                            const CardIcon = card.icon;
-                            return (
-                                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                                    <div 
-                                        className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
-                                    >
-                                        <div 
-                                            className="absolute top-0 left-0 w-full h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
-                                            style={{ backgroundColor: card.color }}
-                                        />
-                                        <div 
-                                            className="w-14 h-14 rounded-full flex items-center justify-center mb-6 transition-colors duration-300"
-                                            style={{ backgroundColor: `${card.color}10`, color: card.color }}
-                                        >
-                                            <CardIcon className="w-6 h-6" />
-                                        </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{card.title}</h3>
-                                        <p className="text-slate-500 text-[14px] leading-relaxed font-medium mb-6 flex-1">{card.desc}</p>
-                                        <a 
-                                            href={`mailto:${card.email}`}
-                                            className="text-[13px] font-bold tracking-wider uppercase flex items-center gap-2 group-hover:underline"
-                                            style={{ color: card.color }}
-                                        >
-                                            <span>{card.email}</span>
-                                        </a>
-                                    </div>
-                                </ScrollReveal>
-                            );
-                        })}
-                    </div>
-                </div>
-
                 {/* 2. Contact Form Section */}
                 <div className="mb-24">
                     <div className="mb-12">
