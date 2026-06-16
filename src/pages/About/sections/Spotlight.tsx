@@ -75,28 +75,26 @@ const Spotlight = () => {
                         </p>
                     </div>
                 </ScrollReveal>
-
                 {/* Premium Bento Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     {SPOTLIGHT_ITEMS.map((item, idx) => {
                         const isImageHeavy = item.type === 'image-heavy';
                         const isSolidDark = item.type === 'solid-dark';
-                        
+
                         return (
-                            <ScrollReveal 
-                                key={item.id} 
-                                direction="up" 
+                            <ScrollReveal
+                                key={item.id}
+                                direction="up"
                                 delay={idx * 0.1}
                                 className={`${item.colSpan} h-[400px] md:h-[450px]`}
                             >
-                                <motion.div 
-                                    className={`relative w-full h-full rounded-none overflow-hidden group cursor-pointer ${
-                                        isSolidDark 
-                                            ? 'bg-brand-primary text-white' 
-                                            : !isImageHeavy 
-                                                ? 'bg-white border border-slate-200/60 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]' 
-                                                : ''
-                                    }`}
+                                <motion.div
+                                    className={`relative w-full h-full rounded-none overflow-hidden group cursor-pointer ${isSolidDark
+                                        ? 'bg-brand-primary text-white'
+                                        : !isImageHeavy
+                                            ? 'bg-white border border-slate-200/60 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
+                                            : ''
+                                        }`}
                                     whileHover={{ y: -5 }}
                                     transition={{ duration: 0.4, ease: "easeOut" }}
                                 >
@@ -104,9 +102,9 @@ const Spotlight = () => {
                                     {isImageHeavy && (
                                         <>
                                             <div className="absolute inset-0 z-0">
-                                                <img 
-                                                    src={item.image} 
-                                                    alt={item.title} 
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.title}
                                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                 />
                                             </div>
@@ -117,64 +115,58 @@ const Spotlight = () => {
                                     {/* Subtle Image Background for Solid Dark */}
                                     {isSolidDark && (
                                         <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay">
-                                            <img 
-                                                src={item.image} 
-                                                alt={item.title} 
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale"
                                             />
                                         </div>
                                     )}
 
                                     {/* Content Container */}
-                                    <div className={`relative z-20 flex flex-col h-full p-8 md:p-10 ${
-                                        isImageHeavy ? 'justify-end text-white' : 'justify-between'
-                                    }`}>
-                                        
-                                        {/* Tag */}
-                                        <div className={`self-start px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest uppercase backdrop-blur-md mb-6 ${
-                                            isImageHeavy 
-                                                ? 'bg-white/20 text-white' 
-                                                : isSolidDark 
-                                                    ? 'bg-white/10 text-white' 
-                                                    : 'bg-brand-primary/10 text-brand-primary'
+                                    <div className={`relative z-20 flex flex-col h-full p-8 md:p-10 ${isImageHeavy ? 'justify-end text-white' : 'justify-between'
                                         }`}>
+
+                                        {/* Tag */}
+                                        <div className={`self-start px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest uppercase backdrop-blur-md mb-6 ${isImageHeavy
+                                            ? 'bg-white/20 text-white'
+                                            : isSolidDark
+                                                ? 'bg-white/10 text-white'
+                                                : 'bg-brand-primary/10 text-brand-primary'
+                                            }`}>
                                             {item.tag}
                                         </div>
 
                                         {/* Title & Desc */}
                                         <div className="mt-auto">
-                                            <h3 className={`text-2xl md:text-3xl font-semibold leading-tight mb-4 ${
-                                                isImageHeavy || isSolidDark ? 'text-white' : 'text-slate-900'
-                                            }`}>
+                                            <h3 className={`text-2xl md:text-3xl font-semibold leading-tight mb-4 ${isImageHeavy || isSolidDark ? 'text-white' : 'text-slate-900'
+                                                }`}>
                                                 {item.title}
                                             </h3>
-                                            <p className={`text-base md:text-lg leading-relaxed line-clamp-2 md:line-clamp-3 mb-6 ${
-                                                isImageHeavy 
-                                                    ? 'text-slate-200' 
-                                                    : isSolidDark 
-                                                        ? 'text-white/80' 
-                                                        : 'text-slate-600'
-                                            }`}>
+                                            <p className={`text-base md:text-lg leading-relaxed line-clamp-2 md:line-clamp-3 mb-6 ${isImageHeavy
+                                                ? 'text-slate-200'
+                                                : isSolidDark
+                                                    ? 'text-white/80'
+                                                    : 'text-slate-600'
+                                                }`}>
                                                 {item.desc}
                                             </p>
 
                                             {/* Read More Link (Hidden by default, reveals on hover) */}
                                             <div className="overflow-hidden">
                                                 <div className="flex items-center gap-2 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                                    <span className={`font-semibold text-sm uppercase tracking-wider ${
-                                                        isImageHeavy || isSolidDark ? 'text-white' : 'text-brand-primary'
-                                                    }`}>
+                                                    <span className={`font-semibold text-sm uppercase tracking-wider ${isImageHeavy || isSolidDark ? 'text-white' : 'text-brand-primary'
+                                                        }`}>
                                                         Read Story
                                                     </span>
-                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                                                        isImageHeavy || isSolidDark ? 'bg-white/20 text-white' : 'bg-brand-primary/10 text-brand-primary'
-                                                    }`}>
+                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isImageHeavy || isSolidDark ? 'bg-white/20 text-white' : 'bg-brand-primary/10 text-brand-primary'
+                                                        }`}>
                                                         <ArrowUpRight className="w-4 h-4" />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </motion.div>
                             </ScrollReveal>
@@ -185,5 +177,4 @@ const Spotlight = () => {
         </section>
     );
 };
-
 export default Spotlight;

@@ -14,7 +14,7 @@ const bgImages = [banner1, banner2, banner3];
 const RevealText = ({ text, delay = 0, className = "" }: { text: string, delay?: number, className?: string }) => {
     const words = text ? text.split(" ") : [];
     return (
-        <motion.div 
+        <motion.div
             className={`flex flex-wrap justify-center ${className}`}
         >
             {words.map((word, i) => (
@@ -100,14 +100,14 @@ const Hero = () => {
                         transition={{ duration: 1.5, ease: "easeInOut" }}
                         className="absolute inset-0 w-full h-full"
                     >
-                        <img 
-                            src={bgImages[activeWordIndex % bgImages.length]} 
-                            alt="Background" 
-                            className="w-full h-full object-cover opacity-100" 
+                        <img
+                            src={bgImages[activeWordIndex % bgImages.length]}
+                            alt="Background"
+                            className="w-full h-full object-cover opacity-100"
                         />
                     </motion.div>
                 </AnimatePresence>
-                
+
                 {/* Dark overlays for text visibility */}
                 <div className="absolute inset-0 bg-black/40 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-10" />
@@ -115,28 +115,26 @@ const Hero = () => {
 
             {/* Brightness Overlay */}
             <div className="absolute inset-0 z-10 bg-black/10 pointer-events-none" />
-            
+
             {/* Animated medical orbs */}
             <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
-                <motion.div 
-                    animate={{ y: [0, -30, 0], x: [0, 20, 0] }} 
+                <motion.div
+                    animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                     className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/15 rounded-full blur-[100px] mix-blend-multiply"
                 />
-                <motion.div 
-                    animate={{ y: [0, 40, 0], x: [0, -20, 0] }} 
+                <motion.div
+                    animate={{ y: [0, 40, 0], x: [0, -20, 0] }}
                     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                     className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-[100px] mix-blend-multiply"
                 />
             </div>
-
             {/* Hero Main Content */}
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 flex flex-col justify-center items-center text-center pt-24 pb-16">
-                
                 {/* Main Headline (Stacks vertically on mobile, horizontally centered on desktop) */}
                 <div className="w-full mb-2 sm:mb-3 drop-shadow-2xl flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 leading-[1.2]">
                     <div className="flex justify-center text-[34px] md:text-[44px] lg:text-[48px] font-light tracking-widest text-white uppercase drop-shadow-xl">
-                        <MagneticText 
+                        <MagneticText
                             text={<RevealText text={brandName} delay={0.2} />}
                             hoverText={brandName}
                             hoverTextClassName="text-[34px] md:text-[44px] lg:text-[48px] font-bold tracking-widest text-white uppercase"
