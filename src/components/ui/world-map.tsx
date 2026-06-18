@@ -18,8 +18,7 @@ export function WorldMap({
   const svgRef = useRef<SVGSVGElement>(null);
   const isInView = useInView(svgRef, { once: true, margin: "-100px" });
   const map = new DottedMap({ height: 100, grid: "diagonal" });
-
-  const isDark = document.documentElement.classList.contains("dark");
+  const isDark = typeof document !== 'undefined' ? document.documentElement.classList.contains("dark") : false;
 
   const svgMap = map.getSVG({
     radius: 0.22,

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../assets/images/brand_logo.png';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { useLanguage, Language } from '../../context/LanguageContext';
 import { Globe, ChevronDown, Menu, X, Search, Phone, Mail } from 'lucide-react';
 import MegaMenuContent from './MegaMenuContent';
@@ -14,17 +15,17 @@ const Navbar = () => {
     const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
     const [openMobileMenus, setOpenMobileMenus] = useState<string[]>([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const navigate = useNavigate();
-    const location = useLocation();
+    const router = useRouter();
+    const pathname = usePathname();
 
     useEffect(() => {
         setActiveMegaMenu(null);
         setIsMenuOpen(false);
-    }, [location.pathname]);
+    }, [pathname]);
 
     const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter' && searchQuery.trim()) {
-            navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+            router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
             setSearchQuery('');
             setIsMenuOpen(false); // Close mobile menu if open
         }
@@ -90,7 +91,7 @@ const Navbar = () => {
                     <div className="flex w-[240px] relative group items-center bg-white rounded-full px-3 py-1 shadow-sm border border-gray-100">
                         <button onClick={() => {
                             if (searchQuery.trim()) {
-                                navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+                                router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
                                 setSearchQuery('');
                                 setIsMenuOpen(false);
                             }
@@ -107,8 +108,8 @@ const Navbar = () => {
                         />
                     </div>
 
-                    {/* Language Switcher in Top Bar - Hidden for now as requested */}
-                    <div className="relative hidden">
+                    {/* Language Switcher in Top Bar */}
+                    <div className="relative">
                         <button 
                             onClick={() => setIsLangOpen(!isLangOpen)}
                             className="flex items-center gap-1.5 text-[13px] font-medium text-brand-gray-dark hover:text-brand-primary transition-colors"
@@ -147,7 +148,7 @@ const Navbar = () => {
 
             <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 {/* Logo */}
-                <Link to="/" className="flex-shrink-0">
+                <Link href="/" className="flex-shrink-0">
                     <img src={logoImg} alt="Brand Logo" className="h-10 md:h-16 w-auto" />
                 </Link>
 
@@ -166,7 +167,7 @@ const Navbar = () => {
                                     onMouseLeave={() => hasDropdown && setActiveMegaMenu(null)}
                                 >
                                     {hasDropdown ? (
-                                        <Link to={navItem.href} className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black'}`}>
+                                        <Link href={navItem.href} className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black'}`}>
                                             <span className="relative block overflow-hidden">
                                                 <span className={`block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-[120%] ${activeMegaMenu === navItem.key ? 'text-brand-primary' : ''}`}>
                                                     {navItem.label}
@@ -185,18 +186,18 @@ const Navbar = () => {
                                         </Link>
                                     ) : (
                                         <Link 
-                                            to={navItem.href}
-                                            className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${location.pathname === navItem.href ? 'text-brand-primary' : 'text-black'}`}
+                                            href={navItem.href}
+                                            className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${pathname === navItem.href ? 'text-brand-primary' : 'text-black'}`}
                                         >
                                             <span className="relative block overflow-hidden">
-                                                <span className={`block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-[120%] ${location.pathname === navItem.href ? 'text-brand-primary' : ''}`}>
+                                                <span className={`block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-[120%] ${pathname === navItem.href ? 'text-brand-primary' : ''}`}>
                                                     {navItem.label}
                                                 </span>
                                                 <span className="absolute inset-0 block -translate-y-[120%] transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-0 text-brand-primary">
                                                     {navItem.label}
                                                 </span>
                                             </span>
-                                            {location.pathname === navItem.href && (
+                                            {pathname === navItem.href && (
                                                 <motion.div 
                                                     layoutId="activeNav"
                                                     className="absolute bottom-[-22px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
@@ -220,7 +221,7 @@ const Navbar = () => {
                                                         {megaMenusData[navItem.key].simpleLinks.map((link: any, idx: number) => (
                                                             <Link
                                                                 key={idx}
-                                                                to={link.href}
+                                                                href={link.href}
                                                                 className="px-6 py-4 text-[15px] font-medium text-black hover:text-brand-primary hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors"
                                                             >
                                                                 {link.name}
@@ -275,7 +276,7 @@ const Navbar = () => {
                                 <div className="flex w-full relative items-center bg-gray-50 rounded-xl px-4 py-3 border border-gray-200 focus-within:border-brand-primary transition-colors">
                                     <button onClick={() => {
                                         if (searchQuery.trim()) {
-                                            navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+                                            router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
                                             setSearchQuery('');
                                             setIsMenuOpen(false);
                                         }
@@ -308,7 +309,7 @@ const Navbar = () => {
                                         </button>
                                     ) : (
                                         <Link 
-                                            to={navItem.href}
+                                            href={navItem.href}
                                             onClick={() => setIsMenuOpen(false)}
                                             className="w-full flex items-center justify-between outline-none"
                                         >
@@ -330,7 +331,7 @@ const Navbar = () => {
                                                         megaMenusData[navItem.key].simpleLinks.map((link: any, lIdx: number) => (
                                                             <Link 
                                                                 key={lIdx} 
-                                                                to={link.href} 
+                                                                href={link.href} 
                                                                 className="block py-2 text-[14px] font-medium tracking-tight text-black hover:text-brand-primary"
                                                                 onClick={() => setIsMenuOpen(false)}
                                                             >
@@ -344,7 +345,7 @@ const Navbar = () => {
                                                                 {sec.links.map((link: any, lIdx: number) => (
                                                                     <Link 
                                                                         key={lIdx} 
-                                                                        to={link.href} 
+                                                                        href={link.href} 
                                                                         className="block py-2 text-[14px] font-medium tracking-tight text-black hover:text-brand-primary"
                                                                         onClick={() => setIsMenuOpen(false)}
                                                                     >

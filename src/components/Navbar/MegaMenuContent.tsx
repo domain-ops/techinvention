@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -40,7 +40,7 @@ const MegaMenuContent: React.FC<MegaMenuContentProps> = ({ sections, featured })
                             {section.links.map((link, lIdx) => (
                                 <li key={lIdx}>
                                     <Link 
-                                        to={link.href}
+                                        href={link.href}
                                         className="group block"
                                     >
                                         <div className="text-[15px] font-medium tracking-tight text-black group-hover:text-brand-primary transition-colors flex items-center gap-1">
@@ -71,7 +71,7 @@ const MegaMenuContent: React.FC<MegaMenuContentProps> = ({ sections, featured })
                         {featured.description}
                     </p>
                     <Link 
-                        to={featured.link}
+                        href={featured.link}
                         className="text-[14px] font-medium tracking-tight  tracking-widest text-brand-primary hover:gap-3 transition-all flex items-center gap-2"
                     >
                         {t('common.exploreNow')} <ChevronRight size={14} />
@@ -83,3 +83,4 @@ const MegaMenuContent: React.FC<MegaMenuContentProps> = ({ sections, featured })
 };
 
 export default MegaMenuContent;
+
