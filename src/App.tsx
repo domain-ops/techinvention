@@ -23,6 +23,7 @@ import AwardsPage from './pages/Awards';
 import RNDPage from './pages/RND';
 import VaccinesPage from './pages/Vaccines';
 import DiagnosticsPage from './pages/Diagnostics';
+import CDMOPage from './pages/CDMO';
 import ConsultingPage from './pages/Consulting';
 import ProductsPage from './pages/Products';
 import CareersPage from './pages/Careers';
@@ -99,6 +100,7 @@ function AppContent() {
                     <Route path="/rnd" element={<RNDPage />} />
                     <Route path="/rnd/vaccines" element={<VaccinesPage />} />
                     <Route path="/rnd/diagnostics" element={<DiagnosticsPage />} />
+                    <Route path="/cdmo" element={<CDMOPage />} />
                     <Route path="/consulting" element={<ConsultingPage />} />
                     <Route path="/products" element={<ProductsPage />} />
                     <Route path="/careers" element={<CareersPage />} />

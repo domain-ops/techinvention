@@ -55,19 +55,7 @@ const Navbar = () => {
         { code: 'fr', label: 'French' },
     ];
 
-    const megaMenusData: Record<string, any> = {
-        rnd: {
-            simpleLinks: [
-                { name: 'Vaccines', href: '/rnd/vaccines' },
-                { name: 'Diagnostics', href: '/rnd/diagnostics' }
-            ]
-        },
-        cdmo: {
-            simpleLinks: [
-                { name: 'GCMC', href: '/cdmo/gcmc' }
-            ]
-        }
-    };
+    const megaMenusData: Record<string, any> = {};
 
     const mainNavItems = [
         { key: 'home', label: 'Home', href: '/' },
