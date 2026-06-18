@@ -88,7 +88,15 @@ const Navbar = () => {
                 <div className="flex items-center gap-6">
                     {/* Search Bar in Top Bar */}
                     <div className="flex w-[240px] relative group items-center bg-white rounded-full px-3 py-1 shadow-sm border border-gray-100">
-                        <Search size={14} className="text-gray-400 group-focus-within:text-brand-primary transition-colors" />
+                        <button onClick={() => {
+                            if (searchQuery.trim()) {
+                                navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+                                setSearchQuery('');
+                                setIsMenuOpen(false);
+                            }
+                        }}>
+                            <Search size={14} className="text-gray-400 hover:text-brand-primary transition-colors cursor-pointer" />
+                        </button>
                         <input 
                             type="text" 
                             value={searchQuery}
@@ -158,9 +166,16 @@ const Navbar = () => {
                                     onMouseLeave={() => hasDropdown && setActiveMegaMenu(null)}
                                 >
                                     {hasDropdown ? (
-                                        <Link to={navItem.href} className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}>
-                                            {navItem.label}
-                                            <ChevronDown size={14} className={`transition-transform duration-300 ${activeMegaMenu === navItem.key ? 'rotate-180' : ''}`} />
+                                        <Link to={navItem.href} className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black'}`}>
+                                            <span className="relative block overflow-hidden">
+                                                <span className={`block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-[120%] ${activeMegaMenu === navItem.key ? 'text-brand-primary' : ''}`}>
+                                                    {navItem.label}
+                                                </span>
+                                                <span className="absolute inset-0 block -translate-y-[120%] transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-0 text-brand-primary">
+                                                    {navItem.label}
+                                                </span>
+                                            </span>
+                                            <ChevronDown size={14} className={`transition-transform duration-300 group-hover/link:text-brand-primary ${activeMegaMenu === navItem.key ? 'rotate-180 text-brand-primary' : ''}`} />
                                             {activeMegaMenu === navItem.key && (
                                                 <motion.div 
                                                     layoutId="activeNav"
@@ -171,9 +186,16 @@ const Navbar = () => {
                                     ) : (
                                         <Link 
                                             to={navItem.href}
-                                            className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap ${location.pathname === navItem.href ? 'text-brand-primary' : 'text-black hover:text-brand-primary'}`}
+                                            className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${location.pathname === navItem.href ? 'text-brand-primary' : 'text-black'}`}
                                         >
-                                            {navItem.label}
+                                            <span className="relative block overflow-hidden">
+                                                <span className={`block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-[120%] ${location.pathname === navItem.href ? 'text-brand-primary' : ''}`}>
+                                                    {navItem.label}
+                                                </span>
+                                                <span className="absolute inset-0 block -translate-y-[120%] transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-0 text-brand-primary">
+                                                    {navItem.label}
+                                                </span>
+                                            </span>
                                             {location.pathname === navItem.href && (
                                                 <motion.div 
                                                     layoutId="activeNav"
@@ -248,6 +270,29 @@ const Navbar = () => {
                         className="fixed inset-0 top-[64px] md:top-[80px] z-[4800] xl:hidden bg-white overflow-y-auto"
                     >
                         <div className="flex flex-col p-6 divide-y divide-gray-100 pb-32">
+                            {/* Mobile Search Bar */}
+                            <div className="py-4">
+                                <div className="flex w-full relative items-center bg-gray-50 rounded-xl px-4 py-3 border border-gray-200 focus-within:border-brand-primary transition-colors">
+                                    <button onClick={() => {
+                                        if (searchQuery.trim()) {
+                                            navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+                                            setSearchQuery('');
+                                            setIsMenuOpen(false);
+                                        }
+                                    }}>
+                                        <Search size={18} className="text-gray-400 hover:text-brand-primary" />
+                                    </button>
+                                    <input 
+                                        type="text" 
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        onKeyDown={handleSearch}
+                                        placeholder="Search..."
+                                        className="w-full bg-transparent border-none pl-3 text-base focus:outline-none text-black placeholder:text-gray-400"
+                                    />
+                                </div>
+                            </div>
+                            
                             {mainNavItems.map(navItem => {
                                 const hasDropdown = megaMenusData[navItem.key] && (megaMenusData[navItem.key].sections || megaMenusData[navItem.key].simpleLinks);
 

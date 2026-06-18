@@ -3,6 +3,35 @@ import logoImg from '../../assets/images/brand_logo.png';
 import { useLanguage } from '../../context/LanguageContext';
 import { Link } from 'react-router-dom';
 
+const FooterLink = ({ to, isExternal, children }: { to: string, isExternal?: boolean, children: React.ReactNode }) => {
+    const content = (
+        <span className="relative block overflow-hidden w-fit">
+            <span className="block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-[120%]">
+                {children}
+            </span>
+            <span className="absolute inset-0 block -translate-y-[120%] transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-0 text-brand-primary">
+                {children}
+            </span>
+        </span>
+    );
+
+    const className = "group cursor-pointer block w-full";
+
+    if (isExternal) {
+        return (
+            <a href={to} target={to.startsWith('mailto') ? undefined : "_blank"} rel={to.startsWith('mailto') ? undefined : "noopener noreferrer"} className={className}>
+                {content}
+            </a>
+        );
+    }
+
+    return (
+        <Link to={to} className={className}>
+            {content}
+        </Link>
+    );
+};
+
 const Footer = () => {
     const { t } = useLanguage();
     const currentYear = new Date().getFullYear();
@@ -29,24 +58,16 @@ const Footer = () => {
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <Link to="/rnd/vaccines" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('solutions.items.0.title')}
-                                    </Link>
+                                    <FooterLink to="/rnd/vaccines">{t('solutions.items.0.title')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/rnd/diagnostics" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('solutions.items.1.title')}
-                                    </Link>
+                                    <FooterLink to="/rnd/diagnostics">{t('solutions.items.1.title')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/rnd" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('solutions.items.2.title')}
-                                    </Link>
+                                    <FooterLink to="/rnd">{t('solutions.items.2.title')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/consulting" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('solutions.items.3.title')}
-                                    </Link>
+                                    <FooterLink to="/consulting">{t('solutions.items.3.title')}</FooterLink>
                                 </li>
                             </ul>
                         </div>
@@ -55,24 +76,16 @@ const Footer = () => {
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <Link to="/about" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('megaMenu.aboutUs')}
-                                    </Link>
+                                    <FooterLink to="/about">{t('megaMenu.aboutUs')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/#global-projects" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('map.tag')}
-                                    </Link>
+                                    <FooterLink to="/#global-projects">{t('map.tag')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('homeStats.header.tag')}
-                                    </Link>
+                                    <FooterLink to="/about">{t('homeStats.header.tag')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/#vaccine-pipeline" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('megaMenu.pipeline')}
-                                    </Link>
+                                    <FooterLink to="/#vaccine-pipeline">{t('megaMenu.pipeline')}</FooterLink>
                                 </li>
                             </ul>
                         </div>
@@ -81,27 +94,19 @@ const Footer = () => {
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <a href="https://www.linkedin.com/company/techinvention/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('footer.linkedin')}
-                                    </a>
+                                    <FooterLink to="https://www.linkedin.com/company/techinvention/" isExternal>{t('footer.linkedin')}</FooterLink>
                                 </li>
                                 <li>
-                                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('footer.twitter')}
-                                    </a>
+                                    <FooterLink to="https://x.com" isExternal>{t('footer.twitter')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/contact-us" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('navbar.contactUs')}
-                                    </Link>
+                                    <FooterLink to="/contact-us">{t('navbar.contactUs')}</FooterLink>
                                 </li>
                                 <li>
-                                    <Link to="/contact-us" className="hover:text-brand-primary transition-colors cursor-pointer block w-full">
-                                        {t('footer.partnerPortal')}
-                                    </Link>
+                                    <FooterLink to="/contact-us">{t('footer.partnerPortal')}</FooterLink>
                                 </li>
-                                <li className="hover:text-brand-primary transition-colors cursor-pointer break-all">
-                                    <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
+                                <li className="break-all">
+                                    <FooterLink to={`mailto:${t('footer.email')}`} isExternal>{t('footer.email')}</FooterLink>
                                 </li>
                             </ul>
                         </div>

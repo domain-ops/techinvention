@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const logoDNA = "/techinvention/TechInvention-gif.gif";
-
 const CustomCursor: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
     const [isHovering, setIsHovering] = useState(false);
@@ -60,30 +58,49 @@ const CustomCursor: React.FC = () => {
     if (isTouchDevice) return null;
 
     return (
-        <motion.div
-            className="fixed top-0 left-0 z-[99999] pointer-events-none flex items-center justify-center bg-white rounded-full shadow-md"
-            style={{
-                width: '50px',
-                height: '50px',
-                opacity: (isVisible && !isHovering) ? 1 : 0
-            }}
-            animate={{
-                x: mousePosition.x - 25, // center the 50px box
-                y: mousePosition.y - 25,
-                scale: isHovering ? 1.3 : 1
-            }}
-            transition={{
-                type: "tween",
-                ease: "linear",
-                duration: 0.05
-            }}
-        >
-            <img 
-                src={logoDNA} 
-                alt="cursor" 
-                className="w-[85%] h-[85%] object-contain mix-blend-multiply" 
+        <>
+            {/* Inner Dot - Follows Instantly */}
+            <motion.div
+                className="fixed top-0 left-0 z-[99999] pointer-events-none rounded-full bg-brand-primary"
+                style={{
+                    width: '8px',
+                    height: '8px',
+                    opacity: (isVisible && !isHovering) ? 1 : 0
+                }}
+                animate={{
+                    x: mousePosition.x - 4,
+                    y: mousePosition.y - 4,
+                    scale: isHovering ? 0 : 1
+                }}
+                transition={{
+                    type: "tween",
+                    ease: "linear",
+                    duration: 0
+                }}
             />
-        </motion.div>
+            {/* Outer Ring - Follows Smoothly with Spring Physics */}
+            <motion.div
+                className="fixed top-0 left-0 z-[99998] pointer-events-none rounded-full border border-brand-primary/40"
+                style={{
+                    width: '36px',
+                    height: '36px',
+                    opacity: (isVisible && !isHovering) ? 1 : 0,
+                    backgroundColor: 'transparent'
+                }}
+                animate={{
+                    x: mousePosition.x - 18,
+                    y: mousePosition.y - 18,
+                    scale: isHovering ? 0 : 1,
+                    borderColor: 'rgba(23,85,166,0.4)'
+                }}
+                transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 28,
+                    mass: 0.5
+                }}
+            />
+        </>
     );
 };
 

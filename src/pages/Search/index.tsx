@@ -39,6 +39,14 @@ const pathToRoute = (path: string, t: any): { url: string; title: string, catego
     if (path.startsWith('faq')) return { url: '/#faq', title: t.megaMenu?.faqs || 'FAQs', category: 'Support' };
     if (path.startsWith('blogs')) return { url: '/#blogs', title: 'Latest Blogs & Insights', category: 'News & Media' };
     
+    // Manual routes added
+    if (path.startsWith('cdmo')) return { url: '/cdmo', title: 'CDMO Services', category: 'Services' };
+    if (path.startsWith('rnd')) return { url: '/rnd', title: 'Research & Development', category: 'Innovation' };
+    if (path.startsWith('consulting')) return { url: '/consulting', title: 'Strategic Consulting', category: 'Services' };
+    if (path.startsWith('products')) return { url: '/products', title: 'Our Products', category: 'Products' };
+    if (path.startsWith('careers')) return { url: '/careers', title: 'Careers', category: 'Company' };
+    if (path.startsWith('contact')) return { url: '/contact-us', title: 'Contact Us', category: 'Support' };
+
     // Default fallback
     return { url: '/', title: 'Related Content', category: 'General' };
 };
@@ -69,7 +77,37 @@ const SearchPage = () => {
             caseStudy: t.caseStudy,
             testimonials: t.testimonials,
             faq: t.faq,
-            blogs: t.blogs
+            blogs: t.blogs,
+            cdmo: {
+                title: "CDMO Services",
+                desc: "Contract Manufacturing and Development Organization. Excellence in CDMO Services. State-of-the-art manufacturing facilities driving innovation from drug substance to finished product, adhering to global GMP standards.",
+                drugProduct: "Drug Product Formulation & Filling Liquid Lyophilized Vials Pre-Filled Syringes PFS sterile fill-finish operations",
+                qc: "QC Lab & Analytical Support In-Process Testing Release Testing Stability Studies",
+                tech: "Technology Transfer Readiness Tech Pack Receipt Process Adaptation Engineering Runs GMP Manufacturing"
+            },
+            rnd: {
+                title: "Research & Development",
+                desc: "Pioneering the Future of Global Health. Leveraging cutting-edge science and our dedicated HORIZON innovation platform to develop accessible vaccines and rapid diagnostics for emerging markets.",
+                vaccines: "Vaccine Innovation & Research Prophylactic Solutions for Emerging Markets Viral Vector & mRNA Platforms Accelerated Phase I/II Clinical Pipelines Global Regulatory Compliance",
+                diagnostics: "Advanced Diagnostics Cutting-edge molecular and lateral flow diagnostic development programs. Point-of-Care Rapid Testing Kits",
+                horizon: "HORIZON Our dedicated innovation and preclinical development platform. HORIZON accelerates the path from concept to clinical trials, providing state-of-the-art infrastructure for biotherapeutic research."
+            },
+            consulting: {
+                title: "Strategic Technical Advisory & Consulting",
+                desc: "We offer our expertise and support in capacity building to enable local manufacturing of biologics and vaccines in low- and middle-income countries. Project Feasibility Project Planning Technology Tie-up Design Engineering QMS WHO-PQ Support"
+            },
+            products: {
+                title: "Products",
+                desc: "Vaccines Biotherapeutics Molecular Diagnostics Rapid Test Kits Human Vaccines Animal Vaccines"
+            },
+            careers: {
+                title: "Careers",
+                desc: "Join our team. Open positions. Work with us to advance global health equity."
+            },
+            contact: {
+                title: "Contact Us",
+                desc: "Reach out to our global team to discuss partnerships, innovations, or how Bio-Sync can support your health security goals."
+            }
         };
         
         const rawResults = searchDeep(searchPool, query);
