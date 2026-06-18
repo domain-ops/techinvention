@@ -109,7 +109,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Language Switcher in Top Bar */}
-                    <div className="relative">
+                    <div className="relative hidden">
                         <button 
                             onClick={() => setIsLangOpen(!isLangOpen)}
                             className="flex items-center gap-1.5 text-[13px] font-medium text-brand-gray-dark hover:text-brand-primary transition-colors"
