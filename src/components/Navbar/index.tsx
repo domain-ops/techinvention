@@ -96,7 +96,7 @@ const Navbar = () => {
                                 setIsMenuOpen(false);
                             }
                         }}>
-                            <Search size={14} className="text-gray-400 hover:text-brand-primary transition-colors cursor-pointer" />
+                            <Search size={16} className="text-brand-primary hover:text-brand-secondary transition-colors cursor-pointer" />
                         </button>
                         <input 
                             type="text" 
@@ -281,7 +281,7 @@ const Navbar = () => {
                                             setIsMenuOpen(false);
                                         }
                                     }}>
-                                        <Search size={18} className="text-gray-400 hover:text-brand-primary" />
+                                        <Search size={20} className="text-brand-primary hover:text-brand-secondary" />
                                     </button>
                                     <input 
                                         type="text" 
