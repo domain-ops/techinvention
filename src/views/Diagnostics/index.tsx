@@ -1,13 +1,9 @@
+"use client";
 import React, { useEffect } from 'react';
 import CTASection from '../../components/CTASection';
-import { useSEO } from '../../lib/useSEO';
 
 const DiagnosticsPage = () => {
-    useSEO(
-        'Diagnostic Platforms & R&D | TechInvention',
-        "Discover TechInvention's next-generation diagnostic tools, offering molecular precision and rapid detection for global health security."
-    );
-
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

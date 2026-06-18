@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react';
 import GmpHero from './sections/GmpHero';
 import GmpOverview from './sections/GmpOverview';
@@ -5,14 +6,9 @@ import GmpSubjects from './sections/GmpSubjects';
 import GmpTestimonials from './sections/GmpTestimonials';
 import GmpAppreciation from './sections/GmpAppreciation';
 import GmpCTA from './sections/GmpCTA';
-import { useSEO } from '../../lib/useSEO';
 
 export default function GmpTrainingPage() {
-    useSEO(
-        'GMP Training & Workforce Development | TechInvention',
-        "TechInvention's professional Good Manufacturing Practice (GMP) training programs prepare workforce talents for quality-driven biotech manufacturing."
-    );
-
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

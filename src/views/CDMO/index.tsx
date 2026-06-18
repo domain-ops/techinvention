@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react';
 import LandingHero from './sections/LandingHero';
 import GCMCFeature from './sections/GCMCFeature';
@@ -6,14 +7,9 @@ import DrugProduct from './sections/DrugProduct';
 import QCLab from './sections/QCLab';
 import TechTransfer from './sections/TechTransfer';
 import CTASection from '../../components/CTASection';
-import { useSEO } from '../../lib/useSEO';
 
 const CDMOPage = () => {
-    useSEO(
-        'CDMO Services | TechInvention',
-        'Explore our Contract Development and Manufacturing Organization (CDMO) services featuring our state-of-the-art GCMC facility, Drug Substance, and Drug Product capabilities.'
-    );
-
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

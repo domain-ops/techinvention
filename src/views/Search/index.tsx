@@ -1,3 +1,4 @@
+"use client";
 import React, { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -52,7 +53,6 @@ const pathToRoute = (path: string, t: any): { url: string; title: string, catego
     return { url: '/', title: 'Related Content', category: 'General' };
 };
 
-import { useSEO } from '../../lib/useSEO';
 
 const SearchPage = () => {
     const searchParams = useSearchParams();
@@ -60,11 +60,7 @@ const SearchPage = () => {
     const { language } = useLanguage();
     const t = translations[language];
 
-    useSEO(
-        'Search | TechInvention',
-        'Search our website to find information about our products, research and development, consulting services, and latest insights.'
-    );
-
+    
     const results = useMemo(() => {
         if (!query.trim() || query.length < 2) return [];
         // Only search through specific high-value keys to avoid returning navbar items multiple times

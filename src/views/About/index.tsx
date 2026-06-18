@@ -1,3 +1,4 @@
+"use client";
 import AboutHeader from './sections/AboutBanner';
 import CompanyStory from './sections/CompanyStory';
 import OfficeEnvironment from './sections/OfficeEnvironment';
@@ -8,14 +9,9 @@ import AwardsShowcase from '../Awards/sections/AwardsShowcase';
 import Responsibility from './sections/Responsibility';
 import Spotlight from './sections/Spotlight';
 import CTASection from '../../components/CTASection';
-import { useSEO } from '../../lib/useSEO';
 
 const AboutPage = () => {
-    useSEO(
-        'About TechInvention | Our Journey & Vision',
-        "Learn about TechInvention's journey, vision, mission, and leadership team dedicated to global health innovation and biotechnology solutions."
-    );
-
+    
     return (
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
             {/* 1. Company Landing Hero */}

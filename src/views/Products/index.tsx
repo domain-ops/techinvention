@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -15,16 +16,11 @@ import ProductsCTA from './sections/ProductsCTA';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useSEO } from '../../lib/useSEO';
 
 export default function ProductsPage() {
     const { t } = useLanguage();
 
-    useSEO(
-        'Biotech Products & Solutions | TechInvention',
-        "Browse TechInvention's portfolio of vaccines, rapid diagnostic kits, biotherapeutics, and specialized medical countermeasure solutions."
-    );
-
+    
     useEffect(() => {
         window.scrollTo(0, 0);
         

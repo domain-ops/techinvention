@@ -1,13 +1,9 @@
+"use client";
 import React, { useEffect } from 'react';
 import CTASection from '../../components/CTASection';
-import { useSEO } from '../../lib/useSEO';
 
 const VaccinesPage = () => {
-    useSEO(
-        'Vaccine R&D & Pipelines | TechInvention',
-        'Read about TechInvention\'s vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.'
-    );
-
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

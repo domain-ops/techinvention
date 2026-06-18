@@ -1,18 +1,14 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { SplitTitle } from '../../components/Common/SplitTitle';
 import AwardsShowcase from './sections/AwardsShowcase';
-import { useSEO } from '../../lib/useSEO';
 
 const AwardsPage = () => {
     const { t } = useLanguage();
 
-    useSEO(
-        'Awards & Recognition | TechInvention',
-        "Celebrate TechInvention's achievements, industry awards, and global recognition in biotechnology research and pharmaceutical innovation."
-    );
-
+    
     return (
         <div className="bg-brand-background pt-32 pb-8">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">

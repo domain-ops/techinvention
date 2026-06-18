@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Hero from './sections/Hero';
 import OneHealth from './sections/OneHealth';
@@ -16,14 +17,9 @@ import Blogs from './sections/Blogs';
 import CTASection from '../../components/CTASection';
 import FloatingDNA from '../../components/FloatingDNA';
 
-import { useSEO } from '../../lib/useSEO';
 
 const Home = () => {
-    useSEO(
-        'TechInvention | Advancing Global Health Through Biotechnology',
-        'Global biotech company focused on vaccines, diagnostics, and biotherapeutics. Innovation that protects tomorrow.'
-    );
-
+    
     return (
         <div className="relative">
             {/* <FloatingDNA /> temporrily removed by request */}
