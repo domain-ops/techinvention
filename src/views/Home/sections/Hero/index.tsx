@@ -132,7 +132,7 @@ const Hero = () => {
             {/* Hero Main Content */}
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 flex flex-col justify-center items-center text-center pt-24 pb-16">
                 {/* Main Headline (Stacks vertically on mobile, horizontally centered on desktop) */}
-                <div className="w-full mb-2 sm:mb-3 drop-shadow-2xl flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 leading-[1.2]">
+                <h1 className="w-full mb-2 sm:mb-3 drop-shadow-2xl flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 leading-[1.2]">
                     <div className="flex justify-center text-[34px] md:text-[44px] lg:text-[48px] font-light tracking-widest text-white uppercase drop-shadow-xl">
                         <MagneticText
                             text={<RevealText text={brandName} delay={0.2} />}
@@ -151,7 +151,7 @@ const Hero = () => {
                     >
                         <SlidingWord words={rotatingWords} activeIndex={activeWordIndex} />
                     </motion.div>
-                </div>
+                </h1>
 
                 {/* Tagline */}
                 <motion.div

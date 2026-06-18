@@ -32,12 +32,12 @@ const LandingHero = () => {
                         <span className="text-brand-primary text-xs font-bold tracking-[0.2em] uppercase">Research & Development</span>
                     </div>
                     
-                    <div className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tighter text-brand-content mb-6 leading-[1.15]">
+                    <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tighter text-brand-content mb-6 leading-[1.15]">
                         Pioneering the <br className="hidden md:block" />
                         <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
                             Future of Global Health
                         </span>
-                    </div>
+                    </h1>
                     
                     <p className="text-base md:text-lg text-gray-600 font-light max-w-2xl leading-relaxed mb-8 lg:mb-10 border-l-4 border-brand-secondary/50 pl-6 py-2">
                         Leveraging cutting-edge science and our dedicated HORIZON innovation platform to develop accessible vaccines and rapid diagnostics for emerging markets.

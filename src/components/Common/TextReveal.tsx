@@ -6,13 +6,15 @@ interface TextRevealProps {
     className?: string;
     containerClassName?: string;
     mode?: 'dark' | 'light'; // dark for light backgrounds (text goes to black), light for dark backgrounds (text goes to white)
+    as?: React.ElementType;
 }
 
 const TextReveal: React.FC<TextRevealProps> = ({
     text,
     className = "",
     containerClassName = "",
-    mode = 'dark'
+    mode = 'dark',
+    as: Tag = 'div'
 }) => {
     // Split by whitespace but keep the whitespace as tokens
     const tokens = text.split(/(\s+)/);
@@ -52,7 +54,7 @@ const TextReveal: React.FC<TextRevealProps> = ({
             viewport={{ once: true, margin: "-100px" }}
             className={`relative z-10 ${containerClassName}`}
         >
-            <div className={`block ${className}`}>
+            <Tag className={`block ${className}`}>
                 {tokens.map((token, i) => {
                     if (token === "") return null;
 
@@ -80,7 +82,7 @@ const TextReveal: React.FC<TextRevealProps> = ({
                         </span>
                     );
                 })}
-            </div>
+            </Tag>
         </motion.div>
     );
 };

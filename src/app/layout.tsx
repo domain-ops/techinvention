@@ -6,7 +6,8 @@ export const metadata: Metadata = {
   title: "TechInvention | Advancing Global Health Through Biotechnology",
   description: "Global biotech company focused on vaccines, diagnostics, and biotherapeutics. Innovation that protects tomorrow.",
   icons: {
-    icon: "/assets/images/favicon-techinvention.png",
+    icon: "https://impulsedigital.co.in/techinvention/favicon.ico",
+    apple: "https://impulsedigital.co.in/techinvention/favicon.ico"
   },
 };
 

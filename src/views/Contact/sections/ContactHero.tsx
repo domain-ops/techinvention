@@ -43,6 +43,7 @@ const ContactHero: React.FC = () => {
                     <TextReveal
                         text={t('navbar.contactUs') || 'Contact Us'}
                         mode="light"
+                        as="h1"
                         className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight justify-center text-center"
                     />
                 </div>

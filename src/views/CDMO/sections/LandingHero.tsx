@@ -27,12 +27,12 @@ const LandingHero = () => {
                         <span className="text-brand-primary text-xs font-bold tracking-[0.2em] uppercase">Contract Manufacturing</span>
                     </div>
                     
-                    <div className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tighter text-brand-content mb-6 leading-[1.15]">
+                    <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tighter text-brand-content mb-6 leading-[1.15]">
                         Excellence in <br className="hidden md:block" />
                         <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
                             CDMO Services
                         </span>
-                    </div>
+                    </h1>
                     
                     <p className="text-base md:text-lg text-gray-600 font-light max-w-2xl leading-relaxed mb-8 lg:mb-10 border-l-4 border-brand-secondary/50 pl-6 py-2">
                         State-of-the-art manufacturing facilities driving innovation from drug substance to finished product, adhering to global GMP standards.
