@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   // Disable next/image static import handling to prevent conflicts with Vite-style imports
   images: {
     disableStaticImages: true,
