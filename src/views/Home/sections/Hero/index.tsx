@@ -100,8 +100,7 @@ const Hero = () => {
                         transition={{ duration: 1.5, ease: "easeInOut" }}
                         className="absolute inset-0 w-full h-full"
                     >
-                        <img
-                            src={bgImages[activeWordIndex % bgImages.length]}
+                        <img src={bgImages[activeWordIndex % bgImages.length]}
                             alt="Background"
                             className="w-full h-full object-cover opacity-100"
                         />

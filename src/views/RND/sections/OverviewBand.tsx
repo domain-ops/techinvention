@@ -33,7 +33,7 @@ const OverviewBand = () => {
                         <ScrollReveal direction="left" delay={0.2}>
                             <div className="relative rounded-none overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 z-0">
-                                    <img 
+                                    <img loading="lazy" 
                                         src={horizonBg} 
                                         alt="HORIZON Platform" 
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"

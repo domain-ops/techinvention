@@ -95,7 +95,7 @@ export default function EmployeeTestimonials() {
                                 </div>
                                 
                                 <div className="flex items-center gap-4 border-t border-slate-100 pt-6 mt-auto">
-                                    <img 
+                                    <img loading="lazy" 
                                         src={test.image} 
                                         alt={test.name} 
                                         className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm"

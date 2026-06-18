@@ -25,7 +25,7 @@ export default function VeterinaryDiagnostics() {
                         className="relative"
                     >
                         <div className="rounded-none overflow-hidden border border-white/20 shadow-2xl relative group">
-                            <img 
+                            <img loading="lazy" 
                                 src={livestockVaccinesImg} 
                                 alt="Veterinary Diagnostics" 
                                 className="w-full h-[550px] object-cover transition-transform duration-1000 group-hover:scale-105"

@@ -53,8 +53,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
             {/* Background elements */}
             {image ? (
                 <div className="absolute inset-0 z-0">
-                    <img
-                        src={image}
+                    <img src={image}
                         alt={pageTitle}
                         className="w-full h-full object-cover object-center"
                     />

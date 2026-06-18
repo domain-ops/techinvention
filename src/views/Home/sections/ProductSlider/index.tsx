@@ -191,7 +191,7 @@ export default function ProductSlider() {
                         <div
                             className={`carousel-image-frame ${isTransitioning ? 'transitioning' : 'visible'}`}
                         >
-                            <img
+                            <img loading="lazy"
                                 src={imageMap[currentSlide.imageUrl] || currentSlide.imageUrl}
                                 alt={currentSlide.title}
                                 className="carousel-image"

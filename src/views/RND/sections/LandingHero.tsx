@@ -8,8 +8,7 @@ const LandingHero = () => {
         <section className="relative w-full min-h-[80vh] lg:h-screen lg:min-h-[600px] lg:max-h-[900px] flex items-center justify-center overflow-hidden font-sans bg-white pt-24 pb-16 lg:pt-0 lg:pb-0">
             {/* Background Image & Overlays */}
             <div className="absolute inset-0 z-0 opacity-10">
-                <img 
-                    src={heroBg} 
+                <img src={heroBg} 
                     alt="R&D Innovation" 
                     className="w-full h-full object-cover"
                 />

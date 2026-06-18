@@ -240,7 +240,7 @@ export default function LifeAtTechInvention() {
                                         }}
                                         className="absolute w-[260px] sm:w-[360px] md:w-[480px] h-[320px] sm:h-[420px] md:h-[540px] rounded-none overflow-hidden shadow-2xl bg-white border border-slate-200/50 cursor-pointer group"
                                     >
-                                        <img 
+                                        <img loading="lazy" 
                                             src={item.image} 
                                             alt={item.title} 
                                             className="w-full h-full object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"

@@ -116,7 +116,7 @@ const Stats = () => {
                         {/* Image Column */}
                         <div className="relative h-[300px] sm:h-[400px] lg:h-[800px] rounded-none lg:rounded-none overflow-hidden shadow-2xl group">
                             <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700" />
-                            <img 
+                            <img loading="lazy" 
                                 src={HospitalImage} 
                                 alt="Facility" 
                                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 origin-center"

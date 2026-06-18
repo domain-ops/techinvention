@@ -55,11 +55,10 @@ const Blogs = () => {
                             >
                                 {/* Image */}
                                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50">
-                                    <img 
+                                    <img loading="lazy" 
                                         src={img} 
                                         alt={t(`blogs.items.${idx}.title`)} 
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-                                        loading="lazy"
                                     />
                                     <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-brand-primary text-[10px] font-bold px-3 py-1.5 rounded-full tracking-widest uppercase shadow-sm">
                                         {t(`blogs.items.${idx}.category`)}

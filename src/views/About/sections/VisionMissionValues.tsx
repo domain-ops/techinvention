@@ -69,7 +69,7 @@ const VisionMissionValues = () => {
                         {/* Decorative Background Image */}
                         <div className="absolute inset-0 w-full h-full hidden sm:block opacity-60 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none">
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent z-10" />
-                            <img src={visionImg} alt="Vision Background" className="w-full h-full object-cover object-right grayscale mix-blend-multiply" />
+                            <img loading="lazy" src={visionImg} alt="Vision Background" className="w-full h-full object-cover object-right grayscale mix-blend-multiply" />
                         </div>
 
                         {/* Huge Watermark */}

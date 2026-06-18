@@ -45,7 +45,7 @@ const DrugSubstance = () => {
                             <div className="relative group">
                                 <div className="absolute inset-0 bg-brand-primary/20 rounded-3xl transform rotate-3 scale-105 group-hover:rotate-6 transition-transform duration-500" />
                                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white">
-                                    <img 
+                                    <img loading="lazy" 
                                         src={dsImg} 
                                         alt="Drug Substance Manufacturing" 
                                         className="w-full h-[500px] object-cover transform transition-transform duration-700 group-hover:scale-110"

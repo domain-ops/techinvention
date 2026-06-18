@@ -54,8 +54,7 @@ const ConsultingHero = () => {
                 className="absolute inset-0 z-0"
                 style={{ y: heroY, scale: heroScale }}
             >
-                <img
-                    src={heroImage}
+                <img src={heroImage}
                     alt="Consulting Hero"
                     className="w-full h-full object-cover object-center"
                 />

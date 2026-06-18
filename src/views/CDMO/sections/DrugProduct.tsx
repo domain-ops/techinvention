@@ -8,7 +8,7 @@ const DrugProduct = () => {
     return (
         <section className="py-24 bg-brand-primary/5 relative overflow-hidden">
             <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
-                <img src={abstractBg} alt="" className="w-full h-full object-cover blur-sm" />
+                <img loading="lazy" src={abstractBg} alt="" className="w-full h-full object-cover blur-sm" />
             </div>
             <div className="max-w-[1400px] mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

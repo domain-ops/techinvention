@@ -202,7 +202,7 @@ const AwardsShowcase = () => {
                                                 className="lg:hidden w-full overflow-hidden mb-12"
                                             >
                                                 <div className="w-full flex items-center justify-center drop-shadow-xl mt-4">
-                                                    <img 
+                                                    <img loading="lazy" 
                                                         src={imageMap[award.image] || awardIvlc2025} 
                                                         alt={award.title}
                                                         className="max-w-full h-auto max-h-[300px] object-contain"
@@ -236,7 +236,7 @@ const AwardsShowcase = () => {
                     transition={{ opacity: { duration: 0.4 }, scale: { duration: 0.4, ease: "easeOut" } }}
                 >
                     {awards.map((award: any, idx: number) => (
-                        <img 
+                        <img loading="lazy" 
                             key={idx}
                             src={imageMap[award.image] || awardIvlc2025}
                             alt={award.title}

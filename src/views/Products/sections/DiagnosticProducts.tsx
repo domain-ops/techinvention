@@ -85,7 +85,7 @@ export default function DiagnosticProducts() {
                         <div className="absolute inset-0 bg-[#5C7625]/10 transform rotate-3 rounded-none -z-10"></div>
                         <div className="absolute inset-0 bg-white transform -rotate-3 rounded-none -z-10 shadow-xl border border-slate-200/60"></div>
                         <div className="rounded-none overflow-hidden border-8 border-white shadow-2xl relative">
-                            <img 
+                            <img loading="lazy" 
                                 src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                                 alt="Laboratory Diagnostics" 
                                 className="w-full h-[550px] object-cover"

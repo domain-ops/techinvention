@@ -94,7 +94,7 @@ const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
     <div className="relative w-full rounded-none overflow-hidden group transition-all duration-700 hover:-translate-y-2 cursor-pointer aspect-[3/4] md:aspect-[4/5] lg:h-[500px]">
         {/* Image Container */}
         <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
-            <img 
+            <img loading="lazy" 
                 src={cert.image} 
                 alt={cert.name}
                 className="max-w-full max-h-full object-contain drop-shadow-2xl mix-blend-multiply"

@@ -11,8 +11,7 @@ const ContactHero: React.FC = () => {
         <section className="relative w-full h-screen min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-950 font-sans pt-28 md:pt-32 pb-20 md:pb-24">
             {/* Background Image with Layered Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={heroBg}
+                <img src={heroBg}
                     alt="Contact TechInvention"
                     className="w-full h-full object-cover object-center transform scale-105 animate-[pulse_25s_ease-in-out_infinite_alternate]"
                 />

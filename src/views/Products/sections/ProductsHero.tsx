@@ -63,8 +63,7 @@ export default function ProductsHero() {
                 >
                     <div className="relative rounded-none overflow-hidden border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-slate-50 p-2 md:p-3">
                         <div className="absolute inset-0 bg-[#1955A6]/2 z-10 pointer-events-none rounded-none" />
-                        <img 
-                            src={aboutManufacturing} 
+                        <img src={aboutManufacturing} 
                             alt="Advanced Biotech Manufacturing and Formulation Facility" 
                             className="w-full h-auto min-h-[300px] md:min-h-[480px] lg:max-h-[640px] object-cover rounded-none"
                         />

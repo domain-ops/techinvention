@@ -73,7 +73,7 @@ const About = () => {
                             className="group relative w-full aspect-[3/4] md:aspect-[4/5] overflow-hidden cursor-pointer"
                         >
                             {/* Background Image */}
-                            <img
+                            <img loading="lazy"
                                 src={images[index % images.length]}
                                 alt={profile.name}
                                 className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1 origin-center"

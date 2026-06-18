@@ -25,7 +25,7 @@ const Responsibility = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <ScrollReveal direction="left">
                         <div className="relative rounded-none overflow-hidden shadow-2xl aspect-[4/3]">
-                            <img 
+                            <img loading="lazy" 
                                 src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200" 
                                 alt="Environmental Responsibility" 
                                 className="w-full h-full object-cover"

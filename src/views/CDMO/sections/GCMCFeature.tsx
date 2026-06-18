@@ -17,7 +17,7 @@ const GCMCFeature = () => {
                                 <motion.div 
                                     className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                                 />
-                                <img 
+                                <img loading="lazy" 
                                     src={gcmcImg} 
                                     alt="GCMC Facility" 
                                     className="w-full h-[600px] object-cover transform transition-transform duration-700 group-hover:scale-105"

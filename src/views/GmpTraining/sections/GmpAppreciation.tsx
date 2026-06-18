@@ -81,7 +81,7 @@ export default function GmpAppreciation() {
                             <div>
                                 {/* Certificate image preview container */}
                                 <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center p-4 mb-6 shadow-sm">
-                                    <img 
+                                    <img loading="lazy" 
                                         src={cert.image} 
                                         alt={cert.title} 
                                         className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
@@ -145,7 +145,7 @@ export default function GmpAppreciation() {
 
                                     {/* High-res image display */}
                                     <div className="w-full bg-[#fcfcfc] rounded-2xl border border-slate-100 p-6 flex items-center justify-center max-h-[50vh] overflow-hidden mb-6">
-                                        <img 
+                                        <img loading="lazy" 
                                             src={selectedCert.image} 
                                             alt={selectedCert.title} 
                                             className="max-w-full max-h-[45vh] object-contain drop-shadow-xl"

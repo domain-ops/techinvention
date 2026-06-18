@@ -138,7 +138,7 @@ export default function CategoryFilter() {
                             >
                                 <div className="h-52 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-[#1955A6]/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                                    <img 
+                                    <img loading="lazy" 
                                         src={product.image} 
                                         alt={product.title} 
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"

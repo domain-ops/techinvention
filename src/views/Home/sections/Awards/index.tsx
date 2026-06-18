@@ -72,7 +72,7 @@ const Awards = () => {
                         */}
                         {[...Array(24)].map((_, idx) => (
                             <div key={idx} className="flex-shrink-0 px-6 md:px-10 flex items-center justify-center cursor-pointer">
-                                <img 
+                                <img loading="lazy" 
                                     src={awardImage} 
                                     alt={`Award ${idx + 1}`} 
                                     className="max-h-[140px] md:max-h-[180px] lg:max-h-[220px] w-auto object-contain transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"

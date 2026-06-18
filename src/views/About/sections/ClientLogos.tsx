@@ -61,13 +61,13 @@ const ClientLogos = () => {
                 <div className="flex w-max animate-marquee space-x-16 items-center px-8">
                     {logos.map((logo, index) => (
                         <div key={index} className="flex-shrink-0 w-44 h-24 flex items-center justify-center transition-all duration-500 cursor-pointer">
-                            <img src={logo} alt={`Partner logo ${index + 1}`} className="max-w-full max-h-full object-contain" />
+                            <img loading="lazy" src={logo} alt={`Partner logo ${index + 1}`} className="max-w-full max-h-full object-contain" />
                         </div>
                     ))}
                     {/* Duplicate for seamless infinite effect */}
                     {logos.map((logo, index) => (
                         <div key={`dup-${index}`} className="flex-shrink-0 w-44 h-24 flex items-center justify-center transition-all duration-500 cursor-pointer">
-                            <img src={logo} alt={`Partner logo duplicate ${index + 1}`} className="max-w-full max-h-full object-contain" />
+                            <img loading="lazy" src={logo} alt={`Partner logo duplicate ${index + 1}`} className="max-w-full max-h-full object-contain" />
                         </div>
                     ))}
                 </div>

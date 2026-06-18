@@ -39,8 +39,7 @@ const AdvisoryHeader = () => {
         <section className="relative w-full h-screen min-h-[600px] max-h-[1000px] flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Background Images Layered */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={heroImage}
+                <img src={heroImage}
                     alt="Strategic Advisory"
                     className="w-full h-full object-cover object-center"
                 />

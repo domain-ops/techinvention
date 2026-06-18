@@ -8,7 +8,7 @@ const QCLab = () => {
     return (
         <section className="py-24 relative overflow-hidden bg-brand-background">
             <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
-                <img src={qcBg} alt="QC Lab" className="w-full h-full object-cover" />
+                <img loading="lazy" src={qcBg} alt="QC Lab" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-background to-transparent" />
             </div>
 

@@ -27,7 +27,7 @@ const TestimonialCard = ({ name, role, content, image }: TestimonialCardProps) =
             <div className="bg-white/40 backdrop-blur-xl border border-black/5 rounded-none p-8 md:p-10 shadow-xl shadow-black/5 hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-500 group h-full flex flex-col">
                 <div className="flex items-center gap-6 mb-8">
                     <div className="relative h-20 w-20 md:h-24 md:w-24 rounded-none overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 shadow-lg group-hover:shadow-brand-primary/20">
-                        <img
+                        <img loading="lazy"
                             src={testimonialImages[image]}
                             alt={name}
                             className="w-full h-full object-cover scale-105 transition-transform duration-700 group-hover:scale-110"

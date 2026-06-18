@@ -38,9 +38,9 @@ export default {
                 }
             },
             fontFamily: {
-                sans: ['Montserrat', 'sans-serif'],
-                serif: ['Montserrat', 'serif'],
-                montserrat: ['Montserrat', 'sans-serif'],
+                sans: ['var(--font-montserrat)', 'sans-serif'],
+                serif: ['var(--font-montserrat)', 'serif'],
+                montserrat: ['var(--font-montserrat)', 'sans-serif'],
             },
             backgroundImage: {
                 'radial-gradient': 'radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to))',

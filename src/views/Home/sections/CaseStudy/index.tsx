@@ -227,7 +227,7 @@ const CaseStudy = () => {
                                     className="absolute inset-x-4 lg:inset-0 aspect-[4/5] rounded-none md:rounded-none overflow-hidden border-[6px] md:border-8 border-white bg-white origin-center shadow-xl"
                                 >
                                     <div className="relative w-full h-full group">
-                                        <img
+                                        <img loading="lazy"
                                             src={feature.image}
                                             alt={feature.label}
                                             className={cn(

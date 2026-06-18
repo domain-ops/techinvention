@@ -169,7 +169,7 @@ const ExperienceSection = () => {
                             >
                                 {/* Showcase Image */}
                                 <div className="relative h-64 md:h-80 overflow-hidden w-full group/img">
-                                    <img
+                                    <img loading="lazy"
                                         src={activeExp.image}
                                         alt={activeExp.title}
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-105"

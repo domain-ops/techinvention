@@ -82,7 +82,7 @@ export default function GmpTestimonials() {
                             </div>
                             
                             <div className="flex items-center gap-4 border-t border-slate-100 pt-6">
-                                <img 
+                                <img loading="lazy" 
                                     src={test.image} 
                                     alt={test.name} 
                                     className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm"
