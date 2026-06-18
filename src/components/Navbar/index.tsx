@@ -125,7 +125,7 @@ const Navbar = () => {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
-                                    className="absolute right-0 mt-3 w-40 bg-white shadow-xl border border-gray-100 py-2 z-[6000] rounded-xl overflow-hidden"
+                                    className="absolute right-0 rtl:right-auto rtl:left-0 mt-3 w-40 bg-white shadow-xl border border-gray-100 py-2 z-[6000] rounded-xl overflow-hidden"
                                 >
                                     {languages.map((lang) => (
                                         <button
