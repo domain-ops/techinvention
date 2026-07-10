@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # 🔥 fixes your 403 error
+      contents: write
 
     steps:
       - name: Checkout
@@ -27,8 +27,13 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Add .nojekyll to prevent Jekyll processing
+        run: touch out/.nojekyll
+
       - name: Deploy to hostinger-deploy branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: hostinger-deploy
           folder: out
+          clean: true
+          single-commit: true
