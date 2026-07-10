@@ -1,34 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { Quote, User } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-import t1 from '../../../assets/images/testimonial_1.png';
-import t2 from '../../../assets/images/testimonial_2.png';
-import t3 from '../../../assets/images/testimonial_3.png';
-
 const testimonials = [
     {
-        quote: "The simulated gowning validations and aseptic cleanroom entries were incredibly realistic. It gave our team the concrete practical confidence we needed to safely handle sterile bioprocesses.",
-        name: "Priyesh Shah",
-        role: "Production Lead, Sterile Manufacturing",
-        company: "Zenith Biotech",
-        image: t1
+        name: "Dr. Meseret Habtamu",
+        role: "Researcher – Vaccine Analytics",
+        company: "Armauer Hansen Research Institute",
+        text: "The training bridged my research background with practical applications, highlighting the importance of quality systems and regulatory compliance in real-world settings."
     },
     {
-        quote: "The trainers are seasoned industry veterans. Their real-world case studies on deviation tracking and CAPA compliance resolved several bottlenecks in our own quality management procedures.",
-        name: "Dr. Ritu Deshmukh",
-        role: "QA Lead Manager",
-        company: "Global Biologics Inc.",
-        image: t2
+        name: "Mr. Hailu Ashenafi",
+        role: "Senior Special Advisor for Quality Assurance",
+        company: "Ministry of Health/ShieldVax Project",
+        text: "I received end-to-end, hands-on exposure to vaccine quality control testing across upstream, downstream, and fill-finish processes aligned with global regulatory expectations."
     },
     {
-        quote: "An outstanding training framework. The deep-dive modules on ALCOA+ Data Integrity rules and audit trail reviews directly prepared our facility for international regulatory audits.",
-        name: "Carlos Menendez",
-        role: "Head of Validation Services",
-        company: "LatAm Bio Labs",
-        image: t3
+        name: "Mr. Kebede Fufa",
+        role: "QMS Lead – Executive Office Desk Head",
+        company: "Ethiopian Food and Drug Authority (EFDA)",
+        text: "I learned to apply data integrity (ALCOA+ principles) and Statistical Process Control to ensure the analytical pipeline remains a non-negotiable foundation for vaccine safety."
+    },
+    {
+        name: "Dr. Jaleta Shuka",
+        role: "Vaccine Quality Assurance Team Leader",
+        company: "National Veterinary Institute, Ethiopia",
+        text: "The training provided an excellent combination of theoretical foundation and practical application that significantly enhanced my understanding of vaccine quality, safety, and effectiveness"
+    },
+    {
+        name: "Mr. Lami Bikila Kelbessa",
+        role: "Quality Control Chemist",
+        company: "Africure Pharmaceuticals Manufacturing Ethiopia PLC.",
+        text: "This program significantly improved my analytical competence in vaccine manufacturing, particularly regarding Quality Control and GMP-based testing."
     }
 ];
 
@@ -38,65 +43,61 @@ export default function GmpTestimonials() {
             {/* Ambient background glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-primary/3 blur-3xl pointer-events-none" />
 
-            <div className="max-w-[1300px] mx-auto px-6 relative z-10">
-                
+            <div className="max-w-[1400px] mx-auto px-6 relative z-10">
                 {/* Header */}
-                <div className="mb-16 md:mb-20">
-                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-                        <div className="max-w-2xl text-left">
-                            <ScrollReveal direction="up">
-                                <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                    Trainee Feedback
-                                </span>
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
-                                    <SplitTitle title="Participants Testimonials" />
-                                </h2>
-                            </ScrollReveal>
-                        </div>
-                        <div className="max-w-md text-left">
-                            <ScrollReveal direction="up" delay={0.2}>
-                                <p className="text-black font-medium text-[16px] md:text-[18px] leading-relaxed">
-                                    Read direct feedback from industry professionals, QA managers, and manufacturing experts who have graduated from our GMP modules.
-                                </p>
-                            </ScrollReveal>
-                        </div>
-                    </div>
+                <div className="mb-16 text-center">
+                    <ScrollReveal direction="up">
+                        <span className="text-brand-primary font-bold tracking-[0.4em] text-[11px] mb-3 block uppercase">
+                            Appreciation & Feedback
+                        </span>
+                        <h2 className="text-[32px] md:text-[40px] font-medium tracking-wide mb-6">
+                            <SplitTitle title="Testimonials" />
+                        </h2>
+                    </ScrollReveal>
                 </div>
+            </div>
 
-                {/* Testimonial Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map((test, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className="bg-white border border-slate-200/60 rounded-none p-8 text-left relative flex flex-col justify-between group hover:shadow-xl hover:border-slate-300 transition-all duration-500"
+            {/* Infinite Marquee Slider container */}
+            <div className="relative w-full overflow-hidden py-10">
+                {/* Fade edges */}
+                <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-20 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-20 pointer-events-none" />
+
+                <motion.div 
+                    className="flex gap-6 md:gap-8 w-max"
+                    animate={{ x: ["0%", "-50%"] }}
+                    transition={{ ease: "linear", duration: 50, repeat: Infinity }}
+                >
+                    {/* Duplicate the array to create a seamless loop */}
+                    {[...testimonials, ...testimonials].map((test, idx) => (
+                        <div 
+                            key={idx} 
+                            className="w-[350px] md:w-[450px] bg-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 flex flex-col relative group"
                         >
-                            <div>
-                                <Quote className="w-10 h-10 text-brand-primary/10 mb-6 group-hover:text-brand-primary/20 transition-colors" />
-                                <p className="text-slate-700 text-[15px] leading-relaxed font-semibold italic mb-8">
-                                    "{test.quote}"
+                            <Quote className="absolute top-6 right-6 w-12 h-12 text-brand-primary/5 z-0" />
+                            
+                            {/* Profile Info Header */}
+                            <div className="flex flex-col gap-2 mb-6 relative z-10">
+                                <h4 className="text-[18px] font-bold text-slate-900 leading-snug">
+                                    {test.name}
+                                </h4>
+                                <p className="text-[14px] font-semibold text-brand-primary">
+                                    {test.role}
                                 </p>
+                                <span className="inline-block px-3 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary text-[11px] font-bold uppercase tracking-wider w-fit mt-1">
+                                    {test.company}
+                                </span>
                             </div>
                             
-                            <div className="flex items-center gap-4 border-t border-slate-100 pt-6">
-                                <img loading="lazy" 
-                                    src={test.image} 
-                                    alt={test.name} 
-                                    className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm"
-                                />
-                                <div>
-                                    <h4 className="text-slate-900 font-bold text-base leading-snug">{test.name}</h4>
-                                    <p className="text-brand-primary text-xs font-bold uppercase tracking-wider">{test.role}</p>
-                                    <p className="text-slate-400 text-[10px] font-bold uppercase tracking-wider mt-0.5">{test.company}</p>
-                                </div>
+                            {/* Quote Content */}
+                            <div className="relative z-10 flex-1 border-t border-slate-100 pt-6">
+                                <p className="text-[15px] md:text-[16px] leading-relaxed text-slate-600 font-medium italic">
+                                    "{test.text}"
+                                </p>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
-                </div>
-
+                </motion.div>
             </div>
         </section>
     );

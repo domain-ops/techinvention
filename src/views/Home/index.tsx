@@ -3,7 +3,6 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import Hero from './sections/Hero';
 import OneHealth from './sections/OneHealth';
-import HorizonGCMC from './sections/HorizonGCMC';
 
 // Dynamically import below the fold components
 const About = dynamic(() => import('./sections/About'));
@@ -19,7 +18,6 @@ const Home = () => {
         <div className="relative">
             <Hero />
             <OneHealth />
-            <HorizonGCMC />
             <About />
             <VaccinePipeline />
             <ClientLogos />

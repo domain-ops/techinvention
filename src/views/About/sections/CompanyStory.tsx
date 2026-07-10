@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 const CompanyStory = () => {
     const { t } = useLanguage();
@@ -9,6 +10,14 @@ const CompanyStory = () => {
         <section className="py-12 md:py-20 bg-white font-sans">
             <div className="max-w-7xl mx-auto px-6">
                 <div>
+                    {/* Section Heading */}
+                    <ScrollReveal direction="up">
+                        <div className="mb-10 md:mb-12">
+                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
+                                <SplitTitle title="Built to Move Vaccine Innovation Further" />
+                            </h2>
+                        </div>
+                    </ScrollReveal>
 
                     {/* Mandela Quote */}
                     <ScrollReveal direction="up">
@@ -25,12 +34,6 @@ const CompanyStory = () => {
                         <ScrollReveal direction="up" delay={0.2}>
                             <p className="font-medium tracking-tight text-black text-[16px] md:text-[18px] leading-relaxed text-left md:text-justify">
                                 {t('about.story.commitment')}
-                            </p>
-                        </ScrollReveal>
-
-                        <ScrollReveal direction="up" delay={0.3}>
-                            <p className="font-medium tracking-tight text-black text-[16px] md:text-[18px] leading-relaxed text-left md:text-justify">
-                                {t('about.story.expertise')}
                             </p>
                         </ScrollReveal>
                     </div>

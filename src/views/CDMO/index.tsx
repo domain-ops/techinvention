@@ -2,10 +2,12 @@
 import React, { useEffect } from 'react';
 import LandingHero from './sections/LandingHero';
 import GCMCFeature from './sections/GCMCFeature';
-import DrugSubstance from './sections/DrugSubstance';
-import DrugProduct from './sections/DrugProduct';
-import QCLab from './sections/QCLab';
-import TechTransfer from './sections/TechTransfer';
+import GCMCBridge from './sections/GCMCBridge';
+import HorizonGCMC from '../Home/sections/HorizonGCMC';
+import WhyPartner from './sections/WhyPartner';
+import Capabilities from './sections/Capabilities';
+import DigitalExcellence from './sections/DigitalExcellence';
+import Sustainability from './sections/Sustainability';
 import CTASection from '../../components/CTASection';
 
 const CDMOPage = () => {
@@ -18,10 +20,12 @@ const CDMOPage = () => {
         <div className="bg-brand-background min-h-screen">
             <LandingHero />
             <GCMCFeature />
-            <DrugSubstance />
-            <DrugProduct />
-            <QCLab />
-            <TechTransfer />
+            <GCMCBridge />
+            <HorizonGCMC hideHeading={true} />
+            <WhyPartner />
+            <Capabilities />
+            <DigitalExcellence />
+            <Sustainability />
             <CTASection />
         </div>
     );

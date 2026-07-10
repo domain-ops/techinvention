@@ -39,11 +39,11 @@ export default function ProductsCTA() {
                         </span>
                         
                         <h2 className="text-[36px] font-medium tracking-wide mb-4 leading-tight text-center">
-                            <SplitTitle title="Ready to Elevate Your Diagnostic Capabilities?" />
+                            <SplitTitle title="Partner With TechInvention for Vaccine Access" />
                         </h2>
                         
                         <p className="text-black text-[18px] max-w-2xl mb-8 leading-relaxed font-medium tracking-tight text-center">
-                            Partner with TechInvention for cutting-edge products, reliable supply chains, and dedicated technical support. Let's build a healthier future together.
+                            Connect with TechInvention to explore product availability, licensing partnerships and access opportunities for market-authorized vaccines.
                         </p>
                         
                         <div className="flex flex-col items-center gap-8">

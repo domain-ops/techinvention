@@ -51,77 +51,37 @@ export default function GmpOverview() {
 
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
-                {/* Header Section */}
-                <div className="mb-16 md:mb-20">
-                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-                        <div className="max-w-2xl text-left">
-                            <ScrollReveal direction="up">
-                                <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                    Training Purpose
-                                </span>
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
-                                    <SplitTitle title="Bridging Knowledge & Practice" />
-                                </h2>
-                            </ScrollReveal>
-                        </div>
-                        <div className="max-w-md text-left">
-                            <ScrollReveal direction="up" delay={0.2}>
-                                <p className="text-black font-medium text-[16px] md:text-[18px] leading-relaxed">
-                                    We believe that understanding GMP compliance goes beyond reading guidelines. It requires interactive engagement, practical simulations, and contextual application.
-                                </p>
-                            </ScrollReveal>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Cultural Pillars Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-                    {pillars.map((pillar, index) => {
-                        const Icon = pillar.icon;
+                {/* 5 Pills Section */}
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12">
+                    {[
+                        { icon: 'FlaskConical', text: 'Engaging Scientific & Technical Curriculum' },
+                        { icon: 'Factory', text: 'Hands-On Training In GMP Production' },
+                        { icon: 'Presentation', text: 'Industry Experts Led Curriculum' },
+                        { icon: 'Globe', text: 'Global Regulatory Alignment' },
+                        { icon: 'GraduationCap', text: 'Career & Industry Readiness Focus' }
+                    ].map((pill, idx) => {
+                        const Icon = require('lucide-react')[pill.icon];
                         return (
                             <motion.div
-                                key={index}
+                                key={idx}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: index * 0.15 }}
-                                className="group relative bg-white border border-slate-200/60 rounded-2xl p-7 text-left shadow-sm hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.06)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between"
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="bg-[#1955A6] rounded-[50px] md:rounded-[60px] p-3 pb-8 flex flex-col items-center w-[160px] md:w-[200px] shadow-lg hover:-translate-y-2 transition-transform duration-300 min-h-[260px] md:min-h-[300px]"
                             >
-                                <div>
-                                    {/* Icon Container */}
-                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 border ${pillar.bg} transition-all duration-300 group-hover:scale-105`}>
-                                        <Icon className="w-6 h-6" style={{ color: pillar.color }} strokeWidth={1.75} />
-                                    </div>
-                                    
-                                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-brand-primary transition-colors">
-                                        {pillar.title}
-                                    </h3>
-                                    <p className="text-slate-600 text-sm font-semibold leading-relaxed">
-                                        {pillar.desc}
-                                    </p>
+                                <div className="w-[110px] h-[110px] md:w-[140px] md:h-[140px] rounded-full bg-[#5C7625] flex items-center justify-center border-2 border-white/20 mb-4 md:mb-6 shadow-inner relative overflow-hidden shrink-0 mt-2">
+                                    {/* Inner decorative dashed ring */}
+                                    <div className="absolute inset-2 md:inset-3 rounded-full border border-white/40 border-dashed" />
+                                    <Icon className="w-10 h-10 md:w-12 md:h-12 text-white relative z-10" strokeWidth={1.5} />
                                 </div>
+                                <p className="text-white text-center font-bold text-[13px] md:text-[15px] leading-snug px-3 flex-1 flex items-center justify-center">
+                                    {pill.text}
+                                </p>
                             </motion.div>
                         );
                     })}
                 </div>
-
-                {/* Stats Section */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="bg-white border border-slate-200/60 rounded-3xl p-8 md:p-12 shadow-sm"
-                >
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 divide-y-0 divide-x-0 md:divide-x md:divide-slate-100">
-                        {stats.map((stat, idx) => (
-                            <div key={idx} className="flex flex-col items-center justify-center text-center p-4">
-                                <span className="text-4xl md:text-5xl font-bold text-[#1955A6] mb-2">{stat.value}</span>
-                                <span className="text-slate-500 font-semibold text-xs uppercase tracking-wider">{stat.label}</span>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
 
             </div>
         </section>

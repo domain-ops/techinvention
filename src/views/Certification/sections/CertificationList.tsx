@@ -159,9 +159,7 @@ const CertificationList = () => {
                                     <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
                                 </h2>
                             </div>
-                            <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
+
                         </div>
                     </ScrollReveal>
                 </div>

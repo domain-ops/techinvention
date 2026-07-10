@@ -62,7 +62,7 @@ const Navbar = () => {
         { key: 'home', label: 'Home', href: '/' },
         { key: 'company', label: 'Company', href: '/about' },
         { key: 'rnd', label: 'R&D', href: '/rnd' },
-        { key: 'cdmo', label: 'CDMO', href: '/cdmo' },
+        { key: 'cdmo', label: 'Manufacturing Organization', href: '/cdmo' },
         { key: 'consulting', label: 'Consulting', href: '/consulting' },
         { key: 'products', label: 'Products', href: '/products' },
         { key: 'careers', label: 'Career', href: '/careers' },

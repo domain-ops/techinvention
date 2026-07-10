@@ -16,6 +16,7 @@ const testimonialImages: Record<string, string> = {
     testimonial_1: testimonial1,
     testimonial_2: testimonial2,
     testimonial_3: testimonial3,
+    testimonial_4: testimonial1,
 };
 
 const TestimonialsAnimated = () => {

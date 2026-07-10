@@ -33,7 +33,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                         duration: 0.7,
                         ease: [0.23, 1, 0.32, 1]
                     }}
-                    className="relative overflow-hidden cursor-pointer group lg:h-full lg:!h-full"
+                    className="relative overflow-hidden cursor-pointer group lg:h-full lg:!h-full flex flex-col"
                     onClick={() => setExpandedIndex(index)}
                     onMouseEnter={() => setExpandedIndex(index)}
                 >
@@ -41,7 +41,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                     <motion.img
                         src={slide.image}
                         alt={slide.title}
-                        className="absolute top-0 left-0 h-full w-[115%] max-w-none object-cover"
+                        className="absolute top-0 left-0 h-full w-[115%] max-w-none object-cover z-0"
                         initial={false}
                         animate={{
                             x: expandedIndex === index ? '-10%' : '0%',
@@ -60,7 +60,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
 
                     {/* Content Overlay (The "Blue Color") */}
                     <motion.div
-                        className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 z-10"
+                        className="relative z-10 w-full flex-1 flex flex-col justify-end p-6 md:p-10"
                         animate={{
                             backgroundColor: expandedIndex === index 
                                 ? index % 2 === 0 ? 'rgba(25, 85, 166, 0.92)' : 'rgba(92, 118, 37, 0.92)'
@@ -78,9 +78,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                     transition={{ duration: 0.5, delay: 0.1 }}
                                     className="max-w-xl"
                                 >
-                                    <span className="text-white/80 text-[18px] font-medium tracking-tight  tracking-[0.4em] mb-4 block">
-                                        {slide.tag}
-                                    </span>
+
                                     <h4 className="text-white text-[36px] font-medium tracking-tight leading-tight mb-6  tracking-tighter">
                                         {slide.title}
                                     </h4>

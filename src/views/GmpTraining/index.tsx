@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import GmpHero from './sections/GmpHero';
 import GmpOverview from './sections/GmpOverview';
-import GmpSubjects from './sections/GmpSubjects';
+import TrainingModules from './sections/TrainingModules';
+import SpecializedTraining from './sections/SpecializedTraining';
 import GmpTestimonials from './sections/GmpTestimonials';
 import GmpAppreciation from './sections/GmpAppreciation';
 import GmpCTA from './sections/GmpCTA';
@@ -21,8 +22,11 @@ export default function GmpTrainingPage() {
             {/* 2. Overview of the unit purpose & statistics */}
             <GmpOverview />
 
-            {/* 3. Browseable course cards grid */}
-            <GmpSubjects />
+            {/* 3. Browseable course accordion list */}
+            <TrainingModules />
+
+            {/* 3.5 Specialized Training */}
+            <SpecializedTraining />
 
             {/* 4. Trainee/Participant feedback quotes */}
             <GmpTestimonials />

@@ -3,7 +3,7 @@ import { useLanguage } from '../../../../context/LanguageContext';
 import { translations } from '../../../../translations';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import { Trophy, ClipboardPlus, Star, Globe } from 'lucide-react';
-import HospitalImage from '../../../../assets/images/hospital image.webp';
+import gcmcImg from '../../../../assets/images/GCMC.jpg.jpeg';
 import { motion, useInView, animate, useScroll, useTransform } from 'framer-motion';
 
 const logoDNA = "/techinvention/TechInvention-gif.gif";
@@ -98,11 +98,10 @@ const Stats = () => {
                         {/* Text and Stats Column */}
                         <div className="flex flex-col">
                             <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
-                                <div className="max-w-xl">
-                                    <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em]  text-[11px] mb-4 block animate-fade-in">{t.header?.tag || "Our Impact"}</span>
-                                    <h2 className="text-[36px] font-medium tracking-tight text-brand-primary leading-tight tracking-tighter  mb-6">{t.header?.title1 || "Measuring "} <br/><span className="text-brand-secondary">{t.header?.title2 || "Excellence"}</span>
+                                <div className="max-w-xl mb-8">
+                                    <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide uppercase">
+                                        <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Impact</span>
                                     </h2>
-                                    <p className="text-black text-[18px] leading-relaxed">{t.header?.desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
                                 </div>
                             </div>
                             
@@ -117,7 +116,7 @@ const Stats = () => {
                         <div className="relative h-[300px] sm:h-[400px] lg:h-[800px] rounded-none lg:rounded-none overflow-hidden shadow-2xl group">
                             <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700" />
                             <img loading="lazy" 
-                                src={HospitalImage} 
+                                src={gcmcImg} 
                                 alt="Facility" 
                                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 origin-center"
                             />

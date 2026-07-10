@@ -106,6 +106,7 @@ const AwardsShowcase = () => {
     ];
 
     const [activeAward, setActiveAward] = useState<number | null>(null);
+    const [showAll, setShowAll] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
     // Mouse tracking for floating image
@@ -138,7 +139,7 @@ const AwardsShowcase = () => {
                     </div>
 
                     <div className="flex flex-col border-t border-gray-100">
-                        {awards.map((award: any, idx: number) => {
+                        {(showAll ? awards : awards.slice(0, 4)).map((award: any, idx: number) => {
                             const isActive = activeAward === idx;
                             return (
                                 <div 
@@ -155,7 +156,7 @@ const AwardsShowcase = () => {
                                                     className="inline-block text-sm md:text-lg text-brand-primary font-mono tracking-widest font-bold"
                                                     initial={{ y: 20, opacity: 0 }}
                                                     whileInView={{ y: 0, opacity: 1 }}
-                                                    transition={{ delay: 0.1 * idx }}
+                                                    transition={{ delay: 0.1 * (idx % 4) }}
                                                     viewport={{ once: true }}
                                                 >
                                                     {award.year}
@@ -168,7 +169,7 @@ const AwardsShowcase = () => {
                                                     }`}
                                                     initial={{ y: 40, opacity: 0 }}
                                                     whileInView={{ y: 0, opacity: 1 }}
-                                                    transition={{ delay: 0.15 * idx, duration: 0.8 }}
+                                                    transition={{ delay: 0.15 * (idx % 4), duration: 0.8 }}
                                                     viewport={{ once: true }}
                                                 >
                                                     {award.title}
@@ -184,7 +185,7 @@ const AwardsShowcase = () => {
                                                 }`}
                                                 initial={{ y: 20, opacity: 0 }}
                                                 whileInView={{ y: 0, opacity: 1 }}
-                                                transition={{ delay: 0.2 * idx, duration: 0.8 }}
+                                                transition={{ delay: 0.2 * (idx % 4), duration: 0.8 }}
                                                 viewport={{ once: true }}
                                             >
                                                 {award.desc}
@@ -220,6 +221,21 @@ const AwardsShowcase = () => {
                             );
                         })}
                     </div>
+
+                    {/* Show More / Show Less Button */}
+                    {awards.length > 4 && (
+                        <div className="flex justify-center mt-12 relative z-10">
+                            <button 
+                                onClick={() => setShowAll(!showAll)}
+                                className="group flex items-center gap-2 px-8 py-3 rounded-full border border-gray-200 text-brand-primary font-medium hover:border-brand-primary hover:bg-brand-primary/5 transition-all duration-300"
+                            >
+                                {showAll ? 'Show Less Accolades' : 'Show More Accolades'}
+                                <svg className={`w-4 h-4 transition-transform duration-300 ${showAll ? 'rotate-180 group-hover:-translate-y-1' : 'group-hover:translate-y-1'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        </div>
+                    )}
                 </div>
 
                 {/* Desktop Floating Image Follower */}
@@ -230,6 +246,8 @@ const AwardsShowcase = () => {
                         y: mouseY,
                         translateX: "-20%",
                         translateY: "-50%",
+                    }}
+                    animate={{
                         opacity: activeAward !== null ? 1 : 0,
                         scale: activeAward !== null ? 1 : 0.8,
                     }}

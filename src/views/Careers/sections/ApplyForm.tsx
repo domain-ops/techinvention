@@ -50,7 +50,8 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
         }, 1500);
     };
 
-    if (!selectedJobTitle) return null;
+    // Remove the early return so the form is always visible
+    // if (!selectedJobTitle) return null;
 
     return (
         <section id="apply-form-section" className="py-24 bg-white relative overflow-hidden font-sans border-b border-slate-100">
@@ -59,34 +60,30 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
 
             <div className="max-w-[800px] mx-auto px-6 relative z-10 text-left">
                 
-                {/* Back Button */}
-                <button 
-                    onClick={onCancel}
-                    className="inline-flex items-center gap-2 text-slate-500 hover:text-brand-primary transition-colors mb-8 font-bold text-sm"
-                >
-                    <ArrowLeft className="w-4 h-4" />
-                    Back to All Openings
-                </button>
-
-                <div className="bg-white border border-slate-200/60 rounded-none p-8 md:p-12 shadow-2xl">
+                <div className="bg-white border border-slate-200/60 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <div className="border-b border-slate-100 pb-6 mb-8">
-                        <span className="text-brand-primary font-bold uppercase tracking-wider text-xs">Job Application</span>
+                        <span className="text-brand-primary font-bold uppercase tracking-wider text-xs">Join Us</span>
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-2 leading-tight">
-                            Job Application Form
+                            Application Form
                         </h2>
                     </div>
 
                     <AnimatePresence mode="wait">
                         {!submitted ? (
                             <form onSubmit={handleSubmit} className="space-y-6">
-                                {/* Selected Position (Read-Only) */}
+                                {/* Selected Position */}
                                 <div className="flex flex-col gap-2">
-                                    <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Applying Position</label>
+                                    <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Applying Position *</label>
                                     <input 
                                         type="text" 
-                                        value={selectedJobTitle || ''} 
-                                        disabled
-                                        className="w-full bg-slate-100 border border-slate-200/80 rounded-none px-4 py-3 text-sm text-slate-600 font-semibold cursor-not-allowed"
+                                        defaultValue={selectedJobTitle || ''} 
+                                        placeholder="e.g. Senior Research Scientist"
+                                        disabled={!!selectedJobTitle}
+                                        className={`w-full border rounded-xl px-4 py-3 text-sm font-medium ${
+                                            selectedJobTitle 
+                                                ? "bg-slate-100 border-slate-200/80 text-slate-600 cursor-not-allowed" 
+                                                : "bg-white border-slate-200 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                                        }`}
                                     />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

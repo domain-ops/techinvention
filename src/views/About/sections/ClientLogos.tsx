@@ -1,89 +1,117 @@
 import React from 'react';
-import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { motion } from 'framer-motion';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-import avmi from '../../../assets/images/client-logo/avmi.png';
-import bactiVac from '../../../assets/images/client-logo/bactiVac-network-logo.png';
-import beam from '../../../assets/images/client-logo/beam-r31c7xfarpqdqcqccwc5iricfp2is4bqzxqehj4tt4.png';
-import cepi from '../../../assets/images/client-logo/cepi.png';
-import ebpmm from '../../../assets/images/client-logo/ebpmm.jpeg';
-import escmid from '../../../assets/images/client-logo/escmid.jpeg';
-import faba from '../../../assets/images/client-logo/faba.png';
-import fieo from '../../../assets/images/client-logo/fieo.png';
-import fitt from '../../../assets/images/client-logo/fitt.png';
-import ibiom from '../../../assets/images/client-logo/ibiom.png';
-import idma from '../../../assets/images/client-logo/idma.jpeg';
-import ieto from '../../../assets/images/client-logo/ieto-logo-edit.png';
-import ifcci from '../../../assets/images/client-logo/ifcci.png';
-import imc from '../../../assets/images/client-logo/imc.png';
-import innovationCouncil from '../../../assets/images/client-logo/innovation-council.jpeg';
-import isv from '../../../assets/images/client-logo/isv-logo-edit.png';
-import logo1 from '../../../assets/images/client-logo/logo-1.png';
-import logo2 from '../../../assets/images/client-logo/logo-2.png';
-import logo3 from '../../../assets/images/client-logo/logo-3.png';
-import pharmexcil from '../../../assets/images/client-logo/pharmexcil.jpeg';
-import sepc from '../../../assets/images/client-logo/sepc-logo.png';
-import smeChamber from '../../../assets/images/client-logo/sme-chamber-india.png';
-import utjga from '../../../assets/images/client-logo/utjga.png';
-import vaxGlob from '../../../assets/images/client-logo/vax-glob.jpg';
-import vaxSust from '../../../assets/images/client-logo/vax-sust.jpg';
-import veternary from '../../../assets/images/client-logo/veternary.jpg';
+// Row 1 Imports
+import adbLogo from '../../../../public/consulting-page-images/ADB-consultancy.png';
+import alHammmadiLogo from '../../../../public/consulting-page-images/AlHammmadi-Consultancy.jpg';
+import arabAuthorityLogo from '../../../../public/consulting-page-images/Arab-authority-Consultancy.png';
+import arabioLogo from '../../../../public/consulting-page-images/Arabio-counsltancy.png';
+import bviLogo from '../../../../public/consulting-page-images/BVI-Counsltancy.png';
+import biovaccinesLogo from '../../../../public/consulting-page-images/Biovaccines-Consultancy.jpg';
+import bravoLogo from '../../../../public/consulting-page-images/bravo.jpg';
+import gennecsLogo from '../../../../public/consulting-page-images/Gennecs-consultancy.jpg';
+import hacettepeLogo from '../../../../public/consulting-page-images/Hacettepe-Unv-Consultancy.jpg';
 
-const logos = [
-    avmi, bactiVac, beam, cepi, ebpmm, escmid, faba, fieo, fitt, ibiom, idma, ieto,
-    ifcci, imc, innovationCouncil, isv, logo1, logo2, logo3, pharmexcil, sepc,
-    smeChamber, utjga, vaxGlob, vaxSust, veternary
+// Row 2 Imports
+import iaviLogo from '../../../../public/consulting-page-images/Iavi-Consultancy.png';
+import mechnikovLogo from '../../../../public/consulting-page-images/Mechnikov-Consultancy.png';
+import sbiCapsLogo from '../../../../public/consulting-page-images/SBICaps_Consultancy.png';
+import spbsrivsLogo from '../../../../public/consulting-page-images/SPBSRIVS-  Cosultancy.png';
+import turkeyMohLogo from '../../../../public/consulting-page-images/Turkey MOH - Counsltancy.png';
+import unopsLogo from '../../../../public/consulting-page-images/Unops - consultancy.png';
+import whoLogo from '../../../../public/consulting-page-images/WHO-Consultancy.jpg';
+import ethopiaLogo from '../../../../public/consulting-page-images/ethopia.jpg';
+
+const ROW_1 = [
+    adbLogo,
+    alHammmadiLogo,
+    arabAuthorityLogo,
+    arabioLogo,
+    bviLogo,
+    biovaccinesLogo,
+    bravoLogo,
+    gennecsLogo,
+    hacettepeLogo,
+];
+
+const ROW_2 = [
+    iaviLogo,
+    mechnikovLogo,
+    sbiCapsLogo,
+    spbsrivsLogo,
+    turkeyMohLogo,
+    unopsLogo,
+    whoLogo,
+    ethopiaLogo,
 ];
 
 const ClientLogos = () => {
     return (
-        <section className="py-12 md:py-20 bg-white overflow-hidden border-t border-gray-100">
-            <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
-                <div className="text-left flex-1">
-                    <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                            Our Membership
-                        </span>
-                        <div className="mb-4">
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
-                                <SplitTitle title="Trusted by Global Partners" />
-                            </h2>
-                        </div>
-                    </ScrollReveal>
-                </div>
+        <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
+            <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
+                <ScrollReveal direction="up">
+                    <span className="text-[#1955A6] font-bold tracking-[0.2em] text-[12px] mb-4 block uppercase">
+                        Our Membership
+                    </span>
+                    <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide leading-tight">
+                        <SplitTitle title="Trusted by Global Partners" />
+                    </h2>
+                </ScrollReveal>
             </div>
 
-            <div className="relative w-full flex overflow-hidden group py-4">
-                {/* Gradient overlays for smooth fading edges */}
-                <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+            <div className="w-full relative flex flex-col gap-10">
+                {/* Gradient Masks for fading edges */}
+                <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-                <div className="flex w-max animate-marquee space-x-16 items-center px-8">
-                    {logos.map((logo, index) => (
-                        <div key={index} className="flex-shrink-0 w-44 h-24 flex items-center justify-center transition-all duration-500 cursor-pointer">
-                            <img loading="lazy" src={logo} alt={`Partner logo ${index + 1}`} className="max-w-full max-h-full object-contain" />
-                        </div>
-                    ))}
-                    {/* Duplicate for seamless infinite effect */}
-                    {logos.map((logo, index) => (
-                        <div key={`dup-${index}`} className="flex-shrink-0 w-44 h-24 flex items-center justify-center transition-all duration-500 cursor-pointer">
-                            <img loading="lazy" src={logo} alt={`Partner logo duplicate ${index + 1}`} className="max-w-full max-h-full object-contain" />
-                        </div>
-                    ))}
+                {/* Marquee Row 1 (Moves Left) */}
+                <div className="flex w-full overflow-hidden">
+                    <motion.div
+                        className="flex items-center gap-10 md:gap-16 whitespace-nowrap min-w-max pr-10 md:pr-16"
+                        animate={{ x: ["0%", "-50%"] }}
+                        transition={{ ease: "linear", duration: 40, repeat: Infinity }}
+                    >
+                        {/* Duplicate the array to create a seamless loop */}
+                        {[...ROW_1, ...ROW_1].map((src, index) => (
+                            <div 
+                                key={`row1-${index}`} 
+                                className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
+                            >
+                                <img 
+                                    src={src?.src || src} 
+                                    alt="Client Logo" 
+                                    className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
+                                />
+                            </div>
+                        ))}
+                    </motion.div>
                 </div>
-                
-                <style>{`
-                    @keyframes marquee {
-                        0% { transform: translateX(0); }
-                        100% { transform: translateX(-50%); }
-                    }
-                    .animate-marquee {
-                        animation: marquee 50s linear infinite;
-                    }
-                    .animate-marquee:hover {
-                        animation-play-state: paused;
-                    }
-                `}</style>
+
+                {/* Marquee Row 2 (Moves Right) */}
+                <div className="flex w-full overflow-hidden">
+                    <motion.div
+                        className="flex items-center gap-10 md:gap-16 whitespace-nowrap min-w-max pr-10 md:pr-16"
+                        animate={{ x: ["-50%", "0%"] }}
+                        transition={{ ease: "linear", duration: 35, repeat: Infinity }}
+                    >
+                        {/* Duplicate the array to create a seamless loop */}
+                        {[...ROW_2, ...ROW_2].map((src, index) => (
+                            <div 
+                                key={`row2-${index}`} 
+                                className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
+                            >
+                                <img 
+                                    src={src?.src || src} 
+                                    alt="Client Logo" 
+                                    className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
+                                />
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
+
             </div>
         </section>
     );

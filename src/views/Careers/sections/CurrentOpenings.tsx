@@ -157,18 +157,34 @@ export default function CurrentOpenings({ onSelectJob }: { onSelectJob: (jobTitl
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-brand-secondary/5 blur-[100px] pointer-events-none" />
 
             <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-left">
-                {/* Header */}
+                {/* Header Section */}
                 <div className="mb-16">
                     <ScrollReveal direction="up">
-                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                            Careers
-                        </span>
-                        <h2 className="text-[36px] md:text-[44px] font-bold tracking-tight text-slate-900 mb-2 leading-tight">
-                            Open Positions
-                        </h2>
-                        <p className="text-slate-600 font-semibold text-sm md:text-base tracking-wide max-w-xl">
-                            Explore open roles across teams at TechInvention. Click on any position to see more details.
-                        </p>
+                        {/* Open Positions Section */}
+                        <div className="mb-12">
+                            <h2 className="text-[32px] md:text-[40px] font-medium tracking-wide mb-4 text-slate-900">
+                                Open Positions
+                            </h2>
+                            <h3 className="text-xl md:text-2xl text-slate-700 font-medium mb-4">
+                                Explore opportunities across functions
+                            </h3>
+                            <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
+                                TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs.
+                            </p>
+                        </div>
+
+                        {/* Join Our Team Section */}
+                        <div className="mb-10">
+                            <h2 className="text-[28px] md:text-[32px] font-medium tracking-wide mb-4 text-slate-900">
+                                Join Our Team
+                            </h2>
+                            <h3 className="text-lg md:text-xl text-slate-700 font-medium mb-4">
+                                Begin your next chapter with impact
+                            </h3>
+                            <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
+                                If you are looking for a career that challenges you, develops you and connects your work to a larger purpose, TechInvention is the place to grow.
+                            </p>
+                        </div>
                     </ScrollReveal>
                 </div>
 

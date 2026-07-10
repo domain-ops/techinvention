@@ -61,32 +61,57 @@ const ContactSection = () => {
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
                 {/* 2. Contact Form Section */}
-                <div className="mb-24">
-                    <div className="mb-12">
-                        <ScrollReveal direction="up">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Get In Touch
-                            </span>
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-4">
-                                <SplitTitle title="Contact Form" />
-                            </h2>
-                            <p className="text-black font-medium text-[16px] md:text-[18px] max-w-2xl leading-relaxed text-left">
-                                Send us a message and our team will get back to you as soon as possible.
-                            </p>
-                        </ScrollReveal>
-                    </div>
+                <div id="contact-form" className="mb-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden shadow-lg border border-slate-200/60">
 
-                    <ScrollReveal direction="up">
-                        <div className="bg-white rounded-none p-8 md:p-12 border border-slate-200/60 shadow-sm max-w-4xl">
+                        {/* Left: Info Panel */}
+                        <div className="lg:col-span-5 bg-[#1955A6] text-white p-10 md:p-14 flex flex-col justify-between">
+                            <div>
+                                <span className="text-white font-bold tracking-[0.35em] text-[11px] mb-4 block uppercase">Get In Touch</span>
+                                <h2 className="text-[26px] md:text-[32px] font-bold leading-snug mb-6 text-white">
+                                    Let's Start the Conversation
+                                </h2>
+                                <p className="text-slate-300 text-[15px] md:text-[16px] leading-relaxed mb-10">
+                                    Send us your enquiry and the appropriate team will get back to you at the earliest. Whether your interest lies in products, partnerships, technology, manufacturing, advisory or training support, we look forward to connecting with you.
+                                </p>
+                            </div>
+
+                            {/* Contact details */}
+                            <div className="space-y-5 mt-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                        <MapPin className="w-4 h-4 text-white" />
+                                    </div>
+                                    <p className="text-slate-300 text-sm leading-relaxed">
+                                        #1004, The Summit Business Park, Andheri East, Mumbai 400093. India
+                                    </p>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                        <Phone className="w-4 h-4 text-white" />
+                                    </div>
+                                    <a href="tel:+912240052123" className="text-slate-300 text-sm hover:text-white transition-colors">+91 2240052123</a>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                        <Mail className="w-4 h-4 text-white" />
+                                    </div>
+                                    <a href="mailto:connect@techinvention.biz" className="text-slate-300 text-sm hover:text-white transition-colors">connect@techinvention.biz</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right: Contact Form */}
+                        <div className="lg:col-span-7 bg-white p-10 md:p-14">
                             <AnimatePresence mode="wait">
                                 {submitted ? (
-                                    <motion.div 
+                                    <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0 }}
-                                        className="text-center py-12 flex flex-col items-center gap-4"
+                                        className="text-center py-16 flex flex-col items-center gap-4 h-full justify-center"
                                     >
-                                        <div className="w-16 h-16 rounded-full bg-brand-secondary/10 text-brand-secondary flex items-center justify-center mb-2">
+                                        <div className="w-16 h-16 rounded-full bg-[#0d2a55]/10 text-[#0d2a55] flex items-center justify-center mb-2">
                                             <Send className="w-6 h-6" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900">Message Received!</h4>
@@ -95,80 +120,86 @@ const ContactSection = () => {
                                         </p>
                                     </motion.div>
                                 ) : (
-                                    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                            <div className="flex flex-col gap-2">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
-                                                <input 
-                                                    type="text" 
-                                                    name="name" 
-                                                    required 
-                                                    value={formData.name} 
-                                                    onChange={handleChange}
-                                                    placeholder="e.g. John Doe"
-                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
-                                                />
-                                            </div>
-                                            <div className="flex flex-col gap-2">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
-                                                <input 
-                                                    type="email" 
-                                                    name="email" 
-                                                    required 
-                                                    value={formData.email} 
-                                                    onChange={handleChange}
-                                                    placeholder="e.g. john@company.com"
-                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                            <div className="flex flex-col gap-2">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation</label>
-                                                <input 
-                                                    type="text" 
-                                                    name="organisation" 
-                                                    value={formData.organisation} 
-                                                    onChange={handleChange}
-                                                    placeholder="e.g. Acme Biotech"
-                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
-                                                />
-                                            </div>
-                                            <div className="flex flex-col gap-2">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
-                                                <select 
-                                                    name="enquiryType" 
-                                                    required 
-                                                    value={formData.enquiryType} 
-                                                    onChange={handleChange}
-                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50 cursor-pointer"
-                                                >
-                                                    <option value="Business Development">Business Development</option>
-                                                    <option value="Advisory & Consulting">Advisory & Consulting</option>
-                                                    <option value="General Support">General Support</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex flex-col gap-2">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Message *</label>
-                                            <textarea 
-                                                name="message" 
-                                                required 
-                                                rows={5}
-                                                value={formData.message} 
+                                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                                        {/* Full Name */}
+                                        <div className="flex flex-col gap-1.5">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                required
+                                                value={formData.name}
                                                 onChange={handleChange}
-                                                placeholder="Describe your enquiry here..."
-                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-300 text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none resize-none focus:bg-white focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/50"
+                                                placeholder="e.g. John Doe"
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                             />
                                         </div>
 
-                                        <motion.button 
-                                            type="submit" 
+                                        {/* Email Address */}
+                                        <div className="flex flex-col gap-1.5">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                required
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                placeholder="e.g. john@company.com"
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                            />
+                                        </div>
+
+                                        {/* Organisation */}
+                                        <div className="flex flex-col gap-1.5">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation</label>
+                                            <input
+                                                type="text"
+                                                name="organisation"
+                                                value={formData.organisation}
+                                                onChange={handleChange}
+                                                placeholder="e.g. Acme Biotech"
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                            />
+                                        </div>
+
+                                        {/* Enquiry Type */}
+                                        <div className="flex flex-col gap-1.5">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
+                                            <select
+                                                name="enquiryType"
+                                                required
+                                                value={formData.enquiryType}
+                                                onChange={handleChange}
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
+                                            >
+                                                <option value="Business Development">Business Development</option>
+                                                <option value="Advisory & Consulting">Advisory & Consulting</option>
+                                                <option value="General Support">General Support</option>
+                                                <option value="Training Enquiry">Training Enquiry</option>
+                                                <option value="Partnership">Partnership</option>
+                                            </select>
+                                        </div>
+
+                                        {/* Message */}
+                                        <div className="flex flex-col gap-1.5">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Message *</label>
+                                            <textarea
+                                                name="message"
+                                                required
+                                                rows={4}
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                placeholder="Describe your enquiry here..."
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none resize-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                            />
+                                        </div>
+
+                                        {/* Submit */}
+                                        <motion.button
+                                            type="submit"
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
-                                            className="group w-full md:w-fit flex items-center justify-center gap-3 bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-brand-primary/95 hover:shadow-lg transition-all duration-300"
+                                            className="group w-full flex items-center justify-center gap-3 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white px-8 py-4 rounded-xl font-bold text-[13px] tracking-[0.1em] uppercase transition-all duration-300 shadow-md hover:shadow-lg"
                                         >
                                             <span>Send Message</span>
                                             <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -177,84 +208,90 @@ const ContactSection = () => {
                                 )}
                             </AnimatePresence>
                         </div>
-                    </ScrollReveal>
+
+                    </div>
                 </div>
 
                 {/* 3. Location Section */}
                 <div className="mb-24">
-                    <div className="mb-12">
+                    <div className="mb-10">
                         <ScrollReveal direction="up">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Find Us
-                            </span>
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-4">
-                                <SplitTitle title="Location & Address" />
+                            <h2 className="text-[24px] md:text-[30px] font-bold text-slate-900 mb-3">
+                                Location &amp; Address
                             </h2>
-                            <p className="text-black font-medium text-[16px] md:text-[18px] max-w-2xl leading-relaxed text-left">
-                                Visit our corporate office or contact us directly via phone and email.
+                            <p className="text-slate-600 text-[15px] md:text-[16px] max-w-3xl leading-relaxed">
+                                Visit our corporate office or connect with us directly for partnership discussions, product enquiries, strategic collaborations and institutional communication.
                             </p>
                         </ScrollReveal>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                        {/* Map Container */}
-                        <div className="lg:col-span-7 h-[400px] lg:h-auto min-h-[350px] rounded-none overflow-hidden shadow-sm border border-slate-200/60">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9048386186835!2d72.86241037562846!3d19.11183355084931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83c2afc12fb%3A0x6e3c0f64b9fc0724!2sThe%20Summit%20Business%20Bay!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" 
-                                width="100%" 
-                                height="100%" 
-                                style={{ border: 0 }} 
-                                allowFullScreen 
-                                loading="lazy" 
+                    {/* Map + Details Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden border border-slate-200/60 shadow-md">
+
+                        {/* Map */}
+                        <div className="lg:col-span-7 h-[380px] lg:h-auto min-h-[380px]">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3872!2d73.0078!3d19.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ebe98cda4b79%3A0x9f6f3e35b7acfcf4!2sMahape%20MIDC%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0, display: 'block' }}
+                                allowFullScreen
+                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
+                            />
                         </div>
 
-                        {/* Address and details */}
-                        <div className="lg:col-span-5 flex flex-col gap-4 justify-between">
-                            <ScrollReveal direction="up" delay={0.1} className="h-full">
-                                <div className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
-                                    <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
-                                        <MapPin className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Corporate Office</h4>
-                                        <p className="text-slate-600 text-[14px] font-medium leading-relaxed">
-                                            #1004, The Summit Business Park,<br />
-                                            Off WEH Metro Station, Andheri Kurla Road,<br />
-                                            Andheri East, Mumbai 400093. INDIA
-                                        </p>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
+                        {/* Details Panel */}
+                        <div className="lg:col-span-5 bg-white flex flex-col divide-y divide-slate-100">
 
-                            <ScrollReveal direction="up" delay={0.2} className="h-full">
-                                <div className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
-                                    <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
-                                        <Phone className="w-5 h-5" />
+                            {/* Row 1: Two addresses */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+                                {/* Address 1 */}
+                                <div className="p-6 flex flex-col gap-2">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                        <h4 className="text-[13px] font-bold text-slate-900 leading-snug">Corporate Office &amp; Manufacturing Site</h4>
                                     </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Phone Inquiry</h4>
-                                        <a href="tel:+912240052123" className="text-slate-600 hover:text-brand-primary text-[14px] font-medium leading-relaxed transition-colors block">
-                                            +91 2240052123
-                                        </a>
-                                    </div>
+                                    <p className="text-slate-600 text-[13px] leading-relaxed">
+                                        Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
+                                    </p>
                                 </div>
-                            </ScrollReveal>
+                                {/* Address 2 */}
+                                <div className="p-6 flex flex-col gap-2">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                        <h4 className="text-[13px] font-bold text-slate-900 leading-snug">Bio-Innovation Centre (HORIZON)</h4>
+                                    </div>
+                                    <p className="text-slate-600 text-[13px] leading-relaxed">
+                                        EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
+                                    </p>
+                                </div>
+                            </div>
 
-                            <ScrollReveal direction="up" delay={0.3} className="h-full">
-                                <div className="bg-white rounded-none p-8 border border-slate-200/60 shadow-sm flex items-start gap-5 h-full">
-                                    <div className="w-12 h-12 rounded-full bg-brand-primary/5 text-brand-primary flex items-center justify-center shrink-0">
-                                        <Mail className="w-5 h-5" />
+                            {/* Row 2: Phone & Email */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+                                {/* Phone */}
+                                <div className="p-6 flex flex-col gap-1.5">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <Phone className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                        <h4 className="text-[13px] font-bold text-slate-900">Phone Enquiries</h4>
                                     </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Email Address</h4>
-                                        <a href="mailto:connect@techinvention.biz" className="text-slate-600 hover:text-brand-primary text-[14px] font-medium leading-relaxed transition-colors block">
-                                            connect@techinvention.biz
-                                        </a>
-                                    </div>
+                                    <a href="tel:+912240052123" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
+                                        +91 22 4005 2123
+                                    </a>
                                 </div>
-                            </ScrollReveal>
+                                {/* Email */}
+                                <div className="p-6 flex flex-col gap-1.5">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                        <h4 className="text-[13px] font-bold text-slate-900">Email Address</h4>
+                                    </div>
+                                    <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium">
+                                        connect@techinvention.biz
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

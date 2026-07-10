@@ -75,10 +75,11 @@ export default function GmpCTA() {
                                 Connect With Us
                             </span>
                             <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6">
-                                <SplitTitle title="Training Enquiry & Registration" />
+                                <SplitTitle title="Explore Training Opportunities" />
+                                <span className="block text-slate-900 mt-2 font-normal leading-snug">with TechInvention</span>
                             </h2>
                             <p className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed mb-8">
-                                Interested in booking a seat, setting up a corporate batch, or designing custom validation modules? Send us an enquiry. Our training coordinators will get back to you within 24 hours.
+                                Write to connect@techinvention.biz to learn more about our training programs and upcoming initiatives.
                             </p>
                         </ScrollReveal>
 
@@ -91,8 +92,8 @@ export default function GmpCTA() {
                                     </div>
                                     <div>
                                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Us</h4>
-                                        <a href="mailto:academy@techinvention.biz" className="text-slate-800 font-bold text-sm hover:text-[#1955A6] transition-colors mt-0.5 block">
-                                            academy@techinvention.biz
+                                        <a href="mailto:connect@techinvention.biz" className="text-slate-800 font-bold text-sm hover:text-[#1955A6] transition-colors mt-0.5 block">
+                                            connect@techinvention.biz
                                         </a>
                                     </div>
                                 </div>

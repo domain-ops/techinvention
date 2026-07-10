@@ -4,9 +4,9 @@ import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../../components/Common/SplitTitle';
 import { motion } from 'framer-motion';
 
-// Using the local CEO portrait and another image for the second profile
-import ceoPortrait from '../../../../assets/images/ceo/syed_ahmed.jpg';
-import elenaPortrait from '../../../../assets/images/testimonial_1.png';
+// Using the local leadership portraits
+import ceoPortrait from '../../../../assets/images/leadership/syed_ahmed.jpg';
+import elenaPortrait from '../../../../assets/images/leadership/nazneen_upscaled.png';
 import Stats from '../Stats';
 
 const logoDNA = "/techinvention/TechInvention-gif.gif";
@@ -39,11 +39,8 @@ const About = () => {
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
                     <ScrollReveal direction="up" className="max-w-3xl">
-                        <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
-                            {t('about.leadership.title') as string || "Our Leadership"}
-                        </span>
-                        <h2 className="text-[36px] font-medium tracking-wide whitespace-nowrap">
-                            <SplitTitle title={t('about.leadership.tagline') as string || "Lorem Ipsum"} />
+                        <h2 className="text-[36px] font-medium tracking-wide whitespace-nowrap uppercase">
+                            <SplitTitle title={t('about.leadership.title') as string || "Our Leadership"} />
                         </h2>
                     </ScrollReveal>
 

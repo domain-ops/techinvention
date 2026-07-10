@@ -21,10 +21,10 @@ const OneHealth = () => {
     const translatedSlides = t('oneHealth.slides');
 
     const fallbackSlides = [
-        { title: "Research & Development", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "R&D" },
         { title: "Strategic Advisory & Tech Consulting", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Consulting" },
-        { title: "In & Out Licensing", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Licensing" },
-        { title: "Scale-up and Tech transfer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Scale-up" }
+        { title: "Research and Development (R&D)", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "R&D" },
+        { title: "Licensing and Access", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Licensing" },
+        { title: "Commercial-Scale Manufacturing", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Manufacturing" }
     ];
 
     const finalSlidesData = Array.isArray(translatedSlides) && translatedSlides.length > 0
@@ -32,10 +32,10 @@ const OneHealth = () => {
         : fallbackSlides;
 
     const slides = [
-        { ...(finalSlidesData[0] || {}), title: finalSlidesData[0]?.title || "Research & Development", image: ecoImg, tag: finalSlidesData[0]?.tag || "R&D" },
-        { ...(finalSlidesData[1] || {}), title: finalSlidesData[1]?.title || "Strategic Advisory & Tech Consulting", image: surveillanceImg, tag: finalSlidesData[1]?.tag || "Consulting" },
-        { ...(finalSlidesData[2] || {}), title: finalSlidesData[2]?.title || "In & Out Licensing", image: infraImg, tag: finalSlidesData[2]?.tag || "Licensing" },
-        { ...(finalSlidesData[3] || {}), title: finalSlidesData[3]?.title || "Scale-up and Tech transfer", image: innovationImg, tag: finalSlidesData[3]?.tag || "Scale-up" },
+        { ...(finalSlidesData[0] || {}), title: finalSlidesData[0]?.title || "Strategic Advisory & Tech Consulting", image: "/techinvention/Strategic.jpg", tag: finalSlidesData[0]?.tag || "Consulting" },
+        { ...(finalSlidesData[1] || {}), title: finalSlidesData[1]?.title || "Research and Development (R&D)", image: "/techinvention/Research.jpg", tag: finalSlidesData[1]?.tag || "R&D" },
+        { ...(finalSlidesData[2] || {}), title: finalSlidesData[2]?.title || "Licensing and Access", image: "/techinvention/Licensing.jpg", tag: finalSlidesData[2]?.tag || "Licensing" },
+        { ...(finalSlidesData[3] || {}), title: finalSlidesData[3]?.title || "Commercial-Scale Manufacturing", image: "/techinvention/Commercial.jpg", tag: finalSlidesData[3]?.tag || "Manufacturing" },
     ];
 
     return (

@@ -23,9 +23,7 @@ const TeamSection = () => {
                                 <SplitTitle title={t('about.leadership.team.tagline')} />
                             </h2>
                         </div>
-                        <p className="text-[#475569] text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
-                            {t('about.leadership.team.cta')}
-                        </p>
+
                     </ScrollReveal>
                 </div>
             </div>

@@ -1,94 +1,68 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Beaker, Dna, Activity } from 'lucide-react';
-import heroBg from '../../../assets/images/rnd/rnd_hero_bg.png';
+import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '../../../context/LanguageContext';
+import ScrollReveal from '../../../components/Common/ScrollReveal';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
+import techInventionVideo from '../../../assets/videos/TechInvention-Video.mp4';
 
-const LandingHero = () => {
+export default function LandingHero() {
+    const { t } = useLanguage();
+
+    const handleScroll = () => {
+        const target = document.getElementById('overview-band');
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <section className="relative w-full min-h-[80vh] lg:h-screen lg:min-h-[600px] lg:max-h-[900px] flex items-center justify-center overflow-hidden font-sans bg-white pt-24 pb-16 lg:pt-0 lg:pb-0">
-            {/* Background Image & Overlays */}
-            <div className="absolute inset-0 z-0 opacity-10">
-                <img src={heroBg} 
-                    alt="R&D Innovation" 
-                    className="w-full h-full object-cover"
-                />
-            </div>
-            
-            <div className="absolute inset-0 z-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-brand-secondary/5" />
+        <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-white pt-32 pb-16 lg:pt-40 lg:pb-24 font-sans">
+            {/* Ambient background decoration - subtle light glows */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#1955A6]/5 blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] rounded-full bg-[#5C7625]/5 blur-[100px] pointer-events-none" />
 
-            {/* Main Content Grid */}
-            <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mt-8 lg:mt-16">
+            <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full">
                 
-                {/* Left: Typography & Intro */}
-                <motion.div 
-                    initial={{ opacity: 0, x: -40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="lg:col-span-7"
-                >
-                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 backdrop-blur-md mb-6 lg:mb-8">
-                        <div className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
-                        <span className="text-brand-primary text-xs font-bold tracking-[0.2em] uppercase">Research & Development</span>
-                    </div>
-                    
-                    <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tighter text-brand-content mb-6 leading-[1.15]">
-                        Pioneering the <br className="hidden md:block" />
-                        <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
-                            Future of Global Health
+                {/* Text Section - Left-aligned at the top */}
+                <div className="w-full text-left mb-12 lg:mb-16">
+                    <ScrollReveal direction="up">
+                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-4 block uppercase">
+                            Research & Innovation
                         </span>
-                    </h1>
-                    
-                    <p className="text-base md:text-lg text-gray-600 font-light max-w-2xl leading-relaxed mb-8 lg:mb-10 border-l-4 border-brand-secondary/50 pl-6 py-2">
-                        Leveraging cutting-edge science and our dedicated HORIZON innovation platform to develop accessible vaccines and rapid diagnostics for emerging markets.
-                    </p>
+                        <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] font-medium tracking-wide mb-6 leading-[1.15] text-[#13325B]">
+                            <SplitTitle title="End-to-End R&D Ecosystem" />
+                        </h1>
+                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">
+                            TechInvention's state-of-the-art R&D facility, the <strong className="text-[#13325B]">High-impact One Health Research & Innovation ZONe (HORIZON)</strong>, is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for <strong className="text-[#13325B]">priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.</strong>
+                        </p>
+                    </ScrollReveal>
 
-                    <div className="flex flex-wrap items-center gap-4 lg:gap-6">
-                        <button className="px-6 py-3 lg:px-8 lg:py-4 bg-brand-primary text-white text-sm lg:text-base font-medium rounded-full hover:bg-brand-primary/90 transition-all shadow-lg hover:shadow-brand-primary/30">
-                            Explore Platforms
-                        </button>
-                        <button className="group px-6 py-3 lg:px-8 lg:py-4 bg-white text-brand-primary text-sm lg:text-base font-medium rounded-full border border-brand-primary/20 hover:bg-gray-50 shadow-sm transition-all flex items-center gap-2">
-                            Partner With Us
-                        </button>
-                    </div>
-                </motion.div>
 
-                {/* Right: Glassmorphic Highlights Card */}
+                </div>
+
+                {/* Visual Section - Large stacked image below */}
                 <motion.div 
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                    className="lg:col-span-5 relative"
+                    initial={{ opacity: 0, scale: 0.98, y: 30 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    className="w-full"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 rounded-3xl transform rotate-3 scale-105 blur-xl hidden lg:block" />
-                    
-                    <div className="relative bg-white/90 backdrop-blur-xl border border-gray-100 rounded-3xl p-6 lg:p-8 shadow-2xl">
-                        <div className="text-brand-content font-bold text-xl mb-6 lg:mb-8 flex items-center justify-between pb-4 border-b border-gray-100">
-                            R&D Capabilities
-                            <Activity className="text-brand-primary w-6 h-6" />
-                        </div>
-                        
-                        <div className="space-y-4">
-                            {[
-                                { icon: <Dna className="w-5 h-5 lg:w-6 lg:h-6 text-brand-secondary" />, title: 'Molecular Diagnostics', desc: 'Rapid, point-of-care detection systems.' },
-                                { icon: <Beaker className="w-5 h-5 lg:w-6 lg:h-6 text-brand-primary" />, title: 'Vaccine Innovation', desc: 'Preclinical to Phase III clinical pipelines.' },
-                            ].map((item, i) => (
-                                <div key={i} className="group flex gap-4 lg:gap-5 p-4 lg:p-5 rounded-2xl bg-gray-50 hover:bg-white transition-all border border-transparent hover:border-brand-primary/20 hover:shadow-md">
-                                    <div className="flex-shrink-0 mt-1 p-2 lg:p-3 bg-white rounded-xl shadow-sm group-hover:scale-110 transition-transform">
-                                        {item.icon}
-                                    </div>
-                                    <div>
-                                        <div className="text-brand-content font-bold text-base lg:text-lg mb-1 tracking-wide">{item.title}</div>
-                                        <p className="text-gray-500 text-xs lg:text-sm font-light leading-relaxed">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="relative rounded-none overflow-hidden border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-slate-50 p-2 md:p-3">
+                        <div className="absolute inset-0 bg-[#1955A6]/2 z-10 pointer-events-none rounded-none" />
+                        <video 
+                            src={techInventionVideo} 
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
+                            className="w-full h-auto min-h-[300px] md:min-h-[480px] lg:max-h-[640px] object-cover rounded-none"
+                        />
                     </div>
                 </motion.div>
-                
+
             </div>
         </section>
     );
-};
-
-export default LandingHero;
+}

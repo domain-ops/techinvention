@@ -5,9 +5,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import CareersHero from './sections/CareersHero';
 import LifeAtTechInvention from './sections/LifeAtTechInvention';
+import WhyJoinUs from './sections/WhyJoinUs';
+import WhoWeLookFor from './sections/WhoWeLookFor';
+import EmployeeVoices from './sections/EmployeeVoices';
 import CurrentOpenings from './sections/CurrentOpenings';
 import ApplyForm from './sections/ApplyForm';
-import EmployeeTestimonials from './sections/EmployeeTestimonials';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,17 +56,23 @@ export default function CareersPage() {
             {/* 2. Life at TechInvention */}
             <LifeAtTechInvention />
 
-            {/* 3. Current Openings */}
+            {/* 3. Why Join Us */}
+            <WhyJoinUs />
+
+            {/* 4. Who We Look For */}
+            <WhoWeLookFor />
+
+            {/* 5. Employee Voices */}
+            <EmployeeVoices />
+
+            {/* 6. Current Openings */}
             <CurrentOpenings onSelectJob={handleSelectJob} />
 
-            {/* 4. Apply Now Form (conditionally rendered/toggled when a job is clicked) */}
+            {/* 7. Apply Now Form (conditionally rendered/toggled when a job is clicked) */}
             <ApplyForm 
                 selectedJobTitle={selectedJob} 
                 onCancel={handleCancelApplication} 
             />
-
-            {/* 5. Employee Testimonials */}
-            <EmployeeTestimonials />
         </div>
     );
 }

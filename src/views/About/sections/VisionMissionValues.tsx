@@ -17,23 +17,18 @@ const VisionMissionValues = () => {
     const values = [
         {
             number: "01",
-            title: "LOREM IPSUM DOLOR SIT AMET",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Integrity",
+            desc: "We act with honesty, transparency, and accountability in everything we do."
         },
         {
             number: "02",
-            title: "CONSECTETUR ADIPISCING ELIT",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Inclusivity",
+            desc: "We believe in creating equitable opportunities and fostering diverse collaborations across borders."
         },
         {
             number: "03",
-            title: "SED DO EIUSMOD TEMPOR",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            number: "04",
-            title: "INCIDIDUNT UT LABORE ET",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title: "Ingenuity",
+            desc: "We drive innovation through bold thinking and practical problem-solving, always focused on impactful outcomes."
         }
     ];
 
@@ -80,17 +75,19 @@ const VisionMissionValues = () => {
                         <div className="relative z-10 flex flex-col h-full">
                             <div>
                                 <span className="inline-block py-1.5 px-4 rounded-full bg-brand-primary/10 text-brand-primary text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
-                                    {t('about.vision.title') || "Our Vision"}
+                                    Our Vision
                                 </span>
                                 
                                 <h3 className="text-3xl md:text-[40px] lg:text-[46px] font-medium leading-[1.15] text-slate-900 mb-8 max-w-[95%]">
-                                    {t('about.vision.headline')?.replace('{future}', t('about.vision.future') as string) || "Shaping the Future of Global Health"}
+                                    Enabling One Health<br/>through Bio-innovation
                                 </h3>
                             </div>
                             
-                            <p className="text-lg text-black font-medium leading-relaxed max-w-xl mt-auto">
-                                {t('about.vision.desc')}
-                            </p>
+                            <ul className="text-lg text-black font-medium leading-relaxed max-w-xl mt-auto list-disc pl-6 space-y-2">
+                                <li>Affordable</li>
+                                <li>Accessible</li>
+                                <li>Acceptable</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -105,17 +102,13 @@ const VisionMissionValues = () => {
                         <div className="relative z-10 flex flex-col h-full">
                             <div>
                                 <span className="inline-block py-1.5 px-4 rounded-full bg-white/20 text-white text-[11px] font-bold tracking-[0.2em] uppercase mb-8 backdrop-blur-sm">
-                                    {t('about.mission.title') || "Our Mission"}
+                                    Our Mission
                                 </span>
                                 
                                 <h3 className="text-3xl md:text-[34px] lg:text-[40px] font-medium leading-[1.2] mb-6 pr-8 text-white">
-                                    {t('about.mission.headline')?.replace('{equityGap}', t('about.mission.equityGap') as string) || "Bridging the equity gap"}
+                                    Access to Essential Vaccines and Novel Biologics Should Not Only be the Privilege of Just the Affording Few.
                                 </h3>
                             </div>
-                            
-                            <p className="text-white/85 text-lg leading-relaxed mt-auto pt-8">
-                                {t('about.mission.desc')}
-                            </p>
                         </div>
                     </div>
 
@@ -123,17 +116,12 @@ const VisionMissionValues = () => {
                     <div className="lg:col-span-12 mt-24 md:mt-32 relative">
 
                         <div className="mb-16 text-left relative z-10">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Core Principles
-                            </span>
-                            <div className="mb-4">
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
-                                    <SplitTitle title={t('about.values.title') || "Our Values"} />
-                                </h2>
-                            </div>
+                            <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide uppercase">
+                                <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Values</span>
+                            </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-20 relative z-10">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative z-10">
                             {values.map((val, idx) => (
                                 <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
                                     <div className="flex gap-8 items-start">

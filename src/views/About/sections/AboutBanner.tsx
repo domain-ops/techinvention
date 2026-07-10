@@ -28,7 +28,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
     let defaultSubtitle = subtitle;
     if (!subtitle) {
         if (pageTitle.toLowerCase().includes('about')) {
-            defaultSubtitle = "We design, build, and deliver advanced bioprocesses, diagnostics, and vaccine platforms to secure equitable access to life-critical medical countermeasures.";
+            defaultSubtitle = "TechInvention is an innovation-led biotech company building integrated pathways from research and technology access to scale-up and GMP manufacturing - with a clear focus on global advancing vaccine access";
         } else if (pageTitle.toLowerCase().includes('member') || pageTitle.toLowerCase().includes('association')) {
             defaultSubtitle = "Collaborating with leading global health organisations, pharmaceutical associations, and research bodies to advance biotechnology innovation.";
         } else {
@@ -71,7 +71,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
                 {image ? (
                     /* Traditional Banner with Image Overlay */
                     <div className="text-left w-full">
-                        <h1 className="text-4xl sm:text-5xl md:text-[56px] font-medium tracking-wide leading-[1.15] text-white">
+                        <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-medium tracking-wide leading-[1.15] text-white">
                             {pageTitle}
                         </h1>
                     </div>
@@ -79,7 +79,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
                     /* Center-aligned layout with conditional embedded half-width video player below */
                     <div className="flex flex-col items-center text-center w-full">
                         <div className="max-w-3xl mx-auto flex flex-col items-center">
-                            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-medium tracking-wide leading-[1.15] text-slate-950 font-sans mb-6 text-center">
+                            <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[56px] font-medium tracking-wide leading-[1.15] text-slate-950 font-sans mb-6 text-center">
                                 <SplitTitle title={pageTitle} />
                             </h1>
                             

@@ -47,10 +47,7 @@ const CTASection = () => {
                             <span className="text-brand-secondary text-[#5C7625]">{t('cta.titleHighlight')}</span>
                         </h2>
 
-                        {/* Description */}
-                        <p className="text-black text-[18px] max-w-2xl mb-8 leading-relaxed font-medium tracking-tight text-center">
-                            {t('cta.desc')}
-                        </p>
+
 
                         {/* Premium Button */}
                         <motion.button

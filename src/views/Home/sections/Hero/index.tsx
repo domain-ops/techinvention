@@ -69,14 +69,13 @@ const Hero = () => {
     const { t } = useLanguage();
     const [activeWordIndex, setActiveWordIndex] = useState(0);
 
-    const brandName = t('common.brandName') as string || "TechInvention";
+    const brandName = "Vaccines";
 
-    const rotatingWords = Array.isArray(t('hero.rotatingWords')) ? t('hero.rotatingWords') as string[] : [
-        "Bio-Innovation",
-        "Technology",
-        "Healthcare",
+    const rotatingWords = [
+        "Strategy",
         "Research",
-        "Excellence"
+        "Licensing",
+        "Manufacturing"
     ];
 
     // Unified timer to rotate background and words in sync

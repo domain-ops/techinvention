@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import officeImg1 from '../../../assets/images/About-us-Offices-Demophorius-01.webp';
-import officeImg2 from '../../../assets/images/About-us-Offices-Demophorius-02.webp';
+import officeImg1 from '../../../assets/images/about-us-1.jpg';
+import officeImg2 from '../../../assets/images/about-us-2.jpg';
 
 const OfficeEnvironment = () => {
     return (
