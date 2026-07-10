@@ -64,7 +64,7 @@ const BoardOfDirectors = () => {
                                 <div className="relative w-full h-full">
                                     {/* Image */}
                                     <img 
-                                        src={member.image.src ? member.image.src : member.image} 
+                                        src={(member.image as any).src ? (member.image as any).src : member.image} 
                                         alt={member.name}
                                         className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                                     />

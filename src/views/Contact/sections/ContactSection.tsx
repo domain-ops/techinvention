@@ -250,9 +250,9 @@ const ContactSection = () => {
                                 <div className="p-6 flex flex-col gap-2">
                                     <div className="flex items-center gap-2 mb-1">
                                         <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-slate-900 leading-snug">Corporate Office &amp; Manufacturing Site</h4>
+                                        <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Corporate Office &amp; Manufacturing Site</h4>
                                     </div>
-                                    <p className="text-slate-600 text-[13px] leading-relaxed">
+                                    <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
                                         Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
                                     </p>
                                 </div>
@@ -260,9 +260,9 @@ const ContactSection = () => {
                                 <div className="p-6 flex flex-col gap-2">
                                     <div className="flex items-center gap-2 mb-1">
                                         <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-slate-900 leading-snug">Bio-Innovation Centre (HORIZON)</h4>
+                                        <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Bio-Innovation Centre (HORIZON)</h4>
                                     </div>
-                                    <p className="text-slate-600 text-[13px] leading-relaxed">
+                                    <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
                                         EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
                                     </p>
                                 </div>
@@ -274,7 +274,7 @@ const ContactSection = () => {
                                 <div className="p-6 flex flex-col gap-1.5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <Phone className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-slate-900">Phone Enquiries</h4>
+                                        <h4 className="text-[13px] font-bold text-[#1a9090]">Phone Enquiries</h4>
                                     </div>
                                     <a href="tel:+912240052123" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
                                         +91 22 4005 2123
@@ -284,7 +284,7 @@ const ContactSection = () => {
                                 <div className="p-6 flex flex-col gap-1.5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-slate-900">Email Address</h4>
+                                        <h4 className="text-[13px] font-bold text-[#1a9090]">Email Address</h4>
                                     </div>
                                     <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium">
                                         connect@techinvention.biz

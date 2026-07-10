@@ -80,7 +80,7 @@ export default function FacilityFeatures() {
                         return (
                             <motion.div 
                                 key={idx} 
-                                variants={itemVariants}
+                                variants={itemVariants as any}
                                 className="flex flex-col items-start"
                             >
                                 {/* Circular Icon Container */}

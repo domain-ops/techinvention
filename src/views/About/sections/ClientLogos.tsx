@@ -80,7 +80,7 @@ const ClientLogos = () => {
                                 className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
                             >
                                 <img 
-                                    src={src?.src || src} 
+                                    src={(src as any)?.src || src} 
                                     alt="Client Logo" 
                                     className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
                                 />
@@ -103,7 +103,7 @@ const ClientLogos = () => {
                                 className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
                             >
                                 <img 
-                                    src={src?.src || src} 
+                                    src={(src as any)?.src || src} 
                                     alt="Client Logo" 
                                     className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
                                 />
