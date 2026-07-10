@@ -57,7 +57,7 @@ const MemberLogos = () => {
                         >
                             <motion.div
                                 whileHover={{ scale: 1.05, y: -5 }}
-                                className="bg-slate-50/50 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 rounded-none p-8 flex items-center justify-center border border-slate-100 hover:border-brand-primary/20 hover:shadow-xl hover:shadow-brand-primary/5 aspect-square"
+                                className="bg-white grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 rounded-md p-4 flex items-center justify-center border border-gray-200 hover:border-brand-primary/20 aspect-square"
                             >
                                 <img loading="lazy"
                                     src={member.logo}

@@ -4,11 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../../../context/LanguageContext';
 import { MagneticText } from '../../../../components/ui/morphing-cursor';
 
-import banner1 from '../../../../assets/images/banner-imge-1.jpg';
-import banner2 from '../../../../assets/images/banner-imge-2.jpg';
-import banner3 from '../../../../assets/images/banner-imge-3.jpeg';
+import banner1 from '../../../../../public/banner-1.png';
+import banner2 from '../../../../../public/banner-2.png';
 
-const bgImages = [banner1, banner2, banner3];
+const bgImages = [banner1, banner2];
 
 // Reusable Staggered Text Reveal Component with Mask (Overflow Hidden)
 const RevealText = ({ text, delay = 0, className = "" }: { text: string, delay?: number, className?: string }) => {
@@ -101,32 +100,19 @@ const Hero = () => {
                     >
                         <img src={bgImages[activeWordIndex % bgImages.length]}
                             alt="Background"
-                            className="w-full h-full object-cover opacity-100"
+                            className="w-full h-full object-cover object-top opacity-100"
                         />
                     </motion.div>
                 </AnimatePresence>
 
-                {/* Dark overlays for text visibility */}
-                <div className="absolute inset-0 bg-black/40 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-10" />
+                {/* Removed heavy dark overlays per user request */}
+                <div className="absolute inset-0 bg-black/30 z-10" />
             </div>
 
-            {/* Brightness Overlay */}
-            <div className="absolute inset-0 z-10 bg-black/10 pointer-events-none" />
+            {/* Brightness Overlay Removed */}
+            
+            {/* Animated medical orbs Removed to prevent blurriness */}
 
-            {/* Animated medical orbs */}
-            <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
-                <motion.div
-                    animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/15 rounded-full blur-[100px] mix-blend-multiply"
-                />
-                <motion.div
-                    animate={{ y: [0, 40, 0], x: [0, -20, 0] }}
-                    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-[100px] mix-blend-multiply"
-                />
-            </div>
             {/* Hero Main Content */}
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 flex flex-col justify-center items-center text-center pt-24 pb-16">
                 {/* Main Headline (Stacks vertically on mobile, horizontally centered on desktop) */}

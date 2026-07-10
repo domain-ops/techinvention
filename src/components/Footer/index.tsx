@@ -55,37 +55,37 @@ const Footer = () => {
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12 md:w-3/4">
                         <div>
-                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <FooterLink href="/rnd/vaccines">{t('solutions.items.0.title')}</FooterLink>
+                                    <FooterLink href="/">Home</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/rnd/diagnostics">{t('solutions.items.1.title')}</FooterLink>
+                                    <FooterLink href="/about">Company</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/rnd">{t('solutions.items.2.title')}</FooterLink>
+                                    <FooterLink href="/rnd">R&amp;D</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/consulting">{t('solutions.items.3.title')}</FooterLink>
+                                    <FooterLink href="/cdmo">Manufacturing Organization</FooterLink>
+                                </li>
+                                <li>
+                                    <FooterLink href="/consulting">Consulting</FooterLink>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <FooterLink href="/about">{t('megaMenu.aboutUs')}</FooterLink>
+                                    <FooterLink href="/products">Products</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/#global-projects">{t('map.tag')}</FooterLink>
+                                    <FooterLink href="/careers">Career</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/about">{t('homeStats.header.tag')}</FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/#vaccine-pipeline">{t('megaMenu.pipeline')}</FooterLink>
+                                    <FooterLink href="/gmp-training">Training</FooterLink>
                                 </li>
                             </ul>
                         </div>
@@ -94,19 +94,16 @@ const Footer = () => {
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <FooterLink href="https://www.linkedin.com/company/techinvention/" isExternal>{t('footer.linkedin')}</FooterLink>
+                                    <FooterLink href="https://www.linkedin.com/company/techinvention/" isExternal>LinkedIn</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="https://x.com" isExternal>{t('footer.twitter')}</FooterLink>
+                                    <FooterLink href="https://x.com" isExternal>Twitter (X)</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/contact-us">{t('navbar.contactUs')}</FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/contact-us">{t('footer.partnerPortal')}</FooterLink>
+                                    <FooterLink href="/contact-us">Contact Us</FooterLink>
                                 </li>
                                 <li className="break-all">
-                                    <FooterLink href={`mailto:${t('footer.email')}`} isExternal>{t('footer.email')}</FooterLink>
+                                    <FooterLink href="mailto:info@techinvention.biz" isExternal>info@techinvention.biz</FooterLink>
                                 </li>
                             </ul>
                         </div>

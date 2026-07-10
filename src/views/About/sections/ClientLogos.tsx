@@ -63,8 +63,7 @@ const ClientLogos = () => {
 
             <div className="w-full relative flex flex-col gap-10">
                 {/* Gradient Masks for fading edges */}
-                <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
 
                 {/* Marquee Row 1 (Moves Left) */}
                 <div className="flex w-full overflow-hidden">
