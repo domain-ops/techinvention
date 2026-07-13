@@ -47,6 +47,37 @@ const ROW_2 = [
     ethopiaLogo,
 ];
 
+const getLogoStyle = (src: any) => {
+    const srcStr = (src?.src || src || '').toLowerCase();
+    
+    // Default crisp and optimize rendering styles
+    let baseClass = "max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110 [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges]";
+
+    // Specific scale adjustments for logos with excessive white background padding
+    if (srcStr.includes('bravo')) {
+        return `${baseClass} scale-[1.75]`;
+    }
+    if (srcStr.includes('biovaccines')) {
+        return `${baseClass} scale-[1.65]`;
+    }
+    if (srcStr.includes('who')) {
+        return `${baseClass} scale-[1.25]`;
+    }
+    if (srcStr.includes('ethopia')) {
+        return `${baseClass} scale-[1.4]`;
+    }
+    if (srcStr.includes('bvi')) {
+        return `${baseClass} scale-[1.3]`;
+    }
+    if (srcStr.includes('arab-authority') || srcStr.includes('arabauthority')) {
+        return `${baseClass} scale-[1.3]`;
+    }
+    if (srcStr.includes('arabio')) {
+        return `${baseClass} scale-[1.2]`;
+    }
+    return baseClass;
+};
+
 export default function ClientsSection() {
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
@@ -76,7 +107,7 @@ export default function ClientsSection() {
                                 <img 
                                     src={src} 
                                     alt="Client Logo" 
-                                    className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
+                                    className={getLogoStyle(src)}
                                 />
                             </div>
                         ))}
@@ -99,7 +130,7 @@ export default function ClientsSection() {
                                 <img 
                                     src={src} 
                                     alt="Client Logo" 
-                                    className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110"
+                                    className={getLogoStyle(src)}
                                 />
                             </div>
                         ))}
