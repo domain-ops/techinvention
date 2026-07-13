@@ -23,14 +23,14 @@ const About = () => {
             viewProfile: t('about.leadership.ceo.viewProfile') || 'View Profile'
         },
         {
-            name: 'Dr. Elena Rodrigue',
-            role: 'Head of Vaccine R&D',
+            name: 'Nazneen Hamid',
+            role: 'Co-Founder & Director',
             message: 'Committed to global health equity.',
             viewProfile: 'View Profile'
         }
     ];
 
-    const images = [ceoPortrait, elenaPortrait];
+    const images = ["/techinvention/Syed-Sir.png", "/techinvention/Nazneen-mam.png"];
     const displayProfiles = profiles.slice(0, 2);
 
     return (
@@ -43,22 +43,6 @@ const About = () => {
                             <SplitTitle title={t('about.leadership.title') as string || "Our Leadership"} />
                         </h2>
                     </ScrollReveal>
-
-                    {/* Animated Inline Logo */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
-                        <motion.img 
-                            src={logoDNA}
-                            alt="TechInvention Logo"
-                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true, margin: "100px" }}
-                            transition={{ 
-                                opacity: { duration: 1.2, ease: "easeOut" },
-                                scale: { duration: 1.2, ease: "easeOut" }
-                            }}
-                        />
-                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -113,10 +97,10 @@ const About = () => {
 
                                 {/* Always Visible: Name and Role */}
                                 <div className="relative transform transition-transform duration-500 ease-out group-hover:-translate-y-32 group-hover:opacity-0 md:group-hover:-translate-y-48">
-                                    <h3 className="text-[36px] font-medium text-white mb-2 md:mb-3 tracking-tight">
+                                    <h3 className="text-[24px] md:text-[28px] font-semibold text-white mb-1.5 tracking-tight">
                                         {profile.name}
                                     </h3>
-                                    <p className="text-white group-hover:text-white/80 font-medium tracking-[0.2em] text-[18px] uppercase transition-colors duration-500">
+                                    <p className="text-white group-hover:text-white/80 font-semibold tracking-[0.2em] text-[12px] uppercase transition-colors duration-500">
                                         {profile.role}
                                     </p>
                                 </div>

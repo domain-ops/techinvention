@@ -68,6 +68,13 @@ export default function FacilityFeatures() {
         <section className="py-20 bg-white">
             <div className="max-w-[1300px] mx-auto px-6">
                 
+                {/* Heading */}
+                <div className="mb-16 text-left">
+                    <h2 className="text-[30px] md:text-[36px] font-medium tracking-wide uppercase">
+                        <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Features</span>
+                    </h2>
+                </div>
+
                 <motion.div 
                     variants={containerVariants}
                     initial="hidden"

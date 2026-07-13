@@ -18,6 +18,21 @@ const Navbar = () => {
     const router = useRouter();
     const pathname = usePathname();
 
+    const announcements = [
+        "🏆 India Vaccine Leaders Conclave 2025: Recognized for vaccine innovation and biotech scaling.",
+        "🏆 Fortune Leadership Awards 2024: Awarded for exceptional organizational performance.",
+        "🏆 Exemplars of Excellence 2024: Celebrating scientific innovation in biopharma.",
+        "🏆 Forbes India Spotlight 2024: Ranked among high-potential global business models."
+    ];
+    const [noticeIndex, setNoticeIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setNoticeIndex((prev) => (prev + 1) % announcements.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     useEffect(() => {
         setActiveMegaMenu(null);
         setIsMenuOpen(false);
@@ -62,27 +77,44 @@ const Navbar = () => {
         { key: 'home', label: 'Home', href: '/' },
         { key: 'company', label: 'Company', href: '/about' },
         { key: 'rnd', label: 'R&D', href: '/rnd' },
-        { key: 'cdmo', label: 'Manufacturing Organization', href: '/cdmo' },
+        { key: 'cdmo', label: 'Manufacturing', href: '/cdmo' },
         { key: 'consulting', label: 'Consulting', href: '/consulting' },
         { key: 'products', label: 'Products', href: '/products' },
         { key: 'careers', label: 'Career', href: '/careers' },
         { key: 'gmp', label: 'Training', href: '/gmp-training' },
         { key: 'contact', label: 'Contact Us', href: '/contact-us' },
     ];
-
     return (
         <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
+            
+            {/* Top Announcement Loop Notice Bar */}
+            <div className="w-full bg-[#1955A6] text-white h-9 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
+                <div className="relative flex items-center justify-center h-full w-full">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={noticeIndex}
+                            initial={{ y: 15, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -15, opacity: 0 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            className="absolute flex items-center gap-2 font-semibold text-[11px] sm:text-xs tracking-wide text-center"
+                        >
+                            {announcements[noticeIndex]}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
             
             {/* Top Utility Bar - Hidden on Mobile */}
             <div className="hidden lg:flex w-full bg-brand-primary/5 border-b border-gray-100 h-10 items-center justify-between px-4 md:px-8">
                 <div className="flex items-center gap-6 text-[13px] font-medium text-brand-gray-dark">
-                    <a href="mailto:info@techinvention.biz" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
+                    <a href="mailto:connect@techinvention.biz" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
                         <Mail size={14} />
-                        info@techinvention.biz
+                        connect@techinvention.biz
                     </a>
-                    <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
+                    <a href="tel:+912240052123" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
                         <Phone size={14} />
-                        +91 123 456 7890
+                        +91 22 4005 2123
                     </a>
                 </div>
                 

@@ -51,20 +51,14 @@ export default function ClientsSection() {
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
-                <ScrollReveal direction="up">
-                    <span className="text-[#1955A6] font-bold tracking-[0.2em] text-[12px] mb-4 block uppercase">
-                        Trusted By
-                    </span>
-                    <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide leading-tight">
-                        <SplitTitle title="Our Clients & Partners" />
-                    </h2>
-                </ScrollReveal>
-            </div>
+                 <ScrollReveal direction="up">
+                     <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide leading-tight">
+                         <SplitTitle title="Our Clients & Partners" />
+                     </h2>
+                 </ScrollReveal>
+             </div>
 
             <div className="w-full relative flex flex-col gap-10">
-                {/* Gradient Masks for fading edges */}
-                <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
                 {/* Marquee Row 1 (Moves Left) */}
                 <div className="flex w-full overflow-hidden">
@@ -77,7 +71,7 @@ export default function ClientsSection() {
                         {[...ROW_1, ...ROW_1].map((src, index) => (
                             <div 
                                 key={`row1-${index}`} 
-                                className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
+                                className="w-[200px] h-[100px] md:w-[260px] md:h-[130px] flex items-center justify-center p-2 transition-all duration-300"
                             >
                                 <img 
                                     src={src} 
@@ -100,7 +94,7 @@ export default function ClientsSection() {
                         {[...ROW_2, ...ROW_2].map((src, index) => (
                             <div 
                                 key={`row2-${index}`} 
-                                className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
+                                className="w-[200px] h-[100px] md:w-[260px] md:h-[130px] flex items-center justify-center p-2 transition-all duration-300"
                             >
                                 <img 
                                     src={src} 

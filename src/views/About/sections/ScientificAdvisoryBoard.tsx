@@ -37,9 +37,6 @@ const ScientificAdvisoryBoard = () => {
                 
                 <ScrollReveal direction="up">
                     <div className="mb-10 md:mb-12 max-w-4xl">
-                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                            Advisory
-                        </span>
                         <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal text-left text-brand-primary mb-4">
                             <SplitTitle title="Scientific Advisory Board" />
                         </h2>

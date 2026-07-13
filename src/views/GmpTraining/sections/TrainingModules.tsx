@@ -188,9 +188,7 @@ export default function TrainingModules() {
                 {/* Header */}
                 <div className="mb-16">
                     <ScrollReveal direction="up">
-                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-2 block uppercase">
-                            Curriculum
-                        </span>
+                        
                         <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-slate-900 mb-4 leading-tight">
                             <SplitTitle title="Training Modules" />
                         </h2>

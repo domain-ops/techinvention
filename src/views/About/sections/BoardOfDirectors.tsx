@@ -21,7 +21,7 @@ const boardMembers = [
     },
     {
         name: "Ms. Nazneen Hamid",
-        role: "Director-Corporate Affairs",
+        role: "Co-Founder & Director",
         image: nazneenImg,
         linkedin: "https://www.linkedin.com/in/nazneen-hamid",
         bio: `Ms. Nazneen Hamid ${dummyBio}`

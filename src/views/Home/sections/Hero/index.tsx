@@ -72,9 +72,9 @@ const Hero = () => {
 
     const rotatingWords = [
         "Strategy",
-        "Research",
+        "R&D",
         "Licensing",
-        "Manufacturing"
+        "Advisory"
     ];
 
     // Unified timer to rotate background and words in sync
@@ -110,7 +110,7 @@ const Hero = () => {
             </div>
 
             {/* Brightness Overlay Removed */}
-            
+
             {/* Animated medical orbs Removed to prevent blurriness */}
 
             {/* Hero Main Content */}

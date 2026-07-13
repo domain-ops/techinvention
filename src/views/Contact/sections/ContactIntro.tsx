@@ -13,7 +13,7 @@ const ContactIntro: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="max-w-3xl"
+                        className="w-full"
                     >
                         <p className="text-slate-800 text-base md:text-[17px] leading-relaxed mb-4">
                             Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you.

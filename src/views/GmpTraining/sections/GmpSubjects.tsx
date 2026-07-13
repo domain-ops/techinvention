@@ -24,9 +24,7 @@ export default function GmpSubjects() {
                 {/* Section Header */}
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
-                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-3 block uppercase">
-                            Course Modules
-                        </span>
+                        
                         <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6">
                             <SplitTitle title="Training Programs & Subjects" />
                         </h2>

@@ -21,9 +21,9 @@ const AboutPage = () => {
 
             {/* 2. About Section */}
             <CompanyStory />
-            <OfficeEnvironment />
+            {/* <OfficeEnvironment /> */}
             <BoardOfDirectors />
-            <ScientificAdvisoryBoard />
+            {/* <ScientificAdvisoryBoard /> */}
             <VisionMissionValues />
 
             {/* 3. Leadership / Team Section (Removed as requested) */}

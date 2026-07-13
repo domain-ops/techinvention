@@ -52,9 +52,6 @@ const ClientLogos = () => {
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
                 <ScrollReveal direction="up">
-                    <span className="text-[#1955A6] font-bold tracking-[0.2em] text-[12px] mb-4 block uppercase">
-                        Our Membership
-                    </span>
                     <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide leading-tight">
                         <SplitTitle title="Trusted by Global Partners" />
                     </h2>
@@ -76,7 +73,7 @@ const ClientLogos = () => {
                         {[...ROW_1, ...ROW_1].map((src, index) => (
                             <div 
                                 key={`row1-${index}`} 
-                                className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
+                                className="w-[180px] h-[90px] md:w-[240px] md:h-[120px] flex items-center justify-center transition-all duration-300"
                             >
                                 <img 
                                     src={(src as any)?.src || src} 
@@ -99,7 +96,7 @@ const ClientLogos = () => {
                         {[...ROW_2, ...ROW_2].map((src, index) => (
                             <div 
                                 key={`row2-${index}`} 
-                                className="w-[160px] h-[90px] md:w-[200px] md:h-[110px] bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md hover:border-[#1955A6]/20 transition-all duration-300"
+                                className="w-[180px] h-[90px] md:w-[240px] md:h-[120px] flex items-center justify-center transition-all duration-300"
                             >
                                 <img 
                                     src={(src as any)?.src || src} 

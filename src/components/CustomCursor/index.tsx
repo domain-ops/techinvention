@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import dnaLogo from '../../assets/images/TechInvention Logo (DNA).png';
 
 const CustomCursor: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
@@ -58,49 +59,28 @@ const CustomCursor: React.FC = () => {
     if (isTouchDevice) return null;
 
     return (
-        <>
-            {/* Inner Dot - Follows Instantly */}
-            <motion.div
-                className="fixed top-0 left-0 z-[99999] pointer-events-none rounded-full bg-brand-primary"
-                style={{
-                    width: '8px',
-                    height: '8px',
-                    opacity: (isVisible && !isHovering) ? 1 : 0
-                }}
-                animate={{
-                    x: mousePosition.x - 4,
-                    y: mousePosition.y - 4,
-                    scale: isHovering ? 0 : 1
-                }}
-                transition={{
-                    type: "tween",
-                    ease: "linear",
-                    duration: 0
-                }}
+        <motion.div
+            className="fixed top-0 left-0 z-[99999] pointer-events-none select-none w-10 h-14"
+            style={{
+                opacity: (isVisible && !isHovering) ? 1 : 0
+            }}
+            animate={{
+                x: mousePosition.x - 20,
+                y: mousePosition.y - 28,
+                scale: 1
+            }}
+            transition={{
+                type: "tween",
+                ease: "linear",
+                duration: 0
+            }}
+        >
+            <img 
+                src={typeof dnaLogo === 'string' ? dnaLogo : dnaLogo.src} 
+                alt="Cursor" 
+                className="w-full h-full object-contain"
             />
-            {/* Outer Ring - Follows Smoothly with Spring Physics */}
-            <motion.div
-                className="fixed top-0 left-0 z-[99998] pointer-events-none rounded-full border border-brand-primary/40"
-                style={{
-                    width: '36px',
-                    height: '36px',
-                    opacity: (isVisible && !isHovering) ? 1 : 0,
-                    backgroundColor: 'transparent'
-                }}
-                animate={{
-                    x: mousePosition.x - 18,
-                    y: mousePosition.y - 18,
-                    scale: isHovering ? 0 : 1,
-                    borderColor: 'rgba(23,85,166,0.4)'
-                }}
-                transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 28,
-                    mass: 0.5
-                }}
-            />
-        </>
+        </motion.div>
     );
 };
 

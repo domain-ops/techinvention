@@ -29,9 +29,7 @@ const MemberLogos = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <div className="mb-4">
-                        <span className="text-brand-primary font-medium tracking-tight tracking-[0.4em]  text-[11px] block">
-                            {t('membership.tag')}
-                        </span>
+                        
                     </div>
                     <div className="mb-6">
                         <TextReveal

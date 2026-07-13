@@ -22,19 +22,19 @@ const CompanyStory = () => {
                     {/* Mandela Quote */}
                     <ScrollReveal direction="up">
                         <div className="mb-10 md:mb-16">
-                            <p className="text-[22px] md:text-[26px] font-medium text-black leading-relaxed italic text-left md:text-justify">
+                            <p className="text-[16px] md:text-[18px] font-normal text-black leading-relaxed italic text-left md:text-justify">
                                 {t('about.story.mandelaQuote')}
                             </p>
-                            <div className="w-16 h-1 bg-brand-primary mt-8 rounded-full" />
                         </div>
                     </ScrollReveal>
 
                     {/* Company Narrative - Clean Editorial Style */}
                     <div className="space-y-8">
                         <ScrollReveal direction="up" delay={0.2}>
-                            <p className="font-medium tracking-tight text-black text-[16px] md:text-[18px] leading-relaxed text-left md:text-justify">
+                            <p className="font-normal tracking-tight text-black text-[16px] md:text-[18px] leading-relaxed text-left md:text-justify">
                                 {t('about.story.commitment')}
                             </p>
+                            <div className="w-16 h-1 bg-brand-primary mt-8 rounded-full" />
                         </ScrollReveal>
                     </div>
 

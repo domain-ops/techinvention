@@ -22,15 +22,15 @@ export default function ConsultingHero() {
             <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full">
                 
                 {/* Text Section - Stacked at the top */}
-                <div className="max-w-4xl text-left mb-12 lg:mb-16">
+                <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] lg:whitespace-nowrap font-medium tracking-wide mb-6 leading-[1.15]">
                             <SplitTitle title="Strategic Advisory & Tech Consulting" />
                         </h1>
-                        <h2 className="text-xl md:text-[24px] font-bold text-[#13325B] leading-snug mb-4 max-w-3xl">
+                        <h2 className="text-xl md:text-[24px] font-normal text-slate-800 leading-snug mb-4 w-full">
                             Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution.
                         </h2>
-                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 max-w-4xl font-medium">
+                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-normal">
                             TechInvention supports governments, funding agencies, manufacturers, investors and research institutions in shaping vaccine and biopharmaceutical manufacturing infrastructure.
                         </p>
                     </ScrollReveal>

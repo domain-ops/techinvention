@@ -95,14 +95,7 @@ const Testimonials = () => {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16 md:mb-20">
-                    <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-[11px] font-medium tracking-tight  tracking-[0.4em] text-brand-primary mb-4 block"
-                    >
-                        {t('common.testimonials') || "PARTNERSHIPS & TESTIMONIALS"}
-                    </motion.span>
+
                     <div className="mb-6">
                         <TextReveal
                             text={t('testimonials.title')}

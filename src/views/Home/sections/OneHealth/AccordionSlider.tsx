@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+
 import { useLanguage } from '../../../../context/LanguageContext';
 
 interface Slide {
@@ -15,6 +17,14 @@ interface AccordionSliderProps {
 }
 
 const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
+  const getLink = (tag: string) => {
+    const lower = tag.toLowerCase();
+    if (lower.includes('consult')) return '/consulting';
+    if (lower.includes('r&d') || lower.includes('rnd') || lower.includes('research')) return '/rnd';
+    if (lower.includes('licens')) return '/products';
+    if (lower.includes('manufactur') || lower.includes('commercial')) return '/cdmo';
+    return '#';
+  };
     const { t } = useLanguage();
     const [expandedIndex, setExpandedIndex] = useState<number>(0);
 
@@ -85,21 +95,39 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                     <p className="text-white/90 text-[18px] font-medium leading-relaxed mb-10 max-w-md">
                                         {slide.desc}
                                     </p>
-                                    <motion.button 
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-7 py-3 md:px-8 md:py-4 rounded-full text-lg font-medium tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
-                                    >
-                                        <span className="relative z-10 tracking-[0.2em] text-[10px] uppercase font-bold">
-                                            {t('oneHealth.knowMore')}
-                                        </span>
-                                        <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
-                                            <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={18} />
-                                            <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={18} />
-                                        </div>
-                                        {/* Shine Effect */}
-                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
-                                    </motion.button>
+                                      {slide.title.includes('Manufacturing') ? (
+                                       <Link href="/cdmo" className="inline-block">
+                                         <motion.button 
+                                           whileHover={{ scale: 1.05 }}
+                                           whileTap={{ scale: 0.95 }}
+                                           className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
+                                         >
+                                           <span>Know More</span>
+                                           <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
+                                             <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
+                                             <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
+                                           </div>
+                                           {/* Shine Effect */}
+                                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
+                                         </motion.button>
+                                       </Link>
+                                     ) : (
+                                       <Link href={getLink(slide.tag)} className="inline-block">
+                                         <motion.button 
+                                           whileHover={{ scale: 1.05 }}
+                                           whileTap={{ scale: 0.95 }}
+                                           className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
+                                         >
+                                           <span>Know More</span>
+                                           <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
+                                             <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
+                                             <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
+                                           </div>
+                                           {/* Shine Effect */}
+                                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
+                                         </motion.button>
+                                       </Link>
+                                     )}
                                 </motion.div>
                             ) : (
                                 <motion.div

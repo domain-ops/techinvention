@@ -39,27 +39,10 @@ const JourneyPipeline = () => {
                 {/* Header Title */}
                 <div className="mb-16 flex flex-col md:flex-row md:items-center justify-between sticky left-0 min-w-[300px] gap-8">
                     <div className="flex flex-col items-start">
-                        <span className="text-[10px] md:text-xs font-semibold tracking-[0.4em] text-[#2F62A4] mb-3 uppercase">
-                            {t('journeyPipeline.tag') as string}
-                        </span>
                         <h2 className="text-[36px] font-medium tracking-tight">
                             <span className="text-[#2F62A4]">{t('journeyPipeline.title1') as string}</span>
                             <span className="text-[#6D8337]">{t('journeyPipeline.title2') as string}</span>
                         </h2>
-                    </div>
-                    {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
-                        <motion.img 
-                            src={logoDNA}
-                            alt="TechInvention Logo"
-                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ 
-                                opacity: { duration: 1.2, ease: "easeOut" },
-                                scale: { duration: 1.2, ease: "easeOut" }
-                            }}
-                        />
                     </div>
                 </div>
 

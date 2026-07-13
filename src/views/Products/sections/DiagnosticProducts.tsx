@@ -57,9 +57,7 @@ export default function DiagnosticProducts() {
                     
                     <div ref={contentRef} className="max-w-xl text-left">
                         <ScrollReveal direction="up">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Diagnostics Division
-                            </span>
+                            
                             <div className="mb-4">
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6 leading-tight">
                                     <SplitTitle title="Advanced Diagnostic Solutions" />

@@ -84,9 +84,7 @@ export default function CategoryFilter() {
                 <div className="flex flex-col mb-16 gap-8">
                     <div className="max-w-2xl text-left">
                         <ScrollReveal direction="up">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Portfolio
-                            </span>
+                            
                             <div className="mb-4">
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left">
                                     <SplitTitle title="Explore Our Portfolio" />

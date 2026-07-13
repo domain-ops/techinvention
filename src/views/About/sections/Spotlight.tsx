@@ -61,9 +61,6 @@ const Spotlight = () => {
                 <ScrollReveal direction="up">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                         <div className="text-left flex-1">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                In The Spotlight
-                            </span>
                             <div className="mb-4">
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left text-brand-primary">
                                     <SplitTitle title="Featured Initiatives" />

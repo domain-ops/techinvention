@@ -27,14 +27,11 @@ export default function LandingHero() {
                 {/* Text Section - Left-aligned at the top */}
                 <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
-                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-4 block uppercase">
-                            Research & Innovation
-                        </span>
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] font-medium tracking-wide mb-6 leading-[1.15] text-[#13325B]">
                             <SplitTitle title="End-to-End R&D Ecosystem" />
                         </h1>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">
-                            TechInvention's state-of-the-art R&D facility, the <strong className="text-[#13325B]">High-impact One Health Research & Innovation ZONe (HORIZON)</strong>, is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for <strong className="text-[#13325B]">priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.</strong>
+                            TechInvention's state-of-the-art R&D facility, the High-impact One Health Research & Innovation ZONe (HORIZON), is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.
                         </p>
                     </ScrollReveal>
 

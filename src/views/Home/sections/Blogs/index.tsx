@@ -19,7 +19,6 @@ const Blogs = () => {
         <section className="py-16 md:py-20 relative w-full bg-brand-primary/5 border-t border-brand-primary/10">
             <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
                 
-                {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 max-w-7xl mx-auto mb-16">
                     <ScrollReveal direction="up" delay={0.1} className="text-center md:text-left max-w-3xl">
                         <h2 className="text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
@@ -29,20 +28,6 @@ const Blogs = () => {
                             {t('blogs.desc')}
                         </p>
                     </ScrollReveal>
-                    {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
-                        <motion.img 
-                            src={logoDNA}
-                            alt="TechInvention Logo"
-                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ 
-                                opacity: { duration: 1.2, ease: "easeOut" },
-                                scale: { duration: 1.2, ease: "easeOut" }
-                            }}
-                        />
-                    </div>
                 </div>
 
                 {/* Grid */}

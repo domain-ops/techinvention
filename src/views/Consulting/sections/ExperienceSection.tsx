@@ -65,9 +65,7 @@ const ExperienceSection = () => {
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                         <div className="max-w-2xl">
                             <ScrollReveal direction="up">
-                                <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                    Track Record
-                                </span>
+                                
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
                                     <SplitTitle title="Selected Experience & Impact" />
                                 </h2>
@@ -180,12 +178,7 @@ const ExperienceSection = () => {
                                     {/* Floating Tag Badges */}
                                     <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
                                         {activeExp.tags.map((tag, i) => (
-                                            <span
-                                                key={i}
-                                                className="text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white"
-                                            >
-                                                {tag}
-                                            </span>
+                                            
                                         ))}
                                     </div>
                                 </div>

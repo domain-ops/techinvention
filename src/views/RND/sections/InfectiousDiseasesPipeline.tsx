@@ -3,16 +3,23 @@ import { motion } from 'framer-motion';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-const VialIcon = ({ color = "currentColor", className = "" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke={color} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M 35,15 L 65,15" />
-        <rect x="30" y="15" width="40" height="12" rx="3" />
-        <path d="M 38,27 L 38,40" />
-        <path d="M 62,27 L 62,40" />
-        <path d="M 38,40 Q 25,40 25,55 L 25,85 Q 25,95 35,95 L 65,95 Q 75,95 75,85 L 75,55 Q 75,40 62,40" />
-        <path d="M 25,60 C 45,55 55,75 75,65" />
-        <line x1="42" y1="83" x2="45" y2="83" />
-        <line x1="52" y1="83" x2="62" y2="83" />
+const SyringeIcon = ({ color = "currentColor", className = "" }) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke={color} 
+        strokeWidth="2.2" 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        className={className}
+    >
+        <path d="m18 2 4 4" />
+        <path d="m17 7 3-3" />
+        <path d="M19 9 9 19a1 1 0 0 1-.7.3H6v-2.3a1 1 0 0 1 .3-.7L15 9" />
+        <path d="M9 11 6.5 8.5" />
+        <path d="m13 15-2.5-2.5" />
+        <path d="m6 20-4 4" />
     </svg>
 );
 
@@ -107,7 +114,7 @@ export default function InfectiousDiseasesPipeline() {
                                                         style={{ left: lineWidthPercent, transform: 'translateX(-50%)' }}
                                                     >
                                                         <div className="bg-white rounded-full drop-shadow-sm p-1">
-                                                            <VialIcon className="w-6 h-6" color={item.color} />
+                                                            <SyringeIcon className="w-6 h-6" color={item.color} />
                                                         </div>
                                                     </motion.div>
                                                 </div>
@@ -135,7 +142,7 @@ export default function InfectiousDiseasesPipeline() {
                                 {/* Header: VAX Name */}
                                 <div className="flex items-start gap-4">
                                     <div className="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow-sm border-[3px] border-slate-50 z-20 shrink-0">
-                                        <VialIcon className="w-8 h-8" color={item.color} />
+                                        <SyringeIcon className="w-8 h-8" color={item.color} />
                                     </div>
                                     <div className="flex flex-col justify-center pt-1">
                                         <h3 className="text-[18px] font-medium text-black leading-tight">
@@ -169,7 +176,7 @@ export default function InfectiousDiseasesPipeline() {
                                             style={{ left: lineWidthPercent, transform: 'translate(-50%, -50%)' }}
                                         >
                                             <div className="bg-white rounded-full shadow-sm p-1">
-                                                <VialIcon className="w-4 h-4" color={item.color} />
+                                                <SyringeIcon className="w-4 h-4" color={item.color} />
                                             </div>
                                         </motion.div>
                                     </div>

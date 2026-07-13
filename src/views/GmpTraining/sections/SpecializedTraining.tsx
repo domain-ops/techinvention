@@ -35,9 +35,7 @@ export default function SpecializedTraining() {
                 
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-bold tracking-[0.4em] text-[11px] mb-3 block uppercase">
-                            Global Impact
-                        </span>
+                        
                         <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6">
                             <SplitTitle title="Specialized Training Programs" />
                         </h2>

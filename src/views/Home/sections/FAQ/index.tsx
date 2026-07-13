@@ -86,13 +86,8 @@ const FAQSection = () => {
 
             <div className="w-full max-w-5xl z-10 relative">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16 md:mb-20">
-                    <div className="text-center md:text-left">
-                        <ScrollReveal direction="up">
-                            <span className="text-brand-primary text-[11px] font-medium tracking-[0.4em] uppercase mb-4 block">
-                                {faqData.tag || "FAQ"}
-                            </span>
-                        </ScrollReveal>
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
+                    <div className="flex-grow">
                         <ScrollReveal direction="up" delay={0.1}>
                             <h2 className="text-[36px] font-medium tracking-wide mb-6">
                                 <SplitTitle title={faqData.title} />
@@ -103,20 +98,6 @@ const FAQSection = () => {
                                 {faqData.subtitle}
                             </p>
                         </ScrollReveal>
-                    </div>
-                    {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
-                        <motion.img 
-                            src={logoDNA}
-                            alt="TechInvention Logo"
-                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ 
-                                opacity: { duration: 1.2, ease: "easeOut" },
-                                scale: { duration: 1.2, ease: "easeOut" }
-                            }}
-                        />
                     </div>
                 </div>
 

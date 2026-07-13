@@ -136,20 +136,6 @@ const CaseStudy = () => {
                         {t('caseStudy.desc')}
                     </p>
                 </ScrollReveal>
-                {/* Animated Inline Logo aligned with title */}
-                <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8 lg:mr-16">
-                    <motion.img 
-                        src={logoDNA}
-                        alt="TechInvention Logo"
-                        className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ 
-                            opacity: { duration: 1.2, ease: "easeOut" },
-                            scale: { duration: 1.2, ease: "easeOut" }
-                        }}
-                    />
-                </div>
             </div>
         </div>
 

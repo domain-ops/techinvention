@@ -76,23 +76,23 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
                         </h1>
                     </div>
                 ) : (
-                    /* Center-aligned layout with conditional embedded half-width video player below */
-                    <div className="flex flex-col items-center text-center w-full">
-                        <div className="max-w-3xl mx-auto flex flex-col items-center">
-                            <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[56px] font-medium tracking-wide leading-[1.15] text-slate-950 font-sans mb-6 text-center">
+                    /* Left-aligned layout with conditional embedded video player below */
+                    <div className="flex flex-col items-start text-left w-full max-w-6xl mx-auto">
+                        <div className="w-full">
+                            <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[56px] font-medium tracking-wide leading-[1.15] text-slate-950 font-sans mb-6 text-left">
                                 <SplitTitle title={pageTitle} />
                             </h1>
                             
                             {defaultSubtitle && (
-                                <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed max-w-2xl font-medium mb-10 text-center">
+                                <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed w-full font-medium mb-10 text-left">
                                     {defaultSubtitle}
                                 </p>
                             )}
                         </div>
 
-                        {/* Center-aligned, wider video player for About page */}
+                        {/* Wider video player for About page aligned with the text boundary */}
                         {isAboutPage && (
-                            <div className="w-full max-w-6xl mx-auto mt-6">
+                            <div className="w-full mt-6">
                                 <div className="relative aspect-video w-full overflow-hidden shadow-[0_15px_40px_rgba(23,85,166,0.1)] border border-slate-100 bg-slate-950 rounded-none">
                                     <video
                                         ref={videoRef}

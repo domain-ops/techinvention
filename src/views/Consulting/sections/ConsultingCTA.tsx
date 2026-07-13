@@ -74,9 +74,7 @@ const ConsultingCTA = () => {
                     {/* Left: Headline & Info */}
                     <div>
                         <ScrollReveal direction="up">
-                            <span className="text-white/50 font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                Advisory Enquiry
-                            </span>
+                            
                             <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6 text-white">
                                 <SplitTitle title="Start Your Advisory Journey" />
                             </h2>

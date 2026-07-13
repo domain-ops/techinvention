@@ -50,16 +50,13 @@ const WhyPartner = () => {
                     {features.map((feature: any, idx: number) => (
                         <ScrollReveal key={idx} direction="up" delay={0.1 * idx}>
                             <motion.div 
-                                whileHover={{ y: -5 }}
-                                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all h-full border border-gray-100"
+                                whileHover={{ y: -4 }}
+                                className="bg-white p-6 rounded-2xl border border-gray-100 flex items-center gap-4 transition-all duration-300"
                             >
-                                <div className="bg-brand-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-brand-primary mb-6">
-                                    <CheckCircle2 size={24} />
+                                <div className="bg-brand-primary/10 w-11 h-11 rounded-xl flex items-center justify-center text-brand-primary shrink-0">
+                                    <CheckCircle2 size={22} />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {feature.desc}
-                                </p>
+                                <h3 className="text-[17px] font-bold text-gray-900 leading-snug">{feature.title}</h3>
                             </motion.div>
                         </ScrollReveal>
                     ))}

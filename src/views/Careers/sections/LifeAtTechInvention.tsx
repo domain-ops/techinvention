@@ -100,9 +100,7 @@ export default function LifeAtTechInvention() {
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                         <div className="max-w-2xl text-left">
                             <ScrollReveal direction="up">
-                                <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                    Our Culture
-                                </span>
+                                
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
                                     <SplitTitle title="Life at TechInvention" />
                                 </h2>
@@ -116,12 +114,12 @@ export default function LifeAtTechInvention() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="w-full relative mt-8"
+                    className="w-full relative mt-8 h-[250px] sm:h-[350px] md:h-[420px] lg:h-[480px] overflow-hidden rounded-none"
                 >
                     <img 
                         src="/techinvention/team-techinvention.jpg" 
                         alt="Life at TechInvention Team" 
-                        className="w-full h-auto object-cover rounded-md shadow-md"
+                        className="w-full h-full object-cover object-center"
                     />
                 </motion.div>
 

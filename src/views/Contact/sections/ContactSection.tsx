@@ -33,7 +33,7 @@ const ContactSection = () => {
         name: '',
         email: '',
         phone: '',
-        enquiryType: 'Business Development',
+        enquiryType: '',
         organisation: '',
         message: ''
     });
@@ -48,7 +48,7 @@ const ContactSection = () => {
         setSubmitted(true);
         setTimeout(() => {
             setSubmitted(false);
-            setFormData({ name: '', email: '', phone: '', enquiryType: 'Business Development', organisation: '', message: '' });
+            setFormData({ name: '', email: '', phone: '', enquiryType: '', organisation: '', message: '' });
         }, 3000);
     };
 
@@ -78,13 +78,16 @@ const ContactSection = () => {
 
                             {/* Contact details */}
                             <div className="space-y-5 mt-4">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
                                         <MapPin className="w-4 h-4 text-white" />
                                     </div>
-                                    <p className="text-slate-300 text-sm leading-relaxed">
-                                        #1004, The Summit Business Park, Andheri East, Mumbai 400093. India
-                                    </p>
+                                    <div className="flex flex-col">
+                                        <h4 className="text-[13px] font-bold text-white tracking-wide uppercase mb-0.5">Head Office</h4>
+                                        <p className="text-slate-300 text-sm leading-relaxed">
+                                            #1004, The Summit Business Park, Andheri East, Mumbai 400093. India
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
@@ -130,7 +133,7 @@ const ContactSection = () => {
                                                 required
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                placeholder="e.g. John Doe"
+                                                placeholder="Your Name"
                                                 className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                             />
                                         </div>
@@ -144,7 +147,7 @@ const ContactSection = () => {
                                                 required
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                placeholder="e.g. john@company.com"
+                                                placeholder="Your Email"
                                                 className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                             />
                                         </div>
@@ -157,7 +160,7 @@ const ContactSection = () => {
                                                 name="organisation"
                                                 value={formData.organisation}
                                                 onChange={handleChange}
-                                                placeholder="e.g. Acme Biotech"
+                                                placeholder="Your Organisation"
                                                 className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                             />
                                         </div>
@@ -172,11 +175,12 @@ const ContactSection = () => {
                                                 onChange={handleChange}
                                                 className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
                                             >
-                                                <option value="Business Development">Business Development</option>
-                                                <option value="Advisory & Consulting">Advisory & Consulting</option>
-                                                <option value="General Support">General Support</option>
-                                                <option value="Training Enquiry">Training Enquiry</option>
-                                                <option value="Partnership">Partnership</option>
+                                                 <option value="" disabled>Select Enquiry Type</option>
+                                                 <option value="Strategy">Strategy</option>
+                                                 <option value="R&D">R&D</option>
+                                                 <option value="Licensing">Licensing</option>
+                                                 <option value="Advisory">Advisory</option>
+                                                 <option value="General Support">General Support</option>
                                             </select>
                                         </div>
 
@@ -225,13 +229,13 @@ const ContactSection = () => {
                         </ScrollReveal>
                     </div>
 
-                    {/* Map + Details Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden border border-slate-200/60 shadow-md">
+                    {/* Map + Details Stacked */}
+                    <div className="flex flex-col gap-8 rounded-2xl overflow-hidden border border-slate-200/60 shadow-md bg-white p-6 sm:p-8">
 
-                        {/* Map */}
-                        <div className="lg:col-span-7 h-[380px] lg:h-auto min-h-[380px]">
+                        {/* Map (Full Width) */}
+                        <div className="w-full h-[400px] sm:h-[450px] md:h-[500px] rounded-xl overflow-hidden border border-slate-100">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3872!2d73.0078!3d19.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ebe98cda4b79%3A0x9f6f3e35b7acfcf4!2sMahape%20MIDC%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
+                                src="https://maps.google.com/maps?q=The%20Summit%20Business%20Park,%20Andheri%20East,%20Mumbai%20400093&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, display: 'block' }}
@@ -241,57 +245,48 @@ const ContactSection = () => {
                             />
                         </div>
 
-                        {/* Details Panel */}
-                        <div className="lg:col-span-5 bg-white flex flex-col divide-y divide-slate-100">
-
-                            {/* Row 1: Two addresses */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
-                                {/* Address 1 */}
-                                <div className="p-6 flex flex-col gap-2">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Corporate Office &amp; Manufacturing Site</h4>
-                                    </div>
-                                    <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
-                                        Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
-                                    </p>
+                        {/* Details Panel (Below Map) */}
+                        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                            {/* Address 1 */}
+                            <div className="flex flex-col gap-2 pb-6 md:pb-0 md:px-4 md:first:pl-0">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                    <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Manufacturing Site</h4>
                                 </div>
-                                {/* Address 2 */}
-                                <div className="p-6 flex flex-col gap-2">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Bio-Innovation Centre (HORIZON)</h4>
-                                    </div>
-                                    <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
-                                        EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
-                                    </p>
-                                </div>
+                                <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
+                                    Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
+                                </p>
                             </div>
-
-                            {/* Row 2: Phone & Email */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
-                                {/* Phone */}
-                                <div className="p-6 flex flex-col gap-1.5">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <Phone className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-[#1a9090]">Phone Enquiries</h4>
-                                    </div>
-                                    <a href="tel:+912240052123" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
-                                        +91 22 4005 2123
-                                    </a>
+                            {/* Address 2 */}
+                            <div className="flex flex-col gap-2 pt-6 md:pt-0 md:px-4">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                    <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Bio-Innovation Centre (HORIZON)</h4>
                                 </div>
-                                {/* Email */}
-                                <div className="p-6 flex flex-col gap-1.5">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <h4 className="text-[13px] font-bold text-[#1a9090]">Email Address</h4>
-                                    </div>
-                                    <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium">
-                                        connect@techinvention.biz
-                                    </a>
-                                </div>
+                                <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
+                                    EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
+                                </p>
                             </div>
-
+                            {/* Phone */}
+                            <div className="flex flex-col gap-1.5 pt-6 md:pt-0 md:px-4">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <Phone className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                    <h4 className="text-[13px] font-bold text-[#1a9090]">Phone Enquiries</h4>
+                                </div>
+                                <a href="tel:+912240052123" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
+                                    +91 22 4005 2123
+                                </a>
+                            </div>
+                            {/* Email */}
+                            <div className="flex flex-col gap-1.5 pt-6 md:pt-0 md:px-4 md:last:pr-0">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                    <h4 className="text-[13px] font-bold text-[#1a9090]">Email Address</h4>
+                                </div>
+                                <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium">
+                                    connect@techinvention.biz
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

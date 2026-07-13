@@ -34,9 +34,7 @@ export default function ProductsCTA() {
                     </Suspense>
                     
                     <ScrollReveal direction="up" className="relative z-10 px-6 max-w-3xl mx-auto text-center flex flex-col items-center">
-                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-center">
-                            Get in Touch
-                        </span>
+                        
                         
                         <h2 className="text-[36px] font-medium tracking-wide mb-4 leading-tight text-center">
                             <SplitTitle title="Partner With TechInvention for Vaccine Access" />

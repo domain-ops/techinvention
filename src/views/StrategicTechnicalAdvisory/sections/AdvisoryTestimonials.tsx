@@ -17,9 +17,6 @@ const AdvisoryTestimonials = () => {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <ScrollReveal direction="up">
                     <div className="text-center mb-16">
-                        <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
-                            Client Feedback
-                        </span>
                         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-brand-content mb-6">
                             Trusted by Global Partners
                         </h2>

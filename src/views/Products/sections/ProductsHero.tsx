@@ -25,15 +25,13 @@ export default function ProductsHero() {
             <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full">
                 
                 {/* Text Section - Stacked at the top */}
-                <div className="max-w-4xl text-left mb-12 lg:mb-16">
+                <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
-                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-4 block uppercase">
-                            Our Portfolio
-                        </span>
+                        
                         <h1 className="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-wide mb-6 leading-[1.15]">
                             <SplitTitle title="Innovative Products for Global Health" />
                         </h1>
-                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 max-w-3xl font-medium">
+                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">
                             Discover our extensive range of high-quality vaccines, biologics, and diagnostic solutions designed to make healthcare accessible, reliable, and affordable worldwide.
                         </p>
                     </ScrollReveal>

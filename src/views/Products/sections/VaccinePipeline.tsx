@@ -39,29 +39,9 @@ export default function VaccinePipeline() {
                 {/* GLOBAL SECTION HEADER */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
                     <div className="max-w-3xl text-left">
-                        <ScrollReveal direction="up">
-                            <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary mb-4 block uppercase">
-                                {t('vaccinePipeline.tag') || "R&D INNOVATION"}
-                            </span>
-                        </ScrollReveal>
                         <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6 text-left">
                             <SplitTitle title="R&D Vaccine & Biologics Pipeline" />
                         </h2>
-                    </div>
-
-                    {/* Animated Inline Logo aligned with title */}
-                    <div className="hidden md:flex flex-shrink-0 justify-end w-28 sm:w-32 lg:w-44 mr-8">
-                        <motion.img 
-                            src={logoDNA}
-                            alt="TechInvention Logo"
-                            className="w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.1)] mix-blend-multiply"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ 
-                                opacity: { duration: 1.2, ease: "easeOut" },
-                                scale: { duration: 1.2, ease: "easeOut" }
-                            }}
-                        />
                     </div>
                 </div>
 

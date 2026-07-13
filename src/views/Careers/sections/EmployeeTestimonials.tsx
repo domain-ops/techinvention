@@ -30,9 +30,7 @@ export default function EmployeeTestimonials() {
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                         <div className="max-w-2xl text-left">
                             <ScrollReveal direction="up">
-                                <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                                    Testimonials
-                                </span>
+                                
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
                                     <SplitTitle title="What Our Team Says" />
                                 </h2>

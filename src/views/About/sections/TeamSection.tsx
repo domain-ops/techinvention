@@ -15,9 +15,6 @@ const TeamSection = () => {
             <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div className="text-left flex-1">
                     <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase text-left">
-                            {t('about.leadership.team.title')}
-                        </span>
                         <div className="mb-4">
                             <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
                                 <SplitTitle title={t('about.leadership.team.tagline')} />

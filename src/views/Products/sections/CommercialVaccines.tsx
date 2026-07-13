@@ -17,9 +17,7 @@ const CommercialVaccines = () => {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <ScrollReveal direction="up">
-                        <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary mb-4 block uppercase">
-                            Products
-                        </span>
+                        
                         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-brand-content mb-6">
                             {productsData.title}
                         </h2>

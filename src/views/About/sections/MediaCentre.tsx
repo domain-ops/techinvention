@@ -35,9 +35,6 @@ const MediaCentre = () => {
                 <ScrollReveal>
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                         <div>
-                            <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
-                                Media Centre
-                            </span>
                             <h2 className="text-4xl md:text-5xl font-medium tracking-tight">
                                 <SplitTitle title="Latest Updates" />
                             </h2>

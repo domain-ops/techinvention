@@ -168,36 +168,36 @@ export default function ProductDetails() {
                 {/* Feature Highlights */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 max-w-5xl mx-auto">
                     <ScrollReveal direction="up" delay={0.1}>
-                        <div className="text-center bg-white p-6 lg:p-8 rounded-xl shadow-sm border border-slate-100 h-full flex flex-col items-center justify-start hover:shadow-md transition-shadow">
-                            <div className="w-14 h-14 bg-[#EEF4FF] rounded-full flex items-center justify-center mb-5 text-[#1955A6]">
-                                <Globe className="w-7 h-7" />
+                        <div className="group text-center bg-gradient-to-b from-[#1955A6]/[0.02] to-[#1955A6]/[0.06] hover:from-[#1955A6]/[0.05] hover:to-[#1955A6]/[0.12] p-8 lg:p-10 rounded-2xl border border-[#1955A6]/10 hover:border-[#1955A6]/30 h-full flex flex-col items-center justify-start hover:shadow-lg transition-all duration-300">
+                            <div className="w-14 h-14 bg-[#1955A6]/10 rounded-full flex items-center justify-center mb-6 text-[#1955A6] transition-transform duration-500 group-hover:scale-110 group-hover:bg-[#1955A6]/20">
+                                <Globe className="w-7 h-7 transition-transform duration-500 group-hover:scale-115 group-hover:rotate-12" />
                             </div>
-                            <h3 className="font-bold text-[#13325B] text-[18px] mb-3">Access-Oriented</h3>
-                            <p className="text-slate-600 text-[14px] leading-relaxed">
+                            <h3 className="font-bold text-[#1955A6] text-[19px] mb-3">Access-Oriented</h3>
+                            <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
                                 Built to support availability of essential vaccines across priority markets.
                             </p>
                         </div>
                     </ScrollReveal>
                     
                     <ScrollReveal direction="up" delay={0.2}>
-                        <div className="text-center bg-white p-6 lg:p-8 rounded-xl shadow-sm border border-slate-100 h-full flex flex-col items-center justify-start hover:shadow-md transition-shadow">
-                            <div className="w-14 h-14 bg-[#EEF4FF] rounded-full flex items-center justify-center mb-5 text-[#1955A6]">
-                                <CheckCircle2 className="w-7 h-7" />
+                        <div className="group text-center bg-gradient-to-b from-[#7EAB43]/[0.02] to-[#7EAB43]/[0.06] hover:from-[#7EAB43]/[0.05] hover:to-[#7EAB43]/[0.12] p-8 lg:p-10 rounded-2xl border border-[#7EAB43]/10 hover:border-[#7EAB43]/30 h-full flex flex-col items-center justify-start hover:shadow-lg transition-all duration-300">
+                            <div className="w-14 h-14 bg-[#7EAB43]/10 rounded-full flex items-center justify-center mb-6 text-[#7EAB43] transition-transform duration-500 group-hover:scale-110 group-hover:bg-[#7EAB43]/20">
+                                <CheckCircle2 className="w-7 h-7 transition-transform duration-500 group-hover:scale-115 group-hover:rotate-12" />
                             </div>
-                            <h3 className="font-bold text-[#13325B] text-[18px] mb-3">Market-Ready</h3>
-                            <p className="text-slate-600 text-[14px] leading-relaxed">
+                            <h3 className="font-bold text-[#7EAB43] text-[19px] mb-3">Market-Ready</h3>
+                            <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
                                 Focused on regulated, market-authorized vaccine candidates.
                             </p>
                         </div>
                     </ScrollReveal>
                     
                     <ScrollReveal direction="up" delay={0.3}>
-                        <div className="text-center bg-white p-6 lg:p-8 rounded-xl shadow-sm border border-slate-100 h-full flex flex-col items-center justify-start hover:shadow-md transition-shadow">
-                            <div className="w-14 h-14 bg-[#EEF4FF] rounded-full flex items-center justify-center mb-5 text-[#1955A6]">
-                                <Users2 className="w-7 h-7" />
+                        <div className="group text-center bg-gradient-to-b from-[#1955A6]/[0.02] to-[#1955A6]/[0.06] hover:from-[#1955A6]/[0.05] hover:to-[#1955A6]/[0.12] p-8 lg:p-10 rounded-2xl border border-[#1955A6]/10 hover:border-[#1955A6]/30 h-full flex flex-col items-center justify-start hover:shadow-lg transition-all duration-300">
+                            <div className="w-14 h-14 bg-[#1955A6]/10 rounded-full flex items-center justify-center mb-6 text-[#1955A6] transition-transform duration-500 group-hover:scale-110 group-hover:bg-[#1955A6]/20">
+                                <Users2 className="w-7 h-7 transition-transform duration-500 group-hover:scale-115 group-hover:rotate-12" />
                             </div>
-                            <h3 className="font-bold text-[#13325B] text-[18px] mb-3">Partnership-Led</h3>
-                            <p className="text-slate-600 text-[14px] leading-relaxed">
+                            <h3 className="font-bold text-[#1955A6] text-[19px] mb-3">Partnership-Led</h3>
+                            <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
                                 Designed for institutional, commercial and public health collaborations.
                             </p>
                         </div>

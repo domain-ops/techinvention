@@ -64,7 +64,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <LanguageProvider>
             <CustomCursor />
             <Navbar />
-            <div id="content-smooth" className="relative z-10">
+            <div id="content-smooth" className="relative z-10 pt-9">
                 {children}
                 <Footer />
             </div>

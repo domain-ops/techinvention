@@ -71,9 +71,7 @@ export default function GmpCTA() {
                     {/* Left: Contact Info & Support detail */}
                     <div className="lg:col-span-5 text-left">
                         <ScrollReveal direction="up">
-                            <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-3 block uppercase">
-                                Connect With Us
-                            </span>
+                            
                             <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6">
                                 <SplitTitle title="Explore Training Opportunities" />
                                 <span className="block text-slate-900 mt-2 font-normal leading-snug">with TechInvention</span>

@@ -151,9 +151,7 @@ const CertificationList = () => {
                 <div className="text-center mb-32 max-w-4xl mx-auto">
                     <ScrollReveal direction="up">
                         <div className="flex flex-col items-center text-center">
-                            <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase">
-                                {t('certifications.tag')}
-                            </span>
+                            
                             <div className="mb-4">
                                 <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
                                     <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />

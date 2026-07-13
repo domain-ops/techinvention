@@ -37,29 +37,28 @@ export default function Collaborations() {
                 {/* Grid of Partners (Full Width, No Map) */}
                 <div className="max-w-5xl mx-auto">
                     <ScrollReveal direction="up" delay={0.2}>
-                        <div className="mb-8">
-                            <p className="text-[#13325B] font-bold text-[20px] text-center">
-                                Our current collaborations:
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-slate-100 rounded-xl overflow-hidden shadow-sm">
-                            {collaborations.map((item, idx) => (
-                                <div key={idx} className={`h-full p-8 flex flex-col justify-center ${item.bg} border-b sm:border-b-[0.5px] lg:border-b-0 sm:border-r-[0.5px] lg:last:border-r-0 border-slate-100/50 hover:shadow-md transition-shadow duration-300 relative group`}>
-                                    <div className="absolute top-0 left-0 w-full h-1 sm:w-1 sm:h-full bg-current transition-all duration-300 opacity-20" style={{ color: item.color === 'text-[#7EAB43]' ? '#7EAB43' : '#1955A6' }} />
-                                    
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <span className={`${item.color} font-bold text-2xl`}>
-                                            {item.id}
-                                        </span>
-                                        <h4 className="text-[#13325B] font-bold text-[16px] leading-tight">
-                                            {item.name}
-                                        </h4>
-                                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-2 bg-white px-3 py-1 rounded-full shadow-sm">
-                                            {item.location}
-                                        </span>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {collaborations.map((item, idx) => {
+                                const accentColor = item.color === 'text-[#7EAB43]' ? 'bg-[#7EAB43]' : 'bg-[#1955A6]';
+                                return (
+                                    <div 
+                                        key={idx} 
+                                        className={`py-14 px-8 min-h-[240px] flex flex-col justify-center items-center ${item.bg} rounded-2xl border border-slate-100/80 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group`}
+                                    >
+                                        {/* Top Hover Accent Bar */}
+                                        <div className={`absolute top-0 left-0 right-0 h-2.5 ${accentColor} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`} />
+                                        
+                                        <div className="flex flex-col items-center text-center gap-5">
+                                            <h4 className="text-[#13325B] font-bold text-[20px] leading-snug">
+                                                {item.name}
+                                            </h4>
+                                            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest bg-white px-4 py-1.5 rounded-full shadow-sm border border-slate-100/60">
+                                                {item.location}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </ScrollReveal>
                 </div>

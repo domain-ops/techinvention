@@ -95,7 +95,7 @@ const SearchPage = () => {
             },
             products: {
                 title: "Products",
-                desc: "Vaccines Biotherapeutics Molecular Diagnostics Rapid Test Kits Human Vaccines Animal Vaccines"
+                desc: "Vaccines Biotherapeutics Molecular Diagnostics Rapid Test Kits Human Vaccines Animal Vaccines TdaPgen Varicella Vaccine Live Attenuated Inactivated Hepatitis A Vaccine Trivalent Influenza Vaccine Recombinant Vaccines Lateral Flow Assays Molecular Diagnostic Kits Livestock Vaccines Biosimilars Clinical Chemistry Analyzers"
             },
             careers: {
                 title: "Careers",

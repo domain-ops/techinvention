@@ -47,9 +47,7 @@ export default function GmpTestimonials() {
                 {/* Header */}
                 <div className="mb-16 text-center">
                     <ScrollReveal direction="up">
-                        <span className="text-brand-primary font-bold tracking-[0.4em] text-[11px] mb-3 block uppercase">
-                            Appreciation & Feedback
-                        </span>
+                        
                         <h2 className="text-[32px] md:text-[40px] font-medium tracking-wide mb-6">
                             <SplitTitle title="Testimonials" />
                         </h2>

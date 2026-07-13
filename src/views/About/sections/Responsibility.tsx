@@ -8,9 +8,6 @@ const Responsibility = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal direction="up">
                     <div className="text-center mb-16 flex flex-col items-center">
-                        <span className="text-brand-primary font-medium tracking-[0.4em] text-[11px] mb-2 block uppercase">
-                            Corporate Social Responsibility
-                        </span>
                         <div className="mb-4">
                             <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
                                 <SplitTitle title="Our Responsibility" />

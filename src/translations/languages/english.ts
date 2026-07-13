@@ -218,8 +218,8 @@ export const english = {
                 },
                 {
                     "name": "Nazneen Hamid",
-                    "role": "Co-founder and Director – Corporate Affairs",
-                    "message": "As Co-founder and Director – Corporate Affairs at TechInvention, Ms. Nazneen leads the organization's Corporate Governance, Human Resources, Finance, and Administration. She plays a key role in strengthening organizational excellence by driving strategic operations, people development, and effective governance. A certified POSH (Prevention of Sexual Harassment) Trainer, she is committed to fostering a safe, inclusive, and professional workplace. Passionate about the organization's mission, Ms. Nazneen supports TechInvention's vision of making essential vaccines affordable, accessible, and available to populations across the developing world while nurturing a purpose-driven, high-performing team.",
+                    "role": "Co-founder and Director",
+                    "message": "As Co-founder and Director at TechInvention, Ms. Nazneen leads the organization's Corporate Governance, Human Resources, Finance, and Administration. She plays a key role in strengthening organizational excellence by driving strategic operations, people development, and effective governance. A certified POSH (Prevention of Sexual Harassment) Trainer, she is committed to fostering a safe, inclusive, and professional workplace. Passionate about the organization's mission, Ms. Nazneen supports TechInvention's vision of making essential vaccines affordable, accessible, and available to populations across the developing world while nurturing a purpose-driven, high-performing team.",
                     "viewProfile": "View Profile"
                 }
             ],

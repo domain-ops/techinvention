@@ -11,7 +11,10 @@ const GCMCBridge = () => {
                         <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">
                             <SplitTitle title="GCMC as a Bridge" />
                         </h2>
-                        <p className="text-lg text-gray-600 leading-relaxed max-w-5xl">
+                        <p className="text-lg text-gray-600 leading-relaxed w-full mb-6">
+                            Scientific innovation begins in research laboratories, universities, and biotechnology companies, but transforming promising discoveries into commercially viable vaccines requires specialized expertise, advanced manufacturing infrastructure, regulatory compliance, and scalable production capabilities.
+                        </p>
+                        <p className="text-lg text-gray-600 leading-relaxed w-full">
                             GCMC bridges this critical gap by providing end-to-end support across vaccine development, process optimization, manufacturing scale-up, technology transfer, GMP manufacturing, quality assurance, and regulatory readiness.
                         </p>
                     </div>

@@ -26,9 +26,7 @@ const AdvisoryPhases = () => {
                 
                 {/* Header */}
                 <div className="mb-20">
-                    <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
-                        The Methodology
-                    </span>
+                    
                     <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide">
                         <SplitTitle title="A rigorous approach to excellence" />
                     </h2>

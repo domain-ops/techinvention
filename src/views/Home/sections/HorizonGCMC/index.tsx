@@ -51,9 +51,6 @@ export default function HorizonGCMC({ hideHeading = false }: HorizonGCMCProps) {
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-24 pb-12">
                 <div className="flex flex-col justify-between gap-8">
                     <ScrollReveal direction="up" className="w-full">
-                        <span className="text-[11px] font-medium tracking-[0.4em] text-brand-primary uppercase block mb-4">
-                            Our World-Class Facilities
-                        </span>
                         <div className="mt-4">
                             <h2 className="text-[32px] md:text-[36px] font-medium tracking-wide leading-tight text-slate-900 animate-fade-in w-full">
                                 <SplitTitle title="Global Collaborative centre for Medical Countermeasures" />

@@ -45,11 +45,9 @@ export function WorldMap({
   return (
     <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg relative font-sans">
       <img
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
+        src="/techinvention/location-map.png"
+        className="h-full w-full pointer-events-none select-none object-cover"
         alt="world map"
-        height="495"
-        width="1056"
         draggable={false}
       />
       <svg
@@ -58,15 +56,15 @@ export function WorldMap({
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
         {isInView && dots.map((dot, i) => {
-          const startPoint = projectPoint(dot.start.lat, dot.start.lng);
-          const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+          const startPoint = (dot.start as any).x !== undefined ? (dot.start as any) : projectPoint(dot.start.lat, dot.start.lng);
+          const endPoint = (dot.end as any).x !== undefined ? (dot.end as any) : projectPoint(dot.end.lat, dot.end.lng);
           return (
             <g key={`path-group-${i}`}>
               <motion.path
                 d={createCurvedPath(startPoint, endPoint)}
                 fill="none"
                 stroke={`url(#path-gradient-${i})`}
-                strokeWidth="1"
+                strokeWidth="1.5"
                 initial={{
                   pathLength: 0,
                 }}
@@ -74,8 +72,8 @@ export function WorldMap({
                   pathLength: 1,
                 }}
                 transition={{
-                  duration: 1,
-                  delay: 0.5 * i,
+                  duration: 1.2,
+                  delay: 0.1 * i,
                   ease: "easeOut",
                 }}
                 key={`start-upper-${i}`}
@@ -94,98 +92,6 @@ export function WorldMap({
             </linearGradient>
           ))}
         </defs>
-
-        {isInView && dots.map((dot, i) => (
-          <g key={`points-group-${i}`}>
-            {i === 0 && (
-              <g key={`start-${i}`}>
-                <circle
-                  cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                  cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                  r="3.5"
-                  fill="#5C7625"
-                />
-                <circle
-                  cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                  cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                  r="3.5"
-                  fill="#5C7625"
-                  opacity="0.6"
-                >
-                  <animate
-                    attributeName="r"
-                    from="3.5"
-                    to="12"
-                    dur="1.5s"
-                    begin="0s"
-                    repeatCount="indefinite"
-                  />
-                  <animate
-                    attributeName="opacity"
-                    from="0.6"
-                    to="0"
-                    dur="1.5s"
-                    begin="0s"
-                    repeatCount="indefinite"
-                  />
-                </circle>
-                <text
-                  x={projectPoint(dot.start.lat, dot.start.lng).x + 8}
-                  y={projectPoint(dot.start.lat, dot.start.lng).y + 3}
-                  fontSize="8"
-                  fontWeight="bold"
-                  fill={isDark ? "#ffffff" : "#000000"}
-                  className="drop-shadow-md"
-                >
-                  TechInvention (HQ)
-                </text>
-              </g>
-            )}
-            <g key={`end-${i}`}>
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
-                r="2"
-                fill={dot.color || lineColor}
-              />
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
-                r="2"
-                fill={dot.color || lineColor}
-                opacity="0.5"
-              >
-                <animate
-                  attributeName="r"
-                  from="2"
-                  to="8"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.5"
-                  to="0"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              {dot.end.label && (
-                <text
-                  x={projectPoint(dot.end.lat, dot.end.lng).x + 4}
-                  y={projectPoint(dot.end.lat, dot.end.lng).y + 3}
-                  fontSize="7"
-                  fill={isDark ? "#ffffff" : "#000000"}
-                  className="font-medium opacity-80"
-                >
-                  {dot.end.label}
-                </text>
-              )}
-            </g>
-          </g>
-        ))}
       </svg>
     </div>
   );

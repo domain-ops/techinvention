@@ -27,9 +27,7 @@ export default function GmpHero() {
             <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full mb-16 lg:mb-20">
                 <div className="w-full text-left max-w-5xl">
                     <ScrollReveal direction="up">
-                        <span className="text-[#1955A6] font-bold tracking-[0.4em] text-[11px] mb-4 block uppercase">
-                            Academy of Excellence
-                        </span>
+                        
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] font-medium tracking-wide mb-6 leading-[1.15]">
                             <SplitTitle title={t('training.title') as string} />
                         </h1>
