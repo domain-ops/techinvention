@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   basePath: '/techinvention',
-  assetPrefix: '/techinvention',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/techinvention' : undefined,
   trailingSlash: true,
   // Disable next/image static import handling to prevent conflicts with Vite-style imports
   images: {

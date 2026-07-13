@@ -71,7 +71,7 @@ const Hero = () => {
     const brandName = "Vaccines";
 
     const rotatingWords = [
-        "Strategy",
+        "Manufacturing",
         "R&D",
         "Licensing",
         "Advisory"
