@@ -10,13 +10,6 @@ import { useLanguage } from '../../../context/LanguageContext';
 export default function GmpHero() {
     const { t } = useLanguage();
 
-    const scrollToEnquiry = () => {
-        const ctaSection = document.getElementById('gmp-enquiry-section');
-        if (ctaSection) {
-            ctaSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <section className="relative flex flex-col justify-center overflow-hidden bg-white pt-32 pb-0 lg:pt-40 lg:pb-0 font-sans">
             {/* Ambient background glows */}
@@ -25,7 +18,7 @@ export default function GmpHero() {
 
             {/* Text Content Container */}
             <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full mb-16 lg:mb-20">
-                <div className="w-full text-left max-w-5xl">
+                <div className="w-full text-left">
                     <ScrollReveal direction="up">
                         
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] font-medium tracking-wide mb-6 leading-[1.15]">
@@ -35,7 +28,7 @@ export default function GmpHero() {
                             {t('training.desc')}
                         </p>
                     </ScrollReveal>
-
+ 
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -43,18 +36,11 @@ export default function GmpHero() {
                         className="flex flex-wrap gap-4"
                     >
                         <button 
-                            onClick={scrollToEnquiry}
+                            onClick={() => document.getElementById('training-modules')?.scrollIntoView({ behavior: 'smooth' })}
                             className="px-8 py-4 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2 text-sm"
                         >
-                            <BookOpen className="w-4 h-4" />
-                            Register Now
-                        </button>
-                        <button 
-                            onClick={() => document.getElementById('training-modules')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-8 py-4 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 font-bold rounded-full hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2 text-sm"
-                        >
                             View Modules
-                            <ArrowRight className="w-4 h-4 text-[#5C7625]" />
+                            <ArrowRight className="w-4 h-4 text-white" />
                         </button>
                     </motion.div>
                 </div>

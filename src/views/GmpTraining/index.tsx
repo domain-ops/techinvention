@@ -34,7 +34,7 @@ export default function GmpTrainingPage() {
             {/* 5. Appreciation letters & certificates with lightbox modal */}
             <GmpAppreciation />
 
-            {/* 6. Training enquiry registration form */}
+            {/* 6. Training enquiry CTA section */}
             <GmpCTA />
         </div>
     );

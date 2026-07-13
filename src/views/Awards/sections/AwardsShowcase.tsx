@@ -133,9 +133,11 @@ const AwardsShowcase = () => {
                 <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-primary opacity-[0.05] blur-[100px] pointer-events-none rounded-full" />
                 
                 <div className="relative z-10 flex flex-col w-full">
-                    {/* Header for mobile since floating image won't work well */}
-                    <div className="px-8 md:px-16 mb-16 lg:hidden">
-                        <h2 className="text-3xl font-light text-gray-500 tracking-tight">Swipe to discover our <span className="text-brand-primary font-medium">Accolades</span></h2>
+                    {/* Heading */}
+                    <div className="px-8 md:px-16 mb-10 text-left">
+                        <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide">
+                            <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Achievements</span>
+                        </h2>
                     </div>
 
                     <div className="flex flex-col border-t border-gray-100">

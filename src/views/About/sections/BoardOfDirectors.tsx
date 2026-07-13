@@ -30,7 +30,7 @@ const boardMembers = [
         name: "Mrs. Monika Thanvi",
         role: "Independent Director",
         image: monicaImg,
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/cs-monika-thanvi-a28aa4140?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         bio: `Mrs. Monika Thanvi ${dummyBio}`
     },
     {

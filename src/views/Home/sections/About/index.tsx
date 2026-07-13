@@ -39,12 +39,11 @@ const About = () => {
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
                     <ScrollReveal direction="up" className="max-w-3xl">
-                        <h2 className="text-[36px] font-medium tracking-wide whitespace-nowrap uppercase">
+                        <h2 className="text-[36px] font-medium tracking-wide whitespace-nowrap">
                             <SplitTitle title={t('about.leadership.title') as string || "Our Leadership"} />
                         </h2>
                     </ScrollReveal>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                     {displayProfiles.map((profile, index) => (
                         <ScrollReveal

@@ -21,7 +21,7 @@ export default function ClientFeedback() {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[32px] md:text-[38px] font-medium tracking-wide uppercase">
+                        <h2 className="text-[32px] md:text-[38px] font-medium tracking-wide">
                             <span className="text-[#1955A6]">Feedback</span> <span className="text-[#5C7625]">from Clients</span>
                         </h2>
                     </ScrollReveal>

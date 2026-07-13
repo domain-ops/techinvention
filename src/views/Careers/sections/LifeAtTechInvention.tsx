@@ -1,127 +1,135 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Microscope, Award, Globe, Heart, ArrowRight, ChevronLeft, ChevronRight, UserCheck } from 'lucide-react';
-import ScrollReveal from '../../../components/Common/ScrollReveal';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
-import { useLanguage } from '../../../context/LanguageContext';
-
-import teamLab from '../../../assets/images/team_gallery/team_lab.png';
-import teamMeeting from '../../../assets/images/team_gallery/team_meeting.png';
-import teamCelebration from '../../../assets/images/team_gallery/team_celebration.png';
-import teamWorkshop from '../../../assets/images/team_gallery/team_workshop.png';
-
-const icons = [Microscope, Globe, Award, Heart, UserCheck];
-const colors = ['#1955A6', '#5C7625', '#5C7625', '#1955A6', '#1955A6'];
-const bgs = ['bg-[#1955A6]/8 border-[#1955A6]/15', 'bg-[#5C7625]/8 border-[#5C7625]/15', 'bg-[#5C7625]/8 border-[#5C7625]/15', 'bg-[#1955A6]/8 border-[#1955A6]/15', 'bg-[#1955A6]/8 border-[#1955A6]/15'];
-
-const galleryItems = [
-    {
-        image: teamLab,
-        title: 'Scientific Innovation',
-        category: 'R&D Labs',
-        width: 'w-[260px] md:w-[320px]',
-        height: 'h-[300px] md:h-[360px]',
-        offset: 'translate-y-6 md:translate-y-8'
-    },
-    {
-        image: teamMeeting,
-        title: 'Collaborative Planning',
-        category: 'Strategy Sessions',
-        width: 'w-[300px] md:w-[380px]',
-        height: 'h-[260px] md:h-[320px]',
-        offset: '-translate-y-4 md:-translate-y-6'
-    },
-    {
-        image: teamCelebration,
-        title: 'Milestone Celebrations',
-        category: 'Team Life',
-        width: 'w-[240px] md:w-[300px]',
-        height: 'h-[320px] md:h-[400px]',
-        offset: 'translate-y-8 md:translate-y-12'
-    },
-    {
-        image: teamWorkshop,
-        title: 'Hands-on Workshops',
-        category: 'GMP Training',
-        width: 'w-[280px] md:w-[350px]',
-        height: 'h-[280px] md:h-[340px]',
-        offset: '-translate-y-6 md:-translate-y-8'
-    }
-];
 
 export default function LifeAtTechInvention() {
-    const { t } = useLanguage();
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const pillars = Array.isArray(t('careers.whyJoinUs')) ? t('careers.whyJoinUs') : [];
-    const whoWeLookFor = t('careers.whoWeLookFor') as any;
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % galleryItems.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [activeIndex]);
+    const images = [
+        "/techinvention/team-techinvention.jpg",
+        "/techinvention/image-1.jpeg",
+        "/techinvention/img-2.jpeg",
+        "/techinvention/img-3.jpeg",
+        "/techinvention/img-4.jpeg",
+        "/techinvention/img-5.jpeg",
+        "/techinvention/img-6.jpeg",
+        "/techinvention/img-7.jpeg"
+    ];
 
     const handlePrev = () => {
-        setActiveIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     };
 
     const handleNext = () => {
-        setActiveIndex((prev) => (prev + 1) % galleryItems.length);
+        setCurrentIndex((prev) => (prev + 1) % images.length);
     };
 
-    const isMobile = windowWidth < 640;
-    const isTablet = windowWidth >= 640 && windowWidth < 1024;
-    
-    // Dynamic xOffset based on responsive width
-    const xOffset = isMobile ? 80 : isTablet ? 180 : 320;
-
     return (
-        <section className="py-24 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
+        <section className="py-20 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
             {/* Subtle background decoration */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-primary/3 blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-secondary/4 blur-3xl -translate-x-1/4 translate-y-1/4 pointer-events-none" />
 
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
-                {/* Header */}
-                <div className="mb-16 md:mb-20">
-                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-                        <div className="max-w-2xl text-left">
-                            <ScrollReveal direction="up">
+                {/* Header with Navigation Controls */}
+                <div className="mb-10 flex items-center justify-between">
+                    <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide">
+                        <SplitTitle title="Life at TechInvention" />
+                    </h2>
+                    
+                    {/* Navigation Buttons */}
+                    <div className="flex gap-3">
+                        <button 
+                            onClick={handlePrev}
+                            className="p-3 bg-[#1955A6] text-white hover:bg-[#1955A6]/90 rounded-full shadow-md transition-all duration-300"
+                            aria-label="Previous image"
+                        >
+                            <ChevronLeft className="w-5 h-5" />
+                        </button>
+                        <button 
+                            onClick={handleNext}
+                            className="p-3 bg-[#1955A6] text-white hover:bg-[#1955A6]/90 rounded-full shadow-md transition-all duration-300"
+                            aria-label="Next image"
+                        >
+                            <ChevronRight className="w-5 h-5" />
+                        </button>
+                    </div>
+                </div>
+
+                {/* Slider Container with Left and Right Peeking Images */}
+                <div className="relative w-full overflow-hidden py-4">
+                    {/* Adjusted container height to match 16:9 aspect ratio of landscape photos */}
+                    <div className="flex justify-center items-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[460px]">
+                        <div className="relative w-full h-full flex items-center justify-center">
+                            {images.map((img, idx) => {
+                                const offset = idx - currentIndex;
                                 
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
-                                    <SplitTitle title="Life at TechInvention" />
-                                </h2>
-                            </ScrollReveal>
+                                // Identify slides relative to center
+                                let position = "inactive";
+                                if (offset === 0) position = "active";
+                                else if (offset === -1 || (currentIndex === 0 && idx === images.length - 1)) position = "left";
+                                else if (offset === 1 || (currentIndex === images.length - 1 && idx === 0)) position = "right";
+
+                                // Dynamic width configuration matching landscape 16:9 ratio
+                                let transformClass = "scale-75 opacity-0 pointer-events-none translate-x-full";
+                                let clickAction = undefined;
+
+                                if (position === "active") {
+                                    transformClass = "scale-100 opacity-100 z-20 pointer-events-auto translate-x-0 w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%]";
+                                } else if (position === "left") {
+                                    transformClass = "scale-90 opacity-40 z-10 pointer-events-auto -translate-x-[48%] sm:-translate-x-[42%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%] cursor-pointer hover:opacity-60";
+                                    clickAction = handlePrev;
+                                } else if (position === "right") {
+                                    transformClass = "scale-90 opacity-40 z-10 pointer-events-auto translate-x-[48%] sm:translate-x-[42%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%] cursor-pointer hover:opacity-60";
+                                    clickAction = handleNext;
+                                }
+
+                                if (position === "inactive") return null;
+
+                                return (
+                                    <motion.div
+                                        key={idx}
+                                        layout
+                                        onClick={clickAction}
+                                        transition={{ type: "spring", stiffness: 120, damping: 20 }}
+                                        className={`absolute h-full transition-all duration-700 ease-out overflow-hidden rounded-none shadow-lg border border-slate-200/40 bg-white ${transformClass}`}
+                                    >
+                                        <img 
+                                            src={img} 
+                                            alt={`Life at TechInvention ${idx + 1}`} 
+                                            className="w-full h-full object-cover object-center"
+                                        />
+                                        
+                                        {/* Click to Navigate Overlays on peeking slides */}
+                                        {position !== "active" && (
+                                            <div className="absolute inset-0 bg-transparent flex items-center justify-center">
+                                                <div className="p-3 rounded-full bg-white/80 shadow-md text-slate-800 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                    {position === "left" ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </motion.div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
 
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="w-full relative mt-8 h-[250px] sm:h-[350px] md:h-[420px] lg:h-[480px] overflow-hidden rounded-none"
-                >
-                    <img 
-                        src="/techinvention/team-techinvention.jpg" 
-                        alt="Life at TechInvention Team" 
-                        className="w-full h-full object-cover object-center"
-                    />
-                </motion.div>
+                {/* Pagination Dots */}
+                <div className="flex justify-center gap-2 mt-8">
+                    {images.map((_, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => setCurrentIndex(idx)}
+                            className={`h-1.5 transition-all duration-300 rounded-full ${
+                                idx === currentIndex ? 'w-6 bg-[#1955A6]' : 'w-1.5 bg-slate-300'
+                            }`}
+                            aria-label={`Go to slide ${idx + 1}`}
+                        />
+                    ))}
+                </div>
 
             </div>
         </section>

@@ -78,17 +78,6 @@ const ContactSection = () => {
 
                             {/* Contact details */}
                             <div className="space-y-5 mt-4">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                                        <MapPin className="w-4 h-4 text-white" />
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <h4 className="text-[13px] font-bold text-white tracking-wide uppercase mb-0.5">Head Office</h4>
-                                        <p className="text-slate-300 text-sm leading-relaxed">
-                                            #1004, The Summit Business Park, Andheri East, Mumbai 400093. India
-                                        </p>
-                                    </div>
-                                </div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                         <Phone className="w-4 h-4 text-white" />
@@ -235,7 +224,7 @@ const ContactSection = () => {
                         {/* Map (Full Width) */}
                         <div className="w-full h-[400px] sm:h-[450px] md:h-[500px] rounded-xl overflow-hidden border border-slate-100">
                             <iframe
-                                src="https://maps.google.com/maps?q=The%20Summit%20Business%20Park,%20Andheri%20East,%20Mumbai%20400093&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                src="https://maps.google.com/maps?q=Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Navi%20Mumbai%20400710&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, display: 'block' }}

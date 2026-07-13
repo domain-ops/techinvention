@@ -80,8 +80,8 @@ const Navbar = () => {
         { key: 'cdmo', label: 'Manufacturing', href: '/cdmo' },
         { key: 'consulting', label: 'Consulting', href: '/consulting' },
         { key: 'products', label: 'Products', href: '/products' },
-        { key: 'careers', label: 'Career', href: '/careers' },
         { key: 'gmp', label: 'Training', href: '/gmp-training' },
+        { key: 'careers', label: 'Careers', href: '/careers' },
         { key: 'contact', label: 'Contact Us', href: '/contact-us' },
     ];
     return (

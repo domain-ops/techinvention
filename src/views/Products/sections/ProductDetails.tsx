@@ -72,7 +72,7 @@ const ProductCard = ({ product }: { product: ProductData }) => {
     return (
         <div className="rounded-sm overflow-hidden bg-white shadow-lg border border-slate-200 font-sans flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
             {/* Header Area */}
-            <div className="w-full flex items-stretch text-left border-b border-[#1c52a0]/20 min-h-[80px]">
+            <div className="w-full flex items-stretch text-left border-b border-[#1c52a0]/20 min-h-[110px] md:min-h-[120px]">
                 {/* ID Box */}
                 <div className="w-16 bg-[#1c52a0] text-white flex items-center justify-center font-bold text-xl flex-shrink-0">
                     {product.id}

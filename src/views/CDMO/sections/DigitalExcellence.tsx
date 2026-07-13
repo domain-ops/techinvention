@@ -35,8 +35,8 @@ const DigitalExcellence = () => {
                     <div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {points.map((point: any, idx: number) => (
-                                <ScrollReveal key={idx} direction="up" delay={0.1 * idx}>
-                                    <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                <ScrollReveal key={idx} direction="up" delay={0.1 * idx} className="h-full">
+                                    <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10 h-full">
                                         <Check className="text-brand-secondary shrink-0 mt-1" size={18} />
                                         <span className="text-gray-200 text-sm leading-relaxed">{point}</span>
                                     </div>

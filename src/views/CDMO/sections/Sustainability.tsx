@@ -20,8 +20,8 @@ const Sustainability = () => {
                     <div className="order-2 lg:order-1">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {points.map((point: any, idx: number) => (
-                                <ScrollReveal key={idx} direction="up" delay={0.1 * idx}>
-                                    <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-green-100 shadow-sm">
+                                <ScrollReveal key={idx} direction="up" delay={0.1 * idx} className="h-full">
+                                    <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-green-100 shadow-sm h-full">
                                         <Check className="text-green-600 shrink-0 mt-1" size={18} />
                                         <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
                                     </div>

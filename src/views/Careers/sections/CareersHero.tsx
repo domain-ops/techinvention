@@ -17,12 +17,12 @@ export default function CareersHero() {
 
             <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full flex flex-col md:flex-row items-start justify-between gap-12">
                 {/* Text Section - Left Side */}
-                <div className="max-w-2xl text-left">
+                <div className="flex-1 text-left">
                     <ScrollReveal direction="up">
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] font-medium tracking-wide mb-6 leading-[1.15]">
                             <SplitTitle title={t('careers.title') as string} />
                         </h1>
-                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 max-w-xl font-medium">
+                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 font-medium">
                             {t('careers.intro')}
                         </p>
                     </ScrollReveal>
@@ -38,7 +38,7 @@ export default function CareersHero() {
                             className="px-8 py-4 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2 text-sm"
                         >
                             <Briefcase className="w-4 h-4" />
-                            Explore Openings
+                            Submit Application
                         </button>
                     </motion.div>
                 </div>

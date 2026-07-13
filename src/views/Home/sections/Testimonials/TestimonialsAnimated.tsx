@@ -35,20 +35,23 @@ const TestimonialsAnimated = () => {
             <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-brand-primary/[0.03] to-transparent pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-                <div className="mb-12">
+                
+                {/* 1. Header (Light background, dark/colored text) */}
+                <div className="mb-10">
                     <ScrollReveal direction="up" delay={0.1}>
-                        <h2 className="text-[36px] font-medium tracking-tight leading-tight tracking-tighter mb-4">
+                        <h2 className="text-[36px] font-medium tracking-tight leading-tight tracking-tighter mb-4 text-[#1955A6]">
                             <SplitTitle title={t('testimonials.title') as string} />
                         </h2>
                     </ScrollReveal>
                     <ScrollReveal direction="up" delay={0.2}>
-                        <p className="text-black max-w-2xl mx-auto text-[18px] leading-relaxed font-medium tracking-tight">
+                        <p className="text-slate-700 max-w-2xl mx-auto text-[18px] leading-relaxed font-medium tracking-tight">
                             {t('testimonials.subtitle')}
                         </p>
                     </ScrollReveal>
                 </div>
 
-                <div className="relative min-h-[220px] flex flex-col justify-center items-center py-6">
+                {/* 2. Testimonial Card Block (Blue background, white text) */}
+                <div className="relative w-full max-w-3xl mx-auto bg-[#1955A6] rounded-2xl shadow-xl p-8 sm:p-12 min-h-[250px] flex flex-col justify-center items-center overflow-hidden border border-[#1955A6]/10">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={active}
@@ -58,14 +61,14 @@ const TestimonialsAnimated = () => {
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="w-full flex flex-col items-center"
                         >
-                            <p className="text-xl md:text-2xl lg:text-[24px] text-slate-800 leading-relaxed font-light italic max-w-3xl mb-8">
+                            <p className="text-lg md:text-xl lg:text-[22px] text-white leading-relaxed font-light italic max-w-2xl mb-8">
                                 "{testimonialsData[active].content}"
                             </p>
                             <div>
-                                <h3 className="text-lg md:text-xl font-bold text-slate-900">
+                                <h3 className="text-md md:text-lg font-bold text-white uppercase tracking-wide">
                                     {testimonialsData[active].name}
                                 </h3>
-                                <p className="text-xs md:text-sm text-brand-primary font-medium tracking-widest uppercase mt-1">
+                                <p className="text-[11px] md:text-xs text-[#89b036] font-bold tracking-widest uppercase mt-1.5">
                                     {testimonialsData[active].role}
                                 </p>
                             </div>
@@ -73,11 +76,11 @@ const TestimonialsAnimated = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Navigation Controls */}
+                {/* 3. Navigation Controls (Styled for light background below the card) */}
                 <div className="flex gap-4 justify-center items-center mt-8">
                     <button
                         onClick={handlePrev}
-                        className="h-10 w-10 rounded-full bg-white flex items-center justify-center hover:bg-brand-primary hover:text-white transition-all duration-300 shadow-sm border border-slate-100 text-slate-700"
+                        className="h-10 w-10 rounded-full bg-white flex items-center justify-center hover:bg-[#1955A6] hover:text-white transition-all duration-300 shadow-sm border border-slate-100 text-slate-700"
                         aria-label="Previous testimonial"
                     >
                         <IconArrowLeft className="h-5 w-5" />
@@ -88,7 +91,7 @@ const TestimonialsAnimated = () => {
                                 key={idx}
                                 onClick={() => setActive(idx)}
                                 className={`h-1.5 transition-all duration-300 rounded-full ${
-                                    idx === active ? 'w-6 bg-brand-primary' : 'w-1.5 bg-slate-300'
+                                    idx === active ? 'w-6 bg-[#1955A6]' : 'w-1.5 bg-slate-300'
                                 }`}
                                 aria-label={`Go to slide ${idx + 1}`}
                             />
@@ -96,7 +99,7 @@ const TestimonialsAnimated = () => {
                     </div>
                     <button
                         onClick={handleNext}
-                        className="h-10 w-10 rounded-full bg-white flex items-center justify-center hover:bg-brand-primary hover:text-white transition-all duration-300 shadow-sm border border-slate-100 text-slate-700"
+                        className="h-10 w-10 rounded-full bg-white flex items-center justify-center hover:bg-[#1955A6] hover:text-white transition-all duration-300 shadow-sm border border-slate-100 text-slate-700"
                         aria-label="Next testimonial"
                     >
                         <IconArrowRight className="h-5 w-5" />

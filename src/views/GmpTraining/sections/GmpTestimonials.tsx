@@ -49,7 +49,7 @@ export default function GmpTestimonials() {
                     <ScrollReveal direction="up">
                         
                         <h2 className="text-[32px] md:text-[40px] font-medium tracking-wide mb-6">
-                            <SplitTitle title="Testimonials" />
+                            <SplitTitle title="Participant Testimonials" />
                         </h2>
                     </ScrollReveal>
                 </div>

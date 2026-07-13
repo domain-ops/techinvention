@@ -28,7 +28,11 @@ export default function AdverseEventReporting() {
                         
                         <div className="text-slate-800 text-[16px] md:text-[18px] leading-relaxed">
                             <span className="font-bold">Download Reporting Form:</span> Please complete the{' '}
-                            <a href="#" className="font-bold text-[#d83b6f] hover:underline">
+                            <a 
+                                href="/techinvention/Adverse-Event-AE-Report-Form.docx" 
+                                download="Adverse-Event-AE-Report-Form.docx" 
+                                className="font-bold text-[#d83b6f] hover:underline"
+                            >
                                 AE Reporting form
                             </a>{' '}
                             and send your response to the aforementioned email.
