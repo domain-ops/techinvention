@@ -94,7 +94,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                             type="text" 
                                             value={name} 
                                             onChange={e => setName(e.target.value)}
-                                            placeholder="John Doe" 
+                                            placeholder="Your Name" 
                                             className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>
@@ -106,7 +106,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                             type="email" 
                                             value={email} 
                                             onChange={e => setEmail(e.target.value)}
-                                            placeholder="johndoe@email.com" 
+                                            placeholder="Your Email" 
                                             className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>

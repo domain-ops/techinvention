@@ -154,7 +154,7 @@ export default function GmpCTA() {
                                                         type="text" 
                                                         value={name} 
                                                         onChange={(e) => setName(e.target.value)}
-                                                        placeholder="John Doe" 
+                                                        placeholder="Your Name" 
                                                         className="w-full bg-slate-50 border border-slate-200/85 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1955A6] transition-colors text-black placeholder:text-slate-400"
                                                     />
                                                 </div>
@@ -166,7 +166,7 @@ export default function GmpCTA() {
                                                         type="email" 
                                                         value={email} 
                                                         onChange={(e) => setEmail(e.target.value)}
-                                                        placeholder="john@organization.com" 
+                                                        placeholder="Your Email" 
                                                         className="w-full bg-slate-50 border border-slate-200/85 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1955A6] transition-colors text-black placeholder:text-slate-400"
                                                     />
                                                 </div>

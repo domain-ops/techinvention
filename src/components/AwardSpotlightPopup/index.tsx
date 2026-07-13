@@ -100,7 +100,7 @@ const AwardSpotlightPopup = () => {
                     {/* Image Block */}
                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border border-slate-100 relative group-hover:scale-105 transition-transform duration-300">
                         <img
-                            src={item.image.src || item.image}
+                            src={(item.image as any).src ? (item.image as any).src : item.image}
                             alt={item.title}
                             className="w-full h-full object-cover"
                         />

@@ -178,7 +178,9 @@ const ExperienceSection = () => {
                                     {/* Floating Tag Badges */}
                                     <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
                                         {activeExp.tags.map((tag, i) => (
-                                            
+                                            <span key={i} className="bg-white/90 backdrop-blur-sm text-[#1955A6] px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                                                {tag}
+                                            </span>
                                         ))}
                                     </div>
                                 </div>

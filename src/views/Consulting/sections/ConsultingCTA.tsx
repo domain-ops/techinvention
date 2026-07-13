@@ -184,8 +184,8 @@ const ConsultingCTA = () => {
                                         {/* Name + Email */}
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             {[
-                                                { key: 'name', label: 'Full Name', placeholder: 'Dr. John Smith', type: 'text' },
-                                                { key: 'email', label: 'Email Address', placeholder: 'john@company.com', type: 'email' },
+                                                { key: 'name', label: 'Full Name', placeholder: 'Your Name', type: 'text' },
+                                                { key: 'email', label: 'Email Address', placeholder: 'Your Email', type: 'email' },
                                             ].map((field) => (
                                                 <div key={field.key} className="flex flex-col gap-1.5">
                                                     <label className="text-white/60 text-[11px] font-bold tracking-[0.2em] uppercase">

@@ -76,7 +76,7 @@ const CustomCursor: React.FC = () => {
             }}
         >
             <img 
-                src={typeof dnaLogo === 'string' ? dnaLogo : dnaLogo.src} 
+                src={(dnaLogo as any).src || dnaLogo} 
                 alt="Cursor" 
                 className="w-full h-full object-contain"
             />

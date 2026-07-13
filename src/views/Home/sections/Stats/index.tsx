@@ -46,7 +46,7 @@ const Stats = () => {
                     <div className="absolute inset-0 z-0">
                         <motion.img 
                             loading="lazy" 
-                            src={gcmcImg.src || gcmcImg} 
+                            src={(gcmcImg as any).src ? (gcmcImg as any).src : gcmcImg} 
                             alt="Facility Building" 
                             className="w-full h-full object-cover"
                             initial={{ filter: "blur(0px) brightness(1)", scale: 1 }}

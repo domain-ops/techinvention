@@ -4,8 +4,8 @@ import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import syedImg from '../../../assets/images/Syed-Sir.jpg';
-import nazneenImg from '../../../assets/images/Nazneen-maam.jpg';
+const syedImg = "/techinvention/Syed-Sir.png";
+const nazneenImg = "/techinvention/Nazneen-mam-2.png";
 import monicaImg from '../../../assets/images/Monica-Thanvi.png';
 import gopalImg from '../../../assets/images/Gopal-Damisetti.jpg';
 

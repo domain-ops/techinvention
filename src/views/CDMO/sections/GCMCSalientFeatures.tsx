@@ -30,7 +30,7 @@ export default function GCMCSalientFeatures() {
                     {/* CENTER PHOTO */}
                     <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[520px] h-[280px] rounded-3xl overflow-hidden border-4 border-white">
                         <img 
-                            src={companyImg.src || companyImg} 
+                            src={(companyImg as any).src ? (companyImg as any).src : companyImg} 
                             alt="GCMC Company" 
                             className="w-full h-full object-cover" 
                         />
@@ -108,7 +108,7 @@ export default function GCMCSalientFeatures() {
                     {/* Centered Image */}
                     <div className="w-full max-w-lg mx-auto rounded-2xl overflow-hidden">
                         <img 
-                            src={companyImg.src || companyImg} 
+                            src={(companyImg as any).src ? (companyImg as any).src : companyImg} 
                             alt="GCMC Company" 
                             className="w-full h-auto object-cover" 
                         />
