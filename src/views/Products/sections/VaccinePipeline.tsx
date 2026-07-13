@@ -39,7 +39,7 @@ export default function VaccinePipeline() {
                 {/* GLOBAL SECTION HEADER */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
                     <div className="max-w-3xl text-left">
-                        <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6 text-left">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6 text-left">
                             <SplitTitle title="R&D Vaccine & Biologics Pipeline" />
                         </h2>
                     </div>

@@ -68,7 +68,7 @@ const ContactSection = () => {
                         <div className="lg:col-span-5 bg-[#1955A6] text-white p-10 md:p-14 flex flex-col justify-between">
                             <div>
                                 <span className="text-white font-bold tracking-[0.35em] text-[11px] mb-4 block uppercase">Get In Touch</span>
-                                <h2 className="text-[26px] md:text-[32px] font-bold leading-snug mb-6 text-white">
+                                <h2 className="text-[22px] md:text-[32px] font-bold leading-snug mb-6 text-white">
                                     Let's Start the Conversation
                                 </h2>
                                 <p className="text-slate-300 text-[15px] md:text-[16px] leading-relaxed mb-10">
@@ -209,7 +209,7 @@ const ContactSection = () => {
                 <div className="mb-24">
                     <div className="mb-10">
                         <ScrollReveal direction="up">
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-slate-900 mb-3">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-slate-900 mb-3">
                                 <SplitTitle title="Location & Address" />
                             </h2>
                             <p className="text-slate-600 text-[15px] md:text-[16px] max-w-3xl leading-relaxed">

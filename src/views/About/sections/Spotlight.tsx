@@ -62,7 +62,7 @@ const Spotlight = () => {
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                         <div className="text-left flex-1">
                             <div className="mb-4">
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left text-brand-primary">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left text-brand-primary">
                                     <SplitTitle title="Featured Initiatives" />
                                 </h2>
                             </div>

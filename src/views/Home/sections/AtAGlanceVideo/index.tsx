@@ -13,7 +13,7 @@ const AtAGlanceVideo = () => {
             <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 max-w-6xl mx-auto">
                     <ScrollReveal direction="up" delay={0.2} className="text-center md:text-left">
-                        <h2 className="text-[36px] font-medium tracking-tight text-brand-primary tracking-tighter mb-4">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-tight text-brand-primary tracking-tighter mb-4">
                             {t('glanceVideo.titlePrefix')} <span className="text-brand-secondary">{t('glanceVideo.titleHighlight')}</span>
                         </h2>
                     </ScrollReveal>

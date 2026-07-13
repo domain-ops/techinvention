@@ -18,7 +18,7 @@ const QCLab = () => {
                         <span className="text-brand-secondary font-bold tracking-[0.3em] text-[11px] md:text-[13px] uppercase block mb-4 flex items-center justify-center gap-2">
                             <TestTube2 size={16} /> Quality & Compliance
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-brand-content">
+                        <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight text-brand-content">
                             QC Lab & Analytical Support
                         </h2>
                     </ScrollReveal>

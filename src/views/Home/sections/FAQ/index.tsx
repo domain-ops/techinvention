@@ -89,7 +89,7 @@ const FAQSection = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
                     <div className="flex-grow">
                         <ScrollReveal direction="up" delay={0.1}>
-                            <h2 className="text-[36px] font-medium tracking-wide mb-6">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
                                 <SplitTitle title={faqData.title} />
                             </h2>
                         </ScrollReveal>

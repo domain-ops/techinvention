@@ -32,7 +32,7 @@ export default function LifeAtTechInvention() {
 
                 {/* Header with Navigation Controls */}
                 <div className="mb-10 flex items-center justify-between">
-                    <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide">
+                    <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
                         <SplitTitle title="Life as a Techknight" splitIndex={3} />
                     </h2>
 

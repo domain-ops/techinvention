@@ -20,7 +20,7 @@ const GlobalProjects = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
                     <div className="flex flex-col items-start gap-4">
                         <div className="max-w-3xl">
-                            <h2 className="text-[36px] font-medium tracking-wide">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
                                 <SplitTitle title={t('globalProjects.title').replace('{partners}', t('globalProjects.partners'))} />
                             </h2>
                         </div>

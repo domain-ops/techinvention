@@ -39,7 +39,7 @@ const VaccinePipeline = () => {
                 {/* GLOBAL SECTION HEADER */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
                     <div className="max-w-3xl">
-                        <h2 className="text-[36px] font-medium tracking-wide mb-6">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
                             <SplitTitle title={t('vaccinePipeline.title')?.replace('{pipeline}', t('vaccinePipeline.pipeline') as string) || "Vaccine & Biotherapeutics Pipeline"} />
                         </h2>
                     </div>

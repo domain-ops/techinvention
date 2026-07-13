@@ -14,7 +14,7 @@ const AwardsPage = () => {
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">
                 <div className="mb-16">
                     
-                    <h1 className="text-3xl md:text-4xl font-normal tracking-tight leading-[1.1]">
+                    <h1 className="text-[22px] md:text-4xl font-normal tracking-tight leading-[1.1]">
                         <SplitTitle 
                             title={t('awards.title').replace('{latestNews}', 'Latest News') || "Awards & Accolades"}
                         />

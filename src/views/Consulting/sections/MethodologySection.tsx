@@ -95,7 +95,7 @@ const MethodologySection = () => {
                 <div className="mb-16 md:mb-20">
                     <ScrollReveal direction="up">
                         
-                        <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left mb-6">
                             <SplitTitle title="A Rigorous Step-Wise Approach" />
                         </h2>
                     </ScrollReveal>

@@ -45,7 +45,7 @@ export default function EmployeeVoices() {
             <div className="max-w-[1400px] mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[32px] md:text-[42px] font-medium tracking-wide mb-4 leading-tight text-slate-900">
+                        <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-4 leading-tight text-slate-900">
                             <SplitTitle title="Employee Voices" />
                         </h2>
                         <h3 className="text-[18px] md:text-[20px] font-medium text-slate-500">

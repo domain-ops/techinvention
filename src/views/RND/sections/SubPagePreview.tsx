@@ -61,7 +61,7 @@ const SubPagePreview = () => {
                         <span className="text-brand-primary font-bold tracking-[0.3em] text-[11px] md:text-[13px] uppercase block mb-4">
                             Departments
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-brand-content">
+                        <h2 className="text-[24px] md:text-5xl font-medium tracking-tight text-brand-content">
                             Explore Our Specialized Hubs
                         </h2>
                     </ScrollReveal>
@@ -116,7 +116,7 @@ const SubPagePreview = () => {
                                         </span>
                                     </div>
                                     
-                                    <h3 className="text-3xl md:text-4xl font-medium text-brand-content mb-4 leading-tight">
+                                    <h3 className="text-[22px] md:text-4xl font-medium text-brand-content mb-4 leading-tight">
                                         {activeData.title}
                                     </h3>
                                     

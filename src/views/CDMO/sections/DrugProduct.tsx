@@ -18,7 +18,7 @@ const DrugProduct = () => {
                             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-secondary/10 text-brand-secondary mb-8 shadow-inner">
                                 <Package size={32} />
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-brand-content mb-8 leading-tight">
+                            <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight text-brand-content mb-8 leading-tight">
                                 Drug Product Formulation & Filling
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed mb-8">

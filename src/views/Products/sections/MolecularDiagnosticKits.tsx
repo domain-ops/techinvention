@@ -54,7 +54,7 @@ export default function MolecularDiagnosticKits() {
                     <ScrollReveal direction="up">
                         
                         <div className="mb-4">
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left">
                                 <SplitTitle title="Molecular Diagnostic Kits (MDx)" />
                             </h2>
                         </div>

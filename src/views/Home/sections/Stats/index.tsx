@@ -15,7 +15,7 @@ const Stats = () => {
                 
                 {/* Aligned Top Left Title */}
                 <div className="mb-10">
-                    <h2 className="text-[32px] md:text-[40px] font-medium tracking-wide">
+                    <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide">
                         <SplitTitle title="Our Impact" />
                     </h2>
                 </div>

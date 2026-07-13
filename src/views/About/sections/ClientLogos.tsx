@@ -24,7 +24,7 @@ const ClientLogos = () => {
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
                 <ScrollReveal direction="up">
-                    <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide leading-tight">
+                    <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide leading-tight">
                         <SplitTitle title="Trusted by Global Partners" />
                     </h2>
                 </ScrollReveal>

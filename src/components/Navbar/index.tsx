@@ -38,6 +38,17 @@ const Navbar = () => {
         setIsMenuOpen(false);
     }, [pathname]);
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
     const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter' && searchQuery.trim()) {
             router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
@@ -86,25 +97,26 @@ const Navbar = () => {
     ];
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
+        <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isMenuOpen ? 'bg-white border-gray-200' : isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
             
-            {/* Top Announcement Loop Notice Bar */}
-            <div className="w-full bg-[#1955A6] text-white h-9 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
-                <div className="relative flex items-center justify-center h-full w-full">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={noticeIndex}
-                            initial={{ y: 15, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -15, opacity: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute flex items-center gap-2 font-semibold text-[11px] sm:text-xs tracking-wide text-center"
-                        >
-                            {announcements[noticeIndex]}
-                        </motion.div>
-                    </AnimatePresence>
+            {!isMenuOpen && (
+                <div className="w-full bg-[#1955A6] text-white min-h-[36px] py-2 md:h-9 md:py-0 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
+                    <div className="relative flex items-center justify-center w-full">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={noticeIndex}
+                                initial={{ y: 12, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: -12, opacity: 0 }}
+                                transition={{ duration: 0.4, ease: "easeInOut" }}
+                                className="flex items-center justify-center gap-2 font-semibold text-[11px] sm:text-xs tracking-wide text-center"
+                            >
+                                {announcements[noticeIndex]}
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
-            </div>
+            )}
             
             {/* Top Utility Bar - Hidden on Mobile */}
             <div className="hidden lg:flex w-full bg-brand-primary/5 border-b border-gray-100 h-10 items-center justify-between px-4 md:px-8">
@@ -179,7 +191,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
+            <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8 relative z-[5100]">
                 {/* Logo */}
                 <Link href="/" className="flex-shrink-0">
                     <img src={logoImg} alt="Brand Logo" className="h-10 md:h-16 w-auto" />
@@ -301,7 +313,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
-                        className="fixed inset-0 top-[64px] md:top-[80px] z-[4800] xl:hidden bg-white overflow-y-auto"
+                        className="fixed inset-x-0 bottom-0 top-[64px] md:top-[80px] z-[4800] xl:hidden bg-white overflow-y-auto overscroll-contain"
                     >
                         <div className="flex flex-col p-6 divide-y divide-gray-100 pb-32">
                             {/* Mobile Search Bar */}

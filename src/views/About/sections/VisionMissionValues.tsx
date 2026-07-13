@@ -40,7 +40,7 @@ const VisionMissionValues = () => {
                     <div className="text-left flex-1">
                         <ScrollReveal direction="up">
                             <div className="mb-4">
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
                                     <SplitTitle title="Purpose & Principles" />
                                 </h2>
                             </div>
@@ -64,7 +64,7 @@ const VisionMissionValues = () => {
                     {/* VALUES SECTION (Spans full width) */}
                     <div className="w-full relative">
                         <div className="mb-16 text-left relative z-10">
-                            <h2 className="text-[30px] md:text-[36px] font-medium tracking-wide uppercase">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide uppercase">
                                 <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Values</span>
                             </h2>
                         </div>
@@ -73,7 +73,7 @@ const VisionMissionValues = () => {
                             {values.map((val, idx) => (
                                 <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
                                     <div className="flex gap-8 items-start">
-                                        <span className="text-[32px] md:text-[40px] font-extrabold text-slate-900 leading-none shrink-0 w-12">
+                                        <span className="text-[24px] md:text-[40px] font-extrabold text-slate-900 leading-none shrink-0 w-12">
                                             {val.number}
                                         </span>
                                         <div className="flex flex-col gap-3">

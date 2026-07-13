@@ -39,7 +39,7 @@ const About = () => {
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
                     <ScrollReveal direction="up" className="max-w-3xl">
-                        <h2 className="text-[36px] font-medium tracking-wide whitespace-nowrap">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide md:whitespace-nowrap">
                             <SplitTitle title={t('about.leadership.title') as string || "Our Leadership"} />
                         </h2>
                     </ScrollReveal>
@@ -69,25 +69,25 @@ const About = () => {
                             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-20">
 
                                 {/* Message and Button (Revealed on Hover) */}
-                                <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-30 transform translate-y-16 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto">
+                                <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-12 z-30 transform translate-y-16 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto">
                                     <div className="mb-auto mt-8 hidden md:block">
                                         <div className="w-10 h-1 bg-white/50 rounded-full" />
                                     </div>
-                                    <p className="text-white/95 text-[18px] leading-relaxed line-clamp-4 lg:line-clamp-6 mb-8 font-medium">
+                                    <p className="text-white/95 text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] leading-snug mb-4 font-medium overflow-y-auto leadership-scrollbar max-h-[65%] md:max-h-[75%] pr-2">
                                         "{profile.message || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}"
                                     </p>
 
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="group/btn relative flex items-center gap-4 bg-white text-brand-primary px-7 py-3 md:px-8 md:py-4 rounded-full text-lg font-medium tracking-tight transition-all duration-300 hover:bg-slate-50 overflow-hidden w-fit shadow-xl border border-transparent"
+                                        className="group/btn relative flex items-center gap-2 bg-white text-brand-primary px-5 py-2.5 md:px-8 md:py-4 rounded-full text-[12px] md:text-lg font-medium tracking-tight transition-all duration-300 hover:bg-slate-50 overflow-hidden w-fit shadow-xl border border-transparent"
                                     >
-                                        <span className="relative z-10 tracking-widest text-[10px] uppercase">
+                                        <span className="relative z-10 tracking-widest text-[9px] md:text-[10px] uppercase font-bold">
                                             {profile.viewProfile || 'View Profile'}
                                         </span>
                                         <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center text-brand-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover/btn:translate-x-full"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover/btn:translate-x-full md:w-[18px] md:h-[18px]"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full md:w-[18px] md:h-[18px]"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                         </div>
                                         {/* Shine Effect */}
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />

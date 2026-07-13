@@ -189,7 +189,7 @@ export default function TrainingModules() {
                 <div className="mb-16">
                     <ScrollReveal direction="up">
                         
-                        <h2 className="text-[32px] md:text-[38px] font-medium tracking-wide mb-4 leading-tight">
+                        <h2 className="text-[24px] md:text-[38px] font-medium tracking-wide mb-4 leading-tight">
                             <SplitTitle title="Training Modules" />
                         </h2>
                         <p className="text-slate-600 font-medium text-[16px] md:text-[18px] tracking-wide max-w-2xl">

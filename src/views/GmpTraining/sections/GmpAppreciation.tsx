@@ -29,12 +29,12 @@ export default function GmpAppreciation() {
             <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-[150px] pointer-events-none" />
 
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
-                
+
                 {/* Header */}
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide">
-                            <SplitTitle title="Recognition" />
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
+                            <SplitTitle title="Appreciation & Feedback" />
                         </h2>
                     </ScrollReveal>
                 </div>
@@ -54,9 +54,9 @@ export default function GmpAppreciation() {
                             <div>
                                 {/* image preview container */}
                                 <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center p-4 shadow-sm">
-                                    <img loading="lazy" 
-                                        src={cert.image} 
-                                        alt={cert.title} 
+                                    <img loading="lazy"
+                                        src={cert.image}
+                                        alt={cert.title}
                                         className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-[#1955A6]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -99,9 +99,9 @@ export default function GmpAppreciation() {
                                 <div className="w-full flex flex-col items-center pt-4">
                                     {/* High-res image display */}
                                     <div className="w-full bg-[#fcfcfc] rounded-2xl border border-slate-100 p-6 flex items-center justify-center max-h-[75vh] overflow-hidden">
-                                        <img loading="lazy" 
-                                            src={selectedCert.image} 
-                                            alt={selectedCert.title} 
+                                        <img loading="lazy"
+                                            src={selectedCert.image}
+                                            alt={selectedCert.title}
                                             className="max-w-full max-h-[70vh] object-contain drop-shadow-xl"
                                         />
                                     </div>

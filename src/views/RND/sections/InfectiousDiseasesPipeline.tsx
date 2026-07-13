@@ -39,7 +39,7 @@ export default function InfectiousDiseasesPipeline() {
             <div className="max-w-[1200px] mx-auto px-6">
                 
                 <ScrollReveal direction="up">
-                    <h2 className="text-[36px] font-medium tracking-wide mb-12 text-center md:text-left">
+                    <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-12 text-center md:text-left">
                         <SplitTitle title="Infectious Diseases and AMR-Associated Pathogen Portfolio" />
                     </h2>
                 </ScrollReveal>

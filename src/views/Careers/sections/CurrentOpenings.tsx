@@ -42,7 +42,7 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                     <ScrollReveal direction="up">
                         {/* Header for Open Positions */}
                         <div className="mb-10">
-                            <h2 className="text-[32px] md:text-[40px] font-medium tracking-wide mb-4">
+                            <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-4">
                                 <span className="text-[#1955A6]">Open</span> <span className="text-[#5C7625]">Positions</span>
                             </h2>
                             <h3 className="text-xl md:text-2xl text-slate-700 font-medium mb-4">

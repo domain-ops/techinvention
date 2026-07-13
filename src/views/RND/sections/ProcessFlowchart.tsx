@@ -38,7 +38,7 @@ export default function ProcessFlowchart() {
                 
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[36px] font-medium tracking-wide text-[#13325B] mb-12">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-[#13325B] mb-12">
                             <SplitTitle title="End-to-End R&D Process" />
                         </h2>
                     </ScrollReveal>

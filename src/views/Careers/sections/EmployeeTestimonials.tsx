@@ -31,7 +31,7 @@ export default function EmployeeTestimonials() {
                         <div className="max-w-2xl text-left">
                             <ScrollReveal direction="up">
                                 
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left mb-6">
                                     <SplitTitle title="What Our Team Says" />
                                 </h2>
                             </ScrollReveal>

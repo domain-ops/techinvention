@@ -23,7 +23,7 @@ const DigitalExcellence = () => {
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white font-bold tracking-[0.2em] text-[11px] uppercase mb-6 border border-white/20">
                                 <Cpu size={14} /> Technology Driven
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+                            <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
                                 <SplitTitle title={typeof t('cdmo.digitalManufacturing.title') === 'string' ? t('cdmo.digitalManufacturing.title') : "Digital Excellence"} />
                             </h2>
                             <p className="text-xl text-gray-300 leading-relaxed mb-10">

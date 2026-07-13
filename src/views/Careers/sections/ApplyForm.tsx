@@ -190,18 +190,11 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                     </motion.div>
                                 )}
 
-                                <div className="flex gap-4 pt-4">
-                                    <button 
-                                        type="button"
-                                        onClick={onCancel}
-                                        className="flex-1 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-none transition-all duration-300 text-sm"
-                                    >
-                                        Cancel
-                                    </button>
+                                <div className="pt-4">
                                     <button 
                                         type="submit" 
                                         disabled={loading}
-                                        className="flex-[2] py-4 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white font-bold rounded-none transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 text-sm"
+                                        className="w-full py-4 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white font-bold rounded-none transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 text-sm"
                                     >
                                         {loading ? 'Submitting...' : 'Submit Application'}
                                         <Send className="w-4 h-4" />

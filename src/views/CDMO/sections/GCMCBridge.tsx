@@ -8,7 +8,7 @@ const GCMCBridge = () => {
             <div className="max-w-[1400px] mx-auto px-6">
                 <ScrollReveal direction="up">
                     <div className="border-t-2 border-brand-primary/20 pt-12">
-                        <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">
+                        <h2 className="text-[22px] md:text-4xl font-medium tracking-tight mb-4">
                             <SplitTitle title="GCMC as a Bridge" />
                         </h2>
                         <p className="text-lg text-gray-600 leading-relaxed w-full mb-6">

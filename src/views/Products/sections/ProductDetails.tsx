@@ -150,7 +150,7 @@ export default function ProductDetails() {
 
                 <div className="text-center mb-12">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[28px] md:text-[32px] font-bold tracking-wide leading-tight mb-2">
+                        <h2 className="text-[22px] md:text-[32px] font-bold tracking-wide leading-tight mb-2">
                             <SplitTitle title="Product Details" />
                         </h2>
                     </ScrollReveal>

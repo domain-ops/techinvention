@@ -62,7 +62,7 @@ export default function ServiceGrid() {
                         <span className="text-black font-bold tracking-widest text-[12px] mb-4 block uppercase">
                             What We Offer
                         </span>
-                        <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide mb-6 leading-tight">
+                        <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-6 leading-tight">
                             <SplitTitle title="Consulting Services Tailored for Healthcare Innovation" />
                         </h2>
                         <p className="text-slate-700 text-[18px] md:text-[20px] font-medium">

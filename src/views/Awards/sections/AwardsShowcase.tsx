@@ -135,7 +135,7 @@ const AwardsShowcase = () => {
                 <div className="relative z-10 flex flex-col w-full">
                     {/* Heading */}
                     <div className="px-8 md:px-16 mb-10 text-left">
-                        <h2 className="text-[36px] md:text-[42px] font-medium tracking-wide">
+                        <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide">
                             <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Achievements</span>
                         </h2>
                     </div>

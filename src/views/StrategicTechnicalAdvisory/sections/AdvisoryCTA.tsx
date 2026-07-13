@@ -9,7 +9,7 @@ const AdvisoryCTA = () => {
     return (
         <section className="py-24 bg-brand-content text-white relative overflow-hidden">
             <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-8 leading-tight">
+                <h2 className="text-[24px] md:text-5xl font-medium tracking-tight mb-8 leading-tight">
                     {t('strategicAdvisory.callToAction')}
                 </h2>
                 <Link 

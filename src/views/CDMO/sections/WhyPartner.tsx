@@ -40,7 +40,7 @@ const WhyPartner = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <ScrollReveal direction="up">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+                        <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
                             <SplitTitle title={typeof t('cdmo.whyPartner.title') === 'string' ? t('cdmo.whyPartner.title') : "Why Partner With Us?"} />
                         </h2>
                     </div>

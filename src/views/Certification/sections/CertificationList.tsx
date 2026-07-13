@@ -153,7 +153,7 @@ const CertificationList = () => {
                         <div className="flex flex-col items-center text-center">
                             
                             <div className="mb-4">
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
                                     <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
                                 </h2>
                             </div>

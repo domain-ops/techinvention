@@ -21,7 +21,7 @@ const TechTransfer = () => {
                         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-secondary/10 rounded-full blur-[100px] pointer-events-none" />
                         
                         <div className="relative z-10 text-center mb-20">
-                            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-brand-content">
+                            <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6 text-brand-content">
                                 Technology Transfer Readiness
                             </h2>
                             <p className="text-gray-600 text-lg max-w-2xl mx-auto">

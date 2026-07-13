@@ -15,7 +15,7 @@ const DrugSubstance = () => {
                             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg text-brand-primary mb-8 border border-gray-100">
                                 <Beaker size={32} />
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-brand-content mb-6">
+                            <h2 className="text-[24px] md:text-5xl font-medium tracking-tight text-brand-content mb-6">
                                 Drug Substance Manufacturing
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed mb-10">

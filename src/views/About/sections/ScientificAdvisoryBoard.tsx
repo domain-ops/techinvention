@@ -1,7 +1,7 @@
-"use client";
-import React from 'react';
+import React, { useRef } from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const advisoryMembers = [
     {
@@ -31,13 +31,26 @@ const advisoryMembers = [
 ];
 
 const ScientificAdvisoryBoard = () => {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollRef.current) {
+            const { scrollLeft, clientWidth } = scrollRef.current;
+            const scrollAmount = clientWidth * 0.82;
+            scrollRef.current.scrollTo({
+                left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <section className="py-12 md:py-20 bg-slate-50 font-sans border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
                 
                 <ScrollReveal direction="up">
                     <div className="mb-10 md:mb-12 max-w-4xl">
-                        <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal text-left text-brand-primary mb-4">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal text-left text-brand-primary mb-4">
                             <SplitTitle title="Scientific Advisory Board" />
                         </h2>
                         <p className="text-[#475569] text-[16px] md:text-[18px] font-medium leading-relaxed text-left">
@@ -46,10 +59,13 @@ const ScientificAdvisoryBoard = () => {
                     </div>
                 </ScrollReveal>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div 
+                    ref={scrollRef}
+                    className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-visible pb-6 snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0"
+                >
                     {advisoryMembers.map((member, index) => (
-                        <ScrollReveal direction="up" delay={index * 0.1} key={index}>
-                            <div className="relative overflow-hidden group bg-gray-100 shadow-sm hover:shadow-xl transition-shadow aspect-[3/4] max-h-[420px] lg:max-h-[480px]">
+                        <ScrollReveal direction="up" delay={index * 0.1} key={index} className="min-w-[80vw] sm:min-w-[320px] md:min-w-0 snap-center">
+                            <div className="relative overflow-hidden group bg-gray-100 shadow-sm hover:shadow-xl transition-shadow aspect-[3/4] w-full max-h-[420px] lg:max-h-[480px]">
                                 
                                 {/* Image & Title Overlay Container */}
                                 <div className="relative w-full h-full">
@@ -88,6 +104,24 @@ const ScientificAdvisoryBoard = () => {
                             </div>
                         </ScrollReveal>
                     ))}
+                </div>
+
+                {/* Mobile Slider Controls */}
+                <div className="flex md:hidden justify-center items-center gap-4 mt-6">
+                    <button 
+                        onClick={() => scroll('left')}
+                        className="w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-slate-600 active:scale-95 transition-all"
+                        aria-label="Previous slide"
+                    >
+                        <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button 
+                        onClick={() => scroll('right')}
+                        className="w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-slate-600 active:scale-95 transition-all"
+                        aria-label="Next slide"
+                    >
+                        <ChevronRight className="w-5 h-5" />
+                    </button>
                 </div>
 
             </div>

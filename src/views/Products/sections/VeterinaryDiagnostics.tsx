@@ -51,7 +51,7 @@ export default function VeterinaryDiagnostics() {
                     <div className="text-left">
                         <ScrollReveal direction="up">
                             
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-white mb-6 leading-tight text-left">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-white mb-6 leading-tight text-left">
                                 <span className="text-white">Advanced Diagnostics for </span>
                                 <span className="text-[#87A840]">Animal Care</span>
                             </h2>

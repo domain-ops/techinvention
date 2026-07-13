@@ -16,7 +16,7 @@ const OverviewBand = () => {
                             <span className="text-brand-primary font-bold tracking-[0.3em] text-[11px] md:text-[13px] uppercase block mb-4">
                                 R&D Focus Areas
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-brand-content mb-8 leading-tight">
+                            <h2 className="text-[24px] md:text-5xl font-medium tracking-tight text-brand-content mb-8 leading-tight">
                                 <SplitTitle title="Driving Innovation Across Vaccines & Diagnostics" />
                             </h2>
                             <p className="text-black font-medium text-lg leading-relaxed mb-6">

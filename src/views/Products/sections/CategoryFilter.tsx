@@ -86,7 +86,7 @@ export default function CategoryFilter() {
                         <ScrollReveal direction="up">
                             
                             <div className="mb-4">
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left">
                                     <SplitTitle title="Explore Our Portfolio" />
                                 </h2>
                             </div>

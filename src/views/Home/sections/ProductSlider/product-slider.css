@@ -60,7 +60,7 @@
 }
 
 .carousel-title {
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(24px, 5vw, 72px);
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 24px;

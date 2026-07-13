@@ -34,7 +34,7 @@ const Awards = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                     <ScrollReveal direction="up">
                         <div className="text-center md:text-left">
-                            <h2 className="text-[36px] font-medium tracking-tight text-brand-primary tracking-wide">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-tight text-brand-primary tracking-wide">
                                 {(t('awards.title') as string).split('{latestNews}')[0]}
                                 <span className="font-medium text-brand-secondary">{t('awards.accolades') as string}</span>
                                 {(t('awards.title') as string).split('{latestNews}')[1] || ''}

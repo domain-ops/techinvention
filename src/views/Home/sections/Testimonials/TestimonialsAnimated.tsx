@@ -39,7 +39,7 @@ const TestimonialsAnimated = () => {
                 {/* 1. Header (Light background, dark/colored text) */}
                 <div className="mb-10">
                     <ScrollReveal direction="up" delay={0.1}>
-                        <h2 className="text-[36px] font-medium tracking-tight leading-tight tracking-tighter mb-4 text-[#1955A6]">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-tight leading-tight tracking-tighter mb-4 text-[#1955A6]">
                             <SplitTitle title={t('testimonials.title') as string} />
                         </h2>
                     </ScrollReveal>
@@ -64,14 +64,14 @@ const TestimonialsAnimated = () => {
                             <p className="text-lg md:text-xl lg:text-[22px] text-white leading-relaxed font-light italic max-w-2xl mb-8">
                                 "{testimonialsData[active].content}"
                             </p>
-                            <div>
-                                <h3 className="text-md md:text-lg font-bold text-white uppercase tracking-wide">
-                                    {testimonialsData[active].name}
-                                </h3>
-                                <p className="text-[11px] md:text-xs text-[#89b036] font-bold tracking-widest uppercase mt-1.5">
-                                    {testimonialsData[active].role}
-                                </p>
-                            </div>
+                             <div className="text-center w-full px-4">
+                                 <h3 className="text-xs sm:text-sm md:text-lg font-bold text-white uppercase tracking-wide max-w-xl mx-auto">
+                                     {testimonialsData[active].name}
+                                 </h3>
+                                 <p className="text-[11px] md:text-xs text-[#89b036] font-bold tracking-widest uppercase mt-1.5">
+                                     {testimonialsData[active].role}
+                                 </p>
+                             </div>
                         </motion.div>
                     </AnimatePresence>
                 </div>

@@ -129,7 +129,7 @@ const CaseStudy = () => {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 relative z-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                 <ScrollReveal direction="up" delay={0.2} className="text-left">
-                    <h2 className="text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
+                    <h2 className="text-[24px] md:text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
                         {t('caseStudy.titlePrefix')} <span className="text-brand-secondary">{t('caseStudy.titleHighlight')}</span>
                     </h2>
                     <p className="text-gray-600 text-[18px] max-w-2xl">

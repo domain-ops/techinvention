@@ -59,7 +59,7 @@ export default function DiagnosticProducts() {
                         <ScrollReveal direction="up">
                             
                             <div className="mb-4">
-                                <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-left mb-6 leading-tight">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left mb-6 leading-tight">
                                     <SplitTitle title="Advanced Diagnostic Solutions" />
                                 </h2>
                             </div>

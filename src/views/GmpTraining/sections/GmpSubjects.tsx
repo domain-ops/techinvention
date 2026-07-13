@@ -25,7 +25,7 @@ export default function GmpSubjects() {
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         
-                        <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
                             <SplitTitle title="Training Programs & Subjects" />
                         </h2>
                         <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed">

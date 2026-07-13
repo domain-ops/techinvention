@@ -9,7 +9,7 @@ const Responsibility = () => {
                 <ScrollReveal direction="up">
                     <div className="text-center mb-16 flex flex-col items-center">
                         <div className="mb-4">
-                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
                                 <SplitTitle title="Our Responsibility" />
                             </h2>
                         </div>

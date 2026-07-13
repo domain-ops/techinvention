@@ -20,7 +20,7 @@ export default function Collaborations() {
                 {/* Centered Heading and Paragraph */}
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[36px] font-medium tracking-wide mb-6">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
                             <SplitTitle title="Our Collaborations" />
                         </h2>
                         

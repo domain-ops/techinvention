@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import { useLanguage } from '../../../../context/LanguageContext';
 
@@ -14,6 +14,18 @@ const logoDNA = "/techinvention/TechInvention-gif.gif";
 
 const Blogs = () => {
     const { t } = useLanguage();
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollRef.current) {
+            const { scrollLeft, clientWidth } = scrollRef.current;
+            const scrollAmount = clientWidth * 0.82;
+            scrollRef.current.scrollTo({
+                left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
         <section className="py-16 md:py-20 relative w-full bg-brand-primary/5 border-t border-brand-primary/10">
@@ -21,7 +33,7 @@ const Blogs = () => {
                 
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 max-w-7xl mx-auto mb-16">
                     <ScrollReveal direction="up" delay={0.1} className="text-center md:text-left max-w-3xl">
-                        <h2 className="text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-tighter text-brand-primary mb-5">
                             {t('blogs.titlePrefix')} <span className="text-brand-secondary">{t('blogs.titleHighlight')}</span>
                         </h2>
                         <p className="text-gray-600 text-[18px] ">
@@ -31,12 +43,15 @@ const Blogs = () => {
                 </div>
 
                 {/* Grid */}
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <div 
+                    ref={scrollRef}
+                    className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 overflow-x-auto md:overflow-visible pb-8 snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0"
+                >
                     {IMAGES.map((img, idx) => (
-                        <ScrollReveal key={idx} direction="up" delay={0.2 + idx * 0.1}>
+                        <ScrollReveal key={idx} direction="up" delay={0.2 + idx * 0.1} className="min-w-[80vw] sm:min-w-[340px] md:min-w-0 snap-center">
                             <motion.div 
                                 whileHover={{ y: -10 }}
-                                className="group h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 will-change-transform"
+                                className="group h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 will-change-transform w-full"
                             >
                                 {/* Image */}
                                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50">
@@ -80,6 +95,24 @@ const Blogs = () => {
                             </motion.div>
                         </ScrollReveal>
                     ))}
+                </div>
+
+                {/* Mobile Slider Controls */}
+                <div className="flex md:hidden justify-center items-center gap-4 mt-6">
+                    <button 
+                        onClick={() => scroll('left')}
+                        className="w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-slate-600 active:scale-95 transition-all"
+                        aria-label="Previous slide"
+                    >
+                        <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button 
+                        onClick={() => scroll('right')}
+                        className="w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-slate-600 active:scale-95 transition-all"
+                        aria-label="Next slide"
+                    >
+                        <ChevronRight className="w-5 h-5" />
+                    </button>
                 </div>
 
                 {/* Custom CTA matching the site */}

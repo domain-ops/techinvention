@@ -6,7 +6,7 @@ export default function AdverseEventReporting() {
         <section className="py-20 bg-white relative font-sans">
             <div className="max-w-4xl mx-auto px-6 md:px-8">
                 <ScrollReveal direction="up">
-                    <h2 className="text-[28px] md:text-[32px] font-medium text-[#13325B] mb-6">
+                    <h2 className="text-[22px] md:text-[32px] font-medium text-[#13325B] mb-6">
                         Adverse Event Reporting
                     </h2>
                     

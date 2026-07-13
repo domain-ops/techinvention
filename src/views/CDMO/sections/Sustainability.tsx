@@ -35,7 +35,7 @@ const Sustainability = () => {
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 font-bold tracking-[0.2em] text-[11px] uppercase mb-6 border border-green-200">
                                 <Leaf size={14} /> Green Operations
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+                            <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
                                 <SplitTitle title={typeof t('cdmo.sustainability.title') === 'string' ? t('cdmo.sustainability.title') : "Sustainability"} />
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed mb-10">

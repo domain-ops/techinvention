@@ -47,7 +47,7 @@ export default function WhyJoinUs() {
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[32px] md:text-[42px] font-medium tracking-wide mb-6 leading-tight text-slate-900">
+                        <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-6 leading-tight text-slate-900">
                             <SplitTitle title="Why Join Us" />
                         </h2>
                     </ScrollReveal>

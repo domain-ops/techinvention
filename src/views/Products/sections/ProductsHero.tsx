@@ -28,7 +28,7 @@ export default function ProductsHero() {
                 <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
                         
-                        <h1 className="text-4xl md:text-5xl lg:text-[56px] font-medium tracking-wide mb-6 leading-[1.15]">
+                        <h1 className="text-[24px] md:text-4xl lg:text-5xl lg:text-[56px] font-medium tracking-wide mb-6 leading-[1.15]">
                             <SplitTitle title="Innovative Products for Global Health" />
                         </h1>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">

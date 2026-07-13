@@ -26,7 +26,7 @@ export default function WhoWeLookFor() {
                                     </div>
                                 </div>
                                 
-                                <h2 className="text-[32px] md:text-[42px] font-medium tracking-wide mb-4 leading-tight text-slate-900">
+                                <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-4 leading-tight text-slate-900">
                                     <SplitTitle title="Who We Look For" />
                                 </h2>
                                 
