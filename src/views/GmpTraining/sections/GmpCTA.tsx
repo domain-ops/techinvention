@@ -2,6 +2,7 @@
 
 import React, { useState, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Dithering = lazy(() =>
     import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
@@ -33,12 +34,12 @@ export default function GmpCTA() {
                         </div>
                     </Suspense>
 
-                    <div className="relative z-10 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
+                    <div className="relative z-10 px-6 max-w-5xl mx-auto text-center flex flex-col items-center">
                         
                         {/* Headline with Brand Colors */}
-                        <h2 className="text-3xl md:text-5xl lg:text-[54px] font-medium tracking-tight text-[#1955A6] mb-6 leading-tight">
-                            Explore Training Opportunities <br />
-                            <span className="text-[#5C7625]">with TechInvention.</span>
+                        <h2 className="text-2xl md:text-4xl lg:text-[44px] font-medium tracking-tight text-[#1955A6] mb-6 leading-tight">
+                            Launch your career in <br />
+                            <span className="text-[#5C7625]">Vaccine Development and Manufacturing</span>
                         </h2>
 
                         {/* Description */}
@@ -47,48 +48,49 @@ export default function GmpCTA() {
                         </p>
 
                         {/* Premium Button with SVG slide effect */}
-                        <motion.a
-                            href="mailto:connect@techinvention.biz"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-lg overflow-hidden"
-                        >
-                            <span className="relative z-10">
-                                Email Us Now
-                            </span>
-                            <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center z-10">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="3"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="transition-transform duration-300 group-hover:translate-x-full"
-                                >
-                                    <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-                                </svg>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="3"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="absolute -left-full transition-transform duration-300 group-hover:translate-x-full"
-                                >
-                                    <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </div>
-                            {/* Shine Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                        </motion.a>
+                        <Link href="/contact-us" passHref legacyBehavior>
+                            <motion.a
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-lg overflow-hidden cursor-pointer"
+                            >
+                                <span className="relative z-10">
+                                    Connect Now
+                                </span>
+                                <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center z-10">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="transition-transform duration-300 group-hover:translate-x-full"
+                                    >
+                                        <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="absolute -left-full transition-transform duration-300 group-hover:translate-x-full"
+                                    >
+                                        <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </div>
+                                {/* Shine Effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                            </motion.a>
+                        </Link>
                     </div>
                 </div>
             </div>

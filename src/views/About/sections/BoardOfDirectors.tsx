@@ -44,7 +44,7 @@ const boardMembers = [
 
 const BoardOfDirectors = () => {
     return (
-        <section className="py-12 md:py-20 bg-white font-sans">
+        <section className="pt-12 pb-8 md:pt-20 md:pb-12 bg-white font-sans">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
                 
                 <ScrollReveal direction="up">

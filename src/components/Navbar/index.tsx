@@ -75,7 +75,7 @@ const Navbar = () => {
 
     const mainNavItems = [
         { key: 'home', label: 'Home', href: '/' },
-        { key: 'company', label: 'Company', href: '/about' },
+        { key: 'company', label: 'About', href: '/about' },
         { key: 'rnd', label: 'R&D', href: '/rnd' },
         { key: 'cdmo', label: 'Manufacturing', href: '/cdmo' },
         { key: 'consulting', label: 'Consulting', href: '/consulting' },
@@ -84,6 +84,7 @@ const Navbar = () => {
         { key: 'careers', label: 'Careers', href: '/careers' },
         { key: 'contact', label: 'Contact Us', href: '/contact-us' },
     ];
+
     return (
         <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
             

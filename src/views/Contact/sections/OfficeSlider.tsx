@@ -3,23 +3,30 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-export default function LifeAtTechInvention() {
+export default function OfficeSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = [
-        "/techinvention/team-techinvention.jpg",
-        "/techinvention/image-1.jpeg",
-        "/techinvention/img-2.jpeg",
-        "/techinvention/img-3.jpeg",
-        "/techinvention/img-4.jpeg"
+    const slides = [
+        {
+            src: "/techinvention/img-7.jpeg",
+            name: "Techinvention Office"
+        },
+        {
+            src: "/techinvention/img-6.jpeg",
+            name: "Workspace"
+        },
+        {
+            src: "/techinvention/img-5.jpeg",
+            name: "Training Room"
+        }
     ];
 
     const handlePrev = () => {
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+        setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
     const handleNext = () => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
     };
 
     return (
@@ -29,23 +36,23 @@ export default function LifeAtTechInvention() {
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-secondary/4 blur-3xl -translate-x-1/4 translate-y-1/4 pointer-events-none" />
 
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
-
+                
                 {/* Header with Navigation Controls */}
                 <div className="mb-10 flex items-center justify-between">
                     <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide">
-                        <SplitTitle title="Life as a Techknight" splitIndex={3} />
+                        <SplitTitle title="Inside TechInvention" />
                     </h2>
-
+                    
                     {/* Navigation Buttons */}
                     <div className="flex gap-3">
-                        <button
+                        <button 
                             onClick={handlePrev}
                             className="p-3 bg-[#1955A6] text-white hover:bg-[#1955A6]/90 rounded-full shadow-md transition-all duration-300"
                             aria-label="Previous image"
                         >
                             <ChevronLeft className="w-5 h-5" />
                         </button>
-                        <button
+                        <button 
                             onClick={handleNext}
                             className="p-3 bg-[#1955A6] text-white hover:bg-[#1955A6]/90 rounded-full shadow-md transition-all duration-300"
                             aria-label="Next image"
@@ -60,14 +67,14 @@ export default function LifeAtTechInvention() {
                     {/* Adjusted container height to match 16:9 aspect ratio of landscape photos */}
                     <div className="flex justify-center items-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[460px]">
                         <div className="relative w-full h-full flex items-center justify-center">
-                            {images.map((img, idx) => {
+                            {slides.map((slide, idx) => {
                                 const offset = idx - currentIndex;
-
+                                
                                 // Identify slides relative to center
                                 let position = "inactive";
                                 if (offset === 0) position = "active";
-                                else if (offset === -1 || (currentIndex === 0 && idx === images.length - 1)) position = "left";
-                                else if (offset === 1 || (currentIndex === images.length - 1 && idx === 0)) position = "right";
+                                else if (offset === -1 || (currentIndex === 0 && idx === slides.length - 1)) position = "left";
+                                else if (offset === 1 || (currentIndex === slides.length - 1 && idx === 0)) position = "right";
 
                                 // Dynamic width configuration matching landscape 16:9 ratio
                                 let transformClass = "scale-75 opacity-0 pointer-events-none translate-x-full";
@@ -91,14 +98,21 @@ export default function LifeAtTechInvention() {
                                         layout
                                         onClick={clickAction}
                                         transition={{ type: "spring", stiffness: 120, damping: 20 }}
-                                        className={`absolute h-full transition-all duration-700 ease-out overflow-hidden rounded-none shadow-lg border border-slate-200/40 bg-white ${transformClass}`}
+                                        className={`absolute h-full transition-all duration-700 ease-out overflow-hidden rounded-2xl shadow-lg border border-slate-200/40 bg-white ${transformClass}`}
                                     >
-                                        <img
-                                            src={img}
-                                            alt={`Life as a 'Techknight' ${idx + 1}`}
+                                        <img 
+                                            src={slide.src} 
+                                            alt={slide.name} 
                                             className="w-full h-full object-cover object-center"
                                         />
-
+                                        
+                                        {/* Caption Overlay */}
+                                        <div className={`absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-12 pb-5 px-6 text-center transition-opacity duration-500 ${position === "active" ? "opacity-100" : "opacity-0"}`}>
+                                            <p className="text-white text-base md:text-xl font-medium tracking-wide">
+                                                {slide.name}
+                                            </p>
+                                        </div>
+                                        
                                         {/* Click to Navigate Overlays on peeking slides */}
                                         {position !== "active" && (
                                             <div className="absolute inset-0 bg-transparent flex items-center justify-center">
@@ -116,12 +130,13 @@ export default function LifeAtTechInvention() {
 
                 {/* Pagination Dots */}
                 <div className="flex justify-center gap-2 mt-8">
-                    {images.map((_, idx) => (
+                    {slides.map((_, idx) => (
                         <button
                             key={idx}
                             onClick={() => setCurrentIndex(idx)}
-                            className={`h-1.5 transition-all duration-300 rounded-full ${idx === currentIndex ? 'w-6 bg-[#1955A6]' : 'w-1.5 bg-slate-300'
-                                }`}
+                            className={`h-1.5 transition-all duration-300 rounded-full ${
+                                idx === currentIndex ? 'w-6 bg-[#1955A6]' : 'w-1.5 bg-slate-300'
+                            }`}
                             aria-label={`Go to slide ${idx + 1}`}
                         />
                     ))}

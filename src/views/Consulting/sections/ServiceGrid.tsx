@@ -20,7 +20,7 @@ const SERVICES = [
     {
         icon: Factory,
         title: "Facility Design & GMP Readiness",
-        desc: "Basic Design, Concept design and Detailed Design cleanroom planning, workflow, utilities, equipment strategy and GMP-aligned readiness support."
+        desc: "Basic Design, Concept design and Detailed Design with cleanroom planning, workflow, utilities, equipment strategy and GMP-aligned readiness support."
     },
     {
         icon: FlaskConical,

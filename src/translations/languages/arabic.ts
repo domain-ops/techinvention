@@ -15,7 +15,7 @@ export const arabic = {
         products: "المنتجات",
         solutions: "الحلول",
         learn: "تعلم",
-        company: "الشركة",
+        company: "من نحن",
         support: "الدعم",
     },
     megaMenu: {
@@ -377,7 +377,7 @@ export const arabic = {
         phase3Trials: "تجارب المرحلة الثالثة في النصف الأول من 2027²",
         stages: {
             target: "مسببات الأمراض المستهدفة",
-            rd: "البحث والتطوير",
+            rd: "الاكتشاف",
             poc: "إثبات المفهوم",
             preclinical: "الدراسات قبل السريرية"
         },

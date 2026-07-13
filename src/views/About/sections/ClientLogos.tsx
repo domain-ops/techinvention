@@ -42,7 +42,7 @@ const ClientLogos = () => {
                         {[...ROW_1, ...ROW_1].map((src, index) => (
                             <div 
                                 key={`row1-${index}`} 
-                                className="w-[180px] h-[90px] md:w-[240px] md:h-[120px] flex items-center justify-center p-2"
+                                className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
                             >
                                 <img 
                                     src={src} 
@@ -65,7 +65,7 @@ const ClientLogos = () => {
                         {[...ROW_2, ...ROW_2].map((src, index) => (
                             <div 
                                 key={`row2-${index}`} 
-                                className="w-[180px] h-[90px] md:w-[240px] md:h-[120px] flex items-center justify-center p-2"
+                                className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
                             >
                                 <img 
                                     src={src} 

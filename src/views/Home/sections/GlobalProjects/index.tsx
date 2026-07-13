@@ -25,7 +25,7 @@ const GlobalProjects = () => {
                             </h2>
                         </div>
 
-                        <div className="max-w-2xl">
+                        <div className="max-w-full">
                             <MagicText
                                 text={t('globalProjects.desc')}
                                 className="font-medium tracking-tight text-brand-content text-[18px] leading-relaxed text-left lg:text-justify"

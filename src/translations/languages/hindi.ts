@@ -15,7 +15,7 @@ export const hindi = {
         products: "उत्पाद",
         solutions: "समाधान",
         learn: "सीखें",
-        company: "कंपनी",
+        company: "हमारे बारे में",
         support: "सहायता",
     },
     megaMenu: {
@@ -377,7 +377,7 @@ export const hindi = {
         development: "विकास",
         stages: {
             target: "लक्षित रोगजनक",
-            rd: "आर एंड डी",
+            rd: "खोज",
             poc: "अवधारणा का प्रमाण (PoC)",
             preclinical: "प्रीक्लिनिकल अध्ययन"
         },

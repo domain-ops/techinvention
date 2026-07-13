@@ -32,7 +32,7 @@ const VisionMissionValues = () => {
     ];
 
     return (
-        <section className="py-20 md:py-32 bg-white relative overflow-hidden font-sans">
+        <section className="pt-8 pb-20 md:pt-12 md:pb-32 bg-white relative overflow-hidden font-sans">
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
                 
                 {/* Section Header */}
@@ -54,7 +54,7 @@ const VisionMissionValues = () => {
                 <div className="flex flex-col gap-16 md:gap-24">
                     
                     {/* MISSION QUOTE ROW */}
-                    <div className="w-full max-w-4xl mr-auto relative pl-6 border-l-4 border-[#5C7625] mb-8">
+                    <div className="w-full max-w-4xl mr-auto relative pl-6 border-l-4 border-[#5C7625]">
                         <QuoteIcon className="w-10 h-10 text-[#5C7625]/20 absolute -top-4 left-6 pointer-events-none" />
                         <h3 className="text-2xl md:text-3xl lg:text-[34px] font-medium leading-[1.4] text-slate-800 relative z-10 pl-6">
                             "Access to Essential Vaccines and Novel Biologics Should Not Only be the Privilege of Just the Affording Few."
@@ -62,7 +62,7 @@ const VisionMissionValues = () => {
                     </div>
 
                     {/* VALUES SECTION (Spans full width) */}
-                    <div className="w-full mt-16 md:mt-24 relative">
+                    <div className="w-full relative">
                         <div className="mb-16 text-left relative z-10">
                             <h2 className="text-[30px] md:text-[36px] font-medium tracking-wide uppercase">
                                 <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Values</span>
@@ -73,14 +73,14 @@ const VisionMissionValues = () => {
                             {values.map((val, idx) => (
                                 <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
                                     <div className="flex gap-8 items-start">
-                                        <span className="text-[28px] md:text-[34px] font-extrabold text-slate-900 leading-none shrink-0 w-12">
+                                        <span className="text-[32px] md:text-[40px] font-extrabold text-slate-900 leading-none shrink-0 w-12">
                                             {val.number}
                                         </span>
                                         <div className="flex flex-col gap-3">
-                                            <h4 className="text-[15px] md:text-[16px] font-extrabold tracking-wider text-slate-900 uppercase leading-snug">
+                                            <h4 className="text-[18px] md:text-[22px] font-extrabold tracking-wider text-slate-900 uppercase leading-snug">
                                                 {val.title}
                                             </h4>
-                                            <p className="text-slate-500 text-[14px] md:text-[15px] leading-[1.8] font-medium">
+                                            <p className="text-slate-500 text-[15px] md:text-[17px] leading-[1.8] font-medium">
                                                 {val.desc}
                                             </p>
                                         </div>

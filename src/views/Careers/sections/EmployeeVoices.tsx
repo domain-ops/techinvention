@@ -66,13 +66,13 @@ export default function EmployeeVoices() {
                     {[...testimonials, ...testimonials].map((testimonial, idx) => (
                         <div 
                             key={idx} 
-                            className="w-[320px] md:w-[420px] bg-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 flex flex-col relative group"
+                            className="w-[320px] md:w-[420px] bg-[#1955A6] rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] flex flex-col relative group"
                         >
-                            <Quote className="absolute top-6 right-6 w-12 h-12 text-[#1955A6]/5 z-0" />
+                            <Quote className="absolute top-6 right-6 w-12 h-12 text-white/20 z-0" />
                             
                             {/* Profile Info Header (Image + Info first) */}
                             <div className="flex items-center gap-5 mb-6 relative z-10">
-                                <div className="w-20 h-20 rounded-full bg-slate-50 border-2 border-[#1955A6]/10 overflow-hidden flex items-center justify-center flex-shrink-0">
+                                <div className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 overflow-hidden flex items-center justify-center flex-shrink-0">
                                     {testimonial.image ? (
                                         <img 
                                             src={testimonial.image} 
@@ -80,17 +80,17 @@ export default function EmployeeVoices() {
                                             className="w-full h-full object-cover"
                                         />
                                     ) : (
-                                        <User className="w-8 h-8 text-slate-300" />
+                                        <User className="w-8 h-8 text-white/30" />
                                     )}
                                 </div>
                                 <div>
-                                    <h4 className="text-[18px] font-bold text-slate-900 mb-1">
+                                    <h4 className="text-[18px] font-bold text-white mb-1">
                                         {testimonial.name}
                                     </h4>
-                                    <p className="text-[14px] font-semibold text-[#1955A6] mb-1">
+                                    <p className="text-[14px] font-semibold text-white/80 mb-1">
                                         {testimonial.designation}
                                     </p>
-                                    <span className="inline-block px-2 py-0.5 rounded-full bg-[#5C7625]/10 text-[#5C7625] text-[11px] font-bold uppercase tracking-wider">
+                                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/15 text-white text-[11px] font-bold uppercase tracking-wider">
                                         {testimonial.experience}
                                     </span>
                                 </div>
@@ -98,7 +98,7 @@ export default function EmployeeVoices() {
                             
                             {/* Quote Content */}
                             <div className="relative z-10 flex-1">
-                                <p className="text-[15px] md:text-[16px] leading-relaxed text-slate-600 font-medium italic">
+                                <p className="text-[15px] md:text-[16px] leading-relaxed text-white/95 font-medium italic">
                                     "{testimonial.quote}"
                                 </p>
                             </div>

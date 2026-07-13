@@ -16,7 +16,7 @@ export const english = {
         "products": "Products",
         "solutions": "Services",
         "learn": "Learn",
-        "company": "Company",
+        "company": "About",
         "support": "Support",
         "spotlight": "Spotlight"
     },
@@ -116,25 +116,25 @@ export const english = {
         "subtitle": "Discover what our partners say about our commitment to excellence.",
         "items": [
             {
-                "name": "IAVI",
+                "name": "International AIDS Vaccine Initiative (IAVI)",
                 "role": "",
                 "content": "“TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report.”",
                 "image": "testimonial_1"
             },
             {
-                "name": "UNOPS",
+                "name": "United Nations Office for Project Services (UNOPS)",
                 "role": "Biosafety & Biosecurity Training",
                 "content": "“The training delivered by TechInvention significantly strengthened participants’ theoretical understanding and practical competencies in biosafety and biosecurity.”",
                 "image": "testimonial_2"
             },
             {
-                "name": "UNOPS",
+                "name": "United Nations Office for Project Services (UNOPS)",
                 "role": "Vaccine Analytics Training",
                 "content": "“TechInvention successfully delivered a comprehensive vaccine analytics training programme, combining virtual learning with in-person practical and facility-based sessions.”",
                 "image": "testimonial_3"
             },
             {
-                "name": "WHO Nepal",
+                "name": "World Health Organization (SEARO)",
                 "role": "",
                 "content": "“TechInvention was commended for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment.”",
                 "image": "testimonial_4"
@@ -416,7 +416,7 @@ export const english = {
             }
         ],
         "collaborations": [
-            "Institute of Life Sciences (ILS)",
+            "Institute of Life Sciences",
             "Indian Institute of Technology Bhubaneswar",
             "ICMR- RMRC Bhubaneswar",
             "ICMR-NIRBID Kolkata"
@@ -577,8 +577,8 @@ export const english = {
         "title": "Vaccine & Biotherapeutics {pipeline}",
         "pipeline": "Pipeline",
         "phases": {
-            "rd": "R&D",
-            "poc": "POC",
+            "rd": "Discovery",
+            "poc": "Proof-of-Concept",
             "preClinical": "Pre-clinical",
             "phase12": "Phase 1/2"
         },
@@ -593,7 +593,7 @@ export const english = {
         "development": "Development",
         "stages": {
             "target": "Target Pathogen",
-            "rd": "R&D",
+            "rd": "Discovery",
             "poc": "Proof-of-Concept",
             "preclinical": "Preclinical Studies"
         },
@@ -1001,19 +1001,19 @@ export const english = {
         "callToAction": "Advancing healthcare ambitions into scalable global impact. Partner with TechInvention to design, build and strengthen future-ready vaccine, biologics and healthcare manufacturing ecosystems.",
         "testimonials": [
             {
-                "client": "IAVI",
+                "client": "International AIDS Vaccine Initiative (IAVI)",
                 "feedback": "TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report."
             },
             {
-                "client": "UNOPS – Biosafety & Biosecurity Training",
+                "client": "United Nations Office for Project Services (UNOPS) – Biosafety & Biosecurity Training",
                 "feedback": "The training delivered by TechInvention significantly strengthened participants’ theoretical understanding and practical competencies in biosafety and biosecurity."
             },
             {
-                "client": "UNOPS – Vaccine Analytics Training",
+                "client": "United Nations Office for Project Services (UNOPS) – Vaccine Analytics Training",
                 "feedback": "TechInvention successfully delivered a comprehensive vaccine analytics training programme, combining virtual learning with in-person practical and facility-based sessions."
             },
             {
-                "client": "WHO Nepal",
+                "client": "World Health Organization (SEARO)",
                 "feedback": "TechInvention was commended for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment."
             }
         ]
@@ -1110,7 +1110,7 @@ export const english = {
         }
     },
     "careers": {
-        "title": "Build With Purpose",
+        "title": "Build a Career with Purpose",
         "intro": "Join a team where science, strategy and execution come together to create meaningful healthcare impact. At TechInvention, every role contributes to advancing vaccines, biologics and technologies that support access, affordability and resilience across global health ecosystems.",
         "whyJoinUs": [
             {
@@ -1173,7 +1173,7 @@ export const english = {
         "openPositions": "Explore opportunities across functions. TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."
     },
     "training": {
-        "title": "Developing the Next Generation of Professionals in Vaccine Development and GMP Manufacturing",
+        "title": "Tailored Training in Vaccine Development & GMP Manufacturing",
         "desc": "Through industry-aligned, experiential learning, we prepare professionals to meet the evolving demands of vaccine development and GMP manufacturing. Our comprehensive curriculum covers biosafety and biosecurity, GMP production, analytical testing, quality assurance, global regulatory requirements, clinical trial management and pharmacovigilance.",
         "modules": [
             {
@@ -1460,7 +1460,7 @@ export const english = {
     },
     "contactDocs": {
         "connectDesc": "Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you. TechInvention works with partners across global health systems to move science closer to meaningful public health impact.",
-        "address1Title": "Corporate Office and Manufacturing Site",
+        "address1Title": "Corporate Office & Manufacturing Site",
         "address1": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
         "address2Title": "Bio-Innovation Centre (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",

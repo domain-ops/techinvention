@@ -1,6 +1,7 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
+import Link from 'next/link';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
@@ -45,57 +46,59 @@ export default function ProductsCTA() {
                         </p>
                         
                         <div className="flex flex-col items-center gap-8">
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-xl overflow-hidden"
-                            >
-                                <span className="relative z-10 text-[13px] font-bold uppercase tracking-widest">
-                                    Request a Quote
-                                </span>
-                                <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="3"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="transition-transform duration-300 group-hover:translate-x-full"
-                                    >
-                                        <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-                                    </svg>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="3"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="absolute -left-full transition-transform duration-300 group-hover:translate-x-full"
-                                    >
-                                        <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-                                    </svg>
-                                </div>
-                                {/* Shine Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                            </motion.button>
+                            <Link href="/contact-us" passHref legacyBehavior>
+                                <motion.a
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-xl overflow-hidden cursor-pointer"
+                                >
+                                    <span className="relative z-10 text-[13px] font-bold uppercase tracking-widest">
+                                        Connect Now
+                                    </span>
+                                    <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="3"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="transition-transform duration-300 group-hover:translate-x-full"
+                                        >
+                                            <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="3"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="absolute -left-full transition-transform duration-300 group-hover:translate-x-full"
+                                        >
+                                            <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                    {/* Shine Effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                                </motion.a>
+                            </Link>
                             
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6">
-                                <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm">
+                                <a href="tel:+912240052123" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
                                     <Phone className="w-5 h-5 text-[#5C7625]" />
-                                    <span className="font-bold text-sm text-slate-800">+1 (800) 123-4567</span>
-                                </div>
-                                <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm">
+                                    <span className="font-bold text-sm text-slate-800">+91 22 4005 2123</span>
+                                </a>
+                                <a href="mailto:connect@techinvention.biz" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
                                     <Mail className="w-5 h-5 text-[#5C7625]" />
-                                    <span className="font-bold text-sm text-slate-800">sales@techinvention.com</span>
-                                </div>
+                                    <span className="font-bold text-sm text-slate-800">connect@techinvention.biz</span>
+                                </a>
                             </div>
                         </div>
                     </ScrollReveal>

@@ -90,7 +90,7 @@ export default function FacilityFeatures() {
             <div className="max-w-[1300px] mx-auto px-6">
                 
                 {/* Heading */}
-                <div className="mb-16 text-left">
+                <div className="mb-16 text-center">
                     <h2 className="text-[30px] md:text-[36px] font-medium tracking-wide">
                         <span className="text-[#1955A6]">Features</span>
                     </h2>

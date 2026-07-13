@@ -15,7 +15,7 @@ export const spanish = {
         products: "Productos",
         solutions: "Soluciones",
         learn: "Aprender",
-        company: "Empresa",
+        company: "Acerca de",
         support: "Soporte",
     },
     megaMenu: {
@@ -377,7 +377,7 @@ export const spanish = {
         development: "Desarrollo",
         stages: {
             target: "Patógeno Objetivo",
-            rd: "I+D",
+            rd: "Descubrimiento",
             poc: "Prueba de Concepto",
             preclinical: "Estudios Preclínicos"
         },

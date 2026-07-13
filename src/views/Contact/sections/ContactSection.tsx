@@ -209,8 +209,8 @@ const ContactSection = () => {
                 <div className="mb-24">
                     <div className="mb-10">
                         <ScrollReveal direction="up">
-                            <h2 className="text-[24px] md:text-[30px] font-bold text-slate-900 mb-3">
-                                Location &amp; Address
+                            <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide text-slate-900 mb-3">
+                                <SplitTitle title="Location & Address" />
                             </h2>
                             <p className="text-slate-600 text-[15px] md:text-[16px] max-w-3xl leading-relaxed">
                                 Visit our corporate office or connect with us directly for partnership discussions, product enquiries, strategic collaborations and institutional communication.
@@ -222,9 +222,9 @@ const ContactSection = () => {
                     <div className="flex flex-col gap-8 rounded-2xl overflow-hidden border border-slate-200/60 shadow-md bg-white p-6 sm:p-8">
 
                         {/* Map (Full Width) */}
-                        <div className="w-full h-[400px] sm:h-[450px] md:h-[500px] rounded-xl overflow-hidden border border-slate-100">
+                        <div className="w-full h-[400px] sm:h-[450px] md:h-[500px]">
                             <iframe
-                                src="https://maps.google.com/maps?q=Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Navi%20Mumbai%20400710&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                src="https://maps.google.com/maps?q=TechInvention%20Lifecare,%20Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra,%20400710&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, display: 'block' }}
@@ -240,7 +240,7 @@ const ContactSection = () => {
                             <div className="flex flex-col gap-2 pb-6 md:pb-0 md:px-4 md:first:pl-0">
                                 <div className="flex items-center gap-2 mb-1">
                                     <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Manufacturing Site</h4>
+                                    <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Corporate Office & Manufacturing Site</h4>
                                 </div>
                                 <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
                                     Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710

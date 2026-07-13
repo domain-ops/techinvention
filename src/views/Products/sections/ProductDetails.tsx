@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
 import { Globe, CheckCircle2, Users2 } from 'lucide-react';
 
 interface ProductData {
@@ -149,10 +150,9 @@ export default function ProductDetails() {
 
                 <div className="text-center mb-12">
                     <ScrollReveal direction="up">
-                        <h2 className="text-[28px] md:text-[32px] font-bold tracking-wide text-[#13325B] leading-tight mb-2 uppercase">
-                            PRODUCT DETAILS
+                        <h2 className="text-[28px] md:text-[32px] font-bold tracking-wide leading-tight mb-2">
+                            <SplitTitle title="Product Details" />
                         </h2>
-                        <div className="h-1 w-20 bg-[#1c52a0] mx-auto mt-4 rounded-full"></div>
                     </ScrollReveal>
                 </div>
 

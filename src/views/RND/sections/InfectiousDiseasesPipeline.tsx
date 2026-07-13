@@ -40,7 +40,7 @@ export default function InfectiousDiseasesPipeline() {
                 
                 <ScrollReveal direction="up">
                     <h2 className="text-[36px] font-medium tracking-wide mb-12 text-center md:text-left">
-                        <SplitTitle title="Infectious Diseases and AMR-Associated Pathogen Focus" />
+                        <SplitTitle title="Infectious Diseases and AMR-Associated Pathogen Portfolio" />
                     </h2>
                 </ScrollReveal>
 
@@ -53,8 +53,8 @@ export default function InfectiousDiseasesPipeline() {
                             
                             {/* Phase Columns Container */}
                             <div className="grid grid-cols-4 w-full">
-                                <div className="text-center font-bold">R&D</div>
-                                <div className="text-center font-bold">POC</div>
+                                <div className="text-center font-bold">Discovery</div>
+                                <div className="text-center font-bold">Proof-of-Concept</div>
                                 <div className="text-center font-bold">Pre-clinical</div>
                                 <div className="text-center font-bold">Phase 1/2</div>
                             </div>
@@ -154,7 +154,7 @@ export default function InfectiousDiseasesPipeline() {
                                 {/* Tracking Bar */}
                                 <div className="w-full relative mt-2 mb-2">
                                     <div className="flex justify-between text-[13px] text-slate-500 font-bold mb-3 px-1">
-                                        <span>R&D</span>
+                                        <span>Discovery</span>
                                         <span>Pre-clinical</span>
                                         <span className="text-black">Phase 1/2</span>
                                     </div>

@@ -90,8 +90,8 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
                             )}
                         </div>
 
-                        {/* Wider video player for About page aligned with the text boundary */}
-                        {isAboutPage && (
+                        {/* Wider video player for About page aligned with the text boundary - Hidden for now */}
+                        {/* {isAboutPage && (
                             <div className="w-full mt-6">
                                 <div className="relative aspect-video w-full overflow-hidden shadow-[0_15px_40px_rgba(23,85,166,0.1)] border border-slate-100 bg-slate-950 rounded-none">
                                     <video
@@ -106,7 +106,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
                                     />
                                 </div>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 )}
             </div>

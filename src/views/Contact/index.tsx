@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import ContactHero from './sections/ContactHero';
 import ContactIntro from './sections/ContactIntro';
+import OfficeSlider from './sections/OfficeSlider';
 import ContactSection from './sections/ContactSection';
 
 const ContactPage = () => {
@@ -15,6 +16,8 @@ const ContactPage = () => {
             <ContactHero />
 
             <ContactIntro />
+
+            <OfficeSlider />
 
             <ContactSection />
         </div>

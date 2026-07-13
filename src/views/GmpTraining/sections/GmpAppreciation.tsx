@@ -34,7 +34,7 @@ export default function GmpAppreciation() {
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide">
-                            <SplitTitle title="Appreciation & Feedback" />
+                            <SplitTitle title="Recognition" />
                         </h2>
                     </ScrollReveal>
                 </div>

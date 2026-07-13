@@ -28,7 +28,7 @@ export default function LandingHero() {
                 <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] font-medium tracking-wide mb-6 leading-[1.15] text-[#13325B]">
-                            <SplitTitle title="End-to-End R&D Ecosystem" />
+                            <SplitTitle title="Our R&D Ecosystem" />
                         </h1>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">
                             TechInvention's state-of-the-art R&D facility, the High-impact One Health Research & Innovation ZONe (HORIZON), is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.

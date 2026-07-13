@@ -22,10 +22,10 @@ const CDMOPage = () => {
             <GCMCFeature />
             <GCMCBridge />
             <HorizonGCMC hideHeading={true} />
-            <WhyPartner />
             <Capabilities />
             <DigitalExcellence />
             <Sustainability />
+            <WhyPartner />
             <CTASection />
         </div>
     );

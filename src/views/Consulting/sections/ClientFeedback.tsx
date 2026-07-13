@@ -8,10 +8,10 @@ export default function ClientFeedback() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const feedbackImages = [
-        { src: "/techinvention/feedback-4.png", alt: "Client Feedback Letter 1" },
-        { src: "/techinvention/feedback-1.jpg", alt: "Client Feedback Letter 2" },
-        { src: "/techinvention/feedback-2.jpg", alt: "Client Feedback Letter 3" },
-        { src: "/techinvention/feedback-3.jpg", alt: "Client Feedback Letter 4" }
+        { src: "/techinvention/feedback-4.png", alt: "Client Feedback Letter - IAVI" },
+        { src: "/techinvention/feedback-3.jpg", alt: "Client Feedback Letter - UNOPS Biosafety & Biosecurity Training" },
+        { src: "/techinvention/feedback-2.jpg", alt: "Client Feedback Letter - UNOPS Vaccine Analytics Training" },
+        { src: "/techinvention/feedback-1.jpg", alt: "Client Feedback Letter - WHO" }
     ];
 
     return (
@@ -33,10 +33,10 @@ export default function ClientFeedback() {
                         <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
                             <div 
                                 onClick={() => setSelectedImage(img.src)}
-                                className="group bg-white p-4 border border-slate-100 rounded-2xl cursor-pointer hover:border-[#1955A6]/30 transition-all duration-300 relative overflow-hidden"
+                                className="group bg-white p-4 border border-slate-200 rounded-2xl cursor-pointer hover:border-[#1955A6]/40 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                             >
                                 {/* Image Container */}
-                                <div className="aspect-[3/4] relative overflow-hidden rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center">
+                                <div className="aspect-[3/4] relative overflow-hidden rounded-lg bg-white border border-slate-200/80 flex items-center justify-center">
                                     <img 
                                         src={img.src} 
                                         alt={img.alt} 
@@ -76,19 +76,19 @@ export default function ClientFeedback() {
                             <X size={24} />
                         </button>
 
-                        {/* Modal Image */}
+                        {/* Modal Image Container */}
                         <motion.div 
                             initial={{ scale: 0.95, y: 15 }}
                             animate={{ scale: 1, y: 0 }}
                             exit={{ scale: 0.95, y: 15 }}
                             transition={{ duration: 0.3 }}
-                            className="max-w-[90%] max-h-[85vh] md:max-h-[90vh] bg-white rounded-xl overflow-hidden p-2"
+                            className="max-w-[95%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] bg-white rounded-2xl p-2 flex items-center justify-center shadow-2xl relative"
                             onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image card
                         >
                             <img 
                                 src={selectedImage} 
                                 alt="Client Feedback Letter Fullscreen" 
-                                className="w-auto max-h-[80vh] md:max-h-[85vh] object-contain mx-auto cursor-default" 
+                                className="max-w-full max-h-[85vh] object-contain rounded-xl cursor-default" 
                             />
                         </motion.div>
                     </motion.div>

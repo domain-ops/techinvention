@@ -21,7 +21,7 @@ const LandingHero = () => {
                         Vaccine Manufacturing
                     </h1>
                     <p className="text-[16px] md:text-[20px] leading-relaxed max-w-4xl mx-auto font-medium text-white/90">
-                        Global Collaborative Centre for Medical Countermeasures - GCMC
+                        Global Collaborative Centre for Medical Countermeasures (GCMC)
                     </p>
                 </motion.div>
             </div>

@@ -26,11 +26,11 @@ const ClientsSection = () => {
 
             <div className="max-w-5xl mx-auto px-6">
                 {/* Grid layout with no borders or background boxes */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-8 md:gap-x-16 md:gap-y-12">
                     {LOGOS.map((src, index) => (
                         <div 
                             key={index} 
-                            className="flex items-center justify-center h-[90px] md:h-[110px]"
+                            className="flex items-center justify-center h-[60px] md:h-[75px]"
                         >
                             <img 
                                 src={src} 

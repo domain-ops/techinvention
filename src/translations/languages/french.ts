@@ -15,7 +15,7 @@ export const french = {
         products: "Produits",
         solutions: "Services",
         learn: "Apprendre",
-        company: "Entreprise",
+        company: "À propos",
         support: "Support",
     },
     megaMenu: {
@@ -402,7 +402,7 @@ export const french = {
         phase3Trials: "Essais de phase 3 au S1 2027²",
         stages: {
             target: "Pathogène cible",
-            rd: "R&D",
+            rd: "Découverte",
             poc: "Preuve de concept",
             preclinical: "Études précliniques"
         },

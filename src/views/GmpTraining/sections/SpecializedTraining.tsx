@@ -76,8 +76,8 @@ const ImageSlider = ({ images }: { images: string[] }) => {
 
 const specializedPrograms = [
     {
-        title: "UNOPS Biosafety & Biosecurity Training",
-        desc: "Advancing safer laboratory ecosystems through structured training in biosafety, biosecurity and containment practices. The program blends technical understanding with practical risk-management approaches for modern biomedical laboratories. It helps build institutional capability for safe, compliant and responsible scientific operations.",
+        title: "Biosafety & Biosecurity Training for UNOPS",
+        desc: "Delivered structured training in biosafety, biosecurity and containment practices. The program blended technical understanding with practical risk-management approaches for modern biomedical laboratories. It helps build institutional capability for safe, compliant and responsible scientific operations.",
         icon: ShieldAlert,
         color: '#1955A6',
         bg: 'bg-[#1955A6]/5',
@@ -88,8 +88,8 @@ const specializedPrograms = [
         ]
     },
     {
-        title: "UNOPS Vaccine Analytics Training",
-        desc: "Enhancing vaccine development capability through focused training in analytical science and product evaluation. The program supports understanding of critical quality attributes, analytical methods, assay relevance and data interpretation. It strengthens the technical foundation required for vaccine quality, regulatory readiness and development success.",
+        title: "Training in Vaccine Analytics for UNOPS",
+        desc: "Enhanced vaccine development capability through focused training in analytical science and product evaluation. The program supported understanding of critical quality attributes, analytical methods, assay relevance and data interpretation.",
         icon: Activity,
         color: '#5C7625',
         bg: 'bg-[#5C7625]/5',
@@ -100,8 +100,8 @@ const specializedPrograms = [
         ]
     },
     {
-        title: "Bioprocessing Training at RCB",
-        desc: "TechInvention conducted focused training programs at the Regional Centre for Biotechnology, Faridabad, covering the fundamentals of upstream and downstream processing, Quality Control, Quality Assurance and Good Manufacturing Practices. The sessions also included hands-on exposure to streaking and shake-flask techniques, fermentation operations, vaccine production workflows, QC laboratory practices and BSL-2 fermentation facilities, helping participants connect core bioprocessing concepts with real-world industry applications.",
+        title: "Advanced Bioprocessing Course at Regional Centre for Biotechnology(RCB)",
+        desc: "The training covered the fundamentals of upstream and downstream processing, Quality Control, Quality Assurance and Good Manufacturing Practices. The sessions also included hands-on exposure to streaking and shake-flask techniques, fermentation operations, vaccine production workflows, and QC laboratory practices, helping participants connect core bioprocessing concepts with real-world industry applications.",
         icon: GitMerge,
         color: '#1955A6',
         bg: 'bg-[#1955A6]/5',
@@ -121,7 +121,7 @@ export default function SpecializedTraining() {
                 <div className="text-center mb-20 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         <h2 className="text-[28px] md:text-[36px] font-medium tracking-wide mb-6">
-                            <SplitTitle title="Training Programs Conducted" />
+                            <SplitTitle title="Successful Programs" />
                         </h2>
                     </ScrollReveal>
                 </div>

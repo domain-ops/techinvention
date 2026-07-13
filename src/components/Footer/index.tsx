@@ -61,7 +61,7 @@ const Footer = () => {
                                     <FooterLink href="/">Home</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/about">Company</FooterLink>
+                                    <FooterLink href="/about">About</FooterLink>
                                 </li>
                                 <li>
                                     <FooterLink href="/rnd">R&amp;D</FooterLink>
@@ -127,5 +127,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
