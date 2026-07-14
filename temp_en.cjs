@@ -1110,7 +1110,7 @@ module.exports = {
         }
     },
     "careers": {
-        "title": "Build With Purpose",
+        "title": "Build a Career with Purpose",
         "intro": "Join a team where science, strategy and execution come together to create meaningful healthcare impact. At TechInvention, every role contributes to advancing vaccines, biologics and technologies that support access, affordability and resilience across global health ecosystems.",
         "whyJoinUs": [
             {
@@ -1173,7 +1173,7 @@ module.exports = {
         "openPositions": "Explore opportunities across functions. TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."
     },
     "training": {
-        "title": "Launch your career in Vaccine Development and Manufacturing",
+        "title": "Tailored Training in Vaccine Development & GMP Manufacturing",
         "desc": "Through industry-aligned, experiential learning, we prepare professionals to meet the evolving demands of vaccine development and GMP manufacturing. Our comprehensive curriculum covers biosafety and biosecurity, GMP production, analytical testing, quality assurance, global regulatory requirements, clinical trial management and pharmacovigilance.",
         "modules": [
             {

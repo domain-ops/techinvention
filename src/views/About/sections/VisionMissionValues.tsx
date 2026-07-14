@@ -64,7 +64,7 @@ const VisionMissionValues = () => {
                     {/* VALUES SECTION (Spans full width) */}
                     <div className="w-full relative">
                         <div className="mb-16 text-left relative z-10">
-                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide uppercase">
+                            <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
                                 <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Values</span>
                             </h2>
                         </div>
