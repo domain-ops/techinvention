@@ -118,7 +118,7 @@ export const english = {
             {
                 "name": "International AIDS Vaccine Initiative (IAVI)",
                 "role": "",
-                "content": "TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report.",
+                "content": "We really appreciate the efforts of entire TechInvention Team in delivering the report",
                 "image": "testimonial_1"
             },
             {
@@ -1002,7 +1002,7 @@ export const english = {
         "testimonials": [
             {
                 "client": "IAVI",
-                "feedback": "TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report."
+                "feedback": "We really appreciate the efforts of entire TechInvention Team in delivering the report"
             },
             {
                 "client": "UNOPS – Biosafety & Biosecurity Training",

@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
-import techInventionVideo from '../../../assets/videos/TechInvention-Video.mp4';
+
 
 export default function LandingHero() {
     const { t } = useLanguage();
@@ -47,15 +47,17 @@ export default function LandingHero() {
                 >
                     <div className="relative rounded-none overflow-hidden border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-slate-50 p-2 md:p-3">
                         <div className="absolute inset-0 bg-[#1955A6]/2 z-10 pointer-events-none rounded-none" />
-                        <video 
-                            src={techInventionVideo} 
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="auto"
-                            className="w-full h-auto min-h-[300px] md:min-h-[480px] lg:max-h-[640px] object-cover rounded-none"
-                        />
+                        <div className="relative w-full aspect-video min-h-[300px] md:min-h-[480px] lg:max-h-[640px] overflow-hidden">
+                            <iframe 
+                                src="https://www.youtube.com/embed/YbD6JxmEwV8?si=KkRuv8TuBQzi1C4B" 
+                                title="YouTube video player" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerPolicy="strict-origin-when-cross-origin" 
+                                allowFullScreen
+                                className="absolute inset-0 w-full h-full"
+                            />
+                        </div>
                     </div>
                 </motion.div>
 
