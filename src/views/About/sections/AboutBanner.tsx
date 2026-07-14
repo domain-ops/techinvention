@@ -48,7 +48,7 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
         <section className={`relative w-full overflow-hidden ${
             image 
                 ? 'h-[380px] md:h-[520px] flex items-center bg-slate-900 pt-20 md:pt-28' 
-                : 'min-h-[450px] md:min-h-[550px] flex items-center bg-slate-50 pt-32 pb-16 md:pt-40 md:pb-20 lg:pt-44'
+                : 'min-h-[280px] md:min-h-[500px] flex items-center bg-slate-50 pt-24 pb-10 md:pt-40 md:pb-20 lg:pt-44'
         }`}>
             {/* Background elements */}
             {image ? (

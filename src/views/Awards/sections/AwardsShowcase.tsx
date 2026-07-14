@@ -132,9 +132,9 @@ const AwardsShowcase = () => {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-primary opacity-[0.08] blur-[120px] pointer-events-none rounded-full" />
                 <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-primary opacity-[0.05] blur-[100px] pointer-events-none rounded-full" />
                 
-                <div className="relative z-10 flex flex-col w-full">
+                <div className="relative z-10 flex flex-col w-full max-w-6xl mx-auto">
                     {/* Heading */}
-                    <div className="px-8 md:px-16 mb-10 text-left">
+                    <div className="px-4 md:px-8 mb-10 text-left">
                         <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide">
                             <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Achievements</span>
                         </h2>
@@ -146,7 +146,7 @@ const AwardsShowcase = () => {
                             return (
                                 <div 
                                     key={idx}
-                                    className="group relative w-full border-b border-gray-100 hover:border-brand-primary/20 transition-colors duration-500 cursor-pointer px-8 md:px-16"
+                                    className="group relative w-full border-b border-gray-100 hover:border-brand-primary/20 transition-colors duration-500 cursor-pointer px-4 md:px-8"
                                     onMouseEnter={() => setActiveAward(idx)}
                                 >
                                     <div className="py-12 md:py-16 flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-16 relative z-10">

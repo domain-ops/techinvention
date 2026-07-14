@@ -102,19 +102,21 @@ const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
         </div>
 
         {/* Hover Reveal Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 translate-y-8 group-hover:translate-y-0">
-            <div className="flex items-center gap-3 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                <div className="h-[2px] w-8 bg-white/80"></div>
-                <span className="text-white font-mono text-sm tracking-widest font-bold">
-                    {cert.year}
-                </span>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 md:p-8 translate-y-8 group-hover:translate-y-0 overflow-y-auto scrollbar-thin">
+            <div className="flex flex-col justify-end min-h-full">
+                <div className="flex items-center gap-3 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                    <div className="h-[2px] w-8 bg-white/80"></div>
+                    <span className="text-white font-mono text-sm tracking-widest font-bold">
+                        {cert.year}
+                    </span>
+                </div>
+                <h3 className="text-2xl font-light text-white mb-3 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                    {cert.name}
+                </h3>
+                <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                    {cert.info}
+                </p>
             </div>
-            <h3 className="text-2xl font-light text-white mb-3 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
-                {cert.name}
-            </h3>
-            <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 line-clamp-6 md:line-clamp-none">
-                {cert.info}
-            </p>
         </div>
     </div>
 );
@@ -140,20 +142,21 @@ const CertificationList = () => {
     const col3 = CERT_CONFIG.filter((_, i) => i % 3 === 2);
 
     return (
-        <section ref={containerRef} className="bg-[#fafafa] py-32 relative selection:bg-brand-primary selection:text-white overflow-hidden">
+        <section ref={containerRef} className="bg-[#fafafa] pt-8 pb-24 md:pt-20 md:pb-28 relative selection:bg-brand-primary selection:text-white overflow-hidden">
             {/* Background ambient lighting */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[150px]" />
                 <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[150px]" />
             </div>
 
-            <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
-                <div className="text-center mb-32 max-w-4xl mx-auto">
+            <div className="max-w-[1440px] mx-auto px-4 md:px-8 relative z-10">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-left mb-16 max-w-4xl">
                     <ScrollReveal direction="up">
-                        <div className="flex flex-col items-center text-center">
+                        <div className="flex flex-col items-start text-left">
                             
                             <div className="mb-4">
-                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
+                                <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
                                     <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
                                 </h2>
                             </div>
@@ -223,6 +226,7 @@ const CertificationList = () => {
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     );

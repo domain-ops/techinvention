@@ -4,14 +4,12 @@ import { useLanguage } from '../../context/LanguageContext';
 import AboutHeader from '../About/sections/AboutBanner';
 import CertificationList from './sections/CertificationList';
 import CTASection from '../../components/CTASection';
-import certBannerImg from '../../assets/images/banner-imge-1.jpg';
-
 
 const CertificationPage = () => {
     const { t } = useLanguage();
-        return (
+    return (
         <div className="min-h-screen bg-brand-background text-brand-content">
-            <AboutHeader title="Certification" image={certBannerImg} />
+            <AboutHeader title="Certification" subtitle={t('certifications.desc')} />
             <CertificationList />
             <CTASection />
         </div>

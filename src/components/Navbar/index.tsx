@@ -82,7 +82,14 @@ const Navbar = () => {
         { code: 'fr', label: 'French' },
     ];
 
-    const megaMenusData: Record<string, any> = {};
+    const megaMenusData: Record<string, any> = {
+        company: {
+            simpleLinks: [
+                { name: 'CSR', href: '/about/csr-initiatives' },
+                { name: 'Awards & Certifications', href: '/about/awards-certifications' }
+            ]
+        }
+    };
 
     const mainNavItems = [
         { key: 'home', label: 'Home', href: '/' },
@@ -267,7 +274,7 @@ const Navbar = () => {
                                                             <Link
                                                                 key={idx}
                                                                 href={link.href}
-                                                                className="px-6 py-4 text-[15px] font-medium text-black hover:text-brand-primary hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors"
+                                                                className="px-6 py-4 text-[15px] font-medium text-black hover:text-brand-primary hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors whitespace-nowrap"
                                                             >
                                                                 {link.name}
                                                             </Link>

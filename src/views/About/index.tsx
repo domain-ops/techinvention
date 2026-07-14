@@ -6,8 +6,6 @@ import OfficeEnvironment from './sections/OfficeEnvironment';
 import VisionMissionValues from './sections/VisionMissionValues';
 import TeamSection from './sections/TeamSection';
 import ScientificAdvisoryBoard from './sections/ScientificAdvisoryBoard';
-import CertificationList from '../Certification/sections/CertificationList';
-import AwardsShowcase from '../Awards/sections/AwardsShowcase';
 import Responsibility from './sections/Responsibility';
 import Spotlight from './sections/Spotlight';
 import CTASection from '../../components/CTASection';
@@ -40,9 +38,7 @@ const AboutPage = () => {
             {/* 3. Leadership / Team Section (Removed as requested) */}
             {/* <TeamSection /> */}
 
-            {/* 4. Certifications & Awards */}
-            <CertificationList />
-            <AwardsShowcase />
+
 
             {/* 5. Responsibility / CSR (Removed as requested) */}
             {/* <Responsibility /> */}
