@@ -1173,7 +1173,7 @@ module.exports = {
         "openPositions": "Explore opportunities across functions. TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."
     },
     "training": {
-        "title": "Developing the Next Generation of Professionals in Vaccine Development and GMP Manufacturing",
+        "title": "Launch your career in Vaccine Development and Manufacturing",
         "desc": "Through industry-aligned, experiential learning, we prepare professionals to meet the evolving demands of vaccine development and GMP manufacturing. Our comprehensive curriculum covers biosafety and biosecurity, GMP production, analytical testing, quality assurance, global regulatory requirements, clinical trial management and pharmacovigilance.",
         "modules": [
             {
