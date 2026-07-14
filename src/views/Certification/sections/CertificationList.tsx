@@ -27,35 +27,35 @@ const CERT_CONFIG = [
     },
     {
         id: 'iso13485',
-        image: cert2,
+        image: iso,
         name: 'ISO 13485:2016 Certificate',
         year: '2025',
         info: 'We are certified to ISO 13485:2016 the international standard for quality management systems specific to the medical device industry. This certification reflects our commitment to delivering safe, high-quality, and compliant medical products, reinforcing our dedication to excellence and adherence to global standards.'
     },
     {
         id: 'esg',
-        image: cert3,
+        image: cert2,
         name: 'ESG Certificate',
         year: '2024',
         info: 'We have received the Environmental, Social, and Governance (ESG) Certification from Dun & Bradstreet, as a recognition of our commitment to sustainability, social responsibility, and ethical governance. This milestone highlights our efforts to promote health equity through affordable healthcare solutions, adopt sustainable practices, and uphold transparency and compliance.'
     },
     {
         id: 'duns',
-        image: cert4,
+        image: cert3,
         name: 'DUNS Certificate',
         year: '2024',
         info: 'We have attained the D-U-N-S® Certification from Dun & Bradstreet. This certification enhances our credibility, fosters trust, and streamlines global partnerships, reinforcing our commitment to transparency and excellence in delivering innovative healthcare solutions.'
     },
     {
         id: 'dsir',
-        image: cert5,
+        image: cert4,
         name: 'DSIR Certificate of Recognition',
         year: '2024',
         info: 'Our in-house R&D Unit has been recognized by the Department of Scientific and Industrial Research (DSIR), Government of India. This certification is crucial for fostering innovation, enabling access to government incentives, and strengthening our research capabilities to develop affordable vaccines, biotherapeutics, and diagnostics.'
     },
     {
         id: 'iso9001',
-        image: iso,
+        image: cert5,
         name: 'ISO 9001:2015 Certificate',
         year: '2023',
         info: 'We have attained the ISO 9001:2015 certification, the international standard for quality management systems. The certification is a testament to an organization’s dedication to quality, efficiency, and customer satisfaction, providing a competitive edge in the marketplace.'
@@ -112,7 +112,7 @@ const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
             <h3 className="text-2xl font-light text-white mb-3 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
                 {cert.name}
             </h3>
-            <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 line-clamp-4 md:line-clamp-6">
+            <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 line-clamp-6 md:line-clamp-none">
                 {cert.info}
             </p>
         </div>

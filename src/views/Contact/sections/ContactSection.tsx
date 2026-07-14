@@ -65,19 +65,19 @@ const ContactSection = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden shadow-lg border border-slate-200/60">
 
                         {/* Left: Info Panel */}
-                        <div className="lg:col-span-5 bg-[#1955A6] text-white p-10 md:p-14 flex flex-col justify-between">
+                        <div className="lg:col-span-5 bg-[#1955A6] text-white p-10 md:p-14 flex flex-col justify-start gap-10">
                             <div>
                                 <span className="text-white font-bold tracking-[0.35em] text-[11px] mb-4 block uppercase">Get In Touch</span>
                                 <h2 className="text-[22px] md:text-[32px] font-bold leading-snug mb-6 text-white">
                                     Let's Start the Conversation
                                 </h2>
-                                <p className="text-slate-300 text-[15px] md:text-[16px] leading-relaxed mb-10">
+                                <p className="text-slate-300 text-[15px] md:text-[16px] leading-relaxed">
                                     Send us your enquiry and the appropriate team will get back to you at the earliest. Whether your interest lies in products, partnerships, technology, manufacturing, advisory or training support, we look forward to connecting with you.
                                 </p>
                             </div>
 
                             {/* Contact details */}
-                            <div className="space-y-5 mt-4">
+                            <div className="space-y-5">
                                 <div className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                         <Phone className="w-4 h-4 text-white" />
@@ -88,7 +88,7 @@ const ContactSection = () => {
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                         <Mail className="w-4 h-4 text-white" />
                                     </div>
-                                    <a href="mailto:connect@techinvention.biz" className="text-slate-300 text-sm hover:text-white transition-colors">connect@techinvention.biz</a>
+                                    <a href="mailto:connect@techinvention.biz" className="text-slate-300 text-sm hover:text-white transition-colors break-all">connect@techinvention.biz</a>
                                 </div>
                             </div>
                         </div>
@@ -113,64 +113,68 @@ const ContactSection = () => {
                                     </motion.div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                                        {/* Full Name */}
-                                        <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                required
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                placeholder="Your Name"
-                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
-                                            />
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                            {/* Full Name */}
+                                            <div className="flex flex-col gap-1.5">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    required
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    placeholder="Your Name"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                                />
+                                            </div>
+
+                                            {/* Email Address */}
+                                            <div className="flex flex-col gap-1.5">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    required
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    placeholder="Your Email"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                                />
+                                            </div>
                                         </div>
 
-                                        {/* Email Address */}
-                                        <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                required
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                placeholder="Your Email"
-                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
-                                            />
-                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                            {/* Organisation */}
+                                            <div className="flex flex-col gap-1.5">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation</label>
+                                                <input
+                                                    type="text"
+                                                    name="organisation"
+                                                    value={formData.organisation}
+                                                    onChange={handleChange}
+                                                    placeholder="Your Organisation"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                                />
+                                            </div>
 
-                                        {/* Organisation */}
-                                        <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation</label>
-                                            <input
-                                                type="text"
-                                                name="organisation"
-                                                value={formData.organisation}
-                                                onChange={handleChange}
-                                                placeholder="Your Organisation"
-                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
-                                            />
-                                        </div>
-
-                                        {/* Enquiry Type */}
-                                        <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
-                                            <select
-                                                name="enquiryType"
-                                                required
-                                                value={formData.enquiryType}
-                                                onChange={handleChange}
-                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
-                                            >
-                                                 <option value="" disabled>Select Enquiry Type</option>
-                                                 <option value="Strategy">Strategy</option>
-                                                 <option value="R&D">R&D</option>
-                                                 <option value="Licensing">Licensing</option>
-                                                 <option value="Advisory">Advisory</option>
-                                                 <option value="General Support">General Support</option>
-                                            </select>
+                                            {/* Enquiry Type */}
+                                            <div className="flex flex-col gap-1.5">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
+                                                <select
+                                                    name="enquiryType"
+                                                    required
+                                                    value={formData.enquiryType}
+                                                    onChange={handleChange}
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
+                                                >
+                                                     <option value="" disabled>Select Enquiry Type</option>
+                                                     <option value="Strategy">Strategy</option>
+                                                     <option value="R&D">R&D</option>
+                                                     <option value="Licensing">Licensing</option>
+                                                     <option value="Advisory">Advisory</option>
+                                                     <option value="General Support">General Support</option>
+                                                </select>
+                                            </div>
                                         </div>
 
                                         {/* Message */}
@@ -272,7 +276,7 @@ const ContactSection = () => {
                                     <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
                                     <h4 className="text-[13px] font-bold text-[#1a9090]">Email Address</h4>
                                 </div>
-                                <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium">
+                                <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium break-all">
                                     connect@techinvention.biz
                                 </a>
                             </div>

@@ -44,7 +44,7 @@ const VisionMissionValues = () => {
                                     <SplitTitle title="Purpose & Principles" />
                                 </h2>
                             </div>
-                            <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed text-left">
+                            <p className="text-black text-[16px] md:text-[18px] font-medium leading-relaxed text-left">
                                 The foundation of our organization is built on a clear vision for the future, a driving mission for today, and the core values that guide our every step.
                             </p>
                         </ScrollReveal>

@@ -21,7 +21,7 @@ export default function AdverseEventReporting() {
                         
                         <div className="text-slate-800 text-[16px] md:text-[18px]">
                             <span className="font-bold">Email:</span>{' '}
-                            <a href="mailto:feedback@techinvention.biz" className="hover:text-[#1955A6] hover:underline transition-colors">
+                            <a href="mailto:feedback@techinvention.biz" className="hover:text-[#1955A6] hover:underline transition-colors break-all">
                                 feedback@techinvention.biz
                             </a>
                         </div>

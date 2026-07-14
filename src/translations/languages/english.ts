@@ -118,25 +118,25 @@ export const english = {
             {
                 "name": "International AIDS Vaccine Initiative (IAVI)",
                 "role": "",
-                "content": "“TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report.”",
+                "content": "TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report.",
                 "image": "testimonial_1"
             },
             {
                 "name": "United Nations Office for Project Services (UNOPS)",
                 "role": "Biosafety & Biosecurity Training",
-                "content": "“The training delivered by TechInvention significantly strengthened participants’ theoretical understanding and practical competencies in biosafety and biosecurity.”",
+                "content": "The training delivered by TechInvention significantly strengthened participants’ theoretical understanding and practical competencies in biosafety and biosecurity.",
                 "image": "testimonial_2"
             },
             {
                 "name": "United Nations Office for Project Services (UNOPS)",
                 "role": "Vaccine Analytics Training",
-                "content": "“TechInvention successfully delivered a comprehensive vaccine analytics training programme, combining virtual learning with in-person practical and facility-based sessions.”",
+                "content": "TechInvention successfully delivered a comprehensive vaccine analytics training programme, combining virtual learning with in-person practical and facility-based sessions.",
                 "image": "testimonial_3"
             },
             {
                 "name": "World Health Organization (SEARO)",
                 "role": "",
-                "content": "“TechInvention was commended for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment.”",
+                "content": "We commend Techinvention for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment.",
                 "image": "testimonial_4"
             }
         ]
@@ -218,8 +218,8 @@ export const english = {
                 },
                 {
                     "name": "Nazneen Hamid",
-                    "role": "Co-founder and Director",
-                    "message": "As Co-founder and Director at TechInvention, Ms. Nazneen leads the organization's Corporate Governance, Human Resources, Finance, and Administration. She plays a key role in strengthening organizational excellence by driving strategic operations, people development, and effective governance. A certified POSH (Prevention of Sexual Harassment) Trainer, she is committed to fostering a safe, inclusive, and professional workplace. Passionate about the organization's mission, Ms. Nazneen supports TechInvention's vision of making essential vaccines affordable, accessible, and available to populations across the developing world while nurturing a purpose-driven, high-performing team.",
+                    "role": "Co-founder and Director – Corporate Affairs",
+                    "message": "As Co-founder and Director – Corporate Affairs at TechInvention, Ms. Nazneen leads the organization's Corporate Governance, Human Resources, Finance, and Administration. She plays a key role in strengthening organizational excellence by driving strategic operations, people development, and effective governance. A certified POSH (Prevention of Sexual Harassment) Trainer, she is committed to fostering a safe, inclusive, and professional workplace. Passionate about the organization's mission, Ms. Nazneen supports TechInvention's vision of making essential vaccines affordable, accessible, and available to populations across the developing world while nurturing a purpose-driven, high-performing team.",
                     "viewProfile": "View Profile"
                 }
             ],
@@ -416,10 +416,10 @@ export const english = {
             }
         ],
         "collaborations": [
-            "Institute of Life Sciences",
+            "Institute of Life Sciences (ILS)",
             "Indian Institute of Technology Bhubaneswar",
             "ICMR- RMRC Bhubaneswar",
-            "ICMR-NIRBID Kolkata"
+            "ICMR-NIRBI Kolkata"
         ]
     },
     "blogs": {
@@ -1001,20 +1001,20 @@ export const english = {
         "callToAction": "Advancing healthcare ambitions into scalable global impact. Partner with TechInvention to design, build and strengthen future-ready vaccine, biologics and healthcare manufacturing ecosystems.",
         "testimonials": [
             {
-                "client": "International AIDS Vaccine Initiative (IAVI)",
+                "client": "IAVI",
                 "feedback": "TechInvention demonstrated strong commitment and professionalism in successfully completing the assignment and delivering the final report."
             },
             {
-                "client": "United Nations Office for Project Services (UNOPS) – Biosafety & Biosecurity Training",
+                "client": "UNOPS – Biosafety & Biosecurity Training",
                 "feedback": "The training delivered by TechInvention significantly strengthened participants’ theoretical understanding and practical competencies in biosafety and biosecurity."
             },
             {
-                "client": "United Nations Office for Project Services (UNOPS) – Vaccine Analytics Training",
+                "client": "UNOPS – Vaccine Analytics Training",
                 "feedback": "TechInvention successfully delivered a comprehensive vaccine analytics training programme, combining virtual learning with in-person practical and facility-based sessions."
             },
             {
                 "client": "World Health Organization (SEARO)",
-                "feedback": "TechInvention was commended for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment."
+                "feedback": "We commend Techinvention for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment."
             }
         ]
     },
@@ -1110,7 +1110,7 @@ export const english = {
         }
     },
     "careers": {
-        "title": "Build a Career with Purpose",
+        "title": "Build With Purpose",
         "intro": "Join a team where science, strategy and execution come together to create meaningful healthcare impact. At TechInvention, every role contributes to advancing vaccines, biologics and technologies that support access, affordability and resilience across global health ecosystems.",
         "whyJoinUs": [
             {
@@ -1173,7 +1173,7 @@ export const english = {
         "openPositions": "Explore opportunities across functions. TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."
     },
     "training": {
-        "title": "Tailored Training in Vaccine Development & GMP Manufacturing",
+        "title": "Developing the Next Generation of Professionals in Vaccine Development and GMP Manufacturing",
         "desc": "Through industry-aligned, experiential learning, we prepare professionals to meet the evolving demands of vaccine development and GMP manufacturing. Our comprehensive curriculum covers biosafety and biosecurity, GMP production, analytical testing, quality assurance, global regulatory requirements, clinical trial management and pharmacovigilance.",
         "modules": [
             {
@@ -1460,7 +1460,7 @@ export const english = {
     },
     "contactDocs": {
         "connectDesc": "Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you. TechInvention works with partners across global health systems to move science closer to meaningful public health impact.",
-        "address1Title": "Corporate Office & Manufacturing Site",
+        "address1Title": "Corporate Office and Manufacturing Site",
         "address1": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
         "address2Title": "Bio-Innovation Centre (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",

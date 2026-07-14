@@ -61,7 +61,7 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-white border border-slate-200/60 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center flex-1 min-h-[98px]"
+                                    className="bg-[#D2FFD8] border border-[#b8f5bf] rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center flex-1 min-h-[98px]"
                                 >
                                     <img src="/techinvention/dun.png" alt="Dun & Bradstreet" className="max-h-[75px] sm:max-h-[90px] w-auto object-contain" />
                                 </motion.div>
@@ -71,7 +71,7 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.3 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-white border border-slate-200/60 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center flex-1 min-h-[98px]"
+                                    className="bg-black border border-[#1e1e1e] rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center flex-1 min-h-[98px]"
                                 >
                                     <img src="/techinvention/forbes.png" alt="Forbes DGEMS" className="max-h-[60px] sm:max-h-[70px] w-auto object-contain" />
                                 </motion.div>

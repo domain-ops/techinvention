@@ -9,7 +9,7 @@ const collaborations = [
     { id: "01", name: "Institute of Life Sciences", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Bhubaneswar" },
     { id: "02", name: "Indian Institute of Technology", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Bhubaneswar" },
     { id: "03", name: "ICMR - RMRC", color: "text-[#7EAB43]", bg: "bg-[#F7FBEE]", location: "Bhubaneswar" },
-    { id: "04", name: "ICMR - NIRBID", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Kolkata" }
+    { id: "04", name: "ICMR - NIRBI", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Kolkata" }
 ];
 
 export default function Collaborations() {

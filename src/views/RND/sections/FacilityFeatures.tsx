@@ -27,14 +27,7 @@ const features = [
         shadowColor: 'hover:shadow-blue-900/20',
         points: ['5L & 20L Fermentors', 'State-of-the-Art Equipment']
     },
-    {
-        title: "Operational Integrity",
-        icon: Box,
-        cardBg: 'bg-[#7EAB43]', // Brand Green
-        iconColor: 'text-[#7EAB43]',
-        shadowColor: 'hover:shadow-green-950/20',
-        points: ['Unidirectional Material Flow', 'GMP-Compliant Workflows']
-    },
+
     {
         title: "Sustainable Utilities",
         icon: Droplets,
@@ -92,7 +85,8 @@ export default function FacilityFeatures() {
                 {/* Heading */}
                 <div className="mb-16 text-center">
                     <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                        <span className="text-[#1955A6]">Features</span>
+                        <span className="text-[#1955A6]">Pilot-GMP </span>
+                        <span className="text-[#5C7625]">Features</span>
                     </h2>
                 </div>
 
@@ -101,7 +95,7 @@ export default function FacilityFeatures() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     {features.map((feature, idx) => {
                         const Icon = feature.icon;

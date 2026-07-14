@@ -86,7 +86,7 @@ en.horizon.collaborations = [
     "Institute of Life Sciences (ILS)",
     "Indian Institute of Technology Bhubaneswar",
     "ICMR- RMRC Bhubaneswar",
-    "ICMR-NIRBID Kolkata"
+    "ICMR-NIRBI Kolkata"
 ];
 
 // 8. CDMO / GCMC
@@ -166,8 +166,8 @@ en.strategicAdvisory.testimonials = [
         feedback: "TechInvention successfully delivered a comprehensive vaccine analytics training programme, combining virtual learning with in-person practical and facility-based sessions."
     },
     {
-        client: "WHO Nepal",
-        feedback: "TechInvention was commended for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment."
+        client: "World Health Organization (SEARO)",
+        feedback: "We commend Techinvention for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment."
     }
 ];
 

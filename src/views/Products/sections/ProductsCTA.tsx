@@ -97,7 +97,7 @@ export default function ProductsCTA() {
                                 </a>
                                 <a href="mailto:connect@techinvention.biz" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
                                     <Mail className="w-5 h-5 text-[#5C7625]" />
-                                    <span className="font-bold text-sm text-slate-800">connect@techinvention.biz</span>
+                                    <span className="font-bold text-sm text-slate-800 break-all">connect@techinvention.biz</span>
                                 </a>
                             </div>
                         </div>
