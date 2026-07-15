@@ -152,9 +152,9 @@ export default function Publications() {
                                             />
                                         </div>
 
-                                        {/* Publication Title: clamped to exactly 2 lines with standard ellipsis */}
+                                        {/* Publication Title: clamped to exactly 3 lines with standard ellipsis */}
                                         <div className="mb-4 text-left">
-                                            <h3 className="text-[#13325B] text-[11px] md:text-[12.5px] font-semibold leading-relaxed line-clamp-2 h-[42px]">
+                                            <h3 className="text-[#13325B] text-[11px] md:text-[12.5px] font-semibold leading-relaxed line-clamp-3 h-[63px]">
                                                 {item.title}
                                             </h3>
                                         </div>
