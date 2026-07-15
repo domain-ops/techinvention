@@ -94,10 +94,13 @@ const Footer = () => {
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
                                 <li>
-                                    <FooterLink href="https://www.linkedin.com/company/techinvention/" isExternal>LinkedIn</FooterLink>
+                                    <FooterLink href="https://www.linkedin.com/company/healthequity4all" isExternal>LinkedIn</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="https://x.com" isExternal>Twitter (X)</FooterLink>
+                                    <FooterLink href="https://x.com/TechinventionL" isExternal>Twitter (X)</FooterLink>
+                                </li>
+                                <li>
+                                    <FooterLink href="https://www.youtube.com/@techinventionlifecarepvt.l4675" isExternal>YouTube</FooterLink>
                                 </li>
                                 <li>
                                     <FooterLink href="/contact-us">Contact Us</FooterLink>

@@ -47,33 +47,37 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.1 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-white border border-slate-200/60 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center h-full min-h-[220px]"
+                                    className="bg-white border border-slate-200/60 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center h-full min-h-[290px]"
                                 >
-                                    <img src="/techinvention/great-place.png" alt="Great Place to Work" className="max-h-[190px] sm:max-h-[220px] w-auto object-contain" />
+                                    <img src="/techinvention/great-place.png" alt="Great Place to Work" className="max-h-[220px] sm:max-h-[250px] w-auto object-contain" />
                                 </motion.div>
                             </div>
 
                             {/* Dun & Bradstreet & Forbes logo cards stacked */}
                             <div className="sm:col-span-7 flex flex-col gap-6 justify-between h-full">
+                                
+                                {/* Dun & Bradstreet Card */}
                                 <motion.div 
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-[#D2FFD8] border border-[#b8f5bf] rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center flex-1 min-h-[98px]"
+                                    className="bg-[#D2FFD8] border border-[#b8f5bf] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex-1 min-h-[132px] overflow-hidden flex items-center justify-center p-3 sm:p-4"
                                 >
-                                    <img src="/techinvention/dun.png" alt="Dun & Bradstreet" className="max-h-[75px] sm:max-h-[90px] w-auto object-contain" />
+                                    <img src="/techinvention/dun.png" alt="Dun & Bradstreet" className="w-full h-full object-contain" />
                                 </motion.div>
+
+                                {/* Forbes Card */}
                                 <motion.div 
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.3 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-black border border-[#1e1e1e] rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center flex-1 min-h-[98px]"
+                                    className="bg-black border border-[#1e1e1e] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex-1 min-h-[132px] overflow-hidden flex items-center justify-center p-3 sm:p-4"
                                 >
-                                    <img src="/techinvention/forbes.png" alt="Forbes DGEMS" className="max-h-[60px] sm:max-h-[70px] w-auto object-contain" />
+                                    <img src="/techinvention/forbes.png" alt="Forbes India DGEMS" className="w-full h-full object-contain" />
                                 </motion.div>
                             </div>
 

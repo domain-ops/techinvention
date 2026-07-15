@@ -7,29 +7,39 @@ import ScrollReveal from '../../../../components/Common/ScrollReveal';
 const publications = [
     {
         name: "pcv",
+        title: "Streptococcus pneumoniae serotype distribution in low- and middle-income countries of South Asia: Do we need to revisit the pneumococcal vaccine strategy?",
         image: "/techinvention/articales/pcv.jpg",
         pdf: "/techinvention/articales/Streptococcus-pneumoniae-serotype-distribution-in-low-and-middle-income-countries-of-South-Asia-Do-we-need-to-revisit-the-pneumococcal-vaccine-strat.pdf"
     },
     {
         name: "Overcoming-barriers",
+        title: "Overcoming barriers to medical countermeasures: Strengthening global biosecurity",
         image: "/techinvention/articales/Overcoming-barriers.jpg",
         pdf: "/techinvention/articales/Overcoming-barriers-to-medical-countermeasures-Strengthening-global-biosecurity-1.pdf"
     },
     {
         name: "Lancet Euvichol",
-        image: "/techinvention/articales/1Lancet_Euvichol-pdf.jpg"
+        title: "Comparison of the immunogenicity and safety of Euvichol-Plus with Shanchol in healthy Indian adults and children: an open-label, randomized, multicentre, non-inferiority, parallel-group, phase 3 trial",
+        image: "/techinvention/articales/1Lancet_Euvichol-pdf.jpg",
+        pdf: "/techinvention/articales/PIIS2772368223001166.pdf"
     },
     {
         name: "Frontiers",
-        image: "/techinvention/articales/2forntiers-pdf.jpg"
+        title: "Beyond antibiotics: phage-encoded lysins against Gram-negative pathogens",
+        image: "/techinvention/articales/2forntiers-pdf.jpg",
+        pdf: "/techinvention/articales/fmicb-14-1170418.pdf"
     },
     {
         name: "Taylor Capacity Building",
-        image: "/techinvention/articales/3Taylor_Capacity_Building-pdf.jpg"
+        title: "Capacity Building for Vaccine Manufacturing Across Developing Countries: The Way Forward",
+        image: "/techinvention/articales/3Taylor_Capacity_Building-pdf.jpg",
+        pdf: "/techinvention/articales/KHVI_18_2020529.pdf"
     },
     {
         name: "Vaccine COVID-19",
-        image: "/techinvention/articales/4Vaccine_COVID-19-pdf.jpg"
+        title: "COVID-19 management landscape: A need for an affordable platform to manufacture safe and efficacious biotherapeutics and prophylactics for the developing countries",
+        image: "/techinvention/articales/4Vaccine_COVID-19-pdf.jpg",
+        pdf: "/techinvention/articales/1-s2.0-S0264410X22006831-main.pdf"
     }
 ];
 
@@ -92,7 +102,7 @@ export default function Publications() {
                             className={`p-3 rounded-full border transition-all duration-300 ${
                                 currentIndex === 0 
                                     ? 'border-slate-200 text-slate-300 cursor-not-allowed bg-transparent' 
-                                    : 'border-[#1955A6] bg-[#1955A6] text-white hover:bg-[#1955A6]/90 shadow-md hover:shadow-lg'
+                                     : 'border-[#1955A6] bg-[#1955A6] text-white hover:bg-[#1955A6]/90 shadow-md hover:shadow-lg'
                             }`}
                             aria-label="Previous slide"
                         >
@@ -127,26 +137,32 @@ export default function Publications() {
                                     href={item.pdf || item.image} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="group block w-[260px] shrink-0"
+                                    className="group flex w-[260px] shrink-0"
                                 >
                                     <motion.div 
-                                        whileHover={{ y: -8 }}
-                                        className="h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-200/65 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer p-4"
+                                        className="w-full flex-1 flex flex-col bg-white rounded-none overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer p-4"
                                     >
                                         {/* Image wrapper: smaller size, completely uncropped! */}
-                                        <div className="w-full bg-slate-50 rounded-2xl overflow-hidden mb-4 flex items-center justify-center border border-slate-100/60 h-[280px]">
+                                        <div className="w-full overflow-hidden mb-4 flex items-center justify-center h-[200px] shrink-0">
                                             <img 
                                                 loading="lazy" 
                                                 src={item.image} 
                                                 alt={item.name} 
-                                                className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                                                className="w-full h-full object-contain"
                                             />
                                         </div>
 
+                                        {/* Publication Title: clamped to exactly 2 lines with standard ellipsis */}
+                                        <div className="mb-4 text-left">
+                                            <h3 className="text-[#13325B] text-[11px] md:text-[12.5px] font-semibold leading-relaxed line-clamp-2 h-[42px]">
+                                                {item.title}
+                                            </h3>
+                                        </div>
+
                                         {/* CTA Button */}
-                                        <div className="mt-auto w-full flex justify-center">
+                                        <div className="mt-auto w-full flex justify-center pt-2">
                                             <div className="flex items-center gap-2 bg-[#1955A6] text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                                                Know More
+                                                Read now
                                                 <ArrowRight className="w-3.5 h-3.5" />
                                             </div>
                                         </div>
