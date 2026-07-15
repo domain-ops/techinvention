@@ -5,6 +5,7 @@ import FacilityFeatures from './sections/FacilityFeatures';
 import AboutVideo from '../About/sections/AboutVideo';
 import ProcessFlowchart from './sections/ProcessFlowchart';
 import InfectiousDiseasesPipeline from './sections/InfectiousDiseasesPipeline';
+import Grants from './sections/Grants';
 import Collaborations from './sections/Collaborations';
 import CTASection from '../../components/CTASection';
 
@@ -30,6 +31,9 @@ const RNDPage = () => {
 
             {/* 1.9. Infectious Diseases Pipeline Table */}
             <InfectiousDiseasesPipeline />
+
+            {/* 1.92. Grants & Funding Support */}
+            <Grants />
 
             {/* 1.95. Collaborations */}
             <Collaborations />

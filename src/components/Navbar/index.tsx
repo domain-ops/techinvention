@@ -85,6 +85,7 @@ const Navbar = () => {
     const megaMenusData: Record<string, any> = {
         company: {
             simpleLinks: [
+                { name: 'About', href: '/about' },
                 { name: 'CSR', href: '/about/csr-initiatives' },
                 { name: 'Awards & Certifications', href: '/about/awards-certifications' }
             ]
@@ -93,7 +94,7 @@ const Navbar = () => {
 
     const mainNavItems = [
         { key: 'home', label: 'Home', href: '/' },
-        { key: 'company', label: 'About', href: '/about' },
+        { key: 'company', label: 'Company', href: '/about' },
         { key: 'rnd', label: 'R&D', href: '/rnd' },
         { key: 'cdmo', label: 'Manufacturing', href: '/cdmo' },
         { key: 'consulting', label: 'Consulting', href: '/consulting' },
@@ -219,7 +220,7 @@ const Navbar = () => {
                                     onMouseLeave={() => hasDropdown && setActiveMegaMenu(null)}
                                 >
                                     {hasDropdown ? (
-                                        <Link href={navItem.href} className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black'}`}>
+                                        <span className={`px-1 lg:px-2 py-2 text-[13px] 2xl:text-[14px] font-semibold tracking-wide transition-all relative flex items-center gap-1 whitespace-nowrap group/link cursor-pointer ${activeMegaMenu === navItem.key ? 'text-brand-primary' : 'text-black'}`}>
                                             <span className="relative block overflow-hidden">
                                                 <span className={`block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/link:translate-y-[120%] ${activeMegaMenu === navItem.key ? 'text-brand-primary' : ''}`}>
                                                     {navItem.label}
@@ -235,7 +236,7 @@ const Navbar = () => {
                                                     className="absolute bottom-[-22px] left-2 right-2 h-[3px] bg-brand-primary rounded-t-full"
                                                 />
                                             )}
-                                        </Link>
+                                        </span>
                                     ) : (
                                         <Link 
                                             href={navItem.href}

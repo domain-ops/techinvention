@@ -6,20 +6,20 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 export default function LifeAtTechInvention() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = [
-        "/techinvention/team-techinvention.jpg",
-        "/techinvention/image-1.jpeg",
-        "/techinvention/img-2.jpeg",
-        "/techinvention/img-3.jpeg",
-        "/techinvention/img-4.jpeg"
+    const slides = [
+        { src: "/techinvention/team-techinvention.jpg" },
+        { src: "/techinvention/image-1.jpeg" },
+        { src: "/techinvention/img-2.jpeg" },
+        { src: "/techinvention/img-3.jpeg" },
+        { src: "/techinvention/img-4.jpeg" }
     ];
 
     const handlePrev = () => {
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+        setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
     const handleNext = () => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
     };
 
     return (
@@ -60,17 +60,25 @@ export default function LifeAtTechInvention() {
                     {/* Adjusted container height to match 16:9 aspect ratio of landscape photos */}
                     <div className="flex justify-center items-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[460px]">
                         <div className="relative w-full h-full flex items-center justify-center">
-                            {images.map((img, idx) => {
-                                const offset = idx - currentIndex;
+                            {slides.map((slide, idx) => {
+                                const N = slides.length;
+                                let diff = idx - currentIndex;
 
-                                // Identify slides relative to center
+                                // Normalize diff to the range [-floor(N/2), floor((N-1)/2)]
+                                // for a circular list.
+                                if (diff > N / 2) diff -= N;
+                                if (diff < -N / 2) diff += N;
+
+                                // Identify slide position
                                 let position = "inactive";
-                                if (offset === 0) position = "active";
-                                else if (offset === -1 || (currentIndex === 0 && idx === images.length - 1)) position = "left";
-                                else if (offset === 1 || (currentIndex === images.length - 1 && idx === 0)) position = "right";
+                                if (diff === 0) position = "active";
+                                else if (diff === -1) position = "left";
+                                else if (diff === 1) position = "right";
+                                else if (diff < -1) position = "far-left";
+                                else if (diff > 1) position = "far-right";
 
                                 // Dynamic width configuration matching landscape 16:9 ratio
-                                let transformClass = "scale-75 opacity-0 pointer-events-none translate-x-full";
+                                let transformClass = "";
                                 let clickAction = undefined;
 
                                 if (position === "active") {
@@ -81,9 +89,11 @@ export default function LifeAtTechInvention() {
                                 } else if (position === "right") {
                                     transformClass = "scale-90 opacity-40 z-10 pointer-events-auto translate-x-[48%] sm:translate-x-[42%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%] cursor-pointer hover:opacity-60";
                                     clickAction = handleNext;
+                                } else if (position === "far-left") {
+                                    transformClass = "scale-75 opacity-0 z-0 pointer-events-none -translate-x-[120%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%]";
+                                } else if (position === "far-right") {
+                                    transformClass = "scale-75 opacity-0 z-0 pointer-events-none translate-x-[120%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%]";
                                 }
-
-                                if (position === "inactive") return null;
 
                                 return (
                                     <motion.div
@@ -91,16 +101,16 @@ export default function LifeAtTechInvention() {
                                         layout
                                         onClick={clickAction}
                                         transition={{ type: "spring", stiffness: 120, damping: 20 }}
-                                        className={`absolute h-full transition-all duration-700 ease-out overflow-hidden rounded-none shadow-lg border border-slate-200/40 bg-white ${transformClass}`}
+                                        className={`absolute h-full transition-all duration-700 ease-out overflow-hidden rounded-2xl shadow-lg border border-slate-200/40 bg-white ${transformClass}`}
                                     >
                                         <img
-                                            src={img}
-                                            alt={`Life as a 'Techknight' ${idx + 1}`}
+                                            src={slide.src}
+                                            alt={`Life at TechInvention ${idx + 1}`}
                                             className="w-full h-full object-cover object-center"
                                         />
 
                                         {/* Click to Navigate Overlays on peeking slides */}
-                                        {position !== "active" && (
+                                        {position !== "active" && (position === "left" || position === "right") && (
                                             <div className="absolute inset-0 bg-transparent flex items-center justify-center">
                                                 <div className="p-3 rounded-full bg-white/80 shadow-md text-slate-800 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                                     {position === "left" ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
@@ -116,7 +126,7 @@ export default function LifeAtTechInvention() {
 
                 {/* Pagination Dots */}
                 <div className="flex justify-center gap-2 mt-8">
-                    {images.map((_, idx) => (
+                    {slides.map((_, idx) => (
                         <button
                             key={idx}
                             onClick={() => setCurrentIndex(idx)}

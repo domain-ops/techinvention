@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../../../context/LanguageContext';
 import { MagneticText } from '../../../../components/ui/morphing-cursor';
 
-import banner1 from '../../../../../public/banner-1.png';
-import banner2 from '../../../../../public/banner-2.png';
+import banner1 from '../../../../../public/banner-1.webp';
+import banner2 from '../../../../../public/banner-2.webp';
 
 const bgImages = [banner1, banner2];
 
@@ -23,10 +23,11 @@ const RevealText = ({ text, delay = 0, className = "" }: { text: string, delay?:
                         initial={{ y: "120%", opacity: 0, rotateX: -20 }}
                         animate={{ y: 0, opacity: 1, rotateX: 0 }}
                         transition={{
-                            duration: 0.8,
+                            duration: 1.5,
                             ease: [0.16, 1, 0.3, 1],
-                            delay: delay + i * 0.05,
+                            delay: delay + i * 0.1,
                         }}
+                        style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}
                     >
                         {word}
                     </motion.span>
@@ -52,9 +53,10 @@ const SlidingWord = ({ words, activeIndex }: { words: string[], activeIndex: num
                     animate={{ y: "0%", opacity: 1 }}
                     exit={{ y: "-100%", opacity: 0 }}
                     transition={{
-                        duration: 0.8,
+                        duration: 1.5,
                         ease: [0.16, 1, 0.3, 1] // premium bezier curve for smooth slide up
                     }}
+                    style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}
                     className="absolute inset-0 flex items-center justify-center whitespace-nowrap font-bold"
                 >
                     {activeWord}
@@ -106,7 +108,7 @@ const Hero = () => {
                 </AnimatePresence>
 
                 {/* Removed heavy dark overlays per user request */}
-                <div className="absolute inset-0 bg-black/30 z-10" />
+                <div className="absolute inset-0 bg-black/40 z-10" />
             </div>
 
             {/* Brightness Overlay Removed */}
@@ -124,7 +126,10 @@ const Hero = () => {
                             hoverTextClassName="text-[34px] md:text-[44px] lg:text-[48px] font-bold tracking-widest text-white uppercase"
                         />
                     </div>
-                    <span className="hidden md:flex justify-center text-[34px] md:text-[44px] lg:text-[48px] font-thin opacity-60 text-white drop-shadow-md">
+                    <span 
+                        className="hidden md:flex justify-center text-[34px] md:text-[44px] lg:text-[48px] font-thin opacity-60 text-white drop-shadow-md"
+                        style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}
+                    >
                         |
                     </span>
                     <motion.div
@@ -142,6 +147,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.2, duration: 0.8 }}
+                    style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}
                     className="mt-2 md:mt-4 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-medium tracking-wider inline-block text-white drop-shadow-lg"
                 >
                     Enabling One Health through <br className="block sm:hidden" /> Bio-Innovation.

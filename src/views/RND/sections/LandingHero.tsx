@@ -47,9 +47,9 @@ export default function LandingHero() {
                 >
                     <div className="relative rounded-none overflow-hidden border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-slate-50 p-2 md:p-3">
                         <div className="absolute inset-0 bg-[#1955A6]/2 z-10 pointer-events-none rounded-none" />
-                        <div className="relative w-full aspect-video min-h-[300px] md:min-h-[480px] lg:max-h-[640px] overflow-hidden">
+                        <div className="relative w-full aspect-video overflow-hidden">
                             <iframe 
-                                src="https://www.youtube.com/embed/YbD6JxmEwV8?si=KkRuv8TuBQzi1C4B" 
+                                src="https://www.youtube.com/embed/YbD6JxmEwV8?si=KkRuv8TuBQzi1C4B&cc_load_policy=3" 
                                 title="YouTube video player" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

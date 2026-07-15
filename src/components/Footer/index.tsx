@@ -103,7 +103,7 @@ const Footer = () => {
                                     <FooterLink href="/contact-us">Contact Us</FooterLink>
                                 </li>
                                 <li className="break-all">
-                                    <FooterLink href="mailto:info@techinvention.biz" isExternal>info@techinvention.biz</FooterLink>
+                                    <FooterLink href="mailto:connect@techinvention.biz" isExternal>connect@techinvention.biz</FooterLink>
                                 </li>
                             </ul>
                         </div>
@@ -116,9 +116,8 @@ const Footer = () => {
                         <span className="whitespace-nowrap">{t('footer.allRightsReserved')}</span>
                     </div>
                     <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
-                        <Link href="#" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.privacyPolicy')}</Link>
-                        <Link href="#" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.termsOfService')}</Link>
-                        <Link href="#" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.globalCompliance')}</Link>
+                        <Link href="/privacy-policy" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.privacyPolicy')}</Link>
+                        <Link href="/disclaimer" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">Disclaimer</Link>
                     </div>
                 </div>
             </div>

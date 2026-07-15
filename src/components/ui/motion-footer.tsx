@@ -344,14 +344,11 @@ export function CinematicFooter() {
 
               {/* Secondary Text Links */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-6 w-full mt-2">
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-2.5 rounded-full text-[#565658] font-medium text-xs md:text-sm hover:text-black">
+                <MagneticButton as="a" href="/privacy-policy" className="footer-glass-pill px-6 py-2.5 rounded-full text-[#565658] font-medium text-xs md:text-sm hover:text-black">
                   Privacy Policy
                 </MagneticButton>
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-2.5 rounded-full text-[#565658] font-medium text-xs md:text-sm hover:text-black">
-                  Terms of Service
-                </MagneticButton>
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-2.5 rounded-full text-[#565658] font-medium text-xs md:text-sm hover:text-black">
-                  Global Compliance
+                <MagneticButton as="a" href="/disclaimer" className="footer-glass-pill px-6 py-2.5 rounded-full text-[#565658] font-medium text-xs md:text-sm hover:text-black">
+                  Disclaimer
                 </MagneticButton>
               </div>
             </div>

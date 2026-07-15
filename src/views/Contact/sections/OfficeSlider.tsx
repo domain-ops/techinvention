@@ -68,16 +68,24 @@ export default function OfficeSlider() {
                     <div className="flex justify-center items-center h-[200px] sm:h-[300px] md:h-[400px] lg:h-[460px]">
                         <div className="relative w-full h-full flex items-center justify-center">
                             {slides.map((slide, idx) => {
-                                const offset = idx - currentIndex;
-                                
-                                // Identify slides relative to center
+                                const N = slides.length;
+                                let diff = idx - currentIndex;
+
+                                // Normalize diff to the range [-floor(N/2), floor((N-1)/2)]
+                                // for a circular list.
+                                if (diff > N / 2) diff -= N;
+                                if (diff < -N / 2) diff += N;
+
+                                // Identify slide position
                                 let position = "inactive";
-                                if (offset === 0) position = "active";
-                                else if (offset === -1 || (currentIndex === 0 && idx === slides.length - 1)) position = "left";
-                                else if (offset === 1 || (currentIndex === slides.length - 1 && idx === 0)) position = "right";
+                                if (diff === 0) position = "active";
+                                else if (diff === -1) position = "left";
+                                else if (diff === 1) position = "right";
+                                else if (diff < -1) position = "far-left";
+                                else if (diff > 1) position = "far-right";
 
                                 // Dynamic width configuration matching landscape 16:9 ratio
-                                let transformClass = "scale-75 opacity-0 pointer-events-none translate-x-full";
+                                let transformClass = "";
                                 let clickAction = undefined;
 
                                 if (position === "active") {
@@ -88,9 +96,11 @@ export default function OfficeSlider() {
                                 } else if (position === "right") {
                                     transformClass = "scale-90 opacity-40 z-10 pointer-events-auto translate-x-[48%] sm:translate-x-[42%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%] cursor-pointer hover:opacity-60";
                                     clickAction = handleNext;
+                                } else if (position === "far-left") {
+                                    transformClass = "scale-75 opacity-0 z-0 pointer-events-none -translate-x-[120%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%]";
+                                } else if (position === "far-right") {
+                                    transformClass = "scale-75 opacity-0 z-0 pointer-events-none translate-x-[120%] w-[85%] sm:w-[75%] md:w-[70%] lg:w-[65%]";
                                 }
-
-                                if (position === "inactive") return null;
 
                                 return (
                                     <motion.div
@@ -114,7 +124,7 @@ export default function OfficeSlider() {
                                         </div>
                                         
                                         {/* Click to Navigate Overlays on peeking slides */}
-                                        {position !== "active" && (
+                                        {position !== "active" && (position === "left" || position === "right") && (
                                             <div className="absolute inset-0 bg-transparent flex items-center justify-center">
                                                 <div className="p-3 rounded-full bg-white/80 shadow-md text-slate-800 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                                     {position === "left" ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}

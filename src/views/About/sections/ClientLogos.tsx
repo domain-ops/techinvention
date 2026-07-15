@@ -20,6 +20,11 @@ const ROW_2 = [
 ];
 
 const ClientLogos = () => {
+    // We repeat the array 4 times to ensure it covers even large screens (up to 4K)
+    // and translate by exactly 25% (one full cycle) for a seamless loop.
+    const ROW_1_REPEATED = [...ROW_1, ...ROW_1, ...ROW_1, ...ROW_1];
+    const ROW_2_REPEATED = [...ROW_2, ...ROW_2, ...ROW_2, ...ROW_2];
+
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
@@ -35,11 +40,10 @@ const ClientLogos = () => {
                 <div className="flex w-full overflow-hidden">
                     <motion.div
                         className="flex items-center gap-10 md:gap-16 whitespace-nowrap min-w-max pr-10 md:pr-16"
-                        animate={{ x: ["0%", "-50%"] }}
-                        transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+                        animate={{ x: ["0%", "-25%"] }}
+                        transition={{ ease: "linear", duration: 20, repeat: Infinity }}
                     >
-                        {/* Duplicate the array to create a seamless loop */}
-                        {[...ROW_1, ...ROW_1].map((src, index) => (
+                        {ROW_1_REPEATED.map((src, index) => (
                             <div 
                                 key={`row1-${index}`} 
                                 className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
@@ -58,11 +62,10 @@ const ClientLogos = () => {
                 <div className="flex w-full overflow-hidden">
                     <motion.div
                         className="flex items-center gap-10 md:gap-16 whitespace-nowrap min-w-max pr-10 md:pr-16"
-                        animate={{ x: ["-50%", "0%"] }}
-                        transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+                        animate={{ x: ["-25%", "0%"] }}
+                        transition={{ ease: "linear", duration: 20, repeat: Infinity }}
                     >
-                        {/* Duplicate the array to create a seamless loop */}
-                        {[...ROW_2, ...ROW_2].map((src, index) => (
+                        {ROW_2_REPEATED.map((src, index) => (
                             <div 
                                 key={`row2-${index}`} 
                                 className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
