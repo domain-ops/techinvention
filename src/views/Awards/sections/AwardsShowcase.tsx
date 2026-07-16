@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { motion, useSpring, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import awardIvlc2025 from '../../../assets/awards/India-Vaccine-Leaders-Conclave-2025.jpg';
 import awardFortune2024 from '../../../assets/awards/Fortune-Leadership-Awards-2024-Excellence.jpg';
@@ -105,28 +106,15 @@ const AwardsShowcase = () => {
         }
     ];
 
-    const [activeAward, setActiveAward] = useState<number | null>(null);
     const [showAll, setShowAll] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
-
-    // Mouse tracking for floating image
-    const mouseX = useSpring(0, { stiffness: 500, damping: 50, mass: 0.5 });
-    const mouseY = useSpring(0, { stiffness: 500, damping: 50, mass: 0.5 });
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (!containerRef.current) return;
-        const rect = containerRef.current.getBoundingClientRect();
-        mouseX.set(e.clientX - rect.left);
-        mouseY.set(e.clientY - rect.top);
-    };
 
     return (
         <section className="px-4 md:px-8 max-w-[1440px] mx-auto w-full mb-8">
             <div 
                 ref={containerRef}
                 className="relative w-full text-black py-16 md:py-24"
-                onMouseMove={handleMouseMove}
-                onMouseLeave={() => setActiveAward(null)}
             >
                 {/* Background ambient lighting */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-primary opacity-[0.08] blur-[120px] pointer-events-none rounded-full" />
@@ -140,85 +128,65 @@ const AwardsShowcase = () => {
                         </h2>
                     </div>
 
-                    <div className="flex flex-col border-t border-gray-100">
+                    {/* List Layout Container */}
+                    <div className="flex flex-col border-t border-gray-100 px-4 md:px-8">
                         {(showAll ? awards : awards.slice(0, 4)).map((award: any, idx: number) => {
-                            const isActive = activeAward === idx;
                             return (
                                 <div 
                                     key={idx}
-                                    className="group relative w-full border-b border-gray-100 hover:border-brand-primary/20 transition-colors duration-500 cursor-pointer px-4 md:px-8"
-                                    onMouseEnter={() => setActiveAward(idx)}
+                                    className="group relative w-full border-b border-gray-100 hover:border-brand-primary/20 transition-colors duration-300 px-2 md:px-4"
                                 >
-                                    <div className="py-12 md:py-16 flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-16 relative z-10">
+                                    <div className="py-8 md:py-12 flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
                                         
-                                        {/* Left Side: Title & Year */}
-                                        <div className="flex items-start lg:items-center gap-6 lg:gap-12 flex-1">
-                                            <div className="overflow-hidden">
-                                                <motion.span 
-                                                    className="inline-block text-sm md:text-lg text-brand-primary font-mono tracking-widest font-bold"
-                                                    initial={{ y: 20, opacity: 0 }}
-                                                    whileInView={{ y: 0, opacity: 1 }}
-                                                    transition={{ delay: 0.1 * (idx % 4) }}
-                                                    viewport={{ once: true }}
-                                                >
+                                        {/* Left Side: Year, Title, Description */}
+                                        <div className="flex items-start gap-6 lg:gap-12 flex-1">
+                                            {/* Year */}
+                                            <div className="min-w-[60px] pt-1">
+                                                <span className="inline-block text-sm md:text-lg text-brand-primary font-mono tracking-widest font-bold">
                                                     {award.year}
-                                                </motion.span>
+                                                </span>
                                             </div>
-                                            <div className="overflow-hidden flex-1">
-                                                <motion.h2 
-                                                    className={`text-xl md:text-2xl lg:text-3xl font-light tracking-tight transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                                                        isActive ? 'translate-x-4 lg:translate-x-8 text-brand-primary' : 'text-gray-400 group-hover:text-gray-600'
-                                                    }`}
-                                                    initial={{ y: 40, opacity: 0 }}
-                                                    whileInView={{ y: 0, opacity: 1 }}
-                                                    transition={{ delay: 0.15 * (idx % 4), duration: 0.8 }}
-                                                    viewport={{ once: true }}
-                                                >
+
+                                            {/* Title & Description Stacked */}
+                                            <div className="flex flex-col gap-2 flex-1 text-left">
+                                                <h2 className="text-xl md:text-2xl font-semibold text-slate-800 tracking-tight transition-colors duration-300 group-hover:text-brand-primary">
                                                     {award.title}
-                                                </motion.h2>
+                                                </h2>
+                                                <p className="text-slate-500 text-sm md:text-base leading-relaxed">
+                                                    {award.desc}
+                                                </p>
                                             </div>
                                         </div>
 
-                                        {/* Right Side: Desc */}
-                                        <div className="lg:w-1/4 xl:w-1/3 flex justify-start lg:justify-end overflow-hidden">
-                                            <motion.p 
-                                                className={`text-lg md:text-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] max-w-sm lg:text-right ${
-                                                    isActive ? 'text-gray-800 lg:-translate-x-4' : 'text-gray-400 group-hover:text-gray-600'
-                                                }`}
-                                                initial={{ y: 20, opacity: 0 }}
-                                                whileInView={{ y: 0, opacity: 1 }}
-                                                transition={{ delay: 0.2 * (idx % 4), duration: 0.8 }}
-                                                viewport={{ once: true }}
-                                            >
-                                                {award.desc}
-                                            </motion.p>
+                                        {/* Right Side: Image container (Direct image, no box border/background) */}
+                                        <div 
+                                            className="hidden lg:flex w-[320px] md:w-[360px] h-[200px] md:h-[240px] shrink-0 items-center justify-center p-0 overflow-hidden cursor-pointer"
+                                            onClick={() => setSelectedImage(imageMap[award.image] || awardIvlc2025)}
+                                        >
+                                            <img 
+                                                src={imageMap[award.image] || awardIvlc2025}
+                                                alt={award.title}
+                                                className="max-w-full max-h-full object-contain drop-shadow-md transition-transform duration-500 hover:scale-[1.05]"
+                                            />
                                         </div>
                                     </div>
 
-                                    {/* Mobile inline image reveal */}
-                                    <AnimatePresence>
-                                        {isActive && (
-                                            <motion.div 
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                className="lg:hidden w-full overflow-hidden mb-12"
-                                            >
-                                                <div className="w-full flex items-center justify-center drop-shadow-xl mt-4">
-                                                    <img loading="lazy" 
-                                                        src={imageMap[award.image] || awardIvlc2025} 
-                                                        alt={award.title}
-                                                        className="max-w-full h-auto max-h-[300px] object-contain"
-                                                    />
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                    {/* Mobile inline image (Direct image, no box border/background) */}
+                                    <div 
+                                        className="lg:hidden w-full overflow-hidden mb-6 cursor-pointer"
+                                        onClick={() => setSelectedImage(imageMap[award.image] || awardIvlc2025)}
+                                    >
+                                        <div className="w-full flex items-center justify-center p-0">
+                                            <img loading="lazy" 
+                                                src={imageMap[award.image] || awardIvlc2025} 
+                                                alt={award.title}
+                                                className="max-w-full h-auto max-h-[220px] object-contain rounded-lg transition-transform duration-500 hover:scale-[1.02]"
+                                            />
+                                        </div>
+                                    </div>
 
-                                    {/* Subtle active background glow per row */}
-                                    <div className={`absolute inset-0 bg-gradient-to-r from-brand-primary/0 via-brand-primary/[0.05] to-transparent pointer-events-none transition-opacity duration-700 ${
-                                        isActive ? 'opacity-100' : 'opacity-0'
-                                    }`} />
+                                    {/* Subtle active background glow per row on hover */}
+                                    <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/0 via-brand-primary/[0.02] to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 </div>
                             );
                         })}
@@ -239,34 +207,43 @@ const AwardsShowcase = () => {
                         </div>
                     )}
                 </div>
-
-                {/* Desktop Floating Image Follower */}
-                <motion.div
-                    className="pointer-events-none absolute left-0 top-0 w-[450px] aspect-[4/3] z-20 hidden lg:block drop-shadow-2xl"
-                    style={{
-                        x: mouseX,
-                        y: mouseY,
-                        translateX: "-20%",
-                        translateY: "-50%",
-                    }}
-                    animate={{
-                        opacity: activeAward !== null ? 1 : 0,
-                        scale: activeAward !== null ? 1 : 0.8,
-                    }}
-                    transition={{ opacity: { duration: 0.4 }, scale: { duration: 0.4, ease: "easeOut" } }}
-                >
-                    {awards.map((award: any, idx: number) => (
-                        <img loading="lazy" 
-                            key={idx}
-                            src={imageMap[award.image] || awardIvlc2025}
-                            alt={award.title}
-                            className={`absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                                activeAward === idx ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-                            }`}
-                        />
-                    ))}
-                </motion.div>
             </div>
+
+            {/* Lightbox Modal Popup */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed inset-0 bg-black/90 z-[99999] flex items-center justify-center backdrop-blur-md cursor-zoom-out"
+                    >
+                        <button 
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
+                            aria-label="Close image popup"
+                        >
+                            <X className="w-8 h-8" />
+                        </button>
+                        
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{ duration: 0.3 }}
+                            className="max-w-[90vw] max-h-[85vh] relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <img 
+                                src={selectedImage} 
+                                alt="Enlarged Award/Certificate" 
+                                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };

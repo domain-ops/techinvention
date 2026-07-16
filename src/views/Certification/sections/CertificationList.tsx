@@ -34,7 +34,7 @@ const CERT_CONFIG = [
     },
     {
         id: 'esg',
-        image: cert2,
+        image: '/techinvention/esg-certificate.png',
         name: 'ESG Certificate',
         year: '2024',
         info: 'We have received the Environmental, Social, and Governance (ESG) Certification from Dun & Bradstreet, as a recognition of our commitment to sustainability, social responsibility, and ethical governance. This milestone highlights our efforts to promote health equity through affordable healthcare solutions, adopt sustainable practices, and uphold transparency and compliance.'
@@ -48,7 +48,7 @@ const CERT_CONFIG = [
     },
     {
         id: 'dsir',
-        image: cert4,
+        image: '/techinvention/dsir.png',
         name: 'DSIR Certificate of Recognition',
         year: '2024',
         info: 'Our in-house R&D Unit has been recognized by the Department of Scientific and Industrial Research (DSIR), Government of India. This certification is crucial for fostering innovation, enabling access to government incentives, and strengthening our research capabilities to develop affordable vaccines, biotherapeutics, and diagnostics.'
@@ -95,7 +95,7 @@ const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
         {/* Image Container */}
         <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
             <img loading="lazy" 
-                src={cert.image} 
+                src={typeof cert.image === 'string' ? cert.image : (cert.image as any).src} 
                 alt={cert.name}
                 className="max-w-full max-h-full object-contain drop-shadow-2xl mix-blend-multiply"
             />
