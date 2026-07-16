@@ -15,7 +15,7 @@ const SERVICES = [
     {
         icon: ClipboardCheck,
         title: "Pre-Feasibility & Feasibility Study",
-        desc: "Clear technical, commercial, regulatory and financial assessment to support investment decisions."
+        desc: "Comprehensive technical, commercial, regulatory and financial assessment to support investment decisions."
     },
     {
         icon: Factory,
