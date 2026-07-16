@@ -43,12 +43,12 @@ const Home = () => {
                 <Testimonials />
             </LazyViewportSection>
 
-            <LazyViewportSection minHeight="500px">
-                <FAQSection />
-            </LazyViewportSection>
-
             <LazyViewportSection minHeight="400px">
                 <Publications />
+            </LazyViewportSection>
+
+            <LazyViewportSection minHeight="500px">
+                <FAQSection />
             </LazyViewportSection>
         </div>
     );
