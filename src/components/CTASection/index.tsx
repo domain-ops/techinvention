@@ -11,8 +11,16 @@ const Dithering = lazy(() =>
     import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
 );
 
-const CTASection = () => {
+interface CTASectionProps {
+    title?: string;
+    description?: string;
+}
+
+const CTASection = ({ title, description }: CTASectionProps) => {
     const [isHovered, setIsHovered] = useState(false);
+    
+    const displayTitle = title || "Partner With TechInvention";
+    const displayDesc = description || "Connect with us to explore collaborations, licensing partnerships, and capacity-building opportunities for vaccines and biotherapeutics globally.";
 
     return (
         <section className="py-20 w-full flex justify-center items-center px-4 md:px-6 bg-white relative font-sans border-b border-slate-100">
@@ -39,11 +47,11 @@ const CTASection = () => {
                     <ScrollReveal direction="up" className="relative z-10 px-6 max-w-3xl mx-auto text-center flex flex-col items-center">
                         
                         <h2 className="text-[36px] font-medium tracking-wide mb-4 leading-tight text-center">
-                            <SplitTitle title="Partner With TechInvention" />
+                            <SplitTitle title={displayTitle} />
                         </h2>
                         
                         <p className="text-black text-[18px] max-w-2xl mb-8 leading-relaxed font-medium tracking-tight text-center">
-                            Connect with us to explore collaborations, licensing partnerships, and capacity-building opportunities for vaccines and biotherapeutics globally.
+                            {displayDesc}
                         </p>
                         
                         <div className="flex flex-col items-center gap-8">

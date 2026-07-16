@@ -62,7 +62,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
                         transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                         <div className="pb-8 pl-12 pr-6 md:pr-12">
-                            <p className="text-black text-[18px] leading-relaxed font-medium tracking-tight">
+                            <p className="text-black text-[18px] leading-relaxed font-medium tracking-tight whitespace-pre-line">
                                 {answer}
                             </p>
                         </div>

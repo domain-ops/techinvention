@@ -26,7 +26,6 @@ export const metadata: Metadata = {
 };
 
 import PageComponent from '../../views/Disclaimer';
-
 export default function Page() {
   return <PageComponent />;
 }

@@ -11,7 +11,7 @@ import Sustainability from './sections/Sustainability';
 import CTASection from '../../components/CTASection';
 
 const CDMOPage = () => {
-    
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -26,7 +26,7 @@ const CDMOPage = () => {
             <DigitalExcellence />
             <Sustainability />
             <WhyPartner />
-            <CTASection />
+            <CTASection description="Connect with us to explore manufacturing partnerships in vaccines and partnerships" />
         </div>
     );
 };

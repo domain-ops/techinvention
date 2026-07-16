@@ -54,39 +54,54 @@ const VisionMissionValues = () => {
                 <div className="flex flex-col gap-16 md:gap-24">
                     
                     {/* MISSION QUOTE ROW */}
-                    <div className="w-full max-w-4xl mr-auto relative pl-6 border-l-4 border-[#5C7625]">
-                        <QuoteIcon className="w-10 h-10 text-[#5C7625]/20 absolute -top-4 left-6 pointer-events-none" />
-                        <h3 className="text-2xl md:text-3xl lg:text-[34px] font-medium leading-[1.4] text-slate-800 relative z-10 pl-6">
-                            "Access to Essential Vaccines and Novel Biologics Should Not Only be the Privilege of Just the Affording Few."
-                        </h3>
-                    </div>
+                    <ScrollReveal direction="up">
+                        <div className="w-full max-w-5xl mr-auto relative p-8 md:p-12 rounded-2xl bg-gradient-to-br from-[#5C7625]/5 via-slate-50/50 to-[#1955A6]/5 border border-slate-100/80 shadow-[0_8px_30px_rgba(0,0,0,0.015)]">
+                            <QuoteIcon className="w-12 h-12 text-[#5C7625]/15 absolute top-6 left-6 pointer-events-none" />
+                            <div className="relative z-10 pl-6 md:pl-10 border-l-4 border-[#5C7625]">
+                                <span className="block text-xs font-bold tracking-widest text-[#5C7625] uppercase mb-3">Our Mission</span>
+                                <h3 className="text-2xl md:text-3xl lg:text-[32px] font-medium leading-[1.4] text-slate-800">
+                                    "Access to Essential Vaccines and Novel Biologics Should Not Only be the Privilege of Just the Affording Few."
+                                </h3>
+                            </div>
+                        </div>
+                    </ScrollReveal>
 
                     {/* VALUES SECTION (Spans full width) */}
-                    <div className="w-full relative">
-                        <div className="mb-16 text-left relative z-10">
+                    <div className="w-full relative pt-12 md:pt-16 border-t border-slate-100">
+                        <div className="mb-12 text-left relative z-10">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
                                 <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Values</span>
                             </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative z-10">
-                            {values.map((val, idx) => (
-                                <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
-                                    <div className="flex gap-8 items-start">
-                                        <span className="text-[24px] md:text-[40px] font-extrabold text-slate-900 leading-none shrink-0 w-12">
-                                            {val.number}
-                                        </span>
-                                        <div className="flex flex-col gap-3">
-                                            <h4 className="text-[18px] md:text-[22px] font-extrabold tracking-wider text-slate-900 uppercase leading-snug">
-                                                {val.title}
-                                            </h4>
-                                            <p className="text-slate-500 text-[15px] md:text-[17px] leading-[1.8] font-medium">
-                                                {val.desc}
-                                            </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
+                            {values.map((val, idx) => {
+                                const isBlue = idx % 2 === 0;
+                                const bgGradient = isBlue 
+                                    ? "from-[#1955A6] to-[#113C75]" 
+                                    : "from-[#5C7625] to-[#45581B]";
+                                
+                                return (
+                                    <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
+                                        <div className={`flex flex-col gap-5 p-6 md:p-8 rounded-2xl bg-gradient-to-br ${bgGradient} border border-white/10 hover:border-white/20 shadow-[0_8px_25px_-8px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] hover:-translate-y-1.5 transition-all duration-300 group h-full text-white`}>
+                                            <div className="flex items-center justify-between">
+                                                <span className="text-[28px] md:text-[32px] font-black text-white leading-none">
+                                                    {val.number}
+                                                </span>
+                                                <div className="w-12 h-[2px] bg-white" />
+                                            </div>
+                                            <div className="flex flex-col gap-3">
+                                                <h4 className="text-[18px] md:text-[20px] font-extrabold tracking-wider text-white uppercase leading-snug">
+                                                    {val.title}
+                                                </h4>
+                                                <p className="text-white/85 text-[14px] md:text-[15px] leading-[1.7] font-medium">
+                                                    {val.desc}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </ScrollReveal>
-                            ))}
+                                    </ScrollReveal>
+                                );
+                            })}
                         </div>
                     </div>
 

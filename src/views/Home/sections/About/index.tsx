@@ -30,7 +30,7 @@ const About = () => {
         }
     ];
 
-    const images = ["/techinvention/Syed-Sir.png", "/techinvention/Nazneen-mam.png"];
+    const images = ["/techinvention/Syed-Sir.png", "/techinvention/mam-new-img.jpeg"];
     const displayProfiles = profiles.slice(0, 2);
 
     return (
@@ -56,7 +56,8 @@ const About = () => {
                             <img loading="lazy"
                                 src={images[index % images.length]}
                                 alt={profile.name}
-                                className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1 origin-center"
+                                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1 origin-center"
+                                style={{ objectPosition: index === 1 ? 'center 60%' : 'top' }}
                             />
 
                             {/* Permanent Bottom Gradient for name legibility */}

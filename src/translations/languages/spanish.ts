@@ -175,7 +175,7 @@ export const spanish = {
         },
         story: {
             mandelaQuote: "Nelson Mandela dijo: “La salud no puede ser una cuestión de ingresos; es un derecho fundamental”. En nuestro mundo, el acceso a una buena salud suele ser una función de dónde nacemos, nuestra clase económica, raza, etnia, género y edad. Es una realidad desafortunada pero ineludible.",
-            commitment: "En TechInvention, elegimos mirar al futuro con esperanza en lugar de apartar la vista con desesperación. Somos una empresa biotecnológica innovadora comprometida con brindar una mayor equidad en salud a las personas y naciones de todo el mundo. Comenzamos nuestro viaje en 2016 con el enfoque de hacer que las vacunas y productos biofarmacéuticos esenciales sean aceptables, asequibles y accesibles en el mundo en desarrollo.",
+            commitment: "En TechInvention, elegimos mirar al futuro con esperanza en lugar de apartar la vista con desesperación. TechInvention está comprometida con brindar una mayor equidad en salud a las personas y naciones de todo el mundo. Comenzamos nuestro viaje en 2016 con el enfoque de hacer que las vacunas y productos biofarmacéuticos esenciales sean aceptables, asequibles y accesibles en el mundo en desarrollo.",
             expertise: "Ofrecemos nuestra experiencia en planificación de proyectos, viabilidad de proyectos, concesión de licencias tecnológicas, apoyo para la precalificación de la OMS (PQ), ingeniería de diseño, asuntos regulatorios, investigación clínica y apoyo a la propiedad intelectual (PI) a empresas farmacéuticas y biotecnológicas, gobiernos e inversores, para que juntos podemos marcar la diferencia en nuestro mundo compartido."
         },
         leadership: {

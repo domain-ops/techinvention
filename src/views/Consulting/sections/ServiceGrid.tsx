@@ -91,25 +91,46 @@ export default function ServiceGrid() {
                                 <div key={index} className="relative flex flex-col md:flex-row items-center w-full group">
                                     
                                     {/* Desktop Left Column */}
-                                    <div className={`hidden md:flex w-1/2 ${isEven ? 'justify-end pr-16' : 'justify-start pl-16 order-last'}`}>
-                                        <ScrollReveal direction={isEven ? "right" : "left"} delay={0.1}>
-                                            <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px]">
-                                                <div className="w-16 h-16 bg-[#F4F8FA] rounded-2xl flex items-center justify-center mb-6 text-[#1955A6] group-hover:scale-110 group-hover:bg-[#1955A6] group-hover:text-white transition-all duration-500 shadow-sm">
-                                                    <Icon className="w-8 h-8" strokeWidth={1.5} />
+                                    <div className="hidden md:flex w-1/2 justify-end pr-16">
+                                        {isEven && (
+                                            <ScrollReveal direction="right" delay={0.1}>
+                                                <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px]">
+                                                    <div className="w-16 h-16 bg-[#F4F8FA] rounded-2xl flex items-center justify-center mb-6 text-[#1955A6] group-hover:scale-110 group-hover:bg-[#1955A6] group-hover:text-white transition-all duration-500 shadow-sm">
+                                                        <Icon className="w-8 h-8" strokeWidth={1.5} />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-[#13325B] mb-3 leading-snug">
+                                                        {service.title}
+                                                    </h3>
+                                                    <p className="text-slate-600 text-sm leading-relaxed">
+                                                        {service.desc}
+                                                    </p>
                                                 </div>
-                                                <h3 className="text-xl font-bold text-[#13325B] mb-3 leading-snug">
-                                                    {service.title}
-                                                </h3>
-                                                <p className="text-slate-600 text-sm leading-relaxed">
-                                                    {service.desc}
-                                                </p>
-                                            </div>
-                                        </ScrollReveal>
+                                            </ScrollReveal>
+                                        )}
                                     </div>
 
                                     {/* Center Node */}
                                     <div className="absolute left-[28px] md:left-1/2 w-12 h-12 rounded-full border-4 border-white bg-slate-100 shadow-md flex items-center justify-center -translate-x-1/2 z-10 transition-colors duration-500 group-hover:bg-[#1955A6] group-hover:border-[#EEF4FF]">
                                         <div className="w-4 h-4 rounded-full bg-slate-300 group-hover:bg-white transition-colors duration-500" />
+                                    </div>
+
+                                    {/* Desktop Right Column */}
+                                    <div className="hidden md:flex w-1/2 justify-start pl-16">
+                                        {!isEven && (
+                                            <ScrollReveal direction="left" delay={0.1}>
+                                                <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px]">
+                                                    <div className="w-16 h-16 bg-[#F4F8FA] rounded-2xl flex items-center justify-center mb-6 text-[#1955A6] group-hover:scale-110 group-hover:bg-[#1955A6] group-hover:text-white transition-all duration-500 shadow-sm">
+                                                        <Icon className="w-8 h-8" strokeWidth={1.5} />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-[#13325B] mb-3 leading-snug">
+                                                        {service.title}
+                                                    </h3>
+                                                    <p className="text-slate-600 text-sm leading-relaxed">
+                                                        {service.desc}
+                                                    </p>
+                                                </div>
+                                            </ScrollReveal>
+                                        )}
                                     </div>
 
                                     {/* Mobile View */}

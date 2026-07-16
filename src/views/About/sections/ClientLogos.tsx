@@ -9,6 +9,7 @@ const ROW_1 = [
     '/techinvention/consulting-page-images/BVI.jpg',
     '/techinvention/consulting-page-images/CII.jpg',
     '/techinvention/consulting-page-images/MOH-Ethiopia.jpg',
+    '/techinvention/consulting-page-images/International_AIDS_Vaccine_Initiative_logo.svg.png',
 ];
 
 // Row 2 Static Paths
@@ -17,6 +18,7 @@ const ROW_2 = [
     '/techinvention/consulting-page-images/TCSB.png',
     '/techinvention/consulting-page-images/unopsv1-01.jpg',
     '/techinvention/consulting-page-images/WHO.jpg',
+    '/techinvention/consulting-page-images/sbi-caps.png',
 ];
 
 const ClientLogos = () => {

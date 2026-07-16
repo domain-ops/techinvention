@@ -72,7 +72,7 @@ en.about.values.items = [
 ];
 
 // 6. About Text
-en.about.story.commitment = "We are an innovative biotech company committed to bringing greater health equity to people and nations all over the world. We commenced our journey in 2016 with the focus of making essential vaccines and biopharmaceuticals acceptable, affordable, and accessible in the developing world.";
+en.about.story.commitment = "TechInvention is committed to bringing greater health equity to people and nations all over the world. We commenced our journey in 2016 with the focus of making essential vaccines and biopharmaceuticals acceptable, affordable, and accessible in the developing world.";
 
 // 7. HORIZON / R&D
 en.horizon.desc = "TechInvention's state-of-the-art R&D facility, the High-impact One Health Research & Innovation ZONe (HORIZON), is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.";

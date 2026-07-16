@@ -225,57 +225,81 @@ const ContactSection = () => {
                     {/* Map + Details Stacked */}
                     <div className="flex flex-col gap-8 rounded-2xl overflow-hidden border border-slate-200/60 shadow-md bg-white p-6 sm:p-8">
 
-                        {/* Map (Full Width) */}
-                        <div className="w-full h-[400px] sm:h-[450px] md:h-[500px]">
-                            <iframe
-                                src="https://maps.google.com/maps?q=TechInvention%20Lifecare,%20Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra,%20400710&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0, display: 'block' }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
+                        {/* Side-by-Side Maps & Addresses */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            {/* Map & Address 1 */}
+                            <div className="flex flex-col gap-4">
+                                <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">Corporate Office &amp; Manufacturing Site (GCMC)</h4>
+                                <div className="w-full h-[300px] sm:h-[350px] overflow-hidden border border-slate-200/60 shadow-sm">
+                                    <iframe
+                                        src="https://maps.google.com/maps?q=Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra,%20400710&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0, display: 'block' }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    />
+                                </div>
+                                <div className="flex flex-col items-center gap-2 pt-2 text-center">
+                                    <h5 className="text-[13px] font-bold text-[#1a9090] leading-snug flex items-center justify-center gap-2 mb-1">
+                                        <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                        <span>Corporate Office &amp; Manufacturing Site (GCMC)</span>
+                                    </h5>
+                                    <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
+                                        Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Map & Address 2 */}
+                            <div className="flex flex-col gap-4">
+                                <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">R&amp;D Centre (HORIZON)</h4>
+                                <div className="w-full h-[300px] sm:h-[350px] overflow-hidden border border-slate-200/60 shadow-sm">
+                                    <iframe
+                                        src="https://maps.google.com/maps?q=Horizon%20by%20Techinvention%20Lifecare,%20EL-125,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0, display: 'block' }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    />
+                                </div>
+                                <div className="flex flex-col items-center gap-2 pt-2 text-center">
+                                    <h5 className="text-[13px] font-bold text-[#1a9090] leading-snug flex items-center justify-center gap-2 mb-1">
+                                        <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
+                                        <span>R&amp;D Centre (HORIZON)</span>
+                                    </h5>
+                                    <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
+                                        EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Details Panel (Below Map) */}
-                        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-                            {/* Address 1 */}
-                            <div className="flex flex-col gap-2 pb-6 md:pb-0 md:px-4 md:first:pl-0">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Corporate Office & Manufacturing Site</h4>
-                                </div>
-                                <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
-                                    Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
-                                </p>
-                            </div>
-                            {/* Address 2 */}
-                            <div className="flex flex-col gap-2 pt-6 md:pt-0 md:px-4">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <h4 className="text-[13px] font-bold text-[#1a9090] leading-snug">Bio-Innovation Centre (HORIZON)</h4>
-                                </div>
-                                <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium">
-                                    EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
-                                </p>
-                            </div>
+                        {/* Phone & Email Container (Centered) */}
+                        <div className="border-t border-slate-100 pt-8 mt-4 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 w-full">
                             {/* Phone */}
-                            <div className="flex flex-col gap-1.5 pt-6 md:pt-0 md:px-4">
-                                <div className="flex items-center gap-2 mb-1">
+                            <div className="flex flex-col items-center gap-1.5 text-center">
+                                <h4 className="text-[13px] font-bold text-[#1a9090] flex items-center justify-center gap-2 mb-1">
                                     <Phone className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <h4 className="text-[13px] font-bold text-[#1a9090]">Phone Enquiries</h4>
-                                </div>
+                                    <span>Phone Enquiries</span>
+                                </h4>
                                 <a href="tel:+912240052123" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
                                     +91 22 4005 2123
                                 </a>
                             </div>
+
+                            {/* Separator */}
+                            <div className="hidden sm:block w-px h-8 bg-slate-200" />
+
                             {/* Email */}
-                            <div className="flex flex-col gap-1.5 pt-6 md:pt-0 md:px-4 md:last:pr-0">
-                                <div className="flex items-center gap-2 mb-1">
+                            <div className="flex flex-col items-center gap-1.5 text-center">
+                                <h4 className="text-[13px] font-bold text-[#1a9090] flex items-center justify-center gap-2 mb-1">
                                     <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <h4 className="text-[13px] font-bold text-[#1a9090]">Email Address</h4>
-                                </div>
+                                    <span>Email Address</span>
+                                </h4>
                                 <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium break-all">
                                     connect@techinvention.biz
                                 </a>

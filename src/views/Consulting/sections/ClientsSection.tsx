@@ -8,10 +8,12 @@ const LOGOS = [
     '/techinvention/consulting-page-images/BVI.jpg',
     '/techinvention/consulting-page-images/CII.jpg',
     '/techinvention/consulting-page-images/MOH-Ethiopia.jpg',
+    '/techinvention/consulting-page-images/International_AIDS_Vaccine_Initiative_logo.svg.png',
     '/techinvention/consulting-page-images/pradan-logo-1.png',
     '/techinvention/consulting-page-images/TCSB.png',
     '/techinvention/consulting-page-images/unopsv1-01.jpg',
     '/techinvention/consulting-page-images/WHO.jpg',
+    '/techinvention/consulting-page-images/sbi-caps.png',
 ];
 
 const ClientsSection = () => {
@@ -27,7 +29,7 @@ const ClientsSection = () => {
 
             {/* Desktop Grid Layout */}
             <div className="hidden md:block max-w-5xl mx-auto px-6">
-                <div className="grid grid-cols-4 gap-x-16 gap-y-12">
+                <div className="grid grid-cols-5 gap-x-16 gap-y-12">
                     {LOGOS.map((src, index) => (
                         <div 
                             key={index} 

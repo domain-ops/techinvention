@@ -203,7 +203,7 @@ export const english = {
         },
         "story": {
             "mandelaQuote": "Nelson Mandela said, “Health cannot be a question of income; it is a fundamental right.” In our world, access to good health is often a function of where we are born, our economic class, race, ethnicity, gender, and age. It is an unfortunate yet inescapable reality.",
-            "commitment": "We are an innovative biotech company committed to bringing greater health equity to people and nations all over the world. We commenced our journey in 2016 with the focus of making essential vaccines and biopharmaceuticals acceptable, affordable, and accessible in the developing world.",
+            "commitment": "TechInvention is committed to bringing greater health equity to people and nations all over the world. We commenced our journey in 2016 with the focus of making essential vaccines and biopharmaceuticals acceptable, affordable, and accessible in the developing world.",
             "expertise": "We offer our expertise in project planning, project feasibility, technology licensing, WHO prequalification (PQ) support, design engineering, regulatory affairs, clinical research, and intellectual property (IP) support to pharmaceutical and biotech companies, governments, and investors, so together we can make a difference to our shared world."
         },
         "leadership": {
@@ -876,20 +876,40 @@ export const english = {
         "subtitle": "Find answers to frequently asked questions about our innovation and global health initiatives.",
         "items": [
             {
-                "question": "What is TechInvention's primary focus?",
-                "answer": "We specialize in end-to-end biotech solutions, from R&D and clinical trials to global scale-up and commercialization of life-critical vaccines and biotherapeutics."
+                "question": "What is TechInvention?",
+                "answer": "TechInvention is a biotech company based in Mumbai, India, focused on translational research, vaccine innovation, consulting and strategic advisory, access and vaccine manufacturing."
             },
             {
-                "question": "How do you support global health equity?",
-                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "question": "What services does TechInvention provide?",
+                "answer": "TechInvention offers end-to-end biotechnology solutions, including:\n• Vaccine R&D in infectious diseases and AMR-associated pathogens\n• Vaccine process development and GMP manufacturing\n• Technology licensing and technology transfer\n• Regulatory and IP support\n• Feasibility Study\n• Vaccine/biotech facility Engineering Design\n• Strategic advisory for governments, donors, funding agencies and industry"
             },
             {
-                "question": "What diagnostics solutions do you provide?",
-                "answer": "We offer innovative point-of-care diagnostics that deliver clinical-grade accuracy in minutes, designed for both urban and resource-limited settings."
+                "question": "What types of vaccines does TechInvention develop?",
+                "answer": "Our vaccine R&D focuses on infectious diseases and antimicrobial resistance (AMR), including meningitis, pneumonia, malaria, tuberculosis (TB), Salmonella, Shigella, and other emerging pathogens. We develop recombinant, conjugate, and other next-generation vaccine technologies."
             },
             {
-                "question": "How can we collaborate with TechInvention?",
-                "answer": "We collaborate with global health organizations, governments, and private innovators. Visit our Partnership portal or contact us to start a strategic dialogue."
+                "question": "Does TechInvention provide vaccine manufacturing services?",
+                "answer": "Yes. TechInvention has an end-to-end GMP vaccine manufacturing facility (upstream, downstream and fill-finish) that supports process development, technology transfer, batches for clinical trials and commercial-scale manufacturing, and analytical development."
+            },
+            {
+                "question": "Is TechInvention a biotechnology consulting company?",
+                "answer": "Yes. TechInvention is a leading biotechnology consulting company in India, providing strategic, technical, and commercial advisory services for establishing manufacturing facilities."
+            },
+            {
+                "question": "Does TechInvention work with international organizations?",
+                "answer": "Yes. TechInvention collaborates with governments, international agencies, research institutions, universities, and global health organizations on vaccine development, biotechnology capacity building, and manufacturing infrastructure projects."
+            },
+            {
+                "question": "Can TechInvention help establish vaccine/biotech manufacturing facilities?",
+                "answer": "Yes. We provide comprehensive consulting for vaccine manufacturing facilities, including feasibility studies, facility design, validation, project supervision, regulatory strategy, operational readiness, and workforce training."
+            },
+            {
+                "question": "What is TechInvention's expertise in vaccine R&D?",
+                "answer": "Our expertise spans the complete vaccine development lifecycle, including:\n• Target identification\n• Antigen discovery and design\n• Process development\n• Formulation development\n• Analytical assay development\n• Preclinical evaluation\n• Technology transfer\n• Manufacturing scale-up and commercialization"
+            },
+            {
+                "question": "Does TechInvention support biotech startups?",
+                "answer": "Yes. We collaborate with biotech startups through consulting, technology development, research partnerships, licensing opportunities, and manufacturing support to accelerate innovation from concept to commercialization."
             }
         ]
     },

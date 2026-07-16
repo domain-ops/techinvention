@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const syedImg = "/techinvention/Syed-Sir.png";
-const nazneenImg = "/techinvention/Nazneen-mam-2.png";
+const nazneenImg = "/techinvention/mam-new-img.jpeg";
 import monicaImg from '../../../assets/images/Monica-Thanvi.png';
 import gopalImg from '../../../assets/images/Gopal-Damisetti.jpg';
 
@@ -24,7 +24,9 @@ const boardMembers = [
         role: "Co-Founder & Director",
         image: nazneenImg,
         linkedin: "https://www.linkedin.com/in/nazneen-hamid",
-        bio: `Ms. Nazneen Hamid ${dummyBio}`
+        bio: `Ms. Nazneen Hamid ${dummyBio}`,
+        objectPosition: "center 60%",
+        imageClassName: "scale-[1.3] origin-top translate-y-[-6%] group-hover:scale-[1.35]"
     },
     {
         name: "Mrs. Monika Thanvi",
@@ -82,7 +84,10 @@ const BoardOfDirectors = () => {
                                     <img 
                                         src={(member.image as any).src ? (member.image as any).src : member.image} 
                                         alt={member.name}
-                                        className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                        style={{ objectPosition: (member as any).objectPosition || 'center top' }}
+                                        className={`w-full h-full object-cover transition-transform duration-700 ease-out ${
+                                            (member as any).imageClassName || "object-top group-hover:scale-105"
+                                        }`}
                                     />
 
                                     {/* Dark Gradient Overlay at the bottom */}

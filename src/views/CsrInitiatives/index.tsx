@@ -21,7 +21,7 @@ const initiatives = [
     {
         badge: "National Pandemic Relief",
         title: "Contribution to PM cares fund",
-        desc: "As part of its Corporate Social Responsibility (CSR) efforts, TechInvention contributed to the PM Cares Fund, established by The Hon’ble Prime Minister of India in the wake of the COVID-19 pandemic, to carry out and support relief during a public health emergency, including the creation or upgrade of healthcare or pharmaceutical facilities, other necessary infrastructure, and also funding relevant research.",
+        desc: "TechInvention contributed to the PM Cares Fund, established by The Hon’ble Prime Minister of India in the wake of the COVID-19 pandemic, to carry out and support relief during a public health emergency, including the creation or upgrade of healthcare or pharmaceutical facilities, other necessary infrastructure, and also funding relevant research.",
         icon: Shield,
         color: "text-[#7EAB43]",
         borderColor: "border-[#7EAB43]/20",
@@ -32,7 +32,7 @@ const initiatives = [
     {
         badge: "Scientific Collaboration & Infrastructure",
         title: "BSL-2 Lab",
-        desc: "TechInvention inaugurated its BSL-2 R&D lab at the Regional Centre for Biotechnology's BSC BioNEST Bioincubator (RCB BBB) on December 6, 2022, in the presence of notable figures from the biotech industry and academia, as well as representatives from other start-ups. This initiative was undertaken with the hope of not only accelerating our indigenous research projects but also enabling other startups and students to get practical insights into the arena of healthcare biotech research.",
+        desc: "TechInvention inaugurated its BSL-2 R&D lab at the Regional Centre for Biotechnology's BSC BioNEST Bioincubator (RCB BBB) on December 6, 2022, in the presence of notable figures from the biotech industry and academia, as well as representatives from other start-ups.",
         icon: Microscope,
         color: "text-[#1955A6]",
         borderColor: "border-[#1955A6]/20",

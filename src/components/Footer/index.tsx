@@ -37,7 +37,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-brand-accent pt-20 pb-12 border-t border-brand-gray-light/20">
+        <footer className="bg-brand-accent pt-20 pb-28 sm:pb-12 border-t border-brand-gray-light/20">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row gap-12 md:gap-16 mb-24">
                     <div className="md:w-1/4">
@@ -48,7 +48,7 @@ const Footer = () => {
                                 className="h-16 w-auto object-contain"
                             />
                         </div>
-                        <p className="text-black text-[13px] 2xl:text-[14px] font-medium tracking-tight leading-relaxed max-w-xs tracking-wider">
+                        <p className="text-black text-[13px] 2xl:text-[14px] font-semibold tracking-wide leading-relaxed max-w-xs">
                             {t('footer.desc')}
                         </p>
                     </div>
@@ -56,7 +56,7 @@ const Footer = () => {
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12 md:w-3/4">
                         <div>
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
-                            <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
+                            <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-semibold tracking-wide">
                                 <li>
                                     <FooterLink href="/">Home</FooterLink>
                                 </li>
@@ -64,10 +64,16 @@ const Footer = () => {
                                     <FooterLink href="/about">About</FooterLink>
                                 </li>
                                 <li>
+                                    <FooterLink href="/about/csr-initiatives">CSR</FooterLink>
+                                </li>
+                                <li>
+                                    <FooterLink href="/about/awards-certifications">Awards &amp; Certifications</FooterLink>
+                                </li>
+                                <li>
                                     <FooterLink href="/rnd">R&amp;D</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/cdmo">Manufacturing Organization</FooterLink>
+                                    <FooterLink href="/cdmo">Manufacturing</FooterLink>
                                 </li>
                                 <li>
                                     <FooterLink href="/consulting">Consulting</FooterLink>
@@ -77,12 +83,15 @@ const Footer = () => {
 
                         <div>
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
-                            <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
+                            <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-semibold tracking-wide">
                                 <li>
                                     <FooterLink href="/products">Products</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/careers">Career</FooterLink>
+                                    <FooterLink href="/consulting">Advisory</FooterLink>
+                                </li>
+                                <li>
+                                    <FooterLink href="/careers">Careers</FooterLink>
                                 </li>
                                 <li>
                                     <FooterLink href="/gmp-training">Training</FooterLink>
@@ -92,7 +101,7 @@ const Footer = () => {
 
                         <div className="col-span-2 sm:col-span-1">
                             <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
-                            <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-medium tracking-tight tracking-wider">
+                            <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-semibold tracking-wide">
                                 <li>
                                     <FooterLink href="https://www.linkedin.com/company/healthequity4all" isExternal>LinkedIn</FooterLink>
                                 </li>
@@ -113,15 +122,20 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-brand-gray-light/20 text-[10px] tracking-widest text-brand-gray-light font-medium tracking-tight">
+                <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-brand-gray-light/20 text-[13px] 2xl:text-[14px] text-brand-gray-light font-semibold tracking-wide">
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 mb-6 md:mb-0">
                         <span className="whitespace-nowrap">© {currentYear} {t('common.brandName') as string}</span>
                         <span className="whitespace-nowrap">{t('footer.allRightsReserved')}</span>
                     </div>
-                    <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
-                        <Link href="/privacy-policy" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">{t('footer.privacyPolicy')}</Link>
+                    <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 md:pr-24">
+                        <Link href="/terms-and-conditions" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">Terms &amp; Conditions</Link>
                         <Link href="/disclaimer" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">Disclaimer</Link>
                     </div>
+                </div>
+
+                {/* Centered Credit at the bottom */}
+                <div className="text-center pt-6 text-[13px] 2xl:text-[14px] text-brand-gray-light font-semibold tracking-wide">
+                    <span>Designed &amp; Developed by <a href="https://www.theimpulsedigital.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-content transition-colors font-semibold">Impulse Digital</a></span>
                 </div>
             </div>
         </footer>
