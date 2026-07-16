@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
-import heroImage from '../../../assets/images/indian_biotech_advisory.png';
+
 
 export default function ConsultingHero() {
     const handleScroll = () => {
@@ -44,7 +44,7 @@ export default function ConsultingHero() {
                     className="w-full"
                 >
                     <div className="relative w-full overflow-hidden">
-                        <img src={heroImage} 
+                        <img src="/techinvention/consulting-banner.png" 
                             alt="Strategic Advisory and Tech Consulting" 
                             className="w-full h-[500px] lg:h-[600px] object-cover"
                         />
