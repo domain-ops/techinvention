@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 // Using the local leadership portraits
 import ceoPortrait from '../../../../assets/images/leadership/syed_ahmed.jpg';
-import elenaPortrait from '../../../../assets/images/leadership/nazneen_upscaled.png';
+import nazneenPortrait from '../../../../assets/images/leadership/nazneen_light_blue.jpg';
 import Stats from '../Stats';
 
 const logoDNA = "/techinvention/TechInvention-gif.gif";
@@ -30,7 +30,10 @@ const About = () => {
         }
     ];
 
-    const images = ["/techinvention/Syed-Sir.png", "/techinvention/mam-new-img.jpeg"];
+    const images = [
+        typeof ceoPortrait === 'object' ? (ceoPortrait as any).src : ceoPortrait,
+        typeof nazneenPortrait === 'object' ? (nazneenPortrait as any).src : nazneenPortrait
+    ];
     const displayProfiles = profiles.slice(0, 2);
 
     return (

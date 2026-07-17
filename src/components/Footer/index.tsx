@@ -69,15 +69,6 @@ const Footer = () => {
                                 <li>
                                     <FooterLink href="/about/awards-certifications">Awards &amp; Certifications</FooterLink>
                                 </li>
-                                <li>
-                                    <FooterLink href="/rnd">R&amp;D</FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/cdmo">Manufacturing</FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/consulting">Consulting</FooterLink>
-                                </li>
                             </ul>
                         </div>
 
@@ -88,7 +79,13 @@ const Footer = () => {
                                     <FooterLink href="/products">Products</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/consulting">Advisory</FooterLink>
+                                    <FooterLink href="/rnd">R&amp;D</FooterLink>
+                                </li>
+                                <li>
+                                    <FooterLink href="/cdmo">Manufacturing</FooterLink>
+                                </li>
+                                <li>
+                                    <FooterLink href="/consulting">Consulting</FooterLink>
                                 </li>
                                 <li>
                                     <FooterLink href="/careers">Careers</FooterLink>

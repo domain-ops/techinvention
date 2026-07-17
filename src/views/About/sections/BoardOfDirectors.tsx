@@ -4,10 +4,13 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const syedImg = "/techinvention/Syed-Sir.png";
-const nazneenImg = "/techinvention/mam-new-img.jpeg";
+import syedPortrait from '../../../assets/images/Syed-Sir.jpg';
+import nazneenPortrait from '../../../assets/images/leadership/nazneen_light_blue.jpg';
 import monicaImg from '../../../assets/images/Monica-Thanvi.png';
 import gopalImg from '../../../assets/images/Gopal-Damisetti.jpg';
+
+const syedImg = typeof syedPortrait === 'object' ? (syedPortrait as any).src : syedPortrait;
+const nazneenImg = typeof nazneenPortrait === 'object' ? (nazneenPortrait as any).src : nazneenPortrait;
 
 const dummyBio = "is a seasoned executive experienced in developing patient-focused commercial strategies encompassing sales, marketing and market access. They drive and execute global commercialization strategies to leverage full potential as a vertically integrated organization. With more than 20 years of experience in the healthcare industry, including 15 years of commercial experience ranging from early-stage biotechnology to full-scale pharmaceutical operations, they have a proven track record of leadership.";
 

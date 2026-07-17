@@ -63,9 +63,9 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-[#D2FFD8] border border-[#b8f5bf] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex-1 min-h-[132px] overflow-hidden flex items-center justify-center p-3 sm:p-4"
+                                    className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
                                 >
-                                    <img src="/techinvention/dun.png" alt="Dun & Bradstreet" className="w-full h-full object-contain" />
+                                    <img src="/techinvention/Certification_banner_01.png" alt="Dun & Bradstreet" className="w-full h-full object-contain" />
                                 </motion.div>
 
                                 {/* Forbes Card */}
@@ -75,9 +75,9 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.3 }}
                                     whileHover={{ y: -4 }}
-                                    className="bg-black border border-[#1e1e1e] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex-1 min-h-[132px] overflow-hidden flex items-center justify-center p-3 sm:p-4"
+                                    className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
                                 >
-                                    <img src="/techinvention/forbes.png" alt="Forbes India DGEMS" className="w-full h-full object-contain" />
+                                    <img src="/techinvention/Certification_banner.png" alt="Forbes India DGEMS" className="w-full h-full object-contain" />
                                 </motion.div>
                             </div>
 
