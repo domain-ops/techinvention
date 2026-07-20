@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   basePath: '/techinvention',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/techinvention' : undefined,
   trailingSlash: true,
@@ -30,6 +30,20 @@ const nextConfig = {
 
     return config;
   },
+
+  // Only redirect from root '/' to '/techinvention/' in development
+  ...(process.env.NODE_ENV === 'development' ? {
+    async redirects() {
+      return [
+        {
+          source: '/',
+          destination: '/techinvention/',
+          basePath: false,
+          permanent: false,
+        },
+      ];
+    }
+  } : {})
 };
 
 export default nextConfig;

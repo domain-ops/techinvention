@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import DottedMap from "dotted-map";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import dnaLogo from "../../assets/images/TechInvention Logo (DNA).png";
 
 interface MapProps {
   dots?: Array<{
@@ -19,16 +20,21 @@ export function WorldMap({
   lineColor = "#0ea5e9",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const map = new DottedMap({ height: 100, grid: "diagonal" });
+  
+  const map = useMemo(() => new DottedMap({ height: 100, grid: "diagonal" }), []);
 
   const { theme } = useTheme();
 
-  const svgMap = map.getSVG({
-    radius: 0.22,
-    color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-    shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "white",
-  });
+  const svgMap = useMemo(() => {
+    return map.getSVG({
+      radius: 0.22,
+      color: theme === "dark" ? "#FFFFFF40" : "#00000040",
+      shape: "circle",
+      backgroundColor: theme === "dark" ? "black" : "white",
+    });
+  }, [map, theme]);
+
+  const logoSrc = typeof dnaLogo === 'object' ? (dnaLogo as any).src : dnaLogo;
 
   const projectPoint = (lat: number, lng: number) => {
     try {
@@ -51,8 +57,6 @@ export function WorldMap({
     const midY = Math.min(start.y, end.y) - 50;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
-
-  const greenColor = "#5C7625"; // brand secondary green (used in headings)
 
   return (
     <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg  relative font-sans">
@@ -107,50 +111,19 @@ export function WorldMap({
           </linearGradient>
         </defs>
 
-        {dots.map((dot, i) => (
-          <g key={`points-group-${i}`}>
-            <g key={`start-${i}`}>
+        {dots.map((dot, i) => {
+          const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+          return (
+            <g key={`end-point-group-${i}`}>
               <circle
-                cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                r="3"
-                fill={greenColor}
-              />
-              <circle
-                cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                r="3"
-                fill={greenColor}
-                opacity="0.5"
-              >
-                <animate
-                  attributeName="r"
-                  from="3"
-                  to="10"
-                  dur="1.8s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.5"
-                  to="0"
-                  dur="1.8s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-            <g key={`end-${i}`}>
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
+                cx={endPoint.x}
+                cy={endPoint.y}
                 r="3"
                 fill={lineColor}
               />
               <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
+                cx={endPoint.x}
+                cy={endPoint.y}
                 r="3"
                 fill={lineColor}
                 opacity="0.5"
@@ -173,8 +146,71 @@ export function WorldMap({
                 />
               </circle>
             </g>
-          </g>
-        ))}
+          );
+        })}
+
+        {/* Render unique start points using the brand logo */}
+        {(() => {
+          const uniqueStartCoords = new Set<string>();
+          const uniqueStarts: typeof dots = [];
+          dots.forEach((dot) => {
+            const coordKey = `${dot.start.lat.toFixed(4)},${dot.start.lng.toFixed(4)}`;
+            if (!uniqueStartCoords.has(coordKey)) {
+              uniqueStartCoords.add(coordKey);
+              uniqueStarts.push(dot);
+            }
+          });
+
+          return uniqueStarts.map((dot, i) => {
+            const startPoint = projectPoint(dot.start.lat, dot.start.lng);
+            return (
+              <g key={`start-point-${i}`}>
+                {/* Glowing Pulse Circle */}
+                <circle
+                  cx={startPoint.x}
+                  cy={startPoint.y}
+                  r="10"
+                  fill="#1755a6" // Brand primary blue glow
+                  opacity="0.3"
+                >
+                  <animate
+                    attributeName="r"
+                    from="10"
+                    to="24"
+                    dur="2s"
+                    begin="0s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    from="0.3"
+                    to="0"
+                    dur="2s"
+                    begin="0s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                {/* Solid white backing circle to hide the lines behind the logo */}
+                <circle
+                  cx={startPoint.x}
+                  cy={startPoint.y}
+                  r="10"
+                  fill="white"
+                />
+
+                {/* Brand Logo DNA Image */}
+                <image
+                  href={logoSrc}
+                  x={startPoint.x - 7}
+                  y={startPoint.y - 10}
+                  width="14"
+                  height="20"
+                />
+              </g>
+            );
+          });
+        })()}
       </svg>
     </div>
   );

@@ -3,7 +3,6 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import Hero from './sections/Hero';
 import OneHealth from './sections/OneHealth';
-import LazyViewportSection from '../../components/Common/LazyViewportSection';
 
 // Dynamically import below the fold components
 const About = dynamic(() => import('./sections/About'));
@@ -19,37 +18,21 @@ const Home = () => {
         <div className="relative">
             <Hero />
             
-            <LazyViewportSection minHeight="500px">
-                <OneHealth />
-            </LazyViewportSection>
+            <OneHealth />
 
-            <LazyViewportSection minHeight="500px">
-                <About />
-            </LazyViewportSection>
+            <About />
 
-            <LazyViewportSection minHeight="600px">
-                <VaccinePipeline />
-            </LazyViewportSection>
+            <VaccinePipeline />
 
-            <LazyViewportSection minHeight="200px">
-                <ClientLogos />
-            </LazyViewportSection>
+            <ClientLogos />
 
-            <LazyViewportSection minHeight="600px">
-                <GlobalProjects />
-            </LazyViewportSection>
+            <GlobalProjects />
 
-            <LazyViewportSection minHeight="500px">
-                <Testimonials />
-            </LazyViewportSection>
+            <Testimonials />
 
-            <LazyViewportSection minHeight="400px">
-                <Publications />
-            </LazyViewportSection>
+            <Publications />
 
-            <LazyViewportSection minHeight="500px">
-                <FAQSection />
-            </LazyViewportSection>
+            <FAQSection />
         </div>
     );
 };
