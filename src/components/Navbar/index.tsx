@@ -19,10 +19,17 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const announcements = [
-        "🏆 India Vaccine Leaders Conclave 2025: Recognized for vaccine innovation and biotech scaling.",
-        "🏆 Fortune Leadership Awards 2024: Awarded for exceptional organizational performance.",
-        "🏆 Exemplars of Excellence 2024: Celebrating scientific innovation in biopharma.",
-        "🏆 Forbes India Spotlight 2024: Ranked among high-potential global business models."
+        "🏆 India Vaccine Leaders Conclave 2025: SME Biopharma Company of the Year.",
+        "🏆 Fortune Leadership Awards 2024: Excellence in Bio-innovation.",
+        "🏆 Exemplars of Excellence 2024: Health Entrepreneur Award.",
+        "🏆 Forbes India Select 200: Recognized for game-changing global business potential.",
+        "🏆 Dun & Bradstreet Startup 50: Trailblazers Award 2024.",
+        "🏆 Summit Star 2023: Celebrating biotech innovation leadership.",
+        "🏆 India SME Excellence Awards 2022: SME of the Year (Healthcare).",
+        "🏆 National Startup Awards Finalist: Policy Advocacy to the honorable PM of India.",
+        "🏆 SwiftNLift Magazine 2020: Named among Top 10 Best Biotechnology Companies.",
+        "🏆 Startup City Magazine 2019: Best Company of the Year (Biotech Sector).",
+        "🏆 Time2Leap Awards 2019: Ministry of MSME Leading Single Specialty Services Company."
     ];
     const [noticeIndex, setNoticeIndex] = useState(0);
 
