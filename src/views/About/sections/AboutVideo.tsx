@@ -23,7 +23,7 @@ const AboutVideo = () => {
                             muted
                             loop
                             playsInline
-                            preload="auto"
+                            preload="none"
                             className="w-full h-full object-cover object-center [transform:translate3d(0,0,0)] [backface-visibility:hidden]"
                         />
                     </div>

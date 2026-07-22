@@ -13,6 +13,12 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({ lenisRef }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
+        let cachedScrollHeight = typeof document !== 'undefined' ? document.documentElement.scrollHeight : 0;
+
+        const handleResize = () => {
+            cachedScrollHeight = document.documentElement.scrollHeight;
+        };
+
         const handleScroll = () => {
             // Check visibility
             if (window.scrollY > 200) {
@@ -22,7 +28,7 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({ lenisRef }) => {
             }
 
             // Calculate percentage
-            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const totalHeight = cachedScrollHeight - window.innerHeight;
             if (totalHeight > 0) {
                 const progress = (window.scrollY / totalHeight) * 100;
                 setScrollProgress(Math.min(100, Math.max(0, progress)));
@@ -30,9 +36,13 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({ lenisRef }) => {
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleResize, { passive: true });
         handleScroll(); // Initial run
 
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     const scrollToTop = () => {

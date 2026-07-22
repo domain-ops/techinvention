@@ -19,6 +19,7 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
   const [isHovered, setIsHovered] = useState(false)
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 })
 
+  const rectRef = useRef<DOMRect | null>(null)
   const mousePos = useRef({ x: 0, y: 0 })
   const currentPos = useRef({ x: 0, y: 0 })
   const animationFrameRef = useRef<number>()
@@ -71,8 +72,8 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
   }, [])
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return
-    const rect = containerRef.current.getBoundingClientRect()
+    const rect = rectRef.current || (containerRef.current ? containerRef.current.getBoundingClientRect() : null)
+    if (!rect) return
     mousePos.current = {
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
@@ -82,6 +83,7 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
   const handleMouseEnter = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return
     const rect = containerRef.current.getBoundingClientRect()
+    rectRef.current = rect
     const x = e.clientX - rect.left
     const y = e.clientY - rect.top
     mousePos.current = { x, y }
@@ -90,6 +92,7 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
   }, [])
 
   const handleMouseLeave = useCallback(() => {
+    rectRef.current = null
     setIsHovered(false)
   }, [])
 

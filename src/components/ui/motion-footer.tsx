@@ -156,8 +156,16 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
       if (!element) return;
 
       const ctx = gsap.context(() => {
+        let rect: DOMRect | null = null;
+
+        const handleMouseEnter = () => {
+          rect = element.getBoundingClientRect();
+        };
+
         const handleMouseMove = (e: MouseEvent) => {
-          const rect = element.getBoundingClientRect();
+          if (!rect) {
+            rect = element.getBoundingClientRect();
+          }
           const h = rect.width / 2;
           const w = rect.height / 2;
           const x = e.clientX - rect.left - h;
@@ -175,6 +183,7 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
         };
 
         const handleMouseLeave = () => {
+          rect = null;
           gsap.to(element, {
             x: 0,
             y: 0,
@@ -186,10 +195,12 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
           });
         };
 
+        element.addEventListener("mouseenter", handleMouseEnter);
         element.addEventListener("mousemove", handleMouseMove as any);
         element.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
+          element.removeEventListener("mouseenter", handleMouseEnter);
           element.removeEventListener("mousemove", handleMouseMove as any);
           element.removeEventListener("mouseleave", handleMouseLeave);
         };

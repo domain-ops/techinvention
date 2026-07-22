@@ -1,12 +1,15 @@
 "use client";
 import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import GmpHero from './sections/GmpHero';
 import GmpOverview from './sections/GmpOverview';
-import TrainingModules from './sections/TrainingModules';
-import SpecializedTraining from './sections/SpecializedTraining';
-import GmpTestimonials from './sections/GmpTestimonials';
-import GmpAppreciation from './sections/GmpAppreciation';
-import GmpCTA from './sections/GmpCTA';
+
+// Dynamically import below the fold components
+const TrainingModules = dynamic(() => import('./sections/TrainingModules'));
+const SpecializedTraining = dynamic(() => import('./sections/SpecializedTraining'));
+const GmpTestimonials = dynamic(() => import('./sections/GmpTestimonials'));
+const GmpAppreciation = dynamic(() => import('./sections/GmpAppreciation'));
+const GmpCTA = dynamic(() => import('./sections/GmpCTA'));
 
 export default function GmpTrainingPage() {
     

@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useLanguage } from '../../context/LanguageContext';
-import { translations } from '../../translations';
+
 import ScrollReveal from '../../components/Common/ScrollReveal';
 
 // Types and helper functions for searching translations
@@ -57,8 +57,8 @@ const pathToRoute = (path: string, t: any): { url: string; title: string, catego
 const SearchPage = () => {
     const searchParams = useSearchParams();
     const query = searchParams.get('q') || '';
-    const { language } = useLanguage();
-    const t = translations[language];
+    const { translationsData } = useLanguage();
+    const t = translationsData || {};
 
     
     const results = useMemo(() => {

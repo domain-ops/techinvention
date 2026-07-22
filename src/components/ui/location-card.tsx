@@ -41,9 +41,16 @@ export const LocationCard = ({
     ["-10deg", "10deg"]
   );
 
+  const rectRef = React.useRef<DOMRect | null>(null);
+
+  // Handle mouse enter to cache dimensions
+  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    rectRef.current = e.currentTarget.getBoundingClientRect();
+  };
+
   // Handle mouse movement over the card
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+    const rect = rectRef.current || e.currentTarget.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
     const mouseX = e.clientX - rect.left;
@@ -56,12 +63,14 @@ export const LocationCard = ({
 
   // Reset the tilt effect when the mouse leaves
   const handleMouseLeave = () => {
+    rectRef.current = null;
     x.set(0);
     y.set(0);
   };
 
   return (
     <motion.div
+      onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{

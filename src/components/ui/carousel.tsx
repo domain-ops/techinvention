@@ -44,16 +44,25 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     };
   }, []);
 
+  const rectRef = useRef<DOMRect | null>(null);
+
+  const handleMouseEnter = () => {
+    if (slideRef.current) {
+      rectRef.current = slideRef.current.getBoundingClientRect();
+    }
+  };
+
   const handleMouseMove = (event: React.MouseEvent) => {
     const el = slideRef.current;
     if (!el) return;
 
-    const r = el.getBoundingClientRect();
+    const r = rectRef.current || el.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
     yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
   };
 
   const handleMouseLeave = () => {
+    rectRef.current = null;
     xRef.current = 0;
     yRef.current = 0;
   };
@@ -70,6 +79,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         ref={slideRef}
         className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 cursor-pointer"
         onClick={() => handleSlideClick(index)}
+        onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{

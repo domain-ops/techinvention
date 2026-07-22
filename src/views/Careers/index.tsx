@@ -1,15 +1,18 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import CareersHero from './sections/CareersHero';
-import LifeAtTechInvention from './sections/LifeAtTechInvention';
-import WhyJoinUs from './sections/WhyJoinUs';
-import WhoWeLookFor from './sections/WhoWeLookFor';
-import EmployeeVoices from './sections/EmployeeVoices';
-import CurrentOpenings from './sections/CurrentOpenings';
-import ApplyForm from './sections/ApplyForm';
+
+// Dynamically import below the fold components
+const LifeAtTechInvention = dynamic(() => import('./sections/LifeAtTechInvention'));
+const WhyJoinUs = dynamic(() => import('./sections/WhyJoinUs'));
+const WhoWeLookFor = dynamic(() => import('./sections/WhoWeLookFor'));
+const EmployeeVoices = dynamic(() => import('./sections/EmployeeVoices'));
+const CurrentOpenings = dynamic(() => import('./sections/CurrentOpenings'));
+const ApplyForm = dynamic(() => import('./sections/ApplyForm'));
 
 gsap.registerPlugin(ScrollTrigger);
 

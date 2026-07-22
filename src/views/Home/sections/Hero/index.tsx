@@ -103,6 +103,8 @@ const Hero = () => {
                         <img src={bgImages[activeWordIndex % bgImages.length]}
                             alt="Background"
                             className="w-full h-full object-cover object-top opacity-100"
+                            decoding="async"
+                            fetchPriority="high"
                         />
                     </motion.div>
                 </AnimatePresence>

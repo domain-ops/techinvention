@@ -1,13 +1,19 @@
-import { english } from './languages/english';
-import { hindi } from './languages/hindi';
-import { arabic } from './languages/arabic';
-import { spanish } from './languages/spanish';
-import { french } from './languages/french';
+export type Language = 'en' | 'hi' | 'ar' | 'es' | 'fr';
 
-export const translations: Record<string, any> = {
-    en: english,
-    hi: hindi,
-    ar: arabic,
-    es: spanish,
-    fr: french
+export const loadTranslation = async (lang: Language): Promise<any> => {
+    switch (lang) {
+        case 'en': 
+            return (await import('./languages/english')).english;
+        case 'hi': 
+            return (await import('./languages/hindi')).hindi;
+        case 'ar': 
+            return (await import('./languages/arabic')).arabic;
+        case 'es': 
+            return (await import('./languages/spanish')).spanish;
+        case 'fr': 
+            return (await import('./languages/french')).french;
+        default: 
+            return (await import('./languages/english')).english;
+    }
 };
+
