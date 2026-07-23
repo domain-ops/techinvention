@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: '/techinvention',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/techinvention' : undefined,
+  output: process.env.STATIC_EXPORT === 'true' ? 'export' : undefined,
+  basePath: process.env.BASE_PATH || '',
+  assetPrefix: process.env.BASE_PATH || undefined,
   trailingSlash: true,
   // Disable next/image static import handling to prevent conflicts with Vite-style imports
   images: {

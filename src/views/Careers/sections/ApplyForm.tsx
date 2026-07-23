@@ -14,6 +14,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
     const [experience, setExperience] = useState('');
     const [currentCompany, setCurrentCompany] = useState('');
     const [message, setMessage] = useState('');
+    const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [fileName, setFileName] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -27,15 +28,17 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.length > 0) {
-            setFileName(e.target.files[0].name);
+            const file = e.target.files[0];
+            setSelectedFile(file);
+            setFileName(file.name);
             setError('');
         }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         
-        if (!name || !email || !phone || !experience || !fileName) {
+        if (!name || !email || !phone || !experience || !selectedFile) {
             setError('Please fill in all required fields (*) and upload your resume.');
             return;
         }
@@ -43,11 +46,36 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
         setLoading(true);
         setError('');
 
-        // Simulate API post
-        setTimeout(() => {
-            setLoading(false);
+        try {
+            const formData = new FormData();
+            formData.append('jobTitle', selectedJobTitle || 'General Application');
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('experience', experience);
+            formData.append('currentCompany', currentCompany);
+            formData.append('message', message);
+            if (selectedFile) {
+                formData.append('resume', selectedFile);
+            }
+
+            const res = await fetch('/api/careers', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const data = await res.json();
+
+            if (!res.ok || !data.success) {
+                throw new Error(data.error || 'Failed to submit application.');
+            }
+
             setSubmitted(true);
-        }, 1500);
+        } catch (err: any) {
+            setError(err.message || 'An error occurred while submitting your application.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     // Remove the early return so the form is always visible
