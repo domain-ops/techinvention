@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Biotech Consulting Services | TechInvention",
     description: "TechInvention offers end-to-end biotech consulting, from feasibility studies and technology transfers to facility design and compliance.",
-    url: "https://impulsedigital.co.in/techinvention/consulting",
+    url: "https://impulsedigital.co.in/consulting",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "TechInvention offers end-to-end biotech consulting, from feasibility studies and technology transfers to facility design and compliance.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/consulting",
+    canonical: "https://impulsedigital.co.in/consulting",
   },
   robots: {
     index: true,

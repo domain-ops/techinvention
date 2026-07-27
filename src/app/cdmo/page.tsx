@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CDMO Services | TechInvention",
     description: "Explore our Contract Development and Manufacturing Organization (CDMO) services featuring our state-of-the-art GCMC facility, Drug Substance, and Drug Product capabilities.",
-    url: "https://impulsedigital.co.in/techinvention/cdmo",
+    url: "https://impulsedigital.co.in/cdmo",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Explore our Contract Development and Manufacturing Organization (CDMO) services featuring our state-of-the-art GCMC facility, Drug Substance, and Drug Product capabilities.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/cdmo",
+    canonical: "https://impulsedigital.co.in/cdmo",
   },
   robots: {
     index: true,

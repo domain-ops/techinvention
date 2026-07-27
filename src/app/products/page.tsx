@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Biotech Products & Solutions | TechInvention",
     description: "Browse TechInvention's portfolio of vaccines, rapid diagnostic kits, biotherapeutics, and specialized medical countermeasure solutions.",
-    url: "https://impulsedigital.co.in/techinvention/products",
+    url: "https://impulsedigital.co.in/products",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Browse TechInvention's portfolio of vaccines, rapid diagnostic kits, biotherapeutics, and specialized medical countermeasure solutions.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/products",
+    canonical: "https://impulsedigital.co.in/products",
   },
   robots: {
     index: true,

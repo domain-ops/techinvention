@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terms & Conditions | TechInvention",
     description: "Read the terms and conditions of TechInvention Lifecare Limited to understand user rights and restrictions while using this website.",
-    url: "https://impulsedigital.co.in/techinvention/terms-and-conditions",
+    url: "https://impulsedigital.co.in/terms-and-conditions",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Read the terms and conditions of TechInvention Lifecare Limited to understand user rights and restrictions while using this website.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/terms-and-conditions",
+    canonical: "https://impulsedigital.co.in/terms-and-conditions",
   },
   robots: {
     index: true,

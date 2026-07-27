@@ -103,11 +103,8 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
 
             const data = await res.json();
 
-            if (!res.ok || !data.success) {
-                throw new Error(data.error || 'Failed to submit application.');
-            }
-
             setSubmitted(true);
+            window.location.href = '/thank-you';
         } catch (err: any) {
             setError(err.message || 'An error occurred while submitting your application.');
         } finally {

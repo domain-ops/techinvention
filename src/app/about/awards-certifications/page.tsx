@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Awards & Certifications | TechInvention",
     description: "Explore the certifications, awards, and recognitions received by TechInvention, showcasing our commitment to quality, ESG compliance, and biopharma innovation.",
-    url: "https://impulsedigital.co.in/techinvention/about/awards-certifications",
+    url: "https://impulsedigital.co.in/about/awards-certifications",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Explore the certifications, awards, and recognitions received by TechInvention, showcasing our commitment to quality, ESG compliance, and biopharma innovation.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/about/awards-certifications",
+    canonical: "https://impulsedigital.co.in/about/awards-certifications",
   },
   robots: {
     index: true,

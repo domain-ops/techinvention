@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About TechInvention | Our Journey & Vision",
     description: "Learn about TechInvention's journey, vision, mission, and leadership team dedicated to global health innovation and biotechnology solutions.",
-    url: "https://impulsedigital.co.in/techinvention/about",
+    url: "https://impulsedigital.co.in/about",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Learn about TechInvention's journey, vision, mission, and leadership team dedicated to global health innovation and biotechnology solutions.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/about",
+    canonical: "https://impulsedigital.co.in/about",
   },
   robots: {
     index: true,

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GMP Training & Workforce Development | TechInvention",
     description: "TechInvention's professional Good Manufacturing Practice (GMP) training programs prepare workforce talents for quality-driven biotech manufacturing.",
-    url: "https://impulsedigital.co.in/techinvention/gmp-training",
+    url: "https://impulsedigital.co.in/gmp-training",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "TechInvention's professional Good Manufacturing Practice (GMP) training programs prepare workforce talents for quality-driven biotech manufacturing.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/gmp-training",
+    canonical: "https://impulsedigital.co.in/gmp-training",
   },
   robots: {
     index: true,

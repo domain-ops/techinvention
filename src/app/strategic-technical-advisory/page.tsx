@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Strategic & Technical Advisory | TechInvention",
     description: "TechInvention provides strategic, regulatory, and technical advisory services for biotechnology and pharmaceutical manufacturing operations globally.",
-    url: "https://impulsedigital.co.in/techinvention/strategic-technical-advisory",
+    url: "https://impulsedigital.co.in/strategic-technical-advisory",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "TechInvention provides strategic, regulatory, and technical advisory services for biotechnology and pharmaceutical manufacturing operations globally.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/strategic-technical-advisory",
+    canonical: "https://impulsedigital.co.in/strategic-technical-advisory",
   },
   robots: {
     index: true,

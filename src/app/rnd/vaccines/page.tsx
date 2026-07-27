@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vaccine R&D & Pipelines | TechInvention",
     description: "Read about TechInvention\\\\'s vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
-    url: "https://impulsedigital.co.in/techinvention/rnd/vaccines",
+    url: "https://impulsedigital.co.in/rnd/vaccines",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Read about TechInvention\\\\'s vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/rnd/vaccines",
+    canonical: "https://impulsedigital.co.in/rnd/vaccines",
   },
   robots: {
     index: true,

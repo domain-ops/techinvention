@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Disclaimer | TechInvention",
     description: "Read the disclaimer of TechInvention Lifecare Pvt. Ltd. regarding the use of information and services on this site.",
-    url: "https://impulsedigital.co.in/techinvention/disclaimer",
+    url: "https://impulsedigital.co.in/disclaimer",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Read the disclaimer of TechInvention Lifecare Pvt. Ltd. regarding the use of information and services on this site.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/disclaimer",
+    canonical: "https://impulsedigital.co.in/disclaimer",
   },
   robots: {
     index: true,

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Search | TechInvention",
     description: "Search our website to find information about our products, research and development, consulting services, and latest insights.",
-    url: "https://impulsedigital.co.in/techinvention/search",
+    url: "https://impulsedigital.co.in/search",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Search our website to find information about our products, research and development, consulting services, and latest insights.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/search",
+    canonical: "https://impulsedigital.co.in/search",
   },
   robots: {
     index: true,

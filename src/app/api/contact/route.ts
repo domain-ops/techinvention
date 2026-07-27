@@ -109,9 +109,6 @@ export async function POST(req: NextRequest) {
                         <div class="message-box">${message.replace(/\n/g, '<br/>')}</div>
                     </div>
                 </div>
-                <div class="footer">
-                    Sent automatically from TechInvention Contact Form to <strong>${to}</strong>
-                </div>
             </div>
         </body>
         </html>

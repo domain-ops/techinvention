@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TechInvention | Advancing Global Health Through Biotechnology",
     description: "Global biotech company focused on vaccines, diagnostics, and biotherapeutics. Innovation that protects tomorrow.",
-    url: "https://impulsedigital.co.in/techinvention",
+    url: "https://techinvention.biz",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Global biotech company focused on vaccines, diagnostics, and biotherapeutics. Innovation that protects tomorrow.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention",
+    canonical: "https://techinvention.biz",
   },
   robots: {
     index: true,

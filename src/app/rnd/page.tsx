@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Research & Development (R&D) | TechInvention",
     description: "Explore TechInvention's research and development initiatives, biotechnology platforms, and scientific innovations for global health.",
-    url: "https://impulsedigital.co.in/techinvention/rnd",
+    url: "https://impulsedigital.co.in/rnd",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Explore TechInvention's research and development initiatives, biotechnology platforms, and scientific innovations for global health.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/rnd",
+    canonical: "https://impulsedigital.co.in/rnd",
   },
   robots: {
     index: true,

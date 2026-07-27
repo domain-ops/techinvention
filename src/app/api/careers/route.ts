@@ -130,9 +130,6 @@ export async function POST(req: NextRequest) {
                         <div class="value">📎 ${attachments[0].filename}</div>
                     </div>` : ''}
                 </div>
-                <div class="footer">
-                    Sent automatically from TechInvention Careers Form to <strong>${to}</strong>
-                </div>
             </div>
         </body>
         </html>

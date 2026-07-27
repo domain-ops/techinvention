@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Careers at TechInvention | Join Our Biotech Team",
     description: "Explore career opportunities at TechInvention. Join a diverse team of scientists, researchers, and experts advancing global health biotechnology.",
-    url: "https://impulsedigital.co.in/techinvention/careers",
+    url: "https://impulsedigital.co.in/careers",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Explore career opportunities at TechInvention. Join a diverse team of scientists, researchers, and experts advancing global health biotechnology.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/careers",
+    canonical: "https://impulsedigital.co.in/careers",
   },
   robots: {
     index: true,

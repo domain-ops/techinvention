@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CSR Initiatives | About TechInvention",
     description: "Learn about TechInvention's Corporate Social Responsibility (CSR) initiatives, contributions to SARS-CoV-2 research at Punjab University, PM Cares Fund, and startup support.",
-    url: "https://impulsedigital.co.in/techinvention/about/csr-initiatives",
+    url: "https://impulsedigital.co.in/about/csr-initiatives",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Learn about TechInvention's Corporate Social Responsibility (CSR) initiatives, contributions to SARS-CoV-2 research at Punjab University, PM Cares Fund, and startup support.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/techinvention/about/csr-initiatives",
+    canonical: "https://impulsedigital.co.in/about/csr-initiatives",
   },
   robots: {
     index: true,

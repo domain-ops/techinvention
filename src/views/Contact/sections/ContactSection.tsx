@@ -104,6 +104,7 @@ const ContactSection = () => {
 
             setSubmitted(true);
             setFormData({ name: '', email: '', phone: '', enquiryType: '', organisation: '', message: '' });
+            window.location.href = '/thank-you';
         } catch (err: any) {
             setError(err.message || 'An error occurred while sending your enquiry.');
         } finally {
