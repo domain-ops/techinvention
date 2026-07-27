@@ -25,10 +25,14 @@ jobs:
         run: npm ci
 
       - name: Build project
+        env:
+          STATIC_EXPORT: 'true'
         run: npm run build
 
       - name: Add .nojekyll to prevent Jekyll processing
-        run: touch out/.nojekyll
+        run: |
+          mkdir -p out
+          touch out/.nojekyll
 
       - name: Deploy to hostinger-deploy branch
         uses: JamesIves/github-pages-deploy-action@v4
