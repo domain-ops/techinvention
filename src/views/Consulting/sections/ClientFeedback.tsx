@@ -4,6 +4,8 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 import { Maximize2, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const basePath = process.env.BASE_PATH || '';
+
 export default function ClientFeedback() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -38,7 +40,7 @@ export default function ClientFeedback() {
                                 {/* Image Container */}
                                 <div className="aspect-[3/4] relative overflow-hidden rounded-lg bg-white border border-slate-200/80 flex items-center justify-center">
                                     <img 
-                                        src={img.src} 
+                                        src={`${basePath}${img.src}`} 
                                         alt={img.alt} 
                                         className="w-full h-full object-contain object-top transition-transform duration-500 group-hover:scale-[1.03]" 
                                     />
@@ -86,7 +88,7 @@ export default function ClientFeedback() {
                             onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image card
                         >
                             <img 
-                                src={selectedImage} 
+                                src={`${basePath}${selectedImage}`} 
                                 alt="Client Feedback Letter Fullscreen" 
                                 className="max-w-full max-h-[85vh] object-contain rounded-xl cursor-default" 
                             />

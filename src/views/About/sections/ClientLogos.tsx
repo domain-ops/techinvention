@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+const basePath = process.env.BASE_PATH || '';
+
 // Row 1 Static Paths
 const ROW_1 = [
     '/consulting-page-images/Asian_Development_Bank_logo.svg.png',
@@ -51,7 +53,7 @@ const ClientLogos = () => {
                                 className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
                             >
                                 <img 
-                                    src={src} 
+                                    src={`${basePath}${src}`} 
                                     alt="Client Logo" 
                                     className="max-w-full max-h-full object-contain"
                                 />
@@ -73,7 +75,7 @@ const ClientLogos = () => {
                                 className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
                             >
                                 <img 
-                                    src={src} 
+                                    src={`${basePath}${src}`} 
                                     alt="Client Logo" 
                                     className="max-w-full max-h-full object-contain"
                                 />

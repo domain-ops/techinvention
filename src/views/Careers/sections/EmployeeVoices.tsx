@@ -4,6 +4,8 @@ import { Quote, User } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+const basePath = process.env.BASE_PATH || '';
+
 const testimonials = [
     {
         name: "Shahnawaz Shaikh",
@@ -75,7 +77,7 @@ export default function EmployeeVoices() {
                                 <div className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 overflow-hidden flex items-center justify-center flex-shrink-0">
                                     {testimonial.image ? (
                                         <img 
-                                            src={testimonial.image} 
+                                            src={`${basePath}${testimonial.image}`} 
                                             alt={testimonial.name} 
                                             className="w-full h-full object-cover"
                                         />

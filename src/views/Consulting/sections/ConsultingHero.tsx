@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import consultingBannerImg from '../../../../public/consulting-banner.png';
 
 
 export default function ConsultingHero() {
@@ -44,7 +45,7 @@ export default function ConsultingHero() {
                     className="w-full"
                 >
                     <div className="relative w-full overflow-hidden">
-                        <img src="/consulting-banner.png" 
+                        <img src={consultingBannerImg} 
                             alt="Strategic Advisory and Tech Consulting" 
                             className="w-full h-[500px] lg:h-[600px] object-cover"
                         />

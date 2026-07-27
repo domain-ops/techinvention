@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-const logoDNA = "/TechInvention-gif.gif";
+import logoDNA from '../../../public/TechInvention-gif.gif';
 
 interface DNAHelixProps {
     align?: 'left' | 'right';

@@ -10,12 +10,14 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+const basePath = process.env.BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: "TechInvention | Advancing Global Health Through Biotechnology",
   description: "Global biotech company focused on vaccines, diagnostics, and biotherapeutics. Innovation that protects tomorrow.",
   icons: {
-    icon: "https://impulsedigital.co.in/favicon.ico",
-    apple: "https://impulsedigital.co.in/favicon.ico"
+    icon: `${basePath}/favicon.ico?v=2`,
+    apple: `${basePath}/favicon.ico?v=2`
   },
 };
 

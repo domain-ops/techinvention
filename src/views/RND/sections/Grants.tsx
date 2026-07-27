@@ -2,6 +2,8 @@ import React from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+const basePath = process.env.BASE_PATH || '';
+
 const grantsList = [
     {
         name: "BIRAC",
@@ -44,7 +46,7 @@ export default function Grants() {
                                     className="flex items-center justify-center p-6 bg-white rounded-2xl border border-slate-200/50 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 w-full h-[140px] md:h-[180px]"
                                 >
                                     <img
-                                        src={item.logo}
+                                        src={`${basePath}${item.logo}`}
                                         alt={`${item.name} Logo`}
                                         className="max-h-[90%] max-w-[90%] w-auto h-auto object-contain transition-transform duration-300"
                                     />

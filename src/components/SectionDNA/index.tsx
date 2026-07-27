@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-const dnaLogo = "/TechInvention-gif.gif";
+import dnaLogo from '../../../public/TechInvention-gif.gif';
 
 interface SectionDNAProps {
     className?: string;

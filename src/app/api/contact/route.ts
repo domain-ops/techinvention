@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
         const user = process.env.SMTP_USER || 'domain@techinvention.biz';
         const pass = process.env.SMTP_PASS || 'leaynqjnnwhcnfhe';
         const from = process.env.SMTP_FROM || `"TechInvention Support" <${user}>`;
-        const to = process.env.SMTP_CONTACT_TO || process.env.SMTP_TO || 'connect@techinvention.biz, shweta.k@theimpulsedigital.com';
+        const to = process.env.SMTP_CONTACT_TO || process.env.SMTP_TO || 'connect@techinvention.biz, clientleadbackup@gmail.com';
 
         const transporter = nodemailer.createTransport({
             host,

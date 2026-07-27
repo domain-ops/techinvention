@@ -4,6 +4,8 @@ import { ShieldAlert, Activity, GitMerge, ChevronLeft, ChevronRight } from 'luci
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+const basePath = process.env.BASE_PATH || '';
+
 const ImageSlider = ({ images }: { images: string[] }) => {
     const [index, setIndex] = useState(0);
 
@@ -34,7 +36,7 @@ const ImageSlider = ({ images }: { images: string[] }) => {
                     }`}
                 >
                     <img
-                        src={img}
+                        src={`${basePath}${img}`}
                         alt={`Slide ${idx + 1}`}
                         className="w-full h-full object-cover"
                     />

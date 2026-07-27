@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
 
+const basePath = process.env.BASE_PATH || '';
+
 const publications = [
     {
         name: "pcv",
@@ -134,7 +136,7 @@ export default function Publications() {
                             {publications.map((item, idx) => (
                                 <a 
                                     key={idx}
-                                    href={item.pdf || item.image} 
+                                    href={item.pdf ? `${basePath}${item.pdf}` : `${basePath}${item.image}`} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="group flex w-[260px] shrink-0"
@@ -146,7 +148,7 @@ export default function Publications() {
                                         <div className="w-full overflow-hidden mb-4 flex items-center justify-center h-[200px] shrink-0">
                                             <img 
                                                 loading="lazy" 
-                                                src={item.image} 
+                                                src={`${basePath}${item.image}`} 
                                                 alt={item.name} 
                                                 className="w-full h-full object-contain"
                                             />

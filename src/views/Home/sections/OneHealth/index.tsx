@@ -9,6 +9,11 @@ import surveillanceImg from "../../../../assets/images/one_health_ecosystem.png"
 import infraImg from "../../../../assets/images/one_health_infrastructure.png";
 import innovationImg from "../../../../assets/images/one_health_infrastructure.png"; // Placeholder for one_health_innovation.png
 
+import commercialImg from "../../../../../public/Commercial.jpg";
+import researchImg from "../../../../../public/Research.jpg";
+import licensingImg from "../../../../../public/Licensing.jpg";
+import strategicImg from "../../../../../public/Strategic.jpg";
+
 import TextReveal from '../../../../components/Common/TextReveal';
 import { SplitTitle } from '../../../../components/Common/SplitTitle';
 import { motion } from 'framer-motion';
@@ -32,10 +37,10 @@ const OneHealth = () => {
         : fallbackSlides;
 
     const slides = [
-        { ...(finalSlidesData[3] || {}), title: finalSlidesData[3]?.title || "Commercial-Scale Manufacturing", image: "/Commercial.jpg", tag: finalSlidesData[3]?.tag || "Manufacturing" },
-        { ...(finalSlidesData[1] || {}), title: finalSlidesData[1]?.title || "Research and Development (R&D)", image: "/Research.jpg", tag: finalSlidesData[1]?.tag || "R&D" },
-        { ...(finalSlidesData[2] || {}), title: finalSlidesData[2]?.title || "Licensing and Access", image: "/Licensing.jpg", tag: finalSlidesData[2]?.tag || "Licensing" },
-        { ...(finalSlidesData[0] || {}), title: finalSlidesData[0]?.title || "Strategic Advisory & Tech Consulting", image: "/Strategic.jpg", tag: finalSlidesData[0]?.tag || "Consulting" },
+        { ...(finalSlidesData[3] || {}), title: finalSlidesData[3]?.title || "Commercial-Scale Manufacturing", image: commercialImg, tag: finalSlidesData[3]?.tag || "Manufacturing" },
+        { ...(finalSlidesData[1] || {}), title: finalSlidesData[1]?.title || "Research and Development (R&D)", image: researchImg, tag: finalSlidesData[1]?.tag || "R&D" },
+        { ...(finalSlidesData[2] || {}), title: finalSlidesData[2]?.title || "Licensing and Access", image: licensingImg, tag: finalSlidesData[2]?.tag || "Licensing" },
+        { ...(finalSlidesData[0] || {}), title: finalSlidesData[0]?.title || "Strategic Advisory & Tech Consulting", image: strategicImg, tag: finalSlidesData[0]?.tag || "Consulting" },
     ];
 
     return (

@@ -9,6 +9,7 @@ import ScientificAdvisoryBoard from './sections/ScientificAdvisoryBoard';
 import Responsibility from './sections/Responsibility';
 import Spotlight from './sections/Spotlight';
 import CTASection from '../../components/CTASection';
+import abtBannerImg from '../../../public/abt-banner.jpeg';
 
 const AboutPage = () => {
     
@@ -21,7 +22,7 @@ const AboutPage = () => {
             <div className="w-full bg-white pt-4 pb-8 md:pt-6 md:pb-12">
                 <div className="max-w-[1440px] mx-auto px-4 md:px-8">
                     <img 
-                        src="/abt-banner.jpeg" 
+                        src={abtBannerImg} 
                         alt="TechInvention About Banner" 
                         className="w-full h-auto block rounded-none"
                     />

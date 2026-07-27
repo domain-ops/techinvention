@@ -5,6 +5,7 @@ import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 import aboutManufacturing from '../../../assets/images/about_manufacturing.png';
+import manufacturingImg from '../../../../public/manufacturing.png';
 
 export default function ProductsHero() {
     const { t } = useLanguage();
@@ -60,7 +61,7 @@ export default function ProductsHero() {
                     className="w-full"
                 >
                     <div className="relative w-full overflow-hidden">
-                        <img src="/manufacturing.png" 
+                        <img src={manufacturingImg} 
                             alt="Advanced Biotech Manufacturing and Formulation Facility" 
                             className="w-full h-[500px] lg:h-[600px] object-cover"
                         />

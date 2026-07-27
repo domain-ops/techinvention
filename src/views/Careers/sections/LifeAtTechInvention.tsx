@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+const basePath = process.env.BASE_PATH || '';
+
 export default function LifeAtTechInvention() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -104,7 +106,7 @@ export default function LifeAtTechInvention() {
                                         className={`absolute h-full transition-all duration-700 ease-out overflow-hidden rounded-2xl shadow-lg border border-slate-200/40 bg-white ${transformClass}`}
                                     >
                                         <img
-                                            src={slide.src}
+                                            src={`${basePath}${slide.src}`}
                                             alt={`Life at TechInvention ${idx + 1}`}
                                             className="w-full h-full object-cover object-center"
                                         />

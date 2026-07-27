@@ -1,6 +1,8 @@
 import React from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 
+const basePath = process.env.BASE_PATH || '';
+
 export default function AdverseEventReporting() {
     return (
         <section className="py-20 bg-white relative font-sans">
@@ -29,7 +31,7 @@ export default function AdverseEventReporting() {
                         <div className="text-slate-800 text-[16px] md:text-[18px] leading-relaxed">
                             <span className="font-bold">Download Reporting Form:</span> Please complete the{' '}
                             <a 
-                                href="/Adverse-Event-AE-Report-Form.docx" 
+                                href={`${basePath}/Adverse-Event-AE-Report-Form.docx`} 
                                 download="Adverse-Event-AE-Report-Form.docx" 
                                 className="font-bold text-[#d83b6f] hover:underline"
                             >
