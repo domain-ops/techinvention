@@ -19,17 +19,16 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const announcements = [
-        "🏆 India Vaccine Leaders Conclave 2025: SME Biopharma Company of the Year.",
-        "🏆 Fortune Leadership Awards 2024: Excellence in Bio-innovation.",
-        "🏆 Exemplars of Excellence 2024: Health Entrepreneur Award.",
-        "🏆 Forbes India Select 200: Recognized for game-changing global business potential.",
-        "🏆 Dun & Bradstreet Startup 50: Trailblazers Award 2024.",
-        "🏆 Summit Star 2023: Celebrating biotech innovation leadership.",
-        "🏆 India SME Excellence Awards 2022: SME of the Year (Healthcare).",
-        "🏆 National Startup Awards Finalist: Policy Advocacy to the honorable PM of India.",
-        "🏆 SwiftNLift Magazine 2020: Named among Top 10 Best Biotechnology Companies.",
-        "🏆 Startup City Magazine 2019: Best Company of the Year (Biotech Sector).",
-        "🏆 Time2Leap Awards 2019: Ministry of MSME Leading Single Specialty Services Company."
+        "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
+        "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
+        "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",
+        "🤝 Secured strategic licensing agreements for NexGen Salmonella Vaccine technologies at the Medical Innovations Patent Mitra: Innovators-to-Industry (I2I) Connect in New Delhi.",
+        "🏆 Our Founder & CEO, Mr. Syed S. Ahmed, was conferred the prestigious \"Outstanding Leader in Healthcare Technology\" award by Dr. Kiran Bedi at the Bharat 2.0 Conclave, recognizing his exceptional leadership and contributions to the healthcare sector.",
+        "⚡ In the esteemed presence of Shri Rajesh Kumar Pathak, Secretary, Technology Development Board, we inaugurated our dedicated power substation at GCMC, strengthening infrastructure for advanced biomanufacturing.",
+        "🔬 Our tuberculosis (TB) vaccine candidate has been selected by the TuBerculosis Vaccine Initiative (TBVI) for comparative evaluation in the mouse Mycobacterium tuberculosis aerosol infection model.",
+        "🏢 Backed by the Technology Development Board, our NexGen vaccine manufacturing facility is set to advance immunization, expand vaccine access, and strengthen healthcare systems.",
+        "🤝 We have partnered with IIT Bhubaneswar, the Institute of Life Sciences (ILS), and the National Research Development Corporation (NRDC) to develop, scale up, and commercialize a next-generation recombinant tuberculosis vaccine.",
+        "📈 TechInvention welcomed a strategic investment from Ashish Kacholia, reinforcing our long-term growth and innovation roadmap."
     ];
     const [noticeIndex, setNoticeIndex] = useState(0);
 
@@ -115,7 +114,7 @@ const Navbar = () => {
         <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isMenuOpen ? 'bg-white border-gray-200' : isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
             
             {!isMenuOpen && (
-                <div className="w-full bg-[#1955A6] text-white min-h-[36px] py-2 md:h-9 md:py-0 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
+                <div className="w-full bg-[#1955A6] text-white min-h-[28px] py-1.5 sm:py-2 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
                     <div className="relative flex items-center justify-center w-full">
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -124,7 +123,7 @@ const Navbar = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: -12, opacity: 0 }}
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                                className="flex items-center justify-center gap-2 font-semibold text-[11px] sm:text-xs tracking-wide text-center"
+                                className="flex items-center justify-center gap-1.5 sm:gap-2 font-semibold text-[10.5px] sm:text-[11px] md:text-[11.5px] lg:text-[12px] leading-snug tracking-wide text-center px-2 sm:px-6 md:px-12 max-w-7xl mx-auto"
                             >
                                 {announcements[noticeIndex]}
                             </motion.div>
