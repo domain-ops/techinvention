@@ -38,18 +38,77 @@ const ContactSection = () => {
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData({...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setError('');
+
+        if (name === 'name') {
+            const cleanVal = value.replace(/[^a-zA-Z\s]/g, '');
+            setFormData(prev => ({ ...prev, name: cleanVal }));
+        } else if (name === 'phone') {
+            const cleanVal = value.replace(/\D/g, '').slice(0, 10);
+            setFormData(prev => ({ ...prev, phone: cleanVal }));
+        } else {
+            setFormData(prev => ({ ...prev, [name]: value }));
+        }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitted(true);
-        setTimeout(() => {
-            setSubmitted(false);
+        setError('');
+
+        if (!formData.name.trim()) {
+            setError('Please enter your Full Name.');
+            return;
+        }
+
+        if (!/^[a-zA-Z\s]+$/.test(formData.name.trim())) {
+            setError('Full Name must contain only letters and spaces (no numbers).');
+            return;
+        }
+
+        if (!formData.email.trim()) {
+            setError('Please enter your Email Address.');
+            return;
+        }
+
+        if (formData.phone.length !== 10) {
+            setError('Contact number must be exactly 10 numeric digits.');
+            return;
+        }
+
+        if (!formData.enquiryType) {
+            setError('Please select an Enquiry Type.');
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok || !data.success) {
+                throw new Error(data.error || 'Failed to submit enquiry.');
+            }
+
+            setSubmitted(true);
             setFormData({ name: '', email: '', phone: '', enquiryType: '', organisation: '', message: '' });
-        }, 3000);
+        } catch (err: any) {
+            setError(err.message || 'An error occurred while sending your enquiry.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -108,7 +167,7 @@ const ContactSection = () => {
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900">Message Received!</h4>
                                         <p className="text-slate-500 text-[15px] font-medium max-w-sm">
-                                            Thank you for contacting us. Our team will get back to you shortly.
+                                            Thank you for contacting us. Our team at connect@techinvention.biz will get back to you shortly.
                                         </p>
                                     </motion.div>
                                 ) : (
@@ -123,7 +182,7 @@ const ContactSection = () => {
                                                     required
                                                     value={formData.name}
                                                     onChange={handleChange}
-                                                    placeholder="Your Name"
+                                                    placeholder="Your Name (Letters only)"
                                                     className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                                 />
                                             </div>
@@ -144,9 +203,24 @@ const ContactSection = () => {
                                         </div>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                            {/* Contact Phone Number */}
+                                            <div className="flex flex-col gap-1.5">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Contact Number *</label>
+                                                <input
+                                                    type="tel"
+                                                    name="phone"
+                                                    required
+                                                    maxLength={10}
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    placeholder="10-digit Mobile Number"
+                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
+                                                />
+                                            </div>
+
                                             {/* Organisation */}
                                             <div className="flex flex-col gap-1.5">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation</label>
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation (Optional)</label>
                                                 <input
                                                     type="text"
                                                     name="organisation"
@@ -156,33 +230,32 @@ const ContactSection = () => {
                                                     className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                                 />
                                             </div>
-
-                                            {/* Enquiry Type */}
-                                            <div className="flex flex-col gap-1.5">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
-                                                <select
-                                                    name="enquiryType"
-                                                    required
-                                                    value={formData.enquiryType}
-                                                    onChange={handleChange}
-                                                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
-                                                >
-                                                     <option value="" disabled>Select Enquiry Type</option>
-                                                     <option value="Strategy">Strategy</option>
-                                                     <option value="R&D">R&D</option>
-                                                     <option value="Licensing">Licensing</option>
-                                                     <option value="Advisory">Advisory</option>
-                                                     <option value="General Support">General Support</option>
-                                                </select>
-                                            </div>
                                         </div>
 
-                                        {/* Message */}
+                                        {/* Enquiry Type */}
                                         <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Message *</label>
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
+                                            <select
+                                                name="enquiryType"
+                                                required
+                                                value={formData.enquiryType}
+                                                onChange={handleChange}
+                                                className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
+                                            >
+                                                 <option value="" disabled>Select Enquiry Type</option>
+                                                 <option value="Strategy">Strategy</option>
+                                                 <option value="R&D">R&D</option>
+                                                 <option value="Licensing">Licensing</option>
+                                                 <option value="Advisory">Advisory</option>
+                                                 <option value="General Support">General Support</option>
+                                            </select>
+                                        </div>
+
+                                        {/* Message (Optional) */}
+                                        <div className="flex flex-col gap-1.5">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Message (Optional)</label>
                                             <textarea
                                                 name="message"
-                                                required
                                                 rows={4}
                                                 value={formData.message}
                                                 onChange={handleChange}
@@ -191,14 +264,19 @@ const ContactSection = () => {
                                             />
                                         </div>
 
+                                        {error && (
+                                            <p className="text-red-500 text-xs font-semibold">{error}</p>
+                                        )}
+
                                         {/* Submit */}
                                         <motion.button
                                             type="submit"
+                                            disabled={loading}
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
-                                            className="group w-full flex items-center justify-center gap-3 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white px-8 py-4 rounded-xl font-bold text-[13px] tracking-[0.1em] uppercase transition-all duration-300 shadow-md hover:shadow-lg"
+                                            className="group w-full flex items-center justify-center gap-3 bg-[#1955A6] hover:bg-[#1955A6]/90 disabled:opacity-50 text-white px-8 py-4 rounded-xl font-bold text-[13px] tracking-[0.1em] uppercase transition-all duration-300 shadow-md hover:shadow-lg"
                                         >
-                                            <span>Send Message</span>
+                                            <span>{loading ? 'Sending...' : 'Send Message'}</span>
                                             <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </motion.button>
                                     </form>

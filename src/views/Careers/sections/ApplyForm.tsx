@@ -35,11 +35,48 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
         }
     };
 
+    const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        // Accept only letters and spaces
+        const val = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+        setName(val);
+    };
+
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        // Accept only digits and limit to max 10 digits
+        const val = e.target.value.replace(/\D/g, '').slice(0, 10);
+        setPhone(val);
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         
-        if (!name || !email || !phone || !experience || !selectedFile) {
-            setError('Please fill in all required fields (*) and upload your resume.');
+        if (!name.trim()) {
+            setError('Please enter your Full Name.');
+            return;
+        }
+
+        if (!/^[a-zA-Z\s]+$/.test(name.trim())) {
+            setError('Full Name must contain only letters and spaces (no numbers).');
+            return;
+        }
+
+        if (!email.trim()) {
+            setError('Please enter your Email Address.');
+            return;
+        }
+
+        if (phone.length !== 10) {
+            setError('Contact number must be exactly 10 numeric digits.');
+            return;
+        }
+
+        if (!experience.trim()) {
+            setError('Please fill in your years of experience.');
+            return;
+        }
+
+        if (!selectedFile) {
+            setError('Please upload your resume.');
             return;
         }
 
@@ -115,14 +152,14 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                     />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {/* Name */}
+                                     {/* Name */}
                                     <div className="flex flex-col gap-2">
                                         <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
                                         <input 
                                             type="text" 
                                             value={name} 
-                                            onChange={e => setName(e.target.value)}
-                                            placeholder="Your Name" 
+                                            onChange={handleNameChange}
+                                            placeholder="Your Name (Letters only)" 
                                             className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>
@@ -147,8 +184,9 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                         <input 
                                             type="tel" 
                                             value={phone} 
-                                            onChange={e => setPhone(e.target.value)}
-                                            placeholder="+91 98765 43210" 
+                                            onChange={handlePhoneChange}
+                                            maxLength={10}
+                                            placeholder="10-digit Phone Number" 
                                             className="w-full bg-slate-50 border border-slate-200/80 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-brand-primary transition-colors text-black placeholder:text-slate-400"
                                         />
                                     </div>

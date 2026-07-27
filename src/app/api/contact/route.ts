@@ -3,33 +3,32 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
     try {
-        const formData = await req.formData();
+        const body = await req.json();
 
-        const jobTitle = (formData.get('jobTitle') as string) || 'General Application';
-        const name = formData.get('name') as string;
-        const email = formData.get('email') as string;
-        const phone = formData.get('phone') as string;
-        const experience = formData.get('experience') as string;
-        const currentCompany = (formData.get('currentCompany') as string) || 'N/A';
-        const message = (formData.get('message') as string) || 'No additional message provided.';
-        const resumeFile = formData.get('resume') as File | null;
+        const name = (body.name || '').trim();
+        const email = (body.email || '').trim();
+        const phone = (body.phone || '').trim();
+        const organisation = (body.organisation || 'N/A').trim();
+        const enquiryType = (body.enquiryType || 'General Support').trim();
+        const message = (body.message || 'No additional message provided.').trim();
 
-        if (!name || !email || !phone || !experience) {
+        // Required field validation
+        if (!name || !email || !phone || !enquiryType) {
             return NextResponse.json(
-                { success: false, error: 'Missing required fields (name, email, phone, experience).' },
+                { success: false, error: 'Missing required fields (Name, Email, Contact Number, Enquiry Type).' },
                 { status: 400 }
             );
         }
 
         // Validate Full Name: Accept letters and spaces only
-        if (!/^[a-zA-Z\s]+$/.test(name.trim())) {
+        if (!/^[a-zA-Z\s]+$/.test(name)) {
             return NextResponse.json(
                 { success: false, error: 'Full Name must contain only letters and spaces.' },
                 { status: 400 }
             );
         }
 
-        // Validate Phone Number: Accept exactly 10 numeric digits
+        // Validate Contact Number: Accept exactly 10 numeric digits
         const cleanPhone = phone.replace(/\D/g, '');
         if (cleanPhone.length !== 10) {
             return NextResponse.json(
@@ -44,8 +43,8 @@ export async function POST(req: NextRequest) {
         const secure = process.env.SMTP_SECURE !== 'false';
         const user = process.env.SMTP_USER || 'clientleadbackup@gmail.com';
         const pass = process.env.SMTP_PASS || '';
-        const from = process.env.SMTP_FROM || `"TechInvention Careers" <${user}>`;
-        const to = process.env.SMTP_CAREERS_TO || process.env.SMTP_TO || 'hr@techinvention.biz, connect@techinvention.biz';
+        const from = process.env.SMTP_FROM || `"TechInvention Support" <${user}>`;
+        const to = process.env.SMTP_CONTACT_TO || process.env.SMTP_TO || 'connect@techinvention.biz';
 
         const transporter = nodemailer.createTransport({
             host,
@@ -56,17 +55,6 @@ export async function POST(req: NextRequest) {
                 pass,
             },
         });
-
-        // Prepare Attachment
-        const attachments = [];
-        if (resumeFile && typeof resumeFile.arrayBuffer === 'function') {
-            const buffer = Buffer.from(await resumeFile.arrayBuffer());
-            attachments.push({
-                filename: resumeFile.name || 'resume.pdf',
-                content: buffer,
-                contentType: resumeFile.type || 'application/octet-stream',
-            });
-        }
 
         // Build Email HTML Content
         const htmlContent = `
@@ -86,20 +74,16 @@ export async function POST(req: NextRequest) {
                 .label { font-size: 11px; text-transform: uppercase; font-weight: 700; color: #64748b; letter-spacing: 0.5px; margin-bottom: 4px; }
                 .value { font-size: 15px; font-weight: 600; color: #0f172a; margin: 0; }
                 .message-box { background: #f8fafc; border-left: 4px solid #1955A6; padding: 12px 16px; font-size: 14px; color: #334155; border-radius: 0 6px 6px 0; }
-                .footer { background: #f1f5f9; padding: 16px 30px; text-size-adjust: 100%; font-size: 12px; color: #64748b; text-align: center; }
+                .footer { background: #f1f5f9; padding: 16px 30px; font-size: 12px; color: #64748b; text-align: center; }
             </style>
         </head>
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>New Job Application Lead</h1>
-                    <p>Position Applied: <strong>${jobTitle}</strong></p>
+                    <h1>New Website Contact Enquiry</h1>
+                    <p>Enquiry Type: <strong>${enquiryType}</strong></p>
                 </div>
                 <div class="content">
-                    <div class="field-group">
-                        <div class="label">Position Title</div>
-                        <div class="value">${jobTitle}</div>
-                    </div>
                     <div class="field-group">
                         <div class="label">Full Name</div>
                         <div class="value">${name}</div>
@@ -110,28 +94,23 @@ export async function POST(req: NextRequest) {
                     </div>
                     <div class="field-group">
                         <div class="label">Contact Phone</div>
-                        <div class="value">${phone}</div>
+                        <div class="value">${cleanPhone}</div>
                     </div>
                     <div class="field-group">
-                        <div class="label">Years of Experience</div>
-                        <div class="value">${experience}</div>
+                        <div class="label">Organisation</div>
+                        <div class="value">${organisation}</div>
                     </div>
                     <div class="field-group">
-                        <div class="label">Current Employer / Organization</div>
-                        <div class="value">${currentCompany}</div>
+                        <div class="label">Enquiry Type</div>
+                        <div class="value">${enquiryType}</div>
                     </div>
                     <div class="field-group">
-                        <div class="label">Cover Letter / Note</div>
+                        <div class="label">Message</div>
                         <div class="message-box">${message.replace(/\n/g, '<br/>')}</div>
                     </div>
-                    ${attachments.length > 0 ? `
-                    <div class="field-group">
-                        <div class="label">Attached Resume</div>
-                        <div class="value">📎 ${attachments[0].filename}</div>
-                    </div>` : ''}
                 </div>
                 <div class="footer">
-                    Sent automatically from TechInvention Careers Form to <strong>${to}</strong>
+                    Sent automatically from TechInvention Contact Form to <strong>${to}</strong>
                 </div>
             </div>
         </body>
@@ -141,10 +120,9 @@ export async function POST(req: NextRequest) {
         const mailOptions = {
             from,
             to,
-            subject: `[Career Lead] ${name} - Application for ${jobTitle}`,
-            text: `New Application Received:\n\nPosition: ${jobTitle}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nExperience: ${experience}\nCurrent Company: ${currentCompany}\nMessage: ${message}`,
+            subject: `[Contact Lead] ${name} - ${enquiryType}`,
+            text: `New Contact Enquiry Received:\n\nName: ${name}\nEmail: ${email}\nPhone: ${cleanPhone}\nOrganisation: ${organisation}\nEnquiry Type: ${enquiryType}\nMessage: ${message}`,
             html: htmlContent,
-            attachments,
         };
 
         // Send Email
@@ -152,14 +130,14 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json({
             success: true,
-            message: 'Application lead successfully sent to HR.',
+            message: 'Your enquiry has been successfully submitted to connect@techinvention.biz.',
         });
     } catch (err: any) {
-        console.error('Error handling careers application email:', err);
+        console.error('Error handling contact form email:', err);
         return NextResponse.json(
             {
                 success: false,
-                error: err?.message || 'Failed to submit career application. Please try again later.',
+                error: err?.message || 'Failed to submit enquiry. Please try again later.',
             },
             { status: 500 }
         );
