@@ -42,10 +42,20 @@ export async function POST(req: NextRequest) {
         const host = process.env.SMTP_HOST || 'smtp.gmail.com';
         const port = parseInt(process.env.SMTP_PORT || '465', 10);
         const secure = process.env.SMTP_SECURE !== 'false';
-        const user = process.env.SMTP_USER || 'clientleadbackup@gmail.com';
+        const user = process.env.SMTP_USER || 'domain@techinvention.biz';
         const pass = process.env.SMTP_PASS || '';
         const from = process.env.SMTP_FROM || `"TechInvention Careers" <${user}>`;
         const to = process.env.SMTP_CAREERS_TO || process.env.SMTP_TO || 'hr@techinvention.biz, connect@techinvention.biz, shweta.k@theimpulsedigital.com';
+
+        if (!pass) {
+            return NextResponse.json(
+                {
+                    success: false,
+                    error: 'SMTP credentials missing on server. Please set SMTP_PASS environment variable in Hostinger.',
+                },
+                { status: 500 }
+            );
+        }
 
         const transporter = nodemailer.createTransport({
             host,
