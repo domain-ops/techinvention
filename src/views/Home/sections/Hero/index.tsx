@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 import { useLanguage } from '../../../../context/LanguageContext';
 import { MagneticText } from '../../../../components/ui/morphing-cursor';
@@ -100,11 +101,13 @@ const Hero = () => {
                         transition={{ duration: 1.5, ease: "easeInOut" }}
                         className="absolute inset-0 w-full h-full"
                     >
-                        <img src={bgImages[activeWordIndex % bgImages.length]}
+                        <Image 
+                            src={bgImages[activeWordIndex % bgImages.length]}
                             alt="Background"
-                            className="w-full h-full object-cover object-top opacity-100"
-                            decoding="async"
-                            fetchPriority="high"
+                            fill
+                            sizes="100vw"
+                            priority={activeWordIndex === 0}
+                            className="object-cover object-top opacity-100"
                         />
                     </motion.div>
                 </AnimatePresence>

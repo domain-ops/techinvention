@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '../../../../context/LanguageContext';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
 import './product-slider.css';
@@ -191,10 +192,12 @@ export default function ProductSlider() {
                         <div
                             className={`carousel-image-frame ${isTransitioning ? 'transitioning' : 'visible'}`}
                         >
-                            <img loading="lazy"
+                            <Image
                                 src={imageMap[currentSlide.imageUrl] || currentSlide.imageUrl}
                                 alt={currentSlide.title}
-                                className="carousel-image"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="carousel-image object-cover"
                             />
                             <div
                                 className="carousel-image-overlay"

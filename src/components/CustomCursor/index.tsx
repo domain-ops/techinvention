@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 import dnaLogo from '../../assets/images/TechInvention Logo (DNA).png';
 
 const CustomCursor: React.FC = () => {
-    const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
-    const [isHovering, setIsHovering] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
+    const cursorRef = useRef<HTMLDivElement>(null);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
@@ -16,31 +13,41 @@ const CustomCursor: React.FC = () => {
         }
 
         const updateMousePosition = (e: MouseEvent) => {
-            if (!isVisible) setIsVisible(true);
-            setMousePosition({ x: e.clientX, y: e.clientY });
+            if (cursorRef.current) {
+                cursorRef.current.style.transform = `translate3d(${e.clientX - 20}px, ${e.clientY - 28}px, 0)`;
+                // ensure it is visible
+                if (cursorRef.current.style.opacity === '0' || cursorRef.current.style.opacity === '') {
+                    cursorRef.current.style.opacity = '1';
+                }
+            }
         };
         
         const handleMouseOver = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            if (
-                target.tagName.toLowerCase() === 'a' || 
-                target.tagName.toLowerCase() === 'button' ||
-                target.closest('a') || 
-                target.closest('button') ||
-                window.getComputedStyle(target).cursor === 'pointer'
-            ) {
-                setIsHovering(true);
-            } else {
-                setIsHovering(false);
+            if (target) {
+                const shouldHide = (
+                    target.tagName.toLowerCase() === 'a' || 
+                    target.tagName.toLowerCase() === 'button' ||
+                    target.closest('a') || 
+                    target.closest('button') ||
+                    window.getComputedStyle(target).cursor === 'pointer'
+                );
+                if (cursorRef.current) {
+                    cursorRef.current.style.display = shouldHide ? 'none' : 'block';
+                }
             }
         };
 
         const handleMouseLeave = () => {
-            setIsVisible(false);
+            if (cursorRef.current) {
+                cursorRef.current.style.opacity = '0';
+            }
         };
 
         const handleMouseEnter = () => {
-            setIsVisible(true);
+            if (cursorRef.current) {
+                cursorRef.current.style.opacity = '1';
+            }
         };
 
         window.addEventListener('mousemove', updateMousePosition);
@@ -54,25 +61,18 @@ const CustomCursor: React.FC = () => {
             document.body.removeEventListener('mouseleave', handleMouseLeave);
             document.body.removeEventListener('mouseenter', handleMouseEnter);
         };
-    }, [isVisible]);
+    }, []);
 
     if (isTouchDevice) return null;
 
     return (
-        <motion.div
-            className="fixed top-0 left-0 z-[99999] pointer-events-none select-none w-10 h-14"
+        <div
+            ref={cursorRef}
+            className="fixed top-0 left-0 z-[99999] pointer-events-none select-none w-10 h-14 transition-opacity duration-300"
             style={{
-                opacity: (isVisible && !isHovering) ? 1 : 0
-            }}
-            animate={{
-                x: mousePosition.x - 20,
-                y: mousePosition.y - 28,
-                scale: 1
-            }}
-            transition={{
-                type: "tween",
-                ease: "linear",
-                duration: 0
+                opacity: 0,
+                willChange: 'transform',
+                transform: 'translate3d(-100px, -100px, 0)'
             }}
         >
             <img 
@@ -80,7 +80,7 @@ const CustomCursor: React.FC = () => {
                 alt="Cursor" 
                 className="w-full h-full object-contain"
             />
-        </motion.div>
+        </div>
     );
 };
 

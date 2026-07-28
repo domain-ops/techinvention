@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { useLanguage } from '../../../../context/LanguageContext';
 
@@ -48,14 +49,11 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                     onMouseEnter={() => setExpandedIndex(index)}
                 >
                     {/* Background Image */}
-                    <motion.img
-                        src={slide.image}
-                        alt={slide.title}
-                        className="absolute top-0 left-0 h-full w-[115%] max-w-none object-cover z-0"
+                    <motion.div
+                        className="absolute top-0 left-0 h-full w-[115%] z-0"
                         initial={false}
                         animate={{
-                            x: expandedIndex === index ? '-10%' : '0%',
-                            filter: expandedIndex === index ? 'blur(2px)' : 'blur(0px)'
+                            x: expandedIndex === index ? '-10%' : '0%'
                         }}
                         transition={{
                             x: { 
@@ -63,10 +61,18 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                 ease: "easeInOut", 
                                 repeat: expandedIndex === index ? Infinity : 0, 
                                 repeatType: "reverse" 
-                            },
-                            filter: { duration: 1.2 }
+                            }
                         }}
-                    />
+                    >
+                        <Image
+                            src={slide.image}
+                            alt={slide.title}
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 25vw"
+                            className="object-cover"
+                            priority={index === 0}
+                        />
+                    </motion.div>
 
                     {/* Content Overlay (The "Blue Color") */}
                     <motion.div

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
 
 const basePath = process.env.BASE_PATH || '';
@@ -145,12 +146,13 @@ export default function Publications() {
                                         className="w-full flex-1 flex flex-col bg-white rounded-none overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer p-4"
                                     >
                                         {/* Image wrapper: smaller size, completely uncropped! */}
-                                        <div className="w-full overflow-hidden mb-4 flex items-center justify-center h-[200px] shrink-0">
-                                            <img 
-                                                loading="lazy" 
-                                                src={`${basePath}${item.image}`} 
+                                        <div className="w-full overflow-hidden mb-4 flex items-center justify-center h-[200px] shrink-0 relative">
+                                            <Image 
+                                                src={item.image} 
                                                 alt={item.name} 
-                                                className="w-full h-full object-contain"
+                                                fill
+                                                sizes="260px"
+                                                className="object-contain"
                                             />
                                         </div>
 
