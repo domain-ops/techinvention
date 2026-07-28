@@ -148,7 +148,7 @@ export default function Publications() {
                                         {/* Image wrapper: smaller size, completely uncropped! */}
                                         <div className="w-full overflow-hidden mb-4 flex items-center justify-center h-[200px] shrink-0 relative">
                                             <Image 
-                                                src={item.image} 
+                                                src={`${basePath}${item.image}`} 
                                                 alt={item.name} 
                                                 fill
                                                 sizes="260px"

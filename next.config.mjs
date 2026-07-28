@@ -8,6 +8,10 @@ const nextConfig = {
   // Disable next/image static import handling to prevent conflicts with Vite-style imports
   images: {
     disableStaticImages: true,
+    unoptimized: true,
+  },
+  env: {
+    BASE_PATH: process.env.BASE_PATH || '',
   },
   webpack: (config) => {
     // Add rule to handle image imports like Vite does (returns string URL)
@@ -38,6 +42,12 @@ const nextConfig = {
         {
           source: '/',
           destination: '/techinvention/',
+          basePath: false,
+          permanent: false,
+        },
+        {
+          source: '/favicon.ico',
+          destination: '/techinvention/favicon.ico',
           basePath: false,
           permanent: false,
         },

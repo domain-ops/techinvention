@@ -5,6 +5,18 @@ import { useLanguage } from '../../../context/LanguageContext';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+const basePath = process.env.BASE_PATH || '';
+
+const resolveImage = (img: any) => {
+    if (typeof img === 'string') {
+        if (img.startsWith('/') && !img.startsWith(basePath)) {
+            return `${basePath}${img}`;
+        }
+        return img;
+    }
+    return img?.src || '';
+};
+
 // --- IMAGE REGISTRY ---
 import bradstreet from '../../../assets/images/certifications/Bradstreet.png';
 import cert2 from '../../../assets/images/certifications/Cert_2-702x1024.jpeg';
@@ -95,7 +107,7 @@ const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
         {/* Image Container */}
         <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
             <img loading="lazy" 
-                src={typeof cert.image === 'string' ? cert.image : (cert.image as any).src} 
+                src={resolveImage(cert.image)} 
                 alt={cert.name}
                 className="max-w-full max-h-full object-contain drop-shadow-2xl mix-blend-multiply"
             />
