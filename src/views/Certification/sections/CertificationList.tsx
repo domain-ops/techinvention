@@ -18,6 +18,7 @@ const resolveImage = (img: any) => {
 };
 
 // --- IMAGE REGISTRY ---
+import drugFreePledgeImg from '../../../assets/images/certifications/Certificate-of-pledge.png';
 import bradstreet from '../../../assets/images/certifications/Bradstreet.png';
 import cert2 from '../../../assets/images/certifications/Cert_2-702x1024.jpeg';
 import cert3 from '../../../assets/images/certifications/Cert_3-713x1024.jpeg';
@@ -32,7 +33,7 @@ import iso from '../../../assets/images/certifications/ISO-655x1024.jpg';
 const CERT_CONFIG = [
     {
         id: 'drugFreePledge',
-        image: '/Certificate-of-pledge.png',
+        image: drugFreePledgeImg,
         name: 'Certificate of Pledge - Drug-Free Mumbai Initiative',
         year: '2026',
         info: 'TechInvention Lifecare Limited has formally pledged support to the Government of Maharashtra\'s Drug-Free Mumbai Initiative, affirming our commitment to leading a healthy, drug-free life and promoting awareness and prevention within the community.'
