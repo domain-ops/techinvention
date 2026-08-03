@@ -19,6 +19,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const announcements = [
+        "🤝 TechInvention Lifecare Pledges Support to the Government of Maharashtra's Drug-Free Mumbai Initiative.",
         "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
         "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
         "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",

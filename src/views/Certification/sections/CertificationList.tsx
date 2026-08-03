@@ -31,6 +31,13 @@ import iso from '../../../assets/images/certifications/ISO-655x1024.jpg';
 
 const CERT_CONFIG = [
     {
+        id: 'drugFreePledge',
+        image: '/Certificate-of-pledge.png',
+        name: 'Certificate of Pledge - Drug-Free Mumbai Initiative',
+        year: '2026',
+        info: 'TechInvention Lifecare Limited has formally pledged support to the Government of Maharashtra\'s Drug-Free Mumbai Initiative, affirming our commitment to leading a healthy, drug-free life and promoting awareness and prevention within the community.'
+    },
+    {
         id: 'dnb',
         image: bradstreet,
         name: 'Rated as a Lowest Risk SME by Dun & Bradstreet',

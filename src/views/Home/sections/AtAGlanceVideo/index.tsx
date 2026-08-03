@@ -26,7 +26,7 @@ const AtAGlanceVideo = () => {
                         src={techInventionVideo}
                         controls
                         playsInline
-                        preload="metadata"
+                        preload="none"
                     />
                 </ScrollReveal>
             </div>

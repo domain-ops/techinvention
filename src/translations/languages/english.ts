@@ -697,6 +697,11 @@ export const english = {
         "certifications": "Certifications",
         "desc": "We adhere to the highest global standards and regulatory requirements. Our certifications reflect our unwavering commitment to quality, safety, and excellence in biotech innovation.",
         "list": {
+            "drugFreePledge": {
+                "name": "Certificate of Pledge - Drug-Free Mumbai Initiative",
+                "year": "2026",
+                "info": "TechInvention Lifecare Limited has formally pledged support to the Government of Maharashtra's Drug-Free Mumbai Initiative."
+            },
             "dnb": {
                 "name": "Rated as a Lowest Risk SME by Dun & Bradstreet",
                 "year": "2025",
