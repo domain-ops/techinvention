@@ -60,7 +60,7 @@ const VisionMissionValues = () => {
                             <div className="relative z-10 pl-6 md:pl-10 border-l-4 border-[#5C7625]">
                                 <span className="block text-xs font-bold tracking-widest text-[#5C7625] uppercase mb-3">Our Mission</span>
                                 <h3 className="text-2xl md:text-3xl lg:text-[32px] font-medium leading-[1.4] text-slate-800">
-                                    "Access to Essential Vaccines and Novel Biologics Should Not Only be the Privilege of Just the Affording Few."
+                                    "Access to Priority Vaccines Should Not Only be the Privilege of Just the Affording Few."
                                 </h3>
                             </div>
                         </div>

@@ -179,7 +179,7 @@ export const english = {
             "title": "Our Mission",
             "headline": "Bridging the {equityGap} in Biotech",
             "equityGap": "Equity Gap",
-            "desc": "Access to Essential Vaccines and Novel Biologics Should Not Only be the Privilege of Just the Affording Few."
+            "desc": "Access to Priority Vaccines Should Not Only be the Privilege of Just the Affording Few."
         },
         "values": {
             "title": "Our Values",
@@ -1193,6 +1193,12 @@ export const english = {
                 "role": "Deputy Manager - GBD",
                 "experience": "5+ Years",
                 "text": "Completing over six years at TechInvention has been an incredibly rewarding journey. It has been inspiring to witness the company's transformation from a startup into a growing MSME with a strong global presence. Throughout this journey, I have been given the opportunity to work on diverse international business development and strategic consulting projects, collaborate with global stakeholders, and continuously expand my knowledge in the life sciences sector. The trust, support, and learning opportunities provided by the leadership and my colleagues have played a significant role in my professional growth. I look forward to being part of TechInvention's continued success and innovation."
+            },
+            {
+                "name": "Kulsum",
+                "role": "",
+                "experience": "5+ Years",
+                "text": "I’m really grateful that I got the opportunity to start my career here as a fresher. In these five years, I’ve learned so much and grown both personally and professionally. The friendly and supportive work culture has made this journey really special. I got the opportunity to work across different R&D departments, learn new techniques and technologies, and be part of various certifications and audits. Looking back, it feels like I’ve come a long way from where I started. I’m thankful to everyone who has supported, guided, and helped me grow throughout this journey."
             }
         ],
         "openPositions": "Explore opportunities across functions. TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."
