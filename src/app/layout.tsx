@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang="en" className={montserrat.variable}>
       <head>
         <link rel="preconnect" href="https://impulsedigital.co.in" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://impulsedigital.co.in" />
       </head>
       <body className="bg-brand-background text-brand-content selection:bg-brand-primary/10 selection:text-brand-primary font-sans">
         <ClientLayout>{children}</ClientLayout>

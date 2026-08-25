@@ -1,10 +1,13 @@
+"use client";
 import React from 'react';
+import dynamic from 'next/dynamic';
 import ConsultingHero from './ConsultingHero';
-import ServiceGrid from './ServiceGrid';
-import ClientsSection from './ClientsSection';
-import ClientFeedback from './ClientFeedback';
-import CaseStudy from '../../Home/sections/CaseStudy';
-import CTASection from '../../../components/CTASection';
+
+// Dynamically import below the fold components
+const ServiceGrid = dynamic(() => import('./ServiceGrid'));
+const ClientsSection = dynamic(() => import('./ClientsSection'));
+const ClientFeedback = dynamic(() => import('./ClientFeedback'));
+const CTASection = dynamic(() => import('../../../components/CTASection'));
 
 const ConsultingContent = () => {
     return (

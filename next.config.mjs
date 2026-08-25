@@ -1,10 +1,40 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   output: process.env.STATIC_EXPORT === 'true' ? 'export' : undefined,
   basePath: process.env.BASE_PATH || '',
   assetPrefix: process.env.BASE_PATH || undefined,
   trailingSlash: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+  },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      '@tabler/icons-react',
+      'framer-motion',
+      'gsap',
+      '@studio-freight/lenis',
+      'clsx',
+      'tailwind-merge',
+    ],
+  },
+  ...(process.env.STATIC_EXPORT !== 'true' ? {
+    async headers() {
+      return [
+        {
+          source: '/:all*(svg|jpg|png|webp|avif|woff2|css|js)',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=31536000, immutable',
+            },
+          ],
+        },
+      ];
+    },
+  } : {}),
   // Disable next/image static import handling to prevent conflicts with Vite-style imports
   images: {
     disableStaticImages: true,

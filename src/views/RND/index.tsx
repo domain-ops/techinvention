@@ -1,13 +1,15 @@
 "use client";
 import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import LandingHero from './sections/LandingHero';
-import FacilityFeatures from './sections/FacilityFeatures';
-import AboutVideo from '../About/sections/AboutVideo';
-import ProcessFlowchart from './sections/ProcessFlowchart';
-import InfectiousDiseasesPipeline from './sections/InfectiousDiseasesPipeline';
-import Grants from './sections/Grants';
-import Collaborations from './sections/Collaborations';
-import CTASection from '../../components/CTASection';
+
+// Dynamically import below the fold components
+const FacilityFeatures = dynamic(() => import('./sections/FacilityFeatures'));
+const ProcessFlowchart = dynamic(() => import('./sections/ProcessFlowchart'));
+const InfectiousDiseasesPipeline = dynamic(() => import('./sections/InfectiousDiseasesPipeline'));
+const Grants = dynamic(() => import('./sections/Grants'));
+const Collaborations = dynamic(() => import('./sections/Collaborations'));
+const CTASection = dynamic(() => import('../../components/CTASection'));
 
 const RNDPage = () => {
     

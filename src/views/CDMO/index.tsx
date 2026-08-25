@@ -1,14 +1,17 @@
 "use client";
 import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import LandingHero from './sections/LandingHero';
-import GCMCFeature from './sections/GCMCFeature';
-import GCMCBridge from './sections/GCMCBridge';
-import HorizonGCMC from '../Home/sections/HorizonGCMC';
-import WhyPartner from './sections/WhyPartner';
-import Capabilities from './sections/Capabilities';
-import DigitalExcellence from './sections/DigitalExcellence';
-import Sustainability from './sections/Sustainability';
-import CTASection from '../../components/CTASection';
+
+// Dynamically import below the fold components
+const GCMCFeature = dynamic(() => import('./sections/GCMCFeature'));
+const GCMCBridge = dynamic(() => import('./sections/GCMCBridge'));
+const HorizonGCMC = dynamic(() => import('../Home/sections/HorizonGCMC'));
+const WhyPartner = dynamic(() => import('./sections/WhyPartner'));
+const Capabilities = dynamic(() => import('./sections/Capabilities'));
+const DigitalExcellence = dynamic(() => import('./sections/DigitalExcellence'));
+const Sustainability = dynamic(() => import('./sections/Sustainability'));
+const CTASection = dynamic(() => import('../../components/CTASection'));
 
 import { useLanguage } from '../../context/LanguageContext';
 

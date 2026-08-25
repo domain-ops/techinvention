@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useEffect } from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { SplitTitle } from '../../../components/Common/SplitTitle';

@@ -16,8 +16,11 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const lenisRef = React.useRef<Lenis | null>(null);
+    const [isDesktop, setIsDesktop] = React.useState(false);
 
     useEffect(() => {
+        setIsDesktop(typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches);
+        
         if (typeof window !== 'undefined') {
             window.history.scrollRestoration = 'manual';
         }
@@ -62,7 +65,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
     return (
         <LanguageProvider>
-            <CustomCursor />
+            {isDesktop && <CustomCursor />}
             <Navbar />
             <div id="content-smooth" className="relative z-10 pt-9">
                 {children}

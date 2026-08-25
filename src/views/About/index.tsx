@@ -1,15 +1,14 @@
 "use client";
+import React from 'react';
+import dynamic from 'next/dynamic';
 import AboutHeader from './sections/AboutBanner';
-import CompanyStory from './sections/CompanyStory';
-import BoardOfDirectors from './sections/BoardOfDirectors';
-import OfficeEnvironment from './sections/OfficeEnvironment';
-import VisionMissionValues from './sections/VisionMissionValues';
-import TeamSection from './sections/TeamSection';
-import ScientificAdvisoryBoard from './sections/ScientificAdvisoryBoard';
-import Responsibility from './sections/Responsibility';
-import Spotlight from './sections/Spotlight';
-import CTASection from '../../components/CTASection';
 import abtBannerImg from '../../../public/abt-banner.jpeg';
+
+// Dynamically import below the fold components
+const CompanyStory = dynamic(() => import('./sections/CompanyStory'));
+const BoardOfDirectors = dynamic(() => import('./sections/BoardOfDirectors'));
+const VisionMissionValues = dynamic(() => import('./sections/VisionMissionValues'));
+const CTASection = dynamic(() => import('../../components/CTASection'));
 
 import { useLanguage } from '../../context/LanguageContext';
 
