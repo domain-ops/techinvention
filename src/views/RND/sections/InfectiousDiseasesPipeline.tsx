@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const SyringeIcon = ({ color = "currentColor", className = "" }) => (
     <svg 
@@ -34,31 +35,42 @@ const pipelineData = [
 ];
 
 export default function InfectiousDiseasesPipeline() {
+    const { t, isRTL } = useLanguage();
+
+    const rawPipelineNames = t('rnd.pipelineItems') as string[];
+    const activePipelineData = pipelineData.map((item, idx) => ({
+        ...item,
+        name: (Array.isArray(rawPipelineNames) && rawPipelineNames[idx]) ? rawPipelineNames[idx] : item.name
+    }));
+
     return (
         <section className="py-20 bg-white font-sans">
             <div className="max-w-[1200px] mx-auto px-6">
                 
-                <ScrollReveal direction="up">
-                    <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-12 text-center md:text-left">
-                        <SplitTitle title="Infectious Diseases and AMR-Associated Pathogen Portfolio" />
-                    </h2>
-                </ScrollReveal>
+                {/* Header */}
+                <div className="mb-14">
+                    <ScrollReveal direction="up">
+                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-black mb-3">
+                            <SplitTitle title={t('rnd.pipelineTitle') || "Infectious Diseases Pipeline"} />
+                        </h2>
+                    </ScrollReveal>
+                </div>
 
-                {/* DESKTOP LAYOUT (Horizontal Timeline) */}
-                <div className="hidden lg:block w-full pb-8">
-                    <div className="w-full">
-                        {/* Table Header (Phases) */}
-                        <div className="grid grid-cols-[300px_1fr] gap-0 text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
-                            <div>{/* Empty for row label */}</div>
-                            
-                            {/* Phase Columns Container */}
-                            <div className="grid grid-cols-4 w-full">
-                                <div className="text-center font-bold">Discovery</div>
-                                <div className="text-center font-bold">Proof-of-Concept</div>
-                                <div className="text-center font-bold">Pre-clinical</div>
-                                <div className="text-center font-bold">Phase 1/2</div>
-                            </div>
+                {/* Progress Bar Flow Chart Container */}
+                <div className="w-full hidden md:block">
+                    
+                    {/* Table Header (Phases) */}
+                    <div className="grid grid-cols-[300px_1fr] gap-0 text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
+                        <div>{/* Empty for row label */}</div>
+                        
+                        {/* Phase Columns Container */}
+                        <div className={`grid grid-cols-4 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-0 pl-0'}`}>
+                            <div className="text-center font-bold">{t('rnd.discovery') || "Discovery"}</div>
+                            <div className="text-center font-bold">{t('rnd.poc') || "Proof-of-Concept"}</div>
+                            <div className="text-center font-bold">{t('rnd.preclinical') || "Pre-clinical"}</div>
+                            <div className="text-center font-bold">{t('rnd.phase12') || "Phase 1/2"}</div>
                         </div>
+                    </div>
 
                         {/* Table Rows Container with vertical guides */}
                         <div className="relative mt-8">
@@ -66,7 +78,7 @@ export default function InfectiousDiseasesPipeline() {
                             {/* Vertical Dotted Guide Lines (Background Layer) */}
                             <div className="absolute inset-0 grid grid-cols-[300px_1fr] gap-0 pointer-events-none pb-8 h-full z-0">
                                 <div></div>
-                                <div className="grid grid-cols-4 w-full h-full">
+                                <div className={`grid grid-cols-4 w-full h-full ${isRTL ? 'pl-12 pr-0' : 'pr-0 pl-0'}`}>
                                     <div className="border-l border-dotted border-slate-300"></div>
                                     <div className="border-l border-dotted border-slate-300"></div>
                                     <div className="border-l border-dotted border-slate-300"></div>
@@ -76,7 +88,7 @@ export default function InfectiousDiseasesPipeline() {
 
                             {/* Data Rows Container */}
                             <div className="relative z-10 flex flex-col gap-0 w-full border-b border-slate-100">
-                                {pipelineData.map((item, idx) => {
+                                {activePipelineData.map((item, idx) => {
                                     const lineWidthPercent = `${item.progress}%`;
                                     const isAlternate = idx % 2 !== 0;
 
@@ -85,13 +97,13 @@ export default function InfectiousDiseasesPipeline() {
                                             key={idx} 
                                             className={`grid grid-cols-[300px_1fr] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
                                         >
-                                            {/* Left Text Label */}
-                                            <div className="pr-6 flex items-center justify-start text-left text-[15px] font-medium text-black py-4 border-r border-transparent">
+                                            {/* Text Label */}
+                                            <div className={`px-6 flex items-center ${isRTL ? 'justify-start text-left' : 'justify-start text-left'} text-[15px] font-medium text-black py-4 border-r border-transparent`}>
                                                 {item.name}
                                             </div>
 
                                             {/* Tracking Line Area */}
-                                            <div className="relative flex items-center py-6 w-full pl-0 pointer-events-none">
+                                            <div className={`relative flex items-center py-6 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-0 pl-0'} pointer-events-none`}>
                                                 <div className="relative w-full h-24 flex items-center">
                                                     
                                                     {/* Central tracking line */}
@@ -111,7 +123,13 @@ export default function InfectiousDiseasesPipeline() {
                                                         viewport={{ once: true }}
                                                         transition={{ duration: 0.5, delay: 1.6 }}
                                                         className="absolute z-20"
-                                                        style={{ left: lineWidthPercent, transform: 'translateX(-50%)' }}
+                                                        style={isRTL ? { 
+                                                            right: lineWidthPercent, 
+                                                            transform: 'translateX(50%) scaleX(-1)' 
+                                                        } : { 
+                                                            left: lineWidthPercent, 
+                                                            transform: 'translateX(-50%)' 
+                                                        }}
                                                     >
                                                         <div className="bg-white rounded-full drop-shadow-sm p-1">
                                                             <SyringeIcon className="w-6 h-6" color={item.color} />
@@ -125,11 +143,10 @@ export default function InfectiousDiseasesPipeline() {
                             </div>
                         </div>
                     </div>
-                </div>
 
                 {/* MOBILE / TABLET LAYOUT (Stacked Cards) */}
                 <div className="flex lg:hidden flex-col gap-6 mt-4">
-                    {pipelineData.map((item, idx) => {
+                    {activePipelineData.map((item, idx) => {
                         const lineWidthPercent = `${item.progress}%`;
                         return (
                             <motion.div 
@@ -154,9 +171,9 @@ export default function InfectiousDiseasesPipeline() {
                                 {/* Tracking Bar */}
                                 <div className="w-full relative mt-2 mb-2">
                                     <div className="flex justify-between text-[13px] text-slate-500 font-bold mb-3 px-1">
-                                        <span>Discovery</span>
-                                        <span>Pre-clinical</span>
-                                        <span className="text-black">Phase 1/2</span>
+                                        <span>{t('rnd.discovery') || "Discovery"}</span>
+                                        <span>{t('rnd.preclinical') || "Pre-clinical"}</span>
+                                        <span className="text-black">{t('rnd.phase12') || "Phase 1/2"}</span>
                                     </div>
                                     <div className="relative w-full h-2 bg-slate-200 rounded-full">
                                         <motion.div 
@@ -164,7 +181,7 @@ export default function InfectiousDiseasesPipeline() {
                                             whileInView={{ width: lineWidthPercent }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                                            className="absolute top-0 left-0 h-full rounded-full"
+                                            className={`absolute top-0 ${isRTL ? 'right-0' : 'left-0'} h-full rounded-full`}
                                             style={{ backgroundColor: item.color }}
                                         />
                                         <motion.div 
@@ -173,7 +190,13 @@ export default function InfectiousDiseasesPipeline() {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 1.6 }}
                                             className="absolute top-1/2 shadow-sm z-10"
-                                            style={{ left: lineWidthPercent, transform: 'translate(-50%, -50%)' }}
+                                            style={isRTL ? { 
+                                                right: lineWidthPercent, 
+                                                transform: 'translate(50%, -50%) scaleX(-1)' 
+                                            } : { 
+                                                left: lineWidthPercent, 
+                                                transform: 'translate(-50%, -50%)' 
+                                            }}
                                         >
                                             <div className="bg-white rounded-full shadow-sm p-1">
                                                 <SyringeIcon className="w-4 h-4" color={item.color} />

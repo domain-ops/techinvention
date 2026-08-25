@@ -8,7 +8,8 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 const WhyPartner = () => {
     const { t } = useLanguage();
     
-    const features = [
+    const rawFeatures = (t('cdmo.whyPartner.items') || t('cdmo.whyPartner.features')) as any[];
+    const features = Array.isArray(rawFeatures) && rawFeatures.length > 0 ? rawFeatures : [
         {
             title: "End-to-End Capability",
             desc: "Integrated expertise supporting every stage of vaccine development—from process development and manufacturing scale-up to fill-finish, regulatory readiness, and technology transfer."

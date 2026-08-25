@@ -4,7 +4,11 @@ import { ShieldCheck, HeartPulse, Microscope, ArrowRight } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import livestockVaccinesImg from '../../../assets/images/products/livestock_vaccines.png';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function VeterinaryDiagnostics() {
+    const { t } = useLanguage();
+
     return (
         <section id="veterinary-diagnostics" className="py-24 bg-[#1955A6] relative overflow-hidden font-sans border-b border-slate-200/20">
             {/* Background elements */}
@@ -36,8 +40,8 @@ export default function VeterinaryDiagnostics() {
                             <div className="absolute bottom-8 left-8 right-8">
                                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-none flex items-center justify-between shadow-xl">
                                     <div className="text-left">
-                                        <div className="text-white font-bold text-xl mb-1">Animal Health</div>
-                                        <div className="text-white/80 font-bold uppercase tracking-wider text-xs">Comprehensive testing solutions</div>
+                                        <div className="text-white font-bold text-xl mb-1">{t('megaMenu.veterinary') || "Animal Health"}</div>
+                                        <div className="text-white/80 font-bold uppercase tracking-wider text-xs">{t('products.animalTesting') || "Comprehensive testing solutions"}</div>
                                     </div>
                                     <div className="w-12 h-12 bg-[#87A840] rounded-full flex items-center justify-center shadow-lg">
                                         <Microscope className="w-6 h-6 text-white" />
@@ -52,21 +56,21 @@ export default function VeterinaryDiagnostics() {
                         <ScrollReveal direction="up">
                             
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-white mb-6 leading-tight text-left">
-                                <span className="text-white">Advanced Diagnostics for </span>
-                                <span className="text-[#87A840]">Animal Care</span>
+                                <span className="text-white">{t('products.advancedDiagnosticsFor') || "Advanced Diagnostics for "}</span>
+                                <span className="text-[#87A840]">{t('products.animalCare') || "Animal Care"}</span>
                             </h2>
                             
                             <p className="text-white/85 mb-10 text-[16px] md:text-[18px] leading-relaxed text-left font-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                {t('products.vetDesc') || "Comprehensive veterinary diagnostic solutions for rapid, precise testing across companion animals and livestock health monitoring."}
                             </p>
                         </ScrollReveal>
 
                         <div className="space-y-4 mb-12">
-                            {[
-                                { title: "Companion Animal Testing", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor." },
-                                { title: "Livestock Health Monitoring", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor." },
-                                { title: "Zoonotic Disease Surveillance", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor." }
-                            ].map((item, idx) => (
+                            {(t('products.vetItems') || [
+                                { title: "Companion Animal Testing", desc: "Accurate and rapid diagnostic assays for pets and companion animal wellness." },
+                                { title: "Livestock Health Monitoring", desc: "Proactive screening and disease surveillance for livestock herds and poultry." },
+                                { title: "Zoonotic Disease Surveillance", desc: "Early detection of cross-species pathogen transmission under the One Health framework." }
+                            ]).map((item: any, idx: number) => (
                                 <div key={idx} className="flex items-start gap-5 p-5 rounded-none bg-white/5 border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm text-left">
                                     <div className="w-12 h-12 rounded-none bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                                         <HeartPulse className="w-5 h-5 text-[#87A840]" />
@@ -81,7 +85,7 @@ export default function VeterinaryDiagnostics() {
 
                         <button className="px-8 py-4 bg-white text-[#1955A6] rounded-full font-bold shadow-lg hover:shadow-xl hover:bg-white/90 transition-all duration-300 w-fit">
                             <span className="flex items-center gap-2">
-                                View Veterinary Products
+                                {t('products.vetProductsBtn') || "View Veterinary Products"}
                                 <ArrowRight className="w-5 h-5" />
                             </span>
                         </button>

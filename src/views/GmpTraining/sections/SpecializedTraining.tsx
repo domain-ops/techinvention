@@ -76,46 +76,56 @@ const ImageSlider = ({ images }: { images: string[] }) => {
     );
 };
 
-const specializedPrograms = [
-    {
-        title: "Biosafety & Biosecurity Training for UNOPS",
-        desc: "Delivered structured training in biosafety, biosecurity and containment practices. The program blended technical understanding with practical risk-management approaches for modern biomedical laboratories. It helps build institutional capability for safe, compliant and responsible scientific operations.",
-        icon: ShieldAlert,
-        color: '#1955A6',
-        bg: 'bg-[#1955A6]/5',
-        images: [
-            "/Biosecurity-Training.jpg",
-            "/Biosecurity-Training-1.jpg",
-            "/Biosecurity-Training-4.jpg"
-        ]
-    },
-    {
-        title: "Training in Vaccine Analytics for UNOPS",
-        desc: "Enhanced vaccine development capability through focused training in analytical science and product evaluation. The program supported understanding of critical quality attributes, analytical methods, assay relevance and data interpretation.",
-        icon: Activity,
-        color: '#5C7625',
-        bg: 'bg-[#5C7625]/5',
-        images: [
-            "/Analytics-Training.jpg",
-            "/Analytics-Training-2.jpg",
-            "/Analytics-Training-3.jpg"
-        ]
-    },
-    {
-        title: "Advanced Bioprocessing Course at Regional Centre for Biotechnology(RCB)",
-        desc: "The training covered the fundamentals of upstream and downstream processing, Quality Control, Quality Assurance and Good Manufacturing Practices. The sessions also included hands-on exposure to streaking and shake-flask techniques, fermentation operations, vaccine production workflows, and QC laboratory practices, helping participants connect core bioprocessing concepts with real-world industry applications.",
-        icon: GitMerge,
-        color: '#1955A6',
-        bg: 'bg-[#1955A6]/5',
-        images: [
-            "/RCB.jpg",
-            "/RCB-1.jpg",
-            "/RCB-2.jpg"
-        ]
-    }
-];
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function SpecializedTraining() {
+    const { t } = useLanguage();
+
+    const specializedPrograms = [
+        {
+            title: t('training.unopsBiosafetyTitle') || "Biosafety & Biosecurity Training for UNOPS",
+            desc: typeof t('training.unopsBiosafety') === 'string' 
+                ? t('training.unopsBiosafety') 
+                : "Delivered structured training in biosafety, biosecurity and containment practices. The program blended technical understanding with practical risk-management approaches for modern biomedical laboratories.",
+            icon: ShieldAlert,
+            color: '#1955A6',
+            bg: 'bg-[#1955A6]/5',
+            images: [
+                "/Biosecurity-Training.jpg",
+                "/Biosecurity-Training-1.jpg",
+                "/Biosecurity-Training-4.jpg"
+            ]
+        },
+        {
+            title: t('training.unopsVaccineAnalyticsTitle') || "Training in Vaccine Analytics for UNOPS",
+            desc: typeof t('training.unopsVaccineAnalytics') === 'string'
+                ? t('training.unopsVaccineAnalytics')
+                : "Enhanced vaccine development capability through focused training in analytical science and product evaluation. The program supported understanding of critical quality attributes, analytical methods, assay relevance and data interpretation.",
+            icon: Activity,
+            color: '#5C7625',
+            bg: 'bg-[#5C7625]/5',
+            images: [
+                "/Analytics-Training.jpg",
+                "/Analytics-Training-2.jpg",
+                "/Analytics-Training-3.jpg"
+            ]
+        },
+        {
+            title: t('training.rcbBioprocessingTitle') || "Advanced Bioprocessing Course at Regional Centre for Biotechnology(RCB)",
+            desc: typeof t('training.rcbBioprocessing') === 'string'
+                ? t('training.rcbBioprocessing')
+                : "The training covered the fundamentals of upstream and downstream processing, Quality Control, Quality Assurance and Good Manufacturing Practices. The sessions also included hands-on exposure to streaking and shake-flask techniques, fermentation operations, vaccine production workflows, and QC laboratory practices.",
+            icon: GitMerge,
+            color: '#1955A6',
+            bg: 'bg-[#1955A6]/5',
+            images: [
+                "/RCB.jpg",
+                "/RCB-1.jpg",
+                "/RCB-2.jpg"
+            ]
+        }
+    ];
+
     return (
         <section className="py-24 bg-white relative overflow-hidden font-sans border-b border-slate-100">
             <div className="max-w-[1300px] mx-auto px-6 relative z-10">
@@ -123,7 +133,7 @@ export default function SpecializedTraining() {
                 <div className="text-center mb-20 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
-                            <SplitTitle title="Successful Programs" />
+                            <SplitTitle title={t('megaMenu.successfulProjects') || "Successful Programs"} />
                         </h2>
                     </ScrollReveal>
                 </div>

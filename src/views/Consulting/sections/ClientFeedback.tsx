@@ -6,7 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const basePath = process.env.BASE_PATH || '';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function ClientFeedback() {
+    const { t } = useLanguage();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const feedbackImages = [
@@ -24,7 +27,7 @@ export default function ClientFeedback() {
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[38px] font-medium tracking-wide">
-                            <span className="text-[#1955A6]">Feedback</span> <span className="text-[#5C7625]">from Clients</span>
+                            <SplitTitle title={t('testimonials.title') || "Feedback from Clients"} />
                         </h2>
                     </ScrollReveal>
                 </div>

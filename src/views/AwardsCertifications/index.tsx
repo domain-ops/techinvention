@@ -16,7 +16,7 @@ const AwardsCertificationsView = () => {
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden font-sans">
             {/* Header Banner */}
             <AboutHeader 
-                title="Awards & Certifications" 
+                title={t('navbar.awardsCertifications') || "Awards & Certifications"} 
                 subtitle={pageSubtitle}
             />
 

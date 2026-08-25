@@ -55,63 +55,63 @@ const Footer = () => {
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12 md:w-3/4">
                         <div>
-                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company')}</h4>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.company') || "Company"}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-semibold tracking-wide">
                                 <li>
-                                    <FooterLink href="/">Home</FooterLink>
+                                    <FooterLink href="/">{t('navbar.home') || "Home"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/about">About</FooterLink>
+                                    <FooterLink href="/about">{t('navbar.about') || "About"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/about/csr-initiatives">CSR</FooterLink>
+                                    <FooterLink href="/about/csr-initiatives">{t('navbar.csr') || "CSR"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/about/awards-certifications">Awards &amp; Certifications</FooterLink>
+                                    <FooterLink href="/about/awards-certifications">{t('navbar.awardsCertifications') || "Awards & Certifications"}</FooterLink>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions')}</h4>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.solutions') || "Solutions"}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-semibold tracking-wide">
                                 <li>
-                                    <FooterLink href="/products">Products</FooterLink>
+                                    <FooterLink href="/products">{t('navbar.products') || "Products"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/rnd">R&amp;D</FooterLink>
+                                    <FooterLink href="/rnd">{t('navbar.rnd') || "R&D"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/cdmo">Manufacturing</FooterLink>
+                                    <FooterLink href="/cdmo">{t('navbar.manufacturing') || "Manufacturing"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/consulting">Consulting</FooterLink>
+                                    <FooterLink href="/consulting">{t('navbar.consulting') || "Consulting"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/careers">Careers</FooterLink>
+                                    <FooterLink href="/careers">{t('navbar.careers') || "Careers"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/gmp-training">Training</FooterLink>
+                                    <FooterLink href="/gmp-training">{t('navbar.training') || "Training"}</FooterLink>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="col-span-2 sm:col-span-1">
-                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect')}</h4>
+                            <h4 className="text-lg font-medium tracking-tight tracking-widest text-brand-content mb-8">{t('footer.connect') || "Connect"}</h4>
                             <ul className="space-y-4 text-[13px] 2xl:text-[14px] text-black font-semibold tracking-wide">
                                 <li>
-                                    <FooterLink href="https://www.linkedin.com/company/healthequity4all" isExternal>LinkedIn</FooterLink>
+                                    <FooterLink href="https://www.linkedin.com/company/healthequity4all" isExternal>{t('footer.linkedin') || "LinkedIn"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="https://x.com/TechinventionL" isExternal>Twitter (X)</FooterLink>
+                                    <FooterLink href="https://x.com/TechinventionL" isExternal>{t('footer.twitter') || "Twitter (X)"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="https://www.youtube.com/@techinventionlifecarepvt.l4675" isExternal>YouTube</FooterLink>
+                                    <FooterLink href="https://www.youtube.com/@techinventionlifecarepvt.l4675" isExternal>{t('footer.youtube') || "YouTube"}</FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/contact-us">Contact Us</FooterLink>
+                                    <FooterLink href="/contact-us">{t('navbar.contactUs') || "Contact Us"}</FooterLink>
                                 </li>
-                                <li className="break-all">
+                                <li className="break-all" dir="ltr">
                                     <FooterLink href="mailto:connect@techinvention.biz" isExternal>connect@techinvention.biz</FooterLink>
                                 </li>
                             </ul>
@@ -125,14 +125,26 @@ const Footer = () => {
                         <span className="whitespace-nowrap">{t('footer.allRightsReserved')}</span>
                     </div>
                     <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 md:pr-24">
-                        <Link href="/terms-and-conditions" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">Terms &amp; Conditions</Link>
-                        <Link href="/disclaimer" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">Disclaimer</Link>
+                        <Link href="/terms-and-conditions" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">
+                            {(typeof t('footer.termsAndConditions') === 'string' && t('footer.termsAndConditions') !== 'footer.termsAndConditions')
+                                ? t('footer.termsAndConditions')
+                                : ((typeof t('footer.termsOfService') === 'string' && t('footer.termsOfService') !== 'footer.termsOfService')
+                                    ? t('footer.termsOfService')
+                                    : "Terms & Conditions")}
+                        </Link>
+                        <Link href="/disclaimer" className="hover:text-brand-content transition-colors cursor-pointer whitespace-nowrap">
+                            {(typeof t('footer.disclaimer') === 'string' && t('footer.disclaimer') !== 'footer.disclaimer')
+                                ? t('footer.disclaimer')
+                                : ((typeof t('footer.globalCompliance') === 'string' && t('footer.globalCompliance') !== 'footer.globalCompliance')
+                                    ? t('footer.globalCompliance')
+                                    : "Disclaimer")}
+                        </Link>
                     </div>
                 </div>
 
                 {/* Centered Credit at the bottom */}
                 <div className="hidden text-center pt-6 text-[13px] 2xl:text-[14px] text-brand-gray-light font-semibold tracking-wide">
-                    <span>Powered by <a href="https://www.theimpulsedigital.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-content transition-colors font-semibold">Impulse Digital</a></span>
+                    <span>{t('footer.poweredBy') || "Powered by"} <a href="https://www.theimpulsedigital.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-content transition-colors font-semibold">Impulse Digital</a></span>
                 </div>
             </div>
         </footer>

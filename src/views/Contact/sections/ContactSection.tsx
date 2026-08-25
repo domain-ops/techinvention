@@ -28,7 +28,10 @@ const ENQUIRY_CARDS = [
     },
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const ContactSection = () => {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -125,14 +128,14 @@ const ContactSection = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden shadow-lg border border-slate-200/60">
 
                         {/* Left: Info Panel */}
-                        <div className="lg:col-span-5 bg-[#1955A6] text-white p-10 md:p-14 flex flex-col justify-start gap-10">
+                        <div className="lg:col-span-5 bg-[#1955A6] text-white p-10 md:p-14 flex flex-col justify-start gap-10 text-left">
                             <div>
-                                <span className="text-white font-bold tracking-[0.35em] text-[11px] mb-4 block uppercase">Get In Touch</span>
+                                <span className="text-white font-bold tracking-[0.35em] text-[11px] mb-4 block uppercase">{t('contact.getInTouch') || "Get In Touch"}</span>
                                 <h2 className="text-[22px] md:text-[32px] font-bold leading-snug mb-6 text-white">
-                                    Let's Start the Conversation
+                                    {t('contact.conversationTitle') || t('contact.title') || "Let's Start the Conversation"}
                                 </h2>
                                 <p className="text-slate-300 text-[15px] md:text-[16px] leading-relaxed">
-                                    Send us your enquiry and the appropriate team will get back to you at the earliest. Whether your interest lies in products, partnerships, technology, manufacturing, advisory or training support, we look forward to connecting with you.
+                                    {t('contact.desc') || "Send us your enquiry and the appropriate team will get back to you at the earliest. Whether your interest lies in products, partnerships, technology, manufacturing, advisory or training support, we look forward to connecting with you."}
                                 </p>
                             </div>
 
@@ -142,13 +145,13 @@ const ContactSection = () => {
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                         <Phone className="w-4 h-4 text-white" />
                                     </div>
-                                    <a href="tel:+912240052123" className="text-slate-300 text-sm hover:text-white transition-colors">+91 2240052123</a>
+                                    <a href="tel:+912240052123" dir="ltr" className="text-slate-300 text-sm hover:text-white transition-colors">+91 2240052123</a>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                         <Mail className="w-4 h-4 text-white" />
                                     </div>
-                                    <a href="mailto:connect@techinvention.biz" className="text-slate-300 text-sm hover:text-white transition-colors break-all">connect@techinvention.biz</a>
+                                    <a href="mailto:connect@techinvention.biz" dir="ltr" className="text-slate-300 text-sm hover:text-white transition-colors break-all">connect@techinvention.biz</a>
                                 </div>
                             </div>
                         </div>
@@ -166,38 +169,38 @@ const ContactSection = () => {
                                         <div className="w-16 h-16 rounded-full bg-[#0d2a55]/10 text-[#0d2a55] flex items-center justify-center mb-2">
                                             <Send className="w-6 h-6" />
                                         </div>
-                                        <h4 className="text-xl font-bold text-slate-900">Message Received!</h4>
+                                        <h4 className="text-xl font-bold text-slate-900">{t('careers.applyForm.successTitle') || t('thankYou.title') || "Message Received!"}</h4>
                                         <p className="text-slate-500 text-[15px] font-medium max-w-sm">
-                                            Thank you for contacting us. Our team at connect@techinvention.biz will get back to you shortly.
+                                            {t('thankYou.desc') || "Thank you for contacting us. Our team will get back to you shortly."}
                                         </p>
                                     </motion.div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                             {/* Full Name */}
-                                            <div className="flex flex-col gap-1.5">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Full Name *</label>
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.name') || "Full Name"} *</label>
                                                 <input
                                                     type="text"
                                                     name="name"
                                                     required
                                                     value={formData.name}
                                                     onChange={handleChange}
-                                                    placeholder="Your Name (Letters only)"
+                                                    placeholder={t('contact.form.namePlaceholder') || "Your Name"}
                                                     className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                                 />
                                             </div>
 
                                             {/* Email Address */}
-                                            <div className="flex flex-col gap-1.5">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Email Address *</label>
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.email') || "Email Address"} *</label>
                                                 <input
                                                     type="email"
                                                     name="email"
                                                     required
                                                     value={formData.email}
                                                     onChange={handleChange}
-                                                    placeholder="Your Email"
+                                                    placeholder={t('contact.form.emailPlaceholder') || "Your Email"}
                                                     className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                                 />
                                             </div>
@@ -205,8 +208,8 @@ const ContactSection = () => {
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                             {/* Contact Phone Number */}
-                                            <div className="flex flex-col gap-1.5">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Contact Number *</label>
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.phone') || "Contact Number"} *</label>
                                                 <input
                                                     type="tel"
                                                     name="phone"
@@ -214,28 +217,28 @@ const ContactSection = () => {
                                                     maxLength={10}
                                                     value={formData.phone}
                                                     onChange={handleChange}
-                                                    placeholder="10-digit Mobile Number"
+                                                    placeholder={t('contact.form.phonePlaceholder') || "Mobile Number"}
                                                     className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                                 />
                                             </div>
 
                                             {/* Organisation */}
-                                            <div className="flex flex-col gap-1.5">
-                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Organisation (Optional)</label>
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.organisation') || "Organisation"}</label>
                                                 <input
                                                     type="text"
                                                     name="organisation"
                                                     value={formData.organisation}
                                                     onChange={handleChange}
-                                                    placeholder="Your Organisation"
+                                                    placeholder={t('contact.form.orgPlaceholder') || "Your Organisation"}
                                                     className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                                 />
                                             </div>
                                         </div>
 
                                         {/* Enquiry Type */}
-                                        <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Enquiry Type *</label>
+                                        <div className="flex flex-col gap-1.5 text-left">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.enquiryType') || "Enquiry Type"} *</label>
                                             <select
                                                 name="enquiryType"
                                                 required
@@ -243,24 +246,24 @@ const ContactSection = () => {
                                                 onChange={handleChange}
                                                 className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 text-[14px] font-medium outline-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30 cursor-pointer"
                                             >
-                                                 <option value="" disabled>Select Enquiry Type</option>
-                                                 <option value="Strategy">Strategy</option>
-                                                 <option value="R&D">R&D</option>
-                                                 <option value="Licensing">Licensing</option>
-                                                 <option value="Advisory">Advisory</option>
-                                                 <option value="General Support">General Support</option>
+                                                 <option value="" disabled>{t('contact.form.selectEnquiry') || "Select Enquiry Type"}</option>
+                                                 <option value="Strategy">{t('contact.form.options.strategy') || "Strategy"}</option>
+                                                 <option value="R&D">{t('common.rd') || "R&D"}</option>
+                                                 <option value="Licensing">{t('megaMenu.ipPortfolio') || "Licensing"}</option>
+                                                 <option value="Advisory">{t('navbar.consulting') || "Advisory"}</option>
+                                                 <option value="General Support">{t('contact.form.options.general') || "General Support"}</option>
                                             </select>
                                         </div>
 
                                         {/* Message (Optional) */}
-                                        <div className="flex flex-col gap-1.5">
-                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">Message (Optional)</label>
+                                        <div className="flex flex-col gap-1.5 text-left">
+                                            <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.message') || "Message"}</label>
                                             <textarea
                                                 name="message"
                                                 rows={4}
                                                 value={formData.message}
                                                 onChange={handleChange}
-                                                placeholder="Describe your enquiry here..."
+                                                placeholder={t('contact.form.messagePlaceholder') || "Describe your enquiry here..."}
                                                 className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all text-slate-900 placeholder-slate-400 text-[14px] font-medium outline-none resize-none focus:bg-white focus:border-[#1955A6] focus:ring-1 focus:ring-[#1955A6]/30"
                                             />
                                         </div>
@@ -277,7 +280,7 @@ const ContactSection = () => {
                                             whileTap={{ scale: 0.98 }}
                                             className="group w-full flex items-center justify-center gap-3 bg-[#1955A6] hover:bg-[#1955A6]/90 disabled:opacity-50 text-white px-8 py-4 rounded-xl font-bold text-[13px] tracking-[0.1em] uppercase transition-all duration-300 shadow-md hover:shadow-lg"
                                         >
-                                            <span>{loading ? 'Sending...' : 'Send Message'}</span>
+                                            <span>{loading ? (t('contact.form.sending') || 'Sending...') : (t('contact.form.submit') || 'Send Message')}</span>
                                             <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </motion.button>
                                     </form>
@@ -290,13 +293,13 @@ const ContactSection = () => {
 
                 {/* 3. Location Section */}
                 <div className="mb-24">
-                    <div className="mb-10">
+                    <div className="mb-10 text-left">
                         <ScrollReveal direction="up">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-slate-900 mb-3">
-                                <SplitTitle title="Location & Address" />
+                                <SplitTitle title={t('contact.locations.title') || "Location & Address"} />
                             </h2>
                             <p className="text-slate-600 text-[15px] md:text-[16px] max-w-3xl leading-relaxed">
-                                Visit our corporate office or connect with us directly for partnership discussions, product enquiries, strategic collaborations and institutional communication.
+                                {t('contact.locations.desc') || "Visit our corporate office or connect with us directly for partnership discussions, product enquiries, strategic collaborations and institutional communication."}
                             </p>
                         </ScrollReveal>
                     </div>
@@ -308,7 +311,7 @@ const ContactSection = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {/* Map & Address 1 */}
                             <div className="flex flex-col gap-4">
-                                <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">Corporate Office &amp; Manufacturing Site (GCMC)</h4>
+                                <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">{t('contact.locations.gcmcTitle') || "Corporate Office & Manufacturing Site (GCMC)"}</h4>
                                 <div className="w-full h-[300px] sm:h-[350px] overflow-hidden border border-slate-200/60 shadow-sm">
                                     <iframe
                                         src="https://maps.google.com/maps?q=Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra,%20400710&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -323,7 +326,7 @@ const ContactSection = () => {
                                 <div className="flex flex-col items-center gap-2 pt-2 text-center">
                                     <h5 className="text-[13px] font-bold text-[#1a9090] leading-snug flex items-center justify-center gap-2 mb-1">
                                         <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <span>Corporate Office &amp; Manufacturing Site (GCMC)</span>
+                                        <span>{t('contact.locations.gcmcTitle') || "Corporate Office & Manufacturing Site (GCMC)"}</span>
                                     </h5>
                                     <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
                                         Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
@@ -333,7 +336,7 @@ const ContactSection = () => {
 
                             {/* Map & Address 2 */}
                             <div className="flex flex-col gap-4">
-                                <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">R&amp;D Centre (HORIZON)</h4>
+                                <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">{t('contact.locations.horizonTitle') || "R&D Centre (HORIZON)"}</h4>
                                 <div className="w-full h-[300px] sm:h-[350px] overflow-hidden border border-slate-200/60 shadow-sm">
                                     <iframe
                                         src="https://maps.google.com/maps?q=Horizon%20by%20Techinvention%20Lifecare,%20EL-125,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -348,7 +351,7 @@ const ContactSection = () => {
                                 <div className="flex flex-col items-center gap-2 pt-2 text-center">
                                     <h5 className="text-[13px] font-bold text-[#1a9090] leading-snug flex items-center justify-center gap-2 mb-1">
                                         <MapPin className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                        <span>R&amp;D Centre (HORIZON)</span>
+                                        <span>{t('contact.locations.horizonTitle') || "R&D Centre (HORIZON)"}</span>
                                     </h5>
                                     <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
                                         EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
@@ -363,9 +366,9 @@ const ContactSection = () => {
                             <div className="flex flex-col items-center gap-1.5 text-center">
                                 <h4 className="text-[13px] font-bold text-[#1a9090] flex items-center justify-center gap-2 mb-1">
                                     <Phone className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <span>Phone Enquiries</span>
+                                    <span>{t('contact.phoneEnquiries') || "Phone Enquiries"}</span>
                                 </h4>
-                                <a href="tel:+912240052123" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
+                                <a href="tel:+912240052123" dir="ltr" className="text-slate-600 text-[13px] hover:text-[#1955A6] transition-colors font-medium">
                                     +91 22 4005 2123
                                 </a>
                             </div>
@@ -377,9 +380,9 @@ const ContactSection = () => {
                             <div className="flex flex-col items-center gap-1.5 text-center">
                                 <h4 className="text-[13px] font-bold text-[#1a9090] flex items-center justify-center gap-2 mb-1">
                                     <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
-                                    <span>Email Address</span>
+                                    <span>{t('contact.emailAddress') || "Email Address"}</span>
                                 </h4>
-                                <a href="mailto:connect@techinvention.biz" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium break-all">
+                                <a href="mailto:connect@techinvention.biz" dir="ltr" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium break-all">
                                     connect@techinvention.biz
                                 </a>
                             </div>

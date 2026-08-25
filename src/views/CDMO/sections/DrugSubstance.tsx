@@ -4,9 +4,26 @@ import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { Beaker, Settings, Activity } from 'lucide-react';
 import dsImg from '../../../assets/images/about_manufacturing.png';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const DrugSubstance = () => {
+    const { t } = useLanguage();
+
+    const items = [
+        { 
+            title: t('cdmo.upstream') || 'Upstream Processing', 
+            desc: t('cdmo.upstreamDesc') || 'Bioreactors scalable up to 2000L capacity', 
+            icon: Activity 
+        },
+        { 
+            title: t('cdmo.downstream') || 'Advanced Downstream', 
+            desc: t('cdmo.downstreamDesc') || 'Precision purification and chromatography', 
+            icon: Settings 
+        },
+    ];
+
     return (
-        <section className="py-24 bg-gray-50 relative overflow-hidden">
+        <section className="py-24 bg-gray-50 relative overflow-hidden font-sans">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none" />
             <div className="max-w-[1400px] mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -16,17 +33,13 @@ const DrugSubstance = () => {
                                 <Beaker size={32} />
                             </div>
                             <h2 className="text-[24px] md:text-5xl font-medium tracking-tight text-brand-content mb-6">
-                                Drug Substance Manufacturing
+                                {t('cdmo.drugSubstanceTitle') || "Drug Substance Manufacturing"}
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-                                Scalable, robust, and highly efficient upstream and downstream processing. 
-                                We support microbial fermentation and mammalian cell culture platforms to produce high-quality APIs.
+                                {t('cdmo.drugSubstanceDesc') || "Scalable, robust, and highly efficient upstream and downstream processing. We support microbial fermentation and mammalian cell culture platforms to produce high-quality APIs."}
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                {[
-                                    { title: 'Upstream Processing', desc: 'Bioreactors scalable up to 2000L capacity', icon: Activity },
-                                    { title: 'Advanced Downstream', desc: 'Precision purification and chromatography', icon: Settings },
-                                ].map((item, i) => (
+                                {items.map((item, i) => (
                                     <motion.div 
                                         key={i}
                                         whileHover={{ y: -5 }}
@@ -55,9 +68,9 @@ const DrugSubstance = () => {
                                         <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
                                             <h5 className="font-medium text-lg mb-1 flex items-center gap-2">
                                                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                                                Operational Excellence
+                                                {t('cdmo.opExcellence') || "Operational Excellence"}
                                             </h5>
-                                            <p className="text-sm text-white/80">Continuous monitoring and automated controls ensure maximum yield and purity.</p>
+                                            <p className="text-sm text-white/80">{t('cdmo.opExcellenceDesc') || "Continuous monitoring and automated controls ensure maximum yield and purity."}</p>
                                         </div>
                                     </div>
                                 </div>

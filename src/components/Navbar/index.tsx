@@ -18,7 +18,7 @@ const Navbar = () => {
     const router = useRouter();
     const pathname = usePathname();
 
-    const announcements = [
+    const defaultAnnouncements = [
         "🤝 TechInvention Lifecare Pledges Support to the Government of Maharashtra's Drug-Free Mumbai Initiative.",
         "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
         "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
@@ -31,6 +31,12 @@ const Navbar = () => {
         "🤝 We have partnered with IIT Bhubaneswar, the Institute of Life Sciences (ILS), and the National Research Development Corporation (NRDC) to develop, scale up, and commercialize a next-generation recombinant tuberculosis vaccine.",
         "📈 TechInvention welcomed a strategic investment from Ashish Kacholia, reinforcing our long-term growth and innovation roadmap."
     ];
+
+    const rawAnnouncements = t('navbar.announcements') as string[];
+    const announcements = Array.isArray(rawAnnouncements) && rawAnnouncements.length > 0
+        ? rawAnnouncements
+        : defaultAnnouncements;
+
     const [noticeIndex, setNoticeIndex] = useState(0);
 
     useEffect(() => {
@@ -38,7 +44,7 @@ const Navbar = () => {
             setNoticeIndex((prev) => (prev + 1) % announcements.length);
         }, 5000);
         return () => clearInterval(interval);
-    }, []);
+    }, [announcements.length]);
 
     useEffect(() => {
         setActiveMegaMenu(null);
@@ -81,34 +87,35 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const languages: { code: Language; label: string }[] = [
-        { code: 'en', label: 'English' },
-        { code: 'hi', label: 'Hindi' },
-        { code: 'ar', label: 'Arabic' },
-        { code: 'es', label: 'Spanish' },
-        { code: 'fr', label: 'French' },
+    const languages: { code: Language; label: string; nativeLabel: string }[] = [
+        { code: 'en', label: 'English', nativeLabel: 'English' },
+        { code: 'fr', label: 'French', nativeLabel: 'Français' },
+        { code: 'ru', label: 'Russian', nativeLabel: 'Русский' },
+        { code: 'es', label: 'Spanish', nativeLabel: 'Español' },
+        { code: 'tr', label: 'Turkish', nativeLabel: 'Türkçe' },
+        { code: 'ar', label: 'Arabic', nativeLabel: 'العربية' },
     ];
 
     const megaMenusData: Record<string, any> = {
         company: {
             simpleLinks: [
-                { name: 'About', href: '/about' },
-                { name: 'CSR', href: '/about/csr-initiatives' },
-                { name: 'Awards & Certifications', href: '/about/awards-certifications' }
+                { name: t('navbar.about') || 'About', href: '/about' },
+                { name: t('navbar.csr') || 'CSR', href: '/about/csr-initiatives' },
+                { name: t('navbar.awardsCertifications') || 'Awards & Certifications', href: '/about/awards-certifications' }
             ]
         }
     };
 
     const mainNavItems = [
-        { key: 'home', label: 'Home', href: '/' },
-        { key: 'company', label: 'Company', href: '/about' },
-        { key: 'rnd', label: 'R&D', href: '/rnd' },
-        { key: 'cdmo', label: 'Manufacturing', href: '/cdmo' },
-        { key: 'consulting', label: 'Consulting', href: '/consulting' },
-        { key: 'products', label: 'Products', href: '/products' },
-        { key: 'gmp', label: 'Training', href: '/gmp-training' },
-        { key: 'careers', label: 'Careers', href: '/careers' },
-        { key: 'contact', label: 'Contact Us', href: '/contact-us' },
+        { key: 'home', label: t('navbar.home') || 'Home', href: '/' },
+        { key: 'company', label: t('navbar.company') || 'Company', href: '/about' },
+        { key: 'rnd', label: t('navbar.rnd') || 'R&D', href: '/rnd' },
+        { key: 'cdmo', label: t('navbar.manufacturing') || 'Manufacturing', href: '/cdmo' },
+        { key: 'consulting', label: t('navbar.consulting') || 'Consulting', href: '/consulting' },
+        { key: 'products', label: t('navbar.products') || 'Products', href: '/products' },
+        { key: 'gmp', label: t('navbar.training') || 'Training', href: '/gmp-training' },
+        { key: 'careers', label: t('navbar.careers') || 'Careers', href: '/careers' },
+        { key: 'contact', label: t('navbar.contactUs') || 'Contact Us', href: '/contact-us' },
     ];
 
     return (
@@ -136,11 +143,11 @@ const Navbar = () => {
             {/* Top Utility Bar - Hidden on Mobile */}
             <div className="hidden lg:flex w-full bg-brand-primary/5 border-b border-gray-100 h-10 items-center justify-between px-4 md:px-8">
                 <div className="flex items-center gap-6 text-[13px] font-medium text-brand-gray-dark">
-                    <a href="mailto:connect@techinvention.biz" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
+                    <a href="mailto:connect@techinvention.biz" className="flex items-center gap-2 hover:text-brand-primary transition-colors" dir="ltr">
                         <Mail size={14} />
                         connect@techinvention.biz
                     </a>
-                    <a href="tel:+912240052123" className="flex items-center gap-2 hover:text-brand-primary transition-colors">
+                    <a href="tel:+912240052123" className="flex items-center gap-2 hover:text-brand-primary transition-colors" dir="ltr">
                         <Phone size={14} />
                         +91 22 4005 2123
                     </a>
@@ -169,23 +176,25 @@ const Navbar = () => {
                     </div>
 
                     {/* Language Switcher in Top Bar */}
-                    <div className="relative hidden">
+                    <div className="relative">
                         <button 
                             onClick={() => setIsLangOpen(!isLangOpen)}
-                            className="flex items-center gap-1.5 text-[13px] font-medium text-brand-gray-dark hover:text-brand-primary transition-colors"
+                            className="flex items-center gap-1.5 text-[13px] font-medium text-brand-gray-dark hover:text-brand-primary bg-white hover:bg-gray-50 border border-gray-200 px-3 py-1 rounded-full transition-all shadow-xs"
+                            aria-label="Select Language"
                         >
                             <Globe size={14} className="text-brand-primary" />
-                            <span>{language === 'en' ? 'English' : language === 'hi' ? 'Hindi' : language === 'ar' ? 'Arabic' : language === 'es' ? 'Spanish' : 'French'}</span>
-                            <ChevronDown size={14} className={`transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
+                            <span>{languages.find(l => l.code === language)?.nativeLabel || 'English'}</span>
+                            <ChevronDown size={13} className={`transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
                         </button>
 
                         <AnimatePresence>
                             {isLangOpen && (
                                 <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: 10 }}
-                                    className="absolute right-0 rtl:right-auto rtl:left-0 mt-3 w-40 bg-white shadow-xl border border-gray-100 py-2 z-[6000] rounded-xl overflow-hidden"
+                                    initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                                    transition={{ duration: 0.15 }}
+                                    className="absolute right-0 rtl:right-auto rtl:left-0 mt-2 w-44 bg-white shadow-xl border border-gray-100 py-1.5 z-[6000] rounded-xl overflow-hidden"
                                 >
                                     {languages.map((lang) => (
                                         <button
@@ -194,9 +203,10 @@ const Navbar = () => {
                                                 setLanguage(lang.code);
                                                 setIsLangOpen(false);
                                             }}
-                                            className={`w-full text-left px-5 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${language === lang.code ? 'bg-brand-primary/10 text-brand-primary' : 'text-black hover:bg-gray-50 hover:text-brand-primary'}`}
+                                            className={`w-full text-left rtl:text-right px-4 py-2 text-[13px] font-medium tracking-wide transition-colors flex items-center justify-between ${language === lang.code ? 'bg-brand-primary/10 text-brand-primary font-semibold' : 'text-gray-700 hover:bg-gray-50 hover:text-brand-primary'}`}
                                         >
-                                            {lang.label}
+                                            <span>{lang.nativeLabel}</span>
+                                            <span className="text-[11px] text-gray-400 font-normal">({lang.label})</span>
                                         </button>
                                     ))}
                                 </motion.div>
@@ -206,16 +216,16 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8 relative z-[5100]">
+            <div className="max-w-[1440px] mx-auto w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-6 lg:px-8 relative z-[5100]">
                 {/* Logo */}
-                <Link href="/" className="flex-shrink-0">
-                    <img src={logoImg} alt="Brand Logo" className="h-10 md:h-16 w-auto" />
+                <Link href="/" className="flex-shrink-0 z-10">
+                    <img src={logoImg} alt="Brand Logo" className="h-9 sm:h-10 md:h-14 lg:h-16 w-auto object-contain" />
                 </Link>
 
-                <div className="flex items-center gap-8">
-                    {/* Main Navigation - Now with larger font since we have more space! */}
-                    <nav className="hidden xl:flex items-center ml-auto">
-                        <ul className="flex items-center gap-3 2xl:gap-6">
+                <div className="flex items-center gap-3 lg:gap-6 2xl:gap-8 min-w-0">
+                    {/* Main Navigation */}
+                    <nav className="hidden xl:flex items-center">
+                        <ul className="flex items-center gap-1.5 lg:gap-2.5 2xl:gap-5">
                             {mainNavItems.map((navItem) => {
                                 const hasDropdown = megaMenusData[navItem.key] && (megaMenusData[navItem.key].sections || megaMenusData[navItem.key].simpleLinks);
                                 
@@ -275,14 +285,14 @@ const Navbar = () => {
                                                     animate={{ opacity: 1, y: 0 }}
                                                     exit={{ opacity: 0, y: 10 }}
                                                     transition={{ duration: 0.2 }}
-                                                    className="absolute top-[60px] left-0 mt-2 bg-white shadow-lg border border-gray-100 z-[4900] min-w-[220px]"
+                                                    className="absolute top-[56px] md:top-[64px] left-0 rtl:left-auto rtl:right-0 mt-2 bg-white shadow-2xl border border-gray-100 z-[6000] min-w-[220px] rounded-lg overflow-hidden"
                                                 >
-                                                    <div className="flex flex-col">
+                                                    <div className="flex flex-col py-1">
                                                         {megaMenusData[navItem.key].simpleLinks.map((link: any, idx: number) => (
                                                             <Link
                                                                 key={idx}
                                                                 href={link.href}
-                                                                className="px-6 py-4 text-[15px] font-medium text-black hover:text-brand-primary hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors whitespace-nowrap"
+                                                                className="px-6 py-3.5 text-[14px] font-medium text-slate-800 hover:text-brand-primary hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors whitespace-nowrap text-left rtl:text-right"
                                                             >
                                                                 {link.name}
                                                             </Link>
@@ -421,6 +431,30 @@ const Navbar = () => {
                                     </AnimatePresence>
                                 </div>
                             )})}
+
+                            {/* Mobile Language Switcher */}
+                            <div className="py-4">
+                                <span className="block text-[13px] font-semibold text-gray-400 uppercase tracking-wider mb-3">Language / اللغة / Langue</span>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setLanguage(lang.code);
+                                                setIsMenuOpen(false);
+                                            }}
+                                            className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg text-[13px] font-medium transition-colors ${
+                                                language === lang.code
+                                                    ? 'bg-brand-primary text-white font-semibold shadow-sm'
+                                                    : 'bg-gray-50 text-gray-800 hover:bg-gray-100'
+                                            }`}
+                                        >
+                                            <span>{lang.nativeLabel}</span>
+                                            <span className={`text-[11px] ${language === lang.code ? 'text-white/80' : 'text-gray-400'}`}>{lang.label}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 )}

@@ -6,7 +6,17 @@ export const english = {
         "globalHealth": "Global Health",
         "testimonials": "Partnerships & Testimonials",
         "exploreNow": "Explore Now",
-        "myAccount": "My Account"
+        "myAccount": "My Account",
+        "ourPublications": "Our Publications",
+        "readNow": "Read News Article",
+        "trustedBy": "Trusted by",
+        "globalPartners": "Global Partners",
+        "ourImpact": "Our Impact",
+        "contactUs": "Connect Now",
+        "partnerWithUs": "Partner With TechInvention",
+        "connectNow": "Connect Now",
+        "showLess": "Show Less Accolades",
+        "showMore": "Show More Accolades"
     },
     "navbar": {
         "home": "Home",
@@ -16,9 +26,30 @@ export const english = {
         "products": "Products",
         "solutions": "Services",
         "learn": "Learn",
-        "company": "About",
+        "company": "Company",
         "support": "Support",
-        "spotlight": "Spotlight"
+        "spotlight": "Spotlight",
+        "rnd": "R&D",
+        "manufacturing": "Manufacturing",
+        "consulting": "Consulting",
+        "training": "Training",
+        "careers": "Careers",
+        "csr": "CSR",
+        "awardsCertifications": "Awards & Certifications",
+        "announcements": [
+            "🤝 TechInvention Lifecare Pledges Support to the Government of Maharashtra's Drug-Free Mumbai Initiative.",
+            "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
+            "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
+            "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",
+            "🤝 Secured strategic licensing agreements for NexGen Salmonella Vaccine technologies at the Medical Innovations Patent Mitra: Innovators-to-Industry (I2I) Connect in New Delhi.",
+            "🏆 Our Founder & CEO, Mr. Syed S. Ahmed, was conferred the prestigious \"Outstanding Leader in Healthcare Technology\" award by Dr. Kiran Bedi at the Bharat 2.0 Conclave, recognizing his exceptional leadership and contributions to the healthcare sector.",
+            "⚡ In the esteemed presence of Shri Rajesh Kumar Pathak, Secretary, Technology Development Board, we inaugurated our dedicated power substation at GCMC, strengthening infrastructure for advanced biomanufacturing.",
+            "🔬 Our tuberculosis (TB) vaccine candidate has been selected by the TuBerculosis Vaccine Initiative (TBVI) for comparative evaluation in the mouse Mycobacterium tuberculosis aerosol infection model.",
+            "🏢 Backed by the Technology Development Board, our NexGen vaccine manufacturing facility is set to advance immunization, expand vaccine access, and strengthen healthcare systems.",
+            "🤝 We have partnered with IIT Bhubaneswar, the Institute of Life Sciences (ILS), and the National Research Development Corporation (NRDC) to develop, scale up, and commercialize a next-generation recombinant tuberculosis vaccine.",
+            "📈 TechInvention welcomed a strategic investment from Ashish Kacholia, reinforcing our long-term growth and innovation roadmap."
+        ],
+        "membership": "Memberships"
     },
     "megaMenu": {
         "vaccines": "Vaccines",
@@ -50,13 +81,28 @@ export const english = {
         "strategicAdvisory": "Strategic & Technical Advisory",
         "globalAccess": "Global Access",
         "cdmo": "CDMO",
-        "successfulProjects": "Successful Projects"
+        "successfulProjects": "Successful Projects",
+        "awards": "Awards & Accolades",
+        "products": "Product Details",
+        "veterinary": "Animal Health",
+        "licensing": "Technology Transfer",
+        "viewAll": "View All",
+        "csr": "CSR Initiatives",
+        "contact": "Contact Us",
+        "annualReports": "Annual Reports",
+        "advisoryBoard": "Advisory Board",
+        "facilities": "Facilities",
+        "technologyTransfer": "Technology Transfer"
     },
     "video": {
-        "tagline": "Experience the Future of Biotech Innovation"
+        "tagline": "Experience the Future of Biotech Innovation",
+        "title": "Advancing Global Healthcare",
+        "subtitle": "Watch how our end-to-end biotech ecosystem transforms discovery into scalable clinical impact."
     },
     "map": {
-        "tag": "Global Presence"
+        "tag": "Global Presence",
+        "title": "Global Reach & Partnerships",
+        "subtitle": "Collaborating with leading health organizations and manufacturers worldwide."
     },
     "hero": {
         "rotatingWords": [
@@ -109,7 +155,14 @@ export const english = {
                 "title": "Strategic\nIP Solutions",
                 "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             }
-        ]
+        ],
+        "badge": "Biotech Innovation & Global Health",
+        "heading": "Engineering Life-Saving Biotherapeutics & Vaccines",
+        "tagline": "Pioneering research and scalable biomanufacturing to protect global communities.",
+        "exploreSolutions": "Explore Solutions",
+        "ourVision": "Our Vision",
+        "bottomTitle": "Comprehensive Biomanufacturing & Research Ecosystem",
+        "bottomSub": "Bridging the gap between discovery, development, and scalable production."
     },
     "testimonials": {
         "title": "Client Testimonials",
@@ -139,7 +192,8 @@ export const english = {
                 "content": "We commend Techinvention for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment.",
                 "image": "testimonial_4"
             }
-        ]
+        ],
+        "tag": "Global Partnerships"
     },
     "about": {
         "tag": "About TechInvention",
@@ -170,10 +224,10 @@ export const english = {
             "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         "vision": {
-            "title": "Our mission",
+            "title": "Purpose & Principles",
             "headline": "Shaping the {future} of Global Health",
             "future": "Future",
-            "desc": "Enabling One Health through Bio-innovation: Affordable, Accessible, Acceptable."
+            "desc": "The foundation of our organization is built on a clear vision for the future, a driving mission for today, and the core values that guide our every step."
         },
         "mission": {
             "title": "Our Mission",
@@ -202,9 +256,10 @@ export const english = {
             ]
         },
         "story": {
-            "mandelaQuote": "Nelson Mandela said, “Health cannot be a question of income; it is a fundamental right.” In our world, access to good health is often a function of where we are born, our economic class, race, ethnicity, gender, and age. It is an unfortunate yet inescapable reality.",
-            "commitment": "TechInvention is committed to bringing greater health equity to people and nations all over the world. We commenced our journey in 2016 with the focus of making essential vaccines and biopharmaceuticals acceptable, affordable, and accessible in the developing world.",
-            "expertise": "We offer our expertise in project planning, project feasibility, technology licensing, WHO prequalification (PQ) support, design engineering, regulatory affairs, clinical research, and intellectual property (IP) support to pharmaceutical and biotech companies, governments, and investors, so together we can make a difference to our shared world."
+            "mandelaQuote": "“It always seems impossible until it's done.” – Nelson Mandela",
+            "commitment": "At TechInvention, our journey began with a clear commitment: to transform healthcare by advancing vaccines and biotherapeutics that bridge the critical gap between scientific innovation and patient access. By integrating research, sustainable infrastructure, and global collaborations, we strive to make essential healthcare solutions affordable and globally available.",
+            "expertise": "We offer our expertise in project planning, project feasibility, technology licensing, WHO prequalification (PQ) support, design engineering, regulatory affairs, clinical research, and intellectual property (IP) support to pharmaceutical and biotech companies, governments, and investors, so together we can make a difference to our shared world.",
+            "title": "Built to Move Vaccine Innovation Further"
         },
         "leadership": {
             "title": "Our Leadership",
@@ -275,12 +330,47 @@ export const english = {
                         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     }
                 ]
-            }
-        }
+            },
+            "subtitle": "Leadership Shaping TechInvention",
+            "boardSubtitle": "Leadership Shaping TechInvention",
+            "board": [
+                {
+                    "name": "Mr. Syed Ahmed",
+                    "role": "Director & CEO"
+                },
+                {
+                    "name": "Ms. Nazneen Hamid",
+                    "role": "Co-Founder & Director"
+                },
+                {
+                    "name": "Mrs. Monika Thanvi",
+                    "role": "Independent Director"
+                },
+                {
+                    "name": "Mr. Gopal Damisetti",
+                    "role": "Independent Director"
+                }
+            ]
+        },
+        "latestUpdates": "Latest Updates",
+        "viewAllNews": "View All News",
+        "responsibilityTitle": "Our Responsibility",
+        "responsibilityDesc": "We believe that our success is fundamentally linked to the well-being of the communities we serve and the environment we operate in.",
+        "sustainableOps": "Sustainable Operations",
+        "sustainableOpsDesc": "Our GMP-like facilities are thoughtfully designed with innovative concepts aimed at enabling environmentally responsible production.",
+        "communityImpact": "Community Impact",
+        "communityImpactDesc": "Through strategic initiatives and global partnerships, we aim to make vaccines and biotherapeutics accessible to underserved populations.",
+        "scientificAdvisory": {
+            "title": "Scientific Advisory Board",
+            "desc": "Bringing together eminent scientific leaders whose expertise strengthens our vaccine research, development and innovation agenda."
+        },
+        "learnMore": "Learn More About Our Journey",
+        "visionText": "To achieve complete global health equity through affordable, accessible, and high-quality vaccines and biotherapeutics.",
+        "missionText": "Bridging academic discovery and commercial manufacturing to deliver sustainable healthcare solutions worldwide."
     },
     "oneHealth": {
         "tag": "Unified Perspective",
-        "title": "Enabling One Health through {bioInnovation}",
+        "title": "Enabling One Health through Bio-Innovation.",
         "bioInnovation": "Bio-Innovation.",
         "knowMore": "Know More",
         "slides": [
@@ -303,6 +393,21 @@ export const english = {
                 "title": "Commercial-Scale Manufacturing",
                 "desc": "TechInvention’s integrated GMP manufacturing facility (GCMC) provides Drug Substance and Fill-finish manufacturing for vaccines and biologics within a quality-driven, scalable framework. It supports technology transfer, process scale-up, regulatory compliance, and commercial manufacturing.",
                 "tag": "Scale-up"
+            }
+        ],
+        "desc": "TechInvention holistically addresses infectious disease control and antimicrobial resistance (AMR) through an integrated One Health approach.",
+        "pillars": [
+            {
+                "title": "Human Health",
+                "desc": "Developing advanced vaccines and therapeutics targeting priority infectious diseases."
+            },
+            {
+                "title": "Animal Health",
+                "desc": "Preventing zoonotic diseases and safeguarding livestock health."
+            },
+            {
+                "title": "Environmental Health",
+                "desc": "Ensuring sustainable and eco-friendly biomanufacturing standards."
             }
         ]
     },
@@ -348,7 +453,8 @@ export const english = {
             "research": "Research Collaborations",
             "products": "Products in Development",
             "partnerships": "Global Partnerships"
-        }
+        },
+        "tag": "Our Impact"
     },
     "caseStudy": {
         "titlePrefix": "Featured",
@@ -388,13 +494,14 @@ export const english = {
                 "label": "Therapeutics",
                 "desc": "Delivering targeted treatments tailored for specific medical countermeasures."
             }
-        ]
+        ],
+        "title": "High-Impact Projects"
     },
     "horizon": {
-        "title": "HORIZON",
-        "subtitle": "High-impact One-health Research & Innovation ZONE",
+        "title": "High-impact One Health Research & Innovation ZONe (HORIZON)",
+        "subtitle": "Research & Development (R&D)",
         "desc": "TechInvention's state-of-the-art R&D facility, the High-impact One Health Research & Innovation ZONe (HORIZON), is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.",
-        "gcmcTitle": "GCMC",
+        "gcmcTitle": "Global Collaborative Centre for Medical Countermeasures (GCMC)",
         "gcmcSubtitle": "Global Collaborative centre for Medical Countermeasures",
         "gcmcDesc": "An EU-GMP-compliant facility purpose-built to enable seamless scale-up and accelerate the translation of vaccine candidates from the pre-clinical stage through clinical development to full-scale commercialization.",
         "stages": [
@@ -416,10 +523,22 @@ export const english = {
             }
         ],
         "collaborations": [
-            "Institute of Life Sciences (ILS)",
-            "Indian Institute of Technology Bhubaneswar",
-            "ICMR- RMRC Bhubaneswar",
-            "ICMR-NIRBI Kolkata"
+            {
+                "name": "Institute of Life Sciences (ILS)",
+                "location": "Bhubaneswar"
+            },
+            {
+                "name": "Indian Institute of Technology",
+                "location": "Bhubaneswar"
+            },
+            {
+                "name": "ICMR - RMRC",
+                "location": "Bhubaneswar"
+            },
+            {
+                "name": "ICMR - NIRBI",
+                "location": "Kolkata"
+            }
         ]
     },
     "blogs": {
@@ -450,18 +569,30 @@ export const english = {
                 "category": "Technology",
                 "author": "TechInvention Team"
             }
-        ]
+        ],
+        "tag": "News & Publications",
+        "title": "Recent Insights & Publications"
     },
     "glanceVideo": {
         "titlePrefix": "TechInvention",
-        "titleHighlight": "at a Glance"
+        "titleHighlight": "at a Glance",
+        "title": "TechInvention at a Glance",
+        "desc": "Discover our mission, facilities, and dedicated team in action."
     },
     "cta": {
         "tag": "Bio-Innovation Hub",
         "title": "Advancing Health",
         "titleHighlight": "Delivered Globally.",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "startPartnership": "Start Partnership"
+        "startPartnership": "Start Partnership",
+        "products": {
+            "title": "Partner With TechInvention for Vaccine Access",
+            "desc": "Connect with TechInvention to explore product availability, licensing partnerships and access opportunities for market-authorized vaccines."
+        },
+        "button": "Connect Now",
+        "primary": "Contact Us",
+        "secondary": "Learn More",
+        "protectsTomorrow": "Protects Tomorrow"
     },
     "footer": {
         "desc": "Dedicated to advancing global health through innovative research, sustainable manufacturing, and strategic partnerships worldwide.",
@@ -471,14 +602,44 @@ export const english = {
         "allRightsReserved": "All Rights Reserved",
         "privacyPolicy": "Privacy Policy",
         "termsOfService": "Terms of Service",
+        "termsAndConditions": "Terms & Conditions",
+        "disclaimer": "Disclaimer",
         "globalCompliance": "Global Compliance",
         "linkedin": "LinkedIn",
         "twitter": "Twitter (X)",
         "partnerPortal": "Partner Portal",
-        "email": "contact@techinvention.biz"
+        "email": "contact@techinvention.biz",
+        "poweredBy": "Powered by",
+        "youtube": "YouTube"
+    },
+    "horizonGcmc": {
+        "startupsLine1": "Startups",
+        "startupsLine2": "MSMEs",
+        "startupsLine3": "Academia",
+        "startupsLine4": "R&D organisations",
+        "startups": "Startups, MSMEs, Academia, R&D organisations",
+        "pocEarly": "PoC - Early stage",
+        "techTransfer": "Tech transfer",
+        "biosecurity": "Biosecurity",
+        "biosecurityDesc": "Stockpile for emergency outbreak and pandemic preparedness",
+        "smallBatches": "Small batches (PCT/CT)",
+        "withEuWho": "With EU/WHO-PQ",
+        "industry": "Industry",
+        "industryDesc": "Optimised tech packs for seamless transfer and rapid commercialisation",
+        "techTransferTraining": "Tech transfer & Training",
+        "commercialManufacturing": "Commercial manufacturing",
+        "pills": [
+            "Process\noptimisation",
+            "Scale-ups",
+            "Consistency/\nValidation",
+            "Clinical trials",
+            "Regulatory\napprovals",
+            "IP & legal"
+        ]
     },
     "loader": {
-        "initializing": "Initializing Bio-Sync"
+        "initializing": "Initializing Bio-Sync",
+        "loading": "Loading TechInvention..."
     },
     "homeStats": {
         "header": {
@@ -489,27 +650,31 @@ export const english = {
         },
         "awards": {
             "value": "10+",
-            "label": "Years"
+            "label": "Years",
+            "desc": "Years of proven biotech innovation and manufacturing experience"
         },
         "experts": {
             "value": "20+",
-            "label": "Projects"
+            "label": "Projects",
+            "desc": "Global health and vaccine projects successfully delivered"
         },
         "patients": {
             "value": "15+",
-            "label": "Countries"
+            "label": "Countries",
+            "desc": "Countries benefiting from our technologies and partnerships"
         },
         "partners": {
             "value": "45+",
-            "label": "Global Partners"
+            "label": "Global Partners",
+            "desc": "Leading global health institutions and organizations worldwide"
         }
     },
     "globalProjects": {
-        "tag": "Global Footprint",
-        "title": "Global Projects & {partners}",
-        "partners": "Partners",
+        "tag": "Trusted by Global Partners",
+        "title": "Trusted by {partners}",
+        "partners": "Global Partners",
         "partnersTag": "Strategic Global Partners",
-        "desc": "Building trusted global partnerships to accelerate vaccine access, healthcare infrastructure and biomanufacturing excellence.",
+        "desc": "Building trusted global partnerships to accelerate vaccine access, strengthen healthcare infrastructure, and advance biomanufacturing capabilities worldwide.",
         "stats": [
             {
                 "label": "Countries Reached",
@@ -615,17 +780,17 @@ export const english = {
             },
             {
                 "name": "Shigella Vaccine",
-                "progress": 50,
+                "progress": 25,
                 "color": "#129B9C"
             },
             {
                 "name": "Meningococcal B Vaccine",
-                "progress": 50,
+                "progress": 25,
                 "color": "#129B9C"
             },
             {
                 "name": "Malaria Vaccine",
-                "progress": 50,
+                "progress": 25,
                 "color": "#129B9C"
             },
             {
@@ -633,7 +798,8 @@ export const english = {
                 "progress": 50,
                 "color": "#129B9C"
             }
-        ]
+        ],
+        "desc": "Advanced candidate programs targeting priority infectious diseases and antimicrobial resistance."
     },
     "biotherapeuticsPipeline": {
         "title": "Biotherapeutics {pipeline}",
@@ -651,7 +817,9 @@ export const english = {
                 "color": "#87A840",
                 "desc": "For neutropenia treatment"
             }
-        ]
+        ],
+        "tag": "Biotherapeutics",
+        "desc": "Innovative and accessible biological treatment solutions."
     },
     "journeyPipeline": {
         "tag": "R&D Innovations",
@@ -762,8 +930,8 @@ export const english = {
         "form": {
             "name": "Full Name",
             "email": "Email Address",
-            "phone": "Phone Number",
-            "message": "Your Message",
+            "phone": "Contact Number",
+            "message": "Message",
             "submit": "Send Message",
             "sending": "Sending...",
             "success": "Message Sent Successfully!",
@@ -773,8 +941,49 @@ export const english = {
                 "email": "enter@email.com",
                 "phone": "+1 234...",
                 "message": "How can we help you?"
-            }
-        }
+            },
+            "namePlaceholder": "Your Name",
+            "emailPlaceholder": "Your Email",
+            "phonePlaceholder": "Mobile Number",
+            "organisation": "Organisation",
+            "orgPlaceholder": "Your Organisation",
+            "enquiryType": "Enquiry Type",
+            "selectEnquiry": "Select Enquiry Type",
+            "options": {
+                "strategy": "Strategy",
+                "general": "General Support"
+            },
+            "messagePlaceholder": "Describe your enquiry here...",
+            "nameRequired": "Please enter your Full Name.",
+            "emailRequired": "Please enter your Email Address.",
+            "phoneRequired": "Please enter a valid 10-digit Contact Number.",
+            "successTitle": "Enquiry Sent!",
+            "successDesc": "Our advisory team will reach out within 24 hours. Thank you for your interest.",
+            "sendAnother": "Send Another Enquiry",
+            "confidentiality": "All enquiries are treated with strict confidentiality.",
+            "fullName": "Full Name",
+            "organization": "Organization / Company",
+            "inquiryType": "Inquiry Type",
+            "selectInquiry": "Select Subject"
+        },
+        "getInTouch": "Get In Touch",
+        "conversationTitle": "Let's Start the Conversation",
+        "phoneEnquiries": "Phone Enquiries",
+        "emailAddress": "Email Address",
+        "locations": {
+            "title": "Location & Address",
+            "desc": "Visit our corporate office or connect with us directly for partnership discussions, product enquiries, strategic collaborations and institutional communication.",
+            "gcmcTitle": "Corporate Office & Manufacturing Site (GCMC)",
+            "horizonTitle": "R&D Centre (HORIZON)"
+        },
+        "subtitle": "Let's Connect",
+        "introP1": "Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you.",
+        "introP2": "TechInvention works with partners across global health systems to move science closer to meaningful public health impact.",
+        "startConversation": "Start a Conversation",
+        "insideTitle": "Inside TechInvention",
+        "officeSlide1": "TechInvention Office",
+        "officeSlide2": "Workspace",
+        "officeSlide3": "Training Room"
     },
     "awards": {
         "tag": "Recognition",
@@ -848,7 +1057,9 @@ export const english = {
                 "desc": "Ministry of MSME Leading Single Specialty Services Company of the Year",
                 "image": "award_time2leap_2019"
             }
-        ]
+        ],
+        "showLess": "Show Less Accolades",
+        "showMore": "Show More Accolades"
     },
     "news": {
         "items": [
@@ -948,17 +1159,21 @@ export const english = {
                 "accent": "#565658",
                 "imageUrl": "ip"
             }
-        ]
+        ],
+        "title": "Platform Excellence"
     },
     "atAGlance": {
         "tag": "Insights",
         "title1": "TechInvention at a ",
-        "title2": "Glance"
+        "title2": "Glance",
+        "title": "At a Glance",
+        "subtitle": "Our Ecosystem & Impact in Numbers",
+        "desc": "Integrated infrastructure dedicated to advancing global health security."
     },
     "strategicAdvisory": {
         "tag": "Strategic Technical Advisory",
-        "title": "Strategic Technical Advisory",
-        "intro": "Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution. TechInvention supports governments, funding agencies, manufacturers, investors and research institutions in shaping vaccine and biopharmaceutical manufacturing infrastructure.",
+        "title": "Strategic Advisory & Tech Consulting",
+        "intro": "Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution.",
         "sections": [
             {
                 "title": "Project Feasibility",
@@ -1041,6 +1256,16 @@ export const english = {
                 "client": "World Health Organization (SEARO)",
                 "feedback": "We commend Techinvention for its professionalism, technical expertise and commitment throughout the successful delivery of the assignment."
             }
+        ],
+        "desc": "TechInvention supports governments, funding agencies, manufacturers, investors and research institutions in shaping vaccine and biopharmaceutical manufacturing infrastructure.",
+        "whatWeOffer": "What We Offer",
+        "offerTitle": "Consulting Services Tailored for Healthcare Innovation",
+        "offerSubtitle": "Focused advisory across the full journey from concept to commercialization:",
+        "approachTitle": "A rigorous approach to excellence",
+        "services": [
+            {
+                "title": "Regulatory Strategy"
+            }
         ]
     },
     "cdmo": {
@@ -1117,7 +1342,8 @@ export const english = {
                 "Predictive maintenance through intelligent facility management",
                 "Data-driven process optimization",
                 "Digital quality and operational management"
-            ]
+            ],
+            "badge": "Technology Driven"
         },
         "sustainability": {
             "title": "Sustainability by Design",
@@ -1131,77 +1357,133 @@ export const english = {
                 "Water conservation and zero liquid discharge planning",
                 "Rainwater harvesting and resource optimization",
                 "IoT-enabled monitoring for sustainable facility operations"
-            ]
-        }
+            ],
+            "badge": "Green Operations"
+        },
+        "qcLab": {
+            "badge": "Quality & Compliance",
+            "title": "QC Lab & Analytical Support",
+            "inProcess": "In-Process Testing",
+            "inProcessDesc": "Real-time monitoring and advanced analytics during all critical manufacturing phases.",
+            "release": "Release Testing",
+            "releaseDesc": "Comprehensive final product testing adhering to strict global pharmacopeial monographs.",
+            "stability": "Stability Studies",
+            "stabilityDesc": "ICH-compliant stability chambers for rigorous long-term and accelerated testing."
+        },
+        "techTransfer": {
+            "title": "Technology Transfer Readiness",
+            "desc": "A streamlined, rigorous process ensuring seamless transition from R&D to full-scale commercial manufacturing.",
+            "step1Title": "Tech Pack Receipt",
+            "step1Desc": "Comprehensive review of process and analytical methods.",
+            "step2Title": "Process Adaptation",
+            "step2Desc": "Facility fit analysis and scale-up engineering.",
+            "step3Title": "Engineering Runs",
+            "step3Desc": "Non-GMP confirmation batches.",
+            "step4Title": "GMP Manufacturing",
+            "step4Desc": "Clinical and commercial production."
+        },
+        "drugProductTitle": "Drug Product Formulation & Filling",
+        "drugProductDesc": "Our sterile fill-finish operations utilize state-of-the-art Isolator and RABS (Restricted Access Barrier Systems) technology to ensure the highest levels of sterility assurance for biologics and vaccines.",
+        "readyCommercial": "Ready for commercial scale packaging",
+        "liquidVials": "Liquid & Lyophilized Vials",
+        "liquidVialsDesc": "High-speed aseptic filling lines integrated with advanced isolator technology.",
+        "pfs": "Pre-Filled Syringes (PFS)",
+        "pfsDesc": "Automated PFS filling under strict environmental controls for maximum sterility.",
+        "upstream": "Upstream Processing",
+        "upstreamDesc": "Bioreactors scalable up to 2000L capacity",
+        "downstream": "Advanced Downstream",
+        "downstreamDesc": "Precision purification and chromatography",
+        "drugSubstanceTitle": "Drug Substance Manufacturing",
+        "drugSubstanceDesc": "Scalable, robust, and highly efficient upstream and downstream processing. We support microbial fermentation and mammalian cell culture platforms to produce high-quality APIs.",
+        "opExcellence": "Operational Excellence",
+        "opExcellenceDesc": "Continuous monitoring and automated controls ensure maximum yield and purity."
     },
     "careers": {
-        "title": "Build a Career with Purpose",
-        "intro": "Join a team where science, strategy and execution come together to create meaningful healthcare impact. At TechInvention, every role contributes to advancing vaccines, biologics and technologies that support access, affordability and resilience across global health ecosystems.",
-        "whyJoinUs": [
-            {
-                "title": "Purpose-led work",
-                "desc": "Contribute to healthcare solutions that matter."
-            },
-            {
-                "title": "Global exposure",
-                "desc": "Work with partners, institutions and experts across diverse geographies."
-            },
-            {
-                "title": "Learning culture",
-                "desc": "Grow through hands-on projects, mentorship and cross-functional collaboration."
-            },
-            {
-                "title": "Ownership mindset",
-                "desc": "Take responsibility, lead ideas and make your contribution visible."
-            },
-            {
-                "title": "Innovation ecosystem",
-                "desc": "Be part of a growing biotech company working across vaccines, biologics and global health infrastructure."
-            }
-        ],
+        "title": "Shape the Future of Global Health",
+        "intro": "Join our dynamic team dedicated to pioneering life-saving vaccines and innovative biotherapeutics across emerging and global markets.",
+        "whyJoinUs": {
+            "title": "Why Join Us",
+            "items": [
+                {
+                    "title": "Purpose-led work",
+                    "desc": "Contribute to healthcare solutions that matter."
+                },
+                {
+                    "title": "Global exposure",
+                    "desc": "Work with partners, institutions and experts across diverse geographies."
+                },
+                {
+                    "title": "Learning culture",
+                    "desc": "Grow through hands-on projects, mentorship and cross-functional collaboration."
+                },
+                {
+                    "title": "Ownership mindset",
+                    "desc": "Take responsibility, lead ideas and make your contribution visible."
+                },
+                {
+                    "title": "Innovation ecosystem",
+                    "desc": "Be part of a growing biotech company working across vaccines, biologics and global health infrastructure."
+                }
+            ]
+        },
         "whoWeLookFor": {
-            "title": "Talent with curiosity, discipline and drive",
+            "title": "Who We Look For",
             "desc": "We welcome professionals who are ambitious, thoughtful and ready to take ownership. Whether you are a scientist, engineer, consultant, regulatory expert, finance professional or corporate leader, TechInvention offers the opportunity to grow with purpose."
         },
-        "testimonials": [
-            {
-                "name": "Shahnawaz Shaikh",
-                "role": "",
-                "experience": "9+ Years",
-                "text": "Having joined TechInvention in an Admin and HR role 10 years ago, I have had the privilege of growing alongside the organisation and taking on greater responsibility, ownership and purpose over the years. It has been an inspiring and deeply fulfilling journey, and I am proud to have witnessed and contributed to TechInvention’s remarkable growth and evolution."
-            },
-            {
-                "name": "Aziz Mandsaurwala",
-                "role": "Senior Manager - Global BD",
-                "experience": "6+ Years",
-                "text": "Working at TechInvention means being part of projects that connect science, strategy and real-world healthcare impact. Every assignment brings learning and growth."
-            },
-            {
-                "name": "Sarang Pathak",
-                "role": "General Manager",
-                "experience": "9+ Years",
-                "text": "Working at TechInvention has given me the opportunity to continuously learn, take on diverse responsibilities and contribute to meaningful work. The trust, exposure and support I have received here have played an important role in my professional growth and confidence."
-            },
-            {
-                "name": "Bhakti Chavan",
-                "role": "Deputy Manager Clinical Trials",
-                "experience": "5+ Years",
-                "text": "I joined TechInvention in 2019 at the start of my career, and over the past 6+ years, I have grown professionally in Preclinical and Clinical vaccine research. The opportunities, exposure, and learning I've received have been invaluable. It has been rewarding to grow alongside the company as it evolved from a startup to establishing its own manufacturing facility."
-            },
-            {
-                "name": "Priya Dhawale",
-                "role": "Deputy Manager - GBD",
-                "experience": "5+ Years",
-                "text": "Completing over six years at TechInvention has been an incredibly rewarding journey. It has been inspiring to witness the company's transformation from a startup into a growing MSME with a strong global presence. Throughout this journey, I have been given the opportunity to work on diverse international business development and strategic consulting projects, collaborate with global stakeholders, and continuously expand my knowledge in the life sciences sector. The trust, support, and learning opportunities provided by the leadership and my colleagues have played a significant role in my professional growth. I look forward to being part of TechInvention's continued success and innovation."
-            },
-            {
-                "name": "Kulsum",
-                "role": "",
-                "experience": "5+ Years",
-                "text": "I’m really grateful that I got the opportunity to start my career here as a fresher. In these five years, I’ve learned so much and grown both personally and professionally. The friendly and supportive work culture has made this journey really special. I got the opportunity to work across different R&D departments, learn new techniques and technologies, and be part of various certifications and audits. Looking back, it feels like I’ve come a long way from where I started. I’m thankful to everyone who has supported, guided, and helped me grow throughout this journey."
-            }
-        ],
-        "openPositions": "Explore opportunities across functions. TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."
+        "testimonials": {
+            "title": "Employee Voices",
+            "subtitle": "Stories from the people growing with TechInvention.",
+            "items": [
+                {
+                    "name": "Shahnawaz Shaikh",
+                    "role": "Admin and HR",
+                    "tenure": "9+ Years",
+                    "quote": "Having joined TechInvention in an Admin and HR role 10 years ago, I have had the privilege of growing alongside the organisation and taking on greater responsibility, ownership and purpose over the years. It has been an inspiring and deeply fulfilling journey, and I am proud to have witnessed and contributed to TechInvention's remarkable growth and evolution."
+                },
+                {
+                    "name": "Aziz Mandsaurwala",
+                    "role": "Senior Manager - Global BD",
+                    "tenure": "6+ Years",
+                    "quote": "Working at TechInvention means being part of projects that connect science, strategy and real-world healthcare impact. Every assignment brings learning and growth."
+                },
+                {
+                    "name": "Sarang Pathak",
+                    "role": "General Manager",
+                    "tenure": "9+ Years",
+                    "quote": "Working at TechInvention has given me the opportunity to continuously learn, take on diverse responsibilities and contribute to meaningful work. The trust, exposure and support I have received here have played an important role in my professional growth and confidence."
+                },
+                {
+                    "name": "Priya Dhawale",
+                    "role": "Deputy Manager - GBD",
+                    "tenure": "5+ Years",
+                    "quote": "Completing over six years at TechInvention has been an incredibly rewarding journey. It has been inspiring to witness the company's transformation from a startup into a growing MSME with a strong global presence."
+                }
+            ]
+        },
+        "openPositions": {
+            "title": "Open Positions",
+            "intro": "TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs.",
+            "noPositions": "We currently do not have any open positions. However, we are always looking for exceptional talent to join our team. You can submit your resume below, and we will get in touch when a suitable opportunity arises.",
+            "spontaneous": "Submit General Application"
+        },
+        "lifeAtTitle": "Life as a Techknight",
+        "form": {
+            "title": "Application Form",
+            "position": "Applying Position",
+            "experience": "Years of Experience",
+            "company": "Current Company / Organization (Optional)",
+            "coverLetter": "Cover Letter / Message (Optional)",
+            "uploadResume": "Upload Resume (PDF, DOC) *",
+            "browseResume": "Drag & drop or browse resume",
+            "submit": "Submit Application",
+            "expRequired": "Please enter your Years of Experience.",
+            "fileRequired": "Please upload your Resume (PDF, DOC, or DOCX).",
+            "successTitle": "Application Submitted Successfully!",
+            "backToOpenings": "Back to All Openings"
+        },
+        "hero": {
+            "badge": "Join Us"
+        }
     },
     "training": {
         "title": "Tailored Training in Vaccine Development & GMP Manufacturing",
@@ -1407,7 +1689,10 @@ export const english = {
                 "org": "Africure Pharmaceuticals Manufacturing Ethiopia PLC.",
                 "feedback": "This program significantly improved my analytical competence in vaccine manufacturing, particularly regarding Quality Control and GMP-based testing."
             }
-        ]
+        ],
+        "unopsBiosafetyTitle": "Biosafety & Biosecurity Training for UNOPS",
+        "unopsVaccineAnalyticsTitle": "Training in Vaccine Analytics for UNOPS",
+        "rcbBioprocessingTitle": "Advanced Bioprocessing Course at Regional Centre for Biotechnology(RCB)"
     },
     "productsDocs": {
         "title": "Vaccines Built to Protect",
@@ -1486,7 +1771,20 @@ export const english = {
             "desc": "For any questions or to report an Adverse Event, please contact our AE Reporting team:",
             "phone": "18008902590",
             "email": "feedback@techinvention.biz",
-            "privacyNote": "Your privacy is important to us. All AE reports shall be handled with strict confidentiality. Personal information is protected and used solely for safety monitoring purposes."
+            "privacyNote": "Your privacy is important to us. All AE reports shall be handled with strict confidentiality. Personal information is protected and used solely for safety monitoring purposes.",
+            "note": "Patient safety and wellbeing remain our highest priority."
+        },
+        "adverseEvents": {
+            "title": "Adverse Event Reporting",
+            "contactText": "For any questions or to report an Adverse Event, please contact our AE Reporting team:",
+            "phoneLabel": "Phone:",
+            "emailLabel": "Email:",
+            "downloadLabel": "Download Reporting Form:",
+            "downloadLink": "AE Reporting form",
+            "downloadFollowUp": "and send your response to the aforementioned email.",
+            "privacy1": "Your privacy is important to us.",
+            "privacy2": "All AE reports shall be handled with strict confidentiality.",
+            "privacy3": "Personal information is protected and used solely for safety monitoring purposes."
         }
     },
     "contactDocs": {
@@ -1496,6 +1794,218 @@ export const english = {
         "address2Title": "Bio-Innovation Centre (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz"
+        "email": "connect@techinvention.biz",
+        "title": "Product & Technical Documentation Request",
+        "subtitle": "Reach out for regulatory dossiers, technical data sheets, and specifications."
+    },
+    "products": {
+        "heroTitle": "Innovative Products for Global Health",
+        "heroDesc": "Discover our extensive range of high-quality vaccines, biologics, and diagnostic solutions designed to make healthcare accessible, reliable, and affordable worldwide.",
+        "explorePortfolio": "Explore Portfolio",
+        "presentation": "Presentation / Pack",
+        "indication": "Indication",
+        "composition": "Composition",
+        "therapeuticUse": "Therapeutic Use",
+        "diagFeat1": "Rapid Point-of-Care Testing",
+        "diagFeat2": "High Sensitivity & Specificity",
+        "diagFeat3": "Cost-Effective Solutions",
+        "diagFeat4": "Regulatory Compliant",
+        "advancedDiagTitle": "Advanced Diagnostic Solutions",
+        "advancedDiagDesc": "Transforming diagnostics with rapid, robust, and point-of-care testing technologies tailored to combat infectious diseases worldwide.",
+        "precisionAssays": "Precision Assays",
+        "goldStandard": "Gold standard performance",
+        "rapidDiagnostics": "Rapid Diagnostics",
+        "lfaTitle": "Lateral Flow Assays (LFA)",
+        "lfaDesc": "Point-of-care rapid diagnostic solutions providing reliable, real-time results for infectious and chronic conditions.",
+        "rapidTest": "Rapid Test",
+        "useCase": "Use Case",
+        "sampleType": "Sample Type",
+        "applications": "Applications",
+        "accessOriented": "Access-Oriented",
+        "accessOrientedDesc": "Built to support availability of essential vaccines across priority markets.",
+        "marketReady": "Market-Ready",
+        "marketReadyDesc": "Focused on regulated, market-authorized vaccine candidates.",
+        "partnershipLed": "Partnership-Led",
+        "partnershipLedDesc": "Designed for institutional, commercial and public health collaborations.",
+        "animalTesting": "Comprehensive testing solutions",
+        "advancedDiagnosticsFor": "Advanced Diagnostics for ",
+        "animalCare": "Animal Care",
+        "vetDesc": "Comprehensive veterinary diagnostic solutions for rapid, precise testing across companion animals and livestock health monitoring.",
+        "vetProductsBtn": "View Veterinary Products",
+        "vetItems": [
+            {
+                "title": "Companion Animal Testing",
+                "desc": "Accurate and rapid diagnostic assays for pets and companion animal wellness."
+            },
+            {
+                "title": "Livestock Health Monitoring",
+                "desc": "Proactive screening and disease surveillance for livestock herds and poultry."
+            },
+            {
+                "title": "Zoonotic Disease Surveillance",
+                "desc": "Early detection of cross-species pathogen transmission under the One Health framework."
+            }
+        ],
+        "title": "Product Portfolio",
+        "subtitle": "Vaccines, Biotherapeutics & Diagnostic Platforms",
+        "desc": "Our approved and pipeline offerings designed to meet global health priorities."
+    },
+    "rnd": {
+        "heroTitle": "Our R&D Ecosystem",
+        "heroDesc": "TechInvention's state-of-the-art R&D facility, the High-impact One Health Research & Innovation ZONe (HORIZON), is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.",
+        "processTitle": "End-to-End R&D Process",
+        "grantsTitle": "Grants & Funding Support",
+        "collaborationsTitle": "Our Collaborations",
+        "collaborationsSubtitle": "Where Institutional Excellence Meets Next-Generation Vaccine Innovation",
+        "collaborationsDesc": "Together, our partnerships are focused on high-priority diseases of major public health significance, including Salmonella, Shigella, tuberculosis, malaria, and meningitis strengthening the pathway from scientific discovery to translational development and future vaccine impact.",
+        "featuresTitle": "Pilot-GMP Features",
+        "pipelineTitle": "Infectious Diseases Pipeline",
+        "discovery": "Discovery",
+        "poc": "Proof-of-Concept",
+        "preclinical": "Pre-clinical",
+        "phase12": "Phase 1/2",
+        "facilityFeatures": [
+            {
+                "title": "Eco Footprint",
+                "points": [
+                    "Compact Design",
+                    "Low Carbon Footprint",
+                    "Cost-Optimized Operations"
+                ]
+            },
+            {
+                "title": "Containment & Safety",
+                "points": [
+                    "BSL-2 Unit Compliance",
+                    "Class C Cleanroom Standards"
+                ]
+            },
+            {
+                "title": "Advanced Bioprocessing",
+                "points": [
+                    "5L & 20L Fermentors",
+                    "State-of-the-Art Equipment"
+                ]
+            },
+            {
+                "title": "Sustainable Utilities",
+                "points": [
+                    "Zero-Liquid Discharge",
+                    "Sustainability-Focused Utilities"
+                ]
+            },
+            {
+                "title": "Air Management",
+                "points": [
+                    "HVAC 70% Energy Recovery",
+                    "Double HEPA Exhaust Filtration"
+                ]
+            },
+            {
+                "title": "Smart Infrastructure",
+                "points": [
+                    "IoT Predictive Maintenance",
+                    "Smart Energy Management"
+                ]
+            }
+        ],
+        "pipelineItems": [
+            "Pneumococcal Conjugate Vaccine (16-valent)",
+            "Hexavalent Meningococcal Vaccine (ABCYWX)",
+            "Pan-Salmonella Vaccine",
+            "Shigella Vaccine",
+            "Meningococcal B Vaccine",
+            "Malaria Vaccine",
+            "Tuberculosis Vaccine"
+        ],
+        "title": "Research & Development",
+        "subtitle": "Next-Generation Biotech Discoveries",
+        "desc": "Proprietary platforms targeting infectious diseases and antimicrobial resistance."
+    },
+    "gmpTraining": {
+        "curriculumTitle": "Training Modules",
+        "curriculumDesc": "Explore our comprehensive training curriculum designed for industry readiness."
+    },
+    "gmpCTA": {
+        "titlePart1": "Launch your career in",
+        "titlePart2": "Vaccine Development and Manufacturing",
+        "writeTo": "Write to",
+        "descEnd": "to learn more about our training programs and upcoming initiatives.",
+        "title": "Launch your career in Vaccine Development and Manufacturing"
+    },
+    "csr": {
+        "title": "Our Initiatives",
+        "subtitle": "We believe CSR must take an inclusive approach to all the stakeholders of the business to achieve our shared goal of bringing greater health equity through affordable, acceptable, and accessible healthcare for all.",
+        "initiative1": {
+            "badge": "Research & Development Support",
+            "title": "Contribution to PU- TechInvention",
+            "desc": "TechInvention Lifecare limited, donated Rs 6 lakh to the BioNest-PU, one of North India’s top bio-incubators housed at Punjab University, Chandigarh, for research and development linked to the SARS-CoV2, at the onset of the COVID-19 pandemic."
+        },
+        "initiative2": {
+            "badge": "National Pandemic Relief",
+            "title": "Contribution to PM cares fund",
+            "desc": "TechInvention contributed to the PM Cares Fund, established by The Hon’ble Prime Minister of India in the wake of the COVID-19 pandemic, to carry out and support relief during a public health emergency, including the creation or upgrade of healthcare or pharmaceutical facilities, other necessary infrastructure, and also funding relevant research."
+        },
+        "initiative3": {
+            "badge": "Scientific Collaboration & Infrastructure",
+            "title": "BSL-2 Lab",
+            "desc": "TechInvention inaugurated its BSL-2 R&D lab at the Regional Centre for Biotechnology's BSC BioNEST Bioincubator (RCB BBB) on December 6, 2022, in the presence of notable figures from the biotech industry and academia, as well as representatives from other start-ups."
+        }
+    },
+    "publications": {
+        "title": "Our Publications",
+        "items": {
+            "pcv": {
+                "title": "Streptococcus pneumoniae serotype distribution in low- and middle-income countries of South Asia: Do we need to revisit the pneumococcal vaccine strategy?"
+            },
+            "Overcoming-barriers": {
+                "title": "Overcoming barriers to medical countermeasures: Strengthening global biosecurity"
+            },
+            "Lancet Euvichol": {
+                "title": "Comparison of the immunogenicity and safety of Euvichol-Plus with Shanchol in healthy Indian adults and children: an open-label, randomized, multicentre, non-inferiority, parallel-group, phase 3 trial"
+            },
+            "Frontiers": {
+                "title": "Beyond antibiotics: phage-encoded lysins against Gram-negative pathogens"
+            },
+            "Taylor Capacity Building": {
+                "title": "Capacity Building for Vaccine Manufacturing Across Developing Countries: The Way Forward"
+            },
+            "Vaccine COVID-19": {
+                "title": "COVID-19 management landscape: A need for an affordable platform to manufacture safe and efficacious biotherapeutics and prophylactics for the developing countries"
+            }
+        }
+    },
+    "gmpOverview": {
+        "pills": [
+            "Engaging Scientific & Technical Curriculum",
+            "Hands-On Training In GMP Production",
+            "Industry Experts Led Curriculum",
+            "Global Regulatory Alignment",
+            "Career & Industry Readiness Focus"
+        ]
+    },
+    "gmpSubjects": {
+        "title": "Training Programs & Subjects",
+        "desc": "Browse our carefully structured topics covering regulatory compliance, cleanroom processes, validation cycles, and quality guidelines.",
+        "keyFocus": "Key Focus Areas"
+    },
+    "thankYou": {
+        "title": "Thank You!",
+        "desc": "Your message has been received. Our team will get back to you shortly.",
+        "button": "Back to Home"
+    },
+    "search": {
+        "showingResults": "Showing results for",
+        "enterPrompt": "Enter a search term to find products, vaccines, news and documents",
+        "noResults": "No results found",
+        "noResultsDesc": "Try adjusting your search terms or keywords"
+    },
+    "trustedPartners": {
+        "title": "Trusted by Global Partners"
+    },
+    "home": {
+        "cta": {
+            "desc": "Connect with us to explore manufacturing partnerships in vaccines and biotherapeutics."
+        }
     }
 };

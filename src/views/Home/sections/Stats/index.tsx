@@ -9,9 +9,13 @@ import dbImg from '../../../../../public/Certification_banner_01.png';
 import forbesImg from '../../../../../public/Certification_banner.png';
 
 const Stats = () => {
-    const { language } = useLanguage();
+    const { language, t } = useLanguage();
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
+    const impactTitle = (typeof t('common.ourImpact') === 'string' && t('common.ourImpact') !== 'common.ourImpact')
+        ? t('common.ourImpact')
+        : "Our Impact";
 
     return (
         <div ref={containerRef} className="py-20 bg-slate-50/50 w-full mt-12 md:mt-16 border-t border-b border-slate-100/60 font-sans">
@@ -20,7 +24,7 @@ const Stats = () => {
                 {/* Aligned Top Left Title */}
                 <div className="mb-10">
                     <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide">
-                        <SplitTitle title="Our Impact" />
+                        <SplitTitle title={impactTitle} />
                     </h2>
                 </div>
 

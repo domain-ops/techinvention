@@ -13,7 +13,12 @@ const QuoteIcon = ({ className }: { className?: string }) => (
 const VisionMissionValues = () => {
     const { t } = useLanguage();
 
-    const values = [
+    const rawValues = t('about.values.items') as any[];
+    const values = (rawValues && rawValues.length > 0) ? rawValues.map((v, i) => ({
+        number: `0${i + 1}`,
+        title: v.title,
+        desc: v.desc
+    })) : [
         {
             number: "01",
             title: "Integrity",
@@ -41,11 +46,11 @@ const VisionMissionValues = () => {
                         <ScrollReveal direction="up">
                             <div className="mb-4">
                                 <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
-                                    <SplitTitle title="Purpose & Principles" />
+                                    <SplitTitle title={t('about.vision.title') || "Purpose & Principles"} />
                                 </h2>
                             </div>
                             <p className="text-black text-[16px] md:text-[18px] font-medium leading-relaxed text-left">
-                                The foundation of our organization is built on a clear vision for the future, a driving mission for today, and the core values that guide our every step.
+                                {t('about.vision.desc') || "The foundation of our organization is built on a clear vision for the future, a driving mission for today, and the core values that guide our every step."}
                             </p>
                         </ScrollReveal>
                     </div>
@@ -58,9 +63,9 @@ const VisionMissionValues = () => {
                         <div className="w-full max-w-5xl mr-auto relative p-8 md:p-12 rounded-2xl bg-gradient-to-br from-[#5C7625]/5 via-slate-50/50 to-[#1955A6]/5 border border-slate-100/80 shadow-[0_8px_30px_rgba(0,0,0,0.015)]">
                             <QuoteIcon className="w-12 h-12 text-[#5C7625]/15 absolute top-6 left-6 pointer-events-none" />
                             <div className="relative z-10 pl-6 md:pl-10 border-l-4 border-[#5C7625]">
-                                <span className="block text-xs font-bold tracking-widest text-[#5C7625] uppercase mb-3">Our Mission</span>
+                                <span className="block text-xs font-bold tracking-widest text-[#5C7625] uppercase mb-3">{t('about.mission.title') || "Our Mission"}</span>
                                 <h3 className="text-2xl md:text-3xl lg:text-[32px] font-medium leading-[1.4] text-slate-800">
-                                    "Access to Priority Vaccines Should Not Only be the Privilege of Just the Affording Few."
+                                    "{t('about.mission.desc') || "Access to Priority Vaccines Should Not Only be the Privilege of Just the Affording Few."}"
                                 </h3>
                             </div>
                         </div>
@@ -70,7 +75,7 @@ const VisionMissionValues = () => {
                     <div className="w-full relative pt-12 md:pt-16 border-t border-slate-100">
                         <div className="mb-12 text-left relative z-10">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                                <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Values</span>
+                                <SplitTitle title={t('about.values.title') || "Our Values"} />
                             </h2>
                         </div>
 

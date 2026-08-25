@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import buildingImg from '../../../assets/images/GCMC.jpg.jpeg';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const ContactHero: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="relative w-full overflow-hidden font-sans">
 
@@ -45,14 +49,14 @@ const ContactHero: React.FC = () => {
                 {/* Text overlaid on top of image */}
                 <div className="absolute inset-0 flex items-center">
                     <div className="w-full max-w-[1300px] mx-auto px-6 md:px-12">
-                        <div className="w-full lg:w-[42%]">
+                        <div className="w-full lg:w-[42%] text-left">
                             <motion.h1
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.7, ease: 'easeOut' }}
                                 className="text-[36px] md:text-[52px] lg:text-[62px] font-bold text-[#0d2a55] leading-tight mb-4"
                             >
-                                Contact Us
+                                {t('navbar.contactUs') || t('contact.title') || "Contact Us"}
                             </motion.h1>
 
                             {/* Blue underline accent */}
@@ -69,7 +73,7 @@ const ContactHero: React.FC = () => {
                                 transition={{ duration: 0.7, delay: 0.4 }}
                                 className="text-[#3a5575] text-base md:text-lg font-normal leading-relaxed"
                             >
-                                Let's connect to create impact.
+                                {t('contact.subtitle') || "Let's connect to create impact."}
                             </motion.p>
                         </div>
                     </div>

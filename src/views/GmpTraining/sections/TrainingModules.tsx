@@ -172,8 +172,21 @@ const modules = [
     }
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function TrainingModules() {
+    const { t } = useLanguage();
     const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const rawModules = (t('training.modules') || t('trainingModules.modules') || t('gmpSubjects.modules')) as any[];
+    const modulesToUse = (Array.isArray(rawModules) && rawModules.length > 0)
+        ? rawModules.map((m: any, i: number) => ({
+            id: m.id || i + 1,
+            title: m.title || modules[i]?.title || "",
+            description: m.description || m.desc || modules[i]?.description || "",
+            keyFocus: Array.isArray(m.keyFocus) ? m.keyFocus : (Array.isArray(m.focusAreas) ? m.focusAreas : (modules[i]?.keyFocus || []))
+        }))
+        : modules;
 
     const toggleAccordion = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -190,17 +203,17 @@ export default function TrainingModules() {
                     <ScrollReveal direction="up">
                         
                         <h2 className="text-[24px] md:text-[38px] font-medium tracking-wide mb-4 leading-tight">
-                            <SplitTitle title="Training Modules" />
+                            <SplitTitle title={t('gmpTraining.curriculumTitle') || t('gmpSubjects.title') || "Training Modules"} />
                         </h2>
                         <p className="text-slate-600 font-medium text-[16px] md:text-[18px] tracking-wide max-w-2xl">
-                            Explore our comprehensive training curriculum designed for industry readiness.
+                            {t('gmpTraining.curriculumDesc') || t('gmpSubjects.desc') || "Explore our comprehensive training curriculum designed for industry readiness."}
                         </p>
                     </ScrollReveal>
                 </div>
 
                 {/* Accordions */}
                 <div className="space-y-4">
-                    {modules.map((module, index) => (
+                    {modulesToUse.map((module: any, index: number) => (
                         <div 
                             key={index} 
                             className={`border transition-all duration-300 rounded-2xl overflow-hidden ${
@@ -240,10 +253,10 @@ export default function TrainingModules() {
 
                                             <div>
                                                 <h4 className="text-slate-900 font-bold text-sm uppercase tracking-wider mb-3">
-                                                    Key Focus Areas
+                                                    {t('gmpSubjects.keyFocus') || "Key Focus Areas"}
                                                 </h4>
                                                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                                    {module.keyFocus.map((focus, idx) => (
+                                                    {(module.keyFocus || []).map((focus: string, idx: number) => (
                                                         <li key={idx} className="flex items-start gap-3">
                                                             <CheckCircle2 className="w-5 h-5 text-brand-secondary shrink-0 mt-0.5" />
                                                             <span className="text-slate-600 font-medium text-sm">

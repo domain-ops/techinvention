@@ -4,9 +4,13 @@ import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { Package, ShieldAlert, Droplet } from 'lucide-react';
 import abstractBg from '../../../assets/images/iridescent_glass_dome.png';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const DrugProduct = () => {
+    const { t } = useLanguage();
+
     return (
-        <section className="py-24 bg-brand-primary/5 relative overflow-hidden">
+        <section className="py-24 bg-brand-primary/5 relative overflow-hidden font-sans">
             <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
                 <img loading="lazy" src={abstractBg} alt="" className="w-full h-full object-cover blur-sm" />
             </div>
@@ -19,14 +23,14 @@ const DrugProduct = () => {
                                 <Package size={32} />
                             </div>
                             <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight text-brand-content mb-8 leading-tight">
-                                Drug Product Formulation & Filling
+                                {t('cdmo.drugProductTitle') || "Drug Product Formulation & Filling"}
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                                Our sterile fill-finish operations utilize state-of-the-art Isolator and RABS (Restricted Access Barrier Systems) technology to ensure the highest levels of sterility assurance for biologics and vaccines.
+                                {t('cdmo.drugProductDesc') || "Our sterile fill-finish operations utilize state-of-the-art Isolator and RABS (Restricted Access Barrier Systems) technology to ensure the highest levels of sterility assurance for biologics and vaccines."}
                             </p>
                             <div className="inline-flex items-center gap-4 bg-white px-6 py-4 rounded-full border border-gray-200 shadow-sm">
                                 <div className="w-3 h-3 rounded-full bg-brand-secondary animate-pulse" />
-                                <span className="text-brand-content font-medium tracking-wide">Ready for commercial scale packaging</span>
+                                <span className="text-brand-content font-medium tracking-wide">{t('cdmo.readyCommercial') || "Ready for commercial scale packaging"}</span>
                             </div>
                         </ScrollReveal>
                     </div>
@@ -41,8 +45,8 @@ const DrugProduct = () => {
                                     <div className="w-12 h-12 bg-brand-primary/10 text-brand-primary rounded-xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
                                         <Droplet size={24} />
                                     </div>
-                                    <span className="text-brand-content font-bold mb-3 text-xl relative z-10">Liquid & Lyophilized Vials</span>
-                                    <p className="text-gray-600 relative z-10 text-sm leading-relaxed">High-speed aseptic filling lines integrated with advanced isolator technology.</p>
+                                    <span className="text-brand-content font-bold mb-3 text-xl relative z-10">{t('cdmo.liquidVials') || "Liquid & Lyophilized Vials"}</span>
+                                    <p className="text-gray-600 relative z-10 text-sm leading-relaxed">{t('cdmo.liquidVialsDesc') || "High-speed aseptic filling lines integrated with advanced isolator technology."}</p>
                                 </motion.div>
 
                                 <motion.div 
@@ -52,8 +56,8 @@ const DrugProduct = () => {
                                     <div className="w-12 h-12 bg-brand-secondary/10 text-brand-secondary rounded-xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
                                         <ShieldAlert size={24} />
                                     </div>
-                                    <span className="text-brand-content font-bold mb-3 text-xl relative z-10">Pre-Filled Syringes (PFS)</span>
-                                    <p className="text-gray-600 relative z-10 text-sm leading-relaxed">Automated PFS filling under strict environmental controls for maximum sterility.</p>
+                                    <span className="text-brand-content font-bold mb-3 text-xl relative z-10">{t('cdmo.pfs') || "Pre-Filled Syringes (PFS)"}</span>
+                                    <p className="text-gray-600 relative z-10 text-sm leading-relaxed">{t('cdmo.pfsDesc') || "Automated PFS filling under strict environmental controls for maximum sterility."}</p>
                                 </motion.div>
                             </div>
                         </ScrollReveal>

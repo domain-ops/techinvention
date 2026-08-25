@@ -29,7 +29,10 @@ interface CurrentOpeningsProps {
     onSelectJob: (jobTitle: string) => void;
 }
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
+    const { t } = useLanguage();
     const [expandedJobId, setExpandedJobId] = useState<string | null>(null);
 
     return (
@@ -43,13 +46,12 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                         {/* Header for Open Positions */}
                         <div className="mb-10">
                             <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-4">
-                                <span className="text-[#1955A6]">Open</span> <span className="text-[#5C7625]">Positions</span>
+                                <SplitTitle title={t('careers.openPositions.title') || "Open Positions"} />
                             </h2>
-                            <h3 className="text-xl md:text-2xl text-slate-700 font-medium mb-4">
-                                Explore opportunities across functions
-                            </h3>
                             <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
-                                TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs.
+                                {typeof t('careers.openPositions') === 'string' 
+                                    ? t('careers.openPositions') 
+                                    : "TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."}
                             </p>
                         </div>
 
@@ -61,9 +63,8 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                     {jobs.length === 0 ? (
                         <div className="mt-4 text-center max-w-2xl mx-auto p-10 bg-white rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center">
                             <Briefcase className="w-12 h-12 text-[#1955A6] mb-4" />
-                            <h3 className="text-xl font-bold text-slate-800 mb-2">No Active Openings</h3>
                             <p className="text-slate-600 text-[15px] leading-relaxed mb-6 font-medium">
-                                We currently do not have any open positions. However, we are always looking for exceptional talent to join our team. You can submit your resume below, and we will get in touch when a suitable opportunity arises.
+                                {t('careers.openPositions.noPositions') || "We currently do not have any open positions. However, we are always looking for exceptional talent to join our team. You can submit your resume below, and we will get in touch when a suitable opportunity arises."}
                             </p>
                             <button
                                 onClick={() => {
@@ -74,7 +75,7 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                                 }}
                                 className="px-6 py-3 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full transition-all duration-300 text-sm shadow-md"
                             >
-                                Submit General Application
+                                {t('careers.openPositions.spontaneous') || "Submit General Application"}
                             </button>
                         </div>
                     ) : (

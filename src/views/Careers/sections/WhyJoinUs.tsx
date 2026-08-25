@@ -4,40 +4,51 @@ import { Heart, Globe2, BookOpen, Lightbulb, Rocket } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-const joinReasons = [
+import { useLanguage } from '../../../context/LanguageContext';
+
+const icons = [Heart, Globe2, BookOpen, Lightbulb, Rocket];
+const colors = ["#1955A6", "#5C7625", "#1955A6", "#5C7625", "#1955A6"];
+
+const DEFAULT_REASONS = [
     {
         title: "Purpose-led work",
-        desc: "Contribute to healthcare solutions that matter.",
-        icon: Heart,
-        color: "#1955A6"
+        desc: "Contribute to healthcare solutions that matter."
     },
     {
         title: "Global exposure",
-        desc: "Work with partners, institutions and experts across diverse geographies.",
-        icon: Globe2,
-        color: "#5C7625"
+        desc: "Work with partners, institutions and experts across diverse geographies."
     },
     {
         title: "Learning culture",
-        desc: "Grow through hands-on projects, mentorship and cross-functional collaboration.",
-        icon: BookOpen,
-        color: "#1955A6"
+        desc: "Grow through hands-on projects, mentorship and cross-functional collaboration."
     },
     {
         title: "Ownership mindset",
-        desc: "Take responsibility, lead ideas and make your contribution visible.",
-        icon: Lightbulb,
-        color: "#5C7625"
+        desc: "Take responsibility, lead ideas and make your contribution visible."
     },
     {
         title: "Innovation ecosystem",
-        desc: "Be part of a growing biotech company working across vaccines, biologics and global health infrastructure.",
-        icon: Rocket,
-        color: "#1955A6"
+        desc: "Be part of a growing biotech company working across vaccines, biologics and global health infrastructure."
     }
 ];
 
 export default function WhyJoinUs() {
+    const { t } = useLanguage();
+
+    const rawReasons = t('careers.whyJoinUs.items') as any[];
+    const reasons = Array.isArray(rawReasons) && rawReasons.length > 0
+        ? rawReasons.map((item, i) => ({
+            title: item.title,
+            desc: item.desc,
+            icon: icons[i % icons.length],
+            color: colors[i % colors.length]
+        }))
+        : DEFAULT_REASONS.map((item, i) => ({
+            ...item,
+            icon: icons[i % icons.length],
+            color: colors[i % colors.length]
+        }));
+
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
             {/* Background elements */}
@@ -48,15 +59,15 @@ export default function WhyJoinUs() {
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-6 leading-tight text-slate-900">
-                            <SplitTitle title="Why Join Us" />
+                            <SplitTitle title={t('careers.whyJoinUs.title') || "Why Join Us"} />
                         </h2>
                     </ScrollReveal>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {joinReasons.map((reason, index) => {
+                    {reasons.map((reason, index) => {
                         const Icon = reason.icon;
-                        const isLastAndOdd = index === joinReasons.length - 1 && joinReasons.length % 2 !== 0;
+                        const isLastAndOdd = index === reasons.length - 1 && reasons.length % 2 !== 0;
                         const colSpanClass = isLastAndOdd ? "lg:col-span-1 md:col-span-2 md:w-1/2 md:mx-auto lg:w-full lg:mx-0" : "";
                         
                         return (

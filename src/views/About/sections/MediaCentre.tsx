@@ -28,19 +28,23 @@ const mediaItems = [
     }
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const MediaCentre = () => {
+    const { t } = useLanguage();
+
     return (
-        <section className="py-24 bg-white relative">
+        <section className="py-24 bg-white relative font-sans">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                         <div>
                             <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight">
-                                <SplitTitle title="Latest Updates" />
+                                <SplitTitle title={t('about.latestUpdates') || "Latest Updates"} />
                             </h2>
                         </div>
                         <a href="#" className="inline-flex items-center justify-center px-8 py-3 border-2 border-brand-primary text-brand-primary font-semibold rounded-full hover:bg-brand-primary hover:text-white transition-all duration-300">
-                            View All News
+                            {t('about.viewAllNews') || "View All News"}
                         </a>
                     </div>
                 </ScrollReveal>
@@ -72,7 +76,7 @@ const MediaCentre = () => {
                                         {item.title}
                                     </h3>
                                     <div className="mt-auto pt-4 flex items-center text-brand-primary font-semibold group-hover:text-brand-secondary transition-colors text-sm uppercase tracking-wide">
-                                        <span>Read More</span>
+                                        <span>{t('common.readNow') || "Read More"}</span>
                                         <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>

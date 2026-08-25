@@ -72,9 +72,9 @@ const AdvisoryHeader = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-white/80 text-[10px] sm:text-xs md:text-sm font-medium mb-8 md:mb-12 drop-shadow-md uppercase tracking-[0.15em] md:tracking-widest text-center"
                 >
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                    <Link href="/" className="hover:text-white transition-colors">{t('navbar.home') || "Home"}</Link>
                     <span className="text-white/60">/</span>
-                    <span className="text-white/80">{t('megaMenu.services')}</span>
+                    <span className="text-white/80">{t('megaMenu.services') || "Services"}</span>
                     <span className="text-white/60">/</span>
                     <span className="text-white">{title}</span>
                 </motion.div>
@@ -89,7 +89,7 @@ const AdvisoryHeader = () => {
                         href="/contact-us"
                         className="group relative flex items-center justify-center bg-brand-primary text-white hover:bg-[#1755A6] px-6 py-3 md:px-8 md:py-3.5 rounded-full text-[10px] md:text-[12px] font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase transition-colors duration-300 shadow-xl shadow-brand-primary/20 w-auto"
                     >
-                        <span className="relative z-10">CONSULT WITH US</span>
+                        <span className="relative z-10">{t('strategicAdvisory.hero.cta') || t('navbar.contactUs') || "CONSULT WITH US"}</span>
                         <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 ml-2 md:ml-3 group-hover:translate-x-1 transition-transform duration-300 text-white flex-shrink-0" strokeWidth={2.5} />
                     </Link>
                 </motion.div>

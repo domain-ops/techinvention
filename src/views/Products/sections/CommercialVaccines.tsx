@@ -72,13 +72,13 @@ const CommercialVaccines = () => {
                                             
                                             <div className="space-y-6">
                                                 <div>
-                                                    <h5 className="font-semibold text-gray-900 mb-2 text-sm">Presentation</h5>
+                                                    <h5 className="font-semibold text-gray-900 mb-2 text-sm">{t('products.presentation') || "Presentation"}</h5>
                                                     <div className="bg-gray-50 px-4 py-2 rounded-lg text-sm text-gray-700 inline-block border border-gray-100">
                                                         {vaccine.pack}
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h5 className="font-semibold text-gray-900 mb-2 text-sm">Indication</h5>
+                                                    <h5 className="font-semibold text-gray-900 mb-2 text-sm">{t('products.indication') || "Indication"}</h5>
                                                     <p className="text-sm text-gray-600 bg-blue-50/50 p-4 rounded-xl border border-blue-100/50">
                                                         {vaccine.use}
                                                     </p>

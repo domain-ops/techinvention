@@ -29,7 +29,7 @@ import PageComponent from '../../views/Search';
 
 export default function Page() {
   return (
-    <Suspense fallback={<div className="w-full min-h-[50vh] flex items-center justify-center">Loading search...</div>}>
+    <Suspense fallback={<div className="w-full min-h-[50vh] flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-brand-primary border-t-transparent animate-spin" /></div>}>
       <PageComponent />
     </Suspense>
   );

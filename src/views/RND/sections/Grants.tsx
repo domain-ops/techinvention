@@ -19,7 +19,11 @@ const grantsList = [
     }
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function Grants() {
+    const { t } = useLanguage();
+
     return (
         <section className="py-20 bg-slate-50 relative font-sans border-b border-slate-200/60">
             {/* Subtle background glow */}
@@ -31,7 +35,7 @@ export default function Grants() {
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                            <SplitTitle title="Grants & Funding Support" />
+                            <SplitTitle title={t('rnd.grantsTitle') || "Grants & Funding Support"} />
                         </h2>
                     </ScrollReveal>
                 </div>

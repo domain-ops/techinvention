@@ -27,7 +27,7 @@ interface PipelineItem {
 }
 
 export default function VaccinePipeline() {
-    const { t } = useLanguage();
+    const { t, isRTL } = useLanguage();
 
     const pipelineData = t('vaccinePipeline.items') as PipelineItem[] || [];
 
@@ -38,8 +38,8 @@ export default function VaccinePipeline() {
             <div className="max-w-[1300px] mx-auto px-6 relative z-10 w-full">
                 {/* GLOBAL SECTION HEADER */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
-                    <div className="max-w-3xl text-left">
-                        <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6 text-left">
+                    <div className={`max-w-3xl ${isRTL ? 'text-right' : 'text-left'}`}>
+                        <h2 className={`text-[24px] md:text-[36px] font-medium tracking-wide mb-6 ${isRTL ? 'text-right' : 'text-left'}`}>
                             <SplitTitle title="R&D Vaccine & Biologics Pipeline" />
                         </h2>
                     </div>
@@ -55,7 +55,7 @@ export default function VaccinePipeline() {
                                 <div>{/* Empty for row label */}</div>
                                 
                                 {/* Phase Columns Container */}
-                                <div className="grid grid-cols-5 w-full pr-12">
+                                <div className={`grid grid-cols-5 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'}`}>
                                     <div className="text-center font-bold">{t('vaccinePipeline.phases.preClinical') as string}</div>
                                     <div className="text-center">{t('vaccinePipeline.phases.phase1') as string}</div>
                                     <div className="text-center">{t('vaccinePipeline.phases.phase2') as string}</div>
@@ -63,7 +63,7 @@ export default function VaccinePipeline() {
                                     <div className="text-center font-bold">{t('vaccinePipeline.phases.approved') as string}</div>
                                 </div>
                                 
-                                <div className="text-left pl-8">{t('vaccinePipeline.milestonesTitle') as string}</div>
+                                <div className={`${isRTL ? 'text-right pr-8' : 'text-left pl-8'}`}>{t('vaccinePipeline.milestonesTitle') as string}</div>
                             </div>
 
                             {/* Table Rows Container with vertical guides */}
@@ -72,7 +72,7 @@ export default function VaccinePipeline() {
                                 {/* Vertical Dotted Guide Lines (Background Layer) */}
                                 <div className="absolute inset-0 grid grid-cols-[200px_1fr_280px] xl:grid-cols-[240px_1fr_320px] gap-0 pointer-events-none pb-8 h-full z-0">
                                     <div></div>
-                                    <div className="grid grid-cols-5 w-full pr-12 h-full">
+                                    <div className={`grid grid-cols-5 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'} h-full`}>
                                         <div className="border-l border-dotted border-slate-300"></div>
                                         <div className="border-l border-dotted border-slate-300"></div>
                                         <div className="border-l border-dotted border-slate-300"></div>
@@ -93,13 +93,13 @@ export default function VaccinePipeline() {
                                                 key={idx} 
                                                 className={`grid grid-cols-[200px_1fr_280px] xl:grid-cols-[240px_1fr_320px] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50/50' : 'bg-transparent'}`}
                                             >
-                                                {/* Left Text Label */}
-                                                <div className="pr-4 xl:pr-6 flex items-center justify-end text-right text-[14px] xl:text-[15px] font-bold text-slate-900 py-4 border-r border-transparent">
+                                                {/* Text Label */}
+                                                <div className={`px-4 xl:px-6 flex items-center ${isRTL ? 'justify-start text-left' : 'justify-end text-right'} text-[14px] xl:text-[15px] font-bold text-slate-900 py-4 border-r border-transparent`}>
                                                     {item.name}
                                                 </div>
 
                                                 {/* Tracking Line Area */}
-                                                <div className="relative flex items-center py-6 w-full pr-12 pl-0 pointer-events-none">
+                                                <div className={`relative flex items-center py-6 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'} pointer-events-none`}>
                                                     <div className="relative w-full h-24 flex items-center">
                                                         
                                                         {/* Central tracking line connecting nodes */}
@@ -119,19 +119,25 @@ export default function VaccinePipeline() {
                                                             viewport={{ once: true }}
                                                             transition={{ duration: 0.5, delay: 1.6 }}
                                                             className="absolute z-20"
-                                                            style={{ left: lineWidthPercent, transform: 'translateX(-25%)' }}
+                                                            style={isRTL ? { 
+                                                                right: lineWidthPercent, 
+                                                                transform: 'translateX(50%) scaleX(-1)' 
+                                                            } : { 
+                                                                left: lineWidthPercent, 
+                                                                transform: 'translateX(-50%)' 
+                                                            }}
                                                         >
                                                             <VialIcon className="w-7 h-7 bg-white rounded-full p-0.5" color={item.color} />
                                                         </motion.div>
 
                                                         {/* Sub-label next to end node */}
                                                         <motion.div
-                                                            initial={{ opacity: 0, x: -10 }}
+                                                            initial={{ opacity: 0, x: isRTL ? 10 : -10 }}
                                                             whileInView={{ opacity: 1, x: 0 }}
                                                             viewport={{ once: true }}
                                                             transition={{ delay: 1.8 }}
                                                             className="absolute text-[12px] text-slate-800 font-bold tracking-tight whitespace-nowrap z-30"
-                                                            style={{ left: `calc(${lineWidthPercent} + 28px)` }}
+                                                            style={isRTL ? { right: `calc(${lineWidthPercent} + 28px)` } : { left: `calc(${lineWidthPercent} + 28px)` }}
                                                         >
                                                             {idx % 2 === 0 ? t('vaccinePipeline.targetAdults') as string : t('vaccinePipeline.targetInfants') as string}
                                                         </motion.div>
@@ -140,11 +146,11 @@ export default function VaccinePipeline() {
                                                 </div>
 
                                                 {/* Right Milestones / Notes */}
-                                                <div className="pl-8 py-6 text-[12px] font-medium tracking-tight text-slate-800 flex flex-col justify-center border-l border-slate-300 text-left">
+                                                <div className={`${isRTL ? 'pr-8 border-r text-right' : 'pl-8 border-l text-left'} py-6 text-[12px] font-medium tracking-tight text-slate-800 flex flex-col justify-center border-slate-300`}>
                                                     {item.note ? (
                                                         <div className="space-y-2">
                                                             <p className="font-bold text-slate-900 mb-1">{t('vaccinePipeline.announceSafety') as string}</p>
-                                                            <ul className="list-disc pl-4 space-y-1 font-medium text-slate-700">
+                                                            <ul className={`list-disc ${isRTL ? 'pr-4' : 'pl-4'} space-y-1 font-medium text-slate-700`}>
                                                                 <li>{item.note}</li>
                                                                 {idx % 2 === 0 && <li>{t('vaccinePipeline.phase3Trials') as string}</li>}
                                                             </ul>
@@ -201,7 +207,7 @@ export default function VaccinePipeline() {
                                                 whileInView={{ width: lineWidthPercent }}
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                                                className="absolute top-0 left-0 h-full rounded-full"
+                                                className={`absolute top-0 ${isRTL ? 'right-0' : 'left-0'} h-full rounded-full`}
                                                 style={{ backgroundColor: item.color }}
                                             />
                                             <motion.div 
@@ -210,7 +216,13 @@ export default function VaccinePipeline() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.5, delay: 1.6 }}
                                                 className="absolute top-1/2 shadow-sm z-10"
-                                                style={{ left: lineWidthPercent, transform: 'translate(-25%, -50%)' }}
+                                                style={isRTL ? { 
+                                                    right: lineWidthPercent, 
+                                                    transform: 'translate(50%, -50%) scaleX(-1)' 
+                                                } : { 
+                                                    left: lineWidthPercent, 
+                                                    transform: 'translate(-50%, -50%)' 
+                                                }}
                                             >
                                                 <VialIcon className="w-5 h-5 bg-white rounded-full border border-slate-100 p-0.5" color={item.color} />
                                             </motion.div>
@@ -221,7 +233,7 @@ export default function VaccinePipeline() {
                                     {item.note && (
                                         <div className="bg-slate-50 rounded-none p-4 border border-slate-200/60">
                                             <p className="font-bold text-[10px] uppercase tracking-wider text-slate-500 mb-2">{t('vaccinePipeline.milestonesTitleShort') as string}</p>
-                                            <ul className="text-xs font-medium text-slate-700 list-disc pl-4 space-y-1">
+                                            <ul className={`text-xs font-medium text-slate-700 list-disc ${isRTL ? 'pr-4' : 'pl-4'} space-y-1`}>
                                                 <li>{item.note}</li>
                                                 {idx % 2 === 0 && <li>{t('vaccinePipeline.phase3Trials') as string}</li>}
                                             </ul>

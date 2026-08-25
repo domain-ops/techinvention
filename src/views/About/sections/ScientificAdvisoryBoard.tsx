@@ -30,7 +30,10 @@ const advisoryMembers = [
     }
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const ScientificAdvisoryBoard = () => {
+    const { t } = useLanguage();
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const scroll = (direction: 'left' | 'right') => {
@@ -51,10 +54,10 @@ const ScientificAdvisoryBoard = () => {
                 <ScrollReveal direction="up">
                     <div className="mb-10 md:mb-12 max-w-4xl">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal text-left text-brand-primary mb-4">
-                            <SplitTitle title="Scientific Advisory Board" />
+                            <SplitTitle title={t('about.scientificAdvisory.title') || "Scientific Advisory Board"} />
                         </h2>
                         <p className="text-[#475569] text-[16px] md:text-[18px] font-medium leading-relaxed text-left">
-                            Bringing together eminent scientific leaders whose expertise strengthens our vaccine research, development and innovation agenda.
+                            {t('about.scientificAdvisory.desc') || "Bringing together eminent scientific leaders whose expertise strengthens our vaccine research, development and innovation agenda."}
                         </p>
                     </div>
                 </ScrollReveal>

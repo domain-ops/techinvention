@@ -1,3 +1,4 @@
+"use client";
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { english } from '../translations/languages/english';
 import { loadTranslation, type Language } from '../translations';
@@ -47,15 +48,38 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     const t = (key: string) => {
         const keys = key.split('.');
         let value: any = translationsData;
+        let found = true;
 
         for (const k of keys) {
-            if (value && value[k]) {
+            if (value && value[k] !== undefined) {
                 value = value[k];
             } else {
-                return key; // Fallback to key if not found
+                found = false;
+                break;
             }
         }
-        return value;
+
+        if (found && value !== undefined) {
+            return value;
+        }
+
+        // Fallback to English dictionary
+        let engValue: any = english;
+        let engFound = true;
+        for (const k of keys) {
+            if (engValue && engValue[k] !== undefined) {
+                engValue = engValue[k];
+            } else {
+                engFound = false;
+                break;
+            }
+        }
+
+        if (engFound && engValue !== undefined) {
+            return engValue;
+        }
+
+        return "";
     };
 
     const isRTL = language === 'ar';

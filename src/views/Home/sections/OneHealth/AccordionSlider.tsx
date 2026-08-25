@@ -108,7 +108,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                            whileTap={{ scale: 0.95 }}
                                            className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
                                          >
-                                           <span>Know More</span>
+                                           <span>{t('oneHealth.knowMore') || 'Know More'}</span>
                                            <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
                                              <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
                                              <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
@@ -124,7 +124,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                            whileTap={{ scale: 0.95 }}
                                            className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
                                          >
-                                           <span>Know More</span>
+                                           <span>{t('oneHealth.knowMore') || 'Know More'}</span>
                                            <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
                                              <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
                                              <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />

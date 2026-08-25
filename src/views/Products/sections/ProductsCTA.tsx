@@ -9,7 +9,10 @@ const Dithering = lazy(() =>
     import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
 );
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function ProductsCTA() {
+    const { t } = useLanguage();
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -38,11 +41,11 @@ export default function ProductsCTA() {
                         
                         
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-4 leading-tight text-center">
-                            <SplitTitle title="Partner With TechInvention for Vaccine Access" />
+                            <SplitTitle title={t('cta.products.title') || "Partner With TechInvention for Vaccine Access"} />
                         </h2>
                         
                         <p className="text-black text-[18px] max-w-2xl mb-8 leading-relaxed font-medium tracking-tight text-center">
-                            Connect with TechInvention to explore product availability, licensing partnerships and access opportunities for market-authorized vaccines.
+                            {t('cta.products.desc') || "Connect with TechInvention to explore product availability, licensing partnerships and access opportunities for market-authorized vaccines."}
                         </p>
                         
                         <div className="flex flex-col items-center gap-8">
@@ -53,7 +56,7 @@ export default function ProductsCTA() {
                                     className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-xl overflow-hidden cursor-pointer"
                                 >
                                     <span className="relative z-10 text-[13px] font-bold uppercase tracking-widest">
-                                        Connect Now
+                                        {t('cta.button') || "Connect Now"}
                                     </span>
                                     <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
                                         <svg
@@ -91,11 +94,11 @@ export default function ProductsCTA() {
                             </Link>
                             
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6">
-                                <a href="tel:+912240052123" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
+                                <a href="tel:+912240052123" dir="ltr" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
                                     <Phone className="w-5 h-5 text-[#5C7625]" />
                                     <span className="font-bold text-sm text-slate-800">+91 22 4005 2123</span>
                                 </a>
-                                <a href="mailto:connect@techinvention.biz" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
+                                <a href="mailto:connect@techinvention.biz" dir="ltr" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
                                     <Mail className="w-5 h-5 text-[#5C7625]" />
                                     <span className="font-bold text-sm text-slate-800 break-all">connect@techinvention.biz</span>
                                 </a>

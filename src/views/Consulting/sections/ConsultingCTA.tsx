@@ -13,7 +13,10 @@ const INQUIRY_TYPES = [
     'Other / General Enquiry',
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const ConsultingCTA = () => {
+    const { t } = useLanguage();
     const sectionRef = useRef<HTMLDivElement>(null);
     const inView = useInView(sectionRef, { once: true, margin: '-100px' });
     const [formState, setFormState] = useState({
@@ -26,6 +29,15 @@ const ConsultingCTA = () => {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [activeField, setActiveField] = useState<string | null>(null);
+
+    const inquiryTypes = [
+        t('megaMenu.vaccines') || 'Vaccine Development Advisory',
+        t('strategicAdvisory.services.0.title') || 'Regulatory Strategy',
+        t('megaMenu.licensing') || 'Technology Transfer',
+        'Quality Management System',
+        t('megaMenu.diagnostics') || 'Diagnostics Development',
+        t('contact.form.options.general') || 'Other / General Enquiry',
+    ];
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -164,28 +176,28 @@ const ConsultingCTA = () => {
                                         >
                                             <CheckCircle2 className="w-10 h-10 text-[#a8edac]" />
                                         </motion.div>
-                                        <h3 className="text-2xl font-bold text-white">Enquiry Sent!</h3>
+                                        <h3 className="text-2xl font-bold text-white">{t('contact.form.successTitle') || "Enquiry Sent!"}</h3>
                                         <p className="text-white/60 font-medium leading-relaxed max-w-xs">
-                                            Our advisory team will reach out within 24 hours. Thank you for your interest.
+                                            {t('contact.form.successDesc') || "Our advisory team will reach out within 24 hours. Thank you for your interest."}
                                         </p>
                                         <button
                                             onClick={() => { setSubmitted(false); setFormState({ name: '', email: '', organisation: '', type: '', message: '' }); }}
                                             className="mt-4 text-[12px] font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors"
                                         >
-                                            Send Another Enquiry
+                                            {t('contact.form.sendAnother') || "Send Another Enquiry"}
                                         </button>
                                     </motion.div>
                                 ) : (
                                     <motion.form
                                         key="form"
                                         onSubmit={handleSubmit}
-                                        className="flex flex-col gap-5"
+                                        className="flex flex-col gap-5 text-left"
                                     >
                                         {/* Name + Email */}
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             {[
-                                                { key: 'name', label: 'Full Name', placeholder: 'Your Name', type: 'text' },
-                                                { key: 'email', label: 'Email Address', placeholder: 'Your Email', type: 'email' },
+                                                { key: 'name', label: t('contact.form.name') || 'Full Name', placeholder: t('contact.form.namePlaceholder') || 'Your Name', type: 'text' },
+                                                { key: 'email', label: t('contact.form.email') || 'Email Address', placeholder: t('contact.form.emailPlaceholder') || 'Your Email', type: 'email' },
                                             ].map((field) => (
                                                 <div key={field.key} className="flex flex-col gap-1.5">
                                                     <label className="text-white/60 text-[11px] font-bold tracking-[0.2em] uppercase">
@@ -213,11 +225,11 @@ const ConsultingCTA = () => {
                                         {/* Organisation */}
                                         <div className="flex flex-col gap-1.5">
                                             <label className="text-white/60 text-[11px] font-bold tracking-[0.2em] uppercase">
-                                                Organisation
+                                                {t('contact.form.organisation') || "Organisation"}
                                             </label>
                                             <input
                                                 type="text"
-                                                placeholder="Your company / institution"
+                                                placeholder={t('contact.form.orgPlaceholder') || "Your company / institution"}
                                                 value={formState.organisation}
                                                 onChange={(e) => setFormState(prev => ({ ...prev, organisation: e.target.value }))}
                                                 onFocus={() => setActiveField('org')}
@@ -234,10 +246,10 @@ const ConsultingCTA = () => {
                                         {/* Inquiry Type */}
                                         <div className="flex flex-col gap-2">
                                             <label className="text-white/60 text-[11px] font-bold tracking-[0.2em] uppercase">
-                                                Advisory Type
+                                                {t('contact.form.enquiryType') || "Advisory Type"}
                                             </label>
                                             <div className="flex flex-wrap gap-2">
-                                                {INQUIRY_TYPES.map((type) => (
+                                                {inquiryTypes.map((type) => (
                                                     <button
                                                         key={type}
                                                         type="button"
@@ -260,12 +272,12 @@ const ConsultingCTA = () => {
                                         {/* Message */}
                                         <div className="flex flex-col gap-1.5">
                                             <label className="text-white/60 text-[11px] font-bold tracking-[0.2em] uppercase">
-                                                Project Brief
+                                                {t('contact.form.message') || "Project Brief"}
                                             </label>
                                             <textarea
                                                 rows={4}
                                                 required
-                                                placeholder="Tell us about your project, timeline, and specific advisory needs..."
+                                                placeholder={t('contact.form.messagePlaceholder') || "Tell us about your project, timeline, and specific advisory needs..."}
                                                 value={formState.message}
                                                 onChange={(e) => setFormState(prev => ({ ...prev, message: e.target.value }))}
                                                 onFocus={() => setActiveField('msg')}
@@ -291,7 +303,7 @@ const ConsultingCTA = () => {
                                                 <Loader2 className="w-5 h-5 animate-spin" />
                                             ) : (
                                                 <>
-                                                    <span>Send Advisory Enquiry</span>
+                                                    <span>{t('contact.form.submit') || "Send Advisory Enquiry"}</span>
                                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                                                 </>
                                             )}
@@ -299,7 +311,7 @@ const ConsultingCTA = () => {
                                         </motion.button>
 
                                         <p className="text-white/30 text-[11px] text-center font-medium">
-                                            All enquiries are treated with strict confidentiality.
+                                            {t('contact.form.confidentiality') || "All enquiries are treated with strict confidentiality."}
                                         </p>
                                     </motion.form>
                                 )}

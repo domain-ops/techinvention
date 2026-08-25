@@ -14,7 +14,7 @@ const CompanyStory = () => {
                     <ScrollReveal direction="up">
                         <div className="mb-10 md:mb-12">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
-                                <SplitTitle title="Built to Move Vaccine Innovation Further" />
+                                <SplitTitle title={t('about.story.title') || "Built to Move Vaccine Innovation Further"} />
                             </h2>
                         </div>
                     </ScrollReveal>

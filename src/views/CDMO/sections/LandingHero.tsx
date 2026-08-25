@@ -2,7 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import heroBg from '../../../assets/images/GCMC.jpg.jpeg';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const LandingHero = () => {
+    const { t } = useLanguage();
     return (
         <section className="relative w-full min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden font-sans pt-24 pb-16 lg:pt-0 lg:pb-0">
             {/* Background Image */}
@@ -18,10 +21,10 @@ const LandingHero = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-[32px] sm:text-4xl md:text-5xl lg:text-[64px] font-medium tracking-wide mb-6 leading-[1.15] text-white">
-                        Vaccine Manufacturing
+                        {t('megaMenu.manufacturing') || "Vaccine Manufacturing"}
                     </h1>
                     <p className="text-[16px] md:text-[20px] leading-relaxed max-w-4xl mx-auto font-medium text-white/90">
-                        Global Collaborative Centre for Medical Countermeasures (GCMC)
+                        {t('cdmo.title') || "Global Collaborative Centre for Medical Countermeasures (GCMC)"}
                     </p>
                 </motion.div>
             </div>

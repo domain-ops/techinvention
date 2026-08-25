@@ -10,9 +10,11 @@ const icons = [Settings, Droplet, Package, Shield, BookOpen];
 const Capabilities = () => {
     const { t } = useLanguage();
     
-    const capabilities = Array.isArray(t('cdmo.integratedCapabilities.capabilities')) 
-        ? t('cdmo.integratedCapabilities.capabilities') 
-        : [];
+    const capabilities = Array.isArray(t('cdmo.integratedCapabilities.items'))
+        ? t('cdmo.integratedCapabilities.items')
+        : (Array.isArray(t('cdmo.integratedCapabilities.capabilities'))
+            ? t('cdmo.integratedCapabilities.capabilities')
+            : []);
 
     return (
         <section className="py-24 bg-white relative overflow-hidden">

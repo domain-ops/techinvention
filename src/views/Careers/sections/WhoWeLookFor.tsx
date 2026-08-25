@@ -4,7 +4,11 @@ import { ArrowRight, Users } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function WhoWeLookFor() {
+    const { t } = useLanguage();
+
     return (
         <section className="py-24 bg-white relative overflow-hidden font-sans border-b border-slate-200/60">
             {/* Subtle background decoration */}
@@ -27,17 +31,11 @@ export default function WhoWeLookFor() {
                                 </div>
                                 
                                 <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-4 leading-tight text-slate-900">
-                                    <SplitTitle title="Who We Look For" />
+                                    <SplitTitle title={t('careers.whoWeLookFor.title') || "Who We Look For"} />
                                 </h2>
                                 
-                                <h3 className="text-xl md:text-2xl font-bold text-[#5C7625] mb-6">
-                                    Talent with curiosity, discipline and drive
-                                </h3>
-                                
                                 <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-3xl">
-                                    We welcome professionals who are ambitious, thoughtful and ready to take ownership. 
-                                    Whether you are a scientist, engineer, consultant, regulatory expert, finance professional or 
-                                    corporate leader, TechInvention offers the opportunity to grow with purpose.
+                                    {t('careers.whoWeLookFor.desc') || "We welcome professionals who are ambitious, thoughtful and ready to take ownership. Whether you are a scientist, engineer, consultant, regulatory expert, finance professional or corporate leader, TechInvention offers the opportunity to grow with purpose."}
                                 </p>
                             </div>
                             
@@ -46,7 +44,7 @@ export default function WhoWeLookFor() {
                                     onClick={() => document.getElementById('current-openings')?.scrollIntoView({ behavior: 'smooth' })}
                                     className="px-8 py-4 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full transition-all duration-300 flex items-center gap-3 shadow-md hover:shadow-lg hover:-translate-y-1"
                                 >
-                                    Explore Openings
+                                    {t('careers.openPositions.title') || "Explore Openings"}
                                     <ArrowRight className="w-5 h-5" />
                                 </button>
                             </div>

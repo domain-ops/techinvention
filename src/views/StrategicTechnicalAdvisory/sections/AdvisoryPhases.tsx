@@ -28,7 +28,7 @@ const AdvisoryPhases = () => {
                 <div className="mb-20">
                     
                     <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide">
-                        <SplitTitle title="A rigorous approach to excellence" />
+                        <SplitTitle title={t('strategicAdvisory.approachTitle') || "A rigorous approach to excellence"} />
                     </h2>
                 </div>
 

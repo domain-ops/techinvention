@@ -4,34 +4,40 @@ import { Lightbulb, FlaskConical, ShieldCheck, Factory, ArrowRight } from 'lucid
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-const steps = [
-    {
-        title: "Ideate",
-        description: "Target identification, antigen discovery, AI/ML-enabled vaccine design, and platform selection.",
-        icon: Lightbulb,
-        color: "bg-[#1955A6]"
-    },
-    {
-        title: "Develop",
-        description: "Process and formulation development, analytical assay development, characterization, and proof-of-concept studies.",
-        icon: FlaskConical,
-        color: "bg-[#7EAB43]"
-    },
-    {
-        title: "Evaluate",
-        description: "Preclinical efficacy, safety and toxicology studies, with regulatory documentation and compliance.",
-        icon: ShieldCheck,
-        color: "bg-[#1955A6]"
-    },
-    {
-        title: "Scale",
-        description: "Process scale-up, technology transfer, GMP manufacturing readiness, and commercial translation.",
-        icon: Factory,
-        color: "bg-[#7EAB43]"
-    }
-];
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function ProcessFlowchart() {
+    const { t } = useLanguage();
+
+    const translatedStages = t('horizon.stages') as any[];
+
+    const steps = [
+        {
+            title: (translatedStages && translatedStages[0]?.stage) || "Ideate",
+            description: (translatedStages && translatedStages[0]?.desc) || "Target identification, antigen discovery, AI/ML-enabled vaccine design, and platform selection.",
+            icon: Lightbulb,
+            color: "bg-[#1955A6]"
+        },
+        {
+            title: (translatedStages && translatedStages[1]?.stage) || "Develop",
+            description: (translatedStages && translatedStages[1]?.desc) || "Process and formulation development, analytical assay development, characterization, and proof-of-concept studies.",
+            icon: FlaskConical,
+            color: "bg-[#7EAB43]"
+        },
+        {
+            title: (translatedStages && translatedStages[2]?.stage) || "Evaluate",
+            description: (translatedStages && translatedStages[2]?.desc) || "Preclinical efficacy, safety and toxicology studies, with regulatory documentation and compliance.",
+            icon: ShieldCheck,
+            color: "bg-[#1955A6]"
+        },
+        {
+            title: (translatedStages && translatedStages[3]?.stage) || "Scale",
+            description: (translatedStages && translatedStages[3]?.desc) || "Process scale-up, technology transfer, GMP manufacturing readiness, and commercial translation.",
+            icon: Factory,
+            color: "bg-[#7EAB43]"
+        }
+    ];
+
     return (
         <section className="py-24 bg-slate-50 font-sans overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6">
@@ -39,7 +45,7 @@ export default function ProcessFlowchart() {
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-[#13325B] mb-12">
-                            <SplitTitle title="End-to-End R&D Process" />
+                            <SplitTitle title={t('rnd.processTitle') || "End-to-End R&D Process"} />
                         </h2>
                     </ScrollReveal>
                 </div>

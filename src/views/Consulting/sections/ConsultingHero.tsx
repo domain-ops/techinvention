@@ -6,7 +6,10 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 import consultingBannerImg from '../../../../public/consulting-banner.png';
 
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function ConsultingHero() {
+    const { t } = useLanguage();
     const handleScroll = () => {
         const target = document.getElementById('consulting-services');
         if (target) {
@@ -26,13 +29,13 @@ export default function ConsultingHero() {
                 <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] lg:whitespace-nowrap font-medium tracking-wide mb-6 leading-[1.15]">
-                            <SplitTitle title="Strategic Advisory & Tech Consulting" />
+                            <SplitTitle title={t('strategicAdvisory.title') || "Strategic Advisory & Tech Consulting"} />
                         </h1>
                         <h2 className="text-xl md:text-[24px] font-normal text-slate-800 leading-snug mb-4 w-full">
-                            Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution.
+                            {t('strategicAdvisory.intro') || "Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution."}
                         </h2>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-normal">
-                            TechInvention supports governments, funding agencies, manufacturers, investors and research institutions in shaping vaccine and biopharmaceutical manufacturing infrastructure.
+                            {t('strategicAdvisory.desc') || "TechInvention supports governments, funding agencies, manufacturers, investors and research institutions in shaping vaccine and biopharmaceutical manufacturing infrastructure."}
                         </p>
                     </ScrollReveal>
                 </div>

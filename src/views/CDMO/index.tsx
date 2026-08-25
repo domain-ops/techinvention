@@ -10,14 +10,17 @@ import DigitalExcellence from './sections/DigitalExcellence';
 import Sustainability from './sections/Sustainability';
 import CTASection from '../../components/CTASection';
 
+import { useLanguage } from '../../context/LanguageContext';
+
 const CDMOPage = () => {
+    const { t } = useLanguage();
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
-        <div className="bg-brand-background min-h-screen">
+        <div className="bg-brand-background min-h-screen font-sans">
             <LandingHero />
             <GCMCFeature />
             <GCMCBridge />
@@ -26,7 +29,7 @@ const CDMOPage = () => {
             <DigitalExcellence />
             <Sustainability />
             <WhyPartner />
-            <CTASection description="Connect with us to explore manufacturing partnerships in vaccines and partnerships" />
+            <CTASection description={t('cdmo.ctaDescription') || t('home.cta.desc') || "Connect with us to explore manufacturing partnerships in vaccines and biotherapeutics."} />
         </div>
     );
 };

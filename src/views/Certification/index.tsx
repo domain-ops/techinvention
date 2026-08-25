@@ -9,7 +9,7 @@ const CertificationPage = () => {
     const { t } = useLanguage();
     return (
         <div className="min-h-screen bg-brand-background text-brand-content">
-            <AboutHeader title="Certification" subtitle={t('certifications.desc')} />
+            <AboutHeader title={t('megaMenu.certifications') || t('certifications.title') || "Certifications"} subtitle={t('certifications.desc')} />
             <CertificationList />
             <CTASection />
         </div>

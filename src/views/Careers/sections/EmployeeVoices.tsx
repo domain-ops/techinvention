@@ -5,7 +5,9 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 const basePath = process.env.BASE_PATH || '';
 
-const testimonials = [
+import { useLanguage } from '../../../context/LanguageContext';
+
+const DEFAULT_TESTIMONIALS = [
     {
         name: "Shahnawaz Shaikh",
         designation: "Admin and HR",
@@ -33,17 +35,24 @@ const testimonials = [
         experience: "5+ Years",
         quote: "Completing over six years at TechInvention has been an incredibly rewarding journey. It has been inspiring to witness the company's transformation from a startup into a growing MSME with a strong global presence. Throughout this journey, I have been given the opportunity to work on diverse international business development and strategic consulting projects, collaborate with global stakeholders, and continuously expand my knowledge in the life sciences sector. The trust, support, and learning opportunities provided by the leadership and my colleagues have played a significant role in my professional growth. I look forward to being part of TechInvention's continued success and innovation.",
         image: "/Priya-photo.jpg"
-    },
-    {
-        name: "Kulsum",
-        designation: "",
-        experience: "5+ Years",
-        quote: "I’m really grateful that I got the opportunity to start my career here as a fresher. In these five years, I’ve learned so much and grown both personally and professionally. The friendly and supportive work culture has made this journey really special. I got the opportunity to work across different R&D departments, learn new techniques and technologies, and be part of various certifications and audits. Looking back, it feels like I’ve come a long way from where I started. I’m thankful to everyone who has supported, guided, and helped me grow throughout this journey.",
-        image: "/kulsum.jpeg"
     }
 ];
 
 export default function EmployeeVoices() {
+    const { t } = useLanguage();
+
+    const rawTestimonials = (t('careers.testimonials.items') || (Array.isArray(t('careers.testimonials')) ? t('careers.testimonials') : null)) as any[];
+    const testimonialsImages = ["/Shahnawaz.jpg", "/Aziz.jpeg", "/Sarang-Pathak.jpeg", "/Priya-photo.jpg"];
+    const testimonials = Array.isArray(rawTestimonials) && rawTestimonials.length > 0
+        ? rawTestimonials.map((item, i) => ({
+            name: item.name || "",
+            designation: item.role || item.designation || "",
+            experience: item.tenure || item.experience || "",
+            quote: item.quote || item.text || item.feedback || "",
+            image: testimonialsImages[i % testimonialsImages.length]
+        }))
+        : DEFAULT_TESTIMONIALS;
+
     return (
         <section className="py-20 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
             {/* Ambient Backgrounds */}
@@ -54,10 +63,10 @@ export default function EmployeeVoices() {
                 <div className="text-center mb-12">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-2 leading-tight text-slate-900">
-                            <SplitTitle title="Employee Voices" />
+                            <SplitTitle title={t('careers.testimonials.title') || "Employee Voices"} />
                         </h2>
                         <h3 className="text-[16px] md:text-[18px] font-medium text-slate-500">
-                            Stories from the people growing with TechInvention.
+                            {t('careers.testimonials.subtitle') || "Stories from the people growing with TechInvention."}
                         </h3>
                     </ScrollReveal>
                 </div>

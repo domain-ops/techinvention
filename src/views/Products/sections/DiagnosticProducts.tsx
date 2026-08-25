@@ -7,7 +7,10 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function DiagnosticProducts() {
+    const { t } = useLanguage();
     const sectionRef = useRef<HTMLElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
@@ -44,10 +47,10 @@ export default function DiagnosticProducts() {
     }, []);
 
     const features = [
-        "Rapid Point-of-Care Testing",
-        "High Sensitivity & Specificity",
-        "Cost-Effective Solutions",
-        "Regulatory Compliant"
+        t('products.diagFeat1') || "Rapid Point-of-Care Testing",
+        t('products.diagFeat2') || "High Sensitivity & Specificity",
+        t('products.diagFeat3') || "Cost-Effective Solutions",
+        t('products.diagFeat4') || "Regulatory Compliant"
     ];
 
     return (
@@ -60,12 +63,12 @@ export default function DiagnosticProducts() {
                             
                             <div className="mb-4">
                                 <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left mb-6 leading-tight">
-                                    <SplitTitle title="Advanced Diagnostic Solutions" />
+                                    <SplitTitle title={t('products.advancedDiagTitle') || "Advanced Diagnostic Solutions"} />
                                 </h2>
                             </div>
                             
                             <p className="mb-8 text-black text-[16px] md:text-[18px] font-medium leading-relaxed text-left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                {t('products.advancedDiagDesc') || "Transforming diagnostics with rapid, robust, and point-of-care testing technologies tailored to combat infectious diseases worldwide."}
                             </p>
                         </ScrollReveal>
 
@@ -91,8 +94,8 @@ export default function DiagnosticProducts() {
                             {/* Floating overlay card */}
                             <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md rounded-none shadow-xl p-6 flex items-center justify-between border border-slate-200/60">
                                 <div>
-                                    <h4 className="text-lg font-bold text-slate-900 mb-1">Precision Assays</h4>
-                                    <p className="text-xs text-slate-500 font-bold uppercase tracking-wider m-0">Gold standard performance</p>
+                                    <h4 className="text-lg font-bold text-slate-900 mb-1">{t('products.precisionAssays') || "Precision Assays"}</h4>
+                                    <p className="text-xs text-slate-500 font-bold uppercase tracking-wider m-0">{t('products.goldStandard') || "Gold standard performance"}</p>
                                 </div>
                                 <div className="w-12 h-12 bg-[#5C7625]/10 rounded-full flex items-center justify-center">
                                     <Beaker className="w-6 h-6 text-[#5C7625]" />

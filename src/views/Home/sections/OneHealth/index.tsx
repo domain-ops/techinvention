@@ -37,10 +37,10 @@ const OneHealth = () => {
         : fallbackSlides;
 
     const slides = [
-        { ...(finalSlidesData[3] || {}), title: finalSlidesData[3]?.title || "Commercial-Scale Manufacturing", image: commercialImg, tag: finalSlidesData[3]?.tag || "Manufacturing" },
+        { ...(finalSlidesData[0] || {}), title: finalSlidesData[0]?.title || "Commercial-Scale Manufacturing", image: commercialImg, tag: finalSlidesData[0]?.tag || "Manufacturing" },
         { ...(finalSlidesData[1] || {}), title: finalSlidesData[1]?.title || "Research and Development (R&D)", image: researchImg, tag: finalSlidesData[1]?.tag || "R&D" },
         { ...(finalSlidesData[2] || {}), title: finalSlidesData[2]?.title || "Licensing and Access", image: licensingImg, tag: finalSlidesData[2]?.tag || "Licensing" },
-        { ...(finalSlidesData[0] || {}), title: finalSlidesData[0]?.title || "Strategic Advisory & Tech Consulting", image: strategicImg, tag: finalSlidesData[0]?.tag || "Consulting" },
+        { ...(finalSlidesData[3] || {}), title: finalSlidesData[3]?.title || "Strategic Advisory & Tech Consulting", image: strategicImg, tag: finalSlidesData[3]?.tag || "Consulting" },
     ];
 
     return (

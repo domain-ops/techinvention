@@ -77,27 +77,29 @@ const FAQSection = () => {
     const { t } = useLanguage();
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-    const faqData = t('faq') as { tag: string; title: string; subtitle: string; items: { question: string; answer: string }[] };
+    const faqData = t('faq') as { tag?: string; title?: string; subtitle?: string; items?: any[] };
 
-    if (!faqData || !faqData.items) return null;
+    if (!faqData || !Array.isArray(faqData.items) || faqData.items.length === 0) return null;
 
     return (
-        <section id="faq" className="py-16 md:py-20 w-full flex justify-center items-center px-4 md:px-6 bg-white relative">
+        <section id="faq" className="py-16 md:py-20 w-full flex justify-center items-center px-4 md:px-6 bg-white relative font-sans">
 
             <div className="w-full max-w-5xl z-10 relative">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
-                    <div className="flex-grow">
+                    <div className="flex-grow text-left">
                         <ScrollReveal direction="up" delay={0.1}>
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
-                                <SplitTitle title={faqData.title} />
+                                <SplitTitle title={faqData.title || "Frequently Asked Questions"} />
                             </h2>
                         </ScrollReveal>
-                        <ScrollReveal direction="up" delay={0.2}>
-                            <p className="text-brand-content text-[18px] max-w-3xl mx-auto md:mx-0 leading-relaxed tracking-tight">
-                                {faqData.subtitle}
-                            </p>
-                        </ScrollReveal>
+                        {faqData.subtitle && (
+                            <ScrollReveal direction="up" delay={0.2}>
+                                <p className="text-brand-content text-[18px] max-w-3xl leading-relaxed tracking-tight">
+                                    {faqData.subtitle}
+                                </p>
+                            </ScrollReveal>
+                        )}
                     </div>
                 </div>
 
@@ -105,15 +107,19 @@ const FAQSection = () => {
                 <ScrollReveal direction="up" delay={0.3}>
                     <div className="relative">
                         <div className="border-t border-brand-primary/10">
-                            {faqData.items.map((item, index) => (
-                                <FAQItem
-                                    key={index}
-                                    question={item.question}
-                                    answer={item.answer}
-                                    isOpen={openIndex === index}
-                                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                />
-                            ))}
+                            {faqData.items.map((item: any, index: number) => {
+                                const question = item.question || item.q || "";
+                                const answer = item.answer || item.a || "";
+                                return (
+                                    <FAQItem
+                                        key={index}
+                                        question={question}
+                                        answer={answer}
+                                        isOpen={openIndex === index}
+                                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                 </ScrollReveal>

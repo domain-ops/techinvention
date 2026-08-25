@@ -40,7 +40,7 @@ export default function CareersHero() {
                             className="px-8 py-4 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2 text-sm"
                         >
                             <Briefcase className="w-4 h-4" />
-                            Submit Application
+                            {t('hero.applyNow') || "Submit Application"}
                         </button>
                     </motion.div>
                 </div>

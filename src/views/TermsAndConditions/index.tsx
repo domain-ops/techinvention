@@ -3,7 +3,11 @@ import React, { useEffect } from 'react';
 import ScrollReveal from '../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../components/Common/SplitTitle';
 
+import { useLanguage } from '../../context/LanguageContext';
+
 export default function TermsAndConditionsView() {
+    const { t } = useLanguage();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -15,7 +19,7 @@ export default function TermsAndConditionsView() {
                 <div className="max-w-[1300px] mx-auto px-6 md:px-12 text-center md:text-left">
                     <ScrollReveal direction="up">
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] font-medium tracking-wide leading-[1.15] text-[#13325B]">
-                            <SplitTitle title="Terms &amp; Conditions" />
+                            <SplitTitle title={t('footer.termsAndConditions') || "Terms & Conditions"} />
                         </h1>
                     </ScrollReveal>
                 </div>

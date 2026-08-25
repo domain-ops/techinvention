@@ -30,10 +30,10 @@ export default function ProductsHero() {
                     <ScrollReveal direction="up">
                         
                         <h1 className="text-[24px] md:text-4xl lg:text-5xl lg:text-[56px] font-medium tracking-wide mb-6 leading-[1.15]">
-                            <SplitTitle title="Innovative Products for Global Health" />
+                            <SplitTitle title={t('products.heroTitle') || t('megaMenu.products') || "Innovative Products for Global Health"} />
                         </h1>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">
-                            Discover our extensive range of high-quality vaccines, biologics, and diagnostic solutions designed to make healthcare accessible, reliable, and affordable worldwide.
+                            {t('products.heroDesc') || "Discover our extensive range of high-quality vaccines, biologics, and diagnostic solutions designed to make healthcare accessible, reliable, and affordable worldwide."}
                         </p>
                     </ScrollReveal>
 
@@ -47,7 +47,7 @@ export default function ProductsHero() {
                             onClick={handleScroll}
                             className="px-8 py-4 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2 text-sm cursor-pointer"
                         >
-                            Explore Portfolio
+                            {t('products.explorePortfolio') || t('common.readNow') || "Explore Portfolio"}
                             <ArrowDown className="w-4 h-4" />
                         </button>
                     </motion.div>

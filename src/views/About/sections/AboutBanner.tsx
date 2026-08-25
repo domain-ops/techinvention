@@ -22,17 +22,17 @@ const AboutBanner: React.FC<AboutBannerProps> = ({
     const videoRef = useRef<HTMLVideoElement>(null);
     
     // Default page title for About Us if none is passed
-    const pageTitle = title || t('navbar.company') || 'About TechInvention';
+    const pageTitle = title || t('about.tag') || t('navbar.about') || 'About TechInvention';
     
     // Determine default subtitle based on title if not explicitly passed
     let defaultSubtitle = subtitle;
     if (!subtitle) {
-        if (pageTitle.toLowerCase().includes('about')) {
-            defaultSubtitle = "TechInvention is an innovation-led biotech company building integrated pathways from research and technology access to scale-up and GMP manufacturing - with a clear focus on global advancing vaccine access";
+        if (pageTitle.toLowerCase().includes('about') || !title) {
+            defaultSubtitle = t('about.banner.subtitle') || t('about.desc') || "TechInvention is an innovation-led biotech company building integrated pathways from research and technology access to scale-up and GMP manufacturing - with a clear focus on advancing global vaccine access.";
         } else if (pageTitle.toLowerCase().includes('member') || pageTitle.toLowerCase().includes('association')) {
-            defaultSubtitle = "Collaborating with leading global health organisations, pharmaceutical associations, and research bodies to advance biotechnology innovation.";
+            defaultSubtitle = t('membership.desc') || "Collaborating with leading global health organisations, pharmaceutical associations, and research bodies to advance biotechnology innovation.";
         } else {
-            defaultSubtitle = "Advancing global health through biotechnology, specialized diagnostics, and clinical manufacturing consulting.";
+            defaultSubtitle = t('about.banner.subtitle') || t('about.desc') || "Advancing global health through biotechnology, specialized diagnostics, and clinical manufacturing consulting.";
         }
     }
 

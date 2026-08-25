@@ -1,31 +1,23 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { SplitTitle } from '../../components/Common/SplitTitle';
+import AboutHeader from '../About/sections/AboutBanner';
 import AwardsShowcase from './sections/AwardsShowcase';
+import CTASection from '../../components/CTASection';
 
 const AwardsPage = () => {
     const { t } = useLanguage();
 
-    
     return (
-        <div className="bg-brand-background pt-32 pb-8">
-            <div className="max-w-[1440px] mx-auto px-4 md:px-8">
-                <div className="mb-16">
-                    
-                    <h1 className="text-[22px] md:text-4xl font-normal tracking-tight leading-[1.1]">
-                        <SplitTitle 
-                            title={t('awards.title').replace('{latestNews}', 'Latest News') || "Awards & Accolades"}
-                        />
-                    </h1>
-                    <p className="mt-8 text-lg md:text-xl text-gray-600 w-full leading-relaxed text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
+        <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
+            <AboutHeader 
+                title={t('navbar.awardsCertifications') || t('megaMenu.awards') || "Awards & Accolades"} 
+                subtitle={t('awards.heroDesc') || t('about.scientificAdvisory.desc') || "Celebrating our milestones, global recognitions, and achievements in advancing biotechnology and health equity."} 
+            />
+            <div className="max-w-[1440px] mx-auto px-4 md:px-8 py-8">
+                <AwardsShowcase />
             </div>
-            
-            <AwardsShowcase />
+            <CTASection />
         </div>
     );
 };

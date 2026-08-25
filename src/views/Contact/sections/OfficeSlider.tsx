@@ -2,24 +2,26 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const basePath = process.env.BASE_PATH || '';
 
 export default function OfficeSlider() {
+    const { t } = useLanguage();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const slides = [
         {
             src: "/img-7.jpeg",
-            name: "Techinvention Office"
+            name: t('contact.officeSlide1') || "TechInvention Office"
         },
         {
             src: "/img-6.jpeg",
-            name: "Workspace"
+            name: t('contact.officeSlide2') || "Workspace"
         },
         {
             src: "/img-5.jpeg",
-            name: "Training Room"
+            name: t('contact.officeSlide3') || "Training Room"
         }
     ];
 
@@ -42,7 +44,7 @@ export default function OfficeSlider() {
                 {/* Header with Navigation Controls */}
                 <div className="mb-10 flex items-center justify-between">
                     <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                        <SplitTitle title="Inside TechInvention" />
+                        <SplitTitle title={t('contact.insideTitle') || "Inside TechInvention"} />
                     </h2>
                     
                     {/* Navigation Buttons */}

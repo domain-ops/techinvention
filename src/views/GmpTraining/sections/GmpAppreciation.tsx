@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const basePath = process.env.BASE_PATH || '';
 
@@ -22,6 +23,7 @@ const certificates = [
 ];
 
 export default function GmpAppreciation() {
+    const { t } = useLanguage();
     const [selectedCert, setSelectedCert] = useState<typeof certificates[0] | null>(null);
 
     return (
@@ -36,7 +38,7 @@ export default function GmpAppreciation() {
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                            <SplitTitle title="Recognition" />
+                            <SplitTitle title={t('testimonials.title') || "Recognition"} />
                         </h2>
                     </ScrollReveal>
                 </div>

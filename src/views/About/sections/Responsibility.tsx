@@ -2,19 +2,23 @@ import React from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const Responsibility = () => {
+    const { t } = useLanguage();
+
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-24 bg-white relative overflow-hidden font-sans">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal direction="up">
                     <div className="text-center mb-16 flex flex-col items-center">
                         <div className="mb-4">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap">
-                                <SplitTitle title="Our Responsibility" />
+                                <SplitTitle title={t('about.responsibilityTitle') || "Our Responsibility"} />
                             </h2>
                         </div>
                         <p className="text-black text-[16px] md:text-[18px] font-medium max-w-3xl leading-relaxed">
-                            We believe that our success is fundamentally linked to the well-being of the communities we serve and the environment we operate in.
+                            {t('about.responsibilityDesc') || "We believe that our success is fundamentally linked to the well-being of the communities we serve and the environment we operate in."}
                         </p>
                     </div>
                 </ScrollReveal>
@@ -34,15 +38,15 @@ const Responsibility = () => {
                     <ScrollReveal direction="right">
                         <div className="space-y-8">
                             <div className="bg-brand-background p-8 rounded-none border border-brand-primary/10">
-                                <h3 className="text-2xl font-semibold mb-3 text-brand-primary">Sustainable Operations</h3>
+                                <h3 className="text-2xl font-semibold mb-3 text-brand-primary">{t('about.sustainableOps') || "Sustainable Operations"}</h3>
                                 <p className="text-brand-gray-dark">
-                                    Our GMP-like facilities are thoughtfully designed with innovative concepts aimed at enabling environmentally responsible production.
+                                    {t('about.sustainableOpsDesc') || "Our GMP-like facilities are thoughtfully designed with innovative concepts aimed at enabling environmentally responsible production."}
                                 </p>
                             </div>
                             <div className="bg-brand-background p-8 rounded-none border border-brand-primary/10">
-                                <h3 className="text-2xl font-semibold mb-3 text-brand-primary">Community Impact</h3>
+                                <h3 className="text-2xl font-semibold mb-3 text-brand-primary">{t('about.communityImpact') || "Community Impact"}</h3>
                                 <p className="text-brand-gray-dark">
-                                    Through strategic initiatives and global partnerships, we aim to make vaccines and biotherapeutics accessible to underserved populations.
+                                    {t('about.communityImpactDesc') || "Through strategic initiatives and global partnerships, we aim to make vaccines and biotherapeutics accessible to underserved populations."}
                                 </p>
                             </div>
                         </div>

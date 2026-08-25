@@ -42,7 +42,23 @@ const stats = [
     { value: '100%', label: 'Compliance Focus' }
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+import { FlaskConical, Factory, Presentation, Globe, GraduationCap } from 'lucide-react';
+
 export default function GmpOverview() {
+    const { t } = useLanguage();
+    const rawPills = t('gmpOverview.pills') as string[];
+    const defaultPillTexts = [
+        'Engaging Scientific & Technical Curriculum',
+        'Hands-On Training In GMP Production',
+        'Industry Experts Led Curriculum',
+        'Global Regulatory Alignment',
+        'Career & Industry Readiness Focus'
+    ];
+    const pillTexts = (Array.isArray(rawPills) && rawPills.length === 5) ? rawPills : defaultPillTexts;
+
+    const icons = [FlaskConical, Factory, Presentation, Globe, GraduationCap];
+
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
             {/* Subtle background decoration */}
@@ -53,14 +69,8 @@ export default function GmpOverview() {
                 
                 {/* 5 Pills Section */}
                 <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12">
-                    {[
-                        { icon: 'FlaskConical', text: 'Engaging Scientific & Technical Curriculum' },
-                        { icon: 'Factory', text: 'Hands-On Training In GMP Production' },
-                        { icon: 'Presentation', text: 'Industry Experts Led Curriculum' },
-                        { icon: 'Globe', text: 'Global Regulatory Alignment' },
-                        { icon: 'GraduationCap', text: 'Career & Industry Readiness Focus' }
-                    ].map((pill, idx) => {
-                        const Icon = require('lucide-react')[pill.icon];
+                    {pillTexts.map((text, idx) => {
+                        const Icon = icons[idx];
                         return (
                             <motion.div
                                 key={idx}
@@ -76,7 +86,7 @@ export default function GmpOverview() {
                                     <Icon className="w-10 h-10 md:w-12 md:h-12 text-white relative z-10" strokeWidth={1.5} />
                                 </div>
                                 <p className="text-white text-center font-bold text-[13px] md:text-[15px] leading-snug px-3 flex-1 flex items-center justify-center">
-                                    {pill.text}
+                                    {text}
                                 </p>
                             </motion.div>
                         );

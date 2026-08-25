@@ -11,12 +11,18 @@ import Spotlight from './sections/Spotlight';
 import CTASection from '../../components/CTASection';
 import abtBannerImg from '../../../public/abt-banner.jpeg';
 
+import { useLanguage } from '../../context/LanguageContext';
+
 const AboutPage = () => {
+    const { t } = useLanguage();
     
     return (
-        <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
+        <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden font-sans">
             {/* 1. Company Landing Hero */}
-            <AboutHeader title="About Techinvention" />
+            <AboutHeader 
+                title={t('about.tag') || t('navbar.about') || "About TechInvention"} 
+                subtitle={t('about.banner.subtitle') || t('about.desc')} 
+            />
 
             {/* Banner Image */}
             <div className="w-full bg-white pt-4 pb-8 md:pt-6 md:pb-12">

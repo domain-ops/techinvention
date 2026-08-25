@@ -64,7 +64,7 @@ export default function GmpSubjects() {
 
                                 {/* Checklist details for premium card browse experience */}
                                 <div className="border-t border-slate-100 pt-6 mt-2">
-                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Key Focus Areas</h4>
+                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">{t('gmpSubjects.keyFocus') || "Key Focus Areas"}</h4>
                                     <ul className="space-y-2">
                                         {subj.focusAreas.map((topic: string, tIdx: number) => (
                                             <li key={tIdx} className="flex items-start gap-2.5 text-[13px] font-semibold text-slate-700">

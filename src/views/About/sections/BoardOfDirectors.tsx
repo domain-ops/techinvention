@@ -12,43 +12,48 @@ import gopalImg from '../../../assets/images/Gopal-Damisetti.jpg';
 const syedImg = typeof syedPortrait === 'object' ? (syedPortrait as any).src : syedPortrait;
 const nazneenImg = typeof nazneenPortrait === 'object' ? (nazneenPortrait as any).src : nazneenPortrait;
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const dummyBio = "is a seasoned executive experienced in developing patient-focused commercial strategies encompassing sales, marketing and market access. They drive and execute global commercialization strategies to leverage full potential as a vertically integrated organization. With more than 20 years of experience in the healthcare industry, including 15 years of commercial experience ranging from early-stage biotechnology to full-scale pharmaceutical operations, they have a proven track record of leadership.";
 
-const boardMembers = [
-    {
-        name: "Mr. Syed Ahmed",
-        role: "Director & CEO",
-        image: syedImg,
-        linkedin: "https://www.linkedin.com/in/ssyedahmed",
-        bio: `Mr. Syed Ahmed ${dummyBio}`
-    },
-    {
-        name: "Ms. Nazneen Hamid",
-        role: "Co-Founder & Director",
-        image: nazneenImg,
-        linkedin: "https://www.linkedin.com/in/nazneen-hamid",
-        bio: `Ms. Nazneen Hamid ${dummyBio}`,
-        objectPosition: "center 60%",
-        imageClassName: "scale-[1.3] origin-top translate-y-[-6%] group-hover:scale-[1.35]"
-    },
-    {
-        name: "Mrs. Monika Thanvi",
-        role: "Independent Director",
-        image: monicaImg,
-        linkedin: "https://www.linkedin.com/in/cs-monika-thanvi-a28aa4140?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        bio: `Mrs. Monika Thanvi ${dummyBio}`
-    },
-    {
-        name: "Mr. Gopal Damisetti",
-        role: "Independent Director",
-        image: gopalImg,
-        linkedin: "https://www.linkedin.com/in/gopal-damisetti-2bb8367",
-        bio: `Mr. Gopal Damisetti ${dummyBio}`
-    }
-];
-
 const BoardOfDirectors = () => {
+    const { t } = useLanguage();
     const scrollRef = useRef<HTMLDivElement>(null);
+
+    const translatedBoard = t('about.leadership.board') as any[];
+
+    const boardMembers = [
+        {
+            name: (translatedBoard && translatedBoard[0]?.name) || "Mr. Syed Ahmed",
+            role: (translatedBoard && translatedBoard[0]?.role) || "Director & CEO",
+            image: syedImg,
+            linkedin: "https://www.linkedin.com/in/ssyedahmed",
+            bio: `Mr. Syed Ahmed ${dummyBio}`
+        },
+        {
+            name: (translatedBoard && translatedBoard[1]?.name) || "Ms. Nazneen Hamid",
+            role: (translatedBoard && translatedBoard[1]?.role) || "Co-Founder & Director",
+            image: nazneenImg,
+            linkedin: "https://www.linkedin.com/in/nazneen-hamid",
+            bio: `Ms. Nazneen Hamid ${dummyBio}`,
+            objectPosition: "center 60%",
+            imageClassName: "scale-[1.3] origin-top translate-y-[-6%] group-hover:scale-[1.35]"
+        },
+        {
+            name: (translatedBoard && translatedBoard[2]?.name) || "Mrs. Monika Thanvi",
+            role: (translatedBoard && translatedBoard[2]?.role) || "Independent Director",
+            image: monicaImg,
+            linkedin: "https://www.linkedin.com/in/cs-monika-thanvi-a28aa4140?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+            bio: `Mrs. Monika Thanvi ${dummyBio}`
+        },
+        {
+            name: (translatedBoard && translatedBoard[3]?.name) || "Mr. Gopal Damisetti",
+            role: (translatedBoard && translatedBoard[3]?.role) || "Independent Director",
+            image: gopalImg,
+            linkedin: "https://www.linkedin.com/in/gopal-damisetti-2bb8367",
+            bio: `Mr. Gopal Damisetti ${dummyBio}`
+        }
+    ];
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
@@ -68,7 +73,7 @@ const BoardOfDirectors = () => {
                 <ScrollReveal direction="up">
                     <div className="mb-10 md:mb-12">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left text-brand-primary">
-                            <SplitTitle title="Leadership Shaping TechInvention" />
+                            <SplitTitle title={t('about.leadership.boardSubtitle') || t('about.leadership.subtitle') || "Leadership Shaping TechInvention"} />
                         </h2>
                     </div>
                 </ScrollReveal>

@@ -10,7 +10,7 @@ const MembershipPage = () => {
     const { t } = useLanguage();
         return (
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden">
-            <AboutHeader title={t('navbar.membership')} />
+            <AboutHeader title={t('megaMenu.memberships') || t('navbar.membership') || "Memberships"} />
             <MemberLogos />
             <CTASection />
         </div>

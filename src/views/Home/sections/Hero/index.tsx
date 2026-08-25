@@ -71,13 +71,23 @@ const Hero = () => {
     const { t } = useLanguage();
     const [activeWordIndex, setActiveWordIndex] = useState(0);
 
-    const brandName = "Vaccines";
+    const brandName = (typeof t('megaMenu.vaccines') === 'string' && t('megaMenu.vaccines') !== 'megaMenu.vaccines')
+        ? t('megaMenu.vaccines')
+        : "Vaccines";
 
     const rotatingWords = [
-        "Manufacturing",
-        "R&D",
-        "Licensing",
-        "Advisory"
+        (typeof t('megaMenu.manufacturing') === 'string' && t('megaMenu.manufacturing') !== 'megaMenu.manufacturing')
+            ? t('megaMenu.manufacturing')
+            : "Manufacturing",
+        (typeof t('common.rd') === 'string' && t('common.rd') !== 'common.rd')
+            ? t('common.rd')
+            : "R&D",
+        (typeof t('megaMenu.strategicAdvisory') === 'string' && t('megaMenu.strategicAdvisory') !== 'megaMenu.strategicAdvisory')
+            ? t('megaMenu.strategicAdvisory')
+            : "Advisory",
+        (typeof t('megaMenu.diagnostics') === 'string' && t('megaMenu.diagnostics') !== 'megaMenu.diagnostics')
+            ? t('megaMenu.diagnostics')
+            : "Diagnostics"
     ];
 
     // Unified timer to rotate background and words in sync
@@ -155,7 +165,9 @@ const Hero = () => {
                     style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}
                     className="mt-2 md:mt-4 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-medium tracking-wider inline-block text-white drop-shadow-lg"
                 >
-                    Enabling One Health through <br className="block sm:hidden" /> Bio-Innovation.
+                    {typeof t('oneHealth.title') === 'string' && t('oneHealth.title') !== 'oneHealth.title'
+                        ? t('oneHealth.title').replace('{bioInnovation}', (typeof t('oneHealth.bioInnovation') === 'string' && t('oneHealth.bioInnovation') !== 'oneHealth.bioInnovation') ? t('oneHealth.bioInnovation') : 'Bio-Innovation.')
+                        : "Enabling One Health through Bio-Innovation."}
                 </motion.div>
             </div>
 

@@ -124,7 +124,7 @@ const AwardsShowcase = () => {
                     {/* Heading */}
                     <div className="px-4 md:px-8 mb-10 text-left">
                         <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide">
-                            <span className="text-[#1955A6]">Our</span> <span className="text-[#5C7625]">Achievements</span>
+                            <span className="text-[#1955A6]">{t('navbar.awardsCertifications') || "Our Achievements"}</span>
                         </h2>
                     </div>
 
@@ -199,7 +199,7 @@ const AwardsShowcase = () => {
                                 onClick={() => setShowAll(!showAll)}
                                 className="group flex items-center gap-2 px-8 py-3 rounded-full border border-gray-200 text-brand-primary font-medium hover:border-brand-primary hover:bg-brand-primary/5 transition-all duration-300"
                             >
-                                {showAll ? 'Show Less Accolades' : 'Show More Accolades'}
+                                {showAll ? (t('common.showLess') || 'Show Less Accolades') : (t('common.showMore') || 'Show More Accolades')}
                                 <svg className={`w-4 h-4 transition-transform duration-300 ${showAll ? 'rotate-180 group-hover:-translate-y-1' : 'group-hover:translate-y-1'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                 </svg>

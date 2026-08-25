@@ -23,18 +23,25 @@ const ROW_2 = [
     '/consulting-page-images/sbi-caps.png',
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const ClientLogos = () => {
+    const { t } = useLanguage();
     // We repeat the array 4 times to ensure it covers even large screens (up to 4K)
     // and translate by exactly 25% (one full cycle) for a seamless loop.
     const ROW_1_REPEATED = [...ROW_1, ...ROW_1, ...ROW_1, ...ROW_1];
     const ROW_2_REPEATED = [...ROW_2, ...ROW_2, ...ROW_2, ...ROW_2];
+
+    const partnersTitle = (t('common.trustedBy') && t('common.globalPartners'))
+        ? `${t('common.trustedBy')} ${t('common.globalPartners')}`
+        : (t('trustedPartners.title') || "Trusted by Global Partners");
 
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
                 <ScrollReveal direction="up">
                     <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide leading-tight">
-                        <SplitTitle title="Trusted by Global Partners" />
+                        <SplitTitle title={partnersTitle} />
                     </h2>
                 </ScrollReveal>
             </div>

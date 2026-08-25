@@ -18,7 +18,7 @@ const AdvisoryTestimonials = () => {
                 <ScrollReveal direction="up">
                     <div className="text-center mb-16">
                         <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight text-brand-content mb-6">
-                            Trusted by Global Partners
+                            {t('testimonials.title') || "Trusted by Global Partners"}
                         </h2>
                     </div>
                 </ScrollReveal>

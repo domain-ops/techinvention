@@ -4,15 +4,36 @@ import { MapPin } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 import indiaMap from '../../../assets/images/rnd/india_map.png';
-
-const collaborations = [
-    { id: "01", name: "Institute of Life Sciences", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Bhubaneswar" },
-    { id: "02", name: "Indian Institute of Technology", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Bhubaneswar" },
-    { id: "03", name: "ICMR - RMRC", color: "text-[#7EAB43]", bg: "bg-[#F7FBEE]", location: "Bhubaneswar" },
-    { id: "04", name: "ICMR - NIRBI", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Kolkata" }
-];
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function Collaborations() {
+    const { t } = useLanguage();
+    const transCollabs = t('horizon.collaborations') as any[];
+
+    const defaultCollabs = [
+        { id: "01", name: "Institute of Life Sciences (ILS)", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Bhubaneswar" },
+        { id: "02", name: "Indian Institute of Technology", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Bhubaneswar" },
+        { id: "03", name: "ICMR - RMRC", color: "text-[#7EAB43]", bg: "bg-[#F7FBEE]", location: "Bhubaneswar" },
+        { id: "04", name: "ICMR - NIRBI", color: "text-[#1955A6]", bg: "bg-[#F4F8FA]", location: "Kolkata" }
+    ];
+
+    const collaborations = defaultCollabs.map((collab, idx) => {
+        const item = transCollabs?.[idx];
+        if (typeof item === 'object' && item !== null) {
+            return {
+                ...collab,
+                name: item.name || collab.name,
+                location: item.location || collab.location
+            };
+        } else if (typeof item === 'string') {
+            return {
+                ...collab,
+                name: item
+            };
+        }
+        return collab;
+    });
+
     return (
         <section className="py-24 bg-white font-sans overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6">
@@ -21,15 +42,15 @@ export default function Collaborations() {
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
-                            <SplitTitle title="Our Collaborations" />
+                            <SplitTitle title={t('rnd.collaborationsTitle') || "Our Collaborations"} />
                         </h2>
                         
                         <h3 className="text-xl md:text-[24px] font-bold text-[#13325B] leading-snug mb-6">
-                            Where Institutional Excellence Meets Next-Generation Vaccine Innovation
+                            {t('rnd.collaborationsSubtitle') || "Where Institutional Excellence Meets Next-Generation Vaccine Innovation"}
                         </h3>
                         
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed">
-                            Together, our partnerships are focused on high-priority diseases of major public health significance, including Salmonella, Shigella, tuberculosis, malaria, and meningitis strengthening the pathway from scientific discovery to translational development and future vaccine impact.
+                            {t('rnd.collaborationsDesc') || "Together, our partnerships are focused on high-priority diseases of major public health significance, including Salmonella, Shigella, tuberculosis, malaria, and meningitis strengthening the pathway from scientific discovery to translational development and future vaccine impact."}
                         </p>
                     </ScrollReveal>
                 </div>

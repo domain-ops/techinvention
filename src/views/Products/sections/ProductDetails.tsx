@@ -2,6 +2,7 @@ import React from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 import { Globe, CheckCircle2, Users2 } from 'lucide-react';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface ProductData {
     id: number;
@@ -38,15 +39,15 @@ const PRODUCTS: ProductData[] = [
             "• International standard virus strain purchased from ATCC",
             "• Virus titer tested using an in-house reference"
         ],
-        pack: "Vial and WFI",
-        therapeuticUse: "Active immunization against infection caused by varicella in individuals aged 1 year (12 months) to 12 years."
+        pack: "Vial with diluent",
+        therapeuticUse: "Active immunization against varicella in individuals aged 12 months and older."
     },
     {
         id: 3,
-        name: "Inactivated Hepatitis A Vaccine (Adsorbed) I.P.",
+        name: "Hepatitis A Vaccine (Human Diploid Cell), Inactivated",
         compositionLines: [
             "Each single dose of 0.5 mL contains:",
-            "• Inactivated HAV antigen (TZ84 strain)¹ — 250 U",
+            "• Inactivated Hepatitis A Virus antigen (HM175 Strain)¹ — ≥ 250 U",
             "• Aluminium, as Aluminium Hydroxide — 0.175 to 0.31 mg",
             "• Disodium Hydrogen Phosphate — q.s.",
             "• Sodium Chloride — 4.5 mg",
@@ -70,57 +71,42 @@ const PRODUCTS: ProductData[] = [
 ];
 
 const ProductCard = ({ product }: { product: ProductData }) => {
+    const { t } = useLanguage();
+
     return (
-        <div className="rounded-sm overflow-hidden bg-white shadow-lg border border-slate-200 font-sans flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
-            {/* Header Area */}
-            <div className="w-full flex items-stretch text-left border-b border-[#1c52a0]/20 min-h-[110px] md:min-h-[120px]">
-                {/* ID Box */}
-                <div className="w-16 bg-[#1c52a0] text-white flex items-center justify-center font-bold text-xl flex-shrink-0">
-                    {product.id}
-                </div>
-                
-                {/* Header Title Box */}
-                <div className="flex-1 bg-[#f4f7f9] border-l border-slate-200 border-l-[#1c52a0] p-4 flex flex-col justify-center">
-                    <div className="text-[#13325B] font-bold text-[16px] md:text-[18px] mb-1">
-                        Product Name: {product.name}
-                    </div>
-                    {product.description && (
-                        <div className="text-[#13325B] font-medium text-[13px] md:text-[14px]">
-                            {product.description}
-                        </div>
-                    )}
-                </div>
+        <div className="w-full flex flex-col bg-white border border-[#1c52a0]/30 shadow-md rounded-none overflow-hidden text-[#13325B] h-full">
+            {/* Header / Product Name Banner */}
+            <div className="bg-gradient-to-r from-[#1755A6] to-[#1c52a0] text-white py-4 px-6 text-center shadow-sm">
+                <h3 className="text-xl md:text-2xl font-bold tracking-wide">{product.name}</h3>
+                {product.description && (
+                    <p className="text-xs md:text-sm text-white/90 font-medium mt-1 leading-snug">{product.description}</p>
+                )}
             </div>
 
-            {/* Table Area (Always Visible) */}
-            <div className="w-full flex-grow flex flex-col">
-                <table className="w-full border-collapse h-full">
-                    <tbody className="flex flex-col h-full">
+            {/* Table Details */}
+            <div className="w-full flex-1 flex flex-col">
+                <table className="w-full h-full text-left border-collapse flex flex-col">
+                    <tbody className="flex flex-col flex-1 divide-y divide-[#1c52a0]/20">
                         {/* Composition Row */}
-                        <tr className="border-b border-[#1c52a0]/20 flex flex-1">
-                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-white font-bold text-[#13325B] text-[13px] md:text-[14px]">
-                                Label Composition
+                        <tr className="flex flex-1">
+                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-slate-50 font-bold text-[#13325B] text-[13px] md:text-[14px]">
+                                {t('products.composition') || "Composition"}
                             </td>
-                            <td className="w-2/3 p-4 bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
-                                <div className="text-left">
-                                    {product.compositionLines.map((line, idx) => {
-                                        const isHeader = line.includes("contains:") || line.includes("antigens:");
-                                        return (
-                                            <div key={idx} className={`${isHeader ? 'font-bold mb-1 mt-2' : ''} ${idx === 0 ? 'mt-0' : ''}`}>
-                                                {line}
-                                            </div>
-                                        );
-                                    })}
-                                </div>
+                            <td className="w-2/3 p-4 text-left align-middle bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
+                                <ul className="space-y-1">
+                                    {product.compositionLines.map((line, idx) => (
+                                        <li key={idx}>{line}</li>
+                                    ))}
+                                </ul>
                             </td>
                         </tr>
                         
                         {/* Pack Row */}
-                        <tr className="border-b border-[#1c52a0]/20 flex">
-                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-white font-bold text-[#13325B] text-[13px] md:text-[14px]">
-                                Pack
+                        <tr className="flex">
+                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-slate-50 font-bold text-[#13325B] text-[13px] md:text-[14px]">
+                                {t('products.presentation') || "Presentation / Pack"}
                             </td>
-                            <td className="w-2/3 p-4 text-center align-middle bg-white text-[#13325B] font-bold text-[13px] md:text-[14px]">
+                            <td className="w-2/3 p-4 text-left align-middle bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
                                 {product.pack}
                             </td>
                         </tr>
@@ -128,7 +114,7 @@ const ProductCard = ({ product }: { product: ProductData }) => {
                         {/* Therapeutic Use Row */}
                         <tr className="flex flex-1">
                             <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-white font-bold text-[#13325B] text-[13px] md:text-[14px]">
-                                Therapeutic Use
+                                {t('products.therapeuticUse') || "Therapeutic Use"}
                             </td>
                             <td className="w-2/3 p-4 text-left align-middle bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
                                 {product.therapeuticUse}
@@ -142,22 +128,33 @@ const ProductCard = ({ product }: { product: ProductData }) => {
 };
 
 export default function ProductDetails() {
+    const { t } = useLanguage();
+
+    const transVaccines = t('productsDocs.vaccines') as any[];
+    const products = Array.isArray(transVaccines) && transVaccines.length > 0 ? transVaccines.map((v, i) => ({
+        id: i + 1,
+        name: v.name || PRODUCTS[i]?.name || "",
+        description: v.subtitle || PRODUCTS[i]?.description,
+        compositionLines: Array.isArray(v.composition) ? v.composition : (PRODUCTS[i]?.compositionLines || []),
+        pack: v.pack || PRODUCTS[i]?.pack || "",
+        therapeuticUse: v.use || PRODUCTS[i]?.therapeuticUse || ""
+    })) : PRODUCTS;
+
+    const transBadges = t('productsDocs.badges') as any[];
+
     return (
         <section className="py-24 bg-slate-50 relative font-sans" id="product-details">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
-                
-
-
                 <div className="text-center mb-12">
                     <ScrollReveal direction="up">
                         <h2 className="text-[22px] md:text-[32px] font-bold tracking-wide leading-tight mb-2">
-                            <SplitTitle title="Product Details" />
+                            <SplitTitle title={t('megaMenu.products') || "Product Details"} />
                         </h2>
                     </ScrollReveal>
                 </div>
 
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-                    {PRODUCTS.map((product) => (
+                    {products.map((product) => (
                         <ProductCard 
                             key={product.id} 
                             product={product} 
@@ -172,9 +169,9 @@ export default function ProductDetails() {
                             <div className="w-14 h-14 bg-[#1955A6]/10 rounded-full flex items-center justify-center mb-6 text-[#1955A6] transition-transform duration-500 group-hover:scale-110 group-hover:bg-[#1955A6]/20">
                                 <Globe className="w-7 h-7 transition-transform duration-500 group-hover:scale-115 group-hover:rotate-12" />
                             </div>
-                            <h3 className="font-bold text-[#1955A6] text-[19px] mb-3">Access-Oriented</h3>
+                            <h3 className="font-bold text-[#1955A6] text-[19px] mb-3">{transBadges?.[0]?.title || t('products.accessOriented') || "Access-Oriented"}</h3>
                             <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
-                                Built to support availability of essential vaccines across priority markets.
+                                {transBadges?.[0]?.desc || t('products.accessOrientedDesc') || "Built to support availability of essential vaccines across priority markets."}
                             </p>
                         </div>
                     </ScrollReveal>
@@ -184,9 +181,9 @@ export default function ProductDetails() {
                             <div className="w-14 h-14 bg-[#7EAB43]/10 rounded-full flex items-center justify-center mb-6 text-[#7EAB43] transition-transform duration-500 group-hover:scale-110 group-hover:bg-[#7EAB43]/20">
                                 <CheckCircle2 className="w-7 h-7 transition-transform duration-500 group-hover:scale-115 group-hover:rotate-12" />
                             </div>
-                            <h3 className="font-bold text-[#7EAB43] text-[19px] mb-3">Market-Ready</h3>
+                            <h3 className="font-bold text-[#7EAB43] text-[19px] mb-3">{transBadges?.[1]?.title || t('products.marketReady') || "Market-Ready"}</h3>
                             <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
-                                Focused on regulated, market-authorized vaccine candidates.
+                                {transBadges?.[1]?.desc || t('products.marketReadyDesc') || "Focused on regulated, market-authorized vaccine candidates."}
                             </p>
                         </div>
                     </ScrollReveal>
@@ -196,9 +193,9 @@ export default function ProductDetails() {
                             <div className="w-14 h-14 bg-[#1955A6]/10 rounded-full flex items-center justify-center mb-6 text-[#1955A6] transition-transform duration-500 group-hover:scale-110 group-hover:bg-[#1955A6]/20">
                                 <Users2 className="w-7 h-7 transition-transform duration-500 group-hover:scale-115 group-hover:rotate-12" />
                             </div>
-                            <h3 className="font-bold text-[#1955A6] text-[19px] mb-3">Partnership-Led</h3>
+                            <h3 className="font-bold text-[#1955A6] text-[19px] mb-3">{transBadges?.[2]?.title || t('products.partnershipLed') || "Partnership-Led"}</h3>
                             <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
-                                Designed for institutional, commercial and public health collaborations.
+                                {transBadges?.[2]?.desc || t('products.partnershipLedDesc') || "Designed for institutional, commercial and public health collaborations."}
                             </p>
                         </div>
                     </ScrollReveal>

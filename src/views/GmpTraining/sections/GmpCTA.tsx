@@ -8,7 +8,10 @@ const Dithering = lazy(() =>
     import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
 );
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function GmpCTA() {
+    const { t } = useLanguage();
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -38,13 +41,21 @@ export default function GmpCTA() {
                         
                         {/* Headline with Brand Colors */}
                         <h2 className="text-2xl md:text-4xl lg:text-[44px] font-medium tracking-tight text-[#1955A6] mb-6 leading-tight">
-                            Launch your career in <br />
-                            <span className="text-[#5C7625]">Vaccine Development and Manufacturing</span>
+                            {t('gmpCTA.title') || (
+                                <>
+                                    {t('gmpCTA.titlePart1') || "Launch your career in"} <br />
+                                    <span className="text-[#5C7625]">{t('gmpCTA.titlePart2') || "Vaccine Development and Manufacturing"}</span>
+                                </>
+                            )}
                         </h2>
 
                         {/* Description */}
                         <p className="text-slate-700 text-[16px] md:text-[18px] max-w-2xl mb-10 leading-relaxed font-medium">
-                            Write to <a href="mailto:connect@techinvention.biz" className="underline hover:text-[#1955A6] transition-colors font-bold">connect@techinvention.biz</a> to learn more about our training programs and upcoming initiatives.
+                            {t('gmpCTA.writeTo') || "Write to"}{" "}
+                            <a href="mailto:connect@techinvention.biz" dir="ltr" className="underline hover:text-[#1955A6] transition-colors font-bold">
+                                connect@techinvention.biz
+                            </a>{" "}
+                            {t('gmpCTA.descEnd') || "to learn more about our training programs and upcoming initiatives."}
                         </p>
 
                         {/* Premium Button with SVG slide effect */}
@@ -55,7 +66,7 @@ export default function GmpCTA() {
                                 className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-lg overflow-hidden cursor-pointer"
                             >
                                 <span className="relative z-10">
-                                    Connect Now
+                                    {t('common.exploreNow') || t('navbar.contactUs') || "Connect Now"}
                                 </span>
                                 <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center z-10">
                                     <svg

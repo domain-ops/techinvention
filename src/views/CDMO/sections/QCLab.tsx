@@ -4,7 +4,11 @@ import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { CheckCircle2, ShieldCheck, Microscope, TestTube2 } from 'lucide-react';
 import qcBg from '../../../assets/images/about_lab.png';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const QCLab = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="py-24 relative overflow-hidden bg-brand-background">
             <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
@@ -16,19 +20,31 @@ const QCLab = () => {
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
                         <span className="text-brand-secondary font-bold tracking-[0.3em] text-[11px] md:text-[13px] uppercase block mb-4 flex items-center justify-center gap-2">
-                            <TestTube2 size={16} /> Quality & Compliance
+                            <TestTube2 size={16} /> {t('cdmo.qcLab.badge') || "Quality & Compliance"}
                         </span>
                         <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight text-brand-content">
-                            QC Lab & Analytical Support
+                            {t('cdmo.qcLab.title') || "QC Lab & Analytical Support"}
                         </h2>
                     </ScrollReveal>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { title: 'In-Process Testing', desc: 'Real-time monitoring and advanced analytics during all critical manufacturing phases.', icon: Microscope },
-                        { title: 'Release Testing', desc: 'Comprehensive final product testing adhering to strict global pharmacopeial monographs.', icon: CheckCircle2 },
-                        { title: 'Stability Studies', desc: 'ICH-compliant stability chambers for rigorous long-term and accelerated testing.', icon: ShieldCheck }
+                        { 
+                            title: t('cdmo.qcLab.inProcess') || 'In-Process Testing', 
+                            desc: t('cdmo.qcLab.inProcessDesc') || 'Real-time monitoring and advanced analytics during all critical manufacturing phases.', 
+                            icon: Microscope 
+                        },
+                        { 
+                            title: t('cdmo.qcLab.release') || 'Release Testing', 
+                            desc: t('cdmo.qcLab.releaseDesc') || 'Comprehensive final product testing adhering to strict global pharmacopeial monographs.', 
+                            icon: CheckCircle2 
+                        },
+                        { 
+                            title: t('cdmo.qcLab.stability') || 'Stability Studies', 
+                            desc: t('cdmo.qcLab.stabilityDesc') || 'ICH-compliant stability chambers for rigorous long-term and accelerated testing.', 
+                            icon: ShieldCheck 
+                        }
                     ].map((item, idx) => (
                         <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
                             <motion.div 

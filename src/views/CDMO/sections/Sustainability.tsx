@@ -8,9 +8,8 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 const Sustainability = () => {
     const { t } = useLanguage();
     
-    const points = Array.isArray(t('cdmo.sustainability.points')) 
-        ? t('cdmo.sustainability.points') 
-        : [];
+    const rawPoints = (t('cdmo.sustainability.items') || t('cdmo.sustainability.points')) as any[];
+    const points = Array.isArray(rawPoints) ? rawPoints : [];
 
     return (
         <section className="py-24 bg-[#EAF2EC] relative overflow-hidden">
@@ -23,7 +22,14 @@ const Sustainability = () => {
                                 <ScrollReveal key={idx} direction="up" delay={0.1 * idx} className="h-full">
                                     <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-green-100 shadow-sm h-full">
                                         <Check className="text-green-600 shrink-0 mt-1" size={18} />
-                                        <span className="text-gray-700 text-sm leading-relaxed">{point}</span>
+                                        <div className="flex flex-col gap-1">
+                                            {typeof point === 'object' && point.title && (
+                                                <strong className="text-gray-900 text-sm font-semibold">{point.title}</strong>
+                                            )}
+                                            <span className="text-gray-700 text-sm leading-relaxed">
+                                                {typeof point === 'object' ? (point.desc || point.title) : point}
+                                            </span>
+                                        </div>
                                     </div>
                                 </ScrollReveal>
                             ))}
@@ -33,7 +39,7 @@ const Sustainability = () => {
                     <div className="order-1 lg:order-2">
                         <ScrollReveal direction="left">
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 font-bold tracking-[0.2em] text-[11px] uppercase mb-6 border border-green-200">
-                                <Leaf size={14} /> Green Operations
+                                <Leaf size={14} /> {t('cdmo.sustainability.badge') || "Green Operations"}
                             </div>
                             <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
                                 <SplitTitle title={typeof t('cdmo.sustainability.title') === 'string' ? t('cdmo.sustainability.title') : "Sustainability"} />

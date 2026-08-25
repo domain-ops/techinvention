@@ -18,13 +18,21 @@ const LOGOS = [
     '/consulting-page-images/sbi-caps.png',
 ];
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const ClientsSection = () => {
+    const { t } = useLanguage();
+
+    const partnersTitle = (t('common.trustedBy') && t('common.globalPartners'))
+        ? `${t('common.trustedBy')} ${t('common.globalPartners')}`
+        : (t('trustedPartners.title') || "Trusted by Global Partners");
+
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6 mb-16 text-center">
                 <ScrollReveal direction="up">
                     <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide leading-tight">
-                        <SplitTitle title="Trusted by Global Partners" />
+                        <SplitTitle title={partnersTitle} />
                     </h2>
                 </ScrollReveal>
             </div>

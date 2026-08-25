@@ -4,7 +4,9 @@ import { Quote, User } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 
-const testimonials = [
+import { useLanguage } from '../../../context/LanguageContext';
+
+const DEFAULT_TESTIMONIALS = [
     {
         name: "Dr. Meseret Habtamu",
         role: "Researcher – Vaccine Analytics",
@@ -38,6 +40,18 @@ const testimonials = [
 ];
 
 export default function GmpTestimonials() {
+    const { t } = useLanguage();
+
+    const rawTestimonials = t('training.testimonials') as any[];
+    const testimonials = Array.isArray(rawTestimonials) && rawTestimonials.length > 0
+        ? rawTestimonials.map(item => ({
+            name: item.author || item.name || "",
+            role: item.role || "",
+            company: item.org || item.company || "",
+            text: item.feedback || item.text || item.quote || ""
+        }))
+        : DEFAULT_TESTIMONIALS;
+
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
             {/* Ambient background glows */}
@@ -47,9 +61,8 @@ export default function GmpTestimonials() {
                 {/* Header */}
                 <div className="mb-16 text-center">
                     <ScrollReveal direction="up">
-                        
                         <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-6">
-                            <SplitTitle title="Participant Testimonials" />
+                            <SplitTitle title={t('testimonials.title') || "Participant Testimonials"} />
                         </h2>
                     </ScrollReveal>
                 </div>

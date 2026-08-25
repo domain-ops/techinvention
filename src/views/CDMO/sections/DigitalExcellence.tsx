@@ -8,9 +8,8 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 const DigitalExcellence = () => {
     const { t } = useLanguage();
     
-    const points = Array.isArray(t('cdmo.digitalManufacturing.points')) 
-        ? t('cdmo.digitalManufacturing.points') 
-        : [];
+    const rawPoints = (t('cdmo.digitalManufacturing.items') || t('cdmo.digitalManufacturing.points')) as any[];
+    const points = Array.isArray(rawPoints) ? rawPoints : [];
 
     return (
         <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -21,7 +20,7 @@ const DigitalExcellence = () => {
                     <div>
                         <ScrollReveal direction="right">
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white font-bold tracking-[0.2em] text-[11px] uppercase mb-6 border border-white/20">
-                                <Cpu size={14} /> Technology Driven
+                                <Cpu size={14} /> {t('cdmo.digitalManufacturing.badge') || "Technology Driven"}
                             </div>
                             <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
                                 <SplitTitle title={typeof t('cdmo.digitalManufacturing.title') === 'string' ? t('cdmo.digitalManufacturing.title') : "Digital Excellence"} />
@@ -38,7 +37,14 @@ const DigitalExcellence = () => {
                                 <ScrollReveal key={idx} direction="up" delay={0.1 * idx} className="h-full">
                                     <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10 h-full">
                                         <Check className="text-brand-secondary shrink-0 mt-1" size={18} />
-                                        <span className="text-gray-200 text-sm leading-relaxed">{point}</span>
+                                        <div className="flex flex-col gap-1">
+                                            {typeof point === 'object' && point.title && (
+                                                <strong className="text-white text-sm font-semibold">{point.title}</strong>
+                                            )}
+                                            <span className="text-gray-200 text-sm leading-relaxed">
+                                                {typeof point === 'object' ? (point.desc || point.title) : point}
+                                            </span>
+                                        </div>
                                     </div>
                                 </ScrollReveal>
                             ))}

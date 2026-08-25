@@ -77,16 +77,28 @@ const itemVariants = {
     }
 };
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function FacilityFeatures() {
+    const { t } = useLanguage();
+
+    const rawFeatures = t('rnd.facilityFeatures') as any[];
+    const displayFeatures = (Array.isArray(rawFeatures) && rawFeatures.length === 6)
+        ? rawFeatures.map((rf, idx) => ({
+            ...features[idx],
+            title: rf.title || features[idx].title,
+            points: Array.isArray(rf.points) ? rf.points : features[idx].points
+        }))
+        : features;
+
     return (
-        <section className="py-20 bg-slate-50/50 border-y border-slate-100">
+        <section className="py-20 bg-slate-50/50 border-y border-slate-100 font-sans">
             <div className="max-w-[1300px] mx-auto px-6">
                 
                 {/* Heading */}
                 <div className="mb-16 text-center">
                     <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                        <span className="text-[#1955A6]">Pilot-GMP </span>
-                        <span className="text-[#5C7625]">Features</span>
+                        <span className="text-[#1955A6]">{t('rnd.featuresTitle') || "Pilot-GMP Features"}</span>
                     </h2>
                 </div>
 
@@ -97,7 +109,7 @@ export default function FacilityFeatures() {
                     viewport={{ once: true, margin: "-100px" }}
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
-                    {features.map((feature, idx) => {
+                    {displayFeatures.map((feature, idx) => {
                         const Icon = feature.icon;
                         return (
                             <motion.div 
@@ -120,7 +132,7 @@ export default function FacilityFeatures() {
 
                                 {/* Bullet Points (White / Semi-transparent white checkmarks) */}
                                 <ul className="space-y-3.5 w-full relative z-10">
-                                    {feature.points.map((point, pIdx) => (
+                                    {feature.points.map((point: string, pIdx: number) => (
                                         <li key={pIdx} className="flex items-start gap-2.5 text-white/90 font-medium">
                                             <Check className="w-4 h-4 text-white shrink-0 mt-1 stroke-[3]" />
                                             <span className="text-[14px] leading-snug">{point}</span>

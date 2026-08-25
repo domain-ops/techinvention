@@ -5,7 +5,11 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowLeft, Mail, Home } from 'lucide-react';
 import Link from 'next/link';
 
+import { useLanguage } from '../../context/LanguageContext';
+
 export default function ThankYouView() {
+    const { t } = useLanguage();
+
     return (
         <section className="min-h-[85vh] flex items-center justify-center bg-slate-50/50 py-24 font-sans relative overflow-hidden">
             {/* Ambient Background Orbs */}
@@ -31,12 +35,12 @@ export default function ThankYouView() {
 
                     {/* Heading */}
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">
-                        Thank You!
+                        {t('thankYou.title') || "Thank You!"}
                     </h1>
 
                     {/* Message */}
                     <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-md mx-auto font-medium mb-8">
-                        Your submission has been received successfully. Our team will review your inquiry and get back to you shortly.
+                        {t('thankYou.desc') || "Your submission has been received successfully. Our team will review your inquiry and get back to you shortly."}
                     </p>
 
                     {/* Action Buttons */}
@@ -46,7 +50,7 @@ export default function ThankYouView() {
                             className="w-full sm:w-auto px-8 py-3.5 bg-[#1955A6] hover:bg-[#1955A6]/90 text-white rounded-full font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
                         >
                             <Home className="w-4 h-4" />
-                            <span>Return to Home</span>
+                            <span>{t('navbar.home') || "Return to Home"}</span>
                         </Link>
 
                         <Link
@@ -54,7 +58,7 @@ export default function ThankYouView() {
                             className="w-full sm:w-auto px-8 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-bold text-sm tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <Mail className="w-4 h-4 text-[#1955A6]" />
-                            <span>Contact Us</span>
+                            <span>{t('navbar.contactUs') || "Contact Us"}</span>
                         </Link>
                     </div>
                 </motion.div>

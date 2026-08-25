@@ -46,13 +46,58 @@ const initiatives = [
     }
 ];
 
+import { useLanguage } from '../../context/LanguageContext';
+
 const CsrInitiativesView = () => {
+    const { t } = useLanguage();
+    const basePath = process.env.BASE_PATH || '';
+
+    const dynamicInitiatives = [
+        {
+            badge: t('csr.initiative1.badge') || "Research & Development Support",
+            title: t('csr.initiative1.title') || "Contribution to PU- TechInvention",
+            desc: t('csr.initiative1.desc') || "TechInvention Lifecare limited, donated Rs 6 lakh to the BioNest-PU, one of North India’s top bio-incubators housed at Punjab University, Chandigarh, for research and development linked to the SARS-CoV2, at the onset of the COVID-19 pandemic.",
+            icon: HeartHandshake,
+            color: "text-[#1955A6]",
+            borderColor: "border-[#1955A6]/20",
+            hoverBorder: "hover:border-[#1955A6]/40",
+            iconBg: "bg-[#1955A6]/10",
+            shadow: "hover:shadow-[#1955A6]/5",
+        },
+        {
+            badge: t('csr.initiative2.badge') || "National Pandemic Relief",
+            title: t('csr.initiative2.title') || "Contribution to PM cares fund",
+            desc: t('csr.initiative2.desc') || "TechInvention contributed to the PM Cares Fund, established by The Hon’ble Prime Minister of India in the wake of the COVID-19 pandemic, to carry out and support relief during a public health emergency, including the creation or upgrade of healthcare or pharmaceutical facilities, other necessary infrastructure, and also funding relevant research.",
+            icon: Shield,
+            color: "text-[#7EAB43]",
+            borderColor: "border-[#7EAB43]/20",
+            hoverBorder: "hover:border-[#7EAB43]/40",
+            iconBg: "bg-[#7EAB43]/10",
+            shadow: "hover:shadow-[#7EAB43]/5",
+        },
+        {
+            badge: t('csr.initiative3.badge') || "Scientific Collaboration & Infrastructure",
+            title: t('csr.initiative3.title') || "BSL-2 Lab",
+            desc: t('csr.initiative3.desc') || "TechInvention inaugurated its BSL-2 R&D lab at the Regional Centre for Biotechnology's BSC BioNEST Bioincubator (RCB BBB) on December 6, 2022, in the presence of notable figures from the biotech industry and academia, as well as representatives from other start-ups.",
+            icon: Microscope,
+            color: "text-[#1955A6]",
+            borderColor: "border-[#1955A6]/20",
+            hoverBorder: "hover:border-[#1955A6]/40",
+            iconBg: "bg-[#1955A6]/10",
+            shadow: "hover:shadow-[#1955A6]/5",
+            link: {
+                text: t('common.readNow') || "Read News Article",
+                url: "https://www.linkedin.com/posts/healthequity4all_biotech-healthcare-research-activity-7006293693947088896-l6eo?utm_source=share&utm_medium=member_android"
+            }
+        }
+    ];
+
     return (
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden font-sans">
             {/* Header Banner */}
             <AboutBanner 
-                title="Corporate Social Responsibility" 
-                subtitle="We believe CSR must take an inclusive approach to all the stakeholders of the business to achieve our shared goal of bringing greater health equity through affordable, acceptable, and accessible healthcare for all."
+                title={t('navbar.csr') || "Corporate Social Responsibility"} 
+                subtitle={t('csr.subtitle') || "We believe CSR must take an inclusive approach to all the stakeholders of the business to achieve our shared goal of bringing greater health equity through affordable, acceptable, and accessible healthcare for all."}
             />
 
             {/* Initiatives Content */}
@@ -67,12 +112,12 @@ const CsrInitiativesView = () => {
                     <div className="mb-12">
                         <ScrollReveal direction="up">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide text-left">
-                                <SplitTitle title="Our Initiatives" />
+                                <SplitTitle title={t('csr.title') || "Our Initiatives"} />
                             </h2>
                         </ScrollReveal>
                     </div>
                     <div className="mt-20 space-y-24 md:space-y-36">
-                        {initiatives.map((item, index) => {
+                        {dynamicInitiatives.map((item, index) => {
                             const Icon = item.icon;
                             const isEven = index % 2 === 0;
                             const numStr = `0${index + 1}`;
@@ -143,7 +188,7 @@ const CsrInitiativesView = () => {
                                                     rel="noopener noreferrer"
                                                     className={`inline-flex items-center gap-2 text-sm font-bold transition-all relative py-2 ${item.color} group/link cursor-pointer w-fit`}
                                                 >
-                                                    <span>Read News Article</span>
+                                                    <span>{item.link.text || t('common.readNow') || "Read News Article"}</span>
                                                     <ArrowUpRight className="w-4 h-4 transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                                                     
                                                     {/* Animated Underline */}

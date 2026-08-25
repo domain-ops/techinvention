@@ -110,36 +110,43 @@ const CERT_CONFIG = [
     }
 ];
 
-const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => (
-    <div className="relative w-full rounded-none overflow-hidden group transition-all duration-700 hover:-translate-y-2 cursor-pointer aspect-[3/4] md:aspect-[4/5] lg:h-[500px]">
-        {/* Image Container */}
-        <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
-            <img loading="lazy" 
-                src={resolveImage(cert.image)} 
-                alt={cert.name}
-                className="max-w-full max-h-full object-contain drop-shadow-2xl mix-blend-multiply"
-            />
-        </div>
+const CertificationCard = ({ cert }: { cert: typeof CERT_CONFIG[0] }) => {
+    const { t } = useLanguage();
+    const certName = t(`certifications.list.${cert.id}.name`) || cert.name;
+    const certYear = t(`certifications.list.${cert.id}.year`) || cert.year;
+    const certInfo = t(`certifications.list.${cert.id}.info`) || cert.info;
 
-        {/* Hover Reveal Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 md:p-8 translate-y-8 group-hover:translate-y-0 overflow-y-auto scrollbar-thin">
-            <div className="flex flex-col justify-end min-h-full">
-                <div className="flex items-center gap-3 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    <div className="h-[2px] w-8 bg-white/80"></div>
-                    <span className="text-white font-mono text-sm tracking-widest font-bold">
-                        {cert.year}
-                    </span>
+    return (
+        <div className="relative w-full rounded-none overflow-hidden group transition-all duration-700 hover:-translate-y-2 cursor-pointer aspect-[3/4] md:aspect-[4/5] lg:h-[500px]">
+            {/* Image Container */}
+            <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                <img loading="lazy" 
+                    src={resolveImage(cert.image)} 
+                    alt={certName}
+                    className="max-w-full max-h-full object-contain drop-shadow-2xl mix-blend-multiply"
+                />
+            </div>
+
+            {/* Hover Reveal Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 md:p-8 translate-y-8 group-hover:translate-y-0 overflow-y-auto scrollbar-thin">
+                <div className="flex flex-col justify-end min-h-full">
+                    <div className="flex items-center gap-3 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        <div className="h-[2px] w-8 bg-white/80"></div>
+                        <span className="text-white font-mono text-sm tracking-widest font-bold">
+                            {certYear}
+                        </span>
+                    </div>
+                    <h3 className="text-2xl font-light text-white mb-3 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                        {certName}
+                    </h3>
+                    <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                        {certInfo}
+                    </p>
                 </div>
-                <h3 className="text-2xl font-light text-white mb-3 leading-tight opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
-                    {cert.name}
-                </h3>
-                <p className="text-gray-200 text-sm leading-relaxed font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                    {cert.info}
-                </p>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
 const CertificationList = () => {
     const { t } = useLanguage();

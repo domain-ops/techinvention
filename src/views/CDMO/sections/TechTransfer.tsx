@@ -3,12 +3,36 @@ import { motion } from 'framer-motion';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { ArrowRight, FileCheck, RefreshCw, Activity, PackageCheck } from 'lucide-react';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 const TechTransfer = () => {
+    const { t } = useLanguage();
+
     const steps = [
-        { num: '01', title: 'Tech Pack Receipt', desc: 'Comprehensive review of process and analytical methods.', icon: FileCheck },
-        { num: '02', title: 'Process Adaptation', desc: 'Facility fit analysis and scale-up engineering.', icon: RefreshCw },
-        { num: '03', title: 'Engineering Runs', desc: 'Non-GMP confirmation batches.', icon: Activity },
-        { num: '04', title: 'GMP Manufacturing', desc: 'Clinical and commercial production.', icon: PackageCheck }
+        { 
+            num: '01', 
+            title: t('cdmo.techTransfer.step1Title') || 'Tech Pack Receipt', 
+            desc: t('cdmo.techTransfer.step1Desc') || 'Comprehensive review of process and analytical methods.', 
+            icon: FileCheck 
+        },
+        { 
+            num: '02', 
+            title: t('cdmo.techTransfer.step2Title') || 'Process Adaptation', 
+            desc: t('cdmo.techTransfer.step2Desc') || 'Facility fit analysis and scale-up engineering.', 
+            icon: RefreshCw 
+        },
+        { 
+            num: '03', 
+            title: t('cdmo.techTransfer.step3Title') || 'Engineering Runs', 
+            desc: t('cdmo.techTransfer.step3Desc') || 'Non-GMP confirmation batches.', 
+            icon: Activity 
+        },
+        { 
+            num: '04', 
+            title: t('cdmo.techTransfer.step4Title') || 'GMP Manufacturing', 
+            desc: t('cdmo.techTransfer.step4Desc') || 'Clinical and commercial production.', 
+            icon: PackageCheck 
+        }
     ];
 
     return (
@@ -22,10 +46,10 @@ const TechTransfer = () => {
                         
                         <div className="relative z-10 text-center mb-20">
                             <h2 className="text-[24px] md:text-4xl lg:text-5xl font-medium tracking-tight mb-6 text-brand-content">
-                                Technology Transfer Readiness
+                                {t('cdmo.techTransfer.title') || "Technology Transfer Readiness"}
                             </h2>
                             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                                A streamlined, rigorous process ensuring seamless transition from R&D to full-scale commercial manufacturing.
+                                {t('cdmo.techTransfer.desc') || "A streamlined, rigorous process ensuring seamless transition from R&D to full-scale commercial manufacturing."}
                             </p>
                         </div>
 

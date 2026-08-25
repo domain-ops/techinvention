@@ -20,7 +20,7 @@ interface PipelineItem {
 }
 
 const VaccinePipeline = () => {
-    const { t } = useLanguage();
+    const { t, isRTL } = useLanguage();
 
     const pipelineData = t('vaccinePipeline.items') as PipelineItem[] || [];
     const stages = t('vaccinePipeline.stages') as Record<string, string> || {};
@@ -51,14 +51,14 @@ const VaccinePipeline = () => {
                     <div className="w-full flex flex-col pt-4">
 
                 {/* DESKTOP LAYOUT (Horizontal Timeline) */}
-                <div className="hidden lg:block w-full pb-8 pr-4">
+                <div className={`hidden lg:block w-full pb-8 ${isRTL ? 'pl-4' : 'pr-4'}`}>
                     <div className="w-full">
                         {/* Table Header (Phases) */}
                         <div className="grid grid-cols-[160px_1fr] xl:grid-cols-[180px_1fr] gap-0 text-[11px] xl:text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
                             <div>{/* Empty for row label */}</div>
                             
                             {/* Phase Columns Container */}
-                            <div className="grid grid-cols-4 w-full pr-12">
+                            <div className={`grid grid-cols-4 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'}`}>
                                 <div className="text-center font-bold">{t('vaccinePipeline.phases.rd') as string}</div>
                                 <div className="text-center font-bold">{t('vaccinePipeline.phases.poc') as string}</div>
                                 <div className="text-center font-bold">{t('vaccinePipeline.phases.preClinical') as string}</div>
@@ -72,7 +72,7 @@ const VaccinePipeline = () => {
                             {/* Vertical Dotted Guide Lines (Background Layer) */}
                             <div className="absolute inset-0 grid grid-cols-[160px_1fr] xl:grid-cols-[180px_1fr] gap-0 pointer-events-none pb-8 h-full z-0">
                                 <div></div>
-                                <div className="grid grid-cols-4 w-full pr-12 h-full">
+                                <div className={`grid grid-cols-4 w-full h-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'}`}>
                                     <div className="border-l border-dotted border-slate-300"></div>
                                     <div className="border-l border-dotted border-slate-300"></div>
                                     <div className="border-l border-dotted border-slate-300"></div>
@@ -92,13 +92,13 @@ const VaccinePipeline = () => {
                                             key={idx} 
                                             className={`grid grid-cols-[160px_1fr] xl:grid-cols-[180px_1fr] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
                                         >
-                                            {/* Left Text Label */}
-                                            <div className="pr-4 xl:pr-6 flex items-center justify-end text-right text-[14px] xl:text-[15px] font-medium text-black py-4 border-r border-transparent">
+                                            {/* Text Label */}
+                                            <div className={`px-4 xl:px-6 flex items-center ${isRTL ? 'justify-start text-left' : 'justify-end text-right'} text-[14px] xl:text-[15px] font-medium text-black py-4 border-r border-transparent`}>
                                                 {item.name}
                                             </div>
 
                                             {/* Tracking Line Area */}
-                                            <div className="relative flex items-center py-6 w-full pr-12 pl-0 pointer-events-none">
+                                            <div className={`relative flex items-center py-6 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'} pointer-events-none`}>
                                                 <div className="relative w-full h-24 flex items-center">
                                                     
                                                     {/* Central tracking line connecting nodes */}
@@ -118,16 +118,19 @@ const VaccinePipeline = () => {
                                                         viewport={{ once: true }}
                                                         transition={{ duration: 0.5, delay: 1.6 }}
                                                         className="absolute z-20"
-                                                        style={{ left: lineWidthPercent, transform: 'translateX(-25%)' }}
+                                                        style={isRTL ? { 
+                                                            right: lineWidthPercent, 
+                                                            transform: 'translateX(50%) scaleX(-1)' 
+                                                        } : { 
+                                                            left: lineWidthPercent, 
+                                                            transform: 'translateX(-50%)' 
+                                                        }}
                                                     >
                                                         <SyringeIcon className="w-7 h-7" color={item.color} />
                                                     </motion.div>
 
-
-
                                                 </div>
                                             </div>
-
 
                                         </div>
                                     );
@@ -178,7 +181,7 @@ const VaccinePipeline = () => {
                                             whileInView={{ width: lineWidthPercent }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                                            className="absolute top-0 left-0 h-full rounded-full"
+                                            className={`absolute top-0 ${isRTL ? 'right-0' : 'left-0'} h-full rounded-full`}
                                             style={{ backgroundColor: item.color }}
                                         />
                                         <motion.div 
@@ -187,13 +190,18 @@ const VaccinePipeline = () => {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 1.6 }}
                                             className="absolute top-1/2 shadow-sm z-10"
-                                            style={{ left: lineWidthPercent, transform: 'translate(-25%, -50%)' }}
+                                            style={isRTL ? { 
+                                                right: lineWidthPercent, 
+                                                transform: 'translate(50%, -50%) scaleX(-1)' 
+                                            } : { 
+                                                left: lineWidthPercent, 
+                                                transform: 'translate(-50%, -50%)' 
+                                            }}
                                         >
                                             <SyringeIcon className="w-5 h-5 bg-white rounded-full drop-shadow-sm" color={item.color} />
                                         </motion.div>
                                     </div>
                                 </div>
-
 
                             </motion.div>
                         );

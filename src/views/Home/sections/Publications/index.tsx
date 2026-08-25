@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
+import { useLanguage } from '../../../../context/LanguageContext';
 
 const basePath = process.env.BASE_PATH || '';
 
@@ -47,6 +48,7 @@ const publications = [
 ];
 
 export default function Publications() {
+    const { t } = useLanguage();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleCards, setVisibleCards] = useState(3);
 
@@ -92,7 +94,7 @@ export default function Publications() {
                     <div className="text-left max-w-3xl">
                         <ScrollReveal direction="up">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-tight text-brand-primary">
-                                Our <span className="text-brand-secondary">Publications</span>
+                                {t('common.ourPublications') || "Our Publications"}
                             </h2>
                         </ScrollReveal>
                     </div>
@@ -117,7 +119,7 @@ export default function Publications() {
                             className={`p-3 rounded-full border transition-all duration-300 ${
                                 currentIndex >= maxIndex 
                                     ? 'border-slate-200 text-slate-300 cursor-not-allowed bg-transparent' 
-                                    : 'border-[#1955A6] bg-[#1955A6] text-white hover:bg-[#1955A6]/90 shadow-md hover:shadow-lg'
+                                     : 'border-[#1955A6] bg-[#1955A6] text-white hover:bg-[#1955A6]/90 shadow-md hover:shadow-lg'
                             }`}
                             aria-label="Next slide"
                         >
@@ -136,7 +138,7 @@ export default function Publications() {
                         >
                             {publications.map((item, idx) => (
                                 <a 
-                                    key={idx}
+                                    key={idx} 
                                     href={item.pdf ? `${basePath}${item.pdf}` : `${basePath}${item.image}`} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
@@ -159,14 +161,14 @@ export default function Publications() {
                                         {/* Publication Title: clamped to exactly 3 lines with standard ellipsis */}
                                         <div className="mb-4 text-left">
                                             <h3 className="text-[#13325B] text-[11px] md:text-[12.5px] font-semibold leading-relaxed line-clamp-3 h-[63px]">
-                                                {item.title}
+                                                {t(`publications.items.${item.name}.title`) || item.title}
                                             </h3>
                                         </div>
 
                                         {/* CTA Button */}
                                         <div className="mt-auto w-full flex justify-center pt-2">
                                             <div className="flex items-center gap-2 bg-[#1955A6] text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                                                Read now
+                                                {t('common.readNow') || "READ NOW"}
                                                 <ArrowRight className="w-3.5 h-3.5" />
                                             </div>
                                         </div>

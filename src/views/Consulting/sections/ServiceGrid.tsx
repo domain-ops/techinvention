@@ -10,8 +10,9 @@ import {
 } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { useLanguage } from '../../../context/LanguageContext';
 
-const SERVICES = [
+const DEFAULT_SERVICES = [
     {
         icon: ClipboardCheck,
         title: "Pre-Feasibility & Feasibility Study",
@@ -45,6 +46,7 @@ const SERVICES = [
 ];
 
 export default function ServiceGrid() {
+    const { t } = useLanguage();
     const containerRef = React.useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -53,6 +55,16 @@ export default function ServiceGrid() {
 
     const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
+    const rawSections = t('strategicAdvisory.sections') as any[];
+    const iconsList = [ClipboardCheck, Factory, FlaskConical, FileCheck, Presentation, Boxes];
+    const SERVICES = Array.isArray(rawSections) && rawSections.length > 0
+        ? rawSections.map((sec, i) => ({
+            icon: iconsList[i % iconsList.length],
+            title: sec.title,
+            desc: sec.desc
+        }))
+        : DEFAULT_SERVICES;
+
     return (
         <section id="consulting-services" className="py-24 bg-slate-50/50 font-sans overflow-hidden">
             <div className="max-w-[1300px] mx-auto px-6">
@@ -60,13 +72,13 @@ export default function ServiceGrid() {
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <ScrollReveal direction="up">
                         <span className="text-black font-bold tracking-widest text-[12px] mb-4 block uppercase">
-                            What We Offer
+                            {t('strategicAdvisory.whatWeOffer') || "What We Offer"}
                         </span>
                         <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-6 leading-tight">
-                            <SplitTitle title="Consulting Services Tailored for Healthcare Innovation" />
+                            <SplitTitle title={t('strategicAdvisory.offerTitle') || "Consulting Services Tailored for Healthcare Innovation"} />
                         </h2>
                         <p className="text-slate-700 text-[18px] md:text-[20px] font-medium">
-                            Focused advisory across the full journey from concept to commercialization:
+                            {t('strategicAdvisory.offerSubtitle') || "Focused advisory across the full journey from concept to commercialization:"}
                         </p>
                     </ScrollReveal>
                 </div>

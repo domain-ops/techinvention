@@ -5,7 +5,10 @@ import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 const basePath = process.env.BASE_PATH || '';
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 export default function LifeAtTechInvention() {
+    const { t } = useLanguage();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const slides = [
@@ -35,7 +38,7 @@ export default function LifeAtTechInvention() {
                 {/* Header with Navigation Controls */}
                 <div className="mb-10 flex items-center justify-between">
                     <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                        <SplitTitle title="Life as a Techknight" splitIndex={3} />
+                        <SplitTitle title={t('careers.lifeAtTitle') || "Life as a Techknight"} splitIndex={3} />
                     </h2>
 
                     {/* Navigation Buttons */}
