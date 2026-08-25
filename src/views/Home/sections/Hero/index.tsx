@@ -82,12 +82,12 @@ const Hero = () => {
         (typeof t('common.rd') === 'string' && t('common.rd') !== 'common.rd')
             ? t('common.rd')
             : "R&D",
-        (typeof t('megaMenu.strategicAdvisory') === 'string' && t('megaMenu.strategicAdvisory') !== 'megaMenu.strategicAdvisory')
-            ? t('megaMenu.strategicAdvisory')
+        (typeof t('common.advisory') === 'string' && t('common.advisory') !== 'common.advisory')
+            ? t('common.advisory')
             : "Advisory",
-        (typeof t('megaMenu.diagnostics') === 'string' && t('megaMenu.diagnostics') !== 'megaMenu.diagnostics')
-            ? t('megaMenu.diagnostics')
-            : "Diagnostics"
+        (typeof t('common.licensing') === 'string' && t('common.licensing') !== 'common.licensing')
+            ? t('common.licensing')
+            : "Licensing"
     ];
 
     // Unified timer to rotate background and words in sync

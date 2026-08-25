@@ -16,7 +16,9 @@ export const french = {
         "partnerWithUs": "Devenez Partenaire de TechInvention",
         "connectNow": "Rejoignez-nous",
         "showLess": "Afficher moins de distinctions",
-        "showMore": "Afficher plus de distinctions"
+        "showMore": "Afficher plus de distinctions",
+        "licensing": "Licences",
+        "advisory": "Conseil"
     },
     "navbar": {
         "home": "Accueil",

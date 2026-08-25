@@ -16,7 +16,9 @@ export const hindi = {
         "partnerWithUs": "TechInvention के साथ साझेदारी करें",
         "connectNow": "जुड़ें",
         "showLess": "कम उपलब्धियां दिखाएं",
-        "showMore": "और अधिक उपलब्धियां देखें"
+        "showMore": "और अधिक उपलब्धियां देखें",
+        "licensing": "लाइसेंसिंग",
+        "advisory": "परामर्श"
     },
     "navbar": {
         "home": "होम",

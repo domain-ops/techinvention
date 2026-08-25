@@ -27,12 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://impulsedigital.co.in" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://impulsedigital.co.in" />
       </head>
-      <body className="bg-brand-background text-brand-content selection:bg-brand-primary/10 selection:text-brand-primary font-sans">
+      <body className="bg-brand-background text-brand-content selection:bg-brand-primary/10 selection:text-brand-primary font-sans" suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

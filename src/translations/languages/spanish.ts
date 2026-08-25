@@ -16,7 +16,9 @@ export const spanish = {
         "partnerWithUs": "Sea Socio de TechInvention",
         "connectNow": "Conectar Ahora",
         "showLess": "Mostrar menos reconocimientos",
-        "showMore": "Mostrar más reconocimientos"
+        "showMore": "Mostrar más reconocimientos",
+        "licensing": "Licencias",
+        "advisory": "Asesoría"
     },
     "navbar": {
         "home": "Inicio",

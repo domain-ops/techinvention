@@ -8,6 +8,7 @@ import { Globe, ChevronDown, Menu, X, Search, Phone, Mail } from 'lucide-react';
 import MegaMenuContent from './MegaMenuContent';
 
 const Navbar = () => {
+    const [mounted, setMounted] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
@@ -18,6 +19,10 @@ const Navbar = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const router = useRouter();
     const pathname = usePathname();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const defaultAnnouncements = [
         "🤝 TechInvention Lifecare Pledges Support to the Government of Maharashtra's Drug-Free Mumbai Initiative.",
@@ -122,10 +127,10 @@ const Navbar = () => {
     ];
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isMenuOpen ? 'bg-white border-gray-200' : isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
+        <header suppressHydrationWarning className={`fixed top-0 left-0 right-0 z-[5000] border-b transition-all duration-300 ${isMenuOpen ? 'bg-white border-gray-200' : isScrolled ? 'bg-white border-gray-200 shadow-sm' : 'bg-white/95 border-gray-100'}`}>
             
             {!isMenuOpen && (
-                <div className="w-full bg-[#1955A6] text-white min-h-[28px] py-1.5 sm:py-2 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
+                <div suppressHydrationWarning className="w-full bg-[#1955A6] text-white min-h-[28px] py-1.5 sm:py-2 flex items-center justify-center overflow-hidden px-4 border-b border-[#1955A6]/10 relative">
                     <div className="relative flex items-center justify-center w-full">
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -176,6 +181,46 @@ const Navbar = () => {
                             placeholder={t('navbar.searchPlaceholder') || "Search TechInvention..."}
                             className="w-full bg-transparent border-none py-0.5 pl-2 pr-2 text-[12px] font-medium focus:outline-none focus:ring-0 text-black placeholder:text-gray-400"
                         />
+                    </div>
+
+                    {/* Language Switcher in Top Bar */}
+                    <div className="relative">
+                        <button 
+                            onClick={() => setIsLangOpen(!isLangOpen)}
+                            className="flex items-center gap-1.5 text-[13px] font-medium text-brand-gray-dark hover:text-brand-primary bg-white hover:bg-gray-50 border border-gray-200 px-3 py-1 rounded-full transition-all shadow-xs"
+                            aria-label="Select Language"
+                            suppressHydrationWarning
+                        >
+                            <Globe size={14} className="text-brand-primary" />
+                            <span suppressHydrationWarning>{mounted ? (languages.find(l => l.code === language)?.nativeLabel || 'English') : 'English'}</span>
+                            <ChevronDown size={13} className={`transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
+                        </button>
+
+                        <AnimatePresence>
+                            {isLangOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                                    transition={{ duration: 0.15 }}
+                                    className="absolute right-0 rtl:right-auto rtl:left-0 mt-2 w-44 bg-white shadow-xl border border-gray-100 py-1.5 z-[6000] rounded-xl overflow-hidden"
+                                >
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setLanguage(lang.code);
+                                                setIsLangOpen(false);
+                                            }}
+                                            className={`w-full text-left rtl:text-right px-4 py-2 text-[13px] font-medium tracking-wide transition-colors flex items-center justify-between ${language === lang.code ? 'bg-brand-primary/10 text-brand-primary font-semibold' : 'text-gray-700 hover:bg-gray-50 hover:text-brand-primary'}`}
+                                        >
+                                            <span>{lang.nativeLabel}</span>
+                                            <span className="text-[11px] text-gray-400 font-normal">({lang.label})</span>
+                                        </button>
+                                    ))}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                 </div>
             </div>
@@ -286,11 +331,61 @@ const Navbar = () => {
                         </ul>
                     </nav>
 
-                    {/* Mobile Toggle & Search (Visible on small screens where top bar is hidden) */}
-                    <div className="flex items-center gap-4 xl:hidden">
+                    {/* Mobile Language Switcher & Hamburger Toggle */}
+                    <div className="flex items-center gap-2 sm:gap-3 xl:hidden">
+                        {/* Mobile Language Toggle */}
+                        <div className="relative">
+                            <button 
+                                onClick={() => setIsMobileLangOpen(!isMobileLangOpen)}
+                                className="flex items-center gap-1.5 text-[12px] sm:text-[13px] font-semibold text-brand-gray-dark hover:text-brand-primary bg-gray-50 hover:bg-gray-100 border border-gray-200 px-2.5 sm:px-3 py-1.5 rounded-full transition-all shadow-xs"
+                                aria-label="Select Language"
+                                suppressHydrationWarning
+                            >
+                                <Globe size={15} className="text-brand-primary flex-shrink-0" />
+                                <span className="truncate max-w-[70px] sm:max-w-none" suppressHydrationWarning>
+                                    {mounted ? (languages.find(l => l.code === language)?.nativeLabel || 'English') : 'English'}
+                                </span>
+                                <ChevronDown size={13} className={`transition-transform duration-300 ${isMobileLangOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            <AnimatePresence>
+                                {isMobileLangOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                                        transition={{ duration: 0.15 }}
+                                        className="absolute right-0 rtl:right-auto rtl:left-0 mt-2 w-44 bg-white shadow-2xl border border-gray-100 py-1.5 z-[6000] rounded-xl overflow-hidden"
+                                    >
+                                        {languages.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                onClick={() => {
+                                                    setLanguage(lang.code);
+                                                    setIsMobileLangOpen(false);
+                                                }}
+                                                className={`w-full text-left rtl:text-right px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors flex items-center justify-between ${
+                                                    language === lang.code 
+                                                        ? 'bg-brand-primary/10 text-brand-primary font-semibold' 
+                                                        : 'text-gray-700 hover:bg-gray-50 hover:text-brand-primary'
+                                                }`}
+                                            >
+                                                <span>{lang.nativeLabel}</span>
+                                                <span className="text-[11px] text-gray-400 font-normal">({lang.label})</span>
+                                            </button>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+
+                        {/* Hamburger Button */}
                         <button 
                             className="p-2 rounded-lg hover:bg-gray-50 text-black flex items-center justify-center transition-colors" 
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            onClick={() => {
+                                setIsMenuOpen(!isMenuOpen);
+                                setIsMobileLangOpen(false);
+                            }}
                             aria-label="Toggle Menu"
                         >
                             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -399,6 +494,30 @@ const Navbar = () => {
                                     </AnimatePresence>
                                 </div>
                             )})}
+
+                            {/* Mobile Language Switcher */}
+                            <div className="py-4">
+                                <span className="block text-[13px] font-semibold text-gray-400 uppercase tracking-wider mb-3">Language / اللغة / Langue</span>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setLanguage(lang.code);
+                                                setIsMenuOpen(false);
+                                            }}
+                                            className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg text-[13px] font-medium transition-colors ${
+                                                language === lang.code
+                                                    ? 'bg-brand-primary text-white font-semibold shadow-sm'
+                                                    : 'bg-gray-50 text-gray-800 hover:bg-gray-100'
+                                            }`}
+                                        >
+                                            <span>{lang.nativeLabel}</span>
+                                            <span className={`text-[11px] ${language === lang.code ? 'text-white/80' : 'text-gray-400'}`}>{lang.label}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 )}

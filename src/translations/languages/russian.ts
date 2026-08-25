@@ -16,7 +16,9 @@ export const russian = {
         "partnerWithUs": "Стать Партнером TechInvention",
         "connectNow": "Связаться",
         "showLess": "Свернуть награды",
-        "showMore": "Показать все награды"
+        "showMore": "Показать все награды",
+        "licensing": "Лицензирование",
+        "advisory": "Консалтинг"
     },
     "navbar": {
         "home": "Главная",

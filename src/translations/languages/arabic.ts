@@ -16,7 +16,9 @@ export const arabic = {
         "partnerWithUs": "كن شريكاً لـ TechInvention",
         "connectNow": "تواصل الآن",
         "showLess": "عرض أوسمة وتكريمات أقل",
-        "showMore": "عرض المزيد من الأوسمة والتكريمات"
+        "showMore": "عرض المزيد من الأوسمة والتكريمات",
+        "licensing": "الترخيص",
+        "advisory": "الاستشارات"
     },
     "navbar": {
         "home": "الرئيسية",

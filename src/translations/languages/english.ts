@@ -16,7 +16,9 @@ export const english = {
         "partnerWithUs": "Partner With TechInvention",
         "connectNow": "Connect Now",
         "showLess": "Show Less Accolades",
-        "showMore": "Show More Accolades"
+        "showMore": "Show More Accolades",
+        "licensing": "Licensing",
+        "advisory": "Advisory"
     },
     "navbar": {
         "home": "Home",

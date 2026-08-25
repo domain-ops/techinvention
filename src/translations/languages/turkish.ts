@@ -16,7 +16,9 @@ export const turkish = {
         "partnerWithUs": "TechInvention ile Ortaklık Kurun",
         "connectNow": "İletişime Geçin",
         "showLess": "Daha Az Ödül Göster",
-        "showMore": "Daha Fazla Ödül Göster"
+        "showMore": "Daha Fazla Ödül Göster",
+        "licensing": "Lisanslama",
+        "advisory": "Danışmanlık"
     },
     "navbar": {
         "home": "Ana Sayfa",
