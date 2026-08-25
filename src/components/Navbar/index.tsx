@@ -332,9 +332,9 @@ const Navbar = () => {
                     </nav>
 
                     {/* Mobile Language Switcher & Hamburger Toggle */}
-                    <div className="flex items-center gap-2 sm:gap-3 xl:hidden">
+                    <div suppressHydrationWarning className="flex items-center gap-2 sm:gap-3 xl:hidden">
                         {/* Mobile Language Toggle */}
-                        <div className="relative">
+                        <div suppressHydrationWarning className="relative">
                             <button 
                                 onClick={() => setIsMobileLangOpen(!isMobileLangOpen)}
                                 className="flex items-center gap-1.5 text-[12px] sm:text-[13px] font-semibold text-brand-gray-dark hover:text-brand-primary bg-gray-50 hover:bg-gray-100 border border-gray-200 px-2.5 sm:px-3 py-1.5 rounded-full transition-all shadow-xs"
@@ -495,29 +495,6 @@ const Navbar = () => {
                                 </div>
                             )})}
 
-                            {/* Mobile Language Switcher */}
-                            <div className="py-4">
-                                <span className="block text-[13px] font-semibold text-gray-400 uppercase tracking-wider mb-3">Language / اللغة / Langue</span>
-                                <div className="grid grid-cols-2 gap-2">
-                                    {languages.map((lang) => (
-                                        <button
-                                            key={lang.code}
-                                            onClick={() => {
-                                                setLanguage(lang.code);
-                                                setIsMenuOpen(false);
-                                            }}
-                                            className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg text-[13px] font-medium transition-colors ${
-                                                language === lang.code
-                                                    ? 'bg-brand-primary text-white font-semibold shadow-sm'
-                                                    : 'bg-gray-50 text-gray-800 hover:bg-gray-100'
-                                            }`}
-                                        >
-                                            <span>{lang.nativeLabel}</span>
-                                            <span className={`text-[11px] ${language === lang.code ? 'text-white/80' : 'text-gray-400'}`}>{lang.label}</span>
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
                         </div>
                     </motion.div>
                 )}

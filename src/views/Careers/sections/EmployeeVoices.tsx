@@ -1,11 +1,11 @@
+"use client";
 import React from 'react';
 import { Quote, User } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const basePath = process.env.BASE_PATH || '';
-
-import { useLanguage } from '../../../context/LanguageContext';
 
 const DEFAULT_TESTIMONIALS = [
     {
@@ -35,23 +35,33 @@ const DEFAULT_TESTIMONIALS = [
         experience: "5+ Years",
         quote: "Completing over six years at TechInvention has been an incredibly rewarding journey. It has been inspiring to witness the company's transformation from a startup into a growing MSME with a strong global presence. Throughout this journey, I have been given the opportunity to work on diverse international business development and strategic consulting projects, collaborate with global stakeholders, and continuously expand my knowledge in the life sciences sector. The trust, support, and learning opportunities provided by the leadership and my colleagues have played a significant role in my professional growth. I look forward to being part of TechInvention's continued success and innovation.",
         image: "/Priya-photo.jpg"
+    },
+    {
+        name: "Kulsum",
+        designation: "",
+        experience: "5+ Years",
+        quote: "I’m really grateful that I got the opportunity to start my career here as a fresher. In these five years, I’ve learned so much and grown both personally and professionally. The friendly and supportive work culture has made this journey really special. I got the opportunity to work across different R&D departments, learn new techniques and technologies, and be part of various certifications and audits. Looking back, it feels like I’ve come a long way from where I started. I’m thankful to everyone who has supported, guided, and helped me grow throughout this journey.",
+        image: "/kulsum.jpeg"
     }
 ];
 
 export default function EmployeeVoices() {
-    const { t } = useLanguage();
+    const { t, isRTL } = useLanguage();
 
     const rawTestimonials = (t('careers.testimonials.items') || (Array.isArray(t('careers.testimonials')) ? t('careers.testimonials') : null)) as any[];
-    const testimonialsImages = ["/Shahnawaz.jpg", "/Aziz.jpeg", "/Sarang-Pathak.jpeg", "/Priya-photo.jpg"];
+    const testimonialsImages = ["/Shahnawaz.jpg", "/Aziz.jpeg", "/Sarang-Pathak.jpeg", "/Priya-photo.jpg", "/kulsum.jpeg"];
     const testimonials = Array.isArray(rawTestimonials) && rawTestimonials.length > 0
         ? rawTestimonials.map((item, i) => ({
             name: item.name || "",
             designation: item.role || item.designation || "",
             experience: item.tenure || item.experience || "",
             quote: item.quote || item.text || item.feedback || "",
-            image: testimonialsImages[i % testimonialsImages.length]
+            image: item.image || testimonialsImages[i % testimonialsImages.length]
         }))
         : DEFAULT_TESTIMONIALS;
+
+    // Quadruple the array for seamless infinite marquee loop across all ultra-wide screens
+    const marqueeItems = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
 
     return (
         <section className="py-20 bg-slate-50 relative overflow-hidden font-sans border-b border-slate-200/60">
@@ -60,12 +70,13 @@ export default function EmployeeVoices() {
             <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#5C7625]/5 via-transparent to-transparent pointer-events-none" />
 
             <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+                {/* Header */}
                 <div className="text-center mb-12">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-2 leading-tight text-slate-900">
                             <SplitTitle title={t('careers.testimonials.title') || "Employee Voices"} />
                         </h2>
-                        <h3 className="text-[16px] md:text-[18px] font-medium text-slate-500">
+                        <h3 className="text-[16px] md:text-[18px] font-medium text-slate-500 max-w-2xl mx-auto">
                             {t('careers.testimonials.subtitle') || "Stories from the people growing with TechInvention."}
                         </h3>
                     </ScrollReveal>
@@ -75,14 +86,18 @@ export default function EmployeeVoices() {
             {/* Continuous Marquee Slider with Pause on Hover */}
             <div className="relative w-full overflow-hidden py-4 group">
                 <style>{`
-                    @keyframes marqueeScroll {
+                    @keyframes marqueeLTR {
                         0% { transform: translate3d(0, 0, 0); }
                         100% { transform: translate3d(-50%, 0, 0); }
+                    }
+                    @keyframes marqueeRTL {
+                        0% { transform: translate3d(0, 0, 0); }
+                        100% { transform: translate3d(50%, 0, 0); }
                     }
                     .marquee-track {
                         display: flex;
                         width: max-content;
-                        animation: marqueeScroll 45s linear infinite;
+                        animation: ${isRTL ? 'marqueeRTL' : 'marqueeLTR'} 40s linear infinite;
                         will-change: transform;
                     }
                     .group:hover .marquee-track {
@@ -91,13 +106,12 @@ export default function EmployeeVoices() {
                 `}</style>
 
                 <div className="marquee-track gap-6 md:gap-8">
-                    {/* Duplicate the array for a seamless infinite loop */}
-                    {[...testimonials, ...testimonials].map((testimonial, idx) => (
+                    {marqueeItems.map((testimonial, idx) => (
                         <div 
                             key={idx} 
-                            className="w-[290px] sm:w-[340px] md:w-[380px] bg-[#1955A6] rounded-2xl p-6 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] flex flex-col relative shrink-0 transition-transform duration-300 hover:scale-[1.02]"
+                            className="testimonial-card w-[290px] sm:w-[340px] md:w-[380px] bg-[#1955A6] rounded-2xl p-6 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] flex flex-col relative shrink-0 transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_12px_35px_-8px_rgba(25,85,166,0.3)] cursor-pointer"
                         >
-                            <Quote className="absolute top-5 right-5 w-8 h-8 text-white/20 z-0" />
+                            <Quote className="absolute top-5 right-5 rtl:right-auto rtl:left-5 w-8 h-8 text-white/20 z-0" />
                             
                             {/* Profile Info Header */}
                             <div className="flex items-center gap-4 mb-4 relative z-10">
@@ -112,13 +126,17 @@ export default function EmployeeVoices() {
                                         <User className="w-6 h-6 text-white/30" />
                                     )}
                                 </div>
-                                <div>
+                                <div className="text-left rtl:text-right">
                                     <h4 className="text-[16px] font-bold text-white mb-0.5">
                                         {testimonial.name}
                                     </h4>
-                                    {testimonial.designation && (
+                                    {testimonial.designation ? (
                                         <p className="text-[13px] font-medium text-white/80 mb-1">
                                             {testimonial.designation}
+                                        </p>
+                                    ) : (
+                                        <p className="text-[13px] font-medium text-white/80 mb-1 opacity-0 pointer-events-none select-none">
+                                            &nbsp;
                                         </p>
                                     )}
                                     <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/15 text-white text-[10px] font-bold uppercase tracking-wider">
@@ -127,8 +145,8 @@ export default function EmployeeVoices() {
                                 </div>
                             </div>
                             
-                            {/* Quote Content with smaller, sleek font */}
-                            <div className="relative z-10 flex-1">
+                            {/* Quote Content */}
+                            <div className="relative z-10 flex-1 text-left rtl:text-right">
                                 <p className="text-[13px] md:text-[14px] leading-relaxed text-white/95 font-medium">
                                     "{testimonial.quote}"
                                 </p>

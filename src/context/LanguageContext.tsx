@@ -1,7 +1,7 @@
 "use client";
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { english } from '../translations/languages/english';
-import { loadTranslation, type Language } from '../translations';
+import { translationsMap, loadTranslation, type Language } from '../translations';
 export type { Language };
 
 interface LanguageContextType {
@@ -21,28 +21,19 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     // Load persisted language from localStorage on client-side mount
     useEffect(() => {
         const savedLanguage = localStorage.getItem('language') as Language;
-        if (savedLanguage && savedLanguage !== 'en') {
+        if (savedLanguage && savedLanguage !== 'en' && translationsMap[savedLanguage]) {
             setLanguage(savedLanguage);
+            setTranslationsData(translationsMap[savedLanguage]);
         }
     }, []);
 
     useEffect(() => {
-        let active = true;
-        const load = async () => {
-            const data = await loadTranslation(language);
-            if (active) {
-                setTranslationsData(data);
-            }
-        };
-        load();
+        const data = translationsMap[language] || english;
+        setTranslationsData(data);
         
         localStorage.setItem('language', language);
         document.documentElement.lang = language;
         document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-
-        return () => {
-            active = false;
-        };
     }, [language]);
 
     const t = (key: string) => {

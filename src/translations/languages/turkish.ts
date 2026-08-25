@@ -1483,6 +1483,12 @@ export const turkish = {
                     "role": "Müdür Yardımcısı - Küresel BD",
                     "tenure": "5+ Yıl",
                     "quote": "TechInvention'da altı yılı aşkın süreyi tamamlamak inanılmaz derecede ödüllendirici bir kariyer yolculuğu oldu."
+                },
+                {
+                    "name": "Kulsum",
+                    "role": "",
+                    "tenure": "5+ Yıl",
+                    "quote": "Kariyerime burada yeni mezun olarak başlama fırsatı bulduğum için gerçekten minnettarım. Bu beş yıl boyunca çok şey öğrendim ve hem kişisel hem de profesyonel olarak büyüdüm. Samimi ve destekleyici çalışma kültürü bu yolculuğu gerçekten özel kıldı. Farklı Ar-Ge departmanlarında çalışma, yeni teknikler ve teknolojiler öğrenme ve çeşitli sertifikasyon ve denetimlerin bir parçası olma fırsatı yakaladım. Bu yolculuk boyunca beni destekleyen, yönlendiren ve gelişmeme yardımcı olan herkese teşekkür ederim."
                 }
             ]
         },

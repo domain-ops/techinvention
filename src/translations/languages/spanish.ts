@@ -1483,6 +1483,12 @@ export const spanish = {
                     "role": "Subgerente - Negocios Globales",
                     "tenure": "Más de 5 años",
                     "quote": "Cumplir más de seis años en TechInvention ha sido una experiencia profesional increíblemente enriquecedora."
+                },
+                {
+                    "name": "Kulsum",
+                    "role": "",
+                    "tenure": "5+ años",
+                    "quote": "Estoy realmente agradecida por haber tenido la oportunidad de comenzar mi carrera aquí como recién graduada. En estos cinco años, he aprendido mucho y he crecido tanto personal como profesionalmente. La cultura de trabajo amigable y de apoyo ha hecho que este camino sea verdaderamente especial. Tuve la oportunidad de trabajar en diferentes departamentos de I+D, aprender nuevas técnicas y tecnologías, y formar parte de varias certificaciones y auditorías. Agradezco a todos los que me han apoyado, guiado y ayudado a crecer a lo largo de este viaje."
                 }
             ]
         },

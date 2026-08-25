@@ -1483,6 +1483,12 @@ export const french = {
                     "role": "Directrice Adjointe - BD",
                     "tenure": "Plus de 5 ans",
                     "quote": "Plus de six années passées chez TechInvention représentent un parcours professionnel incroyablement enrichissant."
+                },
+                {
+                    "name": "Kulsum",
+                    "role": "",
+                    "tenure": "5+ ans",
+                    "quote": "Je suis vraiment reconnaissante d'avoir eu l'opportunité de débuter ma carrière ici en tant que débutante. Au cours de ces cinq années, j'ai tellement appris et grandi tant sur le plan personnel que professionnel. La culture de travail bienveillante et solidaire a rendu ce parcours vraiment spécial. J'ai eu la chance de travailler dans différents départements de R&D, d'apprendre de nouvelles techniques et technologies, et de participer à diverses certifications et audits. Je remercie tous ceux qui m'ont soutenue, guidée et aidée à évoluer tout au long de cette aventure."
                 }
             ]
         },
