@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import DottedMap from "dotted-map";
 import Image from "next/image";
@@ -20,33 +20,41 @@ export function WorldMap({
   lineColor = "#0ea5e9",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
-  
-  const map = useMemo(() => new DottedMap({ height: 100, grid: "diagonal" }), []);
-
+  const [svgMap, setSvgMap] = useState<string>("");
+  const mapRef = useRef<any>(null);
   const { theme } = useTheme();
 
-  const svgMap = useMemo(() => {
-    return map.getSVG({
-      radius: 0.22,
-      color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-      shape: "circle",
-      backgroundColor: theme === "dark" ? "black" : "white",
-    });
-  }, [map, theme]);
+  useEffect(() => {
+    // Generate map on client-side so 958 KB of inline SVG data is NOT baked into the initial SSR HTML
+    try {
+      const map = new DottedMap({ height: 75, grid: "diagonal" });
+      mapRef.current = map;
+      const svg = map.getSVG({
+        radius: 0.22,
+        color: theme === "dark" ? "#FFFFFF40" : "#00000040",
+        shape: "circle",
+        backgroundColor: theme === "dark" ? "black" : "white",
+      });
+      setSvgMap(svg);
+    } catch (e) {
+      console.error(e);
+    }
+  }, [theme]);
 
   const logoSrc = typeof dnaLogo === 'object' ? (dnaLogo as any).src : dnaLogo;
 
   const projectPoint = (lat: number, lng: number) => {
     try {
-      const pin = map.getPin({ lat, lng });
-      const x = (pin.x / 198) * 800;
-      const y = (pin.y / 100) * 400;
-      return { x, y };
-    } catch (e) {
-      const x = (lng + 180) * (800 / 360);
-      const y = (90 - lat) * (400 / 180);
-      return { x, y };
-    }
+      if (mapRef.current) {
+        const pin = mapRef.current.getPin({ lat, lng });
+        const x = (pin.x / 148) * 800;
+        const y = (pin.y / 75) * 400;
+        return { x, y };
+      }
+    } catch (e) {}
+    const x = ((lng + 180) / 360) * 800;
+    const y = ((90 - lat) / 180) * 400;
+    return { x, y };
   };
 
   const createCurvedPath = (
@@ -59,16 +67,20 @@ export function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg  relative font-sans">
-      <Image
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full pointer-events-none select-none"
-        alt="world map"
-        height="495"
-        width="1056"
-        draggable={false}
-        unoptimized
-      />
+    <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg relative font-sans">
+      {svgMap ? (
+        <Image
+          src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
+          className="h-full w-full pointer-events-none select-none transition-opacity duration-500"
+          alt="world map"
+          height="495"
+          width="1056"
+          draggable={false}
+          unoptimized
+        />
+      ) : (
+        <div className="w-full h-full bg-slate-50/50 rounded-lg animate-pulse" />
+      )}
       <svg
         ref={svgRef}
         viewBox="0 0 800 400"
