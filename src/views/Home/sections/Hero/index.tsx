@@ -102,13 +102,13 @@ const Hero = () => {
                 className="relative z-20 w-full max-w-5xl mx-auto px-6 sm:px-12 flex flex-col justify-center items-center text-center pt-24 pb-16"
             >
                 {/* Main Headline (Perfect horizontal centering and baseline alignment) */}
-                <h1 className="w-full mb-3 drop-shadow-2xl flex flex-wrap justify-center items-center gap-x-3 gap-y-1 leading-tight text-center">
+                <h1 className="w-full mb-3 drop-shadow-2xl flex flex-col sm:flex-row justify-center items-center gap-x-3 gap-y-0.5 sm:gap-y-0 leading-tight text-center">
                     <div className="inline-flex items-center justify-center">
                         <MagneticText
                             text={brandName}
                             hoverText={brandName}
-                            textClassName="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-light tracking-widest text-white uppercase drop-shadow-xl inline-block"
-                            hoverTextClassName="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-bold tracking-widest text-white uppercase"
+                            textClassName="text-[30px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-light tracking-widest text-white uppercase drop-shadow-xl inline-block"
+                            hoverTextClassName="text-[30px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-bold tracking-widest text-white uppercase"
                         />
                     </div>
                     <span 
@@ -117,7 +117,7 @@ const Hero = () => {
                     >
                         |
                     </span>
-                    <div className="inline-flex items-center justify-center text-white text-[32px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-bold tracking-tight drop-shadow-xl">
+                    <div className="inline-flex items-center justify-center text-white text-[30px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-bold tracking-tight drop-shadow-xl">
                         <SlidingWord words={rotatingWords} activeIndex={activeWordIndex} />
                     </div>
                 </h1>
