@@ -168,7 +168,7 @@ export default function Publications() {
                                         {/* CTA Button */}
                                         <div className="mt-auto w-full flex justify-center pt-2">
                                             <div className="flex items-center gap-2 bg-[#1955A6] text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                                                {t('common.readNow') || "READ NOW"}
+                                                {t('common.readNow') || "READ ARTICLE"}
                                                 <ArrowRight className="w-3.5 h-3.5" />
                                             </div>
                                         </div>

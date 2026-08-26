@@ -8,7 +8,7 @@ export const spanish = {
         "exploreNow": "Explorar",
         "myAccount": "Mi Cuenta",
         "ourPublications": "Nuestras Publicaciones",
-        "readNow": "Leer artículo de prensa",
+        "readNow": "Leer artículo",
         "trustedBy": "Confiado por",
         "globalPartners": "Socios Globales",
         "ourImpact": "Nuestro Impacto",
@@ -392,9 +392,9 @@ export const spanish = {
         "knowMore": "Conozca Más",
         "slides": [
             {
-                "tag": "Consultoría",
-                "title": "Asesoría Estratégica y Consultoría Técnica",
-                "desc": "Nuestro equipo trabaja con gobiernos y organismos para crear capacidades locales de producción de vacunas."
+                "tag": "Manufactura",
+                "title": "Manufactura a Escala Comercial",
+                "desc": "TechInvention hace posible la producción de vacunas y biológicos bajo los más altos estándares globales de calidad."
             },
             {
                 "tag": "I+D",
@@ -407,9 +407,9 @@ export const spanish = {
                 "desc": "Nuestra planta GCMC asegura la producción de vacunas bajo estándares internacionales para garantizar el suministro."
             },
             {
-                "tag": "Manufactura",
-                "title": "Manufactura a Escala Comercial",
-                "desc": "TechInvention hace posible la producción de vacunas y biológicos bajo los más altos estándares globales de calidad."
+                "tag": "Consultoría",
+                "title": "Asesoría Estratégica y Consultoría Técnica",
+                "desc": "Nuestro equipo trabaja con gobiernos y organismos para crear capacidades locales de producción de vacunas."
             }
         ]
     },
@@ -1013,6 +1013,7 @@ export const spanish = {
     },
     "awards": {
         "tag": "Reconocimientos",
+        "sectionTitle": "Premios y Galardones",
         "title": "Premios y Logros",
         "latestNews": "Últimas Noticias",
         "accolades": "Distinciones",

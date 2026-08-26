@@ -86,7 +86,7 @@ const CsrInitiativesView = () => {
             iconBg: "bg-[#1955A6]/10",
             shadow: "hover:shadow-[#1955A6]/5",
             link: {
-                text: t('common.readNow') || "Read News Article",
+                text: t('common.readNow') || "Read Article",
                 url: "https://www.linkedin.com/posts/healthequity4all_biotech-healthcare-research-activity-7006293693947088896-l6eo?utm_source=share&utm_medium=member_android"
             }
         }
@@ -188,7 +188,7 @@ const CsrInitiativesView = () => {
                                                     rel="noopener noreferrer"
                                                     className={`inline-flex items-center gap-2 text-sm font-bold transition-all relative py-2 ${item.color} group/link cursor-pointer w-fit`}
                                                 >
-                                                    <span>{item.link.text || t('common.readNow') || "Read News Article"}</span>
+                                                    <span>{item.link.text || t('common.readNow') || "Read Article"}</span>
                                                     <ArrowUpRight className="w-4 h-4 transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                                                     
                                                     {/* Animated Underline */}

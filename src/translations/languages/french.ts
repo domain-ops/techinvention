@@ -8,7 +8,7 @@ export const french = {
         "exploreNow": "Explorer",
         "myAccount": "Mon Compte",
         "ourPublications": "Nos Publications",
-        "readNow": "Lire l'article d'actualité",
+        "readNow": "Lire l'article",
         "trustedBy": "Reconnu par",
         "globalPartners": "Partenaires Mondiaux",
         "ourImpact": "Notre Impact",
@@ -392,9 +392,9 @@ export const french = {
         "knowMore": "En Savoir Plus",
         "slides": [
             {
-                "tag": "Conseil",
-                "title": "Conseil Stratégique et Conseil Technique",
-                "desc": "Notre équipe accompagne les gouvernements et bailleurs de fonds pour créer des capacités locales de production vaccinale."
+                "tag": "Fabrication",
+                "title": "Fabrication à Échelle Commerciale",
+                "desc": "TechInvention rend possible la production de vaccins et biomédicaments selon les normes mondiales de qualité les plus strictes."
             },
             {
                 "tag": "R&D",
@@ -407,9 +407,9 @@ export const french = {
                 "desc": "Notre usine GCMC assure la production de vaccins selon les normes internationales pour garantir l'approvisionnement."
             },
             {
-                "tag": "Fabrication",
-                "title": "Fabrication à Échelle Commerciale",
-                "desc": "TechInvention rend possible la production de vaccins et biomédicaments selon les normes mondiales de qualité les plus strictes."
+                "tag": "Conseil",
+                "title": "Conseil Stratégique et Conseil Technique",
+                "desc": "Notre équipe accompagne les gouvernements et bailleurs de fonds pour créer des capacités locales de production vaccinale."
             }
         ]
     },
@@ -1013,6 +1013,7 @@ export const french = {
     },
     "awards": {
         "tag": "Distinctions",
+        "sectionTitle": "Prix et Distinctions",
         "title": "Prix et Reconnaissances",
         "latestNews": "Dernières Nouvelles",
         "accolades": "Distinctions",

@@ -8,7 +8,7 @@ export const english = {
         "exploreNow": "Explore Now",
         "myAccount": "My Account",
         "ourPublications": "Our Publications",
-        "readNow": "Read News Article",
+        "readNow": "Read Article",
         "trustedBy": "Trusted by",
         "globalPartners": "Global Partners",
         "ourImpact": "Our Impact",
@@ -377,9 +377,9 @@ export const english = {
         "knowMore": "Know More",
         "slides": [
             {
-                "title": "Strategic Advisory & Tech Consulting",
-                "desc": "Our Strategic Advisory & Technical Consulting services help organizations build sustainable vaccine and biopharmaceutical manufacturing capabilities. We provide end-to-end support across feasibility studies, portfolio planning, engineering design, project supervision, facility commissioning, and gap assessments.",
-                "tag": "Consulting"
+                "title": "Commercial-Scale Manufacturing",
+                "desc": "TechInvention’s integrated GMP manufacturing facility (GCMC) provides Drug Substance and Fill-finish manufacturing for vaccines and biologics within a quality-driven, scalable framework. It supports technology transfer, process scale-up, regulatory compliance, and commercial manufacturing.",
+                "tag": "Scale-up"
             },
             {
                 "title": "Research and Development (R&D)",
@@ -392,9 +392,9 @@ export const english = {
                 "tag": "Licensing"
             },
             {
-                "title": "Commercial-Scale Manufacturing",
-                "desc": "TechInvention’s integrated GMP manufacturing facility (GCMC) provides Drug Substance and Fill-finish manufacturing for vaccines and biologics within a quality-driven, scalable framework. It supports technology transfer, process scale-up, regulatory compliance, and commercial manufacturing.",
-                "tag": "Scale-up"
+                "title": "Strategic Advisory & Tech Consulting",
+                "desc": "Our Strategic Advisory & Technical Consulting services help organizations build sustainable vaccine and biopharmaceutical manufacturing capabilities. We provide end-to-end support across feasibility studies, portfolio planning, engineering design, project supervision, facility commissioning, and gap assessments.",
+                "tag": "Consulting"
             }
         ],
         "desc": "TechInvention holistically addresses infectious disease control and antimicrobial resistance (AMR) through an integrated One Health approach.",
@@ -989,6 +989,7 @@ export const english = {
     },
     "awards": {
         "tag": "Recognition",
+        "sectionTitle": "Awards And Accolades",
         "title": "Awards & {latestNews}",
         "latestNews": "Latest News",
         "accolades": "Accolades",

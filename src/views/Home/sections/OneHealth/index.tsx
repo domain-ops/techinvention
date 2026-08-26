@@ -26,10 +26,10 @@ const OneHealth = () => {
     const translatedSlides = t('oneHealth.slides');
 
     const fallbackSlides = [
-        { title: "Strategic Advisory & Tech Consulting", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Consulting" },
-        { title: "Research and Development (R&D)", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "R&D" },
-        { title: "Licensing and Access", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Licensing" },
-        { title: "Commercial-Scale Manufacturing", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", tag: "Manufacturing" }
+        { title: "Commercial-Scale Manufacturing", desc: "TechInvention’s integrated GMP manufacturing facility (GCMC) provides Drug Substance and Fill-finish manufacturing for vaccines and biologics within a quality-driven, scalable framework. It supports technology transfer, process scale-up, regulatory compliance, and commercial manufacturing.", tag: "Manufacturing" },
+        { title: "Research and Development (R&D)", desc: "We focus on the research and development of next-generation vaccines against critical infectious diseases and AMR-associated pathogens. Powered by our pilot GMP (HORIZON) and strategic collaborations with leading research institutions, our R&D portfolio spans recombinant and glycoconjugate vaccine platforms.", tag: "R&D" },
+        { title: "Licensing and Access", desc: "We enable strategic in-licensing and out-licensing of vaccines to accelerate access, innovation and commercialization. By connecting promising technologies with the right development, manufacturing and market pathways, we help transform scientific assets into scalable global health solutions.", tag: "Licensing" },
+        { title: "Strategic Advisory & Tech Consulting", desc: "Our Strategic Advisory & Technical Consulting services help organizations build sustainable vaccine and biopharmaceutical manufacturing capabilities. We provide end-to-end support across feasibility studies, portfolio planning, engineering design, project supervision, facility commissioning, and gap assessments.", tag: "Consulting" }
     ];
 
     const finalSlidesData = Array.isArray(translatedSlides) && translatedSlides.length > 0

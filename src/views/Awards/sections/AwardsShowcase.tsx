@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
 import awardIvlc2025 from '../../../assets/awards/India-Vaccine-Leaders-Conclave-2025.jpg';
 import awardFortune2024 from '../../../assets/awards/Fortune-Leadership-Awards-2024-Excellence.jpg';
 import awardExemplars2024 from '../../../assets/awards/Exemplars-of-Excellence-2024-Biopharma.jpg';
@@ -124,7 +125,7 @@ const AwardsShowcase = () => {
                     {/* Heading */}
                     <div className="px-4 md:px-8 mb-10 text-left">
                         <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide">
-                            <span className="text-[#1955A6]">{t('navbar.awardsCertifications') || "Our Achievements"}</span>
+                            <SplitTitle title={t('awards.sectionTitle') || "Awards And Accolades"} />
                         </h2>
                     </div>
 

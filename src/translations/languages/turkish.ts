@@ -8,7 +8,7 @@ export const turkish = {
         "exploreNow": "Keşfedin",
         "myAccount": "Hesabım",
         "ourPublications": "Yayınlarımız",
-        "readNow": "Haber Makalesini Oku",
+        "readNow": "Makaleyi Oku",
         "trustedBy": "Güvenen Kuruluşlar",
         "globalPartners": "Küresel Ortaklar",
         "ourImpact": "Etkimiz",
@@ -392,9 +392,9 @@ export const turkish = {
         "knowMore": "Daha Fazlasını Öğrenin",
         "slides": [
             {
-                "tag": "Danışmanlık",
-                "title": "Stratejik Danışmanlık ve Teknik Rehberlik",
-                "desc": "Gelişmekte olan pazarlarda yerel aşı üretim kapasitesini oluşturmak için hükümetler ve fon sağlayıcılarla çalışıyoruz."
+                "tag": "Üretim",
+                "title": "Ticari Ölçekte Üretim",
+                "desc": "TechInvention, en yüksek küresel kalite standartlarında aşı ve biyofarmasötik üretimini mümkün kılar."
             },
             {
                 "tag": "Ar-Ge",
@@ -407,9 +407,9 @@ export const turkish = {
                 "desc": "GCMC tesisimiz, uluslararası standartlarda tam döngü aşı üretimi sağlayarak tedarik güvencesi sunar."
             },
             {
-                "tag": "Üretim",
-                "title": "Ticari Ölçekte Üretim",
-                "desc": "TechInvention, en yüksek küresel kalite standartlarında aşı ve biyofarmasötik üretimini mümkün kılar."
+                "tag": "Danışmanlık",
+                "title": "Stratejik Danışmanlık ve Teknik Rehberlik",
+                "desc": "Gelişmekte olan pazarlarda yerel aşı üretim kapasitesini oluşturmak için hükümetler ve fon sağlayıcılarla çalışıyoruz."
             }
         ]
     },
@@ -1013,6 +1013,7 @@ export const turkish = {
     },
     "awards": {
         "tag": "Takdir ve Başarılar",
+        "sectionTitle": "Ödüller ve Başarılar",
         "title": "Ödüller ve Başarılar",
         "latestNews": "En Son Haberler",
         "accolades": "Ödüller",

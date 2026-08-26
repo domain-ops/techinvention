@@ -106,7 +106,7 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={cn("relative inline-flex items-center justify-center cursor-none select-none", className)}
+      className={cn("relative inline-flex items-center justify-center select-none", isHovered ? "cursor-none" : "cursor-pointer", className)}
     >
       {/* Base text layer - original text */}
       <span className={cn(textClassName)}>{text}</span>
