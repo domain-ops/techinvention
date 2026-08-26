@@ -122,7 +122,7 @@ const Hero = () => {
                     </motion.div>
                 </AnimatePresence>
 
-                {/* Removed heavy dark overlays per user request */}
+                {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40 z-10" />
             </div>
 

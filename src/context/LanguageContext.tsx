@@ -1,7 +1,7 @@
 "use client";
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { english } from '../translations/languages/english';
-import { translationsMap, loadTranslation, type Language } from '../translations';
+import { loadTranslation, getCachedTranslation, type Language } from '../translations';
 export type { Language };
 
 interface LanguageContextType {
@@ -21,19 +21,38 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     // Load persisted language from localStorage on client-side mount
     useEffect(() => {
         const savedLanguage = localStorage.getItem('language') as Language;
-        if (savedLanguage && savedLanguage !== 'en' && translationsMap[savedLanguage]) {
+        if (savedLanguage && savedLanguage !== 'en') {
             setLanguage(savedLanguage);
-            setTranslationsData(translationsMap[savedLanguage]);
+            loadTranslation(savedLanguage).then((data) => {
+                setTranslationsData(data);
+            });
         }
     }, []);
 
     useEffect(() => {
-        const data = translationsMap[language] || english;
-        setTranslationsData(data);
+        let isMounted = true;
+        if (language === 'en') {
+            setTranslationsData(english);
+        } else {
+            const cached = getCachedTranslation(language);
+            if (cached !== english) {
+                setTranslationsData(cached);
+            } else {
+                loadTranslation(language).then((data) => {
+                    if (isMounted) {
+                        setTranslationsData(data);
+                    }
+                });
+            }
+        }
         
         localStorage.setItem('language', language);
         document.documentElement.lang = language;
         document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+
+        return () => {
+            isMounted = false;
+        };
     }, [language]);
 
     const t = (key: string) => {

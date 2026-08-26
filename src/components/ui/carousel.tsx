@@ -18,32 +18,6 @@ interface SlideProps {
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const slideRef = useRef<HTMLLIElement>(null);
 
-  const xRef = useRef(0);
-  const yRef = useRef(0);
-  const frameRef = useRef<number>();
-
-  useEffect(() => {
-    const animate = () => {
-      if (!slideRef.current) return;
-
-      const x = xRef.current;
-      const y = yRef.current;
-
-      slideRef.current.style.setProperty("--x", `${x}px`);
-      slideRef.current.style.setProperty("--y", `${y}px`);
-
-      frameRef.current = requestAnimationFrame(animate);
-    };
-
-    frameRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (frameRef.current) {
-        cancelAnimationFrame(frameRef.current);
-      }
-    };
-  }, []);
-
   const rectRef = useRef<DOMRect | null>(null);
 
   const handleMouseEnter = () => {
@@ -57,14 +31,18 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     if (!el) return;
 
     const r = rectRef.current || el.getBoundingClientRect();
-    xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
-    yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
+    const x = event.clientX - (r.left + Math.floor(r.width / 2));
+    const y = event.clientY - (r.top + Math.floor(r.height / 2));
+    el.style.setProperty("--x", `${x}px`);
+    el.style.setProperty("--y", `${y}px`);
   };
 
   const handleMouseLeave = () => {
     rectRef.current = null;
-    xRef.current = 0;
-    yRef.current = 0;
+    if (slideRef.current) {
+      slideRef.current.style.setProperty("--x", "0px");
+      slideRef.current.style.setProperty("--y", "0px");
+    }
   };
 
   const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {

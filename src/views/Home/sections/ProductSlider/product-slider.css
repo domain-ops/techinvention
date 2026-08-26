@@ -208,7 +208,24 @@
     height: 100%;
     background: #1755A6;
     border-radius: 3px;
-    transition: width 0.05s linear;
+    width: 0%;
+}
+
+@keyframes progressFill {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.carousel-progress-item.active .carousel-progress-fill {
+    animation: progressFill 6s linear forwards;
+}
+
+.carousel-wrapper.paused .carousel-progress-item.active .carousel-progress-fill {
+    animation-play-state: paused;
+}
+
+.carousel-progress-item.completed .carousel-progress-fill {
+    width: 100%;
 }
 
 .carousel-progress-label {

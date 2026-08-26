@@ -5,9 +5,10 @@ import ClientLayout from "./ClientLayout";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-montserrat",
+  preload: true,
 });
 
 const basePath = process.env.BASE_PATH || '';
@@ -28,10 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={montserrat.variable} suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://impulsedigital.co.in" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://impulsedigital.co.in" />
-      </head>
       <body className="bg-brand-background text-brand-content selection:bg-brand-primary/10 selection:text-brand-primary font-sans" suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
       </body>

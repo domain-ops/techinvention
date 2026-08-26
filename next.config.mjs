@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   output: process.env.STATIC_EXPORT === 'true' ? 'export' : undefined,
   basePath: process.env.BASE_PATH || '',
-  assetPrefix: process.env.BASE_PATH || undefined,
   trailingSlash: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
@@ -18,13 +18,14 @@ const nextConfig = {
       '@studio-freight/lenis',
       'clsx',
       'tailwind-merge',
+      'dotted-map'
     ],
   },
-  ...(process.env.STATIC_EXPORT !== 'true' ? {
+  ...(process.env.NODE_ENV === 'production' && process.env.STATIC_EXPORT !== 'true' ? {
     async headers() {
       return [
         {
-          source: '/:all*(svg|jpg|png|webp|avif|woff2|css|js)',
+          source: '/_next/static/:path*',
           headers: [
             {
               key: 'Cache-Control',

@@ -41,6 +41,13 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
   }, [text])
 
   useEffect(() => {
+    if (!isHovered) {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+      return;
+    }
+
     const lerp = (start: number, end: number, factor: number) => start + (end - start) * factor
 
     const animate = () => {
@@ -55,21 +62,18 @@ export function MagneticText({ text, hoverText = "EXPLORE", className, textClass
         innerTextRef.current.style.transform = `translate(${-currentPos.current.x}px, ${-currentPos.current.y}px)`
       }
 
-      // Check if window is defined (for SSR)
       if (typeof window !== 'undefined') {
         animationFrameRef.current = requestAnimationFrame(animate)
       }
     }
 
-    if (typeof window !== 'undefined') {
-        animationFrameRef.current = requestAnimationFrame(animate)
-    }
+    animationFrameRef.current = requestAnimationFrame(animate)
     return () => {
-      if (typeof window !== 'undefined' && animationFrameRef.current) {
-         cancelAnimationFrame(animationFrameRef.current)
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
       }
     }
-  }, [])
+  }, [isHovered])
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const rect = rectRef.current || (containerRef.current ? containerRef.current.getBoundingClientRect() : null)

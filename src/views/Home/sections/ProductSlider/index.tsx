@@ -34,10 +34,8 @@ export default function ProductSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [, setDirection] = useState<'next' | 'prev'>('next');
-    const [progress, setProgress] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-    const progressRef = useRef<ReturnType<typeof setInterval> | null>(null);
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
 
@@ -52,7 +50,6 @@ export default function ProductSlider() {
             if (isTransitioning || index === currentIndex) return;
             setDirection(dir || (index > currentIndex ? 'next' : 'prev'));
             setIsTransitioning(true);
-            setProgress(0);
 
             setTimeout(() => {
                 setCurrentIndex(index);
@@ -77,20 +74,12 @@ export default function ProductSlider() {
     useEffect(() => {
         if (isPaused) return;
 
-        progressRef.current = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) return 100;
-                return prev + 100 / (SLIDE_DURATION / 50);
-            });
-        }, 50);
-
         intervalRef.current = setInterval(() => {
             goNext();
         }, SLIDE_DURATION);
 
         return () => {
             if (intervalRef.current) clearInterval(intervalRef.current);
-            if (progressRef.current) clearInterval(progressRef.current);
         };
     }, [currentIndex, isPaused, goNext]);
 
@@ -219,14 +208,13 @@ export default function ProductSlider() {
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
-                            className={`carousel-progress-item ${index === currentIndex ? 'active' : ''}`}
+                            className={`carousel-progress-item ${index === currentIndex ? 'active' : index < currentIndex ? 'completed' : ''}`}
                             aria-label={`Go to slide ${index + 1}`}
                         >
                             <div className="carousel-progress-track">
                                 <div
                                     className="carousel-progress-fill"
                                     style={{
-                                        width: index === currentIndex ? `${progress}%` : index < currentIndex ? '100%' : '0%',
                                         backgroundColor: index === currentIndex ? currentSlide.accent : undefined,
                                     }}
                                 />

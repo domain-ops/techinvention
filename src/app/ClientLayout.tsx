@@ -19,14 +19,15 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     const [isDesktop, setIsDesktop] = React.useState(false);
 
     useEffect(() => {
-        setIsDesktop(typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches);
+        const hasFinePointer = typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches;
+        setIsDesktop(hasFinePointer);
         
         if (typeof window !== 'undefined') {
             window.history.scrollRestoration = 'manual';
         }
 
         const lenis = new Lenis({
-            duration: 1.4,
+            duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             orientation: 'vertical',
             gestureOrientation: 'vertical',
@@ -48,6 +49,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         return () => {
             gsap.ticker.remove(updatePhysics);
             lenis.destroy();
+            lenisRef.current = null;
         };
     }, []);
 

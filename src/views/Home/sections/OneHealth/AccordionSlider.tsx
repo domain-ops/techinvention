@@ -70,7 +70,6 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                             fill
                             sizes="(max-width: 1024px) 100vw, 25vw"
                             className="object-cover"
-                            priority={index === 0}
                         />
                     </motion.div>
 
