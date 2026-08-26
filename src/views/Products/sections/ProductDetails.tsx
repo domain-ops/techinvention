@@ -39,24 +39,24 @@ const PRODUCTS: ProductData[] = [
             "• International standard virus strain purchased from ATCC",
             "• Virus titer tested using an in-house reference"
         ],
-        pack: "Vial with diluent",
-        therapeuticUse: "Active immunization against varicella in individuals aged 12 months and older."
+        pack: "Vial and WFI",
+        therapeuticUse: "Active immunization against infection caused by varicella in individuals aged 1 year (12 months) to 12 years."
     },
     {
         id: 3,
-        name: "Hepatitis A Vaccine (Human Diploid Cell), Inactivated",
+        name: "Inactivated Hepatitis A Vaccine (Adsorbed) I.P.",
         compositionLines: [
             "Each single dose of 0.5 mL contains:",
-            "• Inactivated Hepatitis A Virus antigen (HM175 Strain)¹ — ≥ 250 U",
+            "• Inactivated HAV antigen (TZ84 strain)¹ — 250 U",
             "• Aluminium, as Aluminium Hydroxide — 0.175 to 0.31 mg",
-            "• Disodium Hydrogen Phosphate — q.s.",
+            "• Disodium Hydrogen Phosphate — 0.65 mg",
             "• Sodium Chloride — 4.5 mg",
-            "• Sodium Dihydrogen Phosphate — q.s.",
-            "• Water for Injection — q.s. to 0.5 mL",
-            "• ¹ Produced in Human Diploid Cells"
+            "• Sodium Dihydrogen Phosphate — 0.25 mg",
+            "• Water for Injections — q.s. to 0.5 mL",
+            "• ¹ Produced in Human Diploid Cells (KMB-17 Strain)"
         ],
-        pack: "Vial / Prefilled Syringe",
-        therapeuticUse: "Active immunization against infection caused by Hepatitis A virus."
+        pack: "0.5 mL Prefilled Syringe / Vial",
+        therapeuticUse: "Active immunization against Hepatitis A virus infection in adults and children aged 18 months and older."
     },
     {
         id: 4,
@@ -65,7 +65,7 @@ const PRODUCTS: ProductData[] = [
             "Each single dose of 0.5 mL contains:",
             "• Each 0.5 mL dose contains 15 µg haemagglutinin (HA) of each influenza virus strain selected in accordance with the annual recommendations of the World Health Organization (WHO) for the applicable Northern or Southern Hemisphere influenza season."
         ],
-        pack: "Prefilled Syringe",
+        pack: "0.5 mL Prefilled Syringe / Single Dose Vial",
         therapeuticUse: "Active immunization of adults aged 18 years and older for prevention of influenza disease."
     }
 ];
@@ -74,54 +74,63 @@ const ProductCard = ({ product }: { product: ProductData }) => {
     const { t } = useLanguage();
 
     return (
-        <div className="w-full flex flex-col bg-white border border-[#1c52a0]/30 shadow-md rounded-none overflow-hidden text-[#13325B] h-full">
-            {/* Header / Product Name Banner */}
-            <div className="bg-gradient-to-r from-[#1755A6] to-[#1c52a0] text-white py-4 px-6 text-center shadow-sm">
-                <h3 className="text-xl md:text-2xl font-bold tracking-wide">{product.name}</h3>
-                {product.description && (
-                    <p className="text-xs md:text-sm text-white/90 font-medium mt-1 leading-snug">{product.description}</p>
-                )}
+        <div className="w-full flex flex-col bg-white border border-slate-200/80 shadow-md rounded-lg overflow-hidden text-[#13325B] h-full transition-all duration-300 hover:shadow-lg">
+            {/* Header / Product Name Row */}
+            <div className="flex items-stretch border-b border-slate-200 min-h-[90px]">
+                {/* Left Number Box */}
+                <div className="w-[70px] sm:w-[80px] bg-[#1755A6] text-white flex items-center justify-center font-bold text-2xl sm:text-3xl shrink-0">
+                    {product.id}
+                </div>
+                {/* Right Title Area */}
+                <div className="p-4 sm:p-5 flex flex-col justify-center flex-1 bg-white">
+                    <h3 className="text-base sm:text-lg md:text-[19px] font-bold text-[#13325B] tracking-tight leading-snug">
+                        Product Name: {product.name}
+                    </h3>
+                    {product.description && (
+                        <p className="text-xs sm:text-[13px] text-slate-600 font-normal mt-1 leading-snug">
+                            {product.description}
+                        </p>
+                    )}
+                </div>
             </div>
 
             {/* Table Details */}
-            <div className="w-full flex-1 flex flex-col">
-                <table className="w-full h-full text-left border-collapse flex flex-col">
-                    <tbody className="flex flex-col flex-1 divide-y divide-[#1c52a0]/20">
-                        {/* Composition Row */}
-                        <tr className="flex flex-1">
-                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-slate-50 font-bold text-[#13325B] text-[13px] md:text-[14px]">
-                                {t('products.composition') || "Composition"}
-                            </td>
-                            <td className="w-2/3 p-4 text-left align-middle bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
-                                <ul className="space-y-1">
-                                    {product.compositionLines.map((line, idx) => (
-                                        <li key={idx}>{line}</li>
-                                    ))}
-                                </ul>
-                            </td>
-                        </tr>
-                        
-                        {/* Pack Row */}
-                        <tr className="flex">
-                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-slate-50 font-bold text-[#13325B] text-[13px] md:text-[14px]">
-                                {t('products.presentation') || "Presentation / Pack"}
-                            </td>
-                            <td className="w-2/3 p-4 text-left align-middle bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
-                                {product.pack}
-                            </td>
-                        </tr>
-                        
-                        {/* Therapeutic Use Row */}
-                        <tr className="flex flex-1">
-                            <td className="w-1/3 border-r border-[#1c52a0]/20 p-4 text-center align-middle bg-white font-bold text-[#13325B] text-[13px] md:text-[14px]">
-                                {t('products.therapeuticUse') || "Therapeutic Use"}
-                            </td>
-                            <td className="w-2/3 p-4 text-left align-middle bg-white text-[#13325B] font-medium leading-relaxed text-[13px] md:text-[14px]">
-                                {product.therapeuticUse}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className="w-full flex-1 flex flex-col divide-y divide-slate-200">
+                {/* Label Composition Row */}
+                <div className="flex flex-col sm:flex-row flex-1">
+                    <div className="w-full sm:w-[180px] p-4 text-left sm:text-center font-bold text-[#13325B] text-[13px] sm:text-[14px] flex items-center sm:justify-center border-b sm:border-b-0 sm:border-r border-slate-200 shrink-0">
+                        {t('products.labelComposition') || "Label Composition"}
+                    </div>
+                    <div className="flex-1 p-4 text-left font-normal text-[#13325B] leading-relaxed text-[13px] sm:text-[14px]">
+                        <ul className="space-y-1">
+                            {product.compositionLines.map((line, idx) => (
+                                <li key={idx} className={idx === 0 ? "font-bold mb-1" : ""}>
+                                    {line}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Pack Row */}
+                <div className="flex flex-col sm:flex-row">
+                    <div className="w-full sm:w-[180px] p-4 text-left sm:text-center font-bold text-[#13325B] text-[13px] sm:text-[14px] flex items-center sm:justify-center border-b sm:border-b-0 sm:border-r border-slate-200 shrink-0">
+                        {t('products.pack') || "Pack"}
+                    </div>
+                    <div className="flex-1 p-4 text-left font-bold text-[#13325B] leading-relaxed text-[13px] sm:text-[14px] flex items-center">
+                        {product.pack}
+                    </div>
+                </div>
+
+                {/* Therapeutic Use Row */}
+                <div className="flex flex-col sm:flex-row flex-1">
+                    <div className="w-full sm:w-[180px] p-4 text-left sm:text-center font-bold text-[#13325B] text-[13px] sm:text-[14px] flex items-center sm:justify-center border-b sm:border-b-0 sm:border-r border-slate-200 shrink-0">
+                        {t('products.therapeuticUse') || "Therapeutic Use"}
+                    </div>
+                    <div className="flex-1 p-4 text-left font-normal text-[#13325B] leading-relaxed text-[13px] sm:text-[14px] flex items-center">
+                        {product.therapeuticUse}
+                    </div>
+                </div>
             </div>
         </div>
     );
