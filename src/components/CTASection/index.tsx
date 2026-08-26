@@ -65,7 +65,7 @@ const CTASection = ({ title, description }: CTASectionProps) => {
                                     className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-xl overflow-hidden cursor-pointer"
                                 >
                                     <span className="relative z-10 text-[13px] font-bold uppercase tracking-widest">
-                                        {t('cta.primary') || t('navbar.contactUs') || "Connect Now"}
+                                        {t('cta.button') || "Connect Now"}
                                     </span>
                                     <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
                                         <svg

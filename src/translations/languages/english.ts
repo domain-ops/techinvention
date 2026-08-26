@@ -583,9 +583,9 @@ export const english = {
     },
     "cta": {
         "tag": "Bio-Innovation Hub",
-        "title": "Advancing Health",
+        "title": "Partner With TechInvention",
         "titleHighlight": "Delivered Globally.",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "Connect with us to explore collaborations, licensing partnerships, and capacity-building opportunities for vaccines and biotherapeutics globally.",
         "startPartnership": "Start Partnership",
         "products": {
             "title": "Partner With TechInvention for Vaccine Access",
