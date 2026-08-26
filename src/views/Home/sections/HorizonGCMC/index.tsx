@@ -112,7 +112,7 @@ export default function HorizonGCMC({ hideHeading = false }: HorizonGCMCProps) {
                             variants={popVariant(2.0)}
                             className="relative w-[220px] h-[220px] lg:w-[320px] lg:h-[320px] xl:w-[350px] xl:h-[350px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(0,188,212,0.6)] border-[5px] border-[#00bcd4]"
                         >
-                            <img src={gcmcImg} alt="GCMC Facility" className="w-full h-full object-cover" />
+                            <img src={gcmcImg} alt="GCMC Facility" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                         </motion.div>
                     </div>
 
@@ -172,7 +172,7 @@ export default function HorizonGCMC({ hideHeading = false }: HorizonGCMCProps) {
                             <div className="absolute left-[calc(50%+280px)] xl:left-[calc(50%+330px)] top-[64%] -translate-y-1/2 w-[220px] xl:w-[260px]">
                                 <motion.div variants={popVariant(3.0)} className="flex flex-col items-center w-full">
                                     <div className="w-full flex justify-center">
-                                        <img src={industryFactoryImg} alt="Industry Factory" className="w-full max-w-[160px] xl:max-w-[200px] h-auto object-contain" />
+                                        <img src={industryFactoryImg} alt="Industry Factory" loading="lazy" decoding="async" className="w-full max-w-[160px] xl:max-w-[200px] h-auto object-contain" />
                                     </div>
                                     <h4 className="font-bold text-[16px] xl:text-[18px] text-white mb-2 -mt-6 xl:-mt-8">{t('horizonGcmc.industry') || "Industry"}</h4>
                                     <p className="text-[11px] xl:text-[13px] text-white/90 text-center leading-tight">{t('horizonGcmc.industryDesc') || "Optimised tech packs for seamless transfer and rapid commercialisation"}</p>
@@ -230,7 +230,7 @@ export default function HorizonGCMC({ hideHeading = false }: HorizonGCMCProps) {
                         </motion.div>
                         
                         <motion.div variants={popVariant(3.0)} className="flex flex-col items-center mt-2">
-                            <img src={industryFactoryImg} alt="Industry Factory" className="w-full max-w-[160px] sm:max-w-[180px] h-auto object-contain" />
+                            <img src={industryFactoryImg} alt="Industry Factory" loading="lazy" decoding="async" className="w-full max-w-[160px] sm:max-w-[180px] h-auto object-contain" />
                             <h4 className="font-bold text-[16px] text-white mb-1 -mt-6">{t('horizonGcmc.industry') || "Industry"}</h4>
                             <p className="text-[13px] text-white/90 text-center">{t('horizonGcmc.industryDesc') || "Optimised tech packs for seamless transfer and rapid commercialisation"}</p>
                         </motion.div>

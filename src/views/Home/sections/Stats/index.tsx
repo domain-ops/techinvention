@@ -57,7 +57,7 @@ const Stats = () => {
                                     whileHover={{ y: -4 }}
                                     className="bg-white border border-slate-200/60 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center h-full min-h-[290px]"
                                 >
-                                    <img src={greatPlaceImg} alt="Great Place to Work" className="max-h-[220px] sm:max-h-[250px] w-auto object-contain" />
+                                    <img src={greatPlaceImg} alt="Great Place to Work" loading="lazy" decoding="async" className="max-h-[220px] sm:max-h-[250px] w-auto object-contain" />
                                 </motion.div>
                             </div>
 
@@ -73,7 +73,7 @@ const Stats = () => {
                                     whileHover={{ y: -4 }}
                                     className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
                                 >
-                                    <img src={dbImg} alt="Dun & Bradstreet" className="w-full h-full object-contain" />
+                                    <img src={dbImg} alt="Dun & Bradstreet" loading="lazy" decoding="async" className="w-full h-full object-contain" />
                                 </motion.div>
 
                                 {/* Forbes Card */}
@@ -85,7 +85,7 @@ const Stats = () => {
                                     whileHover={{ y: -4 }}
                                     className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
                                 >
-                                    <img src={forbesImg} alt="Forbes India DGEMS" className="w-full h-full object-contain" />
+                                    <img src={forbesImg} alt="Forbes India DGEMS" loading="lazy" decoding="async" className="w-full h-full object-contain" />
                                 </motion.div>
                             </div>
 

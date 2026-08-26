@@ -62,6 +62,8 @@ const ClientLogos = () => {
                                 <img 
                                     src={`${basePath}${src}`} 
                                     alt="Client Logo" 
+                                    loading="lazy"
+                                    decoding="async"
                                     className="max-w-full max-h-full object-contain"
                                 />
                             </div>
@@ -84,6 +86,8 @@ const ClientLogos = () => {
                                 <img 
                                     src={`${basePath}${src}`} 
                                     alt="Client Logo" 
+                                    loading="lazy"
+                                    decoding="async"
                                     className="max-w-full max-h-full object-contain"
                                 />
                             </div>
