@@ -1,46 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import React from 'react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
-import { Maximize2, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { FileText, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const basePath = process.env.BASE_PATH || '';
 
-import { useLanguage } from '../../../context/LanguageContext';
-
 export default function ClientFeedback() {
     const { t } = useLanguage();
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (selectedImage) {
-            document.body.style.overflow = 'hidden';
-            const handleKeyDown = (e: KeyboardEvent) => {
-                if (e.key === 'Escape') {
-                    setSelectedImage(null);
-                }
-            };
-            window.addEventListener('keydown', handleKeyDown);
-            return () => {
-                document.body.style.overflow = '';
-                window.removeEventListener('keydown', handleKeyDown);
-            };
-        } else {
-            document.body.style.overflow = '';
+    const feedbackDocuments = [
+        { 
+            src: "/feedback-4.png", 
+            pdf: "/articales/Certificate_IAVI_TechInvention.pdf", 
+            title: "IAVI Certificate of Acknowledgement",
+            alt: "Client Feedback Letter - IAVI" 
+        },
+        { 
+            src: "/feedback-3.jpg", 
+            pdf: "/articales/Feedback letter_IM Signed.pdf", 
+            title: "UNOPS Biosafety & Biosecurity Training",
+            alt: "Client Feedback Letter - UNOPS Biosafety & Biosecurity Training" 
+        },
+        { 
+            src: "/feedback-2.jpg", 
+            pdf: "/articales/Feedback letter for Vaccine Analytics Training.pdf", 
+            title: "UNOPS Vaccine Analytics Training",
+            alt: "Client Feedback Letter - UNOPS Vaccine Analytics Training" 
+        },
+        { 
+            src: "/feedback-1.jpg", 
+            pdf: "/articales/Letter of Appreciation - Techinvention Lifecare Pvt. Ltd.pdf", 
+            title: "WHO Letter of Appreciation",
+            alt: "Client Feedback Letter - WHO" 
         }
-    }, [selectedImage]);
-
-    const feedbackImages = [
-        { src: "/feedback-4.png", alt: "Client Feedback Letter - IAVI" },
-        { src: "/feedback-3.jpg", alt: "Client Feedback Letter - UNOPS Biosafety & Biosecurity Training" },
-        { src: "/feedback-2.jpg", alt: "Client Feedback Letter - UNOPS Vaccine Analytics Training" },
-        { src: "/feedback-1.jpg", alt: "Client Feedback Letter - WHO" }
     ];
 
     return (
@@ -56,77 +49,39 @@ export default function ClientFeedback() {
                     </ScrollReveal>
                 </div>
 
-                {/* 4-Column Image Grid */}
+                {/* 4-Column Card Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {feedbackImages.map((img, idx) => (
+                    {feedbackDocuments.map((doc, idx) => (
                         <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
-                            <div 
-                                onClick={() => setSelectedImage(img.src)}
-                                className="group bg-white p-4 border border-slate-200 rounded-2xl cursor-pointer hover:border-[#1955A6]/40 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                            <a 
+                                href={encodeURI(`${basePath}${doc.pdf}`)}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group bg-white p-4 border border-slate-200 rounded-2xl cursor-pointer hover:border-[#1955A6]/40 hover:shadow-xl transition-all duration-300 relative overflow-hidden block"
                             >
                                 {/* Image Container */}
                                 <div className="aspect-[3/4] relative overflow-hidden rounded-lg bg-white border border-slate-200/80 flex items-center justify-center">
                                     <img 
-                                        src={`${basePath}${img.src}`} 
-                                        alt={img.alt} 
+                                        src={`${basePath}${doc.src}`} 
+                                        alt={doc.alt} 
                                         className="w-full h-full object-contain object-top transition-transform duration-500 group-hover:scale-[1.03]" 
                                     />
                                     
-                                    {/* Hover overlay icon */}
-                                    <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <div className="bg-white/90 p-3 rounded-full shadow-lg text-slate-800 transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                                            <Maximize2 size={18} />
+                                    {/* Hover overlay with Open PDF button */}
+                                    <div className="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 p-4">
+                                        <div className="bg-white text-[#1955A6] px-4 py-2.5 rounded-full shadow-lg font-semibold text-xs flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                            <FileText size={16} />
+                                            <span>View Full PDF</span>
+                                            <ExternalLink size={14} />
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </ScrollReveal>
                     ))}
                 </div>
 
             </div>
-
-            {/* Lightbox / Modal View via Portal */}
-            {mounted && createPortal(
-                <AnimatePresence>
-                    {selectedImage && (
-                        <motion.div 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setSelectedImage(null)}
-                            className="fixed inset-0 bg-black/85 backdrop-blur-sm z-[999999] flex items-center justify-center p-4 sm:p-6 md:p-8 cursor-zoom-out"
-                        >
-                            {/* Close Button */}
-                            <button 
-                                onClick={() => setSelectedImage(null)}
-                                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/90 hover:text-white p-2.5 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-200 z-[1000000] flex items-center justify-center shadow-lg border border-white/10"
-                                aria-label="Close modal"
-                            >
-                                <X size={24} />
-                            </button>
-
-                            {/* Modal Image Container */}
-                            <motion.div 
-                                initial={{ scale: 0.95, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                exit={{ scale: 0.95, opacity: 0 }}
-                                transition={{ duration: 0.25, ease: "easeOut" }}
-                                className="relative max-w-[92vw] sm:max-w-[80vw] md:max-w-[65vw] lg:max-w-[50vw] xl:max-w-[42vw] max-h-[85vh] bg-white rounded-2xl p-2 sm:p-4 flex items-center justify-center shadow-2xl overflow-hidden cursor-default"
-                                onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image card
-                            >
-                                <img 
-                                    src={`${basePath}${selectedImage}`} 
-                                    alt="Client Feedback Letter Fullscreen" 
-                                    className="w-auto h-auto max-w-full max-h-[80vh] object-contain rounded-xl" 
-                                />
-                            </motion.div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>,
-                document.body
-            )}
-
         </section>
     );
 }
