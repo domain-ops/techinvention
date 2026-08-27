@@ -22,10 +22,10 @@ export default function CareersHero() {
                 <div className="flex-1 text-left">
                     <ScrollReveal direction="up">
                         <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] font-medium tracking-wide mb-6 leading-[1.15]">
-                            <SplitTitle title={t('careers.title') as string} />
+                            <SplitTitle title={(t('careers.title') as string) || "Build a Career with Purpose"} />
                         </h1>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 font-medium">
-                            {t('careers.intro')}
+                            {t('careers.intro') || "Join a team where science, strategy and execution come together to create meaningful healthcare impact. At TechInvention, every role contributes to advancing vaccines, biologics and technologies that support access, affordability and resilience across global health ecosystems."}
                         </p>
                     </ScrollReveal>
 

@@ -672,11 +672,11 @@ export const french = {
         }
     },
     "globalProjects": {
-        "tag": "Reconnu par des Partenaires Mondiaux",
-        "title": "Partenaires de Confiance : {partners}",
-        "partners": "Partenaires Mondiaux",
-        "partnersTag": "Partenaires Mondiaux",
-        "desc": "Nous bâtissons des partenariats de confiance pour accélérer l'accès aux vaccins, renforcer les infrastructures de santé et développer les capacités de bioproduction à l'échelle mondiale.",
+        "tag": "Projets Mondiaux et Partenaires",
+        "title": "Projets Mondiaux {partners}",
+        "partners": "et Partenaires",
+        "partnersTag": "Projets Mondiaux et Partenaires",
+        "desc": "Bâtir des partenariats mondiaux de confiance pour accélérer l'accès aux vaccins, aux infrastructures de santé et à l'excellence en biofabrication.",
         "stats": [
             {
                 "label": "Pays Desservis",
@@ -781,23 +781,23 @@ export const french = {
                 "color": "#129B9C"
             },
             {
-                "name": "Vaccin Pan-Salmonella",
+                "name": "Vaccin Méningocoque B",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Vaccin Shigella",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Vaccin Méningocoque B",
-                "progress": 25,
+                "name": "Vaccin Pan-Salmonella",
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Vaccin Paludisme",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
@@ -1295,6 +1295,34 @@ export const french = {
             }
         ]
     },
+    "consultingServices": {
+        "services": [
+            {
+                "title": "Étude de Pré-faisabilité et de Faisabilité",
+                "desc": "Évaluation technique, commerciale, réglementaire et financière complète pour appuyer les décisions d'investissement."
+            },
+            {
+                "title": "Conception d'Installations et Préparation BPF (GMP)",
+                "desc": "Conception de base, conceptuelle et détaillée avec planification des salles blanches, flux de travail, fluides, stratégie d'équipements et préparation conforme aux BPF."
+            },
+            {
+                "title": "Transfert de Technologie et Mise à l'Échelle",
+                "desc": "Identification des produits, évaluation, accompagnement au transfert de procédés, planification de la mise à l'échelle et fabrication."
+            },
+            {
+                "title": "Qualité, Réglementation et Conformité",
+                "desc": "Support pour SMQ (QMS), évaluation des écarts BPF, préparation aux audits, documentation et alignement réglementaire mondial."
+            },
+            {
+                "title": "Formation et Renforcement des Capacités",
+                "desc": "Programmes spécialisés en BxP, CQ, AQ, affaires réglementaires et exploitation des installations."
+            },
+            {
+                "title": "Planification du Portefeuille de Produits",
+                "desc": "Portefeuille de produits, besoins du marché, modèle opérationnel et stratégie de mise en œuvre."
+            }
+        ]
+    },
     "cdmo": {
         "title": "Organisation de Développement et Fabrication Sous Contrat (CDMO)",
         "subtitle": "Solutions Avancées de Bioproduction",
@@ -1486,8 +1514,8 @@ export const french = {
                     "quote": "Plus de six années passées chez TechInvention représentent un parcours professionnel incroyablement enrichissant."
                 },
                 {
-                    "name": "Kulsum",
-                    "role": "",
+                    "name": "Nida Afreen Qureshi",
+                    "role": "Cadre Supérieure - R&D",
                     "tenure": "5+ ans",
                     "quote": "Je suis vraiment reconnaissante d'avoir eu l'opportunité de débuter ma carrière ici en tant que débutante. Au cours de ces cinq années, j'ai tellement appris et grandi tant sur le plan personnel que professionnel. La culture de travail bienveillante et solidaire a rendu ce parcours vraiment spécial. J'ai eu la chance de travailler dans différents départements de R&D, d'apprendre de nouvelles techniques et technologies, et de participer à diverses certifications et audits. Je remercie tous ceux qui m'ont soutenue, guidée et aidée à évoluer tout au long de cette aventure."
                 }

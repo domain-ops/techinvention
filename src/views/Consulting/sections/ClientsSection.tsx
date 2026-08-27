@@ -43,12 +43,13 @@ const ClientsSection = () => {
                     {LOGOS.map((src, index) => (
                         <div 
                             key={index} 
-                            className="flex items-center justify-center h-[75px]"
+                            className="flex items-center justify-center h-[75px] w-full"
                         >
                             <img 
                                 src={`${basePath}${src}`} 
                                 alt="Client Logo" 
-                                className="max-w-full max-h-full object-contain"
+                                className="max-w-full max-h-[75px] w-auto h-auto object-contain"
+                                style={{ maxWidth: '100%', maxHeight: '75px', width: 'auto', height: 'auto' }}
                             />
                         </div>
                     ))}
@@ -65,12 +66,13 @@ const ClientsSection = () => {
                     {[...LOGOS, ...LOGOS].map((src, index) => (
                         <div 
                             key={index} 
-                            className="w-[150px] h-[60px] flex items-center justify-center p-2 flex-shrink-0"
+                            className="w-[150px] h-[60px] flex items-center justify-center p-2 flex-shrink-0 shrink-0"
                         >
                             <img 
                                 src={`${basePath}${src}`} 
                                 alt="Client Logo" 
-                                className="max-w-full max-h-full object-contain"
+                                className="max-w-full max-h-full w-auto h-auto object-contain"
+                                style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
                             />
                         </div>
                     ))}

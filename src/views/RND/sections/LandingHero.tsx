@@ -35,7 +35,6 @@ export default function LandingHero() {
                         </p>
                     </ScrollReveal>
 
-
                 </div>
 
                 {/* Visual Section - Large stacked image below */}
@@ -49,8 +48,8 @@ export default function LandingHero() {
                         <div className="absolute inset-0 bg-[#1955A6]/2 z-10 pointer-events-none rounded-none" />
                         <div className="relative w-full aspect-video overflow-hidden">
                             <iframe 
-                                src="https://www.youtube.com/embed/YbD6JxmEwV8?si=KkRuv8TuBQzi1C4B&cc_load_policy=3" 
-                                title="YouTube video player" 
+                                src="https://www.youtube.com/embed/YbD6JxmEwV8?rel=0&cc_load_policy=0&iv_load_policy=3" 
+                                title="TechInvention HORIZON R&D Ecosystem" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 referrerPolicy="strict-origin-when-cross-origin" 

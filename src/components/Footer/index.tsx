@@ -111,9 +111,6 @@ const Footer = () => {
                                 <li>
                                     <FooterLink href="/contact-us">{t('navbar.contactUs') || "Contact Us"}</FooterLink>
                                 </li>
-                                <li className="break-all" dir="ltr">
-                                    <FooterLink href="mailto:connect@techinvention.biz" isExternal>connect@techinvention.biz</FooterLink>
-                                </li>
                             </ul>
                         </div>
                     </div>

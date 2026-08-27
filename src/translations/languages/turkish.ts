@@ -672,11 +672,11 @@ export const turkish = {
         }
     },
     "globalProjects": {
-        "tag": "Küresel İş Ortaklarının Güvendiği Kuruluş",
-        "title": "Güvenilen {partners}",
-        "partners": "Küresel İş Ortakları",
-        "partnersTag": "Küresel Ortaklar",
-        "desc": "Aşılara erişimi hızlandırmak, sağlık altyapısını güçlendirmek ve biyoüretim kapasitesini artırmak amacıyla dünya genelinde güvene dayalı küresel iş birlikleri kuruyoruz.",
+        "tag": "Küresel Projeler ve Ortaklar",
+        "title": "Küresel Projeler {partners}",
+        "partners": "ve Ortaklar",
+        "partnersTag": "Küresel Projeler ve Ortaklar",
+        "desc": "Aşılara erişimi, sağlık altyapısını ve biyo-üretim mükemmeliyetini hızlandırmak için güvenilir küresel ortaklıklar kuruyoruz.",
         "stats": [
             {
                 "label": "Ulaşılan Ülkeler",
@@ -781,23 +781,23 @@ export const turkish = {
                 "color": "#129B9C"
             },
             {
-                "name": "Pan-Salmonella Aşısı",
+                "name": "Meningococcal B Aşısı",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Shigella Aşısı",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Meningococcal B Aşısı",
-                "progress": 25,
+                "name": "Pan-Salmonella Aşısı",
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Sıtma Aşısı",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
@@ -1295,6 +1295,34 @@ export const turkish = {
             }
         ]
     },
+    "consultingServices": {
+        "services": [
+            {
+                "title": "Ön Fizibilite ve Fizibilite Çalışması",
+                "desc": "Yatırım kararlarını desteklemek için kapsamlı teknik, ticari, düzenleyici ve finansal değerlendirme."
+            },
+            {
+                "title": "Tesis Tasarımı ve GMP Hazırlığı",
+                "desc": "Temiz oda planlaması, iş akışı, yardımcı tesisler, ekipman stratejisi ve GMP uyumlu hazırlık desteği ile Temel Tasarım, Konsept tasarım ve Detaylı Tasarım."
+            },
+            {
+                "title": "Teknoloji Transferi ve Ölçek Büyütme",
+                "desc": "Ürün belirleme, değerlendirme, süreç transferi desteği, ölçek büyütme planlaması ve üretim."
+            },
+            {
+                "title": "Kalite, Mevzuat ve Uyumluluk",
+                "desc": "KYS (QMS), GMP boşluk değerlendirmesi, denetim hazırlığı, dokümantasyon ve küresel düzenleyici uyum desteği."
+            },
+            {
+                "title": "Eğitim ve Kapasite Geliştirme",
+                "desc": "GxP, KK (QC), KG (QA), ruhsatlandırma ve tesis operasyonlarında uzmanlaşmış programlar."
+            },
+            {
+                "title": "Ürün Portföyü Planlama",
+                "desc": "Ürün portföyü, pazar ihtiyacı, işletim modeli ve uygulama stratejisi."
+            }
+        ]
+    },
     "cdmo": {
         "title": "Sözleşmeli Geliştirme ve Üretim (CDMO)",
         "subtitle": "İleri Düzey Biyoüretim Çözümleri",
@@ -1486,8 +1514,8 @@ export const turkish = {
                     "quote": "TechInvention'da altı yılı aşkın süreyi tamamlamak inanılmaz derecede ödüllendirici bir kariyer yolculuğu oldu."
                 },
                 {
-                    "name": "Kulsum",
-                    "role": "",
+                    "name": "Nida Afreen Qureshi",
+                    "role": "Kıdemli Uzman - Ar-Ge",
                     "tenure": "5+ Yıl",
                     "quote": "Kariyerime burada yeni mezun olarak başlama fırsatı bulduğum için gerçekten minnettarım. Bu beş yıl boyunca çok şey öğrendim ve hem kişisel hem de profesyonel olarak büyüdüm. Samimi ve destekleyici çalışma kültürü bu yolculuğu gerçekten özel kıldı. Farklı Ar-Ge departmanlarında çalışma, yeni teknikler ve teknolojiler öğrenme ve çeşitli sertifikasyon ve denetimlerin bir parçası olma fırsatı yakaladım. Bu yolculuk boyunca beni destekleyen, yönlendiren ve gelişmeme yardımcı olan herkese teşekkür ederim."
                 }

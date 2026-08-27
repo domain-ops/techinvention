@@ -314,7 +314,7 @@ const ContactSection = () => {
                                 <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">{t('contact.locations.gcmcTitle') || "Corporate Office & Manufacturing Site (GCMC)"}</h4>
                                 <div className="w-full h-[300px] sm:h-[350px] overflow-hidden border border-slate-200/60 shadow-sm">
                                     <iframe
-                                        src="https://maps.google.com/maps?q=Plot%20No.%20EL-40,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra,%20400710&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                        src="https://maps.google.com/maps?q=GCMC%20-%20A%20Techinvention%20Initiative,%20EL%2040,%20Electronic%20Zone,%20MIDC%20Industrial%20Area,%20Mahape,%20Navi%20Mumbai,%20Maharashtra%20400710&t=&z=16&ie=UTF8&iwloc=&output=embed"
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0, display: 'block' }}

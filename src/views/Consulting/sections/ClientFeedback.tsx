@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
 import { Maximize2, X } from 'lucide-react';
@@ -11,6 +12,29 @@ import { useLanguage } from '../../../context/LanguageContext';
 export default function ClientFeedback() {
     const { t } = useLanguage();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = 'hidden';
+            const handleKeyDown = (e: KeyboardEvent) => {
+                if (e.key === 'Escape') {
+                    setSelectedImage(null);
+                }
+            };
+            window.addEventListener('keydown', handleKeyDown);
+            return () => {
+                document.body.style.overflow = '';
+                window.removeEventListener('keydown', handleKeyDown);
+            };
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [selectedImage]);
 
     const feedbackImages = [
         { src: "/feedback-4.png", alt: "Client Feedback Letter - IAVI" },
@@ -27,7 +51,7 @@ export default function ClientFeedback() {
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[38px] font-medium tracking-wide">
-                            <SplitTitle title={t('testimonials.title') || "Feedback from Clients"} />
+                            <SplitTitle title={t('consulting.feedbackTitle') || "Feedback from Clients"} />
                         </h2>
                     </ScrollReveal>
                 </div>
@@ -62,43 +86,46 @@ export default function ClientFeedback() {
 
             </div>
 
-            {/* Lightbox / Modal View */}
-            <AnimatePresence>
-                {selectedImage && (
-                    <motion.div 
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setSelectedImage(null)}
-                        className="fixed inset-0 bg-black/85 z-[9999] flex items-center justify-center p-4 md:p-8 cursor-zoom-out"
-                    >
-                        {/* Close Button */}
-                        <button 
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute top-6 right-6 text-white/80 hover:text-white p-2 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"
-                            aria-label="Close modal"
-                        >
-                            <X size={24} />
-                        </button>
-
-                        {/* Modal Image Container */}
+            {/* Lightbox / Modal View via Portal */}
+            {mounted && createPortal(
+                <AnimatePresence>
+                    {selectedImage && (
                         <motion.div 
-                            initial={{ scale: 0.95, y: 15 }}
-                            animate={{ scale: 1, y: 0 }}
-                            exit={{ scale: 0.95, y: 15 }}
-                            transition={{ duration: 0.3 }}
-                            className="max-w-[95%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] bg-white rounded-2xl p-2 flex items-center justify-center shadow-2xl relative"
-                            onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image card
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedImage(null)}
+                            className="fixed inset-0 bg-black/85 backdrop-blur-sm z-[999999] flex items-center justify-center p-4 sm:p-6 md:p-8 cursor-zoom-out"
                         >
-                            <img 
-                                src={`${basePath}${selectedImage}`} 
-                                alt="Client Feedback Letter Fullscreen" 
-                                className="max-w-full max-h-[85vh] object-contain rounded-xl cursor-default" 
-                            />
+                            {/* Close Button */}
+                            <button 
+                                onClick={() => setSelectedImage(null)}
+                                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/90 hover:text-white p-2.5 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-200 z-[1000000] flex items-center justify-center shadow-lg border border-white/10"
+                                aria-label="Close modal"
+                            >
+                                <X size={24} />
+                            </button>
+
+                            {/* Modal Image Container */}
+                            <motion.div 
+                                initial={{ scale: 0.95, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.95, opacity: 0 }}
+                                transition={{ duration: 0.25, ease: "easeOut" }}
+                                className="relative max-w-[92vw] sm:max-w-[80vw] md:max-w-[65vw] lg:max-w-[50vw] xl:max-w-[42vw] max-h-[85vh] bg-white rounded-2xl p-2 sm:p-4 flex items-center justify-center shadow-2xl overflow-hidden cursor-default"
+                                onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image card
+                            >
+                                <img 
+                                    src={`${basePath}${selectedImage}`} 
+                                    alt="Client Feedback Letter Fullscreen" 
+                                    className="w-auto h-auto max-w-full max-h-[80vh] object-contain rounded-xl" 
+                                />
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    )}
+                </AnimatePresence>,
+                document.body
+            )}
 
         </section>
     );

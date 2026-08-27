@@ -57,14 +57,15 @@ const ClientLogos = () => {
                         {ROW_1_REPEATED.map((src, index) => (
                             <div 
                                 key={`row1-${index}`} 
-                                className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
+                                className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] shrink-0 flex-shrink-0 flex items-center justify-center p-2"
                             >
                                 <img 
                                     src={`${basePath}${src}`} 
                                     alt="Client Logo" 
                                     loading="lazy"
                                     decoding="async"
-                                    className="max-w-full max-h-full object-contain"
+                                    className="max-w-full max-h-full w-auto h-auto object-contain"
+                                    style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
                                 />
                             </div>
                         ))}
@@ -81,14 +82,15 @@ const ClientLogos = () => {
                         {ROW_2_REPEATED.map((src, index) => (
                             <div 
                                 key={`row2-${index}`} 
-                                className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] flex items-center justify-center p-2"
+                                className="w-[140px] h-[70px] md:w-[190px] md:h-[95px] shrink-0 flex-shrink-0 flex items-center justify-center p-2"
                             >
                                 <img 
                                     src={`${basePath}${src}`} 
                                     alt="Client Logo" 
                                     loading="lazy"
                                     decoding="async"
-                                    className="max-w-full max-h-full object-contain"
+                                    className="max-w-full max-h-full w-auto h-auto object-contain"
+                                    style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
                                 />
                             </div>
                         ))}

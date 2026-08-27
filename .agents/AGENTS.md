@@ -38,3 +38,11 @@ The TechInvention project is configured to run under a custom Next.js `basePath`
 
 4. **Next.js `<Image>` Component**:
    The project has `unoptimized: true` configured in `next.config.mjs` to bypass optimization server issues on localhost. Standard string paths passed to `<Image>` (e.g., `src="/image.png"`) will have `basePath` prepended automatically by Next.js, but any dynamically-rendered asset must be checked for correct prefixing.
+
+## Content and Localization Rules
+
+1. **Preserve Master Content and Target Only Requested Languages**:
+   - The content in `src/translations/languages/english.ts` is client-approved master copy.
+   - **NEVER** modify, alter, rewrite, or replace existing English content unless the user explicitly provides or requests the exact changes.
+   - **Target-Specific Updates Only**: When the user requests a change to a specific language, modify **ONLY** that specified language. Do **NOT** modify, auto-translate, or touch headings or content in other language files unless the user explicitly instructs to do so.
+

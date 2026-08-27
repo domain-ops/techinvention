@@ -55,12 +55,13 @@ const MemberLogos = () => {
                         >
                             <motion.div
                                 whileHover={{ scale: 1.05, y: -5 }}
-                                className="bg-white grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 rounded-md p-4 flex items-center justify-center border border-gray-200 hover:border-brand-primary/20 aspect-square"
+                                className="bg-white grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 rounded-md p-4 flex items-center justify-center border border-gray-200 hover:border-brand-primary/20 aspect-square w-full max-h-[140px]"
                             >
                                 <img loading="lazy"
                                     src={member.logo}
                                     alt={member.name}
-                                    className="max-w-full max-h-full object-contain mix-blend-multiply"
+                                    className="max-w-full max-h-full w-auto h-auto object-contain mix-blend-multiply"
+                                    style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
                                 />
                             </motion.div>
                         </ScrollReveal>

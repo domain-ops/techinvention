@@ -33,7 +33,7 @@ export default function ProductsHero() {
                             <SplitTitle title={t('products.heroTitle') || t('megaMenu.products') || "Innovative Products for Global Health"} />
                         </h1>
                         <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-8 w-full font-medium">
-                            {t('products.heroDesc') || "Discover our extensive range of high-quality vaccines, biologics, and diagnostic solutions designed to make healthcare accessible, reliable, and affordable worldwide."}
+                            {t('products.heroDesc') || "Discover our extensive range of high-quality vaccines designed to make healthcare accessible, reliable, and affordable worldwide."}
                         </p>
                     </ScrollReveal>
 

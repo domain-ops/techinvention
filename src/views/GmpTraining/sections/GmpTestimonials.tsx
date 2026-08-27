@@ -62,7 +62,7 @@ export default function GmpTestimonials() {
                 <div className="mb-16 text-center">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-6">
-                            <SplitTitle title={t('testimonials.title') || "Participant Testimonials"} />
+                            <SplitTitle title={t('training.testimonialsTitle') || "Participant Testimonials"} />
                         </h2>
                     </ScrollReveal>
                 </div>

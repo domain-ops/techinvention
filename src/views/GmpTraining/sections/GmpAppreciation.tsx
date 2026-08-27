@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
@@ -25,6 +26,29 @@ const certificates = [
 export default function GmpAppreciation() {
     const { t } = useLanguage();
     const [selectedCert, setSelectedCert] = useState<typeof certificates[0] | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (selectedCert) {
+            document.body.style.overflow = 'hidden';
+            const handleKeyDown = (e: KeyboardEvent) => {
+                if (e.key === 'Escape') {
+                    setSelectedCert(null);
+                }
+            };
+            window.addEventListener('keydown', handleKeyDown);
+            return () => {
+                document.body.style.overflow = '';
+                window.removeEventListener('keydown', handleKeyDown);
+            };
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [selectedCert]);
 
     return (
         <section className="py-24 bg-white relative overflow-hidden font-sans border-b border-slate-100">
@@ -38,7 +62,7 @@ export default function GmpAppreciation() {
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                            <SplitTitle title={t('testimonials.title') || "Recognition"} />
+                            <SplitTitle title={t('training.recognitionTitle') || "Recognition"} />
                         </h2>
                     </ScrollReveal>
                 </div>
@@ -74,46 +98,44 @@ export default function GmpAppreciation() {
                     ))}
                 </div>
 
-                {/* Interactive Lightbox Modal */}
-                <AnimatePresence>
-                    {selectedCert && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md"
-                            onClick={() => setSelectedCert(null)}
-                        >
+                {/* Interactive Lightbox Modal via Portal */}
+                {mounted && createPortal(
+                    <AnimatePresence>
+                        {selectedCert && (
                             <motion.div
-                                initial={{ scale: 0.95, y: 20 }}
-                                animate={{ scale: 1, y: 0 }}
-                                exit={{ scale: 0.95, y: 20 }}
-                                transition={{ type: 'spring', duration: 0.5 }}
-                                className="relative bg-white rounded-3xl p-6 md:p-8 max-w-2xl w-full shadow-2xl overflow-y-auto max-h-[90vh] flex flex-col items-center"
-                                onClick={(e) => e.stopPropagation()}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/85 backdrop-blur-sm cursor-zoom-out"
+                                onClick={() => setSelectedCert(null)}
                             >
                                 <button
                                     onClick={() => setSelectedCert(null)}
-                                    className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-black rounded-full transition-colors z-10"
+                                    className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/90 hover:text-white p-2.5 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-200 z-[1000000] flex items-center justify-center shadow-lg border border-white/10"
                                     aria-label="Close modal"
                                 >
-                                    <X className="w-5 h-5" />
+                                    <X size={24} />
                                 </button>
 
-                                <div className="w-full flex flex-col items-center pt-4">
-                                    {/* High-res image display */}
-                                    <div className="w-full bg-[#fcfcfc] rounded-2xl border border-slate-100 p-6 flex items-center justify-center max-h-[75vh] overflow-hidden">
-                                        <img loading="lazy"
-                                            src={`${basePath}${selectedCert.image}`}
-                                            alt={selectedCert.title}
-                                            className="max-w-full max-h-[70vh] object-contain drop-shadow-xl"
-                                        />
-                                    </div>
-                                </div>
+                                <motion.div
+                                    initial={{ scale: 0.95, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    exit={{ scale: 0.95, opacity: 0 }}
+                                    transition={{ duration: 0.25, ease: "easeOut" }}
+                                    className="relative max-w-[92vw] sm:max-w-[80vw] md:max-w-[65vw] lg:max-w-[50vw] xl:max-w-[42vw] max-h-[85vh] bg-white rounded-2xl p-2 sm:p-4 flex items-center justify-center shadow-2xl overflow-hidden cursor-default"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    <img loading="lazy"
+                                        src={`${basePath}${selectedCert.image}`}
+                                        alt={selectedCert.title}
+                                        className="w-auto h-auto max-w-full max-h-[80vh] object-contain rounded-xl"
+                                    />
+                                </motion.div>
                             </motion.div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                        )}
+                    </AnimatePresence>,
+                    document.body
+                )}
 
             </div>
         </section>

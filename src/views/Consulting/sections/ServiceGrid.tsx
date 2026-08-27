@@ -55,13 +55,13 @@ export default function ServiceGrid() {
 
     const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
-    const rawSections = t('strategicAdvisory.sections') as any[];
+    const rawSections = (t('consultingServices.services') || t('consulting.services')) as any[];
     const iconsList = [ClipboardCheck, Factory, FlaskConical, FileCheck, Presentation, Boxes];
     const SERVICES = Array.isArray(rawSections) && rawSections.length > 0
         ? rawSections.map((sec, i) => ({
             icon: iconsList[i % iconsList.length],
             title: sec.title,
-            desc: sec.desc
+            desc: sec.desc || sec.content || ''
         }))
         : DEFAULT_SERVICES;
 
@@ -106,7 +106,7 @@ export default function ServiceGrid() {
                                     <div className="hidden md:flex w-1/2 justify-end pr-16">
                                         {isEven && (
                                             <ScrollReveal direction="right" delay={0.1}>
-                                                <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px]">
+                                                <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px] w-full">
                                                     <div className="w-16 h-16 bg-[#F4F8FA] rounded-2xl flex items-center justify-center mb-6 text-[#1955A6] group-hover:scale-110 group-hover:bg-[#1955A6] group-hover:text-white transition-all duration-500 shadow-sm">
                                                         <Icon className="w-8 h-8" strokeWidth={1.5} />
                                                     </div>
@@ -130,7 +130,7 @@ export default function ServiceGrid() {
                                     <div className="hidden md:flex w-1/2 justify-start pl-16">
                                         {!isEven && (
                                             <ScrollReveal direction="left" delay={0.1}>
-                                                <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px]">
+                                                <div className="bg-white p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-slate-100 hover:shadow-2xl hover:border-[#1955A6]/30 transition-all duration-500 hover:-translate-y-2 max-w-[420px] w-full">
                                                     <div className="w-16 h-16 bg-[#F4F8FA] rounded-2xl flex items-center justify-center mb-6 text-[#1955A6] group-hover:scale-110 group-hover:bg-[#1955A6] group-hover:text-white transition-all duration-500 shadow-sm">
                                                         <Icon className="w-8 h-8" strokeWidth={1.5} />
                                                     </div>

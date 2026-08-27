@@ -37,8 +37,8 @@ const DEFAULT_TESTIMONIALS = [
         image: "/Priya-photo.jpg"
     },
     {
-        name: "Kulsum",
-        designation: "",
+        name: "Nida Afreen Qureshi",
+        designation: "Senior Executive - R&D",
         experience: "5+ Years",
         quote: "I’m really grateful that I got the opportunity to start my career here as a fresher. In these five years, I’ve learned so much and grown both personally and professionally. The friendly and supportive work culture has made this journey really special. I got the opportunity to work across different R&D departments, learn new techniques and technologies, and be part of various certifications and audits. Looking back, it feels like I’ve come a long way from where I started. I’m thankful to everyone who has supported, guided, and helped me grow throughout this journey.",
         image: "/kulsum.jpeg"

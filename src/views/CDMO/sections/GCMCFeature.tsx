@@ -15,7 +15,7 @@ const GCMCFeature = () => {
                 {/* 1. Paragraphs (Full Width) */}
                 <div className="w-full mb-14">
                     <ScrollReveal direction="up">
-                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-6 font-medium">
+                        <p className="text-slate-600 text-[16px] md:text-[18px] leading-relaxed mb-6 font-medium whitespace-pre-line">
                             {t('cdmo.description')}
                         </p>
                     </ScrollReveal>

@@ -53,6 +53,7 @@ export default function Grants() {
                                         src={`${basePath}${item.logo}`}
                                         alt={`${item.name} Logo`}
                                         className="max-h-[90%] max-w-[90%] w-auto h-auto object-contain transition-transform duration-300"
+                                        style={{ maxWidth: '90%', maxHeight: '90%', width: 'auto', height: 'auto' }}
                                     />
                                 </div>
                             ))}

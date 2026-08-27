@@ -73,7 +73,7 @@ const Stats = () => {
                                     whileHover={{ y: -4 }}
                                     className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
                                 >
-                                    <img src={dbImg} alt="Dun & Bradstreet" loading="lazy" decoding="async" className="w-full h-full object-contain" />
+                                    <img src={dbImg} alt="Dun & Bradstreet" loading="lazy" decoding="async" className="max-h-[110px] max-w-full w-auto h-auto object-contain" />
                                 </motion.div>
 
                                 {/* Forbes Card */}
@@ -85,7 +85,7 @@ const Stats = () => {
                                     whileHover={{ y: -4 }}
                                     className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
                                 >
-                                    <img src={forbesImg} alt="Forbes India DGEMS" loading="lazy" decoding="async" className="w-full h-full object-contain" />
+                                    <img src={forbesImg} alt="Forbes India DGEMS" loading="lazy" decoding="async" className="max-h-[110px] max-w-full w-auto h-auto object-contain" />
                                 </motion.div>
                             </div>
 

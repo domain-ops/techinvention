@@ -672,11 +672,11 @@ export const spanish = {
         }
     },
     "globalProjects": {
-        "tag": "Confiado por Socios Globales",
-        "title": "Socios de Confianza: {partners}",
-        "partners": "Socios Globales",
-        "partnersTag": "Socios Globales",
-        "desc": "Construimos alianzas de confianza en todo el mundo para acelerar el acceso a vacunas, robustecer la infraestructura de salud y expandir la capacidad de biomanufactura.",
+        "tag": "Proyectos y Socios Globales",
+        "title": "Proyectos Globales {partners}",
+        "partners": "y Socios",
+        "partnersTag": "Proyectos y Socios Globales",
+        "desc": "Construyendo alianzas globales confiables para acelerar el acceso a vacunas, la infraestructura sanitaria y la excelencia en biofabricación.",
         "stats": [
             {
                 "label": "Países Atendidos",
@@ -781,23 +781,23 @@ export const spanish = {
                 "color": "#129B9C"
             },
             {
-                "name": "Vacuna Pan-Salmonella",
+                "name": "Vacuna contra Meningococo B",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Vacuna contra Shigella",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Vacuna contra Meningococo B",
-                "progress": 25,
+                "name": "Vacuna Pan-Salmonella",
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Vacuna contra la Malaria",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
@@ -1295,6 +1295,34 @@ export const spanish = {
             }
         ]
     },
+    "consultingServices": {
+        "services": [
+            {
+                "title": "Estudio de Pre-factibilidad y Factibilidad",
+                "desc": "Evaluación integral técnica, comercial, regulatoria y financiera para respaldar decisiones de inversión."
+            },
+            {
+                "title": "Diseño de Instalaciones y Preparación GMP",
+                "desc": "Diseño básico, conceptual y detallado con planificación de salas limpias, flujo de trabajo, utilidades, estrategia de equipos y soporte para preparación alineada con GMP."
+            },
+            {
+                "title": "Transferencia de Tecnología y Escalamiento",
+                "desc": "Identificación de productos, evaluación, soporte en transferencia de procesos, planificación de escalamiento y fabricación."
+            },
+            {
+                "title": "Calidad, Regulación y Cumplimiento",
+                "desc": "Soporte para SGC (QMS), evaluación de brechas GMP, preparación para auditorías, documentación y alineación regulatoria global."
+            },
+            {
+                "title": "Capacitación y Desarrollo de Capacidades",
+                "desc": "Programas especializados en GxP, control de calidad (QC), garantía de calidad (QA), asuntos regulatorios y operaciones de instalaciones."
+            },
+            {
+                "title": "Planificación del Portafolio de Productos",
+                "desc": "Portafolio de productos, necesidad de mercado, modelo operativo y estrategia de implementación."
+            }
+        ]
+    },
     "cdmo": {
         "title": "Organización de Desarrollo y Manufactura por Contrato (CDMO)",
         "subtitle": "Soluciones Avanzadas de Biomanufactura",
@@ -1486,8 +1514,8 @@ export const spanish = {
                     "quote": "Cumplir más de seis años en TechInvention ha sido una experiencia profesional increíblemente enriquecedora."
                 },
                 {
-                    "name": "Kulsum",
-                    "role": "",
+                    "name": "Nida Afreen Qureshi",
+                    "role": "Ejecutiva Senior - I+D",
                     "tenure": "5+ años",
                     "quote": "Estoy realmente agradecida por haber tenido la oportunidad de comenzar mi carrera aquí como recién graduada. En estos cinco años, he aprendido mucho y he crecido tanto personal como profesionalmente. La cultura de trabajo amigable y de apoyo ha hecho que este camino sea verdaderamente especial. Tuve la oportunidad de trabajar en diferentes departamentos de I+D, aprender nuevas técnicas y tecnologías, y formar parte de varias certificaciones y auditorías. Agradezco a todos los que me han apoyado, guiado y ayudado a crecer a lo largo de este viaje."
                 }

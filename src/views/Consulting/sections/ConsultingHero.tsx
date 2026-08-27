@@ -1,21 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
 import ScrollReveal from '../../../components/Common/ScrollReveal';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
-import consultingBannerImg from '../../../../public/consulting-banner.png';
-
-
 import { useLanguage } from '../../../context/LanguageContext';
+
+const basePath = process.env.BASE_PATH || '';
 
 export default function ConsultingHero() {
     const { t } = useLanguage();
-    const handleScroll = () => {
-        const target = document.getElementById('consulting-services');
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-white pt-32 pb-16 lg:pt-40 lg:pb-24 font-sans">
@@ -48,7 +40,8 @@ export default function ConsultingHero() {
                     className="w-full"
                 >
                     <div className="relative w-full overflow-hidden">
-                        <img src={consultingBannerImg} 
+                        <img 
+                            src={`${basePath}/consulting-banner.png`} 
                             alt="Strategic Advisory and Tech Consulting" 
                             className="w-full h-[500px] lg:h-[600px] object-cover"
                         />

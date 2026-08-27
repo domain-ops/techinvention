@@ -83,7 +83,8 @@ export const english = {
         "strategicAdvisory": "Strategic & Technical Advisory",
         "globalAccess": "Global Access",
         "cdmo": "CDMO",
-        "successfulProjects": "Successful Projects",
+        "successfulProjects": "Successful Programs",
+        "successfulPrograms": "Successful Programs",
         "awards": "Awards & Accolades",
         "products": "Product Details",
         "veterinary": "Animal Health",
@@ -201,12 +202,13 @@ export const english = {
         "tag": "About TechInvention",
         "title": "Pioneering Biotech for a {resilientFuture}",
         "resilientFuture": "Resilient Future.",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "desc": "TechInvention is an innovation-led biotech company building integrated pathways from research and technology access to scale-up and GMP manufacturing - with a clear focus on advancing global vaccine access.",
+        "learnMore": "Learn About Our Journey",
         "features": [
             "Global Health Partnerships",
-            "Innovative mRNA Platforms",
+            "Innovative mRNA & Recombinant Platforms",
             "Next-Gen Diagnostics",
-            "Scalable Manufacturing Solutions"
+            "Scalable Biomanufacturing Solutions"
         ],
         "yearsInnovation": "Years of Innovation",
         "countriesCovered": "Countries Covered",
@@ -223,7 +225,7 @@ export const english = {
         },
         "banner": {
             "title": "Advancing Humanity Through Bio-Innovation",
-            "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "subtitle": "TechInvention is an innovation-led biotech company building integrated pathways from research and technology access to scale-up and GMP manufacturing - with a clear focus on advancing global vaccine access."
         },
         "vision": {
             "title": "Purpose & Principles",
@@ -231,16 +233,18 @@ export const english = {
             "future": "Future",
             "desc": "The foundation of our organization is built on a clear vision for the future, a driving mission for today, and the core values that guide our every step."
         },
+        "visionText": "Achieving global health equity through affordable, accessible, and high-quality vaccines and biotherapeutics.",
         "mission": {
             "title": "Our Mission",
             "headline": "Bridging the {equityGap} in Biotech",
             "equityGap": "Equity Gap",
             "desc": "Access to Priority Vaccines Should Not Only be the Privilege of Just the Affording Few."
         },
+        "missionText": "Bridging scientific innovation with sustainable manufacturing to deliver impactful global health solutions.",
         "values": {
             "title": "Our Values",
-            "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "footer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tagline": "At TechInvention, our actions are guided by three fundamental principles:",
+            "footer": "These values are more than words — they shape our decisions, define our culture, and drive our mission toward global health equity.",
             "innovationForHumanity": "Innovation for Humanity",
             "items": [
                 {
@@ -265,7 +269,7 @@ export const english = {
         },
         "leadership": {
             "title": "Our Leadership",
-            "tagline": "Lorem ipsum",
+            "tagline": "Dedicated to Global Health Equity",
             "profiles": [
                 {
                     "name": "Syed S. Ahmed",
@@ -365,10 +369,7 @@ export const english = {
         "scientificAdvisory": {
             "title": "Scientific Advisory Board",
             "desc": "Bringing together eminent scientific leaders whose expertise strengthens our vaccine research, development and innovation agenda."
-        },
-        "learnMore": "Learn More About Our Journey",
-        "visionText": "To achieve complete global health equity through affordable, accessible, and high-quality vaccines and biotherapeutics.",
-        "missionText": "Bridging academic discovery and commercial manufacturing to deliver sustainable healthcare solutions worldwide."
+        }
     },
     "oneHealth": {
         "tag": "Unified Perspective",
@@ -672,11 +673,11 @@ export const english = {
         }
     },
     "globalProjects": {
-        "tag": "Trusted by Global Partners",
-        "title": "Trusted by {partners}",
-        "partners": "Global Partners",
-        "partnersTag": "Strategic Global Partners",
-        "desc": "Building trusted global partnerships to accelerate vaccine access, strengthen healthcare infrastructure, and advance biomanufacturing capabilities worldwide.",
+        "tag": "Global Projects & Partners",
+        "title": "Global Projects {partners}",
+        "partners": "& Partners",
+        "partnersTag": "Global Projects & Partners",
+        "desc": "Building trusted global partnerships to accelerate vaccine access, healthcare infrastructure and biomanufacturing excellence.",
         "stats": [
             {
                 "label": "Countries Reached",
@@ -776,23 +777,23 @@ export const english = {
                 "color": "#129B9C"
             },
             {
-                "name": "Pan-Salmonella Vaccine",
+                "name": "Meningococcal B Vaccine",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Shigella Vaccine",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Meningococcal B Vaccine",
-                "progress": 25,
+                "name": "Pan-Salmonella Vaccine",
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
                 "name": "Malaria Vaccine",
-                "progress": 25,
+                "progress": 50,
                 "color": "#129B9C"
             },
             {
@@ -1271,10 +1272,38 @@ export const english = {
             }
         ]
     },
+    "consultingServices": {
+        "services": [
+            {
+                "title": "Pre-Feasibility & Feasibility Study",
+                "desc": "Comprehensive technical, commercial, regulatory and financial assessment to support investment decisions."
+            },
+            {
+                "title": "Facility Design & GMP Readiness",
+                "desc": "Basic Design, Concept design and Detailed Design with cleanroom planning, workflow, utilities, equipment strategy and GMP-aligned readiness support."
+            },
+            {
+                "title": "Technology Transfer & Scale-Up",
+                "desc": "Identifying products, evaluation, support process transfer, scale-up planning and manufacturing."
+            },
+            {
+                "title": "Quality, Regulatory & Compliance",
+                "desc": "Support for QMS, GMP gap assessment, audit readiness, documentation and global regulatory alignment."
+            },
+            {
+                "title": "Training & Capacity Building",
+                "desc": "Specialized programmes in GxP, QC, QA, regulatory affairs and facility operations."
+            },
+            {
+                "title": "Product Portfolio Planning",
+                "desc": "Product portfolio, market need, operating model and implementation strategy."
+            }
+        ]
+    },
     "cdmo": {
         "title": "Global Collaborative Centre for Medical Countermeasures (GCMC)",
         "subtitle": "Integrated Full-Cycle Vaccine Development & Manufacturing Facility",
-        "description": "From Innovation to Scalable Global Health Solutions. TechInvention's Global Collaborative Centre for Medical Countermeasures (GCMC) is an Integrated Full-Cycle Vaccine Development & Manufacturing Facility designed to accelerate the journey from scientific discovery to global health impact. Developed in alignment with international GMP standards, GCMC brings together vaccine process development, manufacturing scale-up, technology transfer, analytical testing, quality systems, regulatory support, drug product manufacturing, digital innovation, and sustainable infrastructure within one integrated facility.",
+        "description": "TechInvention's Global Collaborative Centre for Medical Countermeasures (GCMC) is an Integrated Full-Cycle Vaccine Development & Manufacturing Facility designed to accelerate the journey from scientific discovery to global health impact.\n\nDeveloped in alignment with international GMP standards, GCMC brings together vaccine process development, manufacturing scale-up, technology transfer, analytical testing, quality systems, regulatory support, drug product manufacturing, digital innovation, and sustainable infrastructure within one integrated facility.",
         "bridge": {
             "title": "GCMC as a Bridge",
             "desc": "Scientific innovation begins in research laboratories, universities, and biotechnology companies, but transforming promising discoveries into commercially viable vaccines requires specialized expertise, advanced manufacturing infrastructure, regulatory compliance, and scalable production capabilities. GCMC bridges this critical gap by providing end-to-end support across vaccine development, process optimization, manufacturing scale-up, technology transfer, GMP manufacturing, quality assurance, and regulatory readiness."
@@ -1402,8 +1431,8 @@ export const english = {
         "opExcellenceDesc": "Continuous monitoring and automated controls ensure maximum yield and purity."
     },
     "careers": {
-        "title": "Shape the Future of Global Health",
-        "intro": "Join our dynamic team dedicated to pioneering life-saving vaccines and innovative biotherapeutics across emerging and global markets.",
+        "title": "Build a Career with Purpose",
+        "intro": "Join a team where science, strategy and execution come together to create meaningful healthcare impact. At TechInvention, every role contributes to advancing vaccines, biologics and technologies that support access, affordability and resilience across global health ecosystems.",
         "whyJoinUs": {
             "title": "Why Join Us",
             "items": [
@@ -1462,8 +1491,8 @@ export const english = {
                     "quote": "Completing over six years at TechInvention has been an incredibly rewarding journey. It has been inspiring to witness the company's transformation from a startup into a growing MSME with a strong global presence."
                 },
                 {
-                    "name": "Kulsum",
-                    "role": "",
+                    "name": "Nida Afreen Qureshi",
+                    "role": "Senior Executive - R&D",
                     "tenure": "5+ Years",
                     "quote": "I’m really grateful that I got the opportunity to start my career here as a fresher. In these five years, I’ve learned so much and grown both personally and professionally. The friendly and supportive work culture has made this journey really special. I got the opportunity to work across different R&D departments, learn new techniques and technologies, and be part of various certifications and audits. Looking back, it feels like I’ve come a long way from where I started. I’m thankful to everyone who has supported, guided, and helped me grow throughout this journey."
                 }
@@ -1809,7 +1838,7 @@ export const english = {
     },
     "products": {
         "heroTitle": "Innovative Products for Global Health",
-        "heroDesc": "Discover our extensive range of high-quality vaccines, biologics, and diagnostic solutions designed to make healthcare accessible, reliable, and affordable worldwide.",
+        "heroDesc": "Discover our extensive range of high-quality vaccines designed to make healthcare accessible, reliable, and affordable worldwide.",
         "explorePortfolio": "Explore Portfolio",
         "presentation": "Presentation / Pack",
         "pack": "Pack",
