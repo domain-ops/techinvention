@@ -1216,7 +1216,6 @@ export const spanish = {
         "tag": "Asesoría Estratégica",
         "title": "Asesoría estratégica y consultoría tecnológica",
         "intro": "Construimos ecosistemas resilientes de salud y biofabricación mediante la estrategia, la ciencia y la ejecución.",
-        "desc": "TechInvention apoya a gobiernos, agencias de financiamiento, fabricantes, inversionistas e instituciones de investigación en la configuración de infraestructura para la fabricación de vacunas y productos biofarmacéuticos.",
         "sections": [
             {
                 "title": "Factibilidad de Proyectos",

@@ -3,6 +3,7 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { SplitTitle } from '../../../components/Common/SplitTitle';
 
 const Dithering = lazy(() =>
     import("@paper-design/shaders-react").then((mod) => ({ default: mod.Dithering }))
