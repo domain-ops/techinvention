@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
@@ -125,7 +126,30 @@ const AwardsShowcase = () => {
 
     const [showAll, setShowAll] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [mounted, setMounted] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = 'hidden';
+            const handleKeyDown = (e: KeyboardEvent) => {
+                if (e.key === 'Escape') {
+                    setSelectedImage(null);
+                }
+            };
+            window.addEventListener('keydown', handleKeyDown);
+            return () => {
+                document.body.style.overflow = '';
+                window.removeEventListener('keydown', handleKeyDown);
+            };
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [selectedImage]);
 
     return (
         <section className="px-4 md:px-8 max-w-[1440px] mx-auto w-full mb-8">
@@ -226,41 +250,44 @@ const AwardsShowcase = () => {
                 </div>
             </div>
 
-            {/* Lightbox Modal Popup */}
-            <AnimatePresence>
-                {selectedImage && (
-                    <motion.div 
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setSelectedImage(null)}
-                        className="fixed inset-0 bg-black/90 z-[99999] flex items-center justify-center backdrop-blur-md cursor-zoom-out"
-                    >
-                        <button 
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
-                            aria-label="Close image popup"
-                        >
-                            <X className="w-8 h-8" />
-                        </button>
-                        
+            {/* Lightbox Modal Popup rendered via Portal directly to body */}
+            {mounted && typeof document !== 'undefined' && createPortal(
+                <AnimatePresence>
+                    {selectedImage && (
                         <motion.div 
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
-                            transition={{ duration: 0.3 }}
-                            className="max-w-[90vw] max-h-[85vh] relative"
-                            onClick={(e) => e.stopPropagation()}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedImage(null)}
+                            className="fixed inset-0 bg-black/90 z-[999999] flex items-center justify-center backdrop-blur-md cursor-zoom-out p-4 md:p-8"
                         >
-                            <img 
-                                src={selectedImage} 
-                                alt="Enlarged Award/Certificate" 
-                                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
-                            />
+                            <button 
+                                onClick={() => setSelectedImage(null)}
+                                className="absolute top-4 right-4 md:top-6 md:right-6 text-white/80 hover:text-white transition-colors bg-white/10 hover:bg-white/20 p-2.5 rounded-full z-50 cursor-pointer shadow-lg"
+                                aria-label="Close image popup"
+                            >
+                                <X className="w-6 h-6 md:w-8 md:h-8" />
+                            </button>
+                            
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={{ duration: 0.25 }}
+                                className="max-w-[92vw] max-h-[85vh] relative flex items-center justify-center"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <img 
+                                    src={selectedImage} 
+                                    alt="Enlarged Award/Certificate" 
+                                    className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-xl shadow-2xl block mx-auto pointer-events-none"
+                                />
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    )}
+                </AnimatePresence>,
+                document.body
+            )}
         </section>
     );
 };
