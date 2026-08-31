@@ -379,7 +379,7 @@ export const english = {
         "slides": [
             {
                 "title": "Commercial-Scale Manufacturing",
-                "desc": "TechInvention’s integrated GMP manufacturing facility (GCMC) provides Drug Substance and Fill-finish manufacturing for vaccines and biologics within a quality-driven, scalable framework. It supports technology transfer, process scale-up, regulatory compliance, and commercial manufacturing.",
+                "desc": "TechInvention’s integrated GMP manufacturing facility (GCMC) enables Drug Substance and Fill-Finish manufacturing for vaccines and biologics. It supports seamless technology transfer, process scale-up, and regulatory compliance for the manufacture of clinical and commercial batches.",
                 "tag": "Scale-up"
             },
             {
@@ -995,6 +995,18 @@ export const english = {
         "latestNews": "Latest News",
         "accolades": "Accolades",
         "items": [
+            {
+                "year": "2026",
+                "title": "Outstanding Leader in Healthcare Technology",
+                "desc": "Bharat 2.0 Conclave 2026",
+                "image": "award_bharat_2026"
+            },
+            {
+                "year": "2025",
+                "title": "Best Vaccine Efforts of the Year",
+                "desc": "BioSpectrum India Excellence Awards 2025",
+                "image": "award_biospectrum_2025"
+            },
             {
                 "year": "2025",
                 "title": "SME Biopharma Company of the Year",

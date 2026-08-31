@@ -23,9 +23,11 @@ import { useLanguage } from '../../../context/LanguageContext';
 const ClientsSection = () => {
     const { t } = useLanguage();
 
-    const partnersTitle = (t('common.trustedBy') && t('common.globalPartners'))
-        ? `${t('common.trustedBy')} ${t('common.globalPartners')}`
-        : (t('trustedPartners.title') || "Trusted by Global Partners");
+    const partnersTitle = t('trustedPartners.title') || (
+        (t('common.trustedBy') && t('common.globalPartners'))
+            ? `${t('common.trustedBy')} ${t('common.globalPartners')}`
+            : "Trusted by Global Partners"
+    );
 
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">

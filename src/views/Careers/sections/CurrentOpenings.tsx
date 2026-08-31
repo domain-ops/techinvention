@@ -49,9 +49,9 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                                 <SplitTitle title={t('careers.openPositions.title') || "Open Positions"} />
                             </h2>
                             <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
-                                {typeof t('careers.openPositions') === 'string' 
+                                {t('careers.openPositions.intro') || (typeof t('careers.openPositions') === 'string' 
                                     ? t('careers.openPositions') 
-                                    : "TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs."}
+                                    : "TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs.")}
                             </p>
                         </div>
 

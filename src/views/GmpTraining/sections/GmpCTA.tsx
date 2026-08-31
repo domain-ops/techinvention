@@ -41,11 +41,13 @@ export default function GmpCTA() {
                         
                         {/* Headline with Brand Colors */}
                         <h2 className="text-2xl md:text-4xl lg:text-[44px] font-medium tracking-tight text-[#1955A6] mb-6 leading-tight">
-                            {t('gmpCTA.title') || (
+                            {t('gmpCTA.titlePart1') ? (
                                 <>
-                                    {t('gmpCTA.titlePart1') || "Launch your career in"} <br />
-                                    <span className="text-[#5C7625]">{t('gmpCTA.titlePart2') || "Vaccine Development and Manufacturing"}</span>
+                                    <span>{t('gmpCTA.titlePart1')}</span>{" "}
+                                    <span className="text-[#5C7625] block sm:inline">{t('gmpCTA.titlePart2')}</span>
                                 </>
+                            ) : (
+                                <SplitTitle title={t('gmpCTA.title') || "Launch your career in Vaccine Development and Manufacturing"} />
                             )}
                         </h2>
 
@@ -66,7 +68,7 @@ export default function GmpCTA() {
                                 className="group relative flex items-center gap-3 bg-[#1955A6] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[#1955A6]/90 hover:shadow-lg overflow-hidden cursor-pointer"
                             >
                                 <span className="relative z-10">
-                                    {t('common.exploreNow') || t('navbar.contactUs') || "Connect Now"}
+                                    {t('gmpCTA.connectNow') || t('common.exploreNow') || t('navbar.contactUs') || "Connect Now"}
                                 </span>
                                 <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center z-10">
                                     <svg

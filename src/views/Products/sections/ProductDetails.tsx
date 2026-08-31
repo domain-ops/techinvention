@@ -84,7 +84,7 @@ const ProductCard = ({ product }: { product: ProductData }) => {
                 {/* Right Title Area */}
                 <div className="p-4 sm:p-5 flex flex-col justify-center flex-1 bg-white">
                     <h3 className="text-base sm:text-lg md:text-[19px] font-bold text-[#13325B] tracking-tight leading-snug">
-                        Product Name: {product.name}
+                        {t('products.productName') || "Product Name"}: {product.name}
                     </h3>
                     {product.description && (
                         <p className="text-xs sm:text-[13px] text-slate-600 font-normal mt-1 leading-snug">

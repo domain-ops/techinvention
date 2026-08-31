@@ -120,7 +120,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                 
                 <div className="bg-white border border-slate-200/60 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <div className="border-b border-slate-100 pb-6 mb-8">
-                        <span className="text-brand-primary font-bold uppercase tracking-wider text-xs">{t('careers.hero.badge') || "Join Us"}</span>
+                        <span className="text-brand-primary font-bold uppercase tracking-wider text-xs">{t('careers.form.badge') || t('careers.hero.badge') || "Join Us"}</span>
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mt-2 leading-tight">
                             {t('careers.form.title') || "Application Form"}
                         </h2>
@@ -147,7 +147,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                      {/* Name */}
                                     <div className="flex flex-col gap-2">
-                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.name') || "Full Name"} *</label>
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('careers.form.name') || t('contact.form.name') || "Full Name"} *</label>
                                         <input 
                                             type="text" 
                                             value={name} 
@@ -159,7 +159,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                     
                                     {/* Email */}
                                     <div className="flex flex-col gap-2">
-                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.email') || "Email Address"} *</label>
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('careers.form.email') || t('contact.form.email') || "Email Address"} *</label>
                                         <input 
                                             type="email" 
                                             value={email} 
@@ -173,7 +173,7 @@ export default function ApplyForm({ selectedJobTitle, onCancel }: ApplyFormProps
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {/* Phone */}
                                     <div className="flex flex-col gap-2">
-                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('contact.form.phone') || "Contact Number"} *</label>
+                                        <label className="text-slate-700 font-bold text-xs uppercase tracking-wider">{t('careers.form.phone') || t('contact.form.phone') || "Contact Number"} *</label>
                                         <input 
                                             type="tel" 
                                             value={phone} 

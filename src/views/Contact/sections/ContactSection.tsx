@@ -248,9 +248,9 @@ const ContactSection = () => {
                                             >
                                                  <option value="" disabled>{t('contact.form.selectEnquiry') || "Select Enquiry Type"}</option>
                                                  <option value="Strategy">{t('contact.form.options.strategy') || "Strategy"}</option>
-                                                 <option value="R&D">{t('common.rd') || "R&D"}</option>
-                                                 <option value="Licensing">{t('megaMenu.ipPortfolio') || "Licensing"}</option>
-                                                 <option value="Advisory">{t('navbar.consulting') || "Advisory"}</option>
+                                                 <option value="R&D">{t('contact.form.options.rd') || t('common.rd') || "R&D"}</option>
+                                                 <option value="Licensing">{t('contact.form.options.licensing') || "Licensing"}</option>
+                                                 <option value="Advisory">{t('contact.form.options.advisory') || "Advisory"}</option>
                                                  <option value="General Support">{t('contact.form.options.general') || "General Support"}</option>
                                             </select>
                                         </div>

@@ -7,23 +7,23 @@ export const spanish = {
         "testimonials": "Alianzas y Testimonios",
         "exploreNow": "Explorar",
         "myAccount": "Mi Cuenta",
-        "ourPublications": "Nuestras Publicaciones",
-        "readNow": "Leer artículo",
+        "ourPublications": "Nuestras publicaciones",
+        "readNow": "Leer ahora",
         "trustedBy": "Confiado por",
         "globalPartners": "Socios Globales",
-        "ourImpact": "Nuestro Impacto",
+        "ourImpact": "Nuestro impacto",
         "contactUs": "Contáctenos",
-        "partnerWithUs": "Sea Socio de TechInvention",
-        "connectNow": "Conectar Ahora",
-        "showLess": "Mostrar menos reconocimientos",
-        "showMore": "Mostrar más reconocimientos",
+        "partnerWithUs": "Asóciese con TechInvention",
+        "connectNow": "Conéctese ahora",
+        "showLess": "Ver menos reconocimientos",
+        "showMore": "Ver más reconocimientos",
         "licensing": "Licencias",
         "advisory": "Asesoría"
     },
     "navbar": {
         "home": "Inicio",
-        "contactUs": "Contacto",
-        "about": "Nosotros",
+        "contactUs": "Contáctenos",
+        "about": "Acerca de",
         "searchPlaceholder": "Buscar en TechInvention...",
         "products": "Productos",
         "solutions": "Servicios",
@@ -32,12 +32,12 @@ export const spanish = {
         "support": "Soporte",
         "spotlight": "Destacados",
         "rnd": "I+D",
-        "manufacturing": "Manufactura",
+        "manufacturing": "Fabricación",
         "consulting": "Consultoría",
         "training": "Capacitación",
         "careers": "Carreras",
-        "csr": "RSC (CSR)",
-        "awardsCertifications": "Premios y Certificaciones",
+        "csr": "CSR",
+        "awardsCertifications": "Premios y certificaciones",
         "announcements": [
             "🤝 TechInvention Lifecare se compromete formalmente con la iniciativa «Mumbai Libre de Drogas» del Gobierno de Maharashtra.",
             "🏆 TechInvention fue reconocida en la lista Forbes India Select 200 entre las empresas con Gran Potencial de Negocio Global.",
@@ -74,11 +74,11 @@ export const spanish = {
         "successfulProjects": "Proyectos Exitosos",
         "viewAll": "Ver Todo",
         "rnd": "I+D e Innovación",
-        "manufacturing": "Plantas de Manufactura",
+        "manufacturing": "Fabricación",
         "vision": "Visión y Misión",
         "team": "Liderazgo y Equipo",
         "careers": "Oportunidades de Carrera",
-        "csr": "Responsabilidad Social (RSC)",
+        "csr": "Responsabilidad Social Corporativa (CSR)",
         "contact": "Contáctenos",
         "annualReports": "Informes Anuales",
         "certifications": "Certificaciones y Calidad",
@@ -168,56 +168,56 @@ export const spanish = {
     },
     "testimonials": {
         "tag": "Historias de Éxito",
-        "title": "Lo Que Dicen Nuestros Socios",
-        "subtitle": "Experiencias de colaboradores y organizaciones aliadas en todo el mundo",
+        "title": "Testimonios de clientes",
+        "subtitle": "Descubra lo que nuestros socios dicen sobre nuestro compromiso con la excelencia.",
         "items": [
             {
-                "name": "Iniciativa Internacional de Vacunas (IAVI)",
-                "role": "Organización de Salud Global",
-                "content": "Apreciamos sinceramente el esfuerzo y profesionalismo de todo el equipo de TechInvention en la entrega del informe.",
-                "image": "iavi"
+                "name": "International AIDS Vaccine Initiative (IAVI)",
+                "role": "",
+                "content": "Agradecemos sinceramente los esfuerzos de todo el equipo de TechInvention en la entrega del informe",
+                "image": "testimonial_1"
             },
             {
-                "name": "UNOPS – Capacitación en Bioseguridad y Biocustodia",
-                "role": "Programa de Capacitación",
-                "content": "La capacitación impartida por TechInvention fortaleció notablemente el conocimiento teórico y las competencias prácticas de los participantes en bioseguridad.",
-                "image": "unops"
+                "name": "Oficina de las Naciones Unidas de Servicios para Proyectos (UNOPS)",
+                "role": "Capacitación en bioseguridad y biocustodia",
+                "content": "La capacitación impartida por TechInvention fortaleció significativamente la comprensión teórica y las competencias prácticas de los participantes en bioseguridad y biocustodia.",
+                "image": "testimonial_2"
             },
             {
-                "name": "UNOPS – Capacitación en Analítica de Vacunas",
-                "role": "Desarrollo de Capacidades",
-                "content": "TechInvention impartió con gran éxito un programa integral de analítica de vacunas combinando teoría virtual con talleres prácticos en planta.",
-                "image": "unops"
+                "name": "Oficina de las Naciones Unidas de Servicios para Proyectos (UNOPS)",
+                "role": "Capacitación en análisis de vacunas",
+                "content": "TechInvention impartió con éxito un programa integral de capacitación en análisis de vacunas, que combinó el aprendizaje virtual con sesiones prácticas presenciales y actividades realizadas en las instalaciones.",
+                "image": "testimonial_3"
             },
             {
-                "name": "Organización Mundial de la Salud (OMS SEARO)",
-                "role": "Agencia Regional de Salud",
-                "content": "Reconocemos a TechInvention por su profesionalismo, solvencia técnica y firme compromiso con el fortalecimiento de la producción local de vacunas.",
-                "image": "who"
+                "name": "Organización Mundial de la Salud (SEARO)",
+                "role": "",
+                "content": "Felicitamos a TechInvention por su profesionalismo, experiencia técnica y compromiso durante la ejecución exitosa del trabajo encomendado.",
+                "image": "testimonial_4"
             }
         ]
     },
     "about": {
-        "tag": "Sobre Nosotros",
+        "tag": "Acerca de TechInvention",
         "title": "Ecosistema Integrado de Innovación Biotecnológica",
-        "desc": "TechInvention es una empresa biotecnológica integrada que impulsa la innovación desde el descubrimiento científico hasta la manufactura a escala comercial.",
+        "desc": "TechInvention es una empresa de biotecnología impulsada por la innovación que crea vías integradas desde la investigación y el acceso a la tecnología hasta el escalado y la fabricación GMP, con un claro enfoque en promover el acceso mundial a las vacunas.",
         "learnMore": "Conozca Nuestra Trayectoria",
         "vision": {
-            "title": "Propósito y Principios",
+            "title": "Propósito y principios",
             "headline": "Moldeando el {future} de la Salud Global",
             "future": "Futuro",
-            "desc": "La base de nuestra organización se fundamenta en una visión clara para el futuro, una misión impulsora para el presente y valores fundamentales que guían cada uno de nuestros pasos."
+            "desc": "Los cimientos de nuestra organización se basan en una visión clara de futuro, una misión que impulsa nuestro presente y los valores fundamentales que guían cada uno de nuestros pasos."
         },
         "visionText": "Alcanzar una plena equidad en la salud global mediante vacunas y bioterapéuticos asequibles, seguros y de alta calidad.",
         "mission": {
-            "title": "Nuestra Misión",
+            "title": "Nuestra misión",
             "headline": "Cerrando la {equityGap} en Biotecnología",
             "equityGap": "Brecha de Equidad",
-            "desc": "El acceso a vacunas prioritarias no debe ser un privilegio exclusivo de unos pocos."
+            "desc": "El acceso a vacunas esenciales y productos biológicos innovadores no debe ser un privilegio reservado únicamente para quienes pueden pagarlos."
         },
         "missionText": "Conectar la investigación académica de vanguardia con la manufactura comercial para ofrecer soluciones de salud sostenibles.",
         "values": {
-            "title": "Nuestros Valores",
+            "title": "Nuestros valores",
             "tagline": "En TechInvention, nuestras acciones se guían por tres principios esenciales:",
             "footer": "Estos valores no son meras palabras: moldean nuestras decisiones, definen nuestra cultura e impulsan nuestra misión hacia la equidad en salud global.",
             "innovationForHumanity": "Innovación al Servicio de la Humanidad",
@@ -227,37 +227,37 @@ export const spanish = {
                     "desc": "Actuamos con honestidad, transparencia y responsabilidad en todo lo que hacemos."
                 },
                 {
-                    "title": "Inclusividad",
-                    "desc": "Creemos en la creación de oportunidades equitativas y en fomentar colaboraciones diversas sin fronteras."
+                    "title": "Inclusión",
+                    "desc": "Creemos en la creación de oportunidades equitativas y en el fomento de colaboraciones diversas más allá de las fronteras."
                 },
                 {
-                    "title": "Ingenio e Innovación",
-                    "desc": "Impulsamos la innovación a través de un pensamiento audaz y la resolución práctica de problemas de salud."
+                    "title": "Ingenio",
+                    "desc": "Impulsamos la innovación mediante un pensamiento audaz y la resolución práctica de problemas, siempre enfocados en resultados de alto impacto."
                 }
             ]
         },
         "leadership": {
-            "title": "Nuestro Equipo de Liderazgo",
+            "title": "Nuestro liderazgo",
             "tagline": "Dedicados a la Salud Global",
             "profiles": [
                 {
                     "name": "Syed S. Ahmed",
                     "role": "Director, CEO y Fundador",
-                    "message": "Como Director, CEO y Fundador de TechInvention, el Sr. Syed S. Ahmed representa una visión de liderazgo moldeada por la excelencia científica, la previsión estratégica y un compromiso inquebrantable con la equidad en la salud global. Con más de dos décadas de experiencia en estrategia, desarrollo de negocios, transferencia de tecnología y creación de capacidades, ha sido fundamental para construir TechInvention como una plataforma integrada de innovación y manufactura de vacunas.",
-                    "viewProfile": "Ver Perfil"
+                    "message": "Como Director, CEO y Fundador de TechInvention, el Sr. Syed S. Ahmed representa una visión de liderazgo marcada por la excelencia científica, la visión estratégica y un compromiso inquebrantable con la equidad en la salud mundial. Con más de dos décadas de experiencia en estrategia, desarrollo empresarial, transferencia de tecnología y desarrollo de capacidades, ha desempeñado un papel fundamental en la consolidación de TechInvention como una plataforma integrada de innovación y fabricación de vacunas. Su liderazgo refleja la excepcional capacidad de conectar la ambición científica con la ejecución, las alianzas y el impacto a largo plazo en la salud pública, guiado por la convicción de que las vacunas que salvan vidas no deben estar limitadas únicamente a quienes pueden pagarlas.",
+                    "viewProfile": "Ver perfil"
                 },
                 {
                     "name": "Nazneen Hamid",
                     "role": "Cofundadora y Directora",
-                    "message": "Como Cofundadora y Directora en TechInvention, la Sra. Nazneen lidera el Gobierno Corporativo, los Recursos Humanos, las Finanzas y la Administración. Desempeña un papel clave en el fortalecimiento de la excelencia organizacional impulsando operaciones estratégicas, el desarrollo de las personas y una gobernanza eficaz.",
-                    "viewProfile": "Ver Perfil"
+                    "message": "Como Cofundadora y Directora de TechInvention, la Sra. Nazneen lidera las áreas de Gobierno Corporativo, Recursos Humanos, Finanzas y Administración de la organización. Desempeña un papel clave en el fortalecimiento de la excelencia organizacional al impulsar las operaciones estratégicas, el desarrollo de las personas y una gobernanza eficaz. Como instructora certificada en POSH (Prevención del Acoso Sexual), está comprometida con el fomento de un entorno laboral seguro, inclusivo y profesional. Apasionada por la misión de la organización, la Sra. Nazneen apoya la visión de TechInvention de hacer que las vacunas esenciales sean asequibles, accesibles y estén disponibles para las poblaciones de todo el mundo en desarrollo, al tiempo que fomenta un equipo de alto rendimiento impulsado por un propósito.",
+                    "viewProfile": "Ver perfil"
                 }
             ],
             "ceo": {
                 "name": "Syed S. Ahmed",
-                "role": "Fundador y Director Ejecutivo (CEO)",
-                "message": "Como Director, CEO y Fundador de TechInvention, Syed S. Ahmed encarna una visión de liderazgo fundamentada en la excelencia científica, visión estratégica y un compromiso inquebrantable con la equidad sanitaria mundial.",
-                "viewProfile": "Ver Perfil"
+                "role": "Director, CEO y Fundador",
+                "message": "Como Director, CEO y Fundador de TechInvention, el Sr. Syed S. Ahmed representa una visión de liderazgo marcada por la excelencia científica, la visión estratégica y un compromiso inquebrantable con la equidad en la salud mundial. Con más de dos décadas de experiencia en estrategia, desarrollo empresarial, transferencia de tecnología y desarrollo de capacidades, ha desempeñado un papel fundamental en la consolidación de TechInvention como una plataforma integrada de innovación y fabricación de vacunas. Su liderazgo refleja la excepcional capacidad de conectar la ambición científica con la ejecución, las alianzas y el impacto a largo plazo en la salud pública, guiado por la convicción de que las vacunas que salvan vidas no deben estar limitadas únicamente a quienes pueden pagarlas.",
+                "viewProfile": "Ver perfil"
             },
             "team": {
                 "title": "Nuestro Equipo",
@@ -306,12 +306,12 @@ export const spanish = {
                     }
                 ]
             },
-            "subtitle": "El Liderazgo que Impulsa TechInvention",
-            "boardSubtitle": "El Liderazgo que Impulsa TechInvention",
+            "subtitle": "El liderazgo que da forma a TechInvention",
+            "boardSubtitle": "El liderazgo que da forma a TechInvention",
             "board": [
                 {
                     "name": "Sr. Syed Ahmed",
-                    "role": "Director General y CEO"
+                    "role": "Director y CEO"
                 },
                 {
                     "name": "Sra. Nazneen Hamid",
@@ -348,13 +348,13 @@ export const spanish = {
         },
         "banner": {
             "title": "Impulsando a la Humanidad Mediante la Bioinnovación",
-            "subtitle": "Soluciones biológicas de salud seguras, accesibles y de alta calidad para todos."
+            "subtitle": "TechInvention es una empresa de biotecnología impulsada por la innovación que crea vías integradas desde la investigación y el acceso a la tecnología hasta el escalado y la fabricación GMP, con un claro enfoque en promover el acceso mundial a las vacunas."
         },
         "story": {
-            "mandelaQuote": "«Siempre parece imposible hasta que se hace.» – Nelson Mandela",
-            "commitment": "En TechInvention, nuestro viaje comenzó con un compromiso claro: transformar la atención médica mediante el avance de vacunas y bioterapias que cierren la brecha crítica entre la innovación científica y el acceso de los pacientes. Al integrar investigación, infraestructura sostenible y colaboraciones globales, nos esforzamos por hacer que las soluciones de salud esenciales sean asequibles y accesibles en todo el mundo.",
+            "mandelaQuote": "Nelson Mandela dijo: “La salud no puede ser una cuestión de ingresos; es un derecho fundamental”. En nuestro mundo, el acceso a una buena salud suele depender del lugar donde nacemos, nuestra clase económica, raza, origen étnico, género y edad. Es una realidad lamentable, pero ineludible.",
+            "commitment": "TechInvention está comprometida con brindar una mayor equidad en salud a las personas y naciones de todo el mundo. Iniciamos nuestra trayectoria en 2016 con el objetivo de hacer que las vacunas esenciales y los productos biofarmacéuticos fueran aceptables, asequibles y accesibles en el mundo en desarrollo.",
             "expertise": "Ofrecemos nuestra experiencia en planificación de proyectos, estudios de viabilidad, licencias de tecnología e ingeniería de plantas.",
-            "title": "Creados para Impulsar la Innovación en Vacunas"
+            "title": "Creada para llevar más lejos la innovación en vacunas"
         },
         "resilientFuture": "Futuro Resiliente.",
         "latestUpdates": "Últimas Actualizaciones",
@@ -372,7 +372,7 @@ export const spanish = {
     },
     "oneHealth": {
         "tag": "Perspectiva Unificada",
-        "title": "Habilitando One Health a Través de la Bioinnovación.",
+        "title": "Promovemos el enfoque Una Salud mediante la bioinnovación.",
         "desc": "TechInvention aborda de manera holística el control de enfermedades infecciosas prioritarias y la mitigación de la resistencia antimicrobiana (RAM).",
         "pillars": [
             {
@@ -389,27 +389,27 @@ export const spanish = {
             }
         ],
         "bioInnovation": "Bioinnovación.",
-        "knowMore": "Conozca Más",
+        "knowMore": "Más información",
         "slides": [
             {
-                "tag": "Manufactura",
-                "title": "Manufactura a Escala Comercial",
-                "desc": "TechInvention hace posible la producción de vacunas y biológicos bajo los más altos estándares globales de calidad."
+                "tag": "Fabricación",
+                "title": "Fabricación a escala comercial",
+                "desc": "La instalación integrada de fabricación GMP de TechInvention (GCMC) ofrece servicios de fabricación de sustancia activa y de llenado y acabado para vacunas y productos biológicos, dentro de un marco escalable y orientado a la calidad. Brinda apoyo para la transferencia de tecnología, el escalado de procesos, el cumplimiento regulatorio y la fabricación comercial."
             },
             {
                 "tag": "I+D",
-                "title": "I+D e Innovación Traslacional",
-                "desc": "Nuestro centro HORIZON desarrolla candidatos a vacunas de nueva generación contra patógenos prioritarios."
+                "title": "Investigación y desarrollo (I+D)",
+                "desc": "Nos enfocamos en la investigación y el desarrollo de vacunas de próxima generación contra enfermedades infecciosas críticas y patógenos asociados con la AMR. Con el respaldo de nuestra instalación GMP piloto (HORIZON) y de colaboraciones estratégicas con instituciones de investigación líderes, nuestra cartera de I+D abarca plataformas de vacunas recombinantes y glicoconjugadas."
             },
             {
                 "tag": "Licencias",
-                "title": "Manufactura GMP y Acceso Global",
-                "desc": "Nuestra planta GCMC asegura la producción de vacunas bajo estándares internacionales para garantizar el suministro."
+                "title": "Licenciamiento y acceso",
+                "desc": "Facilitamos el licenciamiento estratégico de entrada y salida de vacunas para acelerar el acceso, la innovación y la comercialización. Al conectar tecnologías prometedoras con las vías adecuadas de desarrollo, fabricación y acceso al mercado, ayudamos a transformar activos científicos en soluciones escalables para la salud mundial."
             },
             {
                 "tag": "Consultoría",
-                "title": "Asesoría Estratégica y Consultoría Técnica",
-                "desc": "Nuestro equipo trabaja con gobiernos y organismos para crear capacidades locales de producción de vacunas."
+                "title": "Asesoría estratégica y consultoría tecnológica",
+                "desc": "Nuestros servicios de Asesoría Estratégica y Consultoría Técnica ayudan a las organizaciones a desarrollar capacidades sostenibles de fabricación de vacunas y productos biofarmacéuticos. Ofrecemos apoyo integral en estudios de factibilidad, planificación de carteras, diseño de ingeniería, supervisión de proyectos, puesta en marcha de instalaciones y evaluaciones de brechas."
             }
         ]
     },
@@ -502,35 +502,35 @@ export const spanish = {
     "horizon": {
         "title": "Zona de Investigación e Innovación One Health de Alto Impacto (HORIZON)",
         "subtitle": "Investigación y Desarrollo (I+D)",
-        "desc": "Las instalaciones de I+D de última generación de TechInvention, la Zona de Investigación e Innovación One Health de Alto Impacto (HORIZON), están diseñadas para acelerar la innovación en vacunas desde la prueba de concepto hasta el avance preclínico para enfermedades infecciosas prioritarias y resistencia a los antimicrobianos.",
+        "desc": "La instalación de I+D de última generación de TechInvention, High-impact One Health Research & Innovation ZONe (HORIZON), está diseñada para acelerar la innovación en vacunas mediante el apoyo a la investigación integral, desde el desarrollo de la prueba de concepto hasta el avance preclínico, para enfermedades infecciosas prioritarias y patógenos asociados con la resistencia a los antimicrobianos (AMR).",
         "gcmcTitle": "Centro Colaborativo Global para Contramedidas Médicas (GCMC)",
         "gcmcSubtitle": "Instalación Integrada de Desarrollo y Manufactura de Vacunas en Ciclo Completo",
         "gcmcDesc": "El centro GCMC de TechInvention es una instalación de ciclo completo diseñada para acelerar la transición del descubrimiento científico al impacto en la salud global.",
         "stages": [
             {
-                "stage": "Ideación y Descubrimiento",
-                "desc": "Identificación de dianas, descubrimiento de antígenos, diseño de vacunas con IA y selección de plataformas."
+                "stage": "Idear",
+                "desc": "Identificación de objetivos, descubrimiento de antígenos, diseño de vacunas asistido por AI/ML y selección de plataformas."
             },
             {
-                "stage": "Desarrollo de Procesos",
-                "desc": "Desarrollo de formulaciones, validación de ensayos analíticos y estudios de prueba de concepto."
+                "stage": "Desarrollar",
+                "desc": "Desarrollo de procesos y formulaciones, desarrollo de ensayos analíticos, caracterización y estudios de prueba de concepto."
             },
             {
-                "stage": "Evaluación Preclínica",
-                "desc": "Estudios preclínicos de eficacia, seguridad y toxicología con documentación regulatoria completa."
+                "stage": "Evaluar",
+                "desc": "Estudios preclínicos de eficacia, seguridad y toxicología, con documentación regulatoria y cumplimiento normativo."
             },
             {
-                "stage": "Escalamiento Industrial",
-                "desc": "Escalamiento de procesos, transferencia tecnológica y preparación para la producción GMP comercial."
+                "stage": "Escalar",
+                "desc": "Escalado de procesos, transferencia de tecnología, preparación para la fabricación GMP y transferencia a la fase comercial."
             }
         ],
         "collaborations": [
             {
-                "name": "Instituto de Ciencias de la Vida (ILS)",
+                "name": "Institute of Life Sciences (ILS)",
                 "location": "Bhubaneswar"
             },
             {
-                "name": "Instituto Indio de Tecnología (IIT)",
+                "name": "Indian Institute of Technology",
                 "location": "Bhubaneswar"
             },
             {
@@ -539,7 +539,7 @@ export const spanish = {
             },
             {
                 "name": "ICMR - NIRBI",
-                "location": "Calcuta"
+                "location": "Kolkata"
             }
         ]
     },
@@ -583,9 +583,9 @@ export const spanish = {
     },
     "cta": {
         "tag": "Pase a la Acción",
-        "title": "Sea Socio de TechInvention",
+        "title": "Asóciese con TechInvention",
         "titleHighlight": "Entregado Globalmente.",
-        "desc": "Contáctenos para explorar oportunidades de colaboración, licencias y desarrollo de capacidades.",
+        "desc": "Contáctenos para explorar colaboraciones, alianzas de licenciamiento y oportunidades de desarrollo de capacidades para vacunas y productos bioterapéuticos a nivel mundial.",
         "startPartnership": "Iniciar una Alianza",
         "primary": "Contáctenos",
         "secondary": "Conocer Más",
@@ -593,50 +593,50 @@ export const spanish = {
             "title": "Asóciese con TechInvention para el Acceso a Vacunas",
             "desc": "Comuníquese con TechInvention para explorar disponibilidad de productos, acuerdos de licencia y oportunidades de acceso a vacunas autorizadas."
         },
-        "button": "Contáctenos Ahora",
+        "button": "Conéctese ahora",
         "protectsTomorrow": "Protege el Mañana"
     },
     "footer": {
-        "desc": "Hacia una mayor equidad en la salud global mediante vacunas y biológicos asequibles y de alta calidad.",
+        "desc": "Dedicados a impulsar la salud mundial mediante investigación innovadora, fabricación sostenible y alianzas estratégicas en todo el mundo.",
         "solutions": "Soluciones",
         "company": "Empresa",
-        "connect": "Contacto",
+        "connect": "Conéctese",
         "allRightsReserved": "Todos los derechos reservados",
         "privacyPolicy": "Política de Privacidad",
         "termsOfService": "Términos de Servicio",
-        "termsAndConditions": "Términos y Condiciones",
-        "disclaimer": "Aviso Legal",
+        "termsAndConditions": "Términos y condiciones",
+        "disclaimer": "Descargo de responsabilidad",
         "globalCompliance": "Cumplimiento Global",
         "linkedin": "LinkedIn",
         "twitter": "Twitter (X)",
         "partnerPortal": "Portal de Socios",
         "email": "connect@techinvention.biz",
-        "poweredBy": "Desarrollado por",
+        "poweredBy": "Diseñado y desarrollado por",
         "youtube": "YouTube"
     },
     "horizonGcmc": {
         "startupsLine1": "Startups",
-        "startupsLine2": "Pymes",
+        "startupsLine2": "MSMEs",
         "startupsLine3": "Academia",
-        "startupsLine4": "Centros de I+D",
-        "startups": "Startups, Pymes, Academia, Centros de I+D",
-        "pocEarly": "Prueba de Concepto - Fase Inicial",
-        "techTransfer": "Transferencia Tecnológica",
-        "biosecurity": "Bioseguridad",
-        "biosecurityDesc": "Reserva estratégica para brotes de emergencia y preparación ante pandemias",
+        "startupsLine4": "I+D organizaciones",
+        "startups": "Startups, MSMEs, Academia, I+D organizaciones",
+        "pocEarly": "PoC - Etapa inicial",
+        "techTransfer": "Transferencia de tecnología",
+        "biosecurity": "Biocustodia",
+        "biosecurityDesc": "Reservas para responder a brotes de emergencia y favorecer la preparación ante pandemias",
         "smallBatches": "Lotes pequeños (PCT/CT)",
-        "withEuWho": "Con estándares UE/OMS-PQ",
+        "withEuWho": "Con EU/WHO-PQ",
         "industry": "Industria",
-        "industryDesc": "Paquetes técnicos optimizados para una transferencia fluida y rápida comercialización",
-        "techTransferTraining": "Transferencia Técnica y Capacitación",
-        "commercialManufacturing": "Fabricación Comercial",
+        "industryDesc": "Paquetes tecnológicos optimizados para facilitar una transferencia fluida y una comercialización rápida",
+        "techTransferTraining": "Transferencia de tecnología y capacitación",
+        "commercialManufacturing": "Fabricación comercial",
         "pills": [
             "Optimización\nde procesos",
-            "Escalamiento\nindustrial",
-            "Consistencia y\nValidación",
+            "Escalado\nde procesos",
+            "Consistencia/\nValidación",
             "Ensayos\nclínicos",
             "Aprobaciones\nregulatorias",
-            "PI y asuntos\nlegales"
+            "IP y asuntos\nlegales"
         ]
     },
     "loader": {
@@ -672,11 +672,11 @@ export const spanish = {
         }
     },
     "globalProjects": {
-        "tag": "Proyectos y Socios Globales",
-        "title": "Proyectos Globales {partners}",
-        "partners": "y Socios",
-        "partnersTag": "Proyectos y Socios Globales",
-        "desc": "Construyendo alianzas globales confiables para acelerar el acceso a vacunas, la infraestructura sanitaria y la excelencia en biofabricación.",
+        "tag": "Proyectos y socios globales",
+        "title": "Proyectos y socios globales",
+        "partners": "",
+        "partnersTag": "Proyectos y socios globales",
+        "desc": "Creamos alianzas globales de confianza para acelerar el acceso a las vacunas, fortalecer la infraestructura sanitaria e impulsar la excelencia en la biofabricación.",
         "stats": [
             {
                 "label": "Países Atendidos",
@@ -746,12 +746,12 @@ export const spanish = {
     },
     "vaccinePipeline": {
         "tag": "Desarrollo",
-        "title": "Portafolio de Vacunas de Próxima Generación",
+        "title": "Cartera de desarrollo de vacunas y bioterapéuticos",
         "pipeline": "Pipeline",
         "phases": {
             "rd": "Descubrimiento",
-            "poc": "Prueba de Concepto",
-            "preClinical": "Preclínico",
+            "poc": "Prueba de concepto",
+            "preClinical": "Preclínica",
             "phase12": "Fase 1/2"
         },
         "milestonesTitle": "Hitos Clave Proyectados",
@@ -766,22 +766,22 @@ export const spanish = {
         "stages": {
             "target": "Patógeno Objetivo",
             "rd": "Descubrimiento",
-            "poc": "Prueba de Concepto",
-            "preclinical": "Estudios Preclínicos"
+            "poc": "Prueba de concepto",
+            "preclinical": "Preclínica"
         },
         "items": [
             {
-                "name": "Vacuna Neumocócica Conjugada (16-valente)",
+                "name": "Vacuna conjugada antineumocócica (16-valente)",
                 "progress": 75,
                 "color": "#1955A6"
             },
             {
-                "name": "Vacuna Meningocócica Hexavalente (ABCYWX)",
+                "name": "Vacuna meningocócica hexavalente (ABCYWX)",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Vacuna contra Meningococo B",
+                "name": "Vacuna meningocócica B",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -791,17 +791,17 @@ export const spanish = {
                 "color": "#129B9C"
             },
             {
-                "name": "Vacuna Pan-Salmonella",
+                "name": "Vacuna contra Pan-Salmonella",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Vacuna contra la Malaria",
+                "name": "Vacuna contra la malaria",
                 "progress": 50,
                 "color": "#129B9C"
             },
             {
-                "name": "Vacuna contra la Tuberculosis",
+                "name": "Vacuna contra la tuberculosis",
                 "progress": 50,
                 "color": "#129B9C"
             }
@@ -887,9 +887,9 @@ export const spanish = {
     },
     "certifications": {
         "tag": "Calidad y Cumplimiento",
-        "title": "Certificaciones y Acreditaciones",
-        "certifications": "Normas Internacionales de Calidad",
-        "desc": "Cumplimiento total de los estándares globales en calidad, sostenibilidad y gobernanza ética.",
+        "title": "Nuestras certificaciones de {certifications}",
+        "certifications": "calidad",
+        "desc": "Cumplimos con los estándares mundiales y los requisitos regulatorios más exigentes. Nuestras certificaciones reflejan nuestro compromiso inquebrantable con la calidad, la seguridad y la excelencia en la innovación biotecnológica.",
         "list": {
             "drugFreePledge": {
                 "name": "Compromiso de Apoyo – Iniciativa Mumbai Libre de Drogas",
@@ -897,91 +897,94 @@ export const spanish = {
                 "info": "TechInvention Lifecare Limited ha comprometido formalmente su apoyo a la Iniciativa Mumbai Libre de Drogas del Gobierno de Maharashtra."
             },
             "dnb": {
-                "name": "Calificada como PyME de Menor Riesgo por Dun & Bradstreet",
+                "name": "Calificada como una SME de riesgo mínimo por Dun & Bradstreet",
                 "year": "2025",
-                "info": "TechInvention Lifecare Ltd. obtuvo una puntuación de 81, ubicándonos en la categoría de Menor Riesgo según la evaluación de riesgo para PyMEs de Dun & Bradstreet."
+                "info": "TechInvention Lifecare Ltd. obtuvo una puntuación de 81, que nos sitúa en la categoría de riesgo mínimo según el SME Risk Score de Dun & Bradstreet, lo que refleja nuestra sólida salud financiera, gobernanza y desempeño operativo."
             },
             "iso13485": {
-                "name": "Certificación ISO 13485:2016",
+                "name": "Certificado ISO 13485:2016",
                 "year": "2025",
-                "info": "Estándar internacional de sistemas de gestión de calidad para dispositivos médicos y productos diagnósticos."
+                "info": "Contamos con la certificación ISO 13485:2016, la norma internacional para sistemas de gestión de la calidad específicos de la industria de dispositivos médicos. Esta certificación refleja nuestro compromiso con la entrega de productos médicos seguros, de alta calidad y que cumplen los requisitos aplicables, y refuerza nuestra dedicación a la excelencia y al cumplimiento de los estándares mundiales."
             },
             "esg": {
-                "name": "Certificación ESG de Dun & Bradstreet",
+                "name": "Certificado ESG",
                 "year": "2024",
-                "info": "Reconocimiento a nuestro compromiso con la sostenibilidad, la responsabilidad social y la gobernanza ética."
+                "info": "Hemos recibido la certificación Ambiental, Social y de Gobernanza (ESG) de Dun & Bradstreet como reconocimiento a nuestro compromiso con la sostenibilidad, la responsabilidad social y la gobernanza ética. Este hito pone de relieve nuestros esfuerzos por promover la equidad en salud mediante soluciones sanitarias asequibles, adoptar prácticas sostenibles y mantener la transparencia y el cumplimiento."
             },
             "duns": {
-                "name": "Registro D-U-N-S",
+                "name": "Certificado DUNS",
                 "year": "2024",
-                "info": "Identificador comercial universal que garantiza transparencia y credibilidad financiera a nivel mundial."
-            },
-            "iso9001": {
-                "name": "Certificación ISO 9001:2015",
-                "year": "2023",
-                "info": "Excelencia en gestión de la calidad para el desarrollo y suministro de soluciones biotecnológicas."
+                "info": "Hemos obtenido la certificación D-U-N-S® de Dun & Bradstreet. Esta certificación fortalece nuestra credibilidad, fomenta la confianza y agiliza las alianzas globales, reforzando nuestro compromiso con la transparencia y la excelencia en la entrega de soluciones sanitarias innovadoras."
             },
             "dsir": {
-                "name": "Reconocimiento DSIR",
+                "name": "Certificado de reconocimiento del DSIR",
                 "year": "2024",
-                "info": "Reconocimiento oficial de nuestro centro de I+D por el Ministerio de Ciencia y Tecnología de la India."
+                "info": "Nuestra unidad interna de I+D ha sido reconocida por el Department of Scientific and Industrial Research (DSIR) del Gobierno de la India. Esta certificación es fundamental para fomentar la innovación, facilitar el acceso a incentivos gubernamentales y fortalecer nuestras capacidades de investigación para desarrollar vacunas, productos bioterapéuticos y diagnósticos asequibles."
+            },
+            "iso9001": {
+                "name": "Certificado ISO 9001:2015",
+                "year": "2023",
+                "info": "Hemos obtenido la certificación ISO 9001:2015, la norma internacional para sistemas de gestión de la calidad. La certificación demuestra la dedicación de una organización a la calidad, la eficiencia y la satisfacción del cliente, y brinda una ventaja competitiva en el mercado."
             },
             "gptw": {
-                "name": "Certificación Great Place to Work®",
+                "name": "Certificados GPTW 2022-2024",
                 "year": "2022 - 2024",
-                "info": "Acreditación internacional que certifica nuestra sólida cultura organizacional y excelencia laboral."
+                "info": "Hemos sido reconocidos como Great Place to Work® durante dos años consecutivos, 2021-2022 y 2022-2023. La certificación es un referente reconocido mundialmente para identificar y reconocer experiencias laborales sobresalientes. Haber obtenido esta distinción durante dos años consecutivos demuestra que contamos con un entorno positivo y saludable, donde los empleados se sienten valorados y empoderados dentro de nuestra cultura laboral inclusiva."
             },
             "tax80iac": {
-                "name": "Certificado de Exención Tributaria 80-IAC",
+                "name": "Certificado 80-IAC",
                 "year": "2022",
-                "info": "Estatus de beneficio tributario oficial para empresas innovadoras de alto impacto en biotecnología."
+                "info": "Se nos ha otorgado el Certificado de Exención Fiscal 80-IAC del Department for Promotion of Industry and Internal Trade (DPIIT) del Gobierno de la India. Esta certificación se concede a startups que cumplen diversos criterios, entre los cuales destaca el uso de modelos de negocio innovadores. Esta exención nos permite reinvertir los ahorros en investigación y desarrollo."
             },
             "helloTomorrow": {
-                "name": "Hello Tomorrow - Pionero Deep Tech",
+                "name": "DeepTech Pioneer",
                 "year": "2022",
-                "info": "Reconocida entre las mejores startups biotecnológicas del mundo en la Cumbre Global Deep Tech."
+                "info": "El reconocimiento de TechInvention como Deep Tech Pioneer por parte de Hello Tomorrow, una organización mundial líder dedicada a impulsar soluciones de tecnología profunda, destaca nuestro trabajo para aprovechar la ciencia y la tecnología de vanguardia a fin de crear soluciones sanitarias de alto impacto."
             },
             "innovative100": {
-                "name": "Premio 100 PyMEs Innovadoras",
+                "name": "SME innovadora del Innovation Council",
                 "year": "2021",
-                "info": "Distinción otorgada a las 100 empresas más innovadoras de la India en biotecnología y salud."
+                "info": "Fuimos incluidos entre las 100 SME innovadoras por el Innovation Council de Ginebra durante las celebraciones del Día Mundial de la Propiedad Intelectual (IP) en abril de 2021, por nuestro trabajo en productos y servicios innovadores."
             }
         }
     },
     "contact": {
         "tag": "Contáctenos",
-        "title": "Póngase en Contacto",
-        "subtitle": "Conectemos",
+        "title": "Contáctenos",
+        "subtitle": "Conectémonos para generar impacto.",
         "form": {
             "name": "Nombre completo",
             "email": "Correo electrónico",
             "phone": "Número de contacto",
+            "organisation": "Organización",
+            "organization": "Organización",
+            "enquiryType": "Tipo de consulta",
+            "inquiryType": "Tipo de consulta",
+            "selectEnquiry": "Seleccione el tipo de consulta",
+            "selectInquiry": "Seleccione el tipo de consulta",
+            "options": {
+                "strategy": "Estrategia",
+                "rd": "I+D",
+                "licensing": "Licenciamiento",
+                "advisory": "Asesoría",
+                "general": "Soporte general"
+            },
             "message": "Mensaje",
-            "submit": "Enviar Mensaje",
+            "submit": "Enviar mensaje",
             "sending": "Enviando...",
             "success": "¡Mensaje enviado con éxito!",
             "error": "Ocurrió un error. Por favor, inténtelo de nuevo.",
             "placeholders": {
-                "name": "Ingrese su nombre y apellido",
+                "name": "Ingrese su nombre",
                 "email": "correo@ejemplo.com",
                 "phone": "+34 6...",
                 "message": "¿En qué podemos ayudarle?"
             },
-            "fullName": "Nombre Completo",
-            "organization": "Organización / Empresa",
-            "inquiryType": "Tipo de Consulta",
-            "selectInquiry": "Seleccione un asunto",
-            "namePlaceholder": "Su nombre completo",
+            "fullName": "Nombre completo",
+            "namePlaceholder": "Su nombre",
             "emailPlaceholder": "Su correo electrónico",
             "phonePlaceholder": "Número de teléfono móvil",
-            "organisation": "Organización / Empresa",
-            "orgPlaceholder": "Nombre de su empresa",
-            "enquiryType": "Tipo de consulta",
-            "selectEnquiry": "Seleccione el tipo de consulta",
-            "options": {
-                "strategy": "Estrategia y Desarrollo de Negocios",
-                "general": "Soporte y Consultas Generales"
-            },
+            "orgPlaceholder": "Nombre de su organización",
             "messagePlaceholder": "Describa los detalles de su consulta aquí...",
             "nameRequired": "Por favor ingrese su nombre completo.",
             "emailRequired": "Por favor ingrese una dirección de correo electrónico válida.",
@@ -991,20 +994,20 @@ export const spanish = {
             "sendAnother": "Enviar otra consulta",
             "confidentiality": "Todas las consultas se tratan con estricta confidencialidad."
         },
-        "startYourJourney": "Inicie su Colaboración",
-        "desc": "Comuníquese con nuestro equipo global para analizar alianzas, licencias, I+D y soluciones de salud global.",
-        "getInTouch": "Póngase en Contacto",
-        "conversationTitle": "Iniciemos la Conversación y la Alianza",
-        "phoneEnquiries": "Consultas Telefónicas",
-        "emailAddress": "Correo Electrónico",
+        "startYourJourney": "Inicie su colaboración",
+        "desc": "Envíenos su consulta y el equipo correspondiente responderá lo antes posible. Ya se trate de productos, alianzas, tecnología, fabricación, asesoría o apoyo para capacitación, esperamos ponernos en contacto con usted.",
+        "getInTouch": "Póngase en contacto",
+        "conversationTitle": "Iniciemos la conversación",
+        "phoneEnquiries": "Consultas telefónicas",
+        "emailAddress": "Correo electrónico",
         "locations": {
-            "title": "Ubicaciones y Direcciones",
-            "desc": "Visite nuestra oficina corporativa o contáctenos directamente para analizar alianzas, consultas de productos y colaboraciones estratégicas.",
-            "gcmcTitle": "Oficina Corporativa y Planta de Fabricación (GCMC)",
-            "horizonTitle": "Centro de Investigación y Desarrollo (HORIZON)"
+            "title": "Ubicación y dirección",
+            "desc": "Visite nuestra oficina corporativa o comuníquese con nosotros para conversar sobre alianzas, consultas sobre productos, colaboraciones estratégicas y comunicaciones institucionales.",
+            "gcmcTitle": "Oficina corporativa y planta de fabricación (GCMC)",
+            "horizonTitle": "Centro de I+D (HORIZON)"
         },
-        "introP1": "Ya sea que esté explorando asociaciones, consultas sobre productos, colaboraciones de I+D, oportunidades de escalamiento y fabricación o apoyo de consultoría para el desarrollo de capacidades, nuestro equipo estará encantado de atenderle.",
-        "introP2": "TechInvention colabora con socios en todos los sistemas de salud globales para acercar la ciencia a un impacto significativo en la salud pública.",
+        "introP1": "Si está explorando alianzas, consultas sobre productos, colaboraciones de I+D, oportunidades de escalado y fabricación, o apoyo de consultoría para el desarrollo de capacidades, nuestro equipo estará encantado de atenderle.",
+        "introP2": "TechInvention trabaja con socios de los sistemas de salud mundial para acercar los avances científicos a un impacto significativo en la salud pública.",
         "startConversation": "Iniciar una conversación",
         "insideTitle": "Dentro de TechInvention",
         "officeSlide1": "Oficina de TechInvention",
@@ -1019,74 +1022,86 @@ export const spanish = {
         "accolades": "Distinciones",
         "items": [
             {
+                "year": "2026",
+                "title": "Outstanding Leader in Healthcare Technology",
+                "desc": "Bharat 2.0 Conclave 2026",
+                "image": "award_bharat_2026"
+            },
+            {
                 "year": "2025",
-                "title": "Mejor Esfuerzo en Vacunas del Año",
-                "desc": "Reconocidos en los BioSpectrum India Excellence Awards 2025 por nuestro liderazgo en innovación y acceso a vacunas.",
+                "title": "Best Vaccine Efforts of the Year",
+                "desc": "BioSpectrum India Excellence Awards 2025",
+                "image": "award_biospectrum_2025"
+            },
+            {
+                "year": "2025",
+                "title": "Empresa biofarmacéutica SME del año",
+                "desc": "Cónclave de Líderes de Vacunas de la India 2025",
                 "image": "award_ivlc_2025"
             },
             {
-                "year": "2025",
-                "title": "Forbes India Select 200",
-                "desc": "Destacados entre las empresas con Gran Potencial de Negocio Global, reflejo de nuestro acelerado crecimiento y liderazgo.",
+                "year": "2024",
+                "title": "Excelencia en bioinnovación",
+                "desc": "Premios Fortune al Liderazgo 2024",
                 "image": "award_fortune_2024"
             },
             {
-                "year": "2025",
-                "title": "Líder Sobresaliente en Tecnología Sanitaria",
-                "desc": "Nuestro Fundador y CEO, Syed S. Ahmed, fue galardonado por la Dra. Kiran Bedi en el Conclave Bharat 2.0.",
+                "year": "2024",
+                "title": "Premio al Emprendedor de la Salud",
+                "desc": "Referentes de Excelencia 2024 — Edición Biofarmacéutica",
                 "image": "award_exemplars_2024"
             },
             {
                 "year": "2024",
-                "title": "Apoyo de TDB para Vacunas NexGen",
-                "desc": "Apoyo estratégico del Technology Development Board para nuestra iniciativa de vacunas de nueva generación.",
+                "title": "Forbes «Select 200»",
+                "desc": "¡Hemos obtenido un codiciado lugar en Forbes India SELECT 200, un prestigioso reconocimiento a empresas con potencial para transformar los negocios a nivel mundial!",
                 "image": "award_forbes_2024"
             },
             {
                 "year": "2024",
-                "title": "Selección de Evaluación TBVI",
-                "desc": "Nuestro candidato a vacuna contra la tuberculosis fue seleccionado por TBVI para evaluación comparativa en modelo de aerosol.",
+                "title": "Startup 50: Pioneros",
+                "desc": "Dun & Bradstreet Startup 50: Pioneros 2024",
                 "image": "award_dun_bradstreet"
             },
             {
-                "year": "2024",
-                "title": "Consorcio Nacional contra la Tuberculosis",
-                "desc": "Alianza con IIT Bhubaneswar, ILS y NRDC para desarrollar y comercializar una vacuna recombinante contra la tuberculosis.",
+                "year": "2023",
+                "title": "Estrella de la Cumbre",
+                "desc": "Estrella de la Cumbre 2023",
                 "image": "award_summit_star"
             },
             {
                 "year": "2022",
-                "title": "Premio PyME del Año",
-                "desc": "Otorgado por el India SME Forum por la innovación y liderazgo biofarmacéutico.",
+                "title": "Premio SME del Año",
+                "desc": "Premios India SME a la Excelencia en el Sector de la Salud",
                 "image": "award_sme_excellence"
             },
             {
                 "year": "2022",
-                "title": "Finalista NSA 2021",
-                "desc": "Excelencia nacional reconocida en innovación biotecnológica y políticas de salud.",
+                "title": "Finalista de NSA 2021",
+                "desc": "Incidencia en políticas públicas ante el honorable PM de la India",
                 "image": "award_nsa_2021"
             },
             {
                 "year": "2020",
-                "title": "Top 10 Empresas de Biotecnología",
-                "desc": "Reconocida por Insights Success por el liderazgo en el sector de salud global.",
+                "title": "Las 10 mejores empresas de biotecnología",
+                "desc": "Revista SwiftNLift 2020",
                 "image": "award_swiftnlift_2020"
             },
             {
                 "year": "2019",
-                "title": "Mejor Empresa del Año",
-                "desc": "Elegida Empresa del Año por The CEO Magazine por su impacto e innovación.",
+                "title": "Mejor empresa del año",
+                "desc": "Revista Startup City en el sector biotecnológico 2019",
                 "image": "award_startup_city_2019"
             },
             {
                 "year": "2019",
-                "title": "Premios Time2Leap (Edición PyME)",
-                "desc": "Reconocimiento a los logros excepcionales en I+D biotecnológica e innovación.",
+                "title": "Premios Time2Leap — Edición MSME",
+                "desc": "Empresa líder del año en servicios de especialidad única del Ministerio de MSME",
                 "image": "award_time2leap_2019"
             }
         ],
-        "showLess": "Mostrar menos reconocimientos",
-        "showMore": "Mostrar más reconocimientos"
+        "showLess": "Ver menos reconocimientos",
+        "showMore": "Ver más reconocimientos"
     },
     "news": {
         "items": [
@@ -1115,44 +1130,44 @@ export const spanish = {
     },
     "faq": {
         "tag": "Preguntas Frecuentes",
-        "title": "Preguntas Frecuentes",
-        "subtitle": "Encuentre respuestas a las preguntas más comunes sobre TechInvention, nuestras innovaciones y soluciones de salud global.",
+        "title": "Preguntas frecuentes",
+        "subtitle": "Encuentre respuestas a las preguntas frecuentes sobre nuestras iniciativas de innovación y salud mundial.",
         "items": [
             {
                 "question": "¿Qué es TechInvention?",
-                "answer": "TechInvention es una empresa de biotecnología con sede en Mumbai, India, especializada en investigación traslacional, vacunas, consultoría y manufactura."
+                "answer": "TechInvention es una empresa de biotecnología con sede en Mumbai, India, enfocada en la investigación traslacional, la innovación en vacunas, la consultoría y la asesoría estratégica, el acceso a vacunas y su fabricación."
             },
             {
                 "question": "¿Qué servicios ofrece TechInvention?",
-                "answer": "Ofrecemos I+D de vacunas, desarrollo de procesos GMP, transferencia de tecnología, asuntos regulatorios e ingeniería de instalaciones."
+                "answer": "TechInvention ofrece soluciones biotecnológicas integrales, entre ellas:\n• I+D de vacunas para enfermedades infecciosas y patógenos asociados con la AMR\n• Desarrollo de procesos de vacunas y fabricación GMP\n• Licenciamiento de tecnología y transferencia de tecnología\n• Apoyo regulatorio y de IP\n• Estudio de factibilidad\n• Diseño de ingeniería de instalaciones para vacunas/biotecnología\n• Asesoría estratégica para gobiernos, donantes, agencias de financiamiento y la industria"
             },
             {
-                "question": "¿Qué tipo de vacunas desarrolla TechInvention?",
-                "answer": "Nuestro portafolio abarca neumococo, meningococo, Salmonella, Shigella, malaria y tuberculosis."
+                "question": "¿Qué tipos de vacunas desarrolla TechInvention?",
+                "answer": "Nuestras actividades de I+D en vacunas se enfocan en enfermedades infecciosas y resistencia a los antimicrobianos (AMR), incluidas la meningitis, la neumonía, la malaria, la tuberculosis (TB), Salmonella, Shigella y otros patógenos emergentes. Desarrollamos tecnologías de vacunas recombinantes, conjugadas y de próxima generación."
             },
             {
-                "question": "¿Ofrece TechInvention servicios de fabricación (CDMO)?",
-                "answer": "Sí, a través de nuestro centro HORIZON y la planta GCMC, brindamos servicios integrales de manufactura bajo normas GMP."
+                "question": "¿TechInvention ofrece servicios de fabricación de vacunas?",
+                "answer": "Sí. TechInvention cuenta con una instalación integral de fabricación de vacunas GMP (upstream, downstream y llenado y acabado) que brinda apoyo para el desarrollo de procesos, la transferencia de tecnología, la producción de lotes para ensayos clínicos y la fabricación a escala comercial, así como el desarrollo analítico."
             },
             {
-                "question": "¿Cómo asociarse con TechInvention?",
-                "answer": "Puede contactarnos directamente en connect@techinvention.biz o a través de nuestro formulario web."
+                "question": "¿TechInvention es una empresa de consultoría en biotecnología?",
+                "answer": "Sí. TechInvention es una empresa líder de consultoría en biotecnología en la India, que ofrece servicios de asesoría estratégica, técnica y comercial para el establecimiento de instalaciones de fabricación."
             },
             {
-                "question": "¿Qué estándares cumple la planta GCMC?",
-                "answer": "La planta GCMC cumple con las directrices de precalificación de la OMS (WHO-PQ), US FDA y EU GMP."
+                "question": "¿TechInvention trabaja con organizaciones internacionales?",
+                "answer": "Sí. TechInvention colabora con gobiernos, organismos internacionales, instituciones de investigación, universidades y organizaciones de salud mundial en proyectos de desarrollo de vacunas, desarrollo de capacidades biotecnológicas e infraestructura de fabricación."
             },
             {
-                "question": "¿Puede TechInvention ayudar a diseñar y construir plantas de vacunas?",
-                "answer": "Sí, brindamos asesoría integral desde estudios de viabilidad hasta la calificación GMP y precalificación de la OMS."
+                "question": "¿TechInvention puede ayudar a establecer instalaciones de fabricación de vacunas/biotecnología?",
+                "answer": "Sí. Ofrecemos consultoría integral para instalaciones de fabricación de vacunas, incluidos estudios de factibilidad, diseño de instalaciones, validación, supervisión de proyectos, estrategia regulatoria, preparación operativa y capacitación de la fuerza laboral."
             },
             {
                 "question": "¿Cuál es la experiencia de TechInvention en I+D de vacunas?",
-                "answer": "Contamos con experiencia profunda en descubrimiento de antígenos, proteínas recombinantes, glicoconjugados y modelos de eficacia preclínica."
+                "answer": "Nuestra experiencia abarca todo el ciclo de vida del desarrollo de vacunas, que incluye:\n• Identificación de objetivos\n• Descubrimiento y diseño de antígenos\n• Desarrollo de procesos\n• Desarrollo de formulaciones\n• Desarrollo de ensayos analíticos\n• Evaluación preclínica\n• Transferencia de tecnología\n• Escalado de la fabricación y comercialización"
             },
             {
-                "question": "¿Apoya TechInvention a startups e instituciones académicas?",
-                "answer": "Sí, ofrecemos programas de incubación, transferencia de tecnología y acceso a infraestructura de biomanufactura."
+                "question": "¿TechInvention apoya a las startups de biotecnología?",
+                "answer": "Sí. Colaboramos con startups de biotecnología mediante consultoría, desarrollo tecnológico, alianzas de investigación, oportunidades de licenciamiento y apoyo a la fabricación para acelerar la innovación desde el concepto hasta la comercialización."
             }
         ]
     },
@@ -1199,8 +1214,9 @@ export const spanish = {
     },
     "strategicAdvisory": {
         "tag": "Asesoría Estratégica",
-        "title": "Asesoría Estratégica y Consultoría Técnica",
-        "intro": "Construyendo ecosistemas resilientes de atención médica y biofabricación a través de estrategia, ciencia y ejecución.",
+        "title": "Asesoría estratégica y consultoría tecnológica",
+        "intro": "Construimos ecosistemas resilientes de salud y biofabricación mediante la estrategia, la ciencia y la ejecución.",
+        "desc": "TechInvention apoya a gobiernos, agencias de financiamiento, fabricantes, inversionistas e instituciones de investigación en la configuración de infraestructura para la fabricación de vacunas y productos biofarmacéuticos.",
         "sections": [
             {
                 "title": "Factibilidad de Proyectos",
@@ -1285,9 +1301,10 @@ export const spanish = {
             }
         ],
         "desc": "TechInvention apoya a gobiernos, agencias de financiamiento, fabricantes, inversores e institutos de investigación en la estructuración de infraestructura biofarmacéutica.",
-        "whatWeOffer": "Lo Que Ofrecemos",
-        "offerTitle": "Servicios de Consultoría Diseñados para la Innovación en Salud",
-        "offerSubtitle": "Asesoramiento especializado a lo largo de todo el trayecto, desde el concepto hasta la comercialización:",
+        "feedbackTitle": "Comentarios de los clientes",
+        "whatWeOffer": "Lo que ofrecemos",
+        "offerTitle": "Servicios de consultoría adaptados a la innovación en salud",
+        "offerSubtitle": "Asesoría especializada durante todo el recorrido, desde el concepto hasta la comercialización:",
         "approachTitle": "Un enfoque riguroso hacia la excelencia",
         "services": [
             {
@@ -1298,122 +1315,123 @@ export const spanish = {
     "consultingServices": {
         "services": [
             {
-                "title": "Estudio de Pre-factibilidad y Factibilidad",
-                "desc": "Evaluación integral técnica, comercial, regulatoria y financiera para respaldar decisiones de inversión."
+                "title": "Estudio de prefactibilidad y factibilidad",
+                "desc": "Evaluación técnica, comercial, regulatoria y financiera integral para apoyar las decisiones de inversión."
             },
             {
-                "title": "Diseño de Instalaciones y Preparación GMP",
-                "desc": "Diseño básico, conceptual y detallado con planificación de salas limpias, flujo de trabajo, utilidades, estrategia de equipos y soporte para preparación alineada con GMP."
+                "title": "Diseño de instalaciones y preparación para GMP",
+                "desc": "Diseño básico, conceptual y detallado, con planificación de salas limpias, flujos de trabajo, servicios auxiliares, estrategia de equipos y apoyo para la preparación conforme a GMP."
             },
             {
-                "title": "Transferencia de Tecnología y Escalamiento",
-                "desc": "Identificación de productos, evaluación, soporte en transferencia de procesos, planificación de escalamiento y fabricación."
+                "title": "Transferencia de tecnología y escalado",
+                "desc": "Identificación y evaluación de productos, apoyo a la transferencia de procesos, planificación del escalado y fabricación."
             },
             {
-                "title": "Calidad, Regulación y Cumplimiento",
-                "desc": "Soporte para SGC (QMS), evaluación de brechas GMP, preparación para auditorías, documentación y alineación regulatoria global."
+                "title": "Calidad, asuntos regulatorios y cumplimiento",
+                "desc": "Apoyo en QMS, evaluación de brechas de GMP, preparación para auditorías, documentación y alineación con los requisitos regulatorios internacionales."
             },
             {
-                "title": "Capacitación y Desarrollo de Capacidades",
-                "desc": "Programas especializados en GxP, control de calidad (QC), garantía de calidad (QA), asuntos regulatorios y operaciones de instalaciones."
+                "title": "Capacitación y desarrollo de capacidades",
+                "desc": "Programas especializados en GxP, QC, QA, asuntos regulatorios y operaciones de instalaciones."
             },
             {
-                "title": "Planificación del Portafolio de Productos",
-                "desc": "Portafolio de productos, necesidad de mercado, modelo operativo y estrategia de implementación."
+                "title": "Planificación de la cartera de productos",
+                "desc": "Cartera de productos, necesidades del mercado, modelo operativo y estrategia de implementación."
             }
         ]
     },
     "cdmo": {
-        "title": "Organización de Desarrollo y Manufactura por Contrato (CDMO)",
+        "title": "Centro Global de Colaboración para las Contramedidas Médicas (GCMC)",
         "subtitle": "Soluciones Avanzadas de Biomanufactura",
-        "description": "TechInvention ofrece servicios CDMO integrales de extremo a extremo para vacunas y biológicos, desde la prueba de concepto hasta la manufactura comercial.",
+        "description": "El Centro Global de Colaboración para las Contramedidas Médicas (GCMC) de TechInvention es una instalación integrada de ciclo completo para el desarrollo y la fabricación de vacunas, diseñada para acelerar el recorrido desde el descubrimiento científico hasta el impacto en la salud mundial.\n\nDesarrollado en consonancia con los estándares GMP internacionales, GCMC reúne en una sola instalación el desarrollo de procesos de vacunas, el escalado de la fabricación, la transferencia de tecnología, las pruebas analíticas, los sistemas de calidad, el apoyo regulatorio, la fabricación del producto farmacéutico, la innovación digital y la infraestructura sostenible.",
+        "ctaDescription": "Contáctenos para explorar alianzas de fabricación de vacunas y otras oportunidades de colaboración.",
         "bridge": {
-            "title": "GCMC como un Puente",
-            "desc": "La innovación científica comienza en laboratorios de investigación; sin embargo, convertir descubrimientos prometedores en vacunas viables comercialmente requiere infraestructura avanzada y capacidades escalables. GCMC cierra esta brecha crítica brindando soporte integral."
+            "title": "GCMC como puente",
+            "desc": "La innovación científica comienza en laboratorios de investigación, universidades y empresas de biotecnología; sin embargo, transformar descubrimientos prometedores en vacunas comercialmente viables requiere conocimientos especializados, infraestructura avanzada de fabricación, cumplimiento regulatorio y capacidades de producción escalables. GCMC salva esta brecha crítica al ofrecer apoyo integral en el desarrollo de vacunas, la optimización de procesos, el escalado de la fabricación, la transferencia de tecnología, la fabricación GMP, la garantía de calidad y la preparación regulatoria."
         },
         "whyPartner": {
-            "title": "¿Por Qué Asociarse con Nosotros?",
+            "title": "¿Por qué asociarse con nosotros?",
             "features": [
                 {
-                    "title": "Capacidad de Extremo a Extremo",
+                    "title": "Capacidad integral",
                     "desc": "Experiencia integrada que abarca desde el desarrollo de procesos y escalamiento hasta llenado y acabado, preparación regulatoria y transferencia tecnológica."
                 },
                 {
-                    "title": "Estándares Internacionales de Calidad",
+                    "title": "Estándares internacionales de calidad",
                     "desc": "Infraestructura diseñada conforme a las expectativas globales de GMP, respaldada por sistemas de calidad robustos y cumplimiento normativo."
                 },
                 {
-                    "title": "Manufactura Flexible",
+                    "title": "Fabricación flexible",
                     "desc": "Tecnologías avanzadas capaces de dar soporte a múltiples plataformas de vacunas y productos biológicos."
                 },
                 {
-                    "title": "Vías de Desarrollo Aceleradas",
+                    "title": "Vías de desarrollo más rápidas",
                     "desc": "Flujos de trabajo científicos y de fabricación optimizados para acelerar la transferencia y acortar los tiempos de llegada al mercado."
                 },
                 {
-                    "title": "Innovación Colaborativa",
+                    "title": "Innovación colaborativa",
                     "desc": "Ecosistema global que conecta empresas biotecnológicas, fabricantes farmacéuticos, universidades y socios de salud pública."
                 },
                 {
-                    "title": "Manufactura Sostenible",
+                    "title": "Fabricación sostenible",
                     "desc": "Infraestructura energéticamente eficiente y gestión inteligente para reducir el impacto ambiental manteniendo la excelencia operativa."
                 }
             ]
         },
         "integratedCapabilities": {
-            "title": "Capacidades de Manufactura Integradas",
+            "title": "Capacidades integradas de fabricación",
             "capabilities": [
                 {
-                    "title": "Manufactura Upstream",
-                    "desc": "Dos suites de manufactura upstream equipadas con biorreactores de acero inoxidable (20 L y 100 L) para desarrollo y escalamiento de procesos."
+                    "title": "Fabricación upstream",
+                    "desc": "Dos salas flexibles de fabricación upstream equipadas con sistemas de biorreactores de acero inoxidable (20 L y 100 L), que permiten un desarrollo y una optimización eficientes de los procesos, así como el escalado de la fabricación en diversas plataformas de producción."
                 },
                 {
-                    "title": "Procesamiento Downstream",
-                    "desc": "Capacidades de purificación integradas para clarificación, concentración, purificación y optimización garantizando calidad consistente."
+                    "title": "Procesamiento downstream",
+                    "desc": "Capacidades integradas de purificación que permiten la recuperación, concentración, purificación, pulido y optimización de procesos para garantizar una calidad uniforme del producto y la robustez del proceso de fabricación."
                 },
                 {
-                    "title": "Llenado y Acabado (Fill-Finish)",
-                    "desc": "Línea multiformato para viales líquidos y jeringas prellenadas para suministro clínico y comercial."
+                    "title": "Fabricación del producto farmacéutico",
+                    "desc": "Capacidades flexibles de llenado y acabado mediante una línea de fabricación multiformato que admite viales líquidos y jeringas precargadas para el suministro clínico y comercial."
                 },
                 {
-                    "title": "Calidad, Regulación y Transferencia Tecnológica",
-                    "desc": "Soporte integral para desarrollo analítico, sistemas de calidad, documentación regulatoria, validación y comercialización."
+                    "title": "Calidad, asuntos regulatorios y transferencia de tecnología",
+                    "desc": "Apoyo integral para el desarrollo analítico, los sistemas de gestión de la calidad, la documentación regulatoria, la validación, la transferencia de tecnología, la preparación para la fabricación y la planificación de la comercialización, con el fin de facilitar el avance exitoso del producto."
                 },
                 {
-                    "title": "Capacitación y Formación de Talento",
-                    "desc": "Programas prácticos especializados en manufactura de vacunas, operaciones GMP, aseguramiento de calidad y bioseguridad."
+                    "title": "Capacitación y desarrollo de la fuerza laboral",
+                    "desc": "Programas especializados de capacitación práctica en fabricación de vacunas, operaciones GMP, garantía de calidad, bioseguridad, cumplimiento regulatorio y bioprocesamiento avanzado para fortalecer la capacidad mundial de biofabricación."
                 }
             ]
         },
         "digitalManufacturing": {
-            "title": "Excelencia en Manufactura Digital",
-            "desc": "Las tecnologías digitales se integran en todo GCMC para optimizar la eficiencia de los procesos y la calidad del producto.",
+            "title": "Excelencia en fabricación digital",
+            "desc": "Las tecnologías digitales están integradas en todo GCMC para mejorar la eficiencia de los procesos, la visibilidad de las operaciones de fabricación, el desempeño operativo y la calidad del producto. Al incorporar inteligencia digital en la investigación, el desarrollo, la fabricación y las operaciones de las instalaciones, GCMC permite tomar decisiones con mayor rapidez, mejorar la consistencia de los procesos, elevar la calidad del producto y fortalecer la resiliencia operativa.",
             "points": [
-                "Monitoreo y optimización de procesos asistidos por IA",
-                "Analítica de manufactura impulsada por Machine Learning",
-                "Flujos de trabajo en biología computacional",
-                "I+D habilitada por secuenciación de nueva generación (NGS)",
-                "Monitoreo en tiempo real de producción y servicios",
-                "Mantenimiento predictivo mediante gestión inteligente de instalaciones",
+                "Monitoreo y optimización de procesos con asistencia de AI",
+                "Análisis de fabricación impulsado por aprendizaje automático",
+                "Flujos de trabajo de biología computacional",
+                "Apoyo a la investigación y el desarrollo habilitado por NGS",
+                "Monitoreo en tiempo real de la fabricación y los servicios auxiliares",
+                "Mantenimiento predictivo mediante la gestión inteligente de las instalaciones",
                 "Optimización de procesos basada en datos",
-                "Gestión digital de calidad y operaciones"
+                "Gestión digital de la calidad y las operaciones"
             ],
-            "badge": "Impulsado por la Tecnología"
+            "badge": "Impulsado por la tecnología"
         },
         "sustainability": {
-            "title": "Sostenibilidad por Diseño",
-            "desc": "La sostenibilidad se integra en cada faceta del diseño y operación de GCMC.",
+            "title": "Sostenibilidad desde el diseño",
+            "desc": "La sostenibilidad está integrada en todos los aspectos del diseño y las operaciones de GCMC para promover una fabricación de vacunas responsable y energéticamente eficiente. La instalación incorpora soluciones de energía renovable, sistemas inteligentes de gestión de edificios, estrategias de conservación del agua y servicios auxiliares energéticamente eficientes para reducir el impacto ambiental y, al mismo tiempo, mantener un desempeño de fabricación de clase mundial.",
             "points": [
-                "Integración de energía renovable para maximizar la eficiencia",
-                "Gestión inteligente de edificios mediante IA y mantenimiento predictivo",
-                "Sistemas HVAC y servicios de alta eficiencia energética",
+                "Integración de energías renovables para mejorar la eficiencia energética",
+                "Gestión de edificios y mantenimiento predictivo con AI",
+                "Sistemas HVAC y servicios auxiliares energéticamente eficientes",
                 "Gestión inteligente de agua helada y aire comprimido",
                 "Optimización energética mediante bombas de calor",
-                "Conservación de agua y descarga líquida cero (ZLD)",
-                "Aprovechamiento de aguas pluviales y optimización de recursos",
-                "Monitoreo habilitado por IoT para operaciones sostenibles"
+                "Conservación del agua y planificación de descarga cero de líquidos",
+                "Captación de agua de lluvia y optimización de recursos",
+                "Monitoreo habilitado por IoT para operaciones sostenibles de las instalaciones"
             ],
-            "badge": "Operaciones Verdes"
+            "badge": "Operaciones sostenibles"
         },
         "qcLab": {
             "badge": "Calidad y Cumplimiento",
@@ -1454,64 +1472,66 @@ export const spanish = {
         "opExcellenceDesc": "El monitoreo continuo y los controles automatizados garantizan el máximo rendimiento y pureza."
     },
     "careers": {
-        "title": "Modele el Futuro de la Salud Global",
-        "intro": "Únase a nuestro dinámico equipo dedicado a desarrollar vacunas vitales y bioterapias innovadoras en mercados emergentes y globales.",
+        "title": "Construya una carrera con propósito",
+        "intro": "Únase a un equipo en el que la ciencia, la estrategia y la ejecución se unen para generar un impacto significativo en la atención sanitaria. En TechInvention, cada función contribuye al avance de vacunas, productos biológicos y tecnologías que favorecen el acceso, la asequibilidad y la resiliencia en los ecosistemas de salud mundial.",
         "whyJoinUs": {
-            "title": "Por Qué Unirse a Nosotros",
+            "title": "Por qué unirse a nosotros",
             "items": [
                 {
-                    "title": "Trabajo con propósito",
-                    "desc": "Contribuya directamente a soluciones de salud que transforman vidas."
+                    "title": "Trabajo impulsado por un propósito",
+                    "desc": "Contribuya a soluciones sanitarias que realmente importan."
                 },
                 {
                     "title": "Exposición global",
-                    "desc": "Trabaje con socios, instituciones y expertos en diversas geografías."
+                    "desc": "Trabaje con socios, instituciones y expertos de distintas regiones del mundo."
                 },
                 {
                     "title": "Cultura de aprendizaje",
-                    "desc": "Crezca a través de proyectos prácticos, tutorías y colaboración interdisciplinaria."
+                    "desc": "Crezca mediante proyectos prácticos, mentoría y colaboración interfuncional."
                 },
                 {
-                    "title": "Sentido de pertenencia",
+                    "title": "Mentalidad de autonomía y responsabilidad",
                     "desc": "Asuma responsabilidades, lidere ideas y haga visible su contribución."
                 },
                 {
                     "title": "Ecosistema de innovación",
-                    "desc": "Forme parte de una empresa biotecnológica en crecimiento en vacunas y productos biológicos."
+                    "desc": "Forme parte de una empresa de biotecnología en crecimiento que trabaja en vacunas, productos biológicos e infraestructura de salud mundial."
                 }
             ]
         },
         "whoWeLookFor": {
-            "title": "A Quién Buscamos",
-            "desc": "Damos la bienvenida a profesionales ambiciosos y preparados para asumir responsabilidades. Ya sea científico, ingeniero, consultor, experto regulatorio o financiero, TechInvention ofrece la oportunidad de crecer con propósito."
+            "title": "A quién buscamos",
+            "subtitle": "Talento con curiosidad, disciplina e iniciativa",
+            "desc": "Recibimos a profesionales ambiciosos, reflexivos y dispuestos a asumir responsabilidades. Ya sea científico, ingeniero, consultor, experto regulatorio, profesional de finanzas o líder corporativo, TechInvention le ofrece la oportunidad de crecer con propósito.",
+            "btn": "Explorar vacantes"
         },
         "testimonials": {
-            "title": "Voces de Nuestro Equipo",
-            "subtitle": "Historias inspiradoras de profesionales que crecen con TechInvention.",
+            "title": "Voces de nuestros empleados",
+            "subtitle": "Historias de las personas que crecen junto con TechInvention.",
             "items": [
                 {
                     "name": "Shahnawaz Shaikh",
-                    "role": "Administración y Recursos Humanos",
+                    "role": "Administración y HR",
                     "tenure": "Más de 9 años",
-                    "quote": "Habiéndome unido a TechInvention hace 10 años, he tenido el privilegio de crecer junto con la organización y asumir mayores responsabilidades."
+                    "quote": "Me incorporé a TechInvention hace 10 años en un puesto de Administración y HR, y he tenido el privilegio de crecer junto con la organización y asumir, con el paso de los años, mayores responsabilidades, sentido de pertenencia y propósito. Ha sido una trayectoria inspiradora y profundamente gratificante, y me enorgullece haber sido testigo del notable crecimiento y la evolución de TechInvention, además de haber contribuido a ellos."
                 },
                 {
                     "name": "Aziz Mandsaurwala",
-                    "role": "Gerente Senior - Desarrollo de Negocios Globales",
+                    "role": "Gerente Sénior - Global BD",
                     "tenure": "Más de 6 años",
-                    "quote": "Trabajar en TechInvention significa ser parte de proyectos que conectan la ciencia, la estrategia y el impacto real en la salud."
+                    "quote": "Trabajar en TechInvention significa formar parte de proyectos que conectan la ciencia, la estrategia y el impacto real en la atención sanitaria. Cada proyecto aporta aprendizaje y crecimiento."
                 },
                 {
                     "name": "Sarang Pathak",
                     "role": "Gerente General",
                     "tenure": "Más de 9 años",
-                    "quote": "Trabajar en TechInvention me ha brindado la oportunidad de aprender continuamente y contribuir a una labor sumamente significativa."
+                    "quote": "Trabajar en TechInvention me ha dado la oportunidad de aprender continuamente, asumir responsabilidades diversas y contribuir a un trabajo significativo. La confianza, la exposición y el apoyo que he recibido aquí han desempeñado un papel importante en mi crecimiento y confianza profesional."
                 },
                 {
                     "name": "Priya Dhawale",
-                    "role": "Subgerente - Negocios Globales",
+                    "role": "Subgerente - GBD",
                     "tenure": "Más de 5 años",
-                    "quote": "Cumplir más de seis años en TechInvention ha sido una experiencia profesional increíblemente enriquecedora."
+                    "quote": "Cumplir más de seis años en TechInvention ha sido una trayectoria increíblemente gratificante. Ha sido inspirador presenciar la transformación de la empresa, que pasó de ser una startup a convertirse en una MSME en crecimiento con una sólida presencia global. A lo largo de esta trayectoria, he tenido la oportunidad de trabajar en diversos proyectos internacionales de desarrollo empresarial y consultoría estratégica, colaborar con partes interesadas de todo el mundo y ampliar continuamente mis conocimientos en el sector de las ciencias de la vida. La confianza, el apoyo y las oportunidades de aprendizaje que me han brindado el liderazgo y mis colegas han desempeñado un papel significativo en mi crecimiento profesional. Espero seguir formando parte del éxito y la innovación continuos de TechInvention."
                 },
                 {
                     "name": "Nida Afreen Qureshi",
@@ -1522,238 +1542,249 @@ export const spanish = {
             ]
         },
         "openPositions": {
-            "title": "Puestos Disponibles",
-            "intro": "TechInvention ofrece oportunidades en consultoría de negocios, licencias, I+D de vacunas, producción, control y garantía de calidad, asuntos regulatorios y finanzas.",
-            "noPositions": "Actualmente no disponemos de vacantes abiertas publicadas. Sin embargo, siempre buscamos talento excepcional. Puede enviar su currículum a continuación.",
-            "spontaneous": "Enviar Solicitud Espontánea"
+            "title": "Puestos vacantes",
+            "subtitle": "Explore oportunidades en distintas funciones",
+            "intro": "TechInvention ofrece puestos en Consultoría Empresarial, Licenciamiento, I+D de Vacunas, Producción, Control de Calidad, Garantía de Calidad, Asuntos Regulatorios, Asuntos Legales e IP, Finanzas, HR y asuntos corporativos.",
+            "noActiveOpenings": "No hay vacantes activas",
+            "noPositions": "Actualmente no tenemos puestos vacantes. Sin embargo, siempre buscamos talento excepcional para incorporarse a nuestro equipo. Puede enviar su currículum a continuación y nos comunicaremos con usted cuando surja una oportunidad adecuada.",
+            "spontaneous": "Enviar solicitud general"
         },
-        "lifeAtTitle": "La Vida en TechInvention",
+        "lifeAtTitle": "La vida como Techknight",
         "form": {
-            "title": "Formulario de Solicitud de Empleo",
+            "badge": "Únase a nosotros",
+            "title": "Formulario de solicitud",
             "position": "Puesto al que postula",
+            "name": "Nombre completo",
+            "email": "Correo electrónico",
+            "phone": "Número de contacto",
             "experience": "Años de experiencia",
-            "company": "Empresa / Organización actual (Opcional)",
-            "coverLetter": "Carta de presentación / Mensaje (Opcional)",
-            "uploadResume": "Subir Currículum (PDF, DOC) *",
-            "browseResume": "Arrastre y suelte o examine para seleccionar el archivo",
-            "submit": "Enviar Solicitud",
+            "company": "Empresa/organización actual (opcional)",
+            "coverLetter": "Carta de presentación/mensaje (opcional)",
+            "uploadResume": "Cargar currículum (PDF, DOC)",
+            "browseResume": "Arrastre y suelte o busque el currículum",
+            "submit": "Enviar solicitud",
             "expRequired": "Por favor ingrese sus años de experiencia.",
             "fileRequired": "Por favor suba su currículum en formato (PDF, DOC o DOCX).",
             "successTitle": "¡Solicitud Enviada con Éxito!",
             "backToOpenings": "Volver a Todas las Vacantes"
         },
         "hero": {
-            "badge": "Únete a Nosotros"
+            "badge": "Únase a nosotros",
+            "applyNow": "Enviar solicitud"
         }
     },
     "training": {
-        "title": "Programas de Capacitación",
-        "desc": "Programas de formación especializada para el desarrollo de vacunas y manufactura bajo normas GMP. Preparamos a profesionales e instituciones para alcanzar la excelencia en biotecnología.",
+        "title": "Capacitación personalizada en desarrollo de vacunas y fabricación GMP",
+        "desc": "Mediante un aprendizaje práctico y alineado con la industria, preparamos a los profesionales para responder a las exigencias cambiantes del desarrollo de vacunas y la fabricación GMP. Nuestro plan de estudios integral abarca bioseguridad y biocustodia, producción GMP, pruebas analíticas, garantía de calidad, requisitos regulatorios mundiales, gestión de ensayos clínicos y farmacovigilancia.",
+        "viewModules": "Ver módulos",
         "modules": [
             {
-                "title": "Fundamentos de Buenas Prácticas de Manufactura (GMP)",
-                "desc": "Comprenda los principios esenciales de GMP que rigen la calidad, seguridad del paciente y cumplimiento en la biomanufactura.",
+                "title": "Cumplimiento de GMP",
+                "desc": "Desarrolle una base sólida en los principios GMP, las expectativas regulatorias, los sistemas de calidad y la cultura de cumplimiento requerida para las operaciones de fabricación y pruebas.",
                 "focusAreas": [
-                    "Pautas de la OMS, US FDA e ICH",
-                    "Buenas Prácticas de Documentación (GDP)",
-                    "Higiene y Seguridad del Personal",
-                    "Diseño de Instalaciones y Flujo de Materiales",
-                    "Cultura de Calidad y Mentalidad de Cumplimiento"
+                    "Directrices de WHO, US FDA e ICH",
+                    "Buenas prácticas de documentación (GDP)",
+                    "Higiene y seguridad del personal",
+                    "Diseño de instalaciones y flujos de materiales/personal",
+                    "Cultura de calidad y mentalidad de cumplimiento"
                 ]
             },
             {
-                "title": "Sistemas de Gestión de Calidad (QMS)",
-                "desc": "Desarrolle experiencia en sistemas de calidad que garantizan la consistencia del producto y la mejora continua.",
+                "title": "Sistemas de gestión de la calidad (QMS)",
+                "desc": "Desarrolle conocimientos especializados en sistemas de calidad que garanticen la consistencia del producto, el cumplimiento regulatorio y la mejora continua durante todo el ciclo de vida del producto.",
                 "focusAreas": [
-                    "Gestión de Desviaciones e Incidentes",
-                    "CAPA e Investigaciones de Causa Raíz",
-                    "Sistemas de Control de Cambios",
-                    "Gestión de Riesgos de Calidad (ICH Q9)",
-                    "Investigaciones OOS y OOT"
+                    "Gestión de desviaciones e incidentes",
+                    "CAPA e investigaciones de causa raíz",
+                    "Sistemas de control de cambios",
+                    "Gestión de riesgos de calidad (ICH Q9)",
+                    "Investigaciones de OOS y OOT"
                 ]
             },
             {
-                "title": "Técnicas Analíticas y Control de Calidad",
-                "desc": "Domine las metodologías analíticas utilizadas en laboratorios de control de vacunas y productos biotecnológicos.",
+                "title": "Técnicas analíticas y de control de calidad",
+                "desc": "Adquiera experiencia con las metodologías analíticas y las prácticas de control de calidad utilizadas en laboratorios de pruebas farmacéuticas, biotecnológicas y de vacunas.",
                 "focusAreas": [
-                    "Técnicas Cromatográficas y HPLC",
-                    "ELISA y Cuantificación de Proteínas",
-                    "Pruebas de Endotoxinas (LAL)",
-                    "Métodos de Caracterización Molecular",
-                    "Análisis e Interpretación de Datos"
+                    "HPLC y técnicas cromatográficas",
+                    "ELISA y cuantificación de proteínas",
+                    "Pruebas de endotoxinas (LAL)",
+                    "Métodos de caracterización molecular",
+                    "Análisis de datos e interpretación de resultados"
                 ]
             },
             {
-                "title": "Biología Molecular y Pruebas Avanzadas",
-                "desc": "Comprenda las técnicas modernas de biología molecular para la caracterización y monitoreo de contaminantes.",
+                "title": "Biología molecular y pruebas avanzadas",
+                "desc": "Comprenda las técnicas modernas de biología molecular utilizadas para la caracterización de productos, el monitoreo de la contaminación y la evaluación de la calidad.",
                 "focusAreas": [
-                    "Extracción y Purificación de ADN",
-                    "PCR y PCR en Tiempo Real",
-                    "Análisis de ADN de Célula Huésped",
-                    "Electroforesis en Gel de Agarosa",
-                    "Interpretación de Datos Moleculares"
+                    "Extracción y purificación de DNA",
+                    "PCR y PCR en tiempo real",
+                    "Análisis de DNA de células huésped",
+                    "Electroforesis en gel de agarosa",
+                    "Interpretación de datos moleculares"
                 ]
             },
             {
-                "title": "Microbiología y Aseguramiento de Esterilidad",
-                "desc": "Aprenda prácticas microbiológicas críticas que garantizan el control de contaminación y la seguridad del producto.",
+                "title": "Microbiología y garantía de esterilidad",
+                "desc": "Aprenda las prácticas microbiológicas fundamentales que respaldan el control de la contaminación y la seguridad del producto en entornos de fabricación regulados.",
                 "focusAreas": [
-                    "Pruebas de Esterilidad",
-                    "Monitoreo Ambiental",
-                    "Evaluación de Carga Microbiana (Bioburden)",
-                    "Detección de Micoplasmas",
-                    "Técnicas Asépticas y Control de Contaminación"
+                    "Pruebas de esterilidad",
+                    "Monitoreo ambiental",
+                    "Evaluación de la carga microbiana",
+                    "Detección de micoplasma",
+                    "Técnicas asépticas y control de la contaminación"
                 ]
             },
             {
-                "title": "Procesamiento Aséptico y Operaciones en Salas Limpias",
-                "desc": "Comprensión integral del comportamiento en áreas limpias, prácticas de manufactura estéril y control ambiental.",
+                "title": "Procesamiento aséptico y operaciones en salas limpias",
+                "desc": "Comprensión integral del comportamiento en salas limpias, las prácticas de fabricación estéril y las estrategias de control ambiental.",
                 "focusAreas": [
-                    "Clasificaciones de Salas Limpias",
-                    "Calificación de Vestimenta y Validación",
-                    "Simulaciones de Llenado con Medio (Media Fill)",
-                    "Programas de Monitoreo Ambiental",
-                    "Estrategias de Control Microbiano"
+                    "Clasificaciones de salas limpias",
+                    "Calificación y validación de la indumentaria",
+                    "Simulaciones de llenado con medios de cultivo",
+                    "Programas de monitoreo ambiental",
+                    "Estrategias de control microbiano"
                 ]
             },
             {
-                "title": "Validación, Calificación y Gestión del Ciclo de Vida",
-                "desc": "Domine los principios de calificación y validación requeridos para demostrar consistencia y cumplimiento.",
+                "title": "Validación, calificación y gestión del ciclo de vida",
+                "desc": "Domine los principios de calificación y validación necesarios para demostrar la consistencia de los procesos y el cumplimiento regulatorio.",
                 "focusAreas": [
                     "Ejecución de DQ, IQ, OQ y PQ",
-                    "Principios de Validación de Procesos",
-                    "Validación de Limpieza",
-                    "Validación de Sistemas Computarizados (CSV)",
-                    "Gestión del Ciclo de Vida de Equipos"
+                    "Principios de validación de procesos",
+                    "Validación de limpieza",
+                    "Validación de sistemas informáticos (CSV)",
+                    "Gestión del ciclo de vida de los equipos"
                 ]
             },
             {
-                "title": "Integridad de Datos y Cumplimiento Digital",
-                "desc": "Garantice la trazabilidad y confiabilidad de los datos mediante una sólida gestión documental electrónica.",
+                "title": "Integridad de los datos y cumplimiento digital",
+                "desc": "Garantice la confiabilidad, la trazabilidad y el cumplimiento de los datos mediante prácticas sólidas de documentación y gestión de registros electrónicos.",
                 "focusAreas": [
                     "Principios ALCOA+",
-                    "Revisión de Pistas de Auditoría (Audit Trail)",
-                    "Gestión de Datos Electrónicos",
-                    "Documentación BMR / BPR",
-                    "Gobernanza y Cumplimiento de Datos"
+                    "Revisión de la pista de auditoría",
+                    "Gestión electrónica de datos",
+                    "Documentación BMR/BPR",
+                    "Gobernanza de datos y cumplimiento"
                 ]
             },
             {
-                "title": "Transferencia de Tecnología y Escalamiento",
-                "desc": "Conozca los elementos críticos en la transferencia exitosa de procesos del desarrollo a la escala comercial.",
+                "title": "Estrategias de transferencia de tecnología y escalado",
+                "desc": "Comprenda los elementos fundamentales para transferir con éxito los procesos desde el desarrollo hasta la fabricación comercial.",
                 "focusAreas": [
-                    "Ciclo de Vida de Transferencia Tecnológica",
-                    "Evaluación de Riesgos de Escalamiento",
-                    "Estudios de Capacidad del Proceso",
-                    "Transferencia de Métodos Analíticos",
-                    "Coordinación Interfuncional"
+                    "Ciclo de vida de la transferencia de tecnología",
+                    "Evaluación de riesgos del escalado",
+                    "Estudios de capacidad de procesos",
+                    "Transferencia de métodos analíticos",
+                    "Coordinación interfuncional"
                 ]
             },
             {
-                "title": "Inteligencia Regulatoria y Preparación para Inspecciones",
-                "desc": "Prepárese para auditorías conociendo las regulaciones y expectativas de las agencias sanitarias mundiales.",
+                "title": "Inteligencia regulatoria y preparación para inspecciones",
+                "desc": "Prepárese para auditorías e inspecciones mediante la comprensión de las normativas mundiales y las expectativas regulatorias.",
                 "focusAreas": [
-                    "Expectativas de OMS, EMA y US FDA",
-                    "Preparación para Auditorías e Inspecciones",
-                    "Documentación Regulatoria",
-                    "Métricas de Calidad y Tendencias",
-                    "Estrategias de Cumplimiento Normativo"
+                    "Expectativas de WHO, EMA y US FDA",
+                    "Preparación para auditorías e inspecciones",
+                    "Documentación regulatoria",
+                    "Métricas de calidad y análisis de tendencias",
+                    "Estrategias de cumplimiento regulatorio"
                 ]
             },
             {
-                "title": "Preparación Industrial y Desarrollo Profesional",
-                "desc": "Cierre la brecha entre el aprendizaje académico y la práctica industrial mediante resolución de problemas reales.",
+                "title": "Preparación para la industria y desarrollo profesional",
+                "desc": "Cierre la brecha entre el aprendizaje académico y la práctica industrial mediante aplicaciones del mundo real y la resolución de problemas orientada a la calidad.",
                 "focusAreas": [
-                    "Simulaciones GMP y Estudios de Caso",
-                    "Revisión de Literatura Científica",
-                    "Presentaciones Técnicas",
-                    "Ejercicios de Investigación de Laboratorio",
-                    "Preparación para el Entorno Laboral"
+                    "Simulaciones GMP y estudios de caso",
+                    "Revisión de literatura científica",
+                    "Presentaciones técnicas",
+                    "Ejercicios de investigación de laboratorio",
+                    "Preparación profesional y de la fuerza laboral"
                 ]
             },
             {
-                "title": "Excelencia en Laboratorio y Resolución Científica de Problemas",
-                "desc": "Desarrolle un enfoque sistemático para la toma de decisiones científicas y la resolución de problemas analíticos.",
+                "title": "Excelencia de laboratorio y resolución científica de problemas",
+                "desc": "Desarrolle un enfoque sistemático para las operaciones de laboratorio, la resolución de problemas y la toma de decisiones científicas, a fin de mejorar la confiabilidad analítica y la eficiencia operativa.",
                 "focusAreas": [
-                    "Buenas Prácticas de Laboratorio",
-                    "Resolución Científica de Problemas",
-                    "Solución de Problemas en Métodos Analíticos",
-                    "Investigación de Errores de Laboratorio",
-                    "Pensamiento Crítico y Toma de Decisiones"
+                    "Mejores prácticas de laboratorio",
+                    "Resolución científica de problemas",
+                    "Resolución de problemas en métodos analíticos",
+                    "Investigación de errores de laboratorio",
+                    "Pensamiento crítico y toma de decisiones"
                 ]
             },
             {
-                "title": "Manufactura de Vacunas y Comprensión de Procesos",
-                "desc": "Obtenga conocimientos sobre procesos de manufactura, parámetros críticos y controles que aseguran la eficacia.",
+                "title": "Fabricación de vacunas y comprensión de procesos",
+                "desc": "Obtenga conocimientos sobre los procesos de fabricación farmacéutica y de vacunas, los atributos críticos de calidad y los controles de proceso que garantizan la seguridad, la eficacia y la consistencia del producto.",
                 "focusAreas": [
-                    "Visión General de Manufactura de Vacunas",
-                    "Parámetros Críticos de Proceso (CPP)",
-                    "Atributos Críticos de Calidad (CQA)",
-                    "Monitoreo y Control de Procesos",
-                    "Desviaciones e Investigaciones de Manufactura"
+                    "Panorama de la fabricación de productos farmacéuticos y vacunas",
+                    "Parámetros críticos del proceso (CPPs)",
+                    "Atributos críticos de calidad (CQAs)",
+                    "Monitoreo y control de procesos",
+                    "Desviaciones e investigaciones de fabricación"
                 ]
             },
             {
-                "title": "Comunicación Científica y Excelencia Documental",
-                "desc": "Fortalezca habilidades de redacción técnica y documentación esenciales para entornos regulados.",
+                "title": "Excelencia en comunicación científica y documentación",
+                "desc": "Fortalezca las habilidades de comunicación técnica y documentación esenciales para entornos regulados y la colaboración interfuncional.",
                 "focusAreas": [
-                    "Redacción de Informes Técnicos",
-                    "Elaboración y Revisión de POE (SOP)",
-                    "Habilidades de Presentación Científica",
-                    "Prácticas de Revisión Documental",
-                    "Fundamentos de Redacción Regulatoria"
+                    "Redacción de informes técnicos",
+                    "Preparación y revisión de SOP",
+                    "Habilidades de presentación científica",
+                    "Prácticas de revisión de documentación",
+                    "Fundamentos de redacción regulatoria"
                 ]
             },
             {
-                "title": "Tecnologías Emergentes en Control de Calidad Biofarmacéutico",
-                "desc": "Explore innovaciones y avances analíticos que marcan el futuro del control de calidad en vacunas.",
+                "title": "Tecnologías emergentes en el control de calidad biofarmacéutico",
+                "desc": "Explore las tecnologías modernas y los avances analíticos que están dando forma al futuro de la evaluación de la calidad farmacéutica y de las vacunas.",
                 "focusAreas": [
-                    "Técnicas Analíticas Avanzadas",
-                    "Automatización en Laboratorios de CC",
-                    "Sistemas Digitales de Calidad",
-                    "Informática de Laboratorio (LIMS)",
-                    "Tendencias en Pruebas Biofarmacéuticas"
+                    "Técnicas analíticas avanzadas",
+                    "Automatización en laboratorios de QC",
+                    "Sistemas digitales de calidad",
+                    "Informática de laboratorio (LIMS)",
+                    "Tendencias en pruebas biofarmacéuticas"
                 ]
             }
         ],
-        "unopsBiosafety": "Capacitación estructurada en bioseguridad de laboratorio, técnicas asépticas y manejo seguro de patógenos.",
-        "unopsVaccineAnalytics": "Desarrollo de capacidades en analítica de vacunas, control de calidad y métodos analíticos avanzados.",
-        "rcbBioprocessing": "Formación integral en fundamentos de bioprocesamiento, fermentación y operaciones upstream y downstream.",
+        "successfulPrograms": "Programas exitosos",
+        "unopsBiosafetyTitle": "Capacitación en bioseguridad y biocustodia para UNOPS",
+        "unopsBiosafety": "Se impartió una capacitación estructurada en prácticas de bioseguridad, biocustodia y contención. El programa combinó la comprensión técnica con enfoques prácticos de gestión de riesgos para laboratorios biomédicos modernos. Contribuye a desarrollar la capacidad institucional necesaria para realizar operaciones científicas seguras, conformes y responsables.",
+        "unopsVaccineAnalyticsTitle": "Capacitación en análisis de vacunas para UNOPS",
+        "unopsVaccineAnalytics": "Se fortaleció la capacidad de desarrollo de vacunas mediante una capacitación especializada en ciencia analítica y evaluación de productos. El programa respaldó la comprensión de los atributos críticos de calidad, los métodos analíticos, la pertinencia de los ensayos y la interpretación de datos.",
+        "rcbBioprocessingTitle": "Curso avanzado de bioprocesamiento en el Regional Centre for Biotechnology (RCB)",
+        "rcbBioprocessing": "La capacitación abarcó los fundamentos del procesamiento upstream y downstream, el Control de Calidad, la Garantía de Calidad y las Buenas Prácticas de Fabricación. Las sesiones también incluyeron experiencia práctica en técnicas de siembra por estría y cultivo en matraz agitado, operaciones de fermentación, flujos de trabajo de producción de vacunas y prácticas de laboratorio de QC, lo que ayudó a los participantes a relacionar los conceptos fundamentales del bioprocesamiento con aplicaciones reales de la industria.",
+        "testimonialsTitle": "Testimonios de participantes",
         "testimonials": [
             {
-                "author": "Dr. Meseret Habtamu",
-                "role": "Investigador – Analítica de Vacunas",
-                "org": "Armauer Hansen Research Institute",
-                "feedback": "El programa combinó eficazmente mi base académica con aplicaciones prácticas centradas en validación de métodos y control de calidad de vacunas."
-            },
-            {
                 "author": "Sr. Hailu Ashenafi",
-                "role": "Asesor Especial Senior en Garantía de Calidad",
-                "org": "Ministerio de Salud / Proyecto ShieldVax",
-                "feedback": "Obtuve experiencia práctica integral en todas las pruebas de control de calidad a lo largo del ciclo completo de manufactura de vacunas."
+                "role": "Asesor Especial Sénior de Garantía de Calidad",
+                "org": "Ministerio de Salud/Proyecto ShieldVax",
+                "feedback": "Recibí experiencia práctica e integral en pruebas de control de calidad de vacunas en procesos upstream, downstream y de llenado y acabado, en consonancia con las expectativas regulatorias mundiales."
             },
             {
                 "author": "Sr. Kebede Fufa",
-                "role": "Oficial de SGC",
-                "org": "Autoridad Etíope de Alimentos y Medicamentos (EFDA)",
-                "feedback": "Aprendí a aplicar la integridad de datos (principios ALCOA+) y el control estadístico de procesos para asegurar un riguroso cumplimiento GMP."
+                "role": "Responsable de QMS – Jefe de Mesa de la Oficina Ejecutiva",
+                "org": "Ethiopian Food and Drug Authority (EFDA)",
+                "feedback": "Aprendí a aplicar la integridad de los datos (principios ALCOA+) y el Control Estadístico de Procesos para garantizar que el flujo analítico siga siendo una base innegociable de la seguridad de las vacunas."
             },
             {
-                "author": "Dr. Jaleta Shuka",
-                "role": "Líder de Equipo de Calidad de Vacunas",
-                "org": "Instituto Veterinario Nacional, Etiopía",
-                "feedback": "La capacitación ofreció una perfecta integración entre bases teóricas sólidas y entrenamiento práctico en instalaciones GMP avanzadas."
+                "author": "Dra. Meseret Habtamu",
+                "role": "Investigadora – Análisis de vacunas",
+                "org": "Armauer Hansen Research Institute",
+                "feedback": "La capacitación conectó mi experiencia en investigación con aplicaciones prácticas y destacó la importancia de los sistemas de calidad y el cumplimiento regulatorio en entornos reales."
             },
             {
                 "author": "Sr. Lami Bikila Kelbessa",
                 "role": "Químico de Control de Calidad",
                 "org": "Africure Pharmaceuticals Manufacturing Ethiopia PLC.",
-                "feedback": "Este programa mejoró significativamente mi competencia analítica en la manufactura de vacunas y en pruebas bajo estándares GMP."
+                "feedback": "Este programa mejoró significativamente mi competencia analítica en la fabricación de vacunas, especialmente en lo relacionado con el Control de Calidad y las pruebas basadas en GMP."
+            },
+            {
+                "author": "Dr. Jaleta Shuka",
+                "role": "Líder del Equipo de Garantía de Calidad de Vacunas",
+                "org": "Instituto Veterinario Nacional, Etiopía",
+                "feedback": "La capacitación proporcionó una excelente combinación de fundamentos teóricos y aplicación práctica que mejoró significativamente mi comprensión de la calidad, la seguridad y la eficacia de las vacunas."
             }
         ],
-        "unopsBiosafetyTitle": "Capacitación en Bioseguridad y Biocustodia para UNOPS",
-        "unopsVaccineAnalyticsTitle": "Capacitación en Analítica de Vacunas para UNOPS",
-        "rcbBioprocessingTitle": "Curso Avanzado de Bioprocesamiento en el Centro Regional de Biotecnología (RCB)"
+        "recognitionTitle": "Reconocimiento"
     },
     "productsDocs": {
         "title": "Productos y Vacunas",
@@ -1761,70 +1792,70 @@ export const spanish = {
         "vaccines": [
             {
                 "name": "TdaPgen",
-                "subtitle": "Vacuna Combinada de Toxoide Tetánico, Toxoide Diftérico Reducido y Tos Ferina Recombinante Reducida",
+                "subtitle": "Vacuna combinada de toxoide tetánico, toxoide diftérico reducido y vacuna recombinante contra la tos ferina con contenido reducido",
                 "composition": [
-                    "Cada dosis única de 0,5 mL contiene:",
+                    "Cada dosis individual de 0,5 mL contiene:",
                     "• Toxoide tetánico — 7,5 Lf",
                     "• Toxoide diftérico — 2,0 Lf",
                     "• Antígenos de Bordetella pertussis:",
-                    "• Toxina pertussis recombinante (rPT) — 2 µg",
+                    "• Toxina pertúsica recombinante (rPT) — 2 µg",
                     "• Hemaglutinina filamentosa (FHA) — 5 µg"
                 ],
-                "pack": "Jeringa Prellenada de 0,5 mL",
-                "use": "Inmunización activa de refuerzo contra la difteria, el tétanos y la tos ferina en personas a partir de los 4 años de edad."
+                "pack": "Jeringa precargada de 0,5 mL",
+                "use": "Inmunización activa de refuerzo contra la difteria, el tétanos y la tos ferina en personas de 4 a 65 años."
             },
             {
-                "name": "Vacuna contra la Varicela, Viva Atenuada",
+                "name": "Vacuna contra la varicela, viva atenuada",
                 "subtitle": "",
                 "composition": [
-                    "Cada dosis única de 0,5 mL contiene:",
-                    "• Virus de la varicela-zóster vivo atenuado (cepa Oka) — 3,3 a 4,5 lg PFU",
+                    "Cada dosis individual de 0,5 mL contiene:",
+                    "• Virus vivo atenuado de la varicela-zóster (cepa Oka) — 3,3 a 4,5 lg PFU/0,5 mL por dosis",
                     "• Producido en células diploides humanas (SV-1)",
-                    "• Cepa viral estándar internacional obtenida de la ATCC",
-                    "• Título viral evaluado mediante estándar interno de referencia"
+                    "• Cepa viral de referencia internacional adquirida a ATCC",
+                    "• Título viral determinado mediante una referencia interna"
                 ],
-                "pack": "Vial y Solvente (WFI)",
-                "use": "Inmunización activa contra la infección por el virus de la varicela en personas a partir de los 12 meses de edad."
+                "pack": "Vial y WFI",
+                "use": "Inmunización activa contra la infección causada por la varicela en personas de 1 año (12 meses) a 12 años."
             },
             {
-                "name": "Vacuna Inactivada contra la Hepatitis A (Adsorbida) I.P.",
+                "name": "Vacuna inactivada contra la hepatitis A (adsorbida) I.P.",
                 "subtitle": "",
                 "composition": [
-                    "Cada dosis única de 0,5 mL contiene:",
-                    "• Antígeno VHA inactivado (cepa TZ84)¹ — 250 U",
-                    "• Aluminio como hidróxido de aluminio — 0,175 a 0,31 mg",
-                    "• Hidrógeno fosfato disódico — c.s.",
+                    "Cada dosis individual de 0,5 mL contiene:",
+                    "• Antígeno HAV inactivado (cepa TZ84)¹ — 250 U",
+                    "• Aluminio, como hidróxido de aluminio — 0,175 a 0,31 mg",
+                    "• Hidrogenofosfato disódico — q.s.",
                     "• Cloruro de sodio — 4,5 mg",
-                    "• Dihidrógeno fosfato de sodio — c.s.",
-                    "• Agua para inyectables — c.s.p. 0,5 mL",
+                    "• Dihidrogenofosfato de sodio — q.s.",
+                    "• Agua para inyección — q.s. hasta 0,5 mL",
                     "• ¹ Producido en células diploides humanas"
                 ],
-                "pack": "Vial / Jeringa Prellenada",
+                "pack": "Vial/jeringa precargada",
                 "use": "Inmunización activa contra la infección causada por el virus de la hepatitis A."
             },
             {
-                "name": "Vacuna contra la Influenza Trivalente",
+                "name": "Vacuna trivalente contra la influenza",
                 "subtitle": "",
                 "composition": [
-                    "Cada dosis única de 0,5 mL contiene:",
-                    "• 15 µg de hemaglutinina (HA) de cada cepa de virus de influenza seleccionada de acuerdo con las recomendaciones anuales de la OMS para la temporada de influenza correspondiente."
+                    "Cada dosis individual de 0,5 mL contiene:",
+                    "• Cada dosis de 0,5 mL contiene 15 µg de hemaglutinina (HA) de cada cepa del virus de la influenza seleccionada de acuerdo con las recomendaciones anuales de la Organización Mundial de la Salud (WHO) para la temporada de influenza correspondiente del hemisferio norte o sur."
                 ],
-                "pack": "Jeringa Prellenada",
-                "use": "Inmunización activa para la prevención de la influenza causada por cepas específicas en adultos a partir de los 18 años de edad."
+                "pack": "Jeringa precargada",
+                "use": "Inmunización activa de adultos de 18 años o más para la prevención de la influenza."
             }
         ],
         "badges": [
             {
-                "title": "Orientado al Acceso",
-                "desc": "Diseñado para facilitar la disponibilidad de vacunas esenciales en mercados prioritarios."
+                "title": "Orientado al acceso",
+                "desc": "Diseñado para respaldar la disponibilidad de vacunas esenciales en mercados prioritarios."
             },
             {
-                "title": "Listo para el Mercado",
-                "desc": "Centrado en candidatos a vacunas registrados y aprobados comercialmente."
+                "title": "Listo para el mercado",
+                "desc": "Centrado en candidatos vacunales regulados y con autorización de comercialización."
             },
             {
-                "title": "Impulsado por Alianzas",
-                "desc": "Desarrollado para colaboraciones institucionales, comerciales y de salud pública."
+                "title": "Basado en alianzas",
+                "desc": "Diseñado para colaboraciones institucionales, comerciales y de salud pública."
             }
         ],
         "adverseReporting": {
@@ -1860,16 +1891,19 @@ export const spanish = {
         "email": "connect@techinvention.biz"
     },
     "products": {
-        "title": "Portafolio de Productos",
+        "title": "Detalles del producto",
         "subtitle": "Vacunas, bioterapéuticos y plataformas de diagnóstico",
         "desc": "Nuestros productos aprobados y en desarrollo para atender prioridades sanitarias.",
-        "heroTitle": "Productos Innovadores para la Salud Global",
-        "heroDesc": "Explore nuestra amplia gama de vacunas, bioterapéuticos y diagnósticos de alta calidad desarrollados para satisfacer necesidades prioritarias.",
-        "explorePortfolio": "Explorar Portafolio",
-        "presentation": "Presentación / Empaque",
+        "heroTitle": "Productos innovadores para la salud mundial",
+        "heroDesc": "Descubra nuestra amplia gama de vacunas, productos biológicos y soluciones de diagnóstico de alta calidad, diseñados para hacer que la atención sanitaria sea accesible, confiable y asequible en todo el mundo.",
+        "explorePortfolio": "Explorar la cartera",
+        "productName": "Nombre del producto",
+        "presentation": "Presentación",
+        "pack": "Presentación",
         "indication": "Indicación Terapéutica",
-        "composition": "Composición",
-        "therapeuticUse": "Uso Terapéutico",
+        "composition": "Composición declarada",
+        "labelComposition": "Composición declarada",
+        "therapeuticUse": "Uso terapéutico",
         "diagFeat1": "Pruebas Rápidas en el Punto de Atención",
         "diagFeat2": "Alta Sensibilidad y Especificidad",
         "diagFeat3": "Soluciones Diagnósticas Asequibles",
@@ -1885,11 +1919,11 @@ export const spanish = {
         "useCase": "Área de aplicación",
         "sampleType": "Tipo de muestra",
         "applications": "Aplicaciones de Laboratorio y Campo",
-        "accessOriented": "Orientado al Acceso Global",
+        "accessOriented": "Orientado al acceso",
         "accessOrientedDesc": "Diseñado para respaldar la disponibilidad de vacunas esenciales en mercados prioritarios.",
-        "marketReady": "Listo para el Mercado",
-        "marketReadyDesc": "Enfocado en candidatos a vacunas regulados y autorizados en el mercado.",
-        "partnershipLed": "Impulsado por Alianzas",
+        "marketReady": "Listo para el mercado",
+        "marketReadyDesc": "Centrado en candidatos vacunales regulados y con autorización de comercialización.",
+        "partnershipLed": "Basado en alianzas",
         "partnershipLedDesc": "Diseñado para colaboraciones institucionales, comerciales y de salud pública.",
         "animalTesting": "Soluciones Integrales de Salud Animal",
         "advancedDiagnosticsFor": "Diagnósticos Avanzados para ",
@@ -1915,140 +1949,141 @@ export const spanish = {
         "title": "Investigación y Desarrollo",
         "subtitle": "Descubrimientos Biotecnológicos de Próxima Generación",
         "desc": "Plataformas patentadas para enfermedades infecciosas y resistencia a los antimicrobianos.",
-        "heroTitle": "Nuestro Ecosistema de I+D",
-        "heroDesc": "La instalación de I+D de última generación de TechInvention, HORIZON, lidera la innovación en vacunas desde el descubrimiento hasta la fase clínica.",
-        "processTitle": "Proceso Integral de I+D de Extremo a Extremo",
-        "grantsTitle": "Subvenciones y Apoyo Institucional",
-        "collaborationsTitle": "Nuestras Colaboraciones Científicas",
-        "collaborationsSubtitle": "Donde la Excelencia Institucional se Une a la Innovación en Vacunas de Próxima Generación",
-        "collaborationsDesc": "Nuestras alianzas se centran en enfermedades de alta prioridad para la salud pública, incluidas Salmonella, Shigella, tuberculosis, malaria y meningitis.",
-        "featuresTitle": "Características de la Unidad Piloto GMP",
-        "pipelineTitle": "Línea de I+D en Vacunas para Enfermedades Infecciosas",
+        "heroTitle": "Zona de Investigación e Innovación One Health de Alto Impacto (HORIZON)",
+        "heroDesc": "La instalación de I+D de última generación de TechInvention, High-impact One Health Research & Innovation ZONe (HORIZON), está diseñada para acelerar la innovación en vacunas mediante el apoyo a la investigación integral, desde el desarrollo de la prueba de concepto hasta el avance preclínico, para enfermedades infecciosas prioritarias y patógenos asociados con la resistencia a los antimicrobianos (AMR).",
+        "processTitle": "Proceso integral de I+D",
+        "grantsTitle": "Subvenciones y apoyo financiero",
+        "collaborationsTitle": "Nuestras colaboraciones",
+        "collaborationsSubtitle": "Donde la excelencia institucional se une a la innovación en vacunas de próxima generación",
+        "collaborationsDesc": "En conjunto, nuestras alianzas se enfocan en enfermedades prioritarias de gran relevancia para la salud pública, entre ellas Salmonella, Shigella, tuberculosis, malaria y meningitis, y fortalecen el camino desde el descubrimiento científico hasta el desarrollo traslacional y el futuro impacto de las vacunas.",
+        "featuresTitle": "Características de la planta piloto GMP",
+        "pipelineTitle": "Cartera de enfermedades infecciosas y patógenos asociados con la AMR",
         "discovery": "Descubrimiento",
-        "poc": "Prueba de Concepto",
+        "poc": "Prueba de concepto",
         "preclinical": "Preclínica",
         "phase12": "Fase 1/2",
         "facilityFeatures": [
             {
-                "title": "Huella Ecológica",
+                "title": "Huella ecológica",
                 "points": [
                     "Diseño compacto",
                     "Baja huella de carbono",
-                    "Operaciones optimizadas"
+                    "Operaciones con costos optimizados"
                 ]
             },
             {
-                "title": "Contención y Bioseguridad",
+                "title": "Contención y seguridad",
                 "points": [
-                    "Cumplimiento de unidad BSL-2",
-                    "Salas limpias Clase C"
+                    "Cumplimiento de la unidad BSL-2",
+                    "Normas para salas limpias de clase C"
                 ]
             },
             {
-                "title": "Bioprocesamiento Avanzado",
+                "title": "Bioprocesamiento avanzado",
                 "points": [
-                    "Fermentadores de 5L y 20L",
-                    "Equipamiento de última generación"
+                    "Fermentadores de 5 L y 20 L",
+                    "Equipos de última generación"
                 ]
             },
             {
-                "title": "Servicios Sostenibles",
+                "title": "Servicios auxiliares sostenibles",
                 "points": [
-                    "Descarga Cero de Líquidos (ZLD)",
-                    "Utilidades sostenibles"
+                    "Descarga cero de líquidos",
+                    "Servicios auxiliares orientados a la sostenibilidad"
                 ]
             },
             {
-                "title": "Gestión del Aire",
+                "title": "Gestión del aire",
                 "points": [
-                    "Recuperación de energía HVAC del 70%",
-                    "Doble filtración de escape HEPA"
+                    "Recuperación de energía del 70 % en el sistema HVAC",
+                    "Doble filtración HEPA del aire de extracción"
                 ]
             },
             {
-                "title": "Infraestructura Inteligente",
+                "title": "Infraestructura inteligente",
                 "points": [
-                    "Mantenimiento predictivo por IoT",
-                    "Gestión inteligente de energía"
+                    "Mantenimiento predictivo mediante IoT",
+                    "Gestión inteligente de la energía"
                 ]
             }
         ],
         "pipelineItems": [
-            "Vacuna Antineumocócica Conjugada (16-valente)",
-            "Vacuna Antimeningocócica Hexavalente (ABCYWX)",
-            "Vacuna Pan-Salmonella",
+            "Vacuna conjugada antineumocócica (16-valente)",
+            "Vacuna meningocócica hexavalente (ABCYWX)",
+            "Vacuna contra Pan-Salmonella",
             "Vacuna contra Shigella",
-            "Vacuna Antimeningocócica B",
-            "Vacuna contra la Malaria",
-            "Vacuna contra la Tuberculosis"
+            "Vacuna meningocócica B",
+            "Vacuna contra la malaria",
+            "Vacuna contra la tuberculosis"
         ]
     },
     "gmpTraining": {
-        "curriculumTitle": "Plan de Estudios Integral de Capacitación GMP",
+        "curriculumTitle": "Módulos de capacitación",
         "curriculumDesc": "Formación teórica y práctica conforme a estándares internacionales para profesionales y reguladores."
     },
     "gmpCTA": {
         "titlePart1": "Inicie su carrera en",
-        "titlePart2": "el Desarrollo y Fabricación de Vacunas",
+        "titlePart2": "Desarrollo y fabricación de vacunas",
         "writeTo": "Escriba a",
-        "descEnd": "para conocer más sobre nuestros programas de capacitación y próximas convocatorias.",
-        "title": "Inicie su Carrera en el Desarrollo y Fabricación de Vacunas"
+        "descEnd": "para obtener más información sobre nuestros programas de capacitación y próximas iniciativas.",
+        "connectNow": "Conéctese ahora"
     },
     "csr": {
-        "title": "Nuestras Iniciativas de RSE",
-        "subtitle": "Creemos que la RSE debe adoptar un enfoque inclusivo para todas las partes interesadas del negocio con el fin de lograr nuestro objetivo común de brindar una mayor equidad en salud mediante una atención médica asequible, aceptable y accesible para todos.",
+        "title": "Nuestras iniciativas",
+        "subtitle": "Creemos que la CSR debe adoptar un enfoque inclusivo que contemple a todas las partes interesadas de la empresa para alcanzar nuestro objetivo común de lograr una mayor equidad en salud mediante una atención sanitaria asequible, aceptable y accesible para todos.",
+        "readNewsArticle": "Leer el artículo de noticias",
         "initiative1": {
             "badge": "Apoyo a la I+D",
             "title": "Contribución a PU-TechInvention",
-            "desc": "TechInvention Lifecare Limited donó 6 lakh de rupias a BioNest-PU, una de las principales bioincubadoras del norte de la India ubicada en la Universidad de Punjab, Chandigarh, para la investigación y desarrollo vinculados al SARS-CoV-2 al inicio de la pandemia de COVID-19."
+            "desc": "TechInvention Lifecare Limited donó Rs 600.000 a BioNest-PU, una de las principales bioincubadoras del norte de la India, ubicada en Punjab University, Chandigarh, para investigación y desarrollo relacionados con el SARS-CoV2 al inicio de la pandemia de COVID-19."
         },
         "initiative2": {
             "badge": "Alivio Nacional ante la Pandemia",
-            "title": "Contribución al Fondo PM CARES",
-            "desc": "TechInvention contribuyó al Fondo PM CARES, establecido por el Honorable Primer Ministro de la India a raíz de la pandemia de COVID-19, para apoyar las labores de socorro durante emergencias de salud pública y financiar investigaciones relevantes."
+            "title": "Contribución al fondo PM Cares",
+            "desc": "TechInvention realizó una contribución al PM Cares Fund, establecido por el Honorable Primer Ministro de la India a raíz de la pandemia de COVID-19, para llevar a cabo y apoyar acciones de ayuda durante una emergencia de salud pública, incluida la creación o mejora de instalaciones sanitarias o farmacéuticas y otras infraestructuras necesarias, así como el financiamiento de investigaciones pertinentes."
         },
         "initiative3": {
             "badge": "Colaboración Científica e Infraestructura",
             "title": "Laboratorio BSL-2",
-            "desc": "TechInvention inauguró su laboratorio de I+D BSL-2 en la bioincubadora BSC BioNEST del Centro Regional de Biotecnología (RCB BBB) el 6 de diciembre de 2022, con la presencia de destacadas figuras de la industria biotecnológica y el sector académico."
+            "desc": "TechInvention inauguró su laboratorio BSL-2 de I+D en la bioincubadora BSC BioNEST del Regional Centre for Biotechnology (RCB BBB) el 6 de diciembre de 2022, en presencia de destacadas figuras de la industria biotecnológica y el ámbito académico, así como de representantes de otras startups."
         }
     },
     "publications": {
-        "title": "Nuestras Publicaciones Científicas",
+        "title": "Nuestras publicaciones",
         "items": {
             "pcv": {
-                "title": "Distribución de serotipos de Streptococcus pneumoniae en países de ingresos bajos y medios del sur de Asia: ¿debemos reconsiderar la estrategia de la vacuna antineumocócica?"
+                "title": "Distribución de serotipos de Streptococcus pneumoniae en países de ingresos bajos y medianos del sur de Asia: ¿debemos reconsiderar la estrategia de vacunación antineumocócica?"
             },
             "Overcoming-barriers": {
-                "title": "Superación de barreras a las contramedidas médicas: fortalecimiento de la bioseguridad global"
+                "title": "Superación de las barreras para las contramedidas médicas: fortalecimiento de la bioseguridad mundial."
             },
             "Lancet Euvichol": {
-                "title": "Comparación de la inmunogenicidad y seguridad de Euvichol-Plus con Shanchol en adultos y niños indios sanos: un ensayo de fase 3 de no inferioridad, abierto, aleatorizado, multicéntrico y de grupos paralelos"
+                "title": "Comparación de la inmunogenicidad y la seguridad de Euvichol-Plus con Shanchol en adultos y niños sanos de la India: ensayo de fase 3 abierto, aleatorizado, multicéntrico, de no inferioridad y con grupos paralelos."
             },
             "Frontiers": {
-                "title": "Más allá de los antibióticos: lisinas codificadas por fagos contra patógenos gramnegativos"
+                "title": "Más allá de los antibióticos: lisinas codificadas por fagos contra patógenos Gram negativos."
             },
             "Taylor Capacity Building": {
-                "title": "Desarrollo de capacidades para la fabricación de vacunas en países en desarrollo: el camino a seguir"
+                "title": "Desarrollo de capacidades para la fabricación de vacunas en los países en desarrollo: el camino a seguir."
             },
             "Vaccine COVID-19": {
-                "title": "Panorama de la gestión del COVID-19: necesidad de una plataforma asequible para fabricar bioterapias y profilácticos seguros y eficaces para los países en desarrollo"
+                "title": "Panorama de la gestión de la COVID-19: necesidad de una plataforma asequible para fabricar productos bioterapéuticos y profilácticos seguros y eficaces para los países en desarrollo."
             }
         }
     },
     "gmpOverview": {
         "pills": [
-            "Plan de Estudios Científico y Técnico Atractivo",
-            "Capacitación Práctica en Producción GMP",
-            "Plan de Estudios Impartido por Expertos",
-            "Alineación Regulatoria Global",
-            "Enfoque en Preparación Laboral e Industrial"
+            "Plan de estudios científico y técnico dinámico",
+            "Capacitación práctica en producción GMP",
+            "Plan de estudios dirigido por expertos de la industria",
+            "Alineación con requisitos regulatorios internacionales",
+            "Enfoque en la preparación profesional y para el sector"
         ]
     },
     "gmpSubjects": {
-        "title": "Programas y Materias de Capacitación",
-        "desc": "Explore nuestros temas estructurados que cubren cumplimiento regulatorio, salas limpias, ciclos de validación y pautas de calidad.",
-        "keyFocus": "Áreas Clave de Aprendizaje"
+        "title": "Módulos de capacitación",
+        "desc": "Explore nuestro plan de estudios integral de capacitación, diseñado para preparar a los participantes para el sector.",
+        "keyFocus": "Áreas clave de enfoque"
     },
     "thankYou": {
         "title": "¡Muchas Gracias por su Mensaje!",
@@ -2062,7 +2097,7 @@ export const spanish = {
         "noResultsDesc": "Intente ajustar sus términos o palabras clave de búsqueda"
     },
     "trustedPartners": {
-        "title": "Con la confianza de socios globales"
+        "title": "La confianza de socios globales"
     },
     "home": {
         "cta": {

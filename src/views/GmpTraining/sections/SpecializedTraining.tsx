@@ -133,7 +133,7 @@ export default function SpecializedTraining() {
                 <div className="text-center mb-20 max-w-3xl mx-auto">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide mb-6">
-                            <SplitTitle title={t('megaMenu.successfulPrograms') || t('megaMenu.successfulProjects') || "Successful Programs"} />
+                            <SplitTitle title={t('training.successfulPrograms') || t('megaMenu.successfulPrograms') || t('megaMenu.successfulProjects') || "Successful Programs"} />
                         </h2>
                     </ScrollReveal>
                 </div>

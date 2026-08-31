@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import syedPortrait from '../../../assets/images/Syed-Sir.jpg';
 import nazneenPortrait from '../../../assets/images/leadership/nazneen_light_blue.jpg';
-import monicaImg from '../../../assets/images/Monica-Thanvi.png';
+import monicaImg from '../../../assets/images/monika-thanvi.jpg';
 import gopalImg from '../../../assets/images/Gopal-Damisetti.jpg';
 
 const syedImg = typeof syedPortrait === 'object' ? (syedPortrait as any).src : syedPortrait;

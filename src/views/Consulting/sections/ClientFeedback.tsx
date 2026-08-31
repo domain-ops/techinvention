@@ -44,7 +44,7 @@ export default function ClientFeedback() {
                 <div className="text-center mb-16">
                     <ScrollReveal direction="up">
                         <h2 className="text-[24px] md:text-[38px] font-medium tracking-wide">
-                            <SplitTitle title={t('consulting.feedbackTitle') || "Feedback from Clients"} />
+                            <SplitTitle title={t('strategicAdvisory.feedbackTitle') || t('consulting.feedbackTitle') || "Feedback from Clients"} />
                         </h2>
                     </ScrollReveal>
                 </div>

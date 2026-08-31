@@ -32,9 +32,11 @@ const ClientLogos = () => {
     const ROW_1_REPEATED = [...ROW_1, ...ROW_1, ...ROW_1, ...ROW_1];
     const ROW_2_REPEATED = [...ROW_2, ...ROW_2, ...ROW_2, ...ROW_2];
 
-    const partnersTitle = (t('common.trustedBy') && t('common.globalPartners'))
-        ? `${t('common.trustedBy')} ${t('common.globalPartners')}`
-        : (t('trustedPartners.title') || "Trusted by Global Partners");
+    const partnersTitle = (typeof t('trustedPartners.title') === 'string' && t('trustedPartners.title') !== 'trustedPartners.title')
+        ? t('trustedPartners.title')
+        : (t('common.trustedBy') && t('common.globalPartners'))
+            ? `${t('common.trustedBy')} ${t('common.globalPartners')}`
+            : "Trusted by Global Partners";
 
     return (
         <section className="py-24 bg-white font-sans border-t border-slate-100 overflow-hidden">

@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { SplitTitle } from '../../../components/Common/SplitTitle';
+import awardBharat2026 from '../../../assets/awards/Bharat-Conclave-2026.jpeg';
+import awardBiospectrum2025 from '../../../assets/awards/India-Excellence-Awards-2025.jpeg';
 import awardIvlc2025 from '../../../assets/awards/India-Vaccine-Leaders-Conclave-2025.jpg';
 import awardFortune2024 from '../../../assets/awards/Fortune-Leadership-Awards-2024-Excellence.jpg';
 import awardExemplars2024 from '../../../assets/awards/Exemplars-of-Excellence-2024-Biopharma.jpg';
@@ -17,6 +19,8 @@ import awardTime2Leap from '../../../assets/awards/Time2Leap-Awards.jpg';
 
 // Map string keys from translations to actual images
 const imageMap: Record<string, string> = {
+    'award_bharat_2026': awardBharat2026,
+    'award_biospectrum_2025': awardBiospectrum2025,
     'award_ivlc_2025': awardIvlc2025,
     'award_fortune_2024': awardFortune2024,
     'award_exemplars_2024': awardExemplars2024,
@@ -39,6 +43,18 @@ const AwardsShowcase = () => {
     
     // Ensure we have an array to map over
     const awards = Array.isArray(awardsData) ? awardsData : [
+        {
+            year: "2026",
+            title: "Outstanding Leader in Healthcare Technology",
+            desc: "Bharat 2.0 Conclave 2026",
+            image: "award_bharat_2026",
+        },
+        {
+            year: "2025",
+            title: "Best Vaccine Efforts of the Year",
+            desc: "BioSpectrum India Excellence Awards 2025",
+            image: "award_biospectrum_2025",
+        },
         {
             year: "2025",
             title: "SME Biopharma Company of the Year",

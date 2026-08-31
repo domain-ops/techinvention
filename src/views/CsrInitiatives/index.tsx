@@ -86,7 +86,7 @@ const CsrInitiativesView = () => {
             iconBg: "bg-[#1955A6]/10",
             shadow: "hover:shadow-[#1955A6]/5",
             link: {
-                text: t('common.readNow') || "Read Article",
+                text: t('csr.readNewsArticle') || t('common.readNow') || "Read Article",
                 url: "https://www.linkedin.com/posts/healthequity4all_biotech-healthcare-research-activity-7006293693947088896-l6eo?utm_source=share&utm_medium=member_android"
             }
         }
