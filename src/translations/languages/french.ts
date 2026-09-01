@@ -1019,69 +1019,81 @@ export const french = {
         "accolades": "Distinctions",
         "items": [
             {
+                "year": "2026",
+                "title": "Leader Exceptionnel en Technologies de Santé",
+                "desc": "Bharat 2.0 Conclave 2026",
+                "image": "award_bharat_2026"
+            },
+            {
                 "year": "2025",
                 "title": "Meilleure Initiative Vaccinale de l'Année",
-                "desc": "Récompensé aux BioSpectrum India Excellence Awards 2025 pour notre leadership dans l'innovation et l'accès aux vaccins.",
+                "desc": "BioSpectrum India Excellence Awards 2025",
+                "image": "award_biospectrum_2025"
+            },
+            {
+                "year": "2025",
+                "title": "Entreprise Bio-PME de l'Année",
+                "desc": "India Vaccine Leaders Conclave 2025",
                 "image": "award_ivlc_2025"
             },
             {
-                "year": "2025",
-                "title": "Sélection Forbes India 200",
-                "desc": "Figurant parmi les entreprises à Fort Potentiel Commercial Mondial, attestant de notre croissance rapide et leadership sectoriel.",
+                "year": "2024",
+                "title": "Excellence en Bio-innovation",
+                "desc": "Fortune Leadership Awards 2024",
                 "image": "award_fortune_2024"
             },
             {
-                "year": "2025",
-                "title": "Leader Exceptionnel en Technologies de Santé",
-                "desc": "Notre Fondateur & PDG, M. Syed S. Ahmed, a été honoré par le Dr. Kiran Bedi lors du Conclave Bharat 2.0.",
+                "year": "2024",
+                "title": "Prix de l'Entrepreneur en Santé",
+                "desc": "Exemplars of Excellence 2024 Édition Biopharmacie",
                 "image": "award_exemplars_2024"
             },
             {
                 "year": "2024",
-                "title": "Soutien du TDB pour les Vaccins NexGen",
-                "desc": "Soutien stratégique accordé par le Technology Development Board pour notre initiative de vaccins de nouvelle génération.",
+                "title": "Forbes ‘Select 200’",
+                "desc": "Nous avons obtenu une place convoitée dans le Forbes India SELECT 200, une reconnaissance prestigieuse pour les entreprises au potentiel commercial mondial !",
                 "image": "award_forbes_2024"
             },
             {
                 "year": "2024",
-                "title": "Sélection d'Évaluation Comparative TBVI",
-                "desc": "Notre candidat-vaccin antituberculeux a été sélectionné par la TBVI pour une évaluation dans le modèle d'aérosol.",
+                "title": "Startup 50 Pionniers",
+                "desc": "Dun & Bradstreet Startup 50 Trailblazers 2024",
                 "image": "award_dun_bradstreet"
             },
             {
-                "year": "2024",
-                "title": "Consortium National Antituberculeux",
-                "desc": "Partenariat avec l'IIT Bhubaneswar, l'ILS et la NRDC pour développer et commercialiser un vaccin antituberculeux recombinant.",
+                "year": "2023",
+                "title": "Summit Star",
+                "desc": "Summit Star 2023",
                 "image": "award_summit_star"
             },
             {
                 "year": "2022",
                 "title": "Prix de la PME de l'Année",
-                "desc": "Décerné par l'India SME Forum pour l'innovation et le leadership en biopharmacie.",
+                "desc": "India SME Excellence Awards dans le secteur de la santé",
                 "image": "award_sme_excellence"
             },
             {
                 "year": "2022",
                 "title": "Finaliste NSA 2021",
-                "desc": "Excellence reconnue dans l'innovation en biotechnologie et politiques de santé.",
+                "desc": "Plaidoyer politique auprès de l'honorable Premier ministre de l'Inde",
                 "image": "award_nsa_2021"
             },
             {
                 "year": "2020",
-                "title": "Top 10 des Entreprises de Biotechnologie",
-                "desc": "Reconnu par Insights Success pour notre rôle pionnier dans la santé mondiale.",
+                "title": "Top 10 des Meilleures Entreprises de Biotechnologie",
+                "desc": "SwiftNLift Magazine 2020",
                 "image": "award_swiftnlift_2020"
             },
             {
                 "year": "2019",
                 "title": "Meilleure Entreprise de l'Année",
-                "desc": "Élu Entreprise de l'Année par The CEO Magazine pour son leadership biotechnologique.",
+                "desc": "Startup City Magazine dans le secteur biotechnologique 2019",
                 "image": "award_startup_city_2019"
             },
             {
                 "year": "2019",
                 "title": "Prix Time2Leap (Édition PME)",
-                "desc": "Récompense pour des réalisations exceptionnelles en R&D et innovation biotechnologique.",
+                "desc": "Ministère des PME — Entreprise de services spécialisés de l'année",
                 "image": "award_time2leap_2019"
             }
         ],

@@ -96,7 +96,7 @@ const CsrInitiativesView = () => {
         <div className="min-h-screen bg-brand-background text-brand-content overflow-hidden font-sans">
             {/* Header Banner */}
             <AboutBanner 
-                title={t('navbar.csr') || "Corporate Social Responsibility"} 
+                title={t('csr.heading') || t('navbar.csr') || "Corporate Social Responsibility (CSR)"} 
                 subtitle={t('csr.subtitle') || "We believe CSR must take an inclusive approach to all the stakeholders of the business to achieve our shared goal of bringing greater health equity through affordable, acceptable, and accessible healthcare for all."}
             />
 

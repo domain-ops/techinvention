@@ -1019,69 +1019,81 @@ export const russian = {
         "accolades": "Награды",
         "items": [
             {
+                "year": "2026",
+                "title": "Выдающийся Лидер в Области Медтехнологий",
+                "desc": "Bharat 2.0 Conclave 2026",
+                "image": "award_bharat_2026"
+            },
+            {
                 "year": "2025",
                 "title": "Лучшая Вакцинная Инициатива Года",
-                "desc": "Победитель премии BioSpectrum India Excellence Awards 2025 за лидерство в разработке и доступности вакцин.",
+                "desc": "BioSpectrum India Excellence Awards 2025",
+                "image": "award_biospectrum_2025"
+            },
+            {
+                "year": "2025",
+                "title": "Биофармацевтическая МСП-компания года",
+                "desc": "India Vaccine Leaders Conclave 2025",
                 "image": "award_ivlc_2025"
             },
             {
-                "year": "2025",
-                "title": "Включение в Рейтинг Forbes India Select 200",
-                "desc": "Признание среди компаний с высоким мировым потенциалом, подтверждающее быстрый рост и лидерство в отрасли.",
+                "year": "2024",
+                "title": "Превосходство в биоинновациях",
+                "desc": "Fortune Leadership Awards 2024",
                 "image": "award_fortune_2024"
             },
             {
-                "year": "2025",
-                "title": "Выдающийся Лидер в Области Медтехнологий",
-                "desc": "Основатель и CEO Сайед С. Ахмед удостоен престижной награды от д-ра Киран Беди на конклаве Bharat 2.0.",
+                "year": "2024",
+                "title": "Премия предпринимателя в области здравоохранения",
+                "desc": "Exemplars of Excellence 2024 Biopharma Edition",
                 "image": "award_exemplars_2024"
             },
             {
                 "year": "2024",
-                "title": "Поддержка Инициативы NexGen от TDB",
-                "desc": "Получение стратегической поддержки Совета по технологическому развитию (TDB) для разработки вакцин нового поколения.",
+                "title": "Forbes ‘Select 200’",
+                "desc": "Мы заняли почетное место в Forbes India SELECT 200 — престижном признании компаний с глобальным бизнес-потенциалом!",
                 "image": "award_forbes_2024"
             },
             {
                 "year": "2024",
-                "title": "Отбор для Сравнительной Оценки TBVI",
-                "desc": "Наша противотуберкулезная вакцина-кандидат выбрана инициативой TBVI для оценки на аэрозольной модели.",
+                "title": "Startup 50 Trailblazers",
+                "desc": "Dun & Bradstreet Startup 50 Trailblazers 2024",
                 "image": "award_dun_bradstreet"
             },
             {
-                "year": "2024",
-                "title": "Национальный Противотуберкулезный Консорциум",
-                "desc": "Партнерство с IIT Bhubaneswar, ILS и NRDC для создания и коммерциализации рекомбинантной вакцины против туберкулеза.",
+                "year": "2023",
+                "title": "Summit Star",
+                "desc": "Summit Star 2023",
                 "image": "award_summit_star"
             },
             {
                 "year": "2022",
                 "title": "Премия МСП Года",
-                "desc": "Награда от India SME Forum за инновации и лидерство в биофармацевтике.",
+                "desc": "India SME Excellence Awards в секторе здравоохранения",
                 "image": "award_sme_excellence"
             },
             {
                 "year": "2022",
                 "title": "Финалист NSA 2021",
-                "desc": "Признание национального уровня в области биотехнологических инноваций и здравоохранения.",
+                "desc": "Продвижение стратегических инициатив перед премьер-министром Индии",
                 "image": "award_nsa_2021"
             },
             {
                 "year": "2020",
-                "title": "Топ-10 Биотехнологических Компаний",
-                "desc": "Включение в рейтинг Insights Success за лидерство в глобальном здравоохранении.",
+                "title": "Топ-10 лучших биотехнологических компаний",
+                "desc": "SwiftNLift Magazine 2020",
                 "image": "award_swiftnlift_2020"
             },
             {
                 "year": "2019",
                 "title": "Лучшая Компания Года",
-                "desc": "Признана Компанией Года по версии The CEO Magazine за вклад в биотехнологии.",
+                "desc": "Startup City Magazine в биотехнологическом секторе 2019",
                 "image": "award_startup_city_2019"
             },
             {
                 "year": "2019",
-                "title": "Премия Time2Leap (Издание для МСП)",
-                "desc": "Награда за выдающиеся достижения в биотехнологических R&D и инновациях.",
+                "title": "Time2Leap Awards (Издание для МСП)",
+                "desc": "Министерство МСП — ведущая компания года в сфере специализированных услуг",
                 "image": "award_time2leap_2019"
             }
         ],

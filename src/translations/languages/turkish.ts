@@ -1019,69 +1019,81 @@ export const turkish = {
         "accolades": "Ödüller",
         "items": [
             {
+                "year": "2026",
+                "title": "Sağlık Teknolojisinde Üstün Lider",
+                "desc": "Bharat 2.0 Conclave 2026",
+                "image": "award_bharat_2026"
+            },
+            {
                 "year": "2025",
                 "title": "Yılın En İyi Aşı Girişimi",
-                "desc": "BioSpectrum India Excellence Awards 2025'te aşı inovasyonu ve erişimindeki öncülüğümüz için takdir edildik.",
+                "desc": "BioSpectrum India Excellence Awards 2025",
+                "image": "award_biospectrum_2025"
+            },
+            {
+                "year": "2025",
+                "title": "Yılın Biyofarma KOBİ Şirketi",
+                "desc": "India Vaccine Leaders Conclave 2025",
                 "image": "award_ivlc_2025"
             },
             {
-                "year": "2025",
-                "title": "Forbes India Select 200",
-                "desc": "Küresel İş Potansiyeline Sahip Şirketler arasında yer alarak sektör liderliğimiz ve hızlı büyümemiz tescillendi.",
+                "year": "2024",
+                "title": "Biyo-inovasyonda Mükemmellik",
+                "desc": "Fortune Leadership Awards 2024",
                 "image": "award_fortune_2024"
             },
             {
-                "year": "2025",
-                "title": "Sağlık Teknolojisinde Üstün Lider",
-                "desc": "Kurucumuz ve CEO'muz Syed S. Ahmed, sağlık sektörüne katkılarından dolayı Dr. Kiran Bedi tarafından ödüllendirildi.",
+                "year": "2024",
+                "title": "Sağlık Girişimcisi Ödülü",
+                "desc": "Exemplars of Excellence 2024 Biopharma Edition",
                 "image": "award_exemplars_2024"
             },
             {
                 "year": "2024",
-                "title": "TDB NexGen Aşı Desteği",
-                "desc": "Teknoloji Geliştirme Kurulu (TDB) tarafından yeni nesil aşı girişimlerimiz için stratejik destek sağlandı.",
+                "title": "Forbes ‘Select 200’",
+                "desc": "Oyunun kurallarını değiştiren küresel iş potansiyeline sahip şirketlerin prestijli bir takdiri olan Forbes India SELECT 200'de yerimizi aldık!",
                 "image": "award_forbes_2024"
             },
             {
                 "year": "2024",
-                "title": "TBVI Karşılaştırmalı Değerlendirme Seçimi",
-                "desc": "Tüberküloz aşı adayımız, TuBerculosis Vaccine Initiative (TBVI) tarafından aerosol modelinde değerlendirilmek üzere seçildi.",
+                "title": "Startup 50 Trailblazers",
+                "desc": "Dun & Bradstreet Startup 50 Trailblazers 2024",
                 "image": "award_dun_bradstreet"
             },
             {
-                "year": "2024",
-                "title": "Ulusal Tüberküloz Konsorsiyumu",
-                "desc": "IIT Bhubaneswar, ILS ve NRDC ile rekombinant tüberküloz aşısı geliştirmek ve ticarileştirmek için ortaklık kuruldu.",
+                "year": "2023",
+                "title": "Summit Star",
+                "desc": "Summit Star 2023",
                 "image": "award_summit_star"
             },
             {
                 "year": "2022",
                 "title": "Yılın KOBİ'si Ödülü",
-                "desc": "India SME Forum tarafından İnovasyon ve Biyofarma Liderliği için verilen prestijli ödül.",
+                "desc": "Sağlık Sektöründe India SME Excellence Awards",
                 "image": "award_sme_excellence"
             },
             {
                 "year": "2022",
                 "title": "NSA 2021 Finalisti",
-                "desc": "Biyoteknoloji ve Sağlık Hizmetleri İnovasyonunda Politika Danışmanlığı ve Ulusal Başarı.",
+                "desc": "Hindistan Başbakanı nezdinde politika danışmanlığı",
                 "image": "award_nsa_2021"
             },
             {
                 "year": "2020",
                 "title": "En İyi 10 Biyoteknoloji Şirketi",
-                "desc": "Insights Success tarafından küresel sağlık alanındaki öncü rolümüz için tanındı.",
+                "desc": "SwiftNLift Magazine 2020",
                 "image": "award_swiftnlift_2020"
             },
             {
                 "year": "2019",
                 "title": "Yılın En İyi Şirketi",
-                "desc": "The CEO Magazine tarafından Yılın Lider Biyoteknoloji Kuruluşu seçildi.",
+                "desc": "Biyoteknoloji Sektöründe Startup City Magazine 2019",
                 "image": "award_startup_city_2019"
             },
             {
                 "year": "2019",
-                "title": "Time2Leap Ödülleri (KOBİ Edisyonu)",
-                "desc": "Biyoteknolojik Ar-Ge ve inovasyonda olağanüstü başarı ödülü.",
+                "title": "Time2Leap Awards (KOBİ Edisyonu)",
+                "desc": "KOBİ Bakanlığı — Yılın Lider Tek Uzmanlık Hizmetleri Şirketi",
                 "image": "award_time2leap_2019"
             }
         ],

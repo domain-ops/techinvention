@@ -1986,6 +1986,7 @@ export const english = {
         "title": "Launch your career in Vaccine Development and Manufacturing"
     },
     "csr": {
+        "heading": "Corporate Social Responsibility (CSR)",
         "title": "Our Initiatives",
         "subtitle": "We believe CSR must take an inclusive approach to all the stakeholders of the business to achieve our shared goal of bringing greater health equity through affordable, acceptable, and accessible healthcare for all.",
         "initiative1": {

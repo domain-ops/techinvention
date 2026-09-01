@@ -1019,69 +1019,81 @@ export const hindi = {
         "accolades": "सम्मान",
         "items": [
             {
+                "year": "2026",
+                "title": "हेल्थकेयर टेक्नोलॉजी में उत्कृष्ट नेता",
+                "desc": "Bharat 2.0 Conclave 2026",
+                "image": "award_bharat_2026"
+            },
+            {
                 "year": "2025",
                 "title": "वर्ष का सर्वश्रेष्ठ वैक्सीन प्रयास",
-                "desc": "वैक्सीन नवाचार और पहुंच में नेतृत्व के लिए BioSpectrum India Excellence Awards 2025 में सम्मानित किया गया।",
+                "desc": "BioSpectrum India Excellence Awards 2025",
+                "image": "award_biospectrum_2025"
+            },
+            {
+                "year": "2025",
+                "title": "वर्ष की सर्वश्रेष्ठ SME बायोफार्मा कंपनी",
+                "desc": "India Vaccine Leaders Conclave 2025",
                 "image": "award_ivlc_2025"
             },
             {
-                "year": "2025",
-                "title": "Forbes India Select 200",
-                "desc": "वैश्विक व्यापार क्षमता वाली कंपनियों में प्रदर्शित, जो कंपनी की तीव्र वृद्धि और उद्योग नेतृत्व को दर्शाता है।",
+                "year": "2024",
+                "title": "जैव-नवाचार में उत्कृष्टता",
+                "desc": "Fortune Leadership Awards 2024",
                 "image": "award_fortune_2024"
             },
             {
-                "year": "2025",
-                "title": "हेल्थकेयर टेक्नोलॉजी में उत्कृष्ट नेता",
-                "desc": "हमारे संस्थापक और सीईओ श्री सैयद एस. अहमद को भारत 2.0 कॉन्क्लेव में डॉ. किरण बेदी द्वारा प्रतिष्ठित पुरस्कार से सम्मानित किया गया।",
+                "year": "2024",
+                "title": "स्वास्थ्य उद्यमी पुरस्कार",
+                "desc": "Exemplars of Excellence 2024 Biopharma Edition",
                 "image": "award_exemplars_2024"
             },
             {
                 "year": "2024",
-                "title": "NexGen वैक्सीन के लिए TDB समर्थन",
-                "desc": "हमारी अगली पीढ़ी की वैक्सीन पहल के लिए प्रौद्योगिकी विकास बोर्ड (TDB) से रणनीतिक समर्थन प्राप्त हुआ।",
+                "title": "Forbes ‘Select 200’",
+                "desc": "हमने Forbes India SELECT 200 में प्रतिष्ठित स्थान प्राप्त किया है, जो वैश्विक व्यापार क्षमता वाली कंपनियों की एक प्रतिष्ठित पहचान है!",
                 "image": "award_forbes_2024"
             },
             {
                 "year": "2024",
-                "title": "TBVI तुलनात्मक मूल्यांकन चयन",
-                "desc": "हमारे टीबी वैक्सीन उम्मीदवार को एरोसोल मॉडल में मूल्यांकन के लिए TBVI द्वारा चुना गया।",
+                "title": "Startup 50 Trailblazers",
+                "desc": "Dun & Bradstreet Startup 50 Trailblazers 2024",
                 "image": "award_dun_bradstreet"
             },
             {
-                "year": "2024",
-                "title": "राष्ट्रीय तपेदिक संघ",
-                "desc": "रीकॉम्बिनेंट टीबी वैक्सीन विकसित और व्यावसायीकरण करने के लिए IIT भुवनेश्वर, ILS और NRDC के साथ साझेदारी की।",
+                "year": "2023",
+                "title": "Summit Star",
+                "desc": "Summit Star 2023",
                 "image": "award_summit_star"
             },
             {
                 "year": "2022",
-                "title": "वर्ष का सर्वश्रेष्ठ MSME पुरस्कार",
-                "desc": "बायोफार्मा नवाचार और नेतृत्व के लिए इंडिया एसएमई फोरम द्वारा सम्मानित।",
+                "title": "वर्ष का सर्वश्रेष्ठ SME पुरस्कार",
+                "desc": "स्वास्थ्य सेवा क्षेत्र में India SME Excellence Awards",
                 "image": "award_sme_excellence"
             },
             {
                 "year": "2022",
                 "title": "NSA 2021 फाइनलिस्ट",
-                "desc": "जैव प्रौद्योगिकी और स्वास्थ्य सेवा नवाचार में राष्ट्रीय स्तर की मान्यता।",
+                "desc": "भारत के माननीय प्रधानमंत्री के समक्ष नीतिगत वकालत",
                 "image": "award_nsa_2021"
             },
             {
                 "year": "2020",
-                "title": "शीर्ष 10 बायोटेक्नोलॉजी कंपनियां",
-                "desc": "वैश्विक स्वास्थ्य में नेतृत्व के लिए Insights Success द्वारा मान्यता प्राप्त।",
+                "title": "शीर्ष 10 सर्वश्रेष्ठ जैव प्रौद्योगिकी कंपनियां",
+                "desc": "SwiftNLift Magazine 2020",
                 "image": "award_swiftnlift_2020"
             },
             {
                 "year": "2019",
                 "title": "वर्ष की सर्वश्रेष्ठ कंपनी",
-                "desc": "The CEO Magazine द्वारा बायोटेक्नोलॉजी में उत्कृष्ट योगदान के लिए सम्मानित।",
+                "desc": "बायोटेक क्षेत्र में Startup City Magazine 2019",
                 "image": "award_startup_city_2019"
             },
             {
                 "year": "2019",
-                "title": "Time2Leap पुरस्कार (MSME संस्करण)",
-                "desc": "बायोटेक R&D और नवाचार में असाधारण उपलब्धियों के लिए पुरस्कार।",
+                "title": "Time2Leap Awards (MSME संस्करण)",
+                "desc": "MSME मंत्रालय — वर्ष की अग्रणी एकल विशेषज्ञता सेवा कंपनी",
                 "image": "award_time2leap_2019"
             }
         ],

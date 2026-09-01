@@ -40,16 +40,16 @@ export const spanish = {
         "awardsCertifications": "Premios y certificaciones",
         "announcements": [
             "🤝 TechInvention Lifecare se compromete formalmente con la iniciativa «Mumbai Libre de Drogas» del Gobierno de Maharashtra.",
-            "🏆 TechInvention fue reconocida en la lista Forbes India Select 200 entre las empresas con Gran Potencial de Negocio Global.",
-            "🏆 Reconocida con el premio «Mejor Esfuerzo en Vacunas del Año» en los BioSpectrum India Excellence Awards 2025.",
-            "🤝 Orgullosos de recibir el respaldo estratégico de la Junta de Desarrollo Tecnológico (TDB) para la iniciativa de vacunas NexGen.",
-            "🤝 Firma de acuerdos estratégicos de licencia para tecnologías de vacunas NexGen contra Salmonella en Nueva Delhi.",
-            "🏆 Nuestro Fundador y CEO, Syed S. Ahmed, fue galardonado como «Líder Sobresaliente en Tecnología Sanitaria» por la Dra. Kiran Bedi.",
-            "⚡ Inauguración de nuestra subestación eléctrica dedicada en GCMC, fortaleciendo la infraestructura para biomanufactura avanzada.",
-            "🔬 Nuestro candidato a vacuna contra la tuberculosis fue seleccionado por TBVI para evaluación comparativa en modelo de aerosol.",
-            "🏢 Nuestra planta de vacunas NexGen respaldada por TDB está lista para expandir el acceso y fortalecer los sistemas de salud.",
-            "🤝 Alianza con IIT Bhubaneswar, ILS y NRDC para desarrollar y comercializar una vacuna recombinante contra la tuberculosis.",
-            "📈 TechInvention recibió una inversión estratégica de Ashish Kacholia, reforzando nuestra hoja de ruta de crecimiento e innovación."
+            "🏆 TechInvention fue reconocida en Forbes India Select 200 y fue destacada entre las empresas con potencial empresarial global, reflejando el rápido crecimiento y el liderazgo de la compañía en la industria.",
+            "🏆 Honrada con el premio \"Mejores Esfuerzos en Vacunas del Año\" en los BioSpectrum India Excellence Awards 2025.",
+            "🤝 Orgullosos de recibir el apoyo de la Junta de Desarrollo Tecnológico (TDB) para nuestra iniciativa de Vacunas NexGen.",
+            "🤝 Se lograron acuerdos estratégicos de licencia para las tecnologías de la vacuna NexGen contra la Salmonella en el Medical Innovations Patent Mitra: Innovators-to-Industry (I2I) Connect en Nueva Delhi.",
+            "🏆 Nuestro Fundador y CEO, el Sr. Syed S. Ahmed, recibió el prestigioso premio \"Líder Destacado en Tecnología Sanitaria\" de manos de la Dra. Kiran Bedi en el Bharat 2.0 Conclave, en reconocimiento a su excepcional liderazgo y sus contribuciones al sector sanitario.",
+            "⚡ En presencia del Sr. Rajesh Kumar Pathak, Secretario de la Junta de Desarrollo Tecnológico, inauguramos nuestra subestación eléctrica dedicada en GCMC, fortaleciendo la infraestructura para la biofabricación avanzada.",
+            "🔬 Nuestro candidato a vacuna contra la tuberculosis (TB) ha sido seleccionado por la Iniciativa de Vacunas contra la Tuberculosis (TBVI) para una evaluación comparativa en el modelo de infección por aerosol de Mycobacterium tuberculosis en ratones.",
+            "🏢 Respaldada por la Junta de Desarrollo Tecnológico, nuestra instalación de fabricación de vacunas NexGen está destinada a avanzar en la inmunización, ampliar el acceso a las vacunas y fortalecer los sistemas de salud.",
+            "🤝 Hemos colaborado con el IIT Bhubaneswar, el Institute of Life Sciences (ILS) y la National Research Development Corporation (NRDC) para desarrollar, escalar y comercializar una vacuna recombinante de tuberculosis de próxima generación.",
+            "📈 TechInvention recibió una inversión estratégica de Ashish Kacholia, reforzando nuestra hoja de ruta de crecimiento e innovación a largo plazo."
         ],
         "membership": "Membresías"
     },
@@ -393,8 +393,8 @@ export const spanish = {
         "slides": [
             {
                 "tag": "Fabricación",
-                "title": "Fabricación a escala comercial",
-                "desc": "La instalación integrada de fabricación GMP de TechInvention (GCMC) ofrece servicios de fabricación de sustancia activa y de llenado y acabado para vacunas y productos biológicos, dentro de un marco escalable y orientado a la calidad. Brinda apoyo para la transferencia de tecnología, el escalado de procesos, el cumplimiento regulatorio y la fabricación comercial."
+                "title": "Fabricación a Escala Comercial",
+                "desc": "La instalación integrada de fabricación GMP (GCMC) de TechInvention permite la fabricación de Sustancia Farmacéutica y el Llenado y Acabado para vacunas y productos biológicos. Facilita una transferencia de tecnología fluida, el escalado de procesos y el cumplimiento normativo para la fabricación de lotes clínicos y comerciales."
             },
             {
                 "tag": "I+D",
@@ -1023,14 +1023,14 @@ export const spanish = {
         "items": [
             {
                 "year": "2026",
-                "title": "Outstanding Leader in Healthcare Technology",
+                "title": "Sobresaliente Líder en tecnología sanitaria",
                 "desc": "Bharat 2.0 Conclave 2026",
                 "image": "award_bharat_2026"
             },
             {
                 "year": "2025",
-                "title": "Best Vaccine Efforts of the Year",
-                "desc": "BioSpectrum India Excellence Awards 2025",
+                "title": "Mejores Esfuerzos en Vacunas del Año",
+                "desc": "Premios a la Excelencia de BioSpectrum India 2025",
                 "image": "award_biospectrum_2025"
             },
             {
@@ -2028,6 +2028,7 @@ export const spanish = {
         "connectNow": "Conéctese ahora"
     },
     "csr": {
+        "heading": "Responsabilidad Social Corporativa (CSR)",
         "title": "Nuestras iniciativas",
         "subtitle": "Creemos que la CSR debe adoptar un enfoque inclusivo que contemple a todas las partes interesadas de la empresa para alcanzar nuestro objetivo común de lograr una mayor equidad en salud mediante una atención sanitaria asequible, aceptable y accesible para todos.",
         "readNewsArticle": "Leer el artículo de noticias",
