@@ -56,7 +56,7 @@ const ContactHero: React.FC = () => {
                                 transition={{ duration: 0.7, ease: 'easeOut' }}
                                 className="text-[36px] md:text-[52px] lg:text-[62px] font-bold text-[#0d2a55] leading-tight mb-4"
                             >
-                                {t('navbar.contactUs') || t('contact.title') || "Contact Us"}
+                                {t('contact.title') || t('navbar.contactUs') || "Contact Us"}
                             </motion.h1>
 
                             {/* Blue underline accent */}

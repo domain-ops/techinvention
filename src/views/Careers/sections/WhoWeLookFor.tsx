@@ -23,21 +23,21 @@ export default function WhoWeLookFor() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
-                            <div className="lg:col-span-8">
+                            <div className="lg:col-span-8 text-left">
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="w-12 h-12 rounded-full bg-[#1955A6]/10 flex items-center justify-center">
                                         <Users className="w-6 h-6 text-[#1955A6]" />
                                     </div>
                                 </div>
 
-                                <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-4 leading-tight text-slate-900">
+                                <h2 className="text-[24px] md:text-[42px] font-medium tracking-wide mb-3 leading-tight text-slate-900">
                                     <SplitTitle title={t('careers.whoWeLookFor.title') || "Who We Look For"} />
                                 </h2>
                                 
-                                {t('careers.whoWeLookFor.subtitle') && (
-                                    <p className="text-[#1955A6] font-semibold text-[17px] md:text-[19px] mb-3">
-                                        {t('careers.whoWeLookFor.subtitle')}
-                                    </p>
+                                {(t('careers.whoWeLookFor.subtitle') || "Talent with curiosity, discipline and drive") && (
+                                    <h3 className="text-[#5C7625] font-semibold text-[18px] md:text-[22px] mb-4">
+                                        {t('careers.whoWeLookFor.subtitle') || "Talent with curiosity, discipline and drive"}
+                                    </h3>
                                 )}
 
                                 <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-3xl">
@@ -50,7 +50,7 @@ export default function WhoWeLookFor() {
                                     onClick={() => document.getElementById('current-openings')?.scrollIntoView({ behavior: 'smooth' })}
                                     className="px-8 py-4 bg-[#1955A6] hover:bg-[#1955A6]/95 text-white font-bold rounded-full transition-all duration-300 flex items-center gap-3 shadow-md hover:shadow-lg hover:-translate-y-1"
                                 >
-                                    {t('careers.whoWeLookFor.btn') || t('careers.exploreOpenings') || t('careers.openPositions.title') || "Explore Openings"}
+                                    {t('careers.whoWeLookFor.btn') || t('careers.exploreOpenings') || "Explore Openings"}
                                     <ArrowRight className="w-5 h-5" />
                                 </button>
                             </div>

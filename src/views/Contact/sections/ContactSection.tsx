@@ -329,7 +329,7 @@ const ContactSection = () => {
                                         <span>{t('contact.locations.gcmcTitle') || "Corporate Office & Manufacturing Site (GCMC)"}</span>
                                     </h5>
                                     <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
-                                        Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710
+                                        {t('contact.locations.gcmcAddress') || t('contact.locations.corporate.address') || "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710"}
                                     </p>
                                 </div>
                             </div>
@@ -354,7 +354,7 @@ const ContactSection = () => {
                                         <span>{t('contact.locations.horizonTitle') || "R&D Centre (HORIZON)"}</span>
                                     </h5>
                                     <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
-                                        EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra
+                                        {t('contact.locations.horizonAddress') || t('contact.locations.rnd.address') || "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"}
                                     </p>
                                 </div>
                             </div>

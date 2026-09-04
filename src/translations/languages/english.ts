@@ -39,7 +39,6 @@ export const english = {
         "csr": "CSR",
         "awardsCertifications": "Awards & Certifications",
         "announcements": [
-            "🤝 TechInvention Lifecare Pledges Support to the Government of Maharashtra's Drug-Free Mumbai Initiative.",
             "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
             "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
             "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",
@@ -927,9 +926,10 @@ export const english = {
     },
     "contact": {
         "tag": "Connect with us",
-        "title": "Ready to {startYourJourney}?",
+        "title": "Contact Us",
+        "subtitle": "Let's connect to create impact.",
         "startYourJourney": "start your journey",
-        "desc": "Reach out to our global team to discuss partnerships, innovations, or how Bio-Sync can support your health security goals.",
+        "desc": "Send us your enquiry and the appropriate team will get back to you at the earliest. Whether your interest lies in products, partnerships, technology, manufacturing, advisory or training support, we look forward to connecting with you.",
         "form": {
             "name": "Full Name",
             "email": "Email Address",
@@ -954,6 +954,9 @@ export const english = {
             "selectEnquiry": "Select Enquiry Type",
             "options": {
                 "strategy": "Strategy",
+                "rd": "R&D",
+                "licensing": "Licensing",
+                "advisory": "Advisory",
                 "general": "General Support"
             },
             "messagePlaceholder": "Describe your enquiry here...",
@@ -979,7 +982,6 @@ export const english = {
             "gcmcTitle": "Corporate Office & Manufacturing Site (GCMC)",
             "horizonTitle": "R&D Centre (HORIZON)"
         },
-        "subtitle": "Let's Connect",
         "introP1": "Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you.",
         "introP2": "TechInvention works with partners across global health systems to move science closer to meaningful public health impact.",
         "startConversation": "Start a Conversation",
@@ -1472,7 +1474,9 @@ export const english = {
         },
         "whoWeLookFor": {
             "title": "Who We Look For",
-            "desc": "We welcome professionals who are ambitious, thoughtful and ready to take ownership. Whether you are a scientist, engineer, consultant, regulatory expert, finance professional or corporate leader, TechInvention offers the opportunity to grow with purpose."
+            "subtitle": "Talent with curiosity, discipline and drive",
+            "desc": "We welcome professionals who are ambitious, thoughtful and ready to take ownership. Whether you are a scientist, engineer, consultant, regulatory expert, finance professional or corporate leader, TechInvention offers the opportunity to grow with purpose.",
+            "btn": "Explore Openings"
         },
         "testimonials": {
             "title": "Employee Voices",
@@ -1512,10 +1516,13 @@ export const english = {
         },
         "openPositions": {
             "title": "Open Positions",
+            "subtitle": "Explore opportunities across functions",
             "intro": "TechInvention offers roles across Business Consultancy, Licensing, Vaccine R&D, Production, Quality Control, Quality Assurance, Regulatory Affairs, Legal and IP, Finance, HR and corporate affairs.",
+            "noPositionsTitle": "No Active Openings",
             "noPositions": "We currently do not have any open positions. However, we are always looking for exceptional talent to join our team. You can submit your resume below, and we will get in touch when a suitable opportunity arises.",
             "spontaneous": "Submit General Application"
         },
+        "exploreOpenings": "Explore Openings",
         "lifeAtTitle": "Life as a Techknight",
         "form": {
             "title": "Application Form",

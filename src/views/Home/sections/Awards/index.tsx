@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../../../context/LanguageContext';
 import ScrollReveal from '../../../../components/Common/ScrollReveal';
+import { SplitTitle } from '../../../../components/Common/SplitTitle';
 import awardImage from '../../../../assets/images/Award+Section-Top100Tech+24.webp';
 import { motion } from 'framer-motion';
 
@@ -35,9 +36,21 @@ const Awards = () => {
                     <ScrollReveal direction="up">
                         <div className="text-center md:text-left">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-tight text-brand-primary tracking-wide">
-                                {(t('awards.title') as string).split('{latestNews}')[0]}
-                                <span className="font-medium text-brand-secondary">{t('awards.accolades') as string}</span>
-                                {(t('awards.title') as string).split('{latestNews}')[1] || ''}
+                                {(() => {
+                                    const titleStr = typeof t('awards.title') === 'string' ? t('awards.title') : "Awards and {latestNews}";
+                                    const accoladesStr = (typeof t('awards.accolades') === 'string' ? t('awards.accolades') : (typeof t('awards.latestNews') === 'string' ? t('awards.latestNews') : "Accolades"));
+                                    if (titleStr.includes('{latestNews}')) {
+                                        const [before, after] = titleStr.split('{latestNews}');
+                                        return (
+                                            <>
+                                                {before}
+                                                <span className="font-medium text-brand-secondary">{accoladesStr}</span>
+                                                {after || ''}
+                                            </>
+                                        );
+                                    }
+                                    return <SplitTitle title={titleStr} />;
+                                })()}
                             </h2>
                         </div>
                     </ScrollReveal>

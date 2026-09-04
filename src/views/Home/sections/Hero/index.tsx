@@ -44,18 +44,22 @@ const Hero = () => {
         : "Vaccines";
 
     const rotatingWords = [
-        (typeof t('megaMenu.manufacturing') === 'string' && t('megaMenu.manufacturing') !== 'megaMenu.manufacturing')
-            ? t('megaMenu.manufacturing')
+        (typeof t('navbar.manufacturing') === 'string' && t('navbar.manufacturing') !== 'navbar.manufacturing')
+            ? t('navbar.manufacturing')
             : "Manufacturing",
         (typeof t('common.rd') === 'string' && t('common.rd') !== 'common.rd')
             ? t('common.rd')
-            : "R&D",
-        (typeof t('common.licensing') === 'string' && t('common.licensing') !== 'common.licensing')
-            ? t('common.licensing')
-            : "Licensing",
+            : (typeof t('navbar.rnd') === 'string' && t('navbar.rnd') !== 'navbar.rnd')
+                ? t('navbar.rnd')
+                : "R&D",
         (typeof t('common.advisory') === 'string' && t('common.advisory') !== 'common.advisory')
             ? t('common.advisory')
-            : "Advisory"
+            : (typeof t('navbar.consulting') === 'string' && t('navbar.consulting') !== 'navbar.consulting')
+                ? t('navbar.consulting')
+                : "Advisory",
+        (typeof t('common.licensing') === 'string' && t('common.licensing') !== 'common.licensing')
+            ? t('common.licensing')
+            : "Licensing"
     ];
 
     // Unified timer to rotate background and words in sync
@@ -127,8 +131,8 @@ const Hero = () => {
                     style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}
                     className="mt-2 md:mt-3 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-normal tracking-wide text-white/95 text-center max-w-2xl mx-auto drop-shadow-lg"
                 >
-                    {typeof t('oneHealth.title') === 'string' && t('oneHealth.title') !== 'oneHealth.title'
-                        ? t('oneHealth.title').replace('{bioInnovation}', (typeof t('oneHealth.bioInnovation') === 'string' && t('oneHealth.bioInnovation') !== 'oneHealth.bioInnovation') ? t('oneHealth.bioInnovation') : 'Bio-Innovation.')
+                    {(typeof t('oneHealth.title') === 'string' && t('oneHealth.title') !== 'oneHealth.title' && t('oneHealth.title').trim() !== '')
+                        ? t('oneHealth.title')
                         : "Enabling One Health through Bio-Innovation."}
                 </p>
             </motion.div>

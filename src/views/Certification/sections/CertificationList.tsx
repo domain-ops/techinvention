@@ -185,7 +185,7 @@ const CertificationList = () => {
                             <div className="flex flex-col items-start text-left">
                                 <div className="mb-4">
                                     <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide whitespace-normal md:whitespace-nowrap text-left">
-                                        <SplitTitle title={t('certifications.title').replace('{certifications}', t('certifications.certifications'))} />
+                                        <SplitTitle title={(typeof t('certifications.title') === 'string' && t('certifications.title').includes('{certifications}')) ? t('certifications.title').replace('{certifications}', t('certifications.certifications') || '') : (t('certifications.title') || "Quality Certifications")} />
                                     </h2>
                                 </div>
                             </div>

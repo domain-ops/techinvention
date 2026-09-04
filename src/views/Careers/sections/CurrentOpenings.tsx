@@ -45,9 +45,14 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                     <ScrollReveal direction="up">
                         {/* Header for Open Positions */}
                         <div className="mb-10">
-                            <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-4">
+                            <h2 className="text-[24px] md:text-[40px] font-medium tracking-wide mb-3">
                                 <SplitTitle title={t('careers.openPositions.title') || "Open Positions"} />
                             </h2>
+                            {t('careers.openPositions.subtitle') && (
+                                <h3 className="text-[#5C7625] font-semibold text-[18px] md:text-[20px] mb-4">
+                                    {t('careers.openPositions.subtitle')}
+                                </h3>
+                            )}
                             <p className="text-slate-600 font-medium text-[16px] md:text-[18px] leading-relaxed max-w-4xl">
                                 {t('careers.openPositions.intro') || (typeof t('careers.openPositions') === 'string' 
                                     ? t('careers.openPositions') 
@@ -63,6 +68,11 @@ export default function CurrentOpenings({ onSelectJob }: CurrentOpeningsProps) {
                     {jobs.length === 0 ? (
                         <div className="mt-4 text-center max-w-2xl mx-auto p-10 bg-white rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center">
                             <Briefcase className="w-12 h-12 text-[#1955A6] mb-4" />
+                            {t('careers.openPositions.noPositionsTitle') && (
+                                <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
+                                    {t('careers.openPositions.noPositionsTitle')}
+                                </h4>
+                            )}
                             <p className="text-slate-600 text-[15px] leading-relaxed mb-6 font-medium">
                                 {t('careers.openPositions.noPositions') || "We currently do not have any open positions. However, we are always looking for exceptional talent to join our team. You can submit your resume below, and we will get in touch when a suitable opportunity arises."}
                             </p>

@@ -1,100 +1,100 @@
 export const turkish = {
     "common": {
         "brandName": "TechInvention",
-        "rd": "Ar-Ge (R&D)",
+        "rd": "R&D",
         "innovation": "İnovasyon",
-        "globalHealth": "Küresel Sağlık",
-        "testimonials": "Ortaklıklar ve Referanslar",
-        "exploreNow": "Keşfedin",
+        "globalHealth": "Şirket",
+        "testimonials": "Müşteri Görüşleri",
+        "exploreNow": "Portföyü Keşfedin",
         "myAccount": "Hesabım",
         "ourPublications": "Yayınlarımız",
-        "readNow": "Makaleyi Oku",
-        "trustedBy": "Güvenen Kuruluşlar",
-        "globalPartners": "Küresel Ortaklar",
+        "readNow": "Şimdi Oku",
+        "trustedBy": "Küresel İş Ortaklarının Güvendiği Kuruluş",
+        "globalPartners": "Küresel Projeler ve İş Ortakları",
         "ourImpact": "Etkimiz",
         "contactUs": "Bize Ulaşın",
-        "partnerWithUs": "TechInvention ile Ortaklık Kurun",
-        "connectNow": "İletişime Geçin",
-        "showLess": "Daha Az Ödül Göster",
-        "showMore": "Daha Fazla Ödül Göster",
+        "partnerWithUs": "TechInvention ile İş Ortaklığı Kurun",
+        "connectNow": "Şimdi Bağlanın",
+        "showLess": "Daha Az Ödül ve Takdir Göster",
+        "showMore": "Daha Fazla Ödül ve Takdir Görün",
         "licensing": "Lisanslama",
         "advisory": "Danışmanlık"
     },
     "navbar": {
         "home": "Ana Sayfa",
-        "contactUs": "İletişim",
+        "contactUs": "Bize Ulaşın",
         "about": "Hakkımızda",
         "searchPlaceholder": "TechInvention'da Ara...",
         "products": "Ürünler",
-        "solutions": "Hizmetler",
+        "solutions": "Çözümler",
         "learn": "Bilgi Merkezi",
         "company": "Şirket",
         "support": "Destek",
         "spotlight": "Öne Çıkanlar",
-        "rnd": "Ar-Ge",
+        "rnd": "R&D",
         "manufacturing": "Üretim",
         "consulting": "Danışmanlık",
         "training": "Eğitim",
         "careers": "Kariyer",
-        "csr": "KSS (CSR)",
+        "csr": "CSR",
         "awardsCertifications": "Ödüller ve Sertifikalar",
         "announcements": [
-            "🤝 TechInvention Lifecare, Maharashtra Hükümeti'nin Uyuşturucusuz Mumbai Girişimi'ne resmi destek taahhüdünde bulundu.",
-            "🏆 TechInvention, hızlı büyümesini ve sektör liderliğini yansıtarak Forbes India Select 200 listesinde Küresel İş Potansiyeline Sahip Şirketler arasında yer aldı.",
-            "🏆 BioSpectrum India Excellence Awards 2025'te \"Yılın En İyi Aşı Girişimi\" ödülüne layık görüldü.",
-            "🤝 NexGen Aşı girişimimiz için Teknoloji Geliştirme Kurulu'ndan (TDB) stratejik destek almaktan gurur duyuyoruz.",
-            "🤝 Yeni Delhi'deki I2I Connect etkinliğinde NexGen Salmonella Aşı teknolojileri için lisans anlaşmaları imzalandı.",
-            "🏆 Kurucumuz ve CEO'muz Syed S. Ahmed, Bharat 2.0 Konferansı'nda Dr. Kiran Bedi tarafından \"Sağlık Teknolojisinde Üstün Lider\" ödülü ile onurlandırıldı.",
-            "⚡ GCMC'deki özel elektrik trafo merkezimizin açılışı yapılarak ileri biyoüretim altyapımız güçlendirildi.",
-            "🔬 Tüberküloz (TB) aşı adayımız, TuBerculosis Vaccine Initiative (TBVI) tarafından aerosol enfeksiyon modelinde değerlendirilmek üzere seçildi.",
-            "🏢 TDB destekli NexGen aşı üretim tesisimiz, aşı erişimini genişletmeye ve sağlık sistemlerini güçlendirmeye hazırdır.",
-            "🤝 Yeni nesil rekombinant tüberküloz aşısını geliştirmek ve ticarileştirmek için IIT Bhubaneswar, ILS ve NRDC ile ortaklık kurduk.",
-            "📈 TechInvention, uzun vadeli büyüme ve inovasyon yol haritasını güçlendirmek için Ashish Kacholia'dan stratejik yatırım aldı."
+            "🏆 TechInvention, Forbes India Select 200 listesinde tanındı ve küresel iş potansiyeline sahip şirketler arasında gösterildi; bu, şirketin hızlı büyümesini ve sektördeki liderliğini yansıtmaktadır.",
+            "🏆 BioSpectrum India Excellence Awards 2025’te \"Yılın En İyi Aşı Çalışmaları\" ödülüyle onurlandırıldı.",
+            "🤝 NexGen Aşı girişimimiz için Teknoloji Geliştirme Kurulu’nun (TDB) desteğini almaktan gurur duyuyoruz",
+            "🤝 Yeni Delhi’de gerçekleştirilen \"Medical Innovations Patent Mitra: Innovators-to-Industry (I2I) Connect\" kapsamında NexGen Salmonella Aşısı teknolojileri için stratejik lisans anlaşmalarına imza atıldı.",
+            "🏆 Kurucumuz ve CEO’muz Sayın Syed S. Ahmed, Bharat 2.0 Conclave kapsamında Dr. Kiran Bedi tarafından takdim edilen prestijli \"Sağlık Teknolojileri Alanında Üstün Lider\" ödülüne layık görüldü; bu ödül, sağlık sektörüne yaptığı önemli katkıları ve olağanüstü liderliğini takdir etmektedir.",
+            "⚡ Teknoloji Geliştirme Kurulu Sekreteri Sayın Rajesh Kumar Pathak’ın değerli katılımlarıyla, ileri biyolojik üretim için altyapımızı güçlendiren GCMC’deki özel elektrik trafo merkezimizin açılışını gerçekleştirdik.",
+            "🔬 Tüberküloz (TB) aşı adayımız, farelerde Mycobacterium tuberculosis aerosol enfeksiyon modeli kullanılarak karşılaştırmalı değerlendirme için TuBerculosis Vaccine Initiative (TBVI) tarafından seçilmiştir.",
+            "🏢 Teknoloji Geliştirme Kurulu tarafından desteklenen NexGen aşı üretim tesisimiz, aşılamayı ilerletmek, aşılara erişimi genişletmek ve sağlık sistemlerini güçlendirmek üzere tasarlanmıştır.",
+            "🤝 IIT Bhubaneswar, Yaşam Bilimleri Enstitüsü (ILS) ve Ulusal Araştırma Geliştirme Kurumu (NRDC) ile yeni nesil rekombinant tüberküloz aşısını geliştirmek, ölçeklendirmek ve ticarileştirmek için ortaklık kurduk.",
+            "📈 TechInvention, Ashish Kacholia’dan gelen stratejik yatırımı memnuniyetle karşıladı, uzun vadeli büyüme ve inovasyon yol haritamızı güçlendirdi."
         ],
-        "membership": "Üyelikler"
+        "membership": "Bağlantı"
     },
     "megaMenu": {
         "vaccines": "Aşılar",
         "diagnostics": "Tanı Çözümleri",
         "ipPortfolio": "Yeni Nesil IP Portföyü",
-        "services": "Hizmetler",
+        "services": "Çözümler",
         "aboutUs": "Hakkımızda",
         "credentials": "Referanslar ve Belgeler",
         "knowledgeCenter": "Bilgi Merkezi",
         "helpContact": "Yardım ve İletişim",
         "humanVaccines": "İnsan Aşıları",
         "animalVaccines": "Veteriner Aşıları",
-        "pipeline": "Geliştirme Portföyü",
+        "pipeline": "Aşı ve Biyoterapötik Portföyü",
         "molecular": "Moleküler Tanı",
         "rapidTest": "Hızlı Test Kitleri",
         "oneHealth": "Tek Sağlık Girişimi",
-        "strategicAdvisory": "Stratejik Danışmanlık",
+        "strategicAdvisory": "Stratejik Danışmanlık ve Teknoloji Danışmanlığı",
         "globalAccess": "Küresel Erişim",
         "cdmo": "CDMO Hizmetleri",
-        "successfulProjects": "Başarılı Projeler",
+        "successfulProjects": "Başarıyla Tamamlanan Programlar",
         "viewAll": "Tümünü Görüntüle",
-        "rnd": "Ar-Ge ve İnovasyon",
-        "manufacturing": "Üretim Tesisleri",
-        "vision": "Vizyon ve Misyon",
-        "team": "Liderlik ve Ekibimiz",
-        "careers": "Kariyer Fırsatları",
-        "csr": "Sosyal Sorumluluk",
-        "contact": "İletişim",
+        "rnd": "R&D",
+        "manufacturing": "Üretim",
+        "vision": "Misyonumuz",
+        "team": "Liderlik Ekibimiz",
+        "careers": "Kariyer",
+        "csr": "CSR",
+        "contact": "Bize Ulaşın",
         "annualReports": "Yıllık Raporlar",
-        "certifications": "Sertifikalar ve Kalite",
+        "certifications": "Kalite Sertifikalarımız",
         "advisoryBoard": "Danışma Kurulu",
         "facilities": "Tesislerimiz",
-        "technologyTransfer": "Teknoloji Transferi",
+        "technologyTransfer": "Lisanslama ve Erişim",
         "memberships": "Üyelikler ve İş Birlikleri",
         "caseStudies": "Vaka Çalışmaları",
         "whitePapers": "Teknik Raporlar (White Papers)",
         "newsMedia": "Haberler ve Medya",
-        "faqs": "Sıkça Sorulan Sorular (SSS)",
+        "faqs": "Sık Sorulan Sorular",
         "technicalSupport": "Teknik Destek ve Danışmanlık",
-        "awards": "Ödüller ve Başarılar",
-        "products": "Ürün Detayları",
+        "awards": "Ödüller ve Sertifikalar",
+        "products": "Ürünler",
         "veterinary": "Hayvan Sağlığı",
-        "licensing": "Teknoloji Transferi"
+        "licensing": "Lisanslama ve Erişim",
+        "successfulPrograms": "Başarıyla Tamamlanan Programlar"
     },
     "video": {
         "title": "Biyoteknolojide Küresel İnovasyon",
@@ -109,7 +109,7 @@ export const turkish = {
     "hero": {
         "badge": "Biyoteknoloji İnovasyonu",
         "heading": "Küresel Sağlık Etkisi İçin İnovasyon",
-        "tagline": "Dünya çapında sağlık eşitliğini sağlamak için aşı geliştirme, ileri tanı sistemleri ve sürdürülebilir biyoüretim çözümlerine öncülük ediyoruz.",
+        "tagline": "Biyo-inovasyon aracılığıyla Tek Sağlık yaklaşımını mümkün kılıyoruz.",
         "exploreSolutions": "Hizmetlerimizi Keşfedin",
         "ourVision": "Vizyonumuz",
         "topTextLeft": "Biyoteknolojide ve Aşı Geliştirmede Küresel Mükemmellik.",
@@ -117,9 +117,10 @@ export const turkish = {
         "bottomTitle": "Yeni Nesil Biyoteknoloji",
         "bottomSub": "Uçtan uca aşı geliştirme ve küresel üretim yetkinlikleri",
         "rotatingWords": [
-            "Tanı Çözümleri",
-            "Aşılar",
-            "Biyoterapötikler"
+            "Aşılar | Üretim",
+            "Aşılar | R&D",
+            "Aşılar | Danışmanlık",
+            "Aşılar | Lisanslama"
         ],
         "primaryCta": "Etkimizi Keşfedin",
         "secondaryCta": "Bizimle Ortak Olun",
@@ -164,56 +165,58 @@ export const turkish = {
                 "title": "Stratejik\nIP Çözümleri",
                 "desc": "Küresel sağlık etkisi yaratmak için patent haritalama ve teknoloji lisanslama yönetimi."
             }
-        ]
+        ],
+        "title": "Aşılar | Üretim",
+        "description": "Biyo-inovasyon aracılığıyla Tek Sağlık yaklaşımını mümkün kılıyoruz."
     },
     "testimonials": {
-        "tag": "Başarı Hikayeleri",
-        "title": "Müşterilerimizin Yorumları",
-        "subtitle": "Dünya genelindeki ortaklarımız ve paydaşlarımızın TechInvention hakkındaki değerlendirmeleri",
+        "tag": "Müşteri Görüşleri",
+        "title": "Müşteri Görüşleri",
+        "subtitle": "Mükemmelliğe olan bağlılığımız hakkında iş ortaklarımızın görüşlerini keşfedin.",
         "items": [
             {
-                "name": "Uluslararası Aşı Girişimi (IAVI)",
-                "role": "Küresel Sağlık Kuruluşu",
-                "content": "Raporun teslim edilmesinde tüm TechInvention Ekibinin özverili çabalarını gerçekten takdir ediyoruz.",
-                "image": "iavi"
+                "name": "International AIDS Vaccine Initiative (IAVI)",
+                "role": "",
+                "content": "\"TechInvention ekibinin raporu teslim etme sürecinde gösterdiği çabaları gerçekten takdir ediyoruz.\"",
+                "image": "testimonial_1"
             },
             {
-                "name": "UNOPS – Biyogüvenlik ve Biyoemniyet Eğitimi",
-                "role": "Eğitim Programı",
-                "content": "TechInvention tarafından verilen eğitim, katılımcıların biyogüvenlik ve biyoemniyet alanındaki teorik bilgilerini ve pratik yetkinliklerini önemli ölçüde güçlendirmiştir.",
-                "image": "unops"
+                "name": "United Nations Office for Project Services (UNOPS)",
+                "role": "Biyogüvenlik ve Biyoemniyet Eğitimi",
+                "content": "\"TechInvention tarafından verilen eğitim, katılımcıların biyogüvenlik ve biyoemniyet konularındaki teorik bilgi düzeylerini ve uygulamalı yetkinliklerini önemli ölçüde güçlendirdi.\"",
+                "image": "testimonial_2"
             },
             {
-                "name": "UNOPS – Aşı Analitiği Eğitimi",
-                "role": "Kapasite Geliştirme",
-                "content": "TechInvention, çevrim içi öğrenimi yüz yüze uygulamalı eğitimler ve tesis içi oturumlarla birleştiren kapsamlı bir aşı analitiği eğitim programını başarıyla tamamlamıştır.",
-                "image": "unops"
+                "name": "United Nations Office for Project Services (UNOPS)",
+                "role": "Aşı Analitiği Eğitimi",
+                "content": "\"TechInvention, çevrim içi öğrenimi yüz yüze uygulamalı eğitimler ve tesis tabanlı oturumlarla birleştiren kapsamlı bir aşı analitiği eğitim programını başarıyla gerçekleştirdi.\"",
+                "image": "testimonial_3"
             },
             {
-                "name": "Dünya Sağlık Örgütü (WHO SEARO)",
-                "role": "Bölgesel Sağlık Ajansı",
-                "content": "TechInvention'ı profesyonelliği, teknik uzmanlığı ve bölgede yerel aşı üretimi kapasitesini geliştirmeye yönelik sarsılmaz bağlılığı için takdir ediyoruz.",
-                "image": "who"
+                "name": "World Health Organization (SEARO)",
+                "role": "",
+                "content": "\"TechInvention'ı, görevin başarıyla tamamlanması sürecinde sergilediği profesyonellik, teknik uzmanlık ve kararlılığından dolayı takdir ediyoruz.\"",
+                "image": "testimonial_4"
             }
         ]
     },
     "about": {
-        "tag": "Hakkımızda",
-        "title": "Entegre Biyoteknoloji İnovasyon Ekosistemi",
-        "desc": "TechInvention; bilimsel keşiften ticari ölçekte üretime kadar olan süreci kısaltan, küresel sağlık odaklı entegre bir biyoteknoloji şirketidir.",
+        "tag": "TechInvention Hakkında",
+        "title": "Aşı İnovasyonunu Daha İleri Taşımak İçin Kurulduk",
+        "desc": "TechInvention, araştırma ve teknoloji erişiminden ölçek büyütmeye ve GMP üretimine kadar entegre süreçler oluşturan, inovasyon odaklı bir biyoteknoloji şirketidir. Şirket, aşıya küresel erişimin geliştirilmesine açık bir odakla çalışmalarını sürdürmektedir.",
         "learnMore": "Yolculuğumuz Hakkında Daha Fazla Bilgi",
         "vision": {
             "title": "Amaç ve İlkeler",
             "headline": "Küresel Sağlığın {future} Şekillendiriyoruz",
             "future": "Geleceğini",
-            "desc": "Kuruluşumuzun temeli, geleceğe yönelik net bir vizyon, bugün için itici bir misyon ve her adımımıza rehberlik eden temel değerler üzerine inşa edilmiştir."
+            "desc": "Kuruluşumuzun temeli; geleceğe yönelik net bir vizyon, bugüne yön veren güçlü bir misyon ve attığımız her adımda bize rehberlik eden temel değerler üzerine inşa edilmiştir."
         },
         "visionText": "Uygun maliyetli, erişilebilir ve kaliteli aşılar ile biyoterapötikler yoluyla küresel sağlıkta tam eşitlik sağlamak.",
         "mission": {
             "title": "Misyonumuz",
-            "headline": "Biyoteknolojide {equityGap} Kapatıyoruz",
+            "headline": "\"Temel Aşılara ve Yeni Biyolojik Ürünlere Erişim, Sadece Bunları Karşılayabilen Az Sayıda Kişinin Ayrıcalığı Olmamalıdır.\"",
             "equityGap": "Eşitlik Açığını",
-            "desc": "Öncelikli aşılara erişim sadece az sayıda kişinin ayrıcalığı olmamalıdır."
+            "desc": "Temel Aşılara ve Yeni Biyolojik Ürünlere Erişim, Sadece Bunları Karşılayabilen Az Sayıda Kişinin Ayrıcalığı Olmamalıdır."
         },
         "missionText": "Gelişmekte olan dünyada sürdürülebilir sağlık çözümleri sunmak için akademik araştırma ile ticari üretimi buluşturmak.",
         "values": {
@@ -224,85 +227,61 @@ export const turkish = {
             "items": [
                 {
                     "title": "Dürüstlük",
-                    "desc": "Yaptığımız her işte şeffaflık, dürüstlük ve hesap verebilirlik ile hareket ederiz."
+                    "desc": "Yaptığımız her işte dürüstlük, şeffaflık ve hesap verebilirlik ilkeleriyle hareket ederiz."
                 },
                 {
                     "title": "Kapsayıcılık",
-                    "desc": "Eşit fırsatlar yaratmaya ve sınırlar ötesinde çeşitli iş birliklerini geliştirmeye inanıyoruz."
+                    "desc": "Fırsat eşitliği yaratmaya ve sınırlar ötesinde çeşitliliğe dayalı iş birliklerini teşvik etmeye inanıyoruz."
                 },
                 {
-                    "title": "Yaratıcılık ve Ustalık",
-                    "desc": "Cesur düşünce ve pratik problem çözme yoluyla inovasyonu teşvik ediyoruz."
+                    "title": "Yaratıcılık",
+                    "desc": "Cesur düşünce ve pratik problem çözme yaklaşımlarıyla inovasyonu teşvik ediyor, her zaman etkili sonuçlara odaklanıyoruz."
                 }
             ]
         },
         "leadership": {
             "title": "Liderlik Ekibimiz",
-            "tagline": "Küresel Sağlığa Adanmış",
+            "tagline": "TechInvention'ı Şekillendiren Liderlik",
             "profiles": [
                 {
                     "name": "Syed S. Ahmed",
                     "role": "Direktör, CEO ve Kurucu",
-                    "message": "TechInvention'ın Direktörü, CEO'su ve Kurucusu olarak Syed S. Ahmed; bilimsel mükemmeliyet, stratejik öngörü ve küresel sağlık eşitliğine sarsılmaz bağlılıkla şekillenen bir liderlik vizyonunu temsil etmektedir. Strateji, iş geliştirme, teknoloji transferi ve kapasite geliştirme alanlarında yirmi yılı aşkın deneyimiyle TechInvention'ı entegre bir aşı inovasyonu ve üretim platformu haline getirmede öncü bir rol oynamıştır. Liderliği, hayat kurtaran aşıların yalnızca bunlara gücü yetenlerle sınırlı kalmaması gerektiği inancıyla, bilimsel hedefleri uygulama, ortaklıklar ve uzun vadeli kamu sağlığı etkisiyle birleştirme yeteneğini yansıtmaktadır.",
-                    "viewProfile": "Profili İncele"
+                    "message": "\"TechInvention'ın Direktörü, CEO'su ve Kurucusu olarak Sayın Syed S. Ahmed, bilimsel mükemmeliyet, stratejik öngörü ve küresel sağlıkta eşitliğe yönelik sarsılmaz bağlılıkla şekillenen bir liderlik vizyonunu temsil etmektedir. Strateji, iş geliştirme, teknoloji transferi ve kapasite geliştirme alanlarında yirmi yılı aşkın deneyimiyle, TechInvention'ın entegre bir aşı inovasyonu ve üretim platformu olarak geliştirilmesinde önemli bir rol oynamıştır. Liderliği; bilimsel vizyonu uygulama, iş birlikleri ve uzun vadeli halk sağlığı etkisiyle birleştirebilme becerisini yansıtmakta olup, hayat kurtaran aşıların yalnızca bunlara erişebilenlerle sınırlı kalmaması gerektiği inancıyla yönlendirilmektedir. \"",
+                    "viewProfile": "Profili Görüntüle"
                 },
                 {
                     "name": "Nazneen Hamid",
                     "role": "Kurucu Ortak ve Direktör",
-                    "message": "TechInvention'da Kurucu Ortak ve Direktör olan Nazneen Hamid; Kurumsal Yönetim, İnsan Kaynakları, Finans ve İdari İşler birimlerine liderlik etmektedir. Stratejik operasyonları, çalışan gelişimini ve etkili yönetişimi yönlendirerek kurumsal mükemmelliğin güçlendirilmesinde kilit bir rol oynamaktadır. Sertifikalı bir POSH (Cinsel Tacizin Önlenmesi) Eğitmeni olarak güvenli, kapsayıcı ve profesyonel bir çalışma ortamı oluşturmaya kendini adamıştır. Kuruluşun misyonuna tutkuyla bağlı olan Nazneen Hamid, yüksek performanslı bir ekip yetiştirirken temel aşıları gelişmekte olan dünyadaki nüfuslar için uygun maliyetli, erişilebilir ve mevcut kılma vizyonunu desteklemektedir.",
-                    "viewProfile": "Profili İncele"
+                    "message": "\"TechInvention'da Kurucu Ortak ve Direktör olan Sayın Nazneen, kuruluşun Kurumsal Yönetişim, İnsan Kaynakları, Finans ve İdari İşler birimlerine liderlik etmektedir. Stratejik operasyonları, insan kaynağının gelişimini ve etkin yönetişimi yönlendirerek kurumsal mükemmeliyetin güçlendirilmesinde önemli bir rol üstlenmektedir. Sertifikalı bir POSH (Prevention of Sexual Harassment) Eğitmeni olarak, güvenli, kapsayıcı ve profesyonel bir çalışma ortamının oluşturulmasına kararlılıkla katkı sağlamaktadır. Kuruluşun misyonuna büyük bir bağlılık duyan Sayın Nazneen, amaca odaklı ve yüksek performanslı bir ekip kültürünü geliştirirken, temel aşıların gelişmekte olan ülkelerdeki toplumlar için uygun maliyetli, erişilebilir ve yaygın olarak temin edilebilir hâle getirilmesini amaçlayan TechInvention vizyonunu desteklemektedir.\"",
+                    "viewProfile": "Profili Görüntüle"
                 }
             ],
             "ceo": {
                 "name": "Syed S. Ahmed",
-                "role": "Kurucu ve CEO",
-                "message": "TechInvention'ın Direktörü, CEO'su ve Kurucusu olarak Syed S. Ahmed; bilimsel mükemmeliyet, stratejik öngörü ve küresel sağlık eşitliğine adanmış bir liderlik anlayışını temsil etmektedir.",
-                "viewProfile": "Profili İncele"
+                "role": "Direktör, CEO ve Kurucu",
+                "message": "\"TechInvention'ın Direktörü, CEO'su ve Kurucusu olarak Sayın Syed S. Ahmed, bilimsel mükemmeliyet, stratejik öngörü ve küresel sağlıkta eşitliğe yönelik sarsılmaz bağlılıkla şekillenen bir liderlik vizyonunu temsil etmektedir. Strateji, iş geliştirme, teknoloji transferi ve kapasite geliştirme alanlarında yirmi yılı aşkın deneyimiyle, TechInvention'ın entegre bir aşı inovasyonu ve üretim platformu olarak geliştirilmesinde önemli bir rol oynamıştır. Liderliği; bilimsel vizyonu uygulama, iş birlikleri ve uzun vadeli halk sağlığı etkisiyle birleştirebilme becerisini yansıtmakta olup, hayat kurtaran aşıların yalnızca bunlara erişebilenlerle sınırlı kalmaması gerektiği inancıyla yönlendirilmektedir. \"",
+                "viewProfile": "Profili Görüntüle"
             },
             "team": {
-                "title": "Ekibimiz",
+                "title": "TechInvention'ı Şekillendiren Liderlik",
                 "tagline": "İnovasyonun Arkasındaki Güç",
                 "cta": "Bilim insanları, mühendisler ve sağlık uzmanlarından oluşan çok disiplinli ekibimiz tek bir hedef için çalışmaktadır: kalıcı küresel etki.",
                 "members": [
                     {
-                        "name": "Dr. Elena Rodriguez",
-                        "role": "Aşı Ar-Ge Başkanı",
-                        "bio": "Klinik immünoloji alanında 20 yılı aşkın deneyimiyle mRNA ve viral vektör aşı araştırmalarımıza liderlik etmektedir."
+                        "name": "Sayın Syed Ahmed",
+                        "role": "Direktör ve CEO"
                     },
                     {
-                        "name": "Marcus Chen",
-                        "role": "Küresel Operasyonlar Direktörü",
-                        "bio": "Gelişmekte olan pazarlarda soğuk zincir lojistiği ve dağıtık biyoüretim operasyonları uzmanı."
+                        "name": "Sayın Nazneen Hamid",
+                        "role": "Kurucu Ortak ve Direktör"
                     },
                     {
-                        "name": "Sarah Al-Farsi",
-                        "role": "Baş Tanı Mühendisi",
-                        "bio": "Moleküler hassasiyet ve yapay zeka entegrasyonu ile hasta başı tanı platformlarımızı yönetmektedir."
+                        "name": "Sayın Monika Thanvi",
+                        "role": "Bağımsız Direktör"
                     },
                     {
-                        "name": "David Okoro",
-                        "role": "Ruhsatlandırma ve Düzenleyici İşler Direktörü",
-                        "bio": "Küresel mevzuat uyumluluğunu yönetmekte ve WHO ön yeterlilik süreçlerini koordine etmektedir."
-                    },
-                    {
-                        "name": "Dr. Priya Sharma",
-                        "role": "Baş Bilim Sorumlusu (CSO)",
-                        "bio": "Biyoteknoloji alanında 15 yılı aşkın araştırma tecrübesiyle inovasyon portföyümüzü yönetmektedir."
-                    },
-                    {
-                        "name": "Arjun Mehta",
-                        "role": "Üretim Direktörü",
-                        "bio": "GMP uyumlu üretim tesislerimizin kesintisiz işletilmesini ve kalite standartlarını sağlamaktadır."
-                    },
-                    {
-                        "name": "Dr. Fatima Al-Hassan",
-                        "role": "Klinik Geliştirme Direktörü",
-                        "bio": "Yeni nesil aşı adaylarımızın klinik öncesi ve klinik geliştirme süreçlerini yürütmektedir."
-                    },
-                    {
-                        "name": "James Obi",
-                        "role": "İş Geliştirme Direktörü",
-                        "bio": "Afrika ve Güneydoğu Asya pazarlarında stratejik ortaklıklar ve pazar erişimi konusunda uzman."
+                        "name": "Sayın Gopal Damisetti",
+                        "role": "Bağımsız Direktör"
                     }
                 ]
             },
@@ -310,19 +289,19 @@ export const turkish = {
             "boardSubtitle": "TechInvention'ı Şekillendiren Liderlik",
             "board": [
                 {
-                    "name": "Bay Syed Ahmed",
+                    "name": "Sayın Syed Ahmed",
                     "role": "Direktör ve CEO"
                 },
                 {
-                    "name": "Bayan Nazneen Hamid",
+                    "name": "Sayın Nazneen Hamid",
                     "role": "Kurucu Ortak ve Direktör"
                 },
                 {
-                    "name": "Bayan Monika Thanvi",
+                    "name": "Sayın Monika Thanvi",
                     "role": "Bağımsız Direktör"
                 },
                 {
-                    "name": "Bay Gopal Damisetti",
+                    "name": "Sayın Gopal Damisetti",
                     "role": "Bağımsız Direktör"
                 }
             ]
@@ -347,14 +326,14 @@ export const turkish = {
             "livesValue": "120M+"
         },
         "banner": {
-            "title": "Biyo-İnovasyonla İnsanlığı İleriye Taşımak",
-            "subtitle": "Herkes için erişilebilir, güvenli ve yüksek kaliteli biyolojik sağlık çözümleri."
+            "title": "TechInvention Hakkında",
+            "subtitle": "TechInvention, araştırma ve teknoloji erişiminden ölçek büyütmeye ve GMP üretimine kadar entegre süreçler oluşturan, inovasyon odaklı bir biyoteknoloji şirketidir. Şirket, aşıya küresel erişimin geliştirilmesine açık bir odakla çalışmalarını sürdürmektedir."
         },
         "story": {
-            "mandelaQuote": "«Yapılana kadar her şey imkansız görünür.» – Nelson Mandela",
-            "commitment": "TechInvention'da yolculuğumuz net bir taahhütle başladı: bilimsel yenilik ile hasta erişimi arasındaki kritik köprüyü kurarak aşıları ve biyoterapötikleri ilerleterek sağlık hizmetlerini dönüştürmek. Araştırmayı, sürdürülebilir altyapıyı ve küresel iş birliklerini entegre ederek, temel sağlık çözümlerini uygun fiyatlı ve küresel olarak erişilebilir kılmak için çabalıyoruz.",
+            "mandelaQuote": "Nelson Mandela şöyle demiştir: “Sağlık, gelirle belirlenen bir konu olamaz; temel bir haktır.” Günümüzde iyi sağlık hizmetlerine erişim, çoğu zaman nerede doğduğumuzun, ekonomik sınıfımızın, ırkımızın, etnik kökenimizin, cinsiyetimizin ve yaşımızın bir sonucu olmaktadır. Bu, ne yazık ki kaçınılmaz bir gerçektir.",
+            "commitment": "TechInvention, dünya genelindeki insanlar ve ülkeler için sağlıkta daha fazla eşitlik sağlamaya kendini adamıştır. Yolculuğumuza 2016 yılında, gelişmekte olan dünyada temel aşıları ve biyofarmasötikleri kabul edilebilir, uygun maliyetli ve erişilebilir hâle getirme hedefiyle başladık.",
             "expertise": "Proje planlama, fizibilite, teknoloji lisanslama, tesis mühendisliği ve mevzuat danışmanlığı alanlarında uzmanlığımızı sunuyoruz.",
-            "title": "Aşı İnovasyonunu İleriye Taşımak İçin Kurulduk"
+            "title": "Aşı İnovasyonunu Daha İleri Taşımak İçin Kurulduk"
         },
         "resilientFuture": "Dirençli Bir Gelecek.",
         "latestUpdates": "Son Gelişmeler",
@@ -368,11 +347,13 @@ export const turkish = {
         "scientificAdvisory": {
             "title": "Bilimsel Danışma Kurulu",
             "desc": "Aşı araştırma, geliştirme ve inovasyon çalışmalarımızı güçlendiren seçkin bilim insanlarını bir araya getiriyoruz."
-        }
+        },
+        "quote": "Nelson Mandela şöyle demiştir: “Sağlık, gelirle belirlenen bir konu olamaz; temel bir haktır.” Günümüzde iyi sağlık hizmetlerine erişim, çoğu zaman nerede doğduğumuzun, ekonomik sınıfımızın, ırkımızın, etnik kökenimizin, cinsiyetimizin ve yaşımızın bir sonucu olmaktadır. Bu, ne yazık ki kaçınılmaz bir gerçektir.",
+        "quoteCommitment": "TechInvention, dünya genelindeki insanlar ve ülkeler için sağlıkta daha fazla eşitlik sağlamaya kendini adamıştır. Yolculuğumuza 2016 yılında, gelişmekte olan dünyada temel aşıları ve biyofarmasötikleri kabul edilebilir, uygun maliyetli ve erişilebilir hâle getirme hedefiyle başladık."
     },
     "oneHealth": {
         "tag": "Bütünsel Yaklaşım",
-        "title": "Biyo-İnovasyon Yoluyla Tek Sağlığı Hayata Geçirmek.",
+        "title": "Biyo-inovasyon aracılığıyla Tek Sağlık yaklaşımını mümkün kılıyoruz.",
         "desc": "TechInvention, bulaşıcı hastalıklarla mücadele ve antimikrobiyal direncin (AMR) önlenmesinde insan, hayvan ve çevre sağlığını bütünsel bir yaklaşımla ele alır.",
         "pillars": [
             {
@@ -389,27 +370,27 @@ export const turkish = {
             }
         ],
         "bioInnovation": "Biyo-İnovasyon.",
-        "knowMore": "Daha Fazlasını Öğrenin",
+        "knowMore": "Daha Fazla Bilgi Edinin",
         "slides": [
             {
-                "tag": "Üretim",
-                "title": "Ticari Ölçekte Üretim",
-                "desc": "TechInvention, en yüksek küresel kalite standartlarında aşı ve biyofarmasötik üretimini mümkün kılar."
+                "title": "Ticari Ölçekli Üretim",
+                "desc": "TechInvention’ın GMP uyumlu entegre üretim tesisi (GCMC), aşılar ve biyolojik ürünler için İlaç Maddesi (Drug Substance) üretimi ile Dolum ve Sonlandırma (Fill-Finish) süreçlerini gerçekleştirme olanağı sağlar. Klinik ve ticari partilerin üretiminde kesintisiz teknoloji transferini, proses ölçek büyütmeyi ve düzenleyici gerekliliklere uyumu destekler.",
+                "tag": "Manufacturing"
             },
             {
-                "tag": "Ar-Ge",
-                "title": "Ar-Ge ve Translasyonel İnovasyon",
-                "desc": "HORIZON Ar-Ge merkezimiz, öncelikli bulaşıcı hastalıklara karşı yeni nesil aşı adayları geliştirmektedir."
+                "title": "Araştırma ve Geliştirme (R&D)",
+                "desc": "Kritik enfeksiyon hastalıklarına ve AMR ile ilişkili patojenlere karşı yeni nesil aşıların araştırma ve geliştirme çalışmalarına odaklanıyoruz. Pilot GMP tesisimiz (HORIZON) ve önde gelen araştırma kurumlarıyla yürüttüğümüz stratejik iş birlikleri sayesinde, R&D portföyümüz rekombinant ve glikokonjugat aşı platformlarını kapsamaktadır.",
+                "tag": "R&D"
             },
             {
-                "tag": "Lisanslama",
-                "title": "GMP Üretim ve Küresel Erişim",
-                "desc": "GCMC tesisimiz, uluslararası standartlarda tam döngü aşı üretimi sağlayarak tedarik güvencesi sunar."
+                "title": "Lisanslama ve Erişim",
+                "desc": "Aşılara erişimi, inovasyonu ve ticarileştirmeyi hızlandırmak amacıyla stratejik in-licensing ve out-licensing süreçlerini destekliyoruz. Umut vadeden teknolojileri uygun geliştirme, üretim ve pazara erişim yollarıyla buluşturarak, bilimsel varlıkların ölçeklenebilir küresel sağlık çözümlerine dönüşmesine yardımcı oluyoruz.",
+                "tag": "Licensing"
             },
             {
-                "tag": "Danışmanlık",
-                "title": "Stratejik Danışmanlık ve Teknik Rehberlik",
-                "desc": "Gelişmekte olan pazarlarda yerel aşı üretim kapasitesini oluşturmak için hükümetler ve fon sağlayıcılarla çalışıyoruz."
+                "title": "Stratejik Danışmanlık ve Teknoloji Danışmanlığı",
+                "desc": "Stratejik Danışmanlık ve Teknik Danışmanlık hizmetlerimiz, kuruluşların sürdürülebilir aşı ve biyofarmasötik üretim kapasitesi geliştirmelerine yardımcı olur. Fizibilite çalışmalarından ürün portföyü planlamasına, mühendislik tasarımından proje denetimine, tesis devreye almadan boşluk değerlendirmelerine kadar uçtan uca destek sağlıyoruz.",
+                "tag": "Consulting"
             }
         ]
     },
@@ -500,46 +481,46 @@ export const turkish = {
         "title": "Yüksek Etkili Projeler"
     },
     "horizon": {
-        "title": "Yüksek Etkili Tek Sağlık Araştırma ve İnovasyon Bölgesi (HORIZON)",
+        "title": "R&D Ekosistemimiz",
         "subtitle": "Araştırma ve Geliştirme (Ar-Ge)",
-        "desc": "TechInvention'ın son teknoloji Ar-Ge tesisi olan Yüksek Etkili Tek Sağlık Araştırma ve İnovasyon Bölgesi (HORIZON), öncelikli bulaşıcı hastalıklar ve antimikrobiyal direnç için aşı inovasyonunu kavram kanıtından preklinik aşamaya kadar hızlandırmak üzere tasarlanmıştır.",
+        "desc": "TechInvention'ın son teknoloji R&D tesisi olan Yüksek Etkili Tek Sağlık Araştırma ve İnovasyon Bölgesi (HORIZON), öncelikli bulaşıcı hastalıklar ve antimikrobiyal direnç (AMR) ile ilişkili patojenlere yönelik kavram kanıtı geliştirmeden klinik öncesi aşamaya ilerlemeye kadar uçtan uca araştırmayı destekleyerek aşı inovasyonunu hızlandırmak üzere tasarlanmıştır.",
         "gcmcTitle": "Tıbbi Karşı Tedbirler İçin Küresel İş Birliği Merkezi (GCMC)",
         "gcmcSubtitle": "Entegre Tam Döngü Aşı Geliştirme ve Üretim Tesisi",
         "gcmcDesc": "TechInvention'ın GCMC merkezi, bilimsel keşiflerden küresel sağlık etkisine uzanan süreci hızlandırmak amacıyla tasarlanmış Entegre Tam Döngü Aşı Geliştirme ve Üretim Tesisidir.",
         "stages": [
             {
-                "stage": "Fikir ve Keşif",
+                "stage": "Fikir Geliştirme",
                 "desc": "Hedef belirleme, antijen keşfi, AI/ML destekli aşı tasarımı ve platform seçimi."
             },
             {
                 "stage": "Geliştirme",
-                "desc": "Proses ve formülasyon geliştirme, analitik testlerin validasyonu ve kavram kanıtlama çalışmaları."
+                "desc": "Proses ve formülasyon geliştirme, analitik test geliştirme, karakterizasyon ve kavram kanıtı çalışmaları."
             },
             {
                 "stage": "Değerlendirme",
-                "desc": "Klinik öncesi etkinlik, güvenlik ve toksikoloji çalışmaları ile mevzuat dokümantasyonu."
+                "desc": "Klinik öncesi etkinlik, güvenlilik ve toksikoloji çalışmaları ile düzenleyici dokümantasyon ve uyumluluk."
             },
             {
                 "stage": "Ölçeklendirme",
-                "desc": "Proses ölçeklendirme, teknoloji transferi, GMP üretim hazırlığı ve ticari ölçeğe aktarım."
+                "desc": "Proses ölçek büyütme, teknoloji transferi, GMP üretim hazırlığı ve ticari uygulamaya geçiş."
             }
         ],
         "collaborations": [
             {
-                "name": "Yaşam Bilimleri Enstitüsü (ILS)",
+                "name": "Institute of Life Sciences - Bhubaneswar",
                 "location": "Bhubaneswar"
             },
             {
-                "name": "Hindistan Teknoloji Enstitüsü (IIT)",
+                "name": "Indian Institute of Technology - Bhubaneswar",
                 "location": "Bhubaneswar"
             },
             {
-                "name": "ICMR - RMRC",
+                "name": "ICMR - RMRC - Bhubaneswar",
                 "location": "Bhubaneswar"
             },
             {
-                "name": "ICMR - NIRBI",
-                "location": "Kalküta"
+                "name": "ICMR - NIRBI - Kolkata",
+                "location": "Kolkata"
             }
         ]
     },
@@ -584,59 +565,68 @@ export const turkish = {
     "cta": {
         "tag": "Harekete Geçin",
         "title": "TechInvention ile İş Ortaklığı Kurun",
-        "titleHighlight": "Küresel Çapta Sunuluyor.",
-        "desc": "İş birlikleri, lisanslama ve kapasite geliştirme fırsatlarını keşfetmek için bizimle iletişime geçin.",
+        "titleHighlight": "Küresel Ölçekte Dağıtıldı.",
+        "desc": "Küresel ölçekte aşılar ve biyoterapötikler için iş birliklerini, lisanslama ortaklıklarını ve kapasite geliştirme fırsatlarını keşfetmek üzere bizimle iletişime geçin.",
+        "connectNow": "Şimdi Bağlanın",
+        "button": "Şimdi Bağlanın",
+        "phone": "+91 22 4005 2123",
+        "email": "connect@techinvention.biz",
         "startPartnership": "Ortaklık Başlatın",
-        "primary": "Bize Ulaşın",
-        "secondary": "Daha Fazla Bilgi Edinin",
+        "primary": "Bizimle İletişime Geçin",
+        "secondary": "Daha Fazla Bilgi",
         "products": {
-            "title": "Aşı Erişimi İçin TechInvention ile Ortak Olun",
-            "desc": "Ruhsatlı aşılar için ürün mevcudiyeti, lisanslama ortaklıkları ve erişim fırsatlarını keşfetmek üzere iletişime geçin."
+            "title": "Aşı Erişimi İçin TechInvention ile İş Ortaklığı Kurun",
+            "desc": "Pazara sunulmuş aşılar için ürün erişilebilirliği, lisanslama ortaklıkları ve erişim fırsatlarını değerlendirmek üzere TechInvention ile iletişime geçin."
         },
-        "button": "Şimdi İletişime Geçin",
         "protectsTomorrow": "Yarını Korur"
     },
     "footer": {
-        "desc": "Uygun maliyetli, erişilebilir ve kaliteli aşılar yoluyla küresel sağlıkta tam eşitliğe doğru.",
+        "desc": "Dünya genelinde yenilikçi araştırmalar, sürdürülebilir üretim ve stratejik iş ortaklıkları aracılığıyla küresel sağlığın ilerletilmesine adanmışız.",
         "solutions": "Çözümler",
         "company": "Şirket",
-        "connect": "İletişim",
+        "connect": "Bağlantı",
         "allRightsReserved": "Tüm hakları saklıdır",
         "privacyPolicy": "Gizlilik Politikası",
         "termsOfService": "Kullanım Koşulları",
         "termsAndConditions": "Şartlar ve Koşullar",
-        "disclaimer": "Yasal Uyarı",
+        "disclaimer": "Feragatname",
         "globalCompliance": "Küresel Uyumluluk",
         "linkedin": "LinkedIn",
         "twitter": "Twitter (X)",
         "partnerPortal": "Ortak Portalı",
         "email": "connect@techinvention.biz",
         "poweredBy": "Tarafından geliştirildi",
-        "youtube": "YouTube"
+        "youtube": "YouTube",
+        "tagline": "Dünya genelinde yenilikçi araştırmalar, sürdürülebilir üretim ve stratejik iş ortaklıkları aracılığıyla küresel sağlığın ilerletilmesine adanmışız.",
+        "allRights": "Tüm Hakları Saklıdır",
+        "designedBy": "Impulse Digital tarafından Tasarlanmış ve Geliştirilmiştir",
+        "terms": "Şartlar ve Koşullar",
+        "quickLinks": "Şirket",
+        "social": "Bağlantı"
     },
     "horizonGcmc": {
         "startupsLine1": "Girişimler",
-        "startupsLine2": "KOBİ'ler",
+        "startupsLine2": "MSME'ler",
         "startupsLine3": "Akademi",
-        "startupsLine4": "Ar-Ge Kuruluşları",
-        "startups": "Girişimler, KOBİ'ler, Akademi, Ar-Ge Kuruluşları",
-        "pocEarly": "Kavram Kanıtı - Erken Aşama",
-        "techTransfer": "Teknoloji Transferi",
+        "startupsLine4": "R&D kuruluşlar",
+        "startups": "Girişimler, MSME'ler, Akademi, R&D kuruluşlar",
+        "pocEarly": "PoC - Erken Aşama",
+        "techTransfer": "Teknoloji transferi",
         "biosecurity": "Biyogüvenlik",
-        "biosecurityDesc": "Acil durum salgınları ve pandemilere hazırlık için stratejik stok",
-        "smallBatches": "Küçük seriler (PCT/CT)",
-        "withEuWho": "AB/DSÖ-PQ Standartları ile",
-        "industry": "Sanayi",
-        "industryDesc": "Kusursuz transfer ve hızlı ticarileşme için optimize edilmiş teknoloji paketleri",
-        "techTransferTraining": "Teknoloji Transferi ve Eğitim",
-        "commercialManufacturing": "Ticari Üretim",
+        "biosecurityDesc": "Acil salgın durumları ve pandemi hazırlığı için stoklama",
+        "smallBatches": "Küçük ölçekli partiler (PCT/CT)",
+        "withEuWho": "EU/WHO-PQ ile",
+        "industry": "Sektör",
+        "industryDesc": "Sorunsuz transfer ve hızlı ticarileştirme için optimize edilmiş teknoloji paketleri",
+        "techTransferTraining": "Teknoloji transferi ve eğitim",
+        "commercialManufacturing": "Ticari üretim",
         "pills": [
-            "Süreç\nOptimizasyonu",
+            "Proses\noptimizasyonu",
             "Ölçek\nBüyütme",
-            "Tutarlılık ve\nDoğrulama",
-            "Klinik\nÇalışmalar",
-            "Ruhsatlandırma\nOnayları",
-            "Fikri Mülkiyet\nve Hukuk"
+            "Tutarlılık /\nValidasyon",
+            "Klinik\ndenemeler",
+            "Düzenleyici\nonaylar",
+            "Fikri mülkiyet (IP)\nve hukuki süreçler"
         ]
     },
     "loader": {
@@ -672,11 +662,11 @@ export const turkish = {
         }
     },
     "globalProjects": {
-        "tag": "Küresel Projeler ve Ortaklar",
+        "tag": "Küresel Projeler ve İş Ortakları",
         "title": "Küresel Projeler {partners}",
-        "partners": "ve Ortaklar",
-        "partnersTag": "Küresel Projeler ve Ortaklar",
-        "desc": "Aşılara erişimi, sağlık altyapısını ve biyo-üretim mükemmeliyetini hızlandırmak için güvenilir küresel ortaklıklar kuruyoruz.",
+        "partners": "ve İş Ortakları",
+        "partnersTag": "Küresel Projeler ve İş Ortakları",
+        "desc": "Aşılara erişimi hızlandırmak, sağlık altyapısını güçlendirmek ve biyoüretimde mükemmeliyeti ilerletmek amacıyla güvene dayalı küresel iş ortaklıkları kuruyoruz.",
         "stats": [
             {
                 "label": "Ulaşılan Ülkeler",
@@ -746,11 +736,11 @@ export const turkish = {
     },
     "vaccinePipeline": {
         "tag": "Geliştirme",
-        "title": "Yeni Nesil Aşı Portföyü",
+        "title": "Aşı ve Biyoterapötik Portföyü",
         "pipeline": "Portföy",
         "phases": {
             "rd": "Keşif",
-            "poc": "Kavram Kanıtlama",
+            "poc": "Kavram Kanıtı",
             "preClinical": "Klinik Öncesi",
             "phase12": "Faz 1/2"
         },
@@ -766,8 +756,8 @@ export const turkish = {
         "stages": {
             "target": "Hedef Patojen",
             "rd": "Keşif",
-            "poc": "Kavram Kanıtlama",
-            "preclinical": "Klinik Öncesi Çalışmalar"
+            "poc": "Kavram Kanıtı",
+            "preclinical": "Klinik Öncesi"
         },
         "items": [
             {
@@ -781,7 +771,7 @@ export const turkish = {
                 "color": "#129B9C"
             },
             {
-                "name": "Meningococcal B Aşısı",
+                "name": "Pan-Salmonella Aşısı",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -791,7 +781,7 @@ export const turkish = {
                 "color": "#129B9C"
             },
             {
-                "name": "Pan-Salmonella Aşısı",
+                "name": "Meningokok B Aşısı",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -887,9 +877,9 @@ export const turkish = {
     },
     "certifications": {
         "tag": "Kalite ve Uyum",
-        "title": "Sertifikalar ve Akreditasyonlar",
-        "certifications": "Uluslararası Kalite Standartları",
-        "desc": "Kalite, sürdürülebilirlik ve etik alanındaki küresel standartlara tam uyum.",
+        "title": "Kalite Sertifikalarımız",
+        "certifications": "Kalite",
+        "desc": "En yüksek küresel standartlara ve düzenleyici gerekliliklere bağlı kalıyoruz. Sertifikalarımız, biyoteknoloji inovasyonunda kaliteye, güvenliğe ve mükemmeliyete yönelik sarsılmaz bağlılığımızı yansıtmaktadır.",
         "list": {
             "drugFreePledge": {
                 "name": "Taahhüt Belgesi - Uyuşturucusuz Mumbai Girişimi",
@@ -899,159 +889,187 @@ export const turkish = {
             "dnb": {
                 "name": "Dun & Bradstreet Tarafından En Düşük Riskli KOBİ Olarak Derecelendirildi",
                 "year": "2025",
-                "info": "TechInvention Lifecare Ltd., Dun & Bradstreet KOBİ Risk Puanına göre 81 puan alarak En Düşük Risk kategorisinde yer almıştır."
+                "info": "TechInvention Lifecare Ltd., güçlü finansal yapımızı, yönetişimimizi ve operasyonel performansımızı yansıtan Dun & Bradstreet KOBİ Risk Skoru kapsamında 81 puan alarak En Düşük Risk kategorisinde yer almıştır."
             },
             "iso13485": {
                 "name": "ISO 13485:2016 Sertifikası",
                 "year": "2025",
-                "info": "Tıbbi cihazlar ve tanısal ürünler için kalite yönetim sistemlerine ilişkin uluslararası standart."
+                "info": "Tıbbi cihaz sektörüne özgü kalite yönetim sistemleri için uluslararası standart olan ISO 13485:2016 sertifikasına sahibiz. Bu sertifika; güvenli, yüksek kaliteli ve uyumlu tıbbi ürünler sunma konusundaki bağlılığımızı yansıtmakta, mükemmeliyete ve küresel standartlara uyuma olan bağlılığımızı güçlendirmektedir."
             },
             "esg": {
-                "name": "Dun & Bradstreet ESG Sertifikası",
+                "name": "ESG Sertifikası",
                 "year": "2024",
-                "info": "Sürdürülebilirlik, sosyal sorumluluk ve etik kurumsal yönetim taahhüdümüzün tescili."
+                "info": "Sürdürülebilirlik, sosyal sorumluluk ve etik yönetişim konularındaki bağlılığımızın bir göstergesi olarak Dun & Bradstreet tarafından verilen Çevresel, Sosyal ve Yönetişim (ESG) Sertifikasını aldık. Bu önemli başarı; uygun maliyetli sağlık çözümleri aracılığıyla sağlıkta eşitliği teşvik etme, sürdürülebilir uygulamaları benimseme ve şeffaflık ile uyumluluk ilkelerine bağlı kalma yönündeki çabalarımızı ortaya koymaktadır."
             },
             "duns": {
-                "name": "D-U-N-S Tescilli Kuruluş",
+                "name": "DUNS Sertifikası",
                 "year": "2024",
-                "info": "Küresel ticari güvenilirlik ve şeffaflık sağlayan evrensel işletme kimlik kaydı."
+                "info": "Dun & Bradstreet tarafından verilen D-U-N-S® Sertifikasını almaya hak kazandık. Bu sertifika, güvenilirliğimizi artırmakta, güven tesis etmekte ve küresel iş ortaklıklarını kolaylaştırarak yenilikçi sağlık çözümleri sunma konusundaki şeffaflık ve mükemmeliyet taahhüdümüzü güçlendirmektedir."
+            },
+            "dsir": {
+                "name": "DSIR Tanıma Sertifikası",
+                "year": "2024",
+                "info": "Şirket içi R&D birimimiz, Hindistan Hükûmeti Bilimsel ve Endüstriyel Araştırma Departmanı (DSIR) tarafından tanınmıştır. Bu sertifika; inovasyonu teşvik etmek, devlet teşviklerine erişimi mümkün kılmak ve uygun maliyetli aşılar, biyoterapötikler ve tanı ürünleri geliştirmeye yönelik araştırma yetkinliklerimizi güçlendirmek açısından büyük önem taşımaktadır."
             },
             "iso9001": {
                 "name": "ISO 9001:2015 Sertifikası",
                 "year": "2023",
-                "info": "Biyoteknoloji geliştirme ve tedarik süreçlerinde kalite yönetiminde mükemmellik standardı."
-            },
-            "dsir": {
-                "name": "DSIR Tanınırlığı",
-                "year": "2024",
-                "info": "Hindistan Bilim ve Teknoloji Bakanlığı tarafından şirket içi Ar-Ge merkezimizin resmi onayı."
+                "info": "Kalite yönetim sistemleri için uluslararası standart olan ISO 9001:2015 sertifikasını almaya hak kazandık. Bu sertifika; bir kuruluşun kaliteye, verimliliğe ve müşteri memnuniyetine olan bağlılığının bir göstergesi olup, pazarda rekabet avantajı sağlamaktadır."
             },
             "gptw": {
-                "name": "Great Place to Work® Sertifikası",
+                "name": "GPTW Sertifikaları 2022-2024",
                 "year": "2022 - 2024",
-                "info": "Çalışan odaklı kültürümüz ve mükemmel çalışma ortamımız için uluslararası akreditasyon."
+                "info": "Arka arkaya iki yıl boyunca, 2021-2022 ve 2022-2023 dönemlerinde Great Place to Work® olarak tanındık. Bu sertifika, üstün çalışan deneyimlerini belirlemek ve takdir etmek için kullanılan, dünya çapında kabul gören bir ölçüttür. Bu ayrıcalığı iki yıl üst üste elde etmemiz; çalışanların kendilerini değerli ve güçlü hissettiği, kapsayıcı iş yeri kültürümüzün desteklediği olumlu ve sağlıklı çalışma ortamımızın bir göstergesidir."
             },
             "tax80iac": {
-                "name": "80-IAC Vergi Muafiyet Sertifikası",
+                "name": "80-IAC Sertifikası",
                 "year": "2022",
-                "info": "Yenilikçi biyoteknoloji girişimimiz için resmi vergi teşvik statüsü."
+                "info": "Hindistan Hükûmeti Sanayi ve İç Ticaretin Teşvikinden Sorumlu Departmanı (DPIIT) tarafından verilen 80-IAC Vergi Muafiyeti Sertifikası almaya hak kazandık. Bu sertifika, temel kriterlerinden biri yenilikçi iş modellerine odaklanmak olan belirli gereklilikleri karşılayan girişimlere verilmektedir. Bu muafiyet, elde edilen tasarrufları R&D çalışmalarına yeniden yatırmamıza olanak sağlamaktadır."
             },
             "helloTomorrow": {
-                "name": "Hello Tomorrow - Derin Teknoloji Öncüsü",
+                "name": "DeepTech Pioneer",
                 "year": "2022",
-                "info": "Küresel Derin Teknoloji Zirvesi'nde dünyanın en iyi biyoteknoloji girişimleri arasında tanınma."
+                "info": "Derin teknoloji çözümlerini ilerletmeye adanmış önde gelen küresel kuruluşlardan biri olan Hello Tomorrow tarafından Deep Tech Pioneer olarak tanındık. Bu takdir, etkili sağlık çözümleri oluşturmak için ileri düzey bilim ve teknolojiden yararlanma konusundaki çalışmalarımızı vurgulamaktadır."
             },
             "innovative100": {
-                "name": "Yenilikçi 100 KOBİ Ödülü",
+                "name": "Innovation Council Yenilikçi SME",
                 "year": "2021",
-                "info": "Hindistan'ın en yenilikçi 100 şirketi arasında yer alarak inovasyon liderliğimizin tescili."
+                "info": "Nisan 2021'de Dünya Fikri Mülkiyet (IP) Günü kutlamaları kapsamında, yeni ürünler ve hizmetler geliştirme alanındaki çalışmalarımız sayesinde Cenevre merkezli Innovation Council tarafından Yenilikçi 100 KOBİ arasında gösterildik."
             }
         }
     },
     "contact": {
         "tag": "Bize Ulaşın",
-        "title": "İletişime Geçin",
-        "subtitle": "İletişime Geçelim",
+        "title": "Bize Ulaşın",
+        "heading": "Bize Ulaşın",
+        "subtitle": "Etki yaratmak için birlikte iletişime geçelim.",
+        "subheading": "Etki yaratmak için birlikte iletişime geçelim.",
+        "introP1": "İş ortaklıkları, ürün talepleri, R&D iş birlikleri, ölçek büyütme ve üretim fırsatları veya kapasite geliştirmeye yönelik danışmanlık desteğiyle ilgileniyorsanız, ekibimiz sizinle iletişime geçmekten memnuniyet duyacaktır.",
+        "introP2": "TechInvention, bilimi anlamlı halk sağlığı etkisine daha da yaklaştırmak amacıyla küresel sağlık sistemlerindeki iş ortaklarıyla birlikte çalışmaktadır.",
+        "desc1": "İş ortaklıkları, ürün talepleri, R&D iş birlikleri, ölçek büyütme ve üretim fırsatları veya kapasite geliştirmeye yönelik danışmanlık desteğiyle ilgileniyorsanız, ekibimiz sizinle iletişime geçmekten memnuniyet duyacaktır.",
+        "desc2": "TechInvention, bilimi anlamlı halk sağlığı etkisine daha da yaklaştırmak amacıyla küresel sağlık sistemlerindeki iş ortaklarıyla birlikte çalışmaktadır.",
+        "startConversation": "Görüşme Başlatın",
+        "insideTitle": "TechInvention'dan Görünümler",
+        "officeSlide1": "TechInvention Ofisi",
+        "officeSlide2": "Çalışma Alanı",
+        "officeSlide3": "Eğitim Salonu",
+        "inside": {
+            "title": "TechInvention'dan Görünümler",
+            "office": "TechInvention Ofisi",
+            "workspace": "Çalışma Alanı",
+            "trainingRoom": "Eğitim Salonu"
+        },
+        "getInTouch": "Bizimle İletişime Geçin",
+        "conversationTitle": "Görüşmeye Başlayalım",
+        "desc": "Talebinizi bize iletin; ilgili ekibimiz en kısa sürede sizinle iletişime geçecektir. Ürünler, iş ortaklıkları, teknoloji, üretim, danışmanlık veya eğitim desteğiyle ilgileniyor olmanız fark etmeksizin sizinle bağlantı kurmayı sabırsızlıkla bekliyoruz.",
+        "phoneEnquiries": "Telefonla İletişim",
+        "emailAddress": "E-posta Adresi",
         "form": {
             "name": "Ad Soyad",
+            "fullName": "Ad Soyad",
             "email": "E-posta Adresi",
+            "emailAddress": "E-posta Adresi",
             "phone": "İletişim Numarası",
+            "organisation": "Kuruluş",
+            "organization": "Kuruluş",
+            "enquiryType": "Talep Türü",
+            "inquiryType": "Talep Türü",
+            "selectEnquiry": "Talep Türünü Seçin",
+            "selectInquiry": "Talep Türünü Seçin",
+            "options": {
+                "strategy": "Strateji",
+                "rd": "R&D",
+                "licensing": "Lisanslama",
+                "advisory": "Danışmanlık",
+                "general": "Genel Destek"
+            },
+            "types": {
+                "strategy": "Strateji",
+                "rnd": "R&D",
+                "licensing": "Lisanslama",
+                "advisory": "Danışmanlık",
+                "general": "Genel Destek"
+            },
             "message": "Mesaj",
-            "submit": "Mesajı Gönder",
+            "submit": "Mesaj Gönder",
+            "send": "Mesaj Gönder",
             "sending": "Gönderiliyor...",
             "success": "Mesaj başarıyla gönderildi!",
             "error": "Bir hata oluştu. Lütfen tekrar deneyin.",
-            "placeholders": {
-                "name": "Adınızı ve soyadınızı girin",
-                "email": "ornek@sirket.com",
-                "phone": "+90 555...",
-                "message": "Size nasıl yardımcı olabiliriz?"
-            },
-            "fullName": "Ad Soyad",
-            "organization": "Kuruluş / Şirket",
-            "inquiryType": "Talep Türü",
-            "selectInquiry": "Bir konu seçin",
             "namePlaceholder": "Adınız ve soyadınız",
             "emailPlaceholder": "E-posta adresiniz",
             "phonePlaceholder": "Cep telefonu numaranız",
-            "organisation": "Kurum / Şirket",
-            "orgPlaceholder": "Şirketinizin adı",
-            "enquiryType": "Talep Türü",
-            "selectEnquiry": "Talep türünü seçiniz",
-            "options": {
-                "strategy": "Strateji ve İş Geliştirme",
-                "general": "Genel Destek ve Bilgi"
-            },
+            "orgPlaceholder": "Kuruluşunuzun adı",
             "messagePlaceholder": "Talebinizin detaylarını buraya yazınız...",
             "nameRequired": "Lütfen adınızı ve soyadınızı giriniz.",
             "emailRequired": "Lütfen geçerli bir e-posta adresi giriniz.",
             "phoneRequired": "Lütfen 10 haneli geçerli bir telefon numarası giriniz.",
             "successTitle": "Talebiniz Başarıyla Gönderildi!",
-            "successDesc": "Danışmanlık ekibimiz 24 saat içinde sizinle iletişime geçecektir. İlginiz için teşekkür ederiz.",
-            "sendAnother": "Başka Bir Talep Gönder",
-            "confidentiality": "Tüm talepler tam bir gizlilik içinde ele alınır."
+            "successDesc": "Ekibimiz en kısa sürede sizinle iletişime geçecektir. İlginiz için teşekkür ederiz.",
+            "getInTouch": "Bizimle İletişime Geçin",
+            "startConversation": "Görüşmeye Başlayalım",
+            "desc": "Talebinizi bize iletin; ilgili ekibimiz en kısa sürede sizinle iletişime geçecektir. Ürünler, iş ortaklıkları, teknoloji, üretim, danışmanlık veya eğitim desteğiyle ilgileniyor olmanız fark etmeksizin sizinle bağlantı kurmayı sabırsızlıkla bekliyoruz."
         },
-        "startYourJourney": "Yolculuğunuza Başlayın",
-        "desc": "Ortaklıklar, lisanslama, Ar-Ge iş birlikleri ve küresel sağlık çözümlerini görüşmek için ekibimizle iletişime geçin.",
-        "getInTouch": "Bizimle İletişime Geçin",
-        "conversationTitle": "Gelin İletişim ve İş Birliğini Başlatalım",
-        "phoneEnquiries": "Telefon Bilgi Hattı",
-        "emailAddress": "E-posta Adresi",
         "locations": {
-            "title": "Konum ve Adreslerimiz",
-            "desc": "Ortaklık görüşmeleri, ürün talepleri ve stratejik iş birlikleri için kurumsal ofisimizi ziyaret edin veya doğrudan bize ulaşın.",
+            "title": "Konum ve Adres",
+            "desc": "İş ortaklığı görüşmeleri, ürün talepleri, stratejik iş birlikleri ve kurumsal iletişim için kurumsal ofisimizi ziyaret edebilir veya doğrudan bizimle iletişime geçebilirsiniz.",
             "gcmcTitle": "Kurumsal Ofis ve Üretim Tesisi (GCMC)",
-            "horizonTitle": "Ar-Ge Merkezi (HORIZON)"
-        },
-        "introP1": "İster ortaklıklar, ürün sorguları, Ar-Ge iş birlikleri, ölçek büyütme ve üretim fırsatları, ister kapasite geliştirme için danışmanlık desteği araştırıyor olun, ekibimiz sizinle iletişim kurmaktan memnuniyet duyacaktır.",
-        "introP2": "TechInvention, bilimi anlamlı bir halk sağlığı etkisine yaklaştırmak için küresel sağlık sistemlerindeki ortaklarla birlikte çalışmaktadır.",
-        "startConversation": "Bir Görüşme Başlatın",
-        "insideTitle": "TechInvention'ın İçinden",
-        "officeSlide1": "TechInvention Ofisi",
-        "officeSlide2": "Çalışma Alanı",
-        "officeSlide3": "Eğitim Salonu"
+            "gcmcAddress": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
+            "horizonTitle": "R&D Merkezi (HORIZON)",
+            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra",
+            "corporate": {
+                "title": "Kurumsal Ofis ve Üretim Tesisi (GCMC)",
+                "address": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710"
+            },
+            "rnd": {
+                "title": "R&D Merkezi (HORIZON)",
+                "address": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"
+            },
+            "phoneLabel": "Telefonla İletişim",
+            "emailLabel": "E-posta Adresi"
+        }
     },
     "awards": {
-        "tag": "Takdir ve Başarılar",
-        "sectionTitle": "Ödüller ve Başarılar",
-        "title": "Ödüller ve Başarılar",
+        "tag": "Ödüller ve Sertifikalar",
+        "sectionTitle": "Başarılarımız",
+        "title": "Ödüller ve Sertifikalar",
         "latestNews": "En Son Haberler",
         "accolades": "Ödüller",
         "items": [
             {
                 "year": "2026",
-                "title": "Sağlık Teknolojisinde Üstün Lider",
+                "title": "Sağlık Teknolojileri Alanında Üstün Lider",
                 "desc": "Bharat 2.0 Conclave 2026",
                 "image": "award_bharat_2026"
             },
             {
                 "year": "2025",
-                "title": "Yılın En İyi Aşı Girişimi",
+                "title": "Yılın En İyi Aşı Çalışmaları",
                 "desc": "BioSpectrum India Excellence Awards 2025",
                 "image": "award_biospectrum_2025"
             },
             {
                 "year": "2025",
-                "title": "Yılın Biyofarma KOBİ Şirketi",
+                "title": "Yılın SME Biyofarma Şirketi",
                 "desc": "India Vaccine Leaders Conclave 2025",
                 "image": "award_ivlc_2025"
             },
             {
                 "year": "2024",
-                "title": "Biyo-inovasyonda Mükemmellik",
+                "title": "Biyo-inovasyonda Mükemmeliyet",
                 "desc": "Fortune Leadership Awards 2024",
                 "image": "award_fortune_2024"
             },
             {
                 "year": "2024",
-                "title": "Sağlık Girişimcisi Ödülü",
+                "title": "Health Entrepreneur Award",
                 "desc": "Exemplars of Excellence 2024 Biopharma Edition",
                 "image": "award_exemplars_2024"
             },
             {
                 "year": "2024",
                 "title": "Forbes ‘Select 200’",
-                "desc": "Oyunun kurallarını değiştiren küresel iş potansiyeline sahip şirketlerin prestijli bir takdiri olan Forbes India SELECT 200'de yerimizi aldık!",
+                "desc": "Forbes India SELECT 200 listesinde, küresel ölçekte oyunun kurallarını değiştirme potansiyeline sahip şirketlere verilen prestijli bir takdir olarak, seçkin bir yer edinmiş bulunuyoruz!",
                 "image": "award_forbes_2024"
             },
             {
@@ -1068,37 +1086,149 @@ export const turkish = {
             },
             {
                 "year": "2022",
-                "title": "Yılın KOBİ'si Ödülü",
-                "desc": "Sağlık Sektöründe India SME Excellence Awards",
+                "title": "SME of the Year Award",
+                "desc": "India SME Excellence Awards in the Healthcare Sector",
                 "image": "award_sme_excellence"
             },
             {
                 "year": "2022",
-                "title": "NSA 2021 Finalisti",
-                "desc": "Hindistan Başbakanı nezdinde politika danışmanlığı",
+                "title": "Finalist NSA 2021",
+                "desc": "Policy Advocacy to the honorable PM of India",
                 "image": "award_nsa_2021"
             },
             {
                 "year": "2020",
-                "title": "En İyi 10 Biyoteknoloji Şirketi",
+                "title": "Top 10 Best Biotechnology Companies",
                 "desc": "SwiftNLift Magazine 2020",
                 "image": "award_swiftnlift_2020"
             },
             {
                 "year": "2019",
-                "title": "Yılın En İyi Şirketi",
-                "desc": "Biyoteknoloji Sektöründe Startup City Magazine 2019",
+                "title": "Best Company of the Year",
+                "desc": "Startup City Magazine in Biotech Sector 2019",
                 "image": "award_startup_city_2019"
             },
             {
                 "year": "2019",
-                "title": "Time2Leap Awards (KOBİ Edisyonu)",
-                "desc": "KOBİ Bakanlığı — Yılın Lider Tek Uzmanlık Hizmetleri Şirketi",
+                "title": "Time2Leap Awards (MSME Edition)",
+                "desc": "MSME Bakanlığı Yılın Önde Gelen Tek Uzmanlık Alanlı Hizmet Şirketi",
                 "image": "award_time2leap_2019"
             }
         ],
-        "showLess": "Daha Az Ödül Göster",
-        "showMore": "Daha Fazla Ödül Göster"
+        "showLess": "Daha Az Ödül ve Takdir Göster",
+        "showMore": "Daha Fazla Ödül ve Takdir Göster",
+        "subtitle": "En yüksek küresel standartlara ve düzenleyici gerekliliklere bağlı kalıyoruz. Sertifikalarımız, biyoteknoloji inovasyonunda kaliteye, güvenliğe ve mükemmeliyete yönelik sarsılmaz bağlılığımızı yansıtmaktadır.",
+        "certificationsTitle": "Kalite Sertifikalarımız",
+        "certifications": [
+            {
+                "year": "2025",
+                "title": "Dun & Bradstreet Tarafından En Düşük Riskli KOBİ Olarak Derecelendirildi",
+                "desc": "TechInvention Lifecare Ltd., güçlü finansal yapımızı, yönetişimimizi ve operasyonel performansımızı yansıtan Dun & Bradstreet KOBİ Risk Skoru kapsamında 81 puan alarak En Düşük Risk kategorisinde yer almıştır."
+            },
+            {
+                "year": "2024",
+                "title": "DUNS Sertifikası",
+                "desc": "Dun & Bradstreet tarafından verilen D-U-N-S® Sertifikasını almaya hak kazandık. Bu sertifika, güvenilirliğimizi artırmakta, güven tesis etmekte ve küresel iş ortaklıklarını kolaylaştırarak yenilikçi sağlık çözümleri sunma konusundaki şeffaflık ve mükemmeliyet taahhüdümüzü güçlendirmektedir."
+            },
+            {
+                "year": "2022 - 2024",
+                "title": "GPTW Sertifikaları 2022-2024",
+                "desc": "Arka arkaya iki yıl boyunca, 2021-2022 ve 2022-2023 dönemlerinde Great Place to Work® olarak tanındık. Bu sertifika, üstün çalışan deneyimlerini belirlemek ve takdir etmek için kullanılan, dünya çapında kabul gören bir ölçüttür. Bu ayrıcalığı iki yıl üst üste elde etmemiz; çalışanların kendilerini değerli ve güçlü hissettiği, kapsayıcı iş yeri kültürümüzün desteklediği olumlu ve sağlıklı çalışma ortamımızın bir göstergesidir."
+            },
+            {
+                "year": "2021",
+                "title": "Innovation Council Yenilikçi SME",
+                "desc": "Nisan 2021'de Dünya Fikri Mülkiyet (IP) Günü kutlamaları kapsamında, yeni ürünler ve hizmetler geliştirme alanındaki çalışmalarımız sayesinde Cenevre merkezli Innovation Council tarafından Yenilikçi 100 KOBİ arasında gösterildik."
+            },
+            {
+                "year": "2025",
+                "title": "ISO 13485:2016 Sertifikası",
+                "desc": "Tıbbi cihaz sektörüne özgü kalite yönetim sistemleri için uluslararası standart olan ISO 13485:2016 sertifikasına sahibiz. Bu sertifika; güvenli, yüksek kaliteli ve uyumlu tıbbi ürünler sunma konusundaki bağlılığımızı yansıtmakta, mükemmeliyete ve küresel standartlara uyuma olan bağlılığımızı güçlendirmektedir."
+            },
+            {
+                "year": "2024",
+                "title": "DSIR Tanıma Sertifikası",
+                "desc": "Şirket içi R&D birimimiz, Hindistan Hükûmeti Bilimsel ve Endüstriyel Araştırma Departmanı (DSIR) tarafından tanınmıştır. Bu sertifika; inovasyonu teşvik etmek, devlet teşviklerine erişimi mümkün kılmak ve uygun maliyetli aşılar, biyoterapötikler ve tanı ürünleri geliştirmeye yönelik araştırma yetkinliklerimizi güçlendirmek açısından büyük önem taşımaktadır."
+            },
+            {
+                "year": "2022",
+                "title": "80-IAC Sertifikası",
+                "desc": "Hindistan Hükûmeti Sanayi ve İç Ticaretin Teşvikinden Sorumlu Departmanı (DPIIT) tarafından verilen 80-IAC Vergi Muafiyeti Sertifikası almaya hak kazandık. Bu sertifika, temel kriterlerinden biri yenilikçi iş modellerine odaklanmak olan belirli gereklilikleri karşılayan girişimlere verilmektedir. Bu muafiyet, elde edilen tasarrufları R&D çalışmalarına yeniden yatırmamıza olanak sağlamaktadır."
+            },
+            {
+                "year": "2024",
+                "title": "ESG Sertifikası",
+                "desc": "Sürdürülebilirlik, sosyal sorumluluk ve etik yönetişim konularındaki bağlılığımızın bir göstergesi olarak Dun & Bradstreet tarafından verilen Çevresel, Sosyal ve Yönetişim (ESG) Sertifikasını aldık. Bu önemli başarı; uygun maliyetli sağlık çözümleri aracılığıyla sağlıkta eşitliği teşvik etme, sürdürülebilir uygulamaları benimseme ve şeffaflık ile uyumluluk ilkelerine bağlı kalma yönündeki çabalarımızı ortaya koymaktadır."
+            },
+            {
+                "year": "2023",
+                "title": "ISO 9001:2015 Sertifikası",
+                "desc": "Kalite yönetim sistemleri için uluslararası standart olan ISO 9001:2015 sertifikasını almaya hak kazandık. Bu sertifika; bir kuruluşun kaliteye, verimliliğe ve müşteri memnuniyetine olan bağlılığının bir göstergesi olup, pazarda rekabet avantajı sağlamaktadır."
+            },
+            {
+                "year": "2022",
+                "title": "DeepTech Pioneer",
+                "desc": "Derin teknoloji çözümlerini ilerletmeye adanmış önde gelen küresel kuruluşlardan biri olan Hello Tomorrow tarafından Deep Tech Pioneer olarak tanındık. Bu takdir, etkili sağlık çözümleri oluşturmak için ileri düzey bilim ve teknolojiden yararlanma konusundaki çalışmalarımızı vurgulamaktadır."
+            }
+        ],
+        "achievementsTitle": "Başarılarımız",
+        "achievements": [
+            {
+                "year": "2025",
+                "title": "Yılın SME Biyofarma Şirketi",
+                "event": "India Vaccine Leaders Conclave 2025"
+            },
+            {
+                "year": "2024",
+                "title": "Biyo-inovasyonda Mükemmeliyet",
+                "event": "Fortune Leadership Awards 2024"
+            },
+            {
+                "year": "2024",
+                "title": "Health Entrepreneur Award",
+                "event": "Exemplars of Excellence 2024 Biopharma Edition"
+            },
+            {
+                "year": "2024",
+                "title": "Forbes ‘Select 200’",
+                "event": "Forbes India SELECT 200 listesinde, küresel ölçekte oyunun kurallarını değiştirme potansiyeline sahip şirketlere verilen prestijli bir takdir olarak, seçkin bir yer edinmiş bulunuyoruz!"
+            },
+            {
+                "year": "2024",
+                "title": "Startup 50 Trailblazers",
+                "event": "Dun & Bradstreet Startup 50 Trailblazers 2024"
+            },
+            {
+                "year": "2023",
+                "title": "Summit Star",
+                "event": "Summit Star 2023"
+            },
+            {
+                "year": "2022",
+                "title": "SME of the Year Award",
+                "event": "India SME Excellence Awards in the Healthcare Sector"
+            },
+            {
+                "year": "2022",
+                "title": "Finalist NSA 2021",
+                "event": "Policy Advocacy to the honorable PM of India"
+            },
+            {
+                "year": "2020",
+                "title": "Top 10 Best Biotechnology Companies",
+                "event": "SwiftNLift Magazine 2020"
+            },
+            {
+                "year": "2019",
+                "title": "Best Company of the Year",
+                "event": "Startup City Magazine in Biotech Sector 2019"
+            },
+            {
+                "year": "2019",
+                "title": "Time2Leap Awards (MSME Edition)",
+                "event": "MSME Bakanlığı Yılın Önde Gelen Tek Uzmanlık Alanlı Hizmet Şirketi"
+            }
+        ]
     },
     "news": {
         "items": [
@@ -1126,45 +1256,45 @@ export const turkish = {
         ]
     },
     "faq": {
-        "tag": "SSS",
-        "title": "Sıkça Sorulan Sorular",
-        "subtitle": "TechInvention, inovasyonlarımız ve küresel sağlık çözümlerimiz hakkında sıkça sorulan soruların yanıtlarını bulun.",
+        "tag": "FAQ",
+        "title": "Sık Sorulan Sorular",
+        "subtitle": "İnovasyon ve küresel sağlık girişimlerimiz hakkında sıkça sorulan soruların yanıtlarını bulun.",
         "items": [
             {
-                "question": "TechInvention ne tür bir kuruluştur?",
-                "answer": "TechInvention, translasyonel araştırma, aşı inovasyonu, stratejik danışmanlık ve biyolojik üretim alanlarında uzmanlaşmış öncü bir biyoteknoloji şirketidir."
+                "question": "TechInvention nedir?",
+                "answer": "TechInvention, Hindistan'ın Mumbai kentinde faaliyet gösteren; translasyonel araştırmalar, aşı inovasyonu, danışmanlık ve stratejik danışmanlık, erişim ile aşı üretimine odaklanan bir biyoteknoloji şirketidir."
             },
             {
-                "question": "TechInvention hangi temel hizmetleri sunmaktadır?",
-                "answer": "Bulaşıcı hastalıklar için aşı Ar-Ge'si, GMP uyumlu süreç geliştirme ve üretim, teknoloji transferi, ruhsatlandırma ve tesis tasarım mühendisliği sunuyoruz."
+                "question": "TechInvention hangi hizmetleri sunmaktadır?\r",
+                "answer": "TechInvention, aşağıdakileri kapsayan uçtan uca biyoteknoloji çözümleri sunmaktadır:"
             },
             {
-                "question": "TechInvention portföyünde hangi aşı adayları yer almaktadır?",
-                "answer": "Portföyümüz; Pnömokok, Heksavalan Meningokok, Pan-Salmonella, Shigella, Meningococcal B, Sıtma ve Tüberküloz aşı adaylarını içermektedir."
+                "question": "TechInvention hangi tür aşılar geliştirmektedir?",
+                "answer": "Aşı R&D çalışmalarımız; menenjit, zatürre, sıtma, tüberküloz (TB), Salmonella, Shigella ve diğer yeni ortaya çıkan patojenler dâhil olmak üzere enfeksiyon hastalıkları ile antimikrobiyal direnç (AMR) üzerine odaklanmaktadır. Rekombinant, konjuge ve diğer yeni nesil aşı teknolojileri geliştiriyoruz."
             },
             {
-                "question": "TechInvention üretim hizmetleri (CDMO) sağlıyor mu?",
-                "answer": "Evet. HORIZON Ar-Ge merkezimiz ve GCMC tesisimiz ile kavram kanıtlamadan ticari üretime kadar uçtan uca GMP üretim hizmeti sunuyoruz."
+                "question": "TechInvention aşı üretim hizmetleri sunuyor mu?",
+                "answer": "Evet. TechInvention, proses geliştirme, teknoloji transferi, klinik denemeler için üretim partileri, ticari ölçekli üretim ve analitik geliştirme süreçlerini destekleyen uçtan uca bir GMP aşı üretim tesisine (upstream, downstream ve fill-finish) sahiptir."
             },
             {
-                "question": "TechInvention ile nasıl ortaklık kurulabilir?",
-                "answer": "Teknoloji lisanslama, ortak geliştirme veya danışmanlık projeleri için connect@techinvention.biz üzerinden bizimle iletişime geçebilirsiniz."
+                "question": "TechInvention bir biyoteknoloji danışmanlık şirketi midir?",
+                "answer": "Evet. TechInvention, üretim tesislerinin kurulmasına yönelik stratejik, teknik ve ticari danışmanlık hizmetleri sunan Hindistan'ın önde gelen biyoteknoloji danışmanlık şirketlerinden biridir."
             },
             {
-                "question": "GCMC tesisi hangi standartlara uygundur?",
-                "answer": "GCMC tesisimiz, WHO Ön Yeterliliği (WHO-PQ), US FDA ve AB GMP yönergeleriyle tam uyumlu şekilde tasarlanmıştır."
+                "question": "TechInvention uluslararası kuruluşlarla çalışıyor mu?",
+                "answer": "Evet. TechInvention; aşı geliştirme, biyoteknoloji kapasite geliştirme ve üretim altyapısı projeleri kapsamında hükümetler, uluslararası kuruluşlar, araştırma kurumları, üniversiteler ve küresel sağlık kuruluşlarıyla iş birliği yapmaktadır."
             },
             {
-                "question": "TechInvention aşı ve biyoteknoloji üretim tesislerinin kurulmasına yardımcı olabilir mi?",
-                "answer": "Evet, fizibilite çalışmalarından konsept tasarıma, temiz oda mühendisliğinden devreye alma ve DSÖ yeterliliğine kadar anahtar teslim danışmanlık sağlıyoruz."
+                "question": "TechInvention, aşı/biyoteknoloji üretim tesislerinin kurulmasına yardımcı olabilir mi?",
+                "answer": "Evet. Fizibilite çalışmaları, tesis tasarımı, validasyon, proje denetimi, düzenleyici strateji, operasyonel hazırlık ve iş gücü eğitimi dâhil olmak üzere aşı üretim tesisleri için kapsamlı danışmanlık hizmetleri sunuyoruz."
             },
             {
-                "question": "TechInvention'ın aşı Ar-Ge'sindeki uzmanlığı nedir?",
-                "answer": "Antijen keşfi, rekombinant proteinler, glikokonjugatlar, formülasyon geliştirme ve hayvan modellerinde etkinlik çalışmalarında derin uzmanlığa sahibiz."
+                "question": "TechInvention'ın aşı R&D alanındaki uzmanlığı nedir?",
+                "answer": "Uzmanlığımız, aşağıdakiler dâhil olmak üzere tüm aşı geliştirme yaşam döngüsünü kapsamaktadır:\r\nHedef belirleme\n• Antijen keşfi ve tasarımı\n• Proses geliştirme\n• Formülasyon geliştirme\n• Analitik test geliştirme\n• Klinik öncesi değerlendirme\n• Teknoloji transferi\n• Üretim ölçek büyütme ve ticarileştirme"
             },
             {
-                "question": "TechInvention biyoteknoloji girişimlerini ve akademiyi destekliyor mu?",
-                "answer": "Evet, HORIZON kuluçka ve hızlandırma programlarımız aracılığıyla erken aşama biyoteknoloji girişimlerine ve akademik araştırmacılara teknoloji transferi ve altyapı desteği sağlıyoruz."
+                "question": "TechInvention biyoteknoloji girişimlerini destekliyor mu?\r",
+                "answer": "Evet. Biyoteknoloji girişimleriyle; inovasyonu konsept aşamasından ticarileştirmeye hızlandırmak amacıyla danışmanlık, teknoloji geliştirme, araştırma ortaklıkları, lisanslama fırsatları ve üretim desteği yoluyla iş birliği yapıyoruz."
             }
         ]
     },
@@ -1211,8 +1341,8 @@ export const turkish = {
     },
     "strategicAdvisory": {
         "tag": "Stratejik Danışmanlık",
-        "title": "Stratejik Danışmanlık ve Teknik Uzmanlık",
-        "intro": "Strateji, bilim ve uygulama yoluyla dirençli sağlık ve biyo-üretim ekosistemleri inşa ediyoruz.",
+        "title": "Stratejik Danışmanlık ve Teknoloji Danışmanlığı",
+        "intro": "Strateji, bilim ve uygulama yoluyla dayanıklı sağlık hizmetleri ve biyolojik üretim ekosistemleri oluşturuyoruz.",
         "sections": [
             {
                 "title": "Proje Fizibilitesi",
@@ -1296,10 +1426,11 @@ export const turkish = {
                 "feedback": "TechInvention'ı görevin başarılı bir şekilde teslimi boyunca gösterdiği profesyonellik, teknik uzmanlık ve bağlılıktan ötürü takdir ediyoruz."
             }
         ],
-        "desc": "TechInvention; aşı ve biyofarmasötik altyapısını şekillendirmede hükümetleri, fon kuruluşlarını, üreticileri ve yatırımcıları destekler.",
-        "whatWeOffer": "Neler Sunuyoruz",
-        "offerTitle": "Sağlık İnovasyonu İçin Özel Danışmanlık Hizmetleri",
-        "offerSubtitle": "Fikirden ticarileşmeye kadar tüm süreçte odaklanmış danışmanlık:",
+        "desc": "TechInvention; hükümetleri, finansman kuruluşlarını, üreticileri, yatırımcıları ve araştırma kurumlarını aşı ve biyofarmasötik üretim altyapısının şekillendirilmesi konusunda desteklemektedir.",
+        "whatWeOffer": "Sunduğumuz Hizmetler",
+        "offerTitle": "Sağlık İnovasyonuna Özel Danışmanlık Hizmetleri",
+        "offerSubtitle": "Konseptten ticarileştirmeye kadar tüm süreç boyunca odaklanmış danışmanlık:",
+        "feedbackTitle": "Müşteri Geri Bildirimleri",
         "approachTitle": "Mükemmelliğe giden titiz bir yaklaşım",
         "services": [
             {
@@ -1315,36 +1446,45 @@ export const turkish = {
             },
             {
                 "title": "Tesis Tasarımı ve GMP Hazırlığı",
-                "desc": "Temiz oda planlaması, iş akışı, yardımcı tesisler, ekipman stratejisi ve GMP uyumlu hazırlık desteği ile Temel Tasarım, Konsept tasarım ve Detaylı Tasarım."
+                "desc": "Temiz oda planlaması, iş akışı, tesis hizmetleri, ekipman stratejisi ve GMP uyumlu hazırlık desteği ile temel tasarım, konsept tasarım ve detaylı tasarım."
             },
             {
                 "title": "Teknoloji Transferi ve Ölçek Büyütme",
-                "desc": "Ürün belirleme, değerlendirme, süreç transferi desteği, ölçek büyütme planlaması ve üretim."
+                "desc": "Ürünlerin belirlenmesi, değerlendirme, proses transferi desteği, ölçek büyütme planlaması ve üretim desteği."
             },
             {
-                "title": "Kalite, Mevzuat ve Uyumluluk",
-                "desc": "KYS (QMS), GMP boşluk değerlendirmesi, denetim hazırlığı, dokümantasyon ve küresel düzenleyici uyum desteği."
+                "title": "Kalite, Düzenleyici Süreçler ve Uyumluluk",
+                "desc": "QMS, GMP boşluk değerlendirmesi, denetim hazırlığı, dokümantasyon ve küresel düzenleyici uyum için destek."
             },
             {
                 "title": "Eğitim ve Kapasite Geliştirme",
-                "desc": "GxP, KK (QC), KG (QA), ruhsatlandırma ve tesis operasyonlarında uzmanlaşmış programlar."
+                "desc": "GxP, QC, QA, düzenleyici işler ve tesis operasyonları alanlarında uzmanlaşmış programlar."
             },
             {
-                "title": "Ürün Portföyü Planlama",
-                "desc": "Ürün portföyü, pazar ihtiyacı, işletim modeli ve uygulama stratejisi."
+                "title": "Ürün Portföyü Planlaması",
+                "desc": "Ürün portföyü, pazar ihtiyaçları, operasyon modeli ve uygulama stratejisi."
             }
-        ]
+        ],
+        "title": "Stratejik Danışmanlık ve Teknoloji Danışmanlığı",
+        "subtitle": "Strateji, bilim ve uygulama yoluyla dayanıklı sağlık hizmetleri ve biyolojik üretim ekosistemleri oluşturuyoruz.",
+        "desc": "TechInvention; hükümetleri, finansman kuruluşlarını, üreticileri, yatırımcıları ve araştırma kurumlarını aşı ve biyofarmasötik üretim altyapısının şekillendirilmesi konusunda desteklemektedir.",
+        "whatWeOffer": "Sunduğumuz Hizmetler",
+        "servicesTitle": "Sağlık İnovasyonuna Özel Danışmanlık Hizmetleri",
+        "servicesSubtitle": "Konseptten ticarileştirmeye kadar tüm süreç boyunca odaklanmış danışmanlık:",
+        "feedbackTitle": "Müşteri Geri Bildirimleri"
     },
     "cdmo": {
-        "title": "Sözleşmeli Geliştirme ve Üretim (CDMO)",
+        "tag": "İmalat",
+        "title": "Tıbbi Karşı Önlemler İçin Küresel İş Birliği Merkezi (GCMC)",
         "subtitle": "İleri Düzey Biyoüretim Çözümleri",
-        "description": "TechInvention; aşılar ve biyolojik ürünler için kavram kanıtlamadan ticari üretime kadar uçtan uca CDMO hizmetleri sunar.",
+        "ctaDescription": "Aşı üretimi ve ortaklık fırsatlarını keşfetmek için bizimle iletişime geçin",
+        "description": "TechInvention'ın Tıbbi Karşı Önlemler İçin Küresel İş Birliği Merkezi (GCMC), bilimsel keşiften küresel sağlık etkisine uzanan süreci hızlandırmak üzere tasarlanmış Entegre Tam Döngülü Aşı Geliştirme ve Üretim Tesisidir.\n\nUluslararası GMP standartlarıyla uyumlu olarak geliştirilen GCMC; aşı proses geliştirme, üretim ölçek büyütme, teknoloji transferi, analitik testler, kalite sistemleri, düzenleyici destek, ilaç ürünü üretimi, dijital inovasyon ve sürdürülebilir altyapıyı tek bir entegre tesis bünyesinde bir araya getirmektedir.",
         "bridge": {
             "title": "Bir Köprü Olarak GCMC",
-            "desc": "Bilimsel inovasyon araştırma laboratuvarlarında başlar; ancak umut vadeden keşifleri ticari olarak uygulanabilir aşılara dönüştürmek özel uzmanlık, ileri üretim altyapısı ve ölçeklenebilir kapasite gerektirir. GCMC; aşı geliştirme, proses optimizasyonu, GMP üretimi ve teknoloji transferi boyunca uçtan uca destek sağlayarak bu kritik boşluğu doldurur."
+            "desc": "Bilimsel inovasyon araştırma laboratuvarlarında, üniversitelerde ve biyoteknoloji şirketlerinde başlar; ancak umut vadeden keşifleri ticari olarak uygulanabilir aşılara dönüştürmek için özel uzmanlık, gelişmiş üretim altyapısı, düzenleyici uyumluluk ve ölçeklenebilir üretim yetenekleri gereklidir.\n\nGCMC, aşı geliştirme, proses optimizasyonu, üretim ölçek büyütme, teknoloji transferi, GMP üretimi, kalite güvencesi ve düzenleyici hazırlık süreçlerinde uçtan uca destek sağlayarak bu kritik boşluğu kapatmaktadır."
         },
         "whyPartner": {
-            "title": "Neden Bizimle Ortaklık Kurmalısınız?",
+            "title": "Neden Bizimle İş Birliği Yapmalısınız?",
             "features": [
                 {
                     "title": "Uçtan Uca Yetkinlik",
@@ -1359,11 +1499,11 @@ export const turkish = {
                     "desc": "Çoklu aşı ve biyolojik ürün platformlarını destekleyebilen, verimli geliştirme ve ölçeklenebilir üretim sağlayan ileri üretim teknolojileri."
                 },
                 {
-                    "title": "Daha Hızlı Geliştirme Yolları",
+                    "title": "Daha Hızlı Geliştirme Süreçleri",
                     "desc": "Teknoloji transferini hızlandırmak, geliştirme riskini azaltmak ve pazara sunum süresini kısaltmak için optimize edilmiş bilimsel iş akışları."
                 },
                 {
-                    "title": "İş Birlikçi İnovasyon",
+                    "title": "İş Birliğine Dayalı İnovasyon",
                     "desc": "Aşı inovasyonunu ilerletmek için biyoteknoloji şirketlerini, araştırma kurumlarını, hükümetleri ve küresel sağlık ortaklarını birleştiren küresel ekosistem."
                 },
                 {
@@ -1373,59 +1513,59 @@ export const turkish = {
             ]
         },
         "integratedCapabilities": {
-            "title": "Entegre Üretim Yetkinlikleri",
+            "title": "Entegre Üretim Kabiliyetleri",
             "capabilities": [
                 {
-                    "title": "Upstream (Yukarı Akım) Üretim",
-                    "desc": "Çeşitli üretim platformlarında verimli proses geliştirme ve ölçeklendirme sağlayan paslanmaz çelik biyoreaktör sistemleriyle (20 L ve 100 L) donatılmış iki esnek üretim süiti."
+                    "title": "Upstream Üretim",
+                    "desc": "20 L ve 100 L kapasiteli paslanmaz çelik biyoreaktör sistemleriyle donatılmış iki esnek upstream üretim ünitesi; çeşitli üretim platformlarında verimli proses geliştirme, optimizasyon ve üretim ölçek büyütme süreçlerini mümkün kılmaktadır."
                 },
                 {
-                    "title": "Downstream (Aşağı Akım) İşleme",
-                    "desc": "Tutarlı ürün kalitesini ve üretim sağlamlığını garanti etmek için saflaştırma, konsantrasyon ve proses optimizasyonunu destekleyen entegre saflaştırma yetkinlikleri."
+                    "title": "Downstream Prosesleme",
+                    "desc": "Tutarlı ürün kalitesi ve güçlü üretim süreçleri sağlamak amacıyla geri kazanım, konsantrasyon, saflaştırma, polishing ve proses optimizasyonunu destekleyen entegre saflaştırma kabiliyetleri."
                 },
                 {
-                    "title": "İlaç Ürünü Üretimi (Fill-Finish)",
-                    "desc": "Klinik ve ticari tedarik için sıvı flakonları ve önceden doldurulmuş enjektörleri destekleyen çok formatlı üretim hattı ile esnek dolum-bitirme yetkinlikleri."
+                    "title": "İlaç Ürünü Üretimi",
+                    "desc": "Klinik ve ticari tedarik için sıvı flakonları ve kullanıma hazır enjektörleri destekleyen çok formatlı üretim hattı aracılığıyla esnek fill-finish kabiliyetleri."
                 },
                 {
-                    "title": "Kalite, Mevzuat ve Teknoloji Transferi",
-                    "desc": "Başarılı ticarileşmeyi sağlamak için analitik geliştirme, kalite yönetim sistemleri, mevzuat dokümantasyonu, validasyon ve teknoloji transferi için kapsamlı destek."
+                    "title": "Kalite, Düzenleyici Süreçler ve Teknoloji Transferi",
+                    "desc": "Ürünlerin başarılı şekilde ilerletilmesini sağlamak amacıyla analitik geliştirme, kalite yönetim sistemleri, düzenleyici dokümantasyon, validasyon, teknoloji transferi, üretim hazırlığı ve ticarileştirme planlaması için kapsamlı destek."
                 },
                 {
                     "title": "Eğitim ve İş Gücü Geliştirme",
-                    "desc": "Küresel biyoüretim kapasitesini güçlendirmek için aşı üretimi, GMP operasyonları, kalite güvencesi, biyogüvenlik ve biyo-işleme alanlarında özel uygulamalı eğitim programları."
+                    "desc": "Küresel biyolojik üretim kapasitesini güçlendirmek amacıyla aşı üretimi, GMP operasyonları, kalite güvencesi, biyogüvenlik, düzenleyici uyumluluk ve gelişmiş biyoprosesleme alanlarında uzmanlaşmış uygulamalı eğitim programları."
                 }
             ]
         },
         "digitalManufacturing": {
-            "title": "Dijital Üretimde Mükemmellik",
-            "desc": "Süreç verimliliğini, üretim görünürlüğünü ve ürün kalitesini artırmak için dijital teknolojiler GCMC genelinde entegre edilmiştir.",
+            "title": "Dijital Üretim Mükemmeliyeti",
+            "desc": "Dijital teknolojiler, proses verimliliğini, üretim görünürlüğünü, operasyonel performansı ve ürün kalitesini iyileştirmek amacıyla GCMC genelinde entegre edilmektedir. Araştırma, geliştirme, üretim ve tesis operasyonları genelinde dijital zekânın kullanılmasıyla GCMC; daha hızlı karar alma, gelişmiş proses tutarlılığı, artırılmış ürün kalitesi ve operasyonel dayanıklılık sağlamaktadır.",
             "points": [
-                "Yapay zeka destekli süreç izleme ve optimizasyon",
-                "Makine öğrenimi odaklı üretim analitiği",
+                "AI destekli proses izleme ve optimizasyon",
+                "Makine öğrenimi tabanlı üretim analitiği",
                 "Hesaplamalı biyoloji iş akışları",
-                "Yeni nesil dizileme (NGS) destekli Ar-Ge",
-                "Gerçek zamanlı üretim ve yardımcı tesis izleme",
-                "Akıllı tesis yönetimi ile kestirimci bakım",
-                "Veri odaklı süreç optimizasyonu",
+                "NGS destekli araştırma ve geliştirme desteği",
+                "Gerçek zamanlı üretim ve tesis hizmetleri izleme",
+                "Akıllı tesis yönetimi aracılığıyla öngörücü bakım",
+                "Veri odaklı proses optimizasyonu",
                 "Dijital kalite ve operasyon yönetimi"
             ],
             "badge": "Teknoloji Odaklı"
         },
         "sustainability": {
-            "title": "Tasarımda Sürdürülebilirlik",
-            "desc": "Sorumlu ve enerji tasarruflu üretimi desteklemek amacıyla sürdürülebilirlik, tesislerimizin her yönüne entegre edilmiştir.",
+            "title": "Tasarımla Sürdürülebilirlik",
+            "desc": "Sorumlu ve enerji verimli aşı üretimini desteklemek amacıyla sürdürülebilirlik, GCMC tasarımının ve operasyonlarının her aşamasına entegre edilmiştir. Tesis; çevresel etkiyi azaltırken dünya standartlarında üretim performansını korumak için yenilenebilir enerji çözümleri, akıllı bina yönetim sistemleri, su tasarrufu stratejileri ve enerji verimli tesis hizmetlerini bünyesinde barındırmaktadır.",
             "points": [
                 "Enerji verimliliğini artırmak için yenilenebilir enerji entegrasyonu",
-                "Yapay zeka destekli bina yönetimi ve kestirimci bakım",
-                "Enerji verimli HVAC ve yardımcı sistemler",
+                "AI destekli bina yönetimi ve öngörücü bakım",
+                "Enerji verimli HVAC ve tesis hizmetleri sistemleri",
                 "Akıllı soğutulmuş su ve basınçlı hava yönetimi",
                 "Isı pompası tabanlı enerji optimizasyonu",
-                "Su tasarrufu ve sıfır sıvı deşarjı (ZLD) planlaması",
+                "Su tasarrufu ve sıfır sıvı deşarjı planlaması",
                 "Yağmur suyu hasadı ve kaynak optimizasyonu",
-                "Sürdürülebilir tesis operasyonları için IoT tabanlı izleme"
+                "Sürdürülebilir tesis operasyonları için IoT destekli izleme"
             ],
-            "badge": "Çevre Dostu Operasyonlar"
+            "badge": "Yeşil Operasyonlar"
         },
         "qcLab": {
             "badge": "Kalite ve Uyum",
@@ -1463,67 +1603,138 @@ export const turkish = {
         "drugSubstanceTitle": "Etkin Madde Üretimi (Drug Substance)",
         "drugSubstanceDesc": "Yüksek kaliteli etken maddeler üretmek için mikrobiyal fermantasyon ve memeli hücre kültürü platformlarını destekliyoruz.",
         "opExcellence": "Operasyonel Mükemmellik",
-        "opExcellenceDesc": "Sürekli izleme ve otomatik kontroller maksimum verim ve saflık sağlar."
+        "opExcellenceDesc": "Sürekli izleme ve otomatik kontroller maksimum verim ve saflık sağlar.",
+        "gcmcTitle": "Tıbbi Karşı Önlemler İçin Küresel İş Birliği Merkezi (GCMC)",
+        "gcmcDesc1": "TechInvention'ın Tıbbi Karşı Önlemler İçin Küresel İş Birliği Merkezi (GCMC), bilimsel keşiften küresel sağlık etkisine uzanan süreci hızlandırmak üzere tasarlanmış Entegre Tam Döngülü Aşı Geliştirme ve Üretim Tesisidir.",
+        "gcmcDesc2": "Uluslararası GMP standartlarıyla uyumlu olarak geliştirilen GCMC; aşı proses geliştirme, üretim ölçek büyütme, teknoloji transferi, analitik testler, kalite sistemleri, düzenleyici destek, ilaç ürünü üretimi, dijital inovasyon ve sürdürülebilir altyapıyı tek bir entegre tesis bünyesinde bir araya getirmektedir.",
+        "bridgeTitle": "Bir Köprü Olarak GCMC",
+        "bridgeDesc1": "Bilimsel inovasyon araştırma laboratuvarlarında, üniversitelerde ve biyoteknoloji şirketlerinde başlar; ancak umut vadeden keşifleri ticari olarak uygulanabilir aşılara dönüştürmek için özel uzmanlık, gelişmiş üretim altyapısı, düzenleyici uyumluluk ve ölçeklenebilir üretim yetenekleri gereklidir.",
+        "bridgeDesc2": "GCMC, aşı geliştirme, proses optimizasyonu, üretim ölçek büyütme, teknoloji transferi, GMP üretimi, kalite güvencesi ve düzenleyici hazırlık süreçlerinde uçtan uca destek sağlayarak bu kritik boşluğu kapatmaktadır.",
+        "capabilitiesTitle": "Entegre Üretim Kabiliyetleri",
+        "capabilities": [
+            {
+                "title": "Upstream Üretim",
+                "desc": "20 L ve 100 L kapasiteli paslanmaz çelik biyoreaktör sistemleriyle donatılmış iki esnek upstream üretim ünitesi; çeşitli üretim platformlarında verimli proses geliştirme, optimizasyon ve üretim ölçek büyütme süreçlerini mümkün kılmaktadır."
+            },
+            {
+                "title": "Downstream Prosesleme",
+                "desc": "Tutarlı ürün kalitesi ve güçlü üretim süreçleri sağlamak amacıyla geri kazanım, konsantrasyon, saflaştırma, polishing ve proses optimizasyonunu destekleyen entegre saflaştırma kabiliyetleri."
+            },
+            {
+                "title": "İlaç Ürünü Üretimi",
+                "desc": "Klinik ve ticari tedarik için sıvı flakonları ve kullanıma hazır enjektörleri destekleyen çok formatlı üretim hattı aracılığıyla esnek fill-finish kabiliyetleri."
+            },
+            {
+                "title": "Kalite, Düzenleyici Süreçler ve Teknoloji Transferi",
+                "desc": "Ürünlerin başarılı şekilde ilerletilmesini sağlamak amacıyla analitik geliştirme, kalite yönetim sistemleri, düzenleyici dokümantasyon, validasyon, teknoloji transferi, üretim hazırlığı ve ticarileştirme planlaması için kapsamlı destek."
+            },
+            {
+                "title": "Eğitim ve İş Gücü Geliştirme",
+                "desc": "Küresel biyolojik üretim kapasitesini güçlendirmek amacıyla aşı üretimi, GMP operasyonları, kalite güvencesi, biyogüvenlik, düzenleyici uyumluluk ve gelişmiş biyoprosesleme alanlarında uzmanlaşmış uygulamalı eğitim programları."
+            }
+        ],
+        "digitalTitle": "Dijital Üretim Mükemmeliyeti",
+        "digitalDesc": "Dijital teknolojiler, proses verimliliğini, üretim görünürlüğünü, operasyonel performansı ve ürün kalitesini iyileştirmek amacıyla GCMC genelinde entegre edilmektedir. Araştırma, geliştirme, üretim ve tesis operasyonları genelinde dijital zekânın kullanılmasıyla GCMC; daha hızlı karar alma, gelişmiş proses tutarlılığı, artırılmış ürün kalitesi ve operasyonel dayanıklılık sağlamaktadır.",
+        "digitalPoints": [
+            "AI destekli proses izleme ve optimizasyon",
+            "Makine öğrenimi tabanlı üretim analitiği",
+            "Hesaplamalı biyoloji iş akışları",
+            "NGS destekli araştırma ve geliştirme desteği",
+            "Gerçek zamanlı üretim ve tesis hizmetleri izleme",
+            "Akıllı tesis yönetimi aracılığıyla öngörücü bakım",
+            "Veri odaklı proses optimizasyonu",
+            "Dijital kalite ve operasyon yönetimi"
+        ],
+        "greenTitle": "Tasarımla Sürdürülebilirlik",
+        "greenDesc": "Sorumlu ve enerji verimli aşı üretimini desteklemek amacıyla sürdürülebilirlik, GCMC tasarımının ve operasyonlarının her aşamasına entegre edilmiştir. Tesis; çevresel etkiyi azaltırken dünya standartlarında üretim performansını korumak için yenilenebilir enerji çözümleri, akıllı bina yönetim sistemleri, su tasarrufu stratejileri ve enerji verimli tesis hizmetlerini bünyesinde barındırmaktadır.",
+        "greenPoints": [
+            "Enerji verimliliğini artırmak için yenilenebilir enerji entegrasyonu",
+            "AI destekli bina yönetimi ve öngörücü bakım",
+            "Enerji verimli HVAC ve tesis hizmetleri sistemleri",
+            "Akıllı soğutulmuş su ve basınçlı hava yönetimi",
+            "Isı pompası tabanlı enerji optimizasyonu",
+            "Su tasarrufu ve sıfır sıvı deşarjı planlaması",
+            "Yağmur suyu hasadı ve kaynak optimizasyonu",
+            "Sürdürülebilir tesis operasyonları için IoT destekli izleme"
+        ],
+        "whyUsTitle": "Neden Bizimle İş Birliği Yapmalısınız?",
+        "whyUsPoints": [
+            "Uçtan Uca Yetkinlik",
+            "Uluslararası Kalite Standartları",
+            "Esnek Üretim",
+            "Daha Hızlı Geliştirme Süreçleri",
+            "İş Birliğine Dayalı İnovasyon",
+            "Sürdürülebilir Üretim"
+        ]
     },
     "careers": {
-        "title": "Küresel Sağlığın Geleceğini Şekillendirin",
-        "intro": "Gelişmekte olan ve küresel pazarlarda hayat kurtaran aşıları ve yenilikçi biyoterapötikleri geliştirmeye adanmış dinamik ekibimize katılın.",
+        "title": "Amacı Olan Bir Kariyer İnşa Edin",
+        "headline": "Amacı Olan Bir Kariyer İnşa Edin",
+        "intro": "Bilim, strateji ve uygulamanın bir araya gelerek sağlık alanında anlamlı bir etki yarattığı bir ekibe katılın. TechInvention'da her rol; küresel sağlık ekosistemlerinde erişilebilirliği, karşılanabilirliği ve dayanıklılığı destekleyen aşıların, biyolojik ürünlerin ve teknolojilerin geliştirilmesine katkı sağlar.",
+        "subheadline": "Bilim, strateji ve uygulamanın bir araya gelerek sağlık alanında anlamlı bir etki yarattığı bir ekibe katılın. TechInvention'da her rol; küresel sağlık ekosistemlerinde erişilebilirliği, karşılanabilirliği ve dayanıklılığı destekleyen aşıların, biyolojik ürünlerin ve teknolojilerin geliştirilmesine katkı sağlar.",
+        "submitApplication": "Başvuru Gönderin",
+        "lifeAsTechknight": "Bir Techknight Olarak Yaşam",
+        "lifeAtTitle": "Bir Techknight Olarak Yaşam",
         "whyJoinUs": {
-            "title": "Neden Bize Katılmalısınız",
+            "title": "Neden Bize Katılmalısınız?",
             "items": [
                 {
-                    "title": "Amaç odaklı çalışma",
-                    "desc": "Hayatları değiştiren sağlık çözümlerine doğrudan katkıda bulunun."
+                    "title": "Amaç Odaklı Çalışma",
+                    "desc": "Gerçek fark yaratan sağlık çözümlerine katkıda bulunun."
                 },
                 {
-                    "title": "Küresel deneyim",
-                    "desc": "Dünya genelindeki ortaklar, kurumlar ve uzmanlarla birlikte çalışın."
+                    "title": "Küresel Deneyim",
+                    "desc": "Farklı coğrafyalardaki iş ortakları, kurumlar ve uzmanlarla birlikte çalışın."
                 },
                 {
-                    "title": "Öğrenme kültürü",
-                    "desc": "Uygulamalı projeler, mentorluk ve işlevler arası iş birliği ile büyüyün."
+                    "title": "Öğrenme Kültürü",
+                    "desc": "Uygulamalı projeler, mentorluk ve fonksiyonlar arası iş birliğiyle gelişin."
                 },
                 {
-                    "title": "Sahiplenme zihniyeti",
-                    "desc": "Sorumluluk alın, fikirlere öncülük edin ve katkınızı görünür kılın."
+                    "title": "Sahiplenme Kültürü",
+                    "desc": "Sorumluluk alın, fikirlerinize liderlik edin ve katkınızı görünür kılın."
                 },
                 {
-                    "title": "İnovasyon ekosistemi",
-                    "desc": "Aşılar ve biyolojik ürünler alanında büyüyen bir biyoteknoloji şirketinin parçası olun."
+                    "title": "İnovasyon Ekosistemi",
+                    "desc": "Aşılar, biyolojik ürünler ve küresel sağlık altyapısı alanlarında faaliyet gösteren büyüyen bir biyoteknoloji şirketinin parçası olun."
                 }
             ]
         },
         "whoWeLookFor": {
-            "title": "Kimi Arıyoruz",
-            "desc": "Sorumluluk almaya hazır, hedefleri olan profesyonelleri ağırlıyoruz. İster bilim insanı, mühendis, danışman, mevzuat uzmanı veya finansçı olun, TechInvention amaçla büyüme fırsatı sunar."
+            "title": "Aradığımız Kişiler",
+            "subtitle": "Meraklı, Disiplinli ve Hedef Odaklı Yetenekler",
+            "desc": "Hedefleri olan, analitik düşünebilen ve sorumluluk almaya hazır profesyonelleri aramıza katılmaya davet ediyoruz. İster bilim insanı, mühendis, danışman, düzenleyici uzman, finans profesyoneli veya kurumsal lider olun, TechInvention size amacınız doğrultusunda gelişme fırsatı sunar.",
+            "btn": "Açık Pozisyonları İnceleyin",
+            "exploreOpenings": "Açık Pozisyonları İnceleyin"
         },
+        "exploreOpenings": "Açık Pozisyonları İnceleyin",
         "testimonials": {
-            "title": "Çalışanlarımızın Sesleri",
-            "subtitle": "TechInvention ile büyüyen çalışanlarımızın ilham verici hikayeleri.",
+            "title": "Çalışan Görüşleri",
+            "subtitle": "TechInvention ile birlikte gelişen ekip arkadaşlarımızın hikâyeleri.",
             "items": [
                 {
                     "name": "Shahnawaz Shaikh",
-                    "role": "Yönetim & İK",
+                    "role": "İdari İşler ve İnsan Kaynakları",
                     "tenure": "9+ Yıl",
-                    "quote": "10 yıl önce TechInvention'a katılarak kurumla birlikte büyüme ve yıllar içinde daha büyük sorumluluklar alma ayrıcalığına sahip oldum."
+                    "quote": "Yaklaşık 10 yıl önce İdari İşler ve İnsan Kaynakları pozisyonunda TechInvention'a katıldığımdan bu yana, organizasyonla birlikte büyüme ve yıllar içinde daha fazla sorumluluk, sahiplenme ve amaç üstlenme ayrıcalığını yaşadım. Bu ilham verici ve son derece tatmin edici yolculukta, TechInvention'ın kayda değer büyümesine ve gelişimine tanıklık etmekten ve buna katkıda bulunmaktan gurur duyuyorum."
                 },
                 {
                     "name": "Aziz Mandsaurwala",
-                    "role": "Kıdemli Müdür - Küresel İş Geliştirme",
+                    "role": "Kıdemli Müdür – Global BD",
                     "tenure": "6+ Yıl",
-                    "quote": "TechInvention'da çalışmak; bilimi, stratejiyi ve gerçek sağlık etkisini birleştiren projelerin parçası olmak demektir."
+                    "quote": "TechInvention'da çalışmak; bilimi, stratejiyi ve gerçek dünyadaki sağlık etkisini bir araya getiren projelerin parçası olmak demektir. Her görev yeni öğrenme fırsatları ve gelişim sağlar."
                 },
                 {
                     "name": "Sarang Pathak",
                     "role": "Genel Müdür",
                     "tenure": "9+ Yıl",
-                    "quote": "TechInvention'da çalışmak bana sürekli öğrenme, çeşitli sorumluluklar üstlenme ve anlamlı bir amaca katkıda bulunma fırsatı verdi."
+                    "quote": "TechInvention'da çalışmak bana sürekli öğrenme, farklı sorumluluklar üstlenme ve anlamlı çalışmalara katkıda bulunma fırsatı verdi. Burada gördüğüm güven, kazandığım deneyim ve aldığım destek, mesleki gelişimim ve özgüvenim üzerinde önemli bir rol oynadı."
                 },
                 {
                     "name": "Priya Dhawale",
-                    "role": "Müdür Yardımcısı - Küresel BD",
+                    "role": "Müdür Yardımcısı – GBD",
                     "tenure": "5+ Yıl",
-                    "quote": "TechInvention'da altı yılı aşkın süreyi tamamlamak inanılmaz derecede ödüllendirici bir kariyer yolculuğu oldu."
+                    "quote": "TechInvention'da altı yılı aşkın süredir çalışıyor olmak benim için son derece değerli bir deneyim oldu. Şirketin bir start-up'tan güçlü bir küresel varlığa sahip, büyüyen bir MSME'ye dönüşümüne tanıklık etmek ilham vericiydi. Bu süreç boyunca uluslararası iş geliştirme ve stratejik danışmanlık alanlarında çeşitli projelerde çalışma, küresel paydaşlarla iş birliği yapma ve yaşam bilimleri sektöründeki bilgilerimi sürekli geliştirme fırsatı buldum. Liderlik ekibinin ve çalışma arkadaşlarımın bana duyduğu güven, sağladığı destek ve sunduğu öğrenme fırsatları mesleki gelişimimde önemli bir rol oynadı. TechInvention'ın başarı ve inovasyon yolculuğunun devamında yer almayı sabırsızlıkla bekliyorum."
                 },
                 {
                     "name": "Nida Afreen Qureshi",
@@ -1533,126 +1744,177 @@ export const turkish = {
                 }
             ]
         },
+        "employeeVoices": {
+            "title": "Çalışan Görüşleri",
+            "subtitle": "TechInvention ile birlikte gelişen ekip arkadaşlarımızın hikâyeleri."
+        },
         "openPositions": {
             "title": "Açık Pozisyonlar",
-            "intro": "TechInvention; İş Danışmanlığı, Lisanslama, Aşı Ar-Ge, Üretim, Kalite Kontrol, Kalite Güvence, Ruhsatlandırma ve Finans alanlarında kariyer fırsatları sunar.",
-            "noPositions": "Şu anda açık bir pozisyonumuz bulunmamaktadır. Ancak her zaman üstün yetenekli profesyonelleri arıyoruz. Aşağıdan genel başvurunuzu iletebilirsiniz.",
-            "spontaneous": "Genel Başvuru Yapın"
+            "subtitle": "Farklı Fonksiyonlardaki Kariyer Fırsatlarını Keşfedin",
+            "intro": "TechInvention; İş Danışmanlığı, Lisanslama, Aşı R&D, Üretim, Kalite Kontrol (QC), Kalite Güvencesi (QA), Düzenleyici İşler, Hukuk ve IP, Finans, İnsan Kaynakları ve Kurumsal İlişkiler alanlarında kariyer fırsatları sunmaktadır.",
+            "noOpeningsTitle": "Aktif Açık Pozisyon Bulunmamaktadır",
+            "noPositions": "Şu anda açık pozisyonumuz bulunmamaktadır. Bununla birlikte, ekibimize katılacak yetenekli profesyonelleri her zaman değerlendirmekteyiz. Özgeçmişinizi aşağıdan iletebilirsiniz; uygun bir pozisyon oluştuğunda sizinle iletişime geçeceğiz.",
+            "spontaneous": "Genel Başvuru Gönderin"
         },
-        "lifeAtTitle": "TechInvention'da Yaşam",
+        "openings": {
+            "title": "Açık Pozisyonlar",
+            "subtitle": "Farklı Fonksiyonlardaki Kariyer Fırsatlarını Keşfedin",
+            "desc": "TechInvention; İş Danışmanlığı, Lisanslama, Aşı R&D, Üretim, Kalite Kontrol (QC), Kalite Güvencesi (QA), Düzenleyici İşler, Hukuk ve IP, Finans, İnsan Kaynakları ve Kurumsal İlişkiler alanlarında kariyer fırsatları sunmaktadır.",
+            "noOpenings": "Aktif Açık Pozisyon Bulunmamaktadır",
+            "noOpeningsDesc": "Şu anda açık pozisyonumuz bulunmamaktadır. Bununla birlikte, ekibimize katılacak yetenekli profesyonelleri her zaman değerlendirmekteyiz. Özgeçmişinizi aşağıdan iletebilirsiniz; uygun bir pozisyon oluştuğunda sizinle iletişime geçeceğiz.",
+            "submitGeneral": "Genel Başvuru Gönderin"
+        },
         "form": {
-            "title": "İş Başvuru Formu",
+            "badge": "Bize Katılın",
+            "title": "Başvuru Formu",
+            "joinUs": "Bize Katılın",
+            "applicationForm": "Başvuru Formu",
             "position": "Başvurulan Pozisyon",
+            "applyingPosition": "Başvurulan Pozisyon",
+            "name": "Ad Soyad",
+            "fullName": "Ad Soyad",
+            "email": "E-posta Adresi",
+            "emailAddress": "E-posta Adresi",
+            "phone": "İletişim Numarası",
+            "contactNumber": "İletişim Numarası",
             "experience": "Deneyim Yılı",
-            "company": "Mevcut Şirket / Kurum (İsteğe bağlı)",
-            "coverLetter": "Ön Yazı / Mesaj (İsteğe bağlı)",
-            "uploadResume": "Özgeçmiş Yükle (PDF, DOC) *",
-            "browseResume": "Dosyayı sürükleyip bırakın veya seçmek için tıklayın",
-            "submit": "Başvuruyu Gönder",
+            "yearsOfExperience": "Deneyim Yılı",
+            "company": "Mevcut Şirket / Kuruluş (İsteğe Bağlı)",
+            "currentCompany": "Mevcut Şirket / Kuruluş (İsteğe Bağlı)",
+            "coverLetter": "Ön Yazı / Mesaj (İsteğe Bağlı)",
+            "uploadResume": "Özgeçmiş Yükleyin (PDF, DOC)",
+            "browseResume": "Özgeçmişinizi sürükleyip bırakın veya göz atın",
+            "dragDrop": "Özgeçmişinizi sürükleyip bırakın veya göz atın",
+            "submit": "Başvuruyu Gönderin",
             "expRequired": "Lütfen deneyim yılınızı belirtiniz.",
             "fileRequired": "Lütfen özgeçmişinizi (PDF, DOC veya DOCX) formatında yükleyiniz.",
             "successTitle": "Başvurunuz Başarıyla Alındı!",
             "backToOpenings": "Tüm İlanlara Geri Dön"
         },
         "hero": {
-            "badge": "Bize Katılın"
-        }
+            "badge": "Bize Katılın",
+            "applyNow": "Başvuru Gönderin"
+        },
+        "pillars": [
+            {
+                "title": "Amaç Odaklı Çalışma",
+                "desc": "Gerçek fark yaratan sağlık çözümlerine katkıda bulunun."
+            },
+            {
+                "title": "Küresel Deneyim",
+                "desc": "Farklı coğrafyalardaki iş ortakları, kurumlar ve uzmanlarla birlikte çalışın."
+            },
+            {
+                "title": "Öğrenme Kültürü",
+                "desc": "Uygulamalı projeler, mentorluk ve fonksiyonlar arası iş birliğiyle gelişin."
+            },
+            {
+                "title": "Sahiplenme Kültürü",
+                "desc": "Sorumluluk alın, fikirlerinize liderlik edin ve katkınızı görünür kılın."
+            },
+            {
+                "title": "İnovasyon Ekosistemi",
+                "desc": "Aşılar, biyolojik ürünler ve küresel sağlık altyapısı alanlarında faaliyet gösteren büyüyen bir biyoteknoloji şirketinin parçası olun."
+            }
+        ]
     },
     "training": {
-        "title": "Eğitim Programları",
-        "desc": "Aşı geliştirme ve GMP standartlarında üretime yönelik özel eğitim programları. Sektörün ihtiyaçlarına göre uyarlanmış uygulamalı eğitimlerle profesyonelleri ve kurumları biyoteknolojide mükemmelliğe hazırlıyoruz.",
+        "title": "Aşı Geliştirme ve GMP Üretimine Yönelik Özelleştirilmiş Eğitimler",
+        "desc": "Sektörle uyumlu, uygulamalı öğrenme yaklaşımımız sayesinde profesyonelleri aşı geliştirme ve GMP üretiminin sürekli değişen gereksinimlerine hazırlıyoruz. Kapsamlı eğitim programımız; biyogüvenlik ve biyoemniyet, GMP üretimi, analitik testler, kalite güvencesi, küresel düzenleyici gereklilikler, klinik çalışma yönetimi ve farmakovijilans konularını kapsamaktadır.",
+        "viewModules": "Modülleri Görüntüle",
+        "subtitle": "Aşı Geliştirme ve GMP Üretimine Yönelik Özelleştirilmiş Eğitimler",
         "modules": [
             {
-                "title": "İyi Üretim Uygulamaları (GMP) Temelleri",
-                "desc": "İlaç ve biyofarmasötik üretiminde ürün kalitesini, hasta güvenliğini ve mevzuat uyumunu yöneten temel GMP ilkelerini öğrenin.",
+                "title": "GMP Uyumluluğu",
+                "desc": "Üretim ve test operasyonlarında gerekli olan GMP ilkeleri, düzenleyici beklentiler, kalite sistemleri ve uyumluluk kültürü konusunda sağlam bir temel oluşturun.",
                 "focusAreas": [
-                    "DSÖ (WHO), US FDA ve ICH Kılavuzları",
+                    "WHO, US FDA ve ICH Kılavuzları",
                     "İyi Dokümantasyon Uygulamaları (GDP)",
                     "Personel Hijyeni ve Güvenliği",
-                    "Tesis Tasarımı, Malzeme ve Personel Akışları",
-                    "Kalite Kültürü ve Mevzuat Uyumu"
+                    "Tesis Tasarımı ile Malzeme/Personel Akışları",
+                    "Kalite Kültürü ve Uyumluluk Yaklaşımı"
                 ]
             },
             {
                 "title": "Kalite Yönetim Sistemleri (QMS)",
-                "desc": "Ürün yaşam döngüsü boyunca ürün tutarlılığını, mevzuat uyumunu ve sürekli iyileştirmeyi sağlayan kalite sistemlerinde uzmanlık kazanın.",
+                "desc": "Ürün yaşam döngüsü boyunca ürün tutarlılığını, düzenleyici uyumluluğu ve sürekli iyileştirmeyi sağlayan kalite sistemleri konusunda uzmanlık kazanın.",
                 "focusAreas": [
                     "Sapma ve Olay Yönetimi",
-                    "DÖFİ (CAPA) ve Kök Neden Araştırmaları",
+                    "CAPA ve Kök Neden Araştırmaları",
                     "Değişiklik Kontrol Sistemleri",
                     "Kalite Risk Yönetimi (ICH Q9)",
-                    "OOS (Spesifikasyon Dışı) ve OOT Araştırmaları"
+                    "OOS ve OOT Araştırmaları"
                 ]
             },
             {
                 "title": "Analitik ve Kalite Kontrol Teknikleri",
-                "desc": "İlaç, biyoteknoloji ve aşı test laboratuvarlarında kullanılan analitik metodolojiler ve kalite kontrol uygulamalarında yetkinlik kazanın.",
+                "desc": "İlaç, biyoteknoloji ve aşı test laboratuvarlarında kullanılan analitik metodolojiler ve kalite kontrol uygulamaları hakkında deneyim kazanın.",
                 "focusAreas": [
                     "HPLC ve Kromatografik Teknikler",
                     "ELISA ve Protein Miktar Tayini",
                     "Endotoksin Testi (LAL)",
                     "Moleküler Karakterizasyon Yöntemleri",
-                    "Veri Analizi ve Sonuç Yorumlama"
+                    "Veri Analizi ve Sonuçların Yorumlanması"
                 ]
             },
             {
                 "title": "Moleküler Biyoloji ve İleri Test Yöntemleri",
-                "desc": "Ürün karakterizasyonu, kontaminasyon izleme ve kalite değerlendirmesinde kullanılan modern moleküler biyoloji tekniklerini kavrayın.",
+                "desc": "Ürün karakterizasyonu, kontaminasyon izleme ve kalite değerlendirmesinde kullanılan modern moleküler biyoloji tekniklerini öğrenin.",
                 "focusAreas": [
-                    "DNA Ekstraksiyonu ve Saflaştırma",
-                    "PCR ve Gerçek Zamanlı PCR (RT-PCR)",
-                    "Konakçı Hücre DNA Analizi",
+                    "DNA Ekstraksiyonu ve Saflaştırılması",
+                    "PCR ve Gerçek Zamanlı PCR",
+                    "Konak Hücre DNA Analizi",
                     "Agaroz Jel Elektroforezi",
-                    "Moleküler Veri Yorumlama"
+                    "Moleküler Verilerin Yorumlanması"
                 ]
             },
             {
                 "title": "Mikrobiyoloji ve Sterilite Güvencesi",
-                "desc": "Düzenlemeye tabi üretim ortamlarında kontaminasyon kontrolünü ve ürün güvenliğini destekleyen kritik mikrobiyolojik uygulamaları öğrenin.",
+                "desc": "Düzenlemelere tabi üretim ortamlarında kontaminasyon kontrolünü ve ürün güvenliğini destekleyen temel mikrobiyolojik uygulamaları öğrenin.",
                 "focusAreas": [
-                    "Sterilite Testleri",
-                    "Çevresel İzleme Programları",
-                    "Biyoyük (Bioburden) Değerlendirmesi",
+                    "Sterilite Testi",
+                    "Çevresel İzleme",
+                    "Biyoyük Değerlendirmesi",
                     "Mikoplazma Tespiti",
                     "Aseptik Teknikler ve Kontaminasyon Kontrolü"
                 ]
             },
             {
-                "title": "Aseptik İşleme ve Temiz Oda Operasyonları",
-                "desc": "Temiz oda davranış kuralları, steril üretim uygulamaları ve çevresel kontrol stratejilerinin kapsamlı şekilde kavranması.",
+                "title": "Aseptik Proses ve Temiz Oda Operasyonları",
+                "desc": "Temiz oda davranış kuralları, steril üretim uygulamaları ve çevresel kontrol stratejileri hakkında kapsamlı bilgi edinin.",
                 "focusAreas": [
                     "Temiz Oda Sınıflandırmaları",
-                    "Önlük Giyme Kalifikasyonu ve Validasyonu",
-                    "Besiyeri Doldurma (Media Fill) Simülasyonları",
+                    "Giyinme Kalifikasyonu ve Validasyonu",
+                    "Media Fill Simülasyonları",
                     "Çevresel İzleme Programları",
                     "Mikrobiyal Kontrol Stratejileri"
                 ]
             },
             {
                 "title": "Validasyon, Kalifikasyon ve Yaşam Döngüsü Yönetimi",
-                "desc": "Proses tutarlılığını ve mevzuat uyumunu kanıtlamak için gereken kalifikasyon ve validasyon ilkelerinde uzmanlaşın.",
+                "desc": "Proses tutarlılığını ve düzenleyici uyumluluğu göstermek için gerekli kalifikasyon ve validasyon ilkelerinde uzmanlaşın.",
                 "focusAreas": [
-                    "DQ, IQ, OQ ve PQ Uygulaması",
-                    "Proses Validasyon İlkeleri",
+                    "DQ, IQ, OQ ve PQ Uygulamaları",
+                    "Proses Validasyonu İlkeleri",
                     "Temizlik Validasyonu",
-                    "Bilgisayarlı Sistem Validasyonu (CSV)",
+                    "Bilgisayar Sistemleri Validasyonu (CSV)",
                     "Ekipman Yaşam Döngüsü Yönetimi"
                 ]
             },
             {
                 "title": "Veri Bütünlüğü ve Dijital Uyumluluk",
-                "desc": "Güçlü dokümantasyon ve elektronik kayıt yönetimi uygulamalarıyla veri güvenilirliği, izlenebilirlik ve mevzuat uyumunu sağlayın.",
+                "desc": "Güçlü dokümantasyon ve elektronik kayıt yönetimi uygulamalarıyla verilerin güvenilirliğini, izlenebilirliğini ve uyumluluğunu sağlayın.",
                 "focusAreas": [
                     "ALCOA+ İlkeleri",
-                    "Denetim İzi (Audit Trail) İncelemesi",
+                    "Denetim İzi İncelemesi",
                     "Elektronik Veri Yönetimi",
-                    "BMR / BPR Dokümantasyonu",
+                    "BMR/BPR Dokümantasyonu",
                     "Veri Yönetişimi ve Uyumluluk"
                 ]
             },
             {
                 "title": "Teknoloji Transferi ve Ölçek Büyütme Stratejileri",
-                "desc": "Süreçlerin geliştirme aşamasından ticari üretime başarılı bir şekilde aktarılmasında yer alan kritik unsurları öğrenin.",
+                "desc": "Geliştirme aşamasından ticari üretime proseslerin başarılı şekilde aktarılmasında yer alan kritik unsurları anlayın.",
                 "focusAreas": [
                     "Teknoloji Transferi Yaşam Döngüsü",
                     "Ölçek Büyütme Risk Değerlendirmesi",
@@ -1662,82 +1924,82 @@ export const turkish = {
                 ]
             },
             {
-                "title": "Mevzuat İstihbaratı ve Denetim Hazırlığı",
-                "desc": "Küresel düzenlemeleri ve denetçi beklentilerini anlayarak denetimlere ve teftişlere profesyonelce hazırlanın.",
+                "title": "Düzenleyici İstihbarat ve Denetim Hazırlığı",
+                "desc": "Küresel düzenlemeler ve düzenleyici beklentileri anlayarak denetim ve teftişlere hazırlanın.",
                 "focusAreas": [
-                    "DSÖ, EMA ve US FDA Beklentileri",
+                    "WHO, EMA ve US FDA Beklentileri",
                     "Denetim ve Teftiş Hazırlığı",
-                    "Mevzuat Dokümantasyonu",
+                    "Düzenleyici Dokümantasyon",
                     "Kalite Metrikleri ve Trend Analizi",
-                    "Mevzuat Uyum Stratejileri"
+                    "Düzenleyici Uyum Stratejileri"
                 ]
             },
             {
-                "title": "Sektörel Hazırlık ve Mesleki Gelişim",
-                "desc": "Gerçek dünya uygulamaları ve kalite odaklı problem çözme yoluyla akademik öğrenim ile endüstriyel uygulama arasındaki köprüyü kurun.",
+                "title": "Sektöre Hazırlık ve Mesleki Gelişim",
+                "desc": "Gerçek dünya uygulamaları ve kalite odaklı problem çözme yaklaşımlarıyla akademik öğrenim ile endüstriyel uygulamalar arasındaki boşluğu kapatın.",
                 "focusAreas": [
                     "GMP Simülasyonları ve Vaka Çalışmaları",
-                    "Bilimsel Literatür Taraması",
+                    "Bilimsel Literatür İncelemesi",
                     "Teknik Sunumlar",
-                    "Laboratuvar İnceleme Egzersizleri",
-                    "Kariyer ve İş Gücü Yetkinliği"
+                    "Laboratuvar Araştırma Uygulamaları",
+                    "Kariyer ve İş Gücüne Hazırlık"
                 ]
             },
             {
-                "title": "Laboratuvar Mükemmelliği ve Bilimsel Problem Çözme",
-                "desc": "Analitik güvenilirliği ve operasyonel verimliliği artırmak için sistematik laboratuvar operasyonları ve problem çözme yaklaşımı geliştirin.",
+                "title": "Laboratuvar Mükemmeliyeti ve Bilimsel Problem Çözme",
+                "desc": "Analitik güvenilirliği ve operasyonel verimliliği artırmak amacıyla laboratuvar operasyonları, sorun giderme ve bilimsel karar verme süreçlerine sistematik bir yaklaşım geliştirin.",
                 "focusAreas": [
-                    "Laboratuvar İyi Uygulamaları",
+                    "Laboratuvar En İyi Uygulamaları",
                     "Bilimsel Problem Çözme",
-                    "Analitik Metot Sorun Giderme",
+                    "Analitik Yöntemlerde Sorun Giderme",
                     "Laboratuvar Hatalarının Araştırılması",
                     "Eleştirel Düşünme ve Karar Verme"
                 ]
             },
             {
-                "title": "Aşı Üretimi ve Proses Anlayışı",
-                "desc": "Ürün güvenliği, etkinliği ve tutarlılığını sağlayan aşı üretim süreçleri, kritik kalite özellikleri ve proses kontrolleri hakkında derinlemesine bilgi edinin.",
+                "title": "Aşı Üretimi ve Proseslerin Anlaşılması",
+                "desc": "İlaç ve aşı üretim süreçleri, ürün güvenliğini, etkinliğini ve tutarlılığını sağlayan kritik kalite özellikleri ile proses kontrolleri hakkında bilgi edinin.",
                 "focusAreas": [
                     "İlaç Ürünü ve Aşı Üretimine Genel Bakış",
-                    "Kritik Proses Parametreleri (CPP)",
-                    "Kritik Kalite Nitelikleri (CQA)",
-                    "Proses İzleme ve Kontrol",
-                    "Üretim Sapmaları ve Araştırmalar"
+                    "Kritik Proses Parametreleri (CPP'ler)",
+                    "Kritik Kalite Özellikleri (CQA'lar)",
+                    "Proses İzleme ve Kontrolü",
+                    "Üretim Sapmaları ve Araştırmaları"
                 ]
             },
             {
-                "title": "Bilimsel İletişim ve Dokümantasyon Mükemmelliği",
-                "desc": "Düzenlemeye tabi ortamlar ve disiplinler arası iş birliği için gerekli teknik iletişim ve dokümantasyon becerilerini güçlendirin.",
+                "title": "Bilimsel İletişim ve Dokümantasyonda Mükemmeliyet",
+                "desc": "Düzenlemelere tabi ortamlarda ve fonksiyonlar arası iş birliğinde gerekli olan teknik iletişim ve dokümantasyon becerilerinizi geliştirin.",
                 "focusAreas": [
                     "Teknik Rapor Yazımı",
-                    "SOP Hazırlama ve İnceleme",
+                    "SOP Hazırlama ve Gözden Geçirme",
                     "Bilimsel Sunum Becerileri",
-                    "Dokümantasyon İnceleme Pratikleri",
-                    "Ruhsatlandırma Yazım Temelleri"
+                    "Dokümantasyon Gözden Geçirme Uygulamaları",
+                    "Düzenleyici Yazımın Temelleri"
                 ]
             },
             {
-                "title": "Biyofarmasötik Kalite Kontrolde Gelişen Teknolojiler",
-                "desc": "Aşı ve ilaç kalite değerlendirmesinin geleceğini şekillendiren modern teknolojileri ve analitik gelişmeleri keşfedin.",
+                "title": "Biyofarmasötik Kalite Kontrolünde Gelişen Teknolojiler",
+                "desc": "İlaç ve aşı kalite değerlendirmesinin geleceğini şekillendiren modern teknolojileri ve analitik gelişmeleri keşfedin.",
                 "focusAreas": [
                     "İleri Analitik Teknikler",
-                    "KK Laboratuvarlarında Otomasyon",
+                    "QC Laboratuvarlarında Otomasyon",
                     "Dijital Kalite Sistemleri",
-                    "Laboratuvar Bilişimi (LIMS)",
-                    "Biyofarmasötik Test Trendleri"
+                    "Laboratuvar Bilişim Sistemleri (LIMS)",
+                    "Biyofarmasötik Testlerde Güncel Eğilimler"
                 ]
             }
         ],
-        "unopsBiosafety": "Laboratuvar biyogüvenliği, aseptik teknikler ve patojenlerle güvenli çalışma konularında yapılandırılmış eğitim.",
-        "unopsVaccineAnalytics": "Aşı analitiği, kalite kontrol testleri ve ileri analitik yöntemler alanında kapasite geliştirme.",
-        "rcbBioprocessing": "Biyoproses temelleri, fermantasyon ve upstream-downstream operasyonlarını kapsayan kapsamlı eğitim.",
+        "recognitionTitle": "Takdir ve Tanınma",
+        "testimonialsTitle": "Katılımcı Görüşleri",
+        "successfulPrograms": "Başarıyla Tamamlanan Programlar",
+        "unopsBiosafetyTitle": "UNOPS için Biyogüvenlik ve Biyoemniyet Eğitimi",
+        "unopsBiosafety": "Biyogüvenlik, biyoemniyet ve biyolojik muhafaza uygulamalarına yönelik yapılandırılmış bir eğitim verilmiştir. Program, modern biyomedikal laboratuvarları için teknik bilgiyi pratik risk yönetimi yaklaşımlarıyla birleştirmiştir. Güvenli, uyumlu ve sorumlu bilimsel operasyonlar için kurumsal kapasitenin geliştirilmesine katkı sağlamaktadır.",
+        "unopsVaccineAnalyticsTitle": "UNOPS için Aşı Analitiği Eğitimi",
+        "unopsVaccineAnalytics": "Analitik bilim ve ürün değerlendirmesine odaklanan eğitimler sayesinde aşı geliştirme yetkinliği güçlendirilmiştir. Program; kritik kalite özellikleri, analitik yöntemler, testlerin önemi ve veri yorumlama konularında katılımcıların bilgi düzeyini geliştirmiştir.",
+        "rcbBioprocessingTitle": "Regional Centre for Biotechnology (RCB)'de İleri Biyoprosesleme Eğitimi",
+        "rcbBioprocessing": "Eğitim kapsamında upstream ve downstream proseslerin temelleri, Kalite Kontrol (QC), Kalite Güvencesi (QA) ve İyi Üretim Uygulamaları (GMP) ele alınmıştır. Oturumlar ayrıca çizgi ekim (streaking) ve çalkalamalı erlen (shake-flask) teknikleri, fermantasyon operasyonları, aşı üretim iş akışları ve QC laboratuvar uygulamalarına yönelik uygulamalı eğitimler içermiş; katılımcıların temel biyoprosesleme kavramlarını gerçek sektör uygulamalarıyla ilişkilendirmesine yardımcı olmuştur.",
         "testimonials": [
-            {
-                "author": "Dr. Meseret Habtamu",
-                "role": "Araştırmacı – Aşı Analitiği",
-                "org": "Armauer Hansen Araştırma Enstitüsü",
-                "feedback": "Eğitim, araştırma altyapımı pratik uygulamalarla birleştirdi; yöntem validasyonu ve aşı kalite kontrolüne odaklandı."
-            },
             {
                 "author": "Mr. Hailu Ashenafi",
                 "role": "Kalite Güvence Kıdemli Özel Danışmanı",
@@ -1751,113 +2013,117 @@ export const turkish = {
                 "feedback": "Katı GMP uyumunu sağlamak için veri bütünlüğünü (ALCOA+ ilkeleri) ve İstatistiksel Süreç Kontrolünü uygulamayı öğrendim."
             },
             {
-                "author": "Dr. Jaleta Shuka",
-                "role": "Aşı Kalite Güvence Ekip Lideri",
-                "org": "Ulusal Veterinerlik Enstitüsü, Etiyopya",
-                "feedback": "Eğitim, teorik temel ile modern GMP tesislerinde pratik deneyimin mükemmel bir kombinasyonunu sundu."
+                "author": "Dr. Meseret Habtamu",
+                "role": "Araştırmacı – Aşı Analitiği",
+                "org": "Armauer Hansen Research Institute",
+                "feedback": "Bu eğitim, araştırma geçmişim ile uygulamalı çalışmaları bir araya getirerek gerçek hayatta kalite sistemlerinin ve düzenleyici uyumluluğun önemini ortaya koydu."
             },
             {
-                "author": "Mr. Lami Bikila Kelbessa",
+                "author": "Sayın Lami Bikila Kelbessa",
                 "role": "Kalite Kontrol Kimyageri",
                 "org": "Africure Pharmaceuticals Manufacturing Ethiopia PLC.",
-                "feedback": "Bu program, özellikle Kalite Kontrol ve GMP tabanlı testler konusunda aşı üretimindeki analitik yetkinliğimi önemli ölçüde artırdı."
+                "feedback": "Bu program, özellikle Kalite Kontrol (QC) ve GMP tabanlı testler konusunda aşı üretimine yönelik analitik yetkinliğimi önemli ölçüde geliştirdi."
+            },
+            {
+                "author": "Dr. Jaleta Shuka",
+                "role": "Aşı Kalite Güvencesi Ekip Lideri",
+                "org": "National Veterinary Institute, Ethiopia",
+                "feedback": "Eğitim, teorik bilgi ile uygulamayı mükemmel bir şekilde bir araya getirerek aşı kalitesi, güvenliği ve etkinliği konusundaki anlayışımı önemli ölçüde geliştirdi"
             }
-        ],
-        "unopsBiosafetyTitle": "UNOPS İçin Biyogüvenlik ve Biyoemniyet Eğitimi",
-        "unopsVaccineAnalyticsTitle": "UNOPS İçin Aşı Analitiği Eğitimi",
-        "rcbBioprocessingTitle": "Bölgesel Biyoteknoloji Merkezi'nde (RCB) İleri Biyo-İşleme Kursu"
+        ]
     },
     "productsDocs": {
-        "title": "Ürünler ve Aşılar",
-        "desc": "Dünya genelindeki kritik halk sağlığı ihtiyaçlarını karşılamak üzere tasarlanmış kapsamlı aşı ve biyolojik ürün portföyü.",
+        "title": "Küresel Sağlık İçin Yenilikçi Ürünler",
+        "desc": "Sağlık hizmetlerini dünya genelinde erişilebilir, güvenilir ve uygun maliyetli hâle getirmek üzere tasarlanmış yüksek kaliteli aşılar, biyolojik ürünler ve tanı çözümlerinden oluşan geniş ürün yelpazemizi keşfedin.",
+        "productDetailsTitle": "Ürün Detayları",
         "vaccines": [
             {
                 "name": "TdaPgen",
                 "subtitle": "Kombine Tetanoz Toksoidi, Azaltılmış Difteri Toksoidi ve Azaltılmış Rekombinant Boğmaca Aşısı",
                 "composition": [
-                    "Her 0,5 mL'lik tek doz şunları içerir:",
-                    "• Tetanoz Toksoidi — 7.5 Lf",
-                    "• Difteri Toksoidi — 2.0 Lf",
+                    "Her 0,5 mL tek doz şunları içerir:",
+                    "• Tetanoz Toksoidi — 7,5 Lf",
+                    "• Difteri Toksoidi — 2,0 Lf",
                     "• Bordetella pertussis antijenleri:",
                     "• Rekombinant Boğmaca Toksini (rPT) — 2 µg",
-                    "• Filamentöz Hemaglutinin (FHA) — 5 µg"
+                    "• Filamentöz Hemaglütinin (FHA) — 5 µg"
                 ],
-                "pack": "0.5 mL Önceden Doldurulmuş Enjektör",
-                "use": "4 yaş ve üzeri bireylerde difteri, tetanoz ve boğmacaya karşı aktif rapel bağışıklama."
+                "pack": "0,5 mL Kullanıma Hazır Enjektör",
+                "use": "4 ila 65 yaş arasındaki bireylerde difteri, tetanoz ve boğmacaya karşı aktif rapel bağışıklama amacıyla kullanılır."
             },
             {
-                "name": "Suçiçeği Aşısı, Canlı Atenüe",
+                "name": "Canlı Atenüe Varisella Aşısı",
                 "subtitle": "",
                 "composition": [
-                    "Her 0,5 mL'lik tek doz şunları içerir:",
-                    "• Canlı Atenüe Varisella-Zoster Virüsü (Oka suşu) — 3,3 ila 4,5 lg PFU",
-                    "• İnsan diploid (SV-1) hücrelerinde üretilmiştir",
-                    "• ATCC'den temin edilen uluslararası standart virüs suşu",
-                    "• Virüs titresi kurum içi referans kullanılarak test edilmiştir"
+                    "Her 0,5 mL tek doz şunları içerir:",
+                    "• Canlı atenüe Varisella-Zoster Virüsü (Oka suşu) — doz başına 0,5 mL'de 3,3 ila 4,5 lg PFU",
+                    "• İnsan diploid (SV-1) hücrelerinde üretilmiştir.",
+                    "• Uluslararası standart virüs suşu ATCC'den temin edilmiştir.",
+                    "• Virüs titresi şirket içi referans kullanılarak test edilmiştir."
                 ],
-                "pack": "Flakon ve Enjeksiyonluk Su (WFI)",
-                "use": "12 ay ve üzeri bireylerde suçiçeği enfeksiyonuna karşı aktif bağışıklama."
+                "pack": "Flakon ve WFI",
+                "use": "1 yaş (12 ay) ile 12 yaş arasındaki bireylerde varisella enfeksiyonuna karşı aktif bağışıklama amacıyla kullanılır."
             },
             {
                 "name": "İnaktive Hepatit A Aşısı (Adsorbe) I.P.",
                 "subtitle": "",
                 "composition": [
-                    "Her 0,5 mL'lik tek doz şunları içerir:",
+                    "Her 0,5 mL tek doz şunları içerir:",
                     "• İnaktive HAV antijeni (TZ84 suşu)¹ — 250 U",
-                    "• Alüminyum Hidroksit olarak Alüminyum — 0,175 ila 0,31 mg",
-                    "• Disodyum Hidrojen Fosfat — k.m.",
+                    "• Alüminyum (Alüminyum Hidroksit olarak) — 0,175 ila 0,31 mg",
+                    "• Disodyum Hidrojen Fosfat — q.s.",
                     "• Sodyum Klorür — 4,5 mg",
-                    "• Sodyum Dihidrojen Fosfat — k.m.",
-                    "• Enjeksiyonluk Su — 0,5 mL'ye k.m.",
-                    "• ¹ İnsan Diploid Hücrelerinde üretilmiştir"
+                    "• Sodyum Dihidrojen Fosfat — q.s.",
+                    "• Water for Injection — q.s. to 0.5 mL",
+                    "• ¹ İnsan Diploid Hücrelerinde Üretilmiştir"
                 ],
-                "pack": "Flakon / Önceden Doldurulmuş Enjektör",
-                "use": "Hepatit A virüsünün neden olduğu enfeksiyona karşı aktif bağışıklama."
+                "pack": "Flakon / Kullanıma Hazır Enjektör",
+                "use": "Hepatit A virüsünün neden olduğu enfeksiyona karşı aktif bağışıklama amacıyla kullanılır."
             },
             {
                 "name": "Trivalan İnfluenza Aşısı",
                 "subtitle": "",
                 "composition": [
-                    "Her 0,5 mL'lik tek doz şunları içerir:",
-                    "• Dünya Sağlık Örgütü'nün (WHO) yıllık önerilerine uygun olarak ilgili grip mevsimi için seçilen her influenza virüsü suşunun 15 µg hemaglutinin (HA) antijeni."
+                    "Her 0,5 mL tek doz şunları içerir:",
+                    "• Uygulanacak Kuzey veya Güney Yarımküre influenza sezonu için Dünya Sağlık Örgütü (WHO) tarafından yıllık olarak önerilen influenza virüs suşlarının her birine ait 15 µg hemaglütinin (HA) içerir."
                 ],
-                "pack": "Önceden Doldurulmuş Enjektör",
-                "use": "18 yaş ve üzeri yetişkinlerde spesifik grip virüsü suşlarının neden olduğu hastalığın önlenmesi."
+                "pack": "Kullanıma Hazır Enjektör",
+                "use": "18 yaş ve üzerindeki yetişkinlerde influenza hastalığının önlenmesine yönelik aktif bağışıklama amacıyla kullanılır."
             }
         ],
         "badges": [
             {
                 "title": "Erişim Odaklı",
-                "desc": "Öncelikli pazarlarda temel aşıların erişilebilirliğini desteklemek üzere tasarlanmıştır."
+                "desc": "Öncelikli pazarlarda temel aşıların erişilebilirliğini desteklemek üzere geliştirilmiştir."
             },
             {
                 "title": "Pazara Hazır",
-                "desc": "Ruhsatlı ve piyasa onaylı aşı adaylarına odaklanmıştır."
+                "desc": "Düzenleyici onay almış ve pazara sunulmaya hazır aşı adaylarına odaklanmaktadır."
             },
             {
-                "title": "Ortaklık Odaklı",
-                "desc": "Kurumsal, ticari ve halk sağlığı iş birlikleri için geliştirilmiştir."
+                "title": "İş Birliği Odaklı",
+                "desc": "Kurumsal, ticari ve halk sağlığına yönelik iş birlikleri için tasarlanmıştır."
             }
         ],
         "adverseReporting": {
             "title": "Advers Olay Bildirimi",
-            "desc": "Sorularınız veya bir Advers Olayı (AE) bildirmek için lütfen İlaç Güvenliliği ve Advers Olay ekibimizle iletişime geçin.",
+            "desc": "Herhangi bir sorunuz varsa veya bir advers olayı bildirmek istiyorsanız, lütfen Advers Olay (AE) Bildirim ekibimizle iletişime geçin:",
             "phone": "18008902590",
             "email": "feedback@techinvention.biz",
             "note": "Hasta güvenliği ve sağlığı en temel önceliğimizdir.",
-            "privacyNote": "Gizliliğiniz bizim için önemlidir. Tüm advers olay bildirimleri sıkı bir gizlilikle ele alınır. Kişisel bilgiler korunur ve yalnızca güvenlik izleme amacıyla kullanılır."
+            "privacyNote": "Gizliliğiniz bizim için önemlidir. Tüm AE bildirimleri kesin gizlilik içinde ele alınacaktır. Kişisel bilgiler korunur ve yalnızca güvenlilik izleme amacıyla kullanılır."
         },
         "adverseEvents": {
-            "title": "Advers Olay Bildirimi (Yan Etki Bildirimi)",
-            "contactText": "Herhangi bir sorunuz veya advers olay bildiriminiz için lütfen farmakovijilans ekibimizle iletişime geçin:",
+            "title": "Advers Olay Bildirimi",
+            "contactText": "Herhangi bir sorunuz varsa veya bir advers olayı bildirmek istiyorsanız, lütfen Advers Olay (AE) Bildirim ekibimizle iletişime geçin:",
             "phoneLabel": "Telefon:",
             "emailLabel": "E-posta:",
             "downloadLabel": "Bildirim Formunu İndirin:",
-            "downloadLink": "Advers Olay Bildirim Formu",
-            "downloadFollowUp": "ve doldurduğunuz formu yukarıda belirtilen e-posta adresine gönderin.",
-            "privacy1": "Gizliliğiniz bizim için en yüksek önceliğe sahiptir.",
-            "privacy2": "Tüm advers olay raporları kesin bir gizlilikle ele alınır.",
-            "privacy3": "Kişisel bilgiler korunur ve yalnızca ilaç güvenliği takibi amacıyla kullanılır."
+            "downloadLink": "AE Bildirim Formunu",
+            "downloadFollowUp": "doldurarak yukarıda belirtilen e-posta adresine gönderin.",
+            "privacy1": "Gizliliğiniz bizim için önemlidir.",
+            "privacy2": "Tüm AE bildirimleri kesin gizlilik içinde ele alınacaktır.",
+            "privacy3": "Kişisel bilgiler korunur ve yalnızca güvenlilik izleme amacıyla kullanılır."
         }
     },
     "contactDocs": {
@@ -1872,16 +2138,20 @@ export const turkish = {
         "email": "connect@techinvention.biz"
     },
     "products": {
-        "title": "Ürün Portföyü",
-        "subtitle": "Aşılar, biyoterapötikler ve tanı platformları",
-        "desc": "Küresel sağlık ihtiyaçlarına yönelik onaylı ve geliştirme aşamasındaki ürünlerimiz.",
+        "title": "Ürünler",
+        "subtitle": "Küresel Sağlık İçin Yenilikçi Ürünler",
+        "desc": "Sağlık hizmetlerini dünya genelinde erişilebilir, güvenilir ve uygun maliyetli hâle getirmek üzere tasarlanmış yüksek kaliteli aşılar, biyolojik ürünler ve tanı çözümlerinden oluşan geniş ürün yelpazemizi keşfedin.",
         "heroTitle": "Küresel Sağlık İçin Yenilikçi Ürünler",
-        "heroDesc": "Dünya genelindeki kritik ihtiyaçları karşılamak üzere geliştirilmiş yüksek kaliteli aşılar, biyoterapötikler ve tanı ürünleri portföyümüzü keşfedin.",
-        "explorePortfolio": "Portföyü İnceleyin",
+        "heroDesc": "Sağlık hizmetlerini dünya genelinde erişilebilir, güvenilir ve uygun maliyetli hâle getirmek üzere tasarlanmış yüksek kaliteli aşılar, biyolojik ürünler ve tanı çözümlerinden oluşan geniş ürün yelpazemizi keşfedin.",
+        "explorePortfolio": "Portföyü Keşfedin",
+        "productDetailsTitle": "Ürün Detayları",
+        "productName": "Ürün Adı",
+        "labelComposition": "Etiket Bileşimi",
+        "pack": "Ambalaj",
+        "therapeuticUse": "Terapötik Kullanım",
         "presentation": "Sunum / Ambalaj",
         "indication": "Endikasyon",
         "composition": "Bileşim ve İçerik",
-        "therapeuticUse": "Terapötik Kullanım",
         "diagFeat1": "Hasta Başı Hızlı Testler",
         "diagFeat2": "Yüksek Duyarlılık ve Özgüllük",
         "diagFeat3": "Uygun Maliyetli Çözümler",
@@ -1898,11 +2168,11 @@ export const turkish = {
         "sampleType": "Numune Türü",
         "applications": "Laboratuvar ve Saha Uygulamaları",
         "accessOriented": "Erişim Odaklı",
-        "accessOrientedDesc": "Öncelikli pazarlarda temel aşıların mevcudiyetini desteklemek için geliştirildi.",
+        "accessOrientedDesc": "Öncelikli pazarlarda temel aşıların erişilebilirliğini desteklemek üzere geliştirilmiştir.",
         "marketReady": "Pazara Hazır",
-        "marketReadyDesc": "Ruhsatlandırılmış ve pazara sunulmaya hazır aşı adaylarına odaklanmıştır.",
-        "partnershipLed": "Ortaklık Odaklı",
-        "partnershipLedDesc": "Kurumsal, ticari ve halk sağlığı iş birlikleri için özel olarak tasarlandı.",
+        "marketReadyDesc": "Düzenleyici onay almış ve pazara sunulmaya hazır aşı adaylarına odaklanmaktadır.",
+        "partnershipLed": "İş Birliği Odaklı",
+        "partnershipLedDesc": "Kurumsal, ticari ve halk sağlığına yönelik iş birlikleri için tasarlanmıştır.",
         "animalTesting": "Kapsamlı Hayvan Sağlığı Çözümleri",
         "advancedDiagnosticsFor": "için Gelişmiş Tanı Çözümleri: ",
         "animalCare": "Hayvan Bakımı ve Sağlığı",
@@ -1921,23 +2191,81 @@ export const turkish = {
                 "title": "Zoonotik Hastalık Gözetimi",
                 "desc": "Tek Sağlık (One Health) çerçevesinde türler arası patojen bulaşmasının erken tespiti."
             }
-        ]
+        ],
+        "commercialVaccines": [
+            {
+                "name": "Ürün Adı: TdaPgen",
+                "subtitle": "Kombine Tetanoz Toksoidi, Azaltılmış Difteri Toksoidi ve Azaltılmış Rekombinant Boğmaca Aşısı",
+                "composition": "Her 0,5 mL tek doz şunları içerir:\r\nTetanoz Toksoidi — 7,5 Lf\r\nDifteri Toksoidi — 2,0 Lf\r\nBordetella pertussis antijenleri:\r\nRekombinant Boğmaca Toksini (rPT) — 2 µg\r\nFilamentöz Hemaglütinin (FHA) — 5 µg",
+                "pack": "0,5 mL Kullanıma Hazır Enjektör",
+                "therapeuticUse": "4 ila 65 yaş arasındaki bireylerde difteri, tetanoz ve boğmacaya karşı aktif rapel bağışıklama amacıyla kullanılır."
+            },
+            {
+                "name": "Ürün Adı: Canlı Atenüe Varisella Aşısı",
+                "subtitle": "",
+                "composition": "Her 0,5 mL tek doz şunları içerir:\r\nCanlı atenüe Varisella-Zoster Virüsü (Oka suşu) — doz başına 0,5 mL'de 3,3 ila 4,5 lg PFU\r\nİnsan diploid (SV-1) hücrelerinde üretilmiştir.\r\nUluslararası standart virüs suşu ATCC'den temin edilmiştir.\r\nVirüs titresi şirket içi referans kullanılarak test edilmiştir.",
+                "pack": "Flakon ve WFI",
+                "therapeuticUse": "1 yaş (12 ay) ile 12 yaş arasındaki bireylerde varisella enfeksiyonuna karşı aktif bağışıklama amacıyla kullanılır."
+            },
+            {
+                "name": "Ürün Adı: İnaktive Hepatit A Aşısı (Adsorbe) I.P.",
+                "subtitle": "",
+                "composition": "Her 0,5 mL tek doz şunları içerir:\r\nİnaktive HAV antijeni (TZ84 suşu)¹ — 250 U\r\nAlüminyum (Alüminyum Hidroksit olarak) — 0,175 ila 0,31 mg\r\nDisodyum Hidrojen Fosfat — q.s.\r\nSodyum Klorür — 4,5 mg\r\nSodyum Dihidrojen Fosfat — q.s.\r\nWater for Injection — q.s. to 0.5 mL\r\n¹ İnsan Diploid Hücrelerinde Üretilmiştir",
+                "pack": "Flakon / Kullanıma Hazır Enjektör",
+                "therapeuticUse": "Hepatit A virüsünün neden olduğu enfeksiyona karşı aktif bağışıklama amacıyla kullanılır."
+            },
+            {
+                "name": "Ürün Adı: Trivalan İnfluenza Aşısı",
+                "subtitle": "",
+                "composition": "Her 0,5 mL tek doz şunları içerir:\r\nUygulanacak Kuzey veya Güney Yarımküre influenza sezonu için Dünya Sağlık Örgütü (WHO) tarafından yıllık olarak önerilen influenza virüs suşlarının her birine ait 15 µg hemaglütinin (HA) içerir.",
+                "pack": "Kullanıma Hazır Enjektör",
+                "therapeuticUse": "18 yaş ve üzerindeki yetişkinlerde influenza hastalığının önlenmesine yönelik aktif bağışıklama amacıyla kullanılır."
+            }
+        ],
+        "pillars": [
+            {
+                "title": "Erişim Odaklı",
+                "desc": "Öncelikli pazarlarda temel aşıların erişilebilirliğini desteklemek üzere geliştirilmiştir."
+            },
+            {
+                "title": "Pazara Hazır",
+                "desc": "Düzenleyici onay almış ve pazara sunulmaya hazır aşı adaylarına odaklanmaktadır."
+            },
+            {
+                "title": "İş Birliği Odaklı",
+                "desc": "Kurumsal, ticari ve halk sağlığına yönelik iş birlikleri için tasarlanmıştır."
+            }
+        ],
+        "adverseEvent": {
+            "title": "Advers Olay Bildirimi",
+            "desc": "Herhangi bir sorunuz varsa veya bir advers olayı bildirmek istiyorsanız, lütfen Advers Olay (AE) Bildirim ekibimizle iletişime geçin:",
+            "phone": "Telefon: 18008902590",
+            "email": "E-posta: feedback@techinvention.biz",
+            "formText": "Bildirim Formunu İndirin: Lütfen AE Bildirim Formunu doldurarak yukarıda belirtilen e-posta adresine gönderin.",
+            "privacy": "Gizliliğiniz bizim için önemlidir.",
+            "confidentiality": "Tüm AE bildirimleri kesin gizlilik içinde ele alınacaktır.",
+            "protection": "Kişisel bilgiler korunur ve yalnızca güvenlilik izleme amacıyla kullanılır."
+        },
+        "cta": {
+            "title": "Aşı Erişimi İçin TechInvention ile İş Ortaklığı Kurun",
+            "desc": "Pazara sunulmuş aşılar için ürün erişilebilirliği, lisanslama ortaklıkları ve erişim fırsatlarını değerlendirmek üzere TechInvention ile iletişime geçin."
+        }
     },
     "rnd": {
         "title": "Araştırma ve Geliştirme",
-        "subtitle": "Yeni Nesil Biyoteknoloji Keşifleri",
-        "desc": "Bulaşıcı hastalıklar ve antimikrobiyal direnç için tescilli platformlar.",
-        "heroTitle": "Ar-Ge Ekosistemimiz",
-        "heroDesc": "TechInvention'ın son teknolojiye sahip Ar-Ge tesisi HORIZON; antijen keşfinden klinik aşamalara kadar uçtan uca aşı inovasyonunu yönetir.",
-        "processTitle": "Uçtan Uca Ar-Ge Süreci",
-        "grantsTitle": "Hibeler ve Fon Desteği",
-        "collaborationsTitle": "Bilimsel İş Birliklerimiz",
-        "collaborationsSubtitle": "Kurumsal Mükemmelliğin Yeni Nesil Aşı İnovasyonuyla Buluştuğu Yer",
-        "collaborationsDesc": "Ortaklıklarımız; Salmonella, Shigella, tüberküloz, sıtma ve menenjit gibi halk sağlığı açısından öncelikli hastalıklara odaklanmaktadır.",
-        "featuresTitle": "Pilot-GMP Tesis Özellikleri",
-        "pipelineTitle": "Bulaşıcı Hastalıklar Aşı Geliştirme Portföyü",
+        "subtitle": "R&D Ekosistemimiz",
+        "desc": "TechInvention'ın son teknoloji R&D tesisi olan Yüksek Etkili Tek Sağlık Araştırma ve İnovasyon Bölgesi (HORIZON), öncelikli bulaşıcı hastalıklar ve antimikrobiyal direnç (AMR) ile ilişkili patojenlere yönelik kavram kanıtı geliştirmeden klinik öncesi aşamaya ilerlemeye kadar uçtan uca araştırmayı destekleyerek aşı inovasyonunu hızlandırmak üzere tasarlanmıştır.",
+        "heroTitle": "R&D Ekosistemimiz",
+        "heroDesc": "TechInvention'ın son teknoloji R&D tesisi olan Yüksek Etkili Tek Sağlık Araştırma ve İnovasyon Bölgesi (HORIZON), öncelikli bulaşıcı hastalıklar ve antimikrobiyal direnç (AMR) ile ilişkili patojenlere yönelik kavram kanıtı geliştirmeden klinik öncesi aşamaya ilerlemeye kadar uçtan uca araştırmayı destekleyerek aşı inovasyonunu hızlandırmak üzere tasarlanmıştır.",
+        "processTitle": "Uçtan Uca R&D Süreci",
+        "grantsTitle": "Hibe ve Finansman Desteği",
+        "collaborationsTitle": "İş Birliklerimiz",
+        "collaborationsSubtitle": "Kurumsal Mükemmeliyetin Yeni Nesil Aşı İnovasyonu ile Buluştuğu Nokta",
+        "collaborationsDesc": "İş ortaklıklarımız; Salmonella, Shigella, tüberküloz, sıtma ve menenjit gibi önemli halk sağlığı önceliği taşıyan hastalıklara odaklanarak, bilimsel keşiften translasyonel geliştirmeye ve gelecekteki aşı etkisine uzanan süreci güçlendirmektedir.",
+        "featuresTitle": "Pilot-GMP Özellikleri",
+        "pipelineTitle": "Enfeksiyon Hastalıkları ve AMR ile İlişkili Patojen Portföyü",
         "discovery": "Keşif",
-        "poc": "Kavram Kanıtı (PoC)",
+        "poc": "Kavram Kanıtı",
         "preclinical": "Klinik Öncesi",
         "phase12": "Faz 1/2",
         "facilityFeatures": [
@@ -1946,28 +2274,28 @@ export const turkish = {
                 "points": [
                     "Kompakt Tasarım",
                     "Düşük Karbon Ayak İzi",
-                    "Maliyet Odaklı Operasyonlar"
+                    "Maliyet Optimizasyonlu Operasyonlar"
                 ]
             },
             {
-                "title": "Biyogüvenlik ve Koruma",
+                "title": "Biyolojik Muhafaza ve Güvenlik",
                 "points": [
-                    "BSL-2 Birimi Uyumluluğu",
+                    "BSL-2 Birim Uyumluluğu",
                     "Sınıf C Temiz Oda Standartları"
                 ]
             },
             {
-                "title": "Gelişmiş Biyo-İşleme",
+                "title": "Gelişmiş Biyoprosesleme",
                 "points": [
-                    "5L ve 20L Biyoreaktörler",
+                    "5L ve 20L Fermentörler",
                     "Son Teknoloji Ekipmanlar"
                 ]
             },
             {
-                "title": "Sürdürülebilir Tesisler",
+                "title": "Sürdürülebilir Tesis Hizmetleri",
                 "points": [
-                    "Sıfır Sıvı Deşarjı (ZLD)",
-                    "Sürdürülebilir Altyapı"
+                    "Sıfır Sıvı Deşarjı",
+                    "Sürdürülebilirlik Odaklı Tesis Hizmetleri"
                 ]
             },
             {
@@ -1980,19 +2308,82 @@ export const turkish = {
             {
                 "title": "Akıllı Altyapı",
                 "points": [
-                    "IoT Kestirimci Bakım",
+                    "IoT Tabanlı Öngörücü Bakım",
                     "Akıllı Enerji Yönetimi"
                 ]
             }
         ],
         "pipelineItems": [
-            "Pnömokok Konjuge Aşısı (16 valanlı)",
-            "Heksavalan Menenjit Aşısı (ABCYWX)",
+            "Pnömokok Konjuge Aşısı (16-valanlı)",
+            "Heksavalan Meningokok Aşısı (ABCYWX)",
             "Pan-Salmonella Aşısı",
             "Shigella Aşısı",
-            "Menenjit B Aşısı",
+            "Meningokok B Aşısı",
             "Sıtma Aşısı",
             "Tüberküloz Aşısı"
+        ],
+        "pilotGmpTitle": "Pilot-GMP Özellikleri",
+        "ecoTitle": "Ekolojik Ayak İzi",
+        "ecoPoints": [
+            "Kompakt Tasarım",
+            "Düşük Karbon Ayak İzi",
+            "Maliyet Optimizasyonlu Operasyonlar"
+        ],
+        "containmentTitle": "Biyolojik Muhafaza ve Güvenlik",
+        "containmentPoints": [
+            "BSL-2 Birim Uyumluluğu",
+            "Sınıf C Temiz Oda Standartları"
+        ],
+        "bioprocessingTitle": "Gelişmiş Biyoprosesleme",
+        "bioprocessingPoints": [
+            "5L ve 20L Fermentörler",
+            "Son Teknoloji Ekipmanlar"
+        ],
+        "sustainableTitle": "Sürdürülebilir Tesis Hizmetleri",
+        "sustainablePoints": [
+            "Sıfır Sıvı Deşarjı",
+            "Sürdürülebilirlik Odaklı Tesis Hizmetleri"
+        ],
+        "airTitle": "Hava Yönetimi",
+        "airPoints": [
+            "HVAC %70 Enerji Geri Kazanımı",
+            "Çift HEPA Egzoz Filtrasyonu"
+        ],
+        "smartTitle": "Akıllı Altyapı",
+        "smartPoints": [
+            "IoT Tabanlı Öngörücü Bakım",
+            "Akıllı Enerji Yönetimi"
+        ],
+        "processSteps": [
+            {
+                "step": "01",
+                "title": "Fikir Geliştirme",
+                "desc": "Hedef belirleme, antijen keşfi, AI/ML destekli aşı tasarımı ve platform seçimi."
+            },
+            {
+                "step": "02",
+                "title": "Geliştirme",
+                "desc": "Proses ve formülasyon geliştirme, analitik test geliştirme, karakterizasyon ve kavram kanıtı çalışmaları."
+            },
+            {
+                "step": "03",
+                "title": "Değerlendirme",
+                "desc": "Klinik öncesi etkinlik, güvenlilik ve toksikoloji çalışmaları ile düzenleyici dokümantasyon ve uyumluluk."
+            },
+            {
+                "step": "04",
+                "title": "Ölçeklendirme",
+                "desc": "Proses ölçek büyütme, teknoloji transferi, GMP üretim hazırlığı ve ticari uygulamaya geçiş."
+            }
+        ],
+        "collabTitle": "İş Birliklerimiz",
+        "collabSubtitle": "Kurumsal Mükemmeliyetin Yeni Nesil Aşı İnovasyonu ile Buluştuğu Nokta",
+        "collabDesc": "İş ortaklıklarımız; Salmonella, Shigella, tüberküloz, sıtma ve menenjit gibi önemli halk sağlığı önceliği taşıyan hastalıklara odaklanarak, bilimsel keşiften translasyonel geliştirmeye ve gelecekteki aşı etkisine uzanan süreci güçlendirmektedir.",
+        "collaborators": [
+            "Institute of Life Sciences - Bhubaneswar",
+            "Indian Institute of Technology - Bhubaneswar",
+            "ICMR - RMRC - Bhubaneswar",
+            "ICMR - NIRBI - Kolkata"
         ]
     },
     "gmpTraining": {
@@ -2000,67 +2391,238 @@ export const turkish = {
         "curriculumDesc": "Biyoteknoloji personeli ve düzenleyici kurumlar için uluslararası standartlarda pratik ve teorik eğitim."
     },
     "gmpCTA": {
-        "titlePart1": "Kariyerinize adım atın:",
-        "titlePart2": "Aşı Geliştirme ve Üretimi",
-        "writeTo": "Bize yazın:",
-        "descEnd": "eğitim programlarımız ve yaklaşan dönemler hakkında bilgi almak için.",
-        "title": "Aşı Geliştirme ve Üretiminde Kariyerinize Başlayın"
+        "titlePart1": "Kariyerinize Başlayın",
+        "titlePart2": "Aşı Geliştirme ve Üretim Alanındaki",
+        "writeTo": "Eğitim programlarımız ve yaklaşan girişimlerimiz hakkında daha fazla bilgi almak için",
+        "descEnd": "adresine yazın.",
+        "desc": "Eğitim programlarımız ve yaklaşan girişimlerimiz hakkında daha fazla bilgi almak için connect@techinvention.biz adresine yazın.",
+        "title": "Aşı Geliştirme ve Üretim Alanındaki Kariyerinize Başlayın",
+        "connectNow": "Şimdi Bağlanın"
     },
     "csr": {
-        "title": "KSS Girişimlerimiz",
-        "subtitle": "KSS'nin, herkes için uygun fiyatlı, kabul edilebilir ve erişilebilir sağlık hizmetleri yoluyla daha fazla sağlık eşitliği sağlama ortak hedefimize ulaşmak amacıyla tüm paydaşlara yönelik kapsayıcı bir yaklaşım benimsemesi gerektiğine inanıyoruz.",
+        "title": "Girişimlerimiz",
+        "subtitle": "CSR'nin; herkes için uygun maliyetli, kabul edilebilir ve erişilebilir sağlık hizmetleri aracılığıyla daha fazla sağlık eşitliği sağlama yönündeki ortak hedefimize ulaşmak için işletmenin tüm paydaşlarını kapsayan bir yaklaşım benimsemesi gerektiğine inanıyoruz.",
         "initiative1": {
             "badge": "Ar-Ge Desteği",
-            "title": "PU-TechInvention Katkısı",
-            "desc": "TechInvention Lifecare Limited, COVID-19 pandemisinin başlangıcında SARS-CoV-2 ile bağlantılı araştırma ve geliştirme çalışmaları için Chandigarh'daki Pencap Üniversitesi'nde bulunan Kuzey Hindistan'ın en iyi biyokuluçka merkezlerinden biri olan BioNest-PU'ya 6 lakh Rupi bağışta bulundu."
+            "title": "PU- TechInvention Katkısı",
+            "desc": "TechInvention Lifecare Limited, COVID-19 pandemisinin başlangıcında, SARS-CoV2 ile bağlantılı araştırma ve geliştirme çalışmaları için Kuzey Hindistan'ın önde gelen biyokuluçka merkezlerinden biri olan ve Chandigarh'daki Punjab University bünyesinde yer alan BioNest-PU'ya 6 lakh Rs bağışta bulunmuştur."
         },
         "initiative2": {
             "badge": "Ulusal Pandemi Yardımı",
-            "title": "PM CARES Fonuna Katkı",
-            "desc": "TechInvention, COVID-19 salgınının ardından Hindistan Başbakanı tarafından kurulan PM CARES Fonu'na, halk sağlığı acil durumlarında yardım faaliyetlerini desteklemek ve araştırmaları finanse etmek amacıyla katkıda bulundu."
+            "title": "PM Cares Fonu'na Katkı",
+            "desc": "TechInvention, Hindistan'ın Sayın Başbakanı tarafından COVID-19 pandemisinin ardından oluşturulan PM Cares Fonu'na katkıda bulunmuştur. Bu fon; kamu sağlığı acil durumları sırasında yardım faaliyetlerinin yürütülmesi ve desteklenmesi, sağlık veya ilaç tesislerinin oluşturulması ya da geliştirilmesi, gerekli diğer altyapıların sağlanması ve ilgili araştırmaların finanse edilmesi amacıyla kurulmuştur."
         },
         "initiative3": {
             "badge": "Bilimsel İş Birliği ve Altyapı",
             "title": "BSL-2 Laboratuvarı",
-            "desc": "TechInvention, BSL-2 Ar-Ge laboratuvarını 6 Aralık 2022'de Bölgesel Biyoteknoloji Merkezi'nin BSC BioNEST Biyokuluçka Merkezi'nde (RCB BBB) biyoteknoloji endüstrisi ve akademiden önemli isimlerin katılımıyla açtı."
-        }
+            "desc": "TechInvention, 6 Aralık 2022 tarihinde, biyoteknoloji sektörü ve akademiden önde gelen isimlerin yanı sıra diğer girişimlerin temsilcilerinin katılımıyla, Regional Centre for Biotechnology'nin BSC BioNEST Bioincubator (RCB BBB) bünyesindeki BSL-2 R&D laboratuvarının açılışını gerçekleştirdi."
+        },
+        "heading": "Kurumsal Sosyal Sorumluluk (CSR)",
+        "readNewsArticle": "Haber Makalesini Oku"
     },
     "publications": {
-        "title": "Bilimsel Yayınlarımız",
+        "title": "Yayınlarımız",
         "items": {
             "pcv": {
-                "title": "Güney Asya'nın düşük ve orta gelirli ülkelerinde Streptococcus pneumoniae serotip dağılımı: Pnömokok aşı stratejisini yeniden gözden geçirmemiz gerekiyor mu?"
+                "title": "Güney Asya'daki düşük ve orta gelirli ülkelerde Streptococcus pneumoniae serotip dağılımı: Pnömokok aşı stratejisini yeniden gözden geçirmemiz gerekiyor mu? Hemen Oku"
             },
             "Overcoming-barriers": {
-                "title": "Tıbbi karşı önlemlerin önündeki engelleri aşmak: Küresel biyogüvenliğin güçlendirilmesi"
+                "title": "Tıbbi karşı önlemlerin önündeki engellerin aşılması: Küresel biyogüvenliğin güçlendirilmesi Hemen Oku"
             },
             "Lancet Euvichol": {
-                "title": "Sağlıklı Hintli yetişkinlerde ve çocuklarda Euvichol-Plus ile Shanchol'un immünojenitesinin ve güvenliğinin karşılaştırılması: Açık etiketli, randomize, çok merkezli, non-inferiority faz 3 çalışması"
+                "title": "Sağlıklı Hintli yetişkinler ve çocuklarda Euvichol-Plus ile Shanchol aşılarının immünojenisite ve güvenliliğinin karşılaştırılması: Açık etiketli, randomize, çok merkezli, aşağı olmama esasına dayalı, paralel gruplu Faz 3 çalışma Hemen Oku"
             },
             "Frontiers": {
-                "title": "Antibiyotiklerin ötesinde: Gram-negatif patojenlere karşı faj kodlu lizinler"
+                "title": "Antibiyotiklerin ötesinde: Gram-negatif patojenlere karşı faj kaynaklı lizinler Hemen Oku"
             },
             "Taylor Capacity Building": {
-                "title": "Gelişmekte Olan Ülkelerde Aşı Üretimi İçin Kapasite Geliştirme: İleriye Doğru Yol"
+                "title": "Gelişmekte Olan Ülkelerde Aşı Üretimi İçin Kapasite Geliştirme: İleriye Giden Yol Hemen Oku"
             },
             "Vaccine COVID-19": {
-                "title": "COVID-19 yönetim ortamı: Gelişmekte olan ülkeler için güvenli ve etkili biyoterapötikler ve profilaktikler üretmek için uygun fiyatlı bir platform ihtiyacı"
+                "title": "COVID-19 yönetiminde mevcut durum: Gelişmekte olan ülkeler için güvenli ve etkili biyoterapötiklerin ve profilaktiklerin üretimine yönelik uygun maliyetli bir platforma duyulan ihtiyaç Hemen Oku"
             }
         }
     },
     "gmpOverview": {
         "pills": [
-            "Kapsamlı Bilimsel ve Teknik Müfredat",
+            "Uygulamalı Bilimsel ve Teknik Eğitim Programı",
             "GMP Üretiminde Uygulamalı Eğitim",
-            "Sektör Uzmanları Tarafından Verilen Eğitim",
-            "Küresel Mevzuat Uyumu",
-            "Kariyer ve Sektörel Hazırlık Odaklılık"
+            "Sektör Uzmanları Tarafından Hazırlanan Eğitim Programı",
+            "Küresel Düzenleyici Uyum",
+            "Kariyer ve Sektöre Hazırlık Odaklı"
         ]
     },
     "gmpSubjects": {
-        "title": "Eğitim Programları ve Konular",
-        "desc": "Mevzuat uyumu, temiz oda süreçleri, validasyon döngüleri ve kalite kurallarını kapsayan konularımızı inceleyin.",
-        "keyFocus": "Temel Odak Alanları"
+        "title": "Eğitim Modülleri",
+        "desc": "Sektöre hazır olmanızı sağlayacak şekilde tasarlanmış kapsamlı eğitim programımızı keşfedin.",
+        "keyFocus": "Temel Odak Alanları",
+        "modules": [
+            {
+                "title": "GMP Uyumluluğu",
+                "desc": "Üretim ve test operasyonlarında gerekli olan GMP ilkeleri, düzenleyici beklentiler, kalite sistemleri ve uyumluluk kültürü konusunda sağlam bir temel oluşturun.",
+                "focus": [
+                    "WHO, US FDA ve ICH Kılavuzları",
+                    "İyi Dokümantasyon Uygulamaları (GDP)",
+                    "Personel Hijyeni ve Güvenliği",
+                    "Tesis Tasarımı ile Malzeme/Personel Akışları",
+                    "Kalite Kültürü ve Uyumluluk Yaklaşımı"
+                ]
+            },
+            {
+                "title": "Kalite Yönetim Sistemleri (QMS)",
+                "desc": "Ürün yaşam döngüsü boyunca ürün tutarlılığını, düzenleyici uyumluluğu ve sürekli iyileştirmeyi sağlayan kalite sistemleri konusunda uzmanlık kazanın.",
+                "focus": [
+                    "Sapma ve Olay Yönetimi",
+                    "CAPA ve Kök Neden Araştırmaları",
+                    "Değişiklik Kontrol Sistemleri",
+                    "Kalite Risk Yönetimi (ICH Q9)",
+                    "OOS ve OOT Araştırmaları"
+                ]
+            },
+            {
+                "title": "Analitik ve Kalite Kontrol Teknikleri",
+                "desc": "İlaç, biyoteknoloji ve aşı test laboratuvarlarında kullanılan analitik metodolojiler ve kalite kontrol uygulamaları hakkında deneyim kazanın.",
+                "focus": [
+                    "HPLC ve Kromatografik Teknikler",
+                    "ELISA ve Protein Miktar Tayini",
+                    "Endotoksin Testi (LAL)",
+                    "Moleküler Karakterizasyon Yöntemleri",
+                    "Veri Analizi ve Sonuçların Yorumlanması"
+                ]
+            },
+            {
+                "title": "Moleküler Biyoloji ve İleri Test Yöntemleri",
+                "desc": "Ürün karakterizasyonu, kontaminasyon izleme ve kalite değerlendirmesinde kullanılan modern moleküler biyoloji tekniklerini öğrenin.",
+                "focus": [
+                    "DNA Ekstraksiyonu ve Saflaştırılması",
+                    "PCR ve Gerçek Zamanlı PCR",
+                    "Konak Hücre DNA Analizi",
+                    "Agaroz Jel Elektroforezi",
+                    "Moleküler Verilerin Yorumlanması"
+                ]
+            },
+            {
+                "title": "Mikrobiyoloji ve Sterilite Güvencesi",
+                "desc": "Düzenlemelere tabi üretim ortamlarında kontaminasyon kontrolünü ve ürün güvenliğini destekleyen temel mikrobiyolojik uygulamaları öğrenin.",
+                "focus": [
+                    "Sterilite Testi",
+                    "Çevresel İzleme",
+                    "Biyoyük Değerlendirmesi",
+                    "Mikoplazma Tespiti",
+                    "Aseptik Teknikler ve Kontaminasyon Kontrolü"
+                ]
+            },
+            {
+                "title": "Aseptik Proses ve Temiz Oda Operasyonları",
+                "desc": "Temiz oda davranış kuralları, steril üretim uygulamaları ve çevresel kontrol stratejileri hakkında kapsamlı bilgi edinin.",
+                "focus": [
+                    "Temiz Oda Sınıflandırmaları",
+                    "Giyinme Kalifikasyonu ve Validasyonu",
+                    "Media Fill Simülasyonları",
+                    "Çevresel İzleme Programları",
+                    "Mikrobiyal Kontrol Stratejileri"
+                ]
+            },
+            {
+                "title": "Validasyon, Kalifikasyon ve Yaşam Döngüsü Yönetimi",
+                "desc": "Proses tutarlılığını ve düzenleyici uyumluluğu göstermek için gerekli kalifikasyon ve validasyon ilkelerinde uzmanlaşın.",
+                "focus": [
+                    "DQ, IQ, OQ ve PQ Uygulamaları",
+                    "Proses Validasyonu İlkeleri",
+                    "Temizlik Validasyonu",
+                    "Bilgisayar Sistemleri Validasyonu (CSV)",
+                    "Ekipman Yaşam Döngüsü Yönetimi"
+                ]
+            },
+            {
+                "title": "Veri Bütünlüğü ve Dijital Uyumluluk",
+                "desc": "Güçlü dokümantasyon ve elektronik kayıt yönetimi uygulamalarıyla verilerin güvenilirliğini, izlenebilirliğini ve uyumluluğunu sağlayın.",
+                "focus": [
+                    "ALCOA+ İlkeleri",
+                    "Denetim İzi İncelemesi",
+                    "Elektronik Veri Yönetimi",
+                    "BMR/BPR Dokümantasyonu",
+                    "Veri Yönetişimi ve Uyumluluk"
+                ]
+            },
+            {
+                "title": "Teknoloji Transferi ve Ölçek Büyütme Stratejileri",
+                "desc": "Geliştirme aşamasından ticari üretime proseslerin başarılı şekilde aktarılmasında yer alan kritik unsurları anlayın.",
+                "focus": [
+                    "Teknoloji Transferi Yaşam Döngüsü",
+                    "Ölçek Büyütme Risk Değerlendirmesi",
+                    "Proses Yeterlilik Çalışmaları",
+                    "Analitik Metot Transferi",
+                    "Fonksiyonlar Arası Koordinasyon"
+                ]
+            },
+            {
+                "title": "Düzenleyici İstihbarat ve Denetim Hazırlığı",
+                "desc": "Küresel düzenlemeler ve düzenleyici beklentileri anlayarak denetim ve teftişlere hazırlanın.",
+                "focus": [
+                    "WHO, EMA ve US FDA Beklentileri",
+                    "Denetim ve Teftiş Hazırlığı",
+                    "Düzenleyici Dokümantasyon",
+                    "Kalite Metrikleri ve Trend Analizi",
+                    "Düzenleyici Uyum Stratejileri"
+                ]
+            },
+            {
+                "title": "Sektöre Hazırlık ve Mesleki Gelişim",
+                "desc": "Gerçek dünya uygulamaları ve kalite odaklı problem çözme yaklaşımlarıyla akademik öğrenim ile endüstriyel uygulamalar arasındaki boşluğu kapatın.",
+                "focus": [
+                    "GMP Simülasyonları ve Vaka Çalışmaları",
+                    "Bilimsel Literatür İncelemesi",
+                    "Teknik Sunumlar",
+                    "Laboratuvar Araştırma Uygulamaları",
+                    "Kariyer ve İş Gücüne Hazırlık"
+                ]
+            },
+            {
+                "title": "Laboratuvar Mükemmeliyeti ve Bilimsel Problem Çözme",
+                "desc": "Analitik güvenilirliği ve operasyonel verimliliği artırmak amacıyla laboratuvar operasyonları, sorun giderme ve bilimsel karar verme süreçlerine sistematik bir yaklaşım geliştirin.",
+                "focus": [
+                    "Laboratuvar En İyi Uygulamaları",
+                    "Bilimsel Problem Çözme",
+                    "Analitik Yöntemlerde Sorun Giderme",
+                    "Laboratuvar Hatalarının Araştırılması",
+                    "Eleştirel Düşünme ve Karar Verme"
+                ]
+            },
+            {
+                "title": "Aşı Üretimi ve Proseslerin Anlaşılması",
+                "desc": "İlaç ve aşı üretim süreçleri, ürün güvenliğini, etkinliğini ve tutarlılığını sağlayan kritik kalite özellikleri ile proses kontrolleri hakkında bilgi edinin.",
+                "focus": [
+                    "İlaç Ürünü ve Aşı Üretimine Genel Bakış",
+                    "Kritik Proses Parametreleri (CPP'ler)",
+                    "Kritik Kalite Özellikleri (CQA'lar)",
+                    "Proses İzleme ve Kontrolü",
+                    "Üretim Sapmaları ve Araştırmaları"
+                ]
+            },
+            {
+                "title": "Bilimsel İletişim ve Dokümantasyonda Mükemmeliyet",
+                "desc": "Düzenlemelere tabi ortamlarda ve fonksiyonlar arası iş birliğinde gerekli olan teknik iletişim ve dokümantasyon becerilerinizi geliştirin.",
+                "focus": [
+                    "Teknik Rapor Yazımı",
+                    "SOP Hazırlama ve Gözden Geçirme",
+                    "Bilimsel Sunum Becerileri",
+                    "Dokümantasyon Gözden Geçirme Uygulamaları",
+                    "Düzenleyici Yazımın Temelleri"
+                ]
+            },
+            {
+                "title": "Biyofarmasötik Kalite Kontrolünde Gelişen Teknolojiler",
+                "desc": "İlaç ve aşı kalite değerlendirmesinin geleceğini şekillendiren modern teknolojileri ve analitik gelişmeleri keşfedin.",
+                "focus": [
+                    "İleri Analitik Teknikler",
+                    "QC Laboratuvarlarında Otomasyon",
+                    "Dijital Kalite Sistemleri",
+                    "Laboratuvar Bilişim Sistemleri (LIMS)",
+                    "Biyofarmasötik Testlerde Güncel Eğilimler"
+                ]
+            }
+        ]
     },
     "thankYou": {
         "title": "Teşekkür Ederiz!",
@@ -2074,7 +2636,7 @@ export const turkish = {
         "noResultsDesc": "Lütfen arama terimlerinizi veya anahtar kelimelerinizi değiştirmeyi deneyin"
     },
     "trustedPartners": {
-        "title": "Küresel Ortaklar Tarafından Güvenilen"
+        "title": "Küresel İş Ortaklarının Güvendiği Kuruluş"
     },
     "home": {
         "cta": {

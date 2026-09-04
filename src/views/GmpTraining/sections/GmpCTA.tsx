@@ -16,14 +16,14 @@ export default function GmpCTA() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <section className="py-24 w-full flex justify-center items-center px-4 md:px-6 bg-white overflow-hidden font-sans border-b border-slate-100">
+        <section className="py-20 w-full flex justify-center items-center px-4 md:px-6 bg-white overflow-hidden font-sans border-b border-slate-100">
             <div
-                className="w-full max-w-[1300px] relative"
+                className="w-full max-w-5xl relative"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
                 {/* Dither Shader Card Layout matching partnership style */}
-                <div className="relative overflow-hidden rounded-[48px] border border-slate-200 bg-white shadow-sm min-h-[420px] md:min-h-[500px] flex flex-col items-center justify-center duration-500">
+                <div className="relative overflow-hidden rounded-none border border-slate-200/60 bg-slate-50 py-16 md:py-24 flex flex-col items-center justify-center duration-500">
                     <Suspense fallback={<div className="absolute inset-0 bg-slate-50" />}>
                         <div className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-multiply transition-opacity duration-500">
                             <Dithering

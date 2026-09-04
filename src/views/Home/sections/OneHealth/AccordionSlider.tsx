@@ -30,7 +30,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
     const [expandedIndex, setExpandedIndex] = useState<number>(0);
 
     return (
-        <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[500px] w-full min-h-[500px] lg:min-h-[500px] opacity-100">
+        <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[560px] xl:h-[580px] w-full min-h-[500px] lg:min-h-[560px] opacity-100">
             {slides.map((slide, index) => (
                 <motion.div
                     key={index}
@@ -38,7 +38,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                     animate={{
                         flex: expandedIndex === index ? 5 : 1,
                         height: expandedIndex === index ? 'auto' : '90px',
-                        minHeight: expandedIndex === index ? '400px' : '90px',
+                        minHeight: expandedIndex === index ? '450px' : '90px',
                     }}
                     transition={{
                         duration: 0.7,
@@ -75,7 +75,7 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
 
                     {/* Content Overlay (The "Blue Color") */}
                     <motion.div
-                        className="relative z-10 w-full flex-1 flex flex-col justify-end p-6 md:p-10"
+                        className="relative z-10 w-full flex-1 flex flex-col justify-center p-6 sm:p-8 md:p-10"
                         animate={{
                             backgroundColor: expandedIndex === index 
                                 ? index % 2 === 0 ? 'rgba(25, 85, 166, 0.92)' : 'rgba(92, 118, 37, 0.92)'
@@ -94,45 +94,27 @@ const AccordionSlider: React.FC<AccordionSliderProps> = ({ slides }) => {
                                     className="max-w-xl"
                                 >
 
-                                    <h4 className="text-white text-[36px] font-medium tracking-tight leading-tight mb-6  tracking-tighter">
+                                    <h4 className="text-white text-[24px] sm:text-[28px] md:text-[32px] xl:text-[36px] font-medium tracking-tight leading-snug mb-3 md:mb-4">
                                         {slide.title}
                                     </h4>
-                                    <p className="text-white/90 text-[18px] font-medium leading-relaxed mb-10 max-w-md">
+                                    <p className="text-white/95 text-[14px] sm:text-[15px] md:text-[16px] xl:text-[17px] font-normal leading-relaxed mb-5 md:mb-6 max-w-xl">
                                         {slide.desc}
                                     </p>
-                                      {slide.title.includes('Manufacturing') ? (
-                                       <Link href="/cdmo" className="inline-block">
-                                         <motion.button 
-                                           whileHover={{ scale: 1.05 }}
-                                           whileTap={{ scale: 0.95 }}
-                                           className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
-                                         >
-                                           <span>{t('oneHealth.knowMore') || 'Know More'}</span>
-                                           <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
-                                             <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
-                                             <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
-                                           </div>
-                                           {/* Shine Effect */}
-                                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
-                                         </motion.button>
-                                       </Link>
-                                     ) : (
-                                       <Link href={getLink(slide.tag)} className="inline-block">
-                                         <motion.button 
-                                           whileHover={{ scale: 1.05 }}
-                                           whileTap={{ scale: 0.95 }}
-                                           className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto"
-                                         >
-                                           <span>{t('oneHealth.knowMore') || 'Know More'}</span>
-                                           <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
-                                             <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
-                                             <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
-                                           </div>
-                                           {/* Shine Effect */}
-                                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
-                                         </motion.button>
-                                       </Link>
-                                     )}
+                                    <Link href={getLink(slide.tag)} className="inline-block">
+                                        <motion.button 
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="group/btn relative flex origin-left items-center gap-4 bg-white text-brand-primary px-6 py-2.5 md:px-7 md:py-3 rounded-full text-sm md:text-[15px] font-semibold tracking-tight transition-all duration-300 hover:bg-slate-50 hover:shadow-2xl overflow-hidden w-fit pointer-events-auto shadow-md"
+                                        >
+                                            <span>{t('oneHealth.knowMore') || 'Know More'}</span>
+                                            <div className="relative overflow-hidden w-4 h-4 flex items-center justify-center">
+                                                <ArrowRight className="transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
+                                                <ArrowRight className="absolute -left-full transition-transform duration-300 group-hover/btn:translate-x-full" size={16} />
+                                            </div>
+                                            {/* Shine Effect */}
+                                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
+                                        </motion.button>
+                                    </Link>
                                 </motion.div>
                             ) : (
                                 <motion.div

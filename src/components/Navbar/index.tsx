@@ -25,7 +25,6 @@ const Navbar = () => {
     }, []);
 
     const defaultAnnouncements = [
-        "🤝 TechInvention Lifecare Pledges Support to the Government of Maharashtra's Drug-Free Mumbai Initiative.",
         "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
         "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
         "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",
@@ -97,11 +96,11 @@ const Navbar = () => {
 
     const languages: { code: Language; label: string; nativeLabel: string }[] = [
         { code: 'en', label: 'English', nativeLabel: 'English' },
-        { code: 'fr', label: 'French', nativeLabel: 'Français' },
-        { code: 'ru', label: 'Russian', nativeLabel: 'Русский' },
         { code: 'es', label: 'Spanish', nativeLabel: 'Español' },
-        { code: 'tr', label: 'Turkish', nativeLabel: 'Türkçe' },
+        { code: 'fr', label: 'French', nativeLabel: 'Français' },
         { code: 'ar', label: 'Arabic', nativeLabel: 'العربية' },
+        { code: 'tr', label: 'Turkish', nativeLabel: 'Türkçe' },
+        { code: 'ru', label: 'Russian', nativeLabel: 'Русский' },
     ];
 
     const megaMenusData: Record<string, any> = {

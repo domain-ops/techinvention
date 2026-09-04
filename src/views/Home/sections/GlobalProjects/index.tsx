@@ -93,6 +93,11 @@ const projectDots = [
 
 const GlobalProjects = () => {
     const { t } = useLanguage();
+    const rawTitle = (typeof t('globalProjects.title') === 'string') ? t('globalProjects.title') : 'Global Projects & Partners';
+    const rawPartners = (typeof t('globalProjects.partners') === 'string') ? t('globalProjects.partners') : '';
+    const sectionTitle = rawTitle.includes('{partners}')
+        ? rawTitle.replace('{partners}', rawPartners).trim()
+        : (rawPartners ? `${rawTitle} ${rawPartners}`.trim() : rawTitle);
 
     return (
         <section id="global-projects" className="py-16 md:py-20 relative bg-white">
@@ -102,7 +107,7 @@ const GlobalProjects = () => {
                     <div className="flex flex-col items-start gap-4">
                         <div className="max-w-3xl">
                             <h2 className="text-[24px] md:text-[36px] font-medium tracking-wide">
-                                <SplitTitle title={t('globalProjects.title').replace('{partners}', t('globalProjects.partners'))} />
+                                <SplitTitle title={sectionTitle} />
                             </h2>
                         </div>
 

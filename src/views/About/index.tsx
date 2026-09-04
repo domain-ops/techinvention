@@ -21,7 +21,7 @@ const AboutPage = () => {
             {/* 1. Company Landing Hero */}
             <AboutHeader 
                 title={t('about.tag') || t('navbar.about') || "About TechInvention"} 
-                subtitle={t('about.banner.subtitle') || t('about.desc')} 
+                subtitle={t('about.desc') || t('about.banner.subtitle')} 
             />
 
             {/* Banner Image */}

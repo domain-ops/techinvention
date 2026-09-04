@@ -39,7 +39,6 @@ export const spanish = {
         "csr": "CSR",
         "awardsCertifications": "Premios y certificaciones",
         "announcements": [
-            "🤝 TechInvention Lifecare se compromete formalmente con la iniciativa «Mumbai Libre de Drogas» del Gobierno de Maharashtra.",
             "🏆 TechInvention fue reconocida en Forbes India Select 200 y fue destacada entre las empresas con potencial empresarial global, reflejando el rápido crecimiento y el liderazgo de la compañía en la industria.",
             "🏆 Honrada con el premio \"Mejores Esfuerzos en Vacunas del Año\" en los BioSpectrum India Excellence Awards 2025.",
             "🤝 Orgullosos de recibir el apoyo de la Junta de Desarrollo Tecnológico (TDB) para nuestra iniciativa de Vacunas NexGen.",

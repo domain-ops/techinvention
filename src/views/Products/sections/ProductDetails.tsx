@@ -157,7 +157,7 @@ export default function ProductDetails() {
                 <div className="text-center mb-12">
                     <ScrollReveal direction="up">
                         <h2 className="text-[22px] md:text-[32px] font-bold tracking-wide leading-tight mb-2">
-                            <SplitTitle title={t('megaMenu.products') || "Product Details"} />
+                            <SplitTitle title={t('products.productDetailsTitle') || t('productsDocs.productDetailsTitle') || t('megaMenu.products') || "Product Details"} />
                         </h2>
                     </ScrollReveal>
                 </div>

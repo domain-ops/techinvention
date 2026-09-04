@@ -39,7 +39,6 @@ export const hindi = {
         "csr": "सीएसआर (CSR)",
         "awardsCertifications": "पुरस्कार एवं प्रमाणन",
         "announcements": [
-            "🤝 TechInvention Lifecare ने महाराष्ट्र सरकार की 'ड्रग-मुक्त मुंबई' पहल को औपचारिक समर्थन देने की शपथ ली।",
             "🏆 TechInvention को Forbes India Select 200 में वैश्विक व्यापार क्षमता वाली कंपनियों में स्थान दिया गया।",
             "🏆 BioSpectrum India Excellence Awards 2025 में 'वर्ष का सर्वश्रेष्ठ वैक्सीन प्रयास' पुरस्कार से सम्मानित।",
             "🤝 हमारी NexGen वैक्सीन पहल के लिए प्रौद्योगिकी विकास बोर्ड (TDB) से रणनीतिक समर्थन प्राप्त।",
