@@ -98,9 +98,9 @@ export default function ProductsCTA() {
                                     <Phone className="w-5 h-5 text-[#5C7625]" />
                                     <span className="font-bold text-sm text-slate-800">+91 22 4005 2123</span>
                                 </a>
-                                <a href="mailto:connect@techinvention.biz" dir="ltr" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
+                                <a href="mailto:connect@techinvention.com" dir="ltr" className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-slate-200/60 shadow-sm hover:border-[#1955A6]/40 hover:shadow-md transition-all duration-300">
                                     <Mail className="w-5 h-5 text-[#5C7625]" />
-                                    <span className="font-bold text-sm text-slate-800 break-all">connect@techinvention.biz</span>
+                                    <span className="font-bold text-sm text-slate-800 break-all">connect@techinvention.com</span>
                                 </a>
                             </div>
                         </div>

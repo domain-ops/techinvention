@@ -591,7 +591,7 @@ export const arabic = {
         "linkedin": "لينكد إن",
         "twitter": "تويتر (X)",
         "partnerPortal": "بوابة الشركاء",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "poweredBy": "مشغّل بواسطة",
         "youtube": "يوتيوب",
         "tagline": "نكرس جهودنا لتعزيز الصحة العالمية من خلال الأبحاث المبتكرة، والتصنيع المستدام، والشراكات الاستراتيجية في جميع أنحاء العالم.",
@@ -941,7 +941,7 @@ export const arabic = {
         "subtitle": "تواصل معنا",
         "form": {
             "name": "الاسم الكامل",
-            "email": "connect@techinvention.biz",
+            "email": "connect@techinvention.com",
             "phone": "+91 22 4005 2123",
             "message": "الرسالة",
             "submit": "إرسال الرسالة",
@@ -1010,7 +1010,7 @@ export const arabic = {
                 "address": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"
             },
             "phoneLabel": "الاستفسارات الهاتفية\r\n+91 22 4005 2123",
-            "emailLabel": "البريد الإلكتروني\r\nconnect@techinvention.biz"
+            "emailLabel": "البريد الإلكتروني\r\nconnect@techinvention.com"
         },
         "introP1": "سواء كنتم تستكشفون شراكات استراتيجية، أو استفسارات حول المنتجات، أو تعاوناً في البحث والتطوير، أو فرص التوسع والتصنيع، أو دعماً استشارياً لبناء القدرات، يسر فريقنا التواصل معكم.",
         "introP2": "تعمل TechInvention مع شركاء عبر الأنظمة الصحية العالمية لتقريب العلوم من التأثير الملموس في الصحة العامة.",
@@ -2139,7 +2139,7 @@ export const arabic = {
         "address2Title": "مركز الابتكار الحيوي (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra 400710, الهند",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz"
+        "email": "connect@techinvention.com"
     },
     "products": {
         "title": "المنتجات",
@@ -2395,7 +2395,7 @@ export const arabic = {
         "titlePart1": "انطلق بمسيرتك المهنية في",
         "titlePart2": "تطوير وتصنيع اللقاحات",
         "writeTo": "راسلنا على",
-        "descEnd": "راسلنا على connect@techinvention.biz لمعرفة المزيد عن برامجنا التدريبية ومبادراتنا القادمة.",
+        "descEnd": "راسلنا على connect@techinvention.com لمعرفة المزيد عن برامجنا التدريبية ومبادراتنا القادمة.",
         "title": "انطلق في مسيرتك المهنية في تطوير وتصنيع اللقاحات",
         "connectNow": "تواصل الآن"
     },

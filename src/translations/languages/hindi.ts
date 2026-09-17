@@ -609,7 +609,7 @@ export const hindi = {
         "linkedin": "लिंक्डइन",
         "twitter": "ट्विटर (X)",
         "partnerPortal": "पार्टनर पोर्टल",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "poweredBy": "द्वारा संचालित",
         "youtube": "यूट्यूब"
     },
@@ -1147,7 +1147,7 @@ export const hindi = {
             },
             {
                 "question": "TechInvention के साथ साझेदारी कैसे करें?",
-                "answer": "प्रौद्योगिकी लाइसेंसिंग या परामर्श परियोजनाओं के लिए connect@techinvention.biz पर हमसे संपर्क कर सकते हैं।"
+                "answer": "प्रौद्योगिकी लाइसेंसिंग या परामर्श परियोजनाओं के लिए connect@techinvention.com पर हमसे संपर्क कर सकते हैं।"
             },
             {
                 "question": "GCMC सुविधा किन मानकों का पालन करती है?",
@@ -1868,7 +1868,7 @@ export const hindi = {
         "address2Title": "बायो-इनोवेशन सेंटर (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra 400710, भारत",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz"
+        "email": "connect@techinvention.com"
     },
     "products": {
         "title": "उत्पाद पोर्टफोलियो",

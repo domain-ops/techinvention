@@ -609,7 +609,7 @@ export const russian = {
         "linkedin": "LinkedIn",
         "twitter": "Twitter (X)",
         "partnerPortal": "Портал Партнеров",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "poweredBy": "Разработан компанией",
         "youtube": "YouTube"
     },
@@ -1982,7 +1982,7 @@ export const russian = {
         "address2Title": "Центр Биоинноваций (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra 400710, Индия",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz"
+        "email": "connect@techinvention.com"
     },
     "products": {
         "title": "Портфель Продукции",

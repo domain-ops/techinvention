@@ -55,8 +55,8 @@ export default function GmpCTA() {
                         {/* Description */}
                         <p className="text-slate-700 text-[16px] md:text-[18px] max-w-2xl mb-10 leading-relaxed font-medium">
                             {t('gmpCTA.writeTo') || "Write to"}{" "}
-                            <a href="mailto:connect@techinvention.biz" dir="ltr" className="underline hover:text-[#1955A6] transition-colors font-bold">
-                                connect@techinvention.biz
+                            <a href="mailto:connect@techinvention.com" dir="ltr" className="underline hover:text-[#1955A6] transition-colors font-bold">
+                                connect@techinvention.com
                             </a>{" "}
                             {t('gmpCTA.descEnd') || "to learn more about our training programs and upcoming initiatives."}
                         </p>

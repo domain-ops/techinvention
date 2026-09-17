@@ -1851,7 +1851,7 @@ export const english = {
         "address2Title": "Bio-Innovation Centre (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "title": "Product & Technical Documentation Request",
         "subtitle": "Reach out for regulatory dossiers, technical data sheets, and specifications."
     },

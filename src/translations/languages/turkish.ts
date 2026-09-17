@@ -570,7 +570,7 @@ export const turkish = {
         "connectNow": "Şimdi Bağlanın",
         "button": "Şimdi Bağlanın",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "startPartnership": "Ortaklık Başlatın",
         "primary": "Bizimle İletişime Geçin",
         "secondary": "Daha Fazla Bilgi",
@@ -594,7 +594,7 @@ export const turkish = {
         "linkedin": "LinkedIn",
         "twitter": "Twitter (X)",
         "partnerPortal": "Ortak Portalı",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "poweredBy": "Tarafından geliştirildi",
         "youtube": "YouTube",
         "tagline": "Dünya genelinde yenilikçi araştırmalar, sürdürülebilir üretim ve stratejik iş ortaklıkları aracılığıyla küresel sağlığın ilerletilmesine adanmışız.",
@@ -2135,7 +2135,7 @@ export const turkish = {
         "address2Title": "Biyo-İnovasyon Merkezi (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra 400710, Hindistan",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz"
+        "email": "connect@techinvention.com"
     },
     "products": {
         "title": "Ürünler",
@@ -2395,7 +2395,7 @@ export const turkish = {
         "titlePart2": "Aşı Geliştirme ve Üretim Alanındaki",
         "writeTo": "Eğitim programlarımız ve yaklaşan girişimlerimiz hakkında daha fazla bilgi almak için",
         "descEnd": "adresine yazın.",
-        "desc": "Eğitim programlarımız ve yaklaşan girişimlerimiz hakkında daha fazla bilgi almak için connect@techinvention.biz adresine yazın.",
+        "desc": "Eğitim programlarımız ve yaklaşan girişimlerimiz hakkında daha fazla bilgi almak için connect@techinvention.com adresine yazın.",
         "title": "Aşı Geliştirme ve Üretim Alanındaki Kariyerinize Başlayın",
         "connectNow": "Şimdi Bağlanın"
     },

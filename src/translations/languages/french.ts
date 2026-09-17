@@ -591,7 +591,7 @@ export const french = {
         "linkedin": "LinkedIn",
         "twitter": "Twitter (X)",
         "partnerPortal": "Portail Partenaires",
-        "email": "connect@techinvention.biz",
+        "email": "connect@techinvention.com",
         "poweredBy": "Conçu et développé par",
         "youtube": "YouTube",
         "tagline": "Engagée à faire progresser la santé mondiale grâce à une recherche innovante, une fabrication durable et des partenariats stratégiques à l'échelle internationale.",
@@ -2154,7 +2154,7 @@ export const french = {
         "address2Title": "Centre de Bio-Innovation (HORIZON)",
         "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra 400710, Inde",
         "phone": "+91 22 4005 2123",
-        "email": "connect@techinvention.biz"
+        "email": "connect@techinvention.com"
     },
     "products": {
         "title": "Produits",

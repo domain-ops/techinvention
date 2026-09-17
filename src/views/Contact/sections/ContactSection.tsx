@@ -23,7 +23,7 @@ const ENQUIRY_CARDS = [
         icon: HelpCircle,
         title: 'General Support',
         desc: 'Get answers to general questions about our technologies and operations.',
-        email: 'connect@techinvention.biz',
+        email: 'connect@techinvention.com',
         color: '#1955A6',
     },
 ];
@@ -151,7 +151,7 @@ const ContactSection = () => {
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                                         <Mail className="w-4 h-4 text-white" />
                                     </div>
-                                    <a href="mailto:connect@techinvention.biz" dir="ltr" className="text-slate-300 text-sm hover:text-white transition-colors break-all">connect@techinvention.biz</a>
+                                    <a href="mailto:connect@techinvention.com" dir="ltr" className="text-slate-300 text-sm hover:text-white transition-colors break-all">connect@techinvention.com</a>
                                 </div>
                             </div>
                         </div>
@@ -382,8 +382,8 @@ const ContactSection = () => {
                                     <Mail className="w-4 h-4 text-[#1955A6] shrink-0" />
                                     <span>{t('contact.emailAddress') || "Email Address"}</span>
                                 </h4>
-                                <a href="mailto:connect@techinvention.biz" dir="ltr" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium break-all">
-                                    connect@techinvention.biz
+                                <a href="mailto:connect@techinvention.com" dir="ltr" className="text-[#1955A6] text-[13px] hover:underline transition-colors font-medium break-all">
+                                    connect@techinvention.com
                                 </a>
                             </div>
                         </div>

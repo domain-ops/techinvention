@@ -150,9 +150,9 @@ const Navbar = () => {
             {/* Top Utility Bar - Hidden on Mobile */}
             <div className="hidden lg:flex w-full bg-brand-primary/5 border-b border-gray-100 h-10 items-center justify-between px-4 md:px-8">
                 <div className="flex items-center gap-6 text-[13px] font-medium text-brand-gray-dark">
-                    <a href="mailto:connect@techinvention.biz" className="flex items-center gap-2 hover:text-brand-primary transition-colors" dir="ltr">
+                    <a href="mailto:connect@techinvention.com" className="flex items-center gap-2 hover:text-brand-primary transition-colors" dir="ltr">
                         <Mail size={14} />
-                        connect@techinvention.biz
+                        connect@techinvention.com
                     </a>
                     <a href="tel:+912240052123" className="flex items-center gap-2 hover:text-brand-primary transition-colors" dir="ltr">
                         <Phone size={14} />
