@@ -30,8 +30,8 @@ const Stats = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
                     
-                    {/* Left Column: Company Photo (Clean, square corners, no overlay text) */}
-                    <div className="lg:col-span-5 relative w-full min-h-[350px] sm:min-h-[400px] md:min-h-[450px] overflow-hidden shadow-md border border-slate-200/40 bg-white group">
+                    {/* Left Column: Company Photo (Clean, rounded corners, no overlay text) */}
+                    <div className="lg:col-span-5 relative w-full min-h-[350px] sm:min-h-[400px] md:min-h-[450px] overflow-hidden shadow-md border border-slate-200/40 bg-white group rounded-2xl">
                         <motion.img 
                             loading="lazy" 
                             src={(gcmcImg as any).src ? (gcmcImg as any).src : gcmcImg} 
@@ -57,7 +57,7 @@ const Stats = () => {
                                     whileHover={{ y: -4 }}
                                     className="bg-white border border-slate-200/60 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center h-full min-h-[290px]"
                                 >
-                                    <img src={greatPlaceImg} alt="Great Place to Work" loading="lazy" decoding="async" className="max-h-[220px] sm:max-h-[250px] w-auto object-contain" />
+                                    <img src={(greatPlaceImg as any).src || greatPlaceImg} alt="Great Place to Work" loading="lazy" decoding="async" className="max-h-[260px] sm:max-h-[300px] w-auto object-contain" />
                                 </motion.div>
                             </div>
 
@@ -71,9 +71,15 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     whileHover={{ y: -4 }}
-                                    className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
+                                    className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200/60 bg-[#cbf8d8] transition-all duration-300 flex-1 flex items-center justify-center min-h-[160px] sm:min-h-[190px]"
                                 >
-                                    <img src={dbImg} alt="Dun & Bradstreet" loading="lazy" decoding="async" className="max-h-[110px] max-w-full w-auto h-auto object-contain" />
+                                    <img 
+                                        src={(dbImg as any).src || dbImg} 
+                                        alt="Dun & Bradstreet" 
+                                        loading="lazy" 
+                                        decoding="async" 
+                                        className="w-full h-full object-cover" 
+                                    />
                                 </motion.div>
 
                                 {/* Forbes Card */}
@@ -83,9 +89,15 @@ const Stats = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.3 }}
                                     whileHover={{ y: -4 }}
-                                    className="transition-all duration-300 flex-1 min-h-[132px] flex items-center justify-center"
+                                    className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-slate-800 bg-black transition-all duration-300 flex-1 flex items-center justify-center min-h-[160px] sm:min-h-[190px]"
                                 >
-                                    <img src={forbesImg} alt="Forbes India DGEMS" loading="lazy" decoding="async" className="max-h-[110px] max-w-full w-auto h-auto object-contain" />
+                                    <img 
+                                        src={(forbesImg as any).src || forbesImg} 
+                                        alt="Forbes India DGEMS" 
+                                        loading="lazy" 
+                                        decoding="async" 
+                                        className="w-full h-full object-cover" 
+                                    />
                                 </motion.div>
                             </div>
 
