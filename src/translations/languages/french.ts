@@ -2436,6 +2436,21 @@ export const french = {
             "badge": "Collaboration Scientifique et Infrastructure",
             "title": "Laboratoire BSL-2",
             "desc": "TechInvention a inauguré son laboratoire de R&D BSL-2 au sein du bioincubateur BSC BioNEST du Centre régional de biotechnologie (RCB BBB) le 6 décembre 2022, en présence de personnalités éminentes du secteur des biotechnologies et du monde universitaire, ainsi que de représentants d’autres start-ups."
+        },
+        "initiative4": {
+            "badge": "Soutien à la recherche sur les vaccins",
+            "title": "Soutenir la recherche sur les vaccins grâce à un fermenteur de 10 litres | 2022–23",
+            "desc": "TechInvention a apporté ₹15.95 lakh pour un fermenteur de 10 litres destiné au laboratoire BSL-2 du Regional Centre for Biotechnology, renforçant ainsi les infrastructures de développement des bioprocédés et de recherche sur les vaccins."
+        },
+        "initiative5": {
+            "badge": "Recherche scientifique, éducation et formation",
+            "title": "Faire progresser la recherche scientifique, l’éducation et la formation | 2023–24",
+            "desc": "Grâce à un soutien financier de ₹18.03 lakh, TechInvention a soutenu des projets de recherche et développement, ainsi que l’éducation et la formation au Regional Centre for Biotechnology et à la Research Innovation Incubation Design Laboratory Foundation."
+        },
+        "initiative6": {
+            "badge": "One Health et secours communautaire",
+            "title": "Soutenir GUNI-ORBIT et le fonds PM CARES | 2024–26",
+            "desc": "TechInvention a accordé ₹32.35 lakh au One Health Research Biotechnology Hub (GUNI-ORBIT) de Ganpat University pour soutenir l’éducation et la recherche. Un don supplémentaire de ₹3.81 lakh au fonds PM CARES a porté son soutien total sur ces deux années à ₹36.16 lakh."
         }
     },
     "publications": {

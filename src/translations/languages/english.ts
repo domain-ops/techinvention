@@ -2010,6 +2010,21 @@ export const english = {
             "badge": "Scientific Collaboration & Infrastructure",
             "title": "BSL-2 Lab",
             "desc": "TechInvention inaugurated its BSL-2 R&D lab at the Regional Centre for Biotechnology's BSC BioNEST Bioincubator (RCB BBB) on December 6, 2022, in the presence of notable figures from the biotech industry and academia, as well as representatives from other start-ups."
+        },
+        "initiative4": {
+            "badge": "Vaccine Research Support",
+            "title": "Supporting Vaccine Research through a 10-Litre Fermenter | 2022–23",
+            "desc": "TechInvention provided ₹15.95 lakh towards a 10-litre fermenter for the BSL-2 laboratory at the Regional Centre for Biotechnology, strengthening infrastructure for bioprocess development and vaccine research."
+        },
+        "initiative5": {
+            "badge": "Research, Education & Training",
+            "title": "Advancing Scientific Research, Education and Training | 2023–24",
+            "desc": "With financial support of ₹18.03 lakh, TechInvention backed research and development projects, education and training at the Regional Centre for Biotechnology and the Research Innovation Incubation Design Laboratory Foundation."
+        },
+        "initiative6": {
+            "badge": "One Health & Community Relief",
+            "title": "Supporting GUNI-ORBIT and the PM CARES Fund | 2024–26",
+            "desc": "TechInvention extended ₹32.35 lakh to Ganpat University’s One Health Research Biotechnology Hub (GUNI-ORBIT) to support education and research. A further donation of ₹3.81 lakh to the PM CARES Fund brought its total support across these two years to ₹36.16 lakh."
         }
     },
     "publications": {

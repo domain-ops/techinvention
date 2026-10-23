@@ -2400,8 +2400,10 @@ export const turkish = {
         "connectNow": "Şimdi Bağlanın"
     },
     "csr": {
+        "heading": "Kurumsal Sosyal Sorumluluk (KSS) Girişimi",
         "title": "Girişimlerimiz",
         "subtitle": "CSR'nin; herkes için uygun maliyetli, kabul edilebilir ve erişilebilir sağlık hizmetleri aracılığıyla daha fazla sağlık eşitliği sağlama yönündeki ortak hedefimize ulaşmak için işletmenin tüm paydaşlarını kapsayan bir yaklaşım benimsemesi gerektiğine inanıyoruz.",
+        "readNewsArticle": "Haber Makalesini Oku",
         "initiative1": {
             "badge": "Ar-Ge Desteği",
             "title": "PU- TechInvention Katkısı",
@@ -2417,8 +2419,21 @@ export const turkish = {
             "title": "BSL-2 Laboratuvarı",
             "desc": "TechInvention, 6 Aralık 2022 tarihinde, biyoteknoloji sektörü ve akademiden önde gelen isimlerin yanı sıra diğer girişimlerin temsilcilerinin katılımıyla, Regional Centre for Biotechnology'nin BSC BioNEST Bioincubator (RCB BBB) bünyesindeki BSL-2 R&D laboratuvarının açılışını gerçekleştirdi."
         },
-        "heading": "Kurumsal Sosyal Sorumluluk (CSR)",
-        "readNewsArticle": "Haber Makalesini Oku"
+        "initiative4": {
+            "badge": "Aşı Araştırmaları Desteği",
+            "title": "10 Litrelik Fermentör ile Aşı Araştırmalarının Desteklenmesi | 2022–23",
+            "desc": "TechInvention, Regional Centre for Biotechnology bünyesindeki BSL-2 laboratuvarına 10 litrelik bir fermentör sağlanması için ₹15.95 lakh tutarında katkıda bulunarak biyoproses geliştirme ve aşı araştırmaları altyapısını güçlendirdi."
+        },
+        "initiative5": {
+            "badge": "Bilimsel Araştırma ve Eğitim",
+            "title": "Bilimsel Araştırma, Eğitim ve Mesleki Eğitimin Geliştirilmesi | 2023–24",
+            "desc": "TechInvention, ₹18.03 lakh tutarındaki mali destekle Regional Centre for Biotechnology ve Research Innovation Incubation Design Laboratory Foundation bünyesindeki araştırma ve geliştirme projelerini, eğitim ve mesleki eğitim faaliyetlerini destekledi."
+        },
+        "initiative6": {
+            "badge": "Tek Sağlık ve Toplumsal Yardım",
+            "title": "GUNI-ORBIT ve PM CARES Fonunun Desteklenmesi | 2024–26",
+            "desc": "TechInvention, eğitim ve araştırmayı desteklemek amacıyla Ganpat Üniversitesinin Tek Sağlık Araştırma Biyoteknoloji Merkezine (GUNI-ORBIT) ₹32.35 lakh tutarında destek sağladı. PM CARES Fonuna yapılan ₹3.81 lakh tutarındaki ek bağışla, bu iki yıldaki toplam desteği ₹36.16 lakh tutarına ulaştı."
+        }
     },
     "publications": {
         "title": "Yayınlarımız",
