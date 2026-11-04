@@ -82,6 +82,12 @@ const nextConfig = {
           basePath: false,
           permanent: false,
         },
+        {
+          source: '/google7d9ac6cdd29e9a32.html',
+          destination: '/techinvention/google7d9ac6cdd29e9a32.html',
+          basePath: false,
+          permanent: false,
+        },
       ];
     }
   } : {})
