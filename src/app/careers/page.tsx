@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Careers at TechInvention | Join Our Biotech Team",
-  description: "Explore career opportunities at TechInvention. Join a diverse team of scientists, researchers, and experts advancing global health biotechnology.",
+  title: "Biotech Careers & Pharmaceutical Jobs - TechInvention",
+  description: "Career opportunities at TechInvention in vaccine development, biopharmaceutical manufacturing, research, consulting and related fields.",
   openGraph: {
-    title: "Careers at TechInvention | Join Our Biotech Team",
-    description: "Explore career opportunities at TechInvention. Join a diverse team of scientists, researchers, and experts advancing global health biotechnology.",
-    url: "https://impulsedigital.co.in/careers",
+    title: "Biotech Careers & Pharmaceutical Jobs - TechInvention",
+    description: "Career opportunities at TechInvention in vaccine development, biopharmaceutical manufacturing, research, consulting and related fields.",
+    url: "https://techinvention.com/careers/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Careers at TechInvention | Join Our Biotech Team",
-    description: "Explore career opportunities at TechInvention. Join a diverse team of scientists, researchers, and experts advancing global health biotechnology.",
+    title: "Biotech Careers & Pharmaceutical Jobs - TechInvention",
+    description: "Career opportunities at TechInvention in vaccine development, biopharmaceutical manufacturing, research, consulting and related fields.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/careers",
+    canonical: "https://techinvention.com/careers/",
   },
   robots: {
     index: true,

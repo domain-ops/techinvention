@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "CDMO Services | TechInvention",
-  description: "Explore our Contract Development and Manufacturing Organization (CDMO) services featuring our state-of-the-art GCMC facility, Drug Substance, and Drug Product capabilities.",
+  title: "Vaccine CDMO & Biologics Manufacturing - TechInvention",
+  description: "TechInvention provides vaccine CDMO services, including biologics manufacturing, drug substance manufacturing, drug product development and fill-finish services.",
   openGraph: {
-    title: "CDMO Services | TechInvention",
-    description: "Explore our Contract Development and Manufacturing Organization (CDMO) services featuring our state-of-the-art GCMC facility, Drug Substance, and Drug Product capabilities.",
-    url: "https://impulsedigital.co.in/cdmo",
+    title: "Vaccine CDMO & Biologics Manufacturing - TechInvention",
+    description: "TechInvention provides vaccine CDMO services, including biologics manufacturing, drug substance manufacturing, drug product development and fill-finish services.",
+    url: "https://techinvention.com/cdmo/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CDMO Services | TechInvention",
-    description: "Explore our Contract Development and Manufacturing Organization (CDMO) services featuring our state-of-the-art GCMC facility, Drug Substance, and Drug Product capabilities.",
+    title: "Vaccine CDMO & Biologics Manufacturing - TechInvention",
+    description: "TechInvention provides vaccine CDMO services, including biologics manufacturing, drug substance manufacturing, drug product development and fill-finish services.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/cdmo",
+    canonical: "https://techinvention.com/cdmo/",
   },
   robots: {
     index: true,

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Certifications & Compliance | TechInvention",
     description: "Discover TechInvention's regulatory certifications, quality standards, and compliance framework ensuring safe and effective biotech development.",
-    url: "https://impulsedigital.co.in/certification",
+    url: "https://techinvention.com/certification/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Discover TechInvention's regulatory certifications, quality standards, and compliance framework ensuring safe and effective biotech development.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/certification",
+    canonical: "https://techinvention.com/certification/",
   },
   robots: {
     index: true,

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Membership & Associations | TechInvention",
     description: "Explore TechInvention's professional memberships, corporate associations, and collaborations in the global biotech and pharmaceutical ecosystem.",
-    url: "https://impulsedigital.co.in/membership",
+    url: "https://techinvention.com/membership/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Explore TechInvention's professional memberships, corporate associations, and collaborations in the global biotech and pharmaceutical ecosystem.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/membership",
+    canonical: "https://techinvention.com/membership/",
   },
   robots: {
     index: true,

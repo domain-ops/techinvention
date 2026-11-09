@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Vaccine R&D & Pipelines | TechInvention",
-  description: "Read about TechInvention\\\\'s vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
+  description: "Read about TechInvention's vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
   openGraph: {
     title: "Vaccine R&D & Pipelines | TechInvention",
-    description: "Read about TechInvention\\\\'s vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
-    url: "https://impulsedigital.co.in/rnd/vaccines",
+    description: "Read about TechInvention's vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
+    url: "https://techinvention.com/rnd/vaccines/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vaccine R&D & Pipelines | TechInvention",
-    description: "Read about TechInvention\\\\'s vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
+    description: "Read about TechInvention's vaccine development pipeline, including viral vector and mRNA platforms targeting critical global infectious diseases.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/rnd/vaccines",
+    canonical: "https://techinvention.com/rnd/vaccines/",
   },
   robots: {
     index: true,

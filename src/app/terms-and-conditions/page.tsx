@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | TechInvention",
+  title: "Terms & Conditions of Website Use - TechInvention",
   description: "Read the terms and conditions of TechInvention Lifecare Limited to understand user rights and restrictions while using this website.",
   openGraph: {
-    title: "Terms & Conditions | TechInvention",
+    title: "Terms & Conditions of Website Use - TechInvention",
     description: "Read the terms and conditions of TechInvention Lifecare Limited to understand user rights and restrictions while using this website.",
-    url: "https://impulsedigital.co.in/terms-and-conditions",
+    url: "https://techinvention.com/terms-and-conditions/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms & Conditions | TechInvention",
+    title: "Terms & Conditions of Website Use - TechInvention",
     description: "Read the terms and conditions of TechInvention Lifecare Limited to understand user rights and restrictions while using this website.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/terms-and-conditions",
+    canonical: "https://techinvention.com/terms-and-conditions/",
   },
   robots: {
     index: true,

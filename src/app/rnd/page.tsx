@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Research & Development (R&D) | TechInvention",
-  description: "Explore TechInvention's research and development initiatives, biotechnology platforms, and scientific innovations for global health.",
+  title: "Vaccine Development & R&D Services - TechInvention",
+  description: "TechInvention's vaccine development and R&D services, including process development, preclinical research and BSL-2 laboratory capabilities.",
   openGraph: {
-    title: "Research & Development (R&D) | TechInvention",
-    description: "Explore TechInvention's research and development initiatives, biotechnology platforms, and scientific innovations for global health.",
-    url: "https://impulsedigital.co.in/rnd",
+    title: "Vaccine Development & R&D Services - TechInvention",
+    description: "TechInvention's vaccine development and R&D services, including process development, preclinical research and BSL-2 laboratory capabilities.",
+    url: "https://techinvention.com/rnd/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Research & Development (R&D) | TechInvention",
-    description: "Explore TechInvention's research and development initiatives, biotechnology platforms, and scientific innovations for global health.",
+    title: "Vaccine Development & R&D Services - TechInvention",
+    description: "TechInvention's vaccine development and R&D services, including process development, preclinical research and BSL-2 laboratory capabilities.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/rnd",
+    canonical: "https://techinvention.com/rnd/",
   },
   robots: {
     index: true,

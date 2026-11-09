@@ -14,8 +14,8 @@ const montserrat = Montserrat({
 const basePath = process.env.BASE_PATH || '';
 
 export const metadata: Metadata = {
-  title: "TechInvention | Advancing Global Health Through Biotechnology",
-  description: "Global biotech company focused on vaccines, diagnostics, and biotherapeutics. Innovation that protects tomorrow.",
+  title: "Vaccine manufacturing company in India - TechInvention",
+  description: "TechInvention advances vaccine manufacturing and biopharmaceutical development in India through integrated R&D, GMP manufacturing and consulting services.",
   icons: {
     icon: `${basePath}/favicon.ico?v=2`,
     apple: `${basePath}/favicon.ico?v=2`

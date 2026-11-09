@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Diagnostic Platforms & R&D | TechInvention",
     description: "Discover TechInvention's next-generation diagnostic tools, offering molecular precision and rapid detection for global health security.",
-    url: "https://impulsedigital.co.in/rnd/diagnostics",
+    url: "https://techinvention.com/rnd/diagnostics/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Discover TechInvention's next-generation diagnostic tools, offering molecular precision and rapid detection for global health security.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/rnd/diagnostics",
+    canonical: "https://techinvention.com/rnd/diagnostics/",
   },
   robots: {
     index: true,

@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Biotech Products & Solutions | TechInvention",
+  title: "Vaccine Products & Portfolio - TechInvention",
   description: "Browse TechInvention's portfolio of vaccines, rapid diagnostic kits, biotherapeutics, and specialized medical countermeasure solutions.",
   openGraph: {
-    title: "Biotech Products & Solutions | TechInvention",
+    title: "Vaccine Products & Portfolio - TechInvention",
     description: "Browse TechInvention's portfolio of vaccines, rapid diagnostic kits, biotherapeutics, and specialized medical countermeasure solutions.",
-    url: "https://impulsedigital.co.in/products",
+    url: "https://techinvention.com/products/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Biotech Products & Solutions | TechInvention",
+    title: "Vaccine Products & Portfolio - TechInvention",
     description: "Browse TechInvention's portfolio of vaccines, rapid diagnostic kits, biotherapeutics, and specialized medical countermeasure solutions.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/products",
+    canonical: "https://techinvention.com/products/",
   },
   robots: {
     index: true,

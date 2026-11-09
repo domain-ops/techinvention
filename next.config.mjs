@@ -88,6 +88,18 @@ const nextConfig = {
           basePath: false,
           permanent: false,
         },
+        {
+          source: '/robots.txt',
+          destination: '/techinvention/robots.txt',
+          basePath: false,
+          permanent: false,
+        },
+        {
+          source: '/sitemap.xml',
+          destination: '/techinvention/sitemap.xml',
+          basePath: false,
+          permanent: false,
+        },
       ];
     }
   } : {})

@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact TechInvention | Global Offices & Inquiries",
-  description: "Get in touch with TechInvention. Contact our global headquarters and offices for partnerships, advisory inquiries, and product information.",
+  title: "Contact TechInvention for Enquiries & Partnerships",
+  description: "Contact TechInvention for vaccine products, manufacturing services, R&D collaborations, consulting, technology partnerships and general enquiries.",
   openGraph: {
-    title: "Contact TechInvention | Global Offices & Inquiries",
-    description: "Get in touch with TechInvention. Contact our global headquarters and offices for partnerships, advisory inquiries, and product information.",
-    url: "https://impulsedigital.co.in/contact-us",
+    title: "Contact TechInvention for Enquiries & Partnerships",
+    description: "Contact TechInvention for vaccine products, manufacturing services, R&D collaborations, consulting, technology partnerships and general enquiries.",
+    url: "https://techinvention.com/contact-us/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact TechInvention | Global Offices & Inquiries",
-    description: "Get in touch with TechInvention. Contact our global headquarters and offices for partnerships, advisory inquiries, and product information.",
+    title: "Contact TechInvention for Enquiries & Partnerships",
+    description: "Contact TechInvention for vaccine products, manufacturing services, R&D collaborations, consulting, technology partnerships and general enquiries.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/contact-us",
+    canonical: "https://techinvention.com/contact-us/",
   },
   robots: {
     index: true,

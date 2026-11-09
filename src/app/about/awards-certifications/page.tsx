@@ -1,23 +1,23 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Awards & Certifications | TechInvention",
-  description: "Explore the certifications, awards, and recognitions received by TechInvention, showcasing our commitment to quality, ESG compliance, and biopharma innovation.",
+  title: "Awards, Recognition & Certifications - TechInvention",
+  description: "Explore TechInvention's awards, ISO certifications and industry recognition highlighting its commitment to quality, innovation and responsible business practices.",
   openGraph: {
-    title: "Awards & Certifications | TechInvention",
-    description: "Explore the certifications, awards, and recognitions received by TechInvention, showcasing our commitment to quality, ESG compliance, and biopharma innovation.",
-    url: "https://impulsedigital.co.in/about/awards-certifications",
+    title: "Awards, Recognition & Certifications - TechInvention",
+    description: "Explore TechInvention's awards, ISO certifications and industry recognition highlighting its commitment to quality, innovation and responsible business practices.",
+    url: "https://techinvention.com/about/awards-certifications/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Awards & Certifications | TechInvention",
-    description: "Explore the certifications, awards, and recognitions received by TechInvention, showcasing our commitment to quality, ESG compliance, and biopharma innovation.",
+    title: "Awards, Recognition & Certifications - TechInvention",
+    description: "Explore TechInvention's awards, ISO certifications and industry recognition highlighting its commitment to quality, innovation and responsible business practices.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/about/awards-certifications",
+    canonical: "https://techinvention.com/about/awards-certifications/",
   },
   robots: {
     index: true,

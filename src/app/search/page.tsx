@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Search | TechInvention",
     description: "Search our website to find information about our products, research and development, consulting services, and latest insights.",
-    url: "https://impulsedigital.co.in/search",
+    url: "https://techinvention.com/search/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Search our website to find information about our products, research and development, consulting services, and latest insights.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/search",
+    canonical: "https://techinvention.com/search/",
   },
   robots: {
     index: true,
@@ -29,7 +29,7 @@ import PageComponent from '../../views/Search';
 
 export default function Page() {
   return (
-    <Suspense fallback={<div className="w-full min-h-[50vh] flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-brand-primary border-t-transparent animate-spin" /></div>}>
+    <Suspense fallback={<div className="min-h-screen bg-brand-background" />}>
       <PageComponent />
     </Suspense>
   );

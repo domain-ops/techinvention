@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Awards & Recognition | TechInvention",
     description: "Celebrate TechInvention's achievements, industry awards, and global recognition in biotechnology research and pharmaceutical innovation.",
-    url: "https://impulsedigital.co.in/awards",
+    url: "https://techinvention.com/awards/",
     siteName: "TechInvention",
     locale: "en_US",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Celebrate TechInvention's achievements, industry awards, and global recognition in biotechnology research and pharmaceutical innovation.",
   },
   alternates: {
-    canonical: "https://impulsedigital.co.in/awards",
+    canonical: "https://techinvention.com/awards/",
   },
   robots: {
     index: true,
