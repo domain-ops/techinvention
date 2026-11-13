@@ -25,13 +25,14 @@ const SyringeIcon = ({ color = "currentColor", className = "" }) => (
 );
 
 const pipelineData = [
-    { name: "Pneumococcal Conjugate Vaccine (16-valent)", progress: 75, color: "#2068C6" },
-    { name: "Hexavalent Meningococcal Vaccine (ABCYWX)", progress: 50, color: "#0E8B94" },
-    { name: "Pan-Salmonella Vaccine", progress: 50, color: "#0E8B94" },
-    { name: "Shigella Vaccine", progress: 50, color: "#0E8B94" },
-    { name: "Meningococcal B Vaccine", progress: 50, color: "#0E8B94" },
-    { name: "Malaria Vaccine", progress: 50, color: "#0E8B94" },
-    { name: "Tuberculosis Vaccine", progress: 50, color: "#0E8B94" }
+    { name: "Meningococcal B Vaccine", progress: 65, color: "#1955A6" },
+    { name: "Hexavalent Meningococcal Vaccine", progress: 50, color: "#129B9C" },
+    { name: "Malaria Vaccine", progress: 50, color: "#129B9C" },
+    { name: "Tuberculosis Vaccine", progress: 50, color: "#129B9C" },
+    { name: "Pan-Salmonella Vaccine", progress: 45, color: "#129B9C" },
+    { name: "Shigella - Salmonella Vaccine", progress: 45, color: "#129B9C" },
+    { name: "RSV Vaccine", progress: 23, color: "#129B9C" },
+    { name: "Hepatitis B Vaccine", progress: 23, color: "#129B9C" }
 ];
 
 export default function InfectiousDiseasesPipeline() {
@@ -57,7 +58,7 @@ export default function InfectiousDiseasesPipeline() {
                 </div>
 
                 {/* Progress Bar Flow Chart Container */}
-                <div className="w-full hidden md:block">
+                <div className="w-full hidden lg:block">
                     
                     {/* Table Header (Phases) */}
                     <div className="grid grid-cols-[300px_1fr] gap-0 text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
@@ -67,7 +68,7 @@ export default function InfectiousDiseasesPipeline() {
                         <div className={`grid grid-cols-4 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-0 pl-0'}`}>
                             <div className="text-center font-bold">{t('rnd.discovery') || "Discovery"}</div>
                             <div className="text-center font-bold">{t('rnd.poc') || "Proof-of-Concept"}</div>
-                            <div className="text-center font-bold">{t('rnd.preclinical') || "Pre-clinical"}</div>
+                            <div className="text-center font-bold">{t('rnd.preclinical') || "Preclinical"}</div>
                             <div className="text-center font-bold">{t('rnd.phase12') || "Phase 1/2"}</div>
                         </div>
                     </div>
@@ -95,7 +96,7 @@ export default function InfectiousDiseasesPipeline() {
                                     return (
                                         <div 
                                             key={idx} 
-                                            className={`grid grid-cols-[300px_1fr] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
+                                            className={`grid grid-cols-[300px_1fr] items-stretch min-h-[105px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
                                         >
                                             {/* Text Label */}
                                             <div className={`px-6 flex items-center ${isRTL ? 'justify-start text-left' : 'justify-start text-left'} text-[15px] font-medium text-black py-4 border-r border-transparent`}>
@@ -104,7 +105,7 @@ export default function InfectiousDiseasesPipeline() {
 
                                             {/* Tracking Line Area */}
                                             <div className={`relative flex items-center py-6 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-0 pl-0'} pointer-events-none`}>
-                                                <div className="relative w-full h-24 flex items-center">
+                                                <div className="relative w-full h-20 flex items-center">
                                                     
                                                     {/* Central tracking line */}
                                                     <motion.div 
@@ -172,7 +173,7 @@ export default function InfectiousDiseasesPipeline() {
                                 <div className="w-full relative mt-2 mb-2">
                                     <div className="flex justify-between text-[13px] text-slate-500 font-bold mb-3 px-1">
                                         <span>{t('rnd.discovery') || "Discovery"}</span>
-                                        <span>{t('rnd.preclinical') || "Pre-clinical"}</span>
+                                        <span>{t('rnd.preclinical') || "Preclinical"}</span>
                                         <span className="text-black">{t('rnd.phase12') || "Phase 1/2"}</span>
                                     </div>
                                     <div className="relative w-full h-2 bg-slate-200 rounded-full">

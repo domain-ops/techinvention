@@ -39,6 +39,9 @@ export const english = {
         "csr": "CSR",
         "awardsCertifications": "Awards & Certifications",
         "announcements": [
+            "🤝 Bringing an industry perspective to the national dialogue, Our CEO Syed Ahmed participated in the consultation forum on advancing vaccine adjuvant science in India.",
+            "🤝 Our CEO, Syed Ahmed, and Associate Director, Safia Syeda, participated in the World Vaccine Congress Europe 2026 in Amsterdam to explore strategic partnerships in novel vaccine adjuvants for the AMR pipeline.",
+            "📈 TechInvention achieves three consecutive years of growth in its Dun & Bradstreet SME Risk Score, rising from 81% in 2024 to 83% in 2026.",
             "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
             "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
             "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",
@@ -746,7 +749,7 @@ export const english = {
         "phases": {
             "rd": "Discovery",
             "poc": "Proof-of-Concept",
-            "preClinical": "Pre-clinical",
+            "preClinical": "Preclinical",
             "phase12": "Phase 1/2"
         },
         "milestonesTitle": "Anticipated Key Milestones",
@@ -766,27 +769,12 @@ export const english = {
         },
         "items": [
             {
-                "name": "Pneumococcal Conjugate Vaccine (16-valent)",
-                "progress": 75,
+                "name": "Meningococcal B Vaccine",
+                "progress": 65,
                 "color": "#1955A6"
             },
             {
-                "name": "Hexavalent Meningococcal Vaccine (ABCYWX)",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Meningococcal B Vaccine",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Shigella Vaccine",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Pan-Salmonella Vaccine",
+                "name": "Hexavalent Meningococcal Vaccine",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -798,6 +786,26 @@ export const english = {
             {
                 "name": "Tuberculosis Vaccine",
                 "progress": 50,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Pan-Salmonella Vaccine",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Shigella - Salmonella Vaccine",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "RSV Vaccine",
+                "progress": 23,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Hepatitis B Vaccine",
+                "progress": 23,
                 "color": "#129B9C"
             }
         ],
@@ -1921,7 +1929,7 @@ export const english = {
         "pipelineTitle": "Infectious Diseases Pipeline",
         "discovery": "Discovery",
         "poc": "Proof-of-Concept",
-        "preclinical": "Pre-clinical",
+        "preclinical": "Preclinical",
         "phase12": "Phase 1/2",
         "facilityFeatures": [
             {
@@ -1969,13 +1977,14 @@ export const english = {
             }
         ],
         "pipelineItems": [
-            "Pneumococcal Conjugate Vaccine (16-valent)",
-            "Hexavalent Meningococcal Vaccine (ABCYWX)",
-            "Pan-Salmonella Vaccine",
-            "Shigella Vaccine",
             "Meningococcal B Vaccine",
+            "Hexavalent Meningococcal Vaccine",
             "Malaria Vaccine",
-            "Tuberculosis Vaccine"
+            "Tuberculosis Vaccine",
+            "Pan-Salmonella Vaccine",
+            "Shigella - Salmonella Vaccine",
+            "RSV Vaccine",
+            "Hepatitis B Vaccine"
         ],
         "title": "Research & Development",
         "subtitle": "Next-Generation Biotech Discoveries",

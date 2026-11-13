@@ -39,6 +39,9 @@ export const spanish = {
         "csr": "CSR",
         "awardsCertifications": "Premios y certificaciones",
         "announcements": [
+            "🤝 Aportando una perspectiva del sector al diálogo nacional, nuestro CEO, Syed Ahmed, participó en el foro de consulta sobre el avance de la ciencia de los adyuvantes vacunales en India.",
+            "🤝 Nuestro CEO, Syed Ahmed, y la Directora Asociada, Safia Syeda, participaron en el World Vaccine Congress Europe 2026 en Ámsterdam para explorar alianzas estratégicas en nuevos adyuvantes vacunales para la cartera de proyectos contra la resistencia a los antimicrobianos (RAM).",
+            "📈 TechInvention logra tres años consecutivos de crecimiento en su puntaje de riesgo para PYMES de Dun & Bradstreet, pasando del 81 % en 2024 al 83 % en 2026.",
             "🏆 TechInvention fue reconocida en Forbes India Select 200 y fue destacada entre las empresas con potencial empresarial global, reflejando el rápido crecimiento y el liderazgo de la compañía en la industria.",
             "🏆 Honrada con el premio \"Mejores Esfuerzos en Vacunas del Año\" en los BioSpectrum India Excellence Awards 2025.",
             "🤝 Orgullosos de recibir el apoyo de la Junta de Desarrollo Tecnológico (TDB) para nuestra iniciativa de Vacunas NexGen.",
@@ -770,27 +773,12 @@ export const spanish = {
         },
         "items": [
             {
-                "name": "Vacuna conjugada antineumocócica (16-valente)",
-                "progress": 75,
+                "name": "Vacuna meningocócica B",
+                "progress": 65,
                 "color": "#1955A6"
             },
             {
-                "name": "Vacuna meningocócica hexavalente (ABCYWX)",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Vacuna meningocócica B",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Vacuna contra Shigella",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Vacuna contra Pan-Salmonella",
+                "name": "Vacuna meningocócica hexavalente",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -802,6 +790,26 @@ export const spanish = {
             {
                 "name": "Vacuna contra la tuberculosis",
                 "progress": 50,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vacuna contra Pan-Salmonella",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vacuna contra Shigella - Salmonella",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vacuna contra el VRS",
+                "progress": 23,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vacuna contra la hepatitis B",
+                "progress": 23,
                 "color": "#129B9C"
             }
         ],
@@ -2006,13 +2014,14 @@ export const spanish = {
             }
         ],
         "pipelineItems": [
-            "Vacuna conjugada antineumocócica (16-valente)",
-            "Vacuna meningocócica hexavalente (ABCYWX)",
-            "Vacuna contra Pan-Salmonella",
-            "Vacuna contra Shigella",
             "Vacuna meningocócica B",
+            "Vacuna meningocócica hexavalente",
             "Vacuna contra la malaria",
-            "Vacuna contra la tuberculosis"
+            "Vacuna contra la tuberculosis",
+            "Vacuna contra Pan-Salmonella",
+            "Vacuna contra Shigella - Salmonella",
+            "Vacuna contra el VRS",
+            "Vacuna contra la hepatitis B"
         ]
     },
     "gmpTraining": {

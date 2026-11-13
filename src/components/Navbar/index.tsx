@@ -25,6 +25,9 @@ const Navbar = () => {
     }, []);
 
     const defaultAnnouncements = [
+        "🤝 Bringing an industry perspective to the national dialogue, Our CEO Syed Ahmed participated in the consultation forum on advancing vaccine adjuvant science in India.",
+        "🤝 Our CEO, Syed Ahmed, and Associate Director, Safia Syeda, participated in the World Vaccine Congress Europe 2026 in Amsterdam to explore strategic partnerships in novel vaccine adjuvants for the AMR pipeline.",
+        "📈 TechInvention achieves three consecutive years of growth in its Dun & Bradstreet SME Risk Score, rising from 81% in 2024 to 83% in 2026.",
         "🏆 TechInvention recognized in Forbes India Select 200, featured among companies with Global Business Potential, reflecting the company's rapid growth and industry leadership.",
         "🏆 Honoured with the \"Best Vaccine Efforts of the Year\" award at the BioSpectrum India Excellence Awards 2025.",
         "🤝 Proud to receive support from the Technology Development Board (TDB) for our NexGen Vaccine initiative.",

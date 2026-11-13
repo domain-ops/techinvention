@@ -39,6 +39,9 @@ export const turkish = {
         "csr": "CSR",
         "awardsCertifications": "Ödüller ve Sertifikalar",
         "announcements": [
+            "🤝 Ulusal diyaloğa sektör perspektifini taşıyan CEO'muz Syed Ahmed, Hindistan'da aşı adjuvanı biliminin ilerletilmesine yönelik istişare forumuna katıldı.",
+            "🤝 CEO'muz Syed Ahmed ve Direktör Yardımcımız Safia Syeda, AMR ürün geliştirme portföyü için yeni aşı adjuvanları alanındaki stratejik ortaklık fırsatlarını değerlendirmek üzere Amsterdam'da düzenlenen World Vaccine Congress Europe 2026'ya katıldı.",
+            "📈 TechInvention, Dun & Bradstreet KOBİ Risk Skoru'nda üst üste üç yıl büyüme kaydederek 2024'teki %81 seviyesinden 2026'da %83'e yükseldi.",
             "🏆 TechInvention, Forbes India Select 200 listesinde tanındı ve küresel iş potansiyeline sahip şirketler arasında gösterildi; bu, şirketin hızlı büyümesini ve sektördeki liderliğini yansıtmaktadır.",
             "🏆 BioSpectrum India Excellence Awards 2025’te \"Yılın En İyi Aşı Çalışmaları\" ödülüyle onurlandırıldı.",
             "🤝 NexGen Aşı girişimimiz için Teknoloji Geliştirme Kurulu’nun (TDB) desteğini almaktan gurur duyuyoruz",
@@ -761,27 +764,12 @@ export const turkish = {
         },
         "items": [
             {
-                "name": "Pnömokok Konjuge Aşısı (16-valanlı)",
-                "progress": 75,
+                "name": "Meningokok B Aşısı",
+                "progress": 65,
                 "color": "#1955A6"
             },
             {
-                "name": "Heksavalan Meningokok Aşısı (ABCYWX)",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Pan-Salmonella Aşısı",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Shigella Aşısı",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Meningokok B Aşısı",
+                "name": "Heksavalan Meningokok Aşısı",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -793,6 +781,26 @@ export const turkish = {
             {
                 "name": "Tüberküloz Aşısı",
                 "progress": 50,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Pan-Salmonella Aşısı",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Shigella - Salmonella Aşısı",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "RSV Aşısı",
+                "progress": 23,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Hepatit B Aşısı",
+                "progress": 23,
                 "color": "#129B9C"
             }
         ],
@@ -2314,13 +2322,14 @@ export const turkish = {
             }
         ],
         "pipelineItems": [
-            "Pnömokok Konjuge Aşısı (16-valanlı)",
-            "Heksavalan Meningokok Aşısı (ABCYWX)",
-            "Pan-Salmonella Aşısı",
-            "Shigella Aşısı",
             "Meningokok B Aşısı",
+            "Heksavalan Meningokok Aşısı",
             "Sıtma Aşısı",
-            "Tüberküloz Aşısı"
+            "Tüberküloz Aşısı",
+            "Pan-Salmonella Aşısı",
+            "Shigella - Salmonella Aşısı",
+            "RSV Aşısı",
+            "Hepatit B Aşısı"
         ],
         "pilotGmpTitle": "Pilot-GMP Özellikleri",
         "ecoTitle": "Ekolojik Ayak İzi",

@@ -54,7 +54,7 @@ const VaccinePipeline = () => {
                 <div className={`hidden lg:block w-full pb-8 ${isRTL ? 'pl-4' : 'pr-4'}`}>
                     <div className="w-full">
                         {/* Table Header (Phases) */}
-                        <div className="grid grid-cols-[160px_1fr] xl:grid-cols-[180px_1fr] gap-0 text-[11px] xl:text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
+                        <div className="grid grid-cols-[180px_1fr] xl:grid-cols-[210px_1fr] gap-0 text-[11px] xl:text-[12px] font-semibold text-black tracking-wide pb-4 border-b border-slate-300">
                             <div>{/* Empty for row label */}</div>
                             
                             {/* Phase Columns Container */}
@@ -70,7 +70,7 @@ const VaccinePipeline = () => {
                         <div className="relative mt-8">
                             
                             {/* Vertical Dotted Guide Lines (Background Layer) */}
-                            <div className="absolute inset-0 grid grid-cols-[160px_1fr] xl:grid-cols-[180px_1fr] gap-0 pointer-events-none pb-8 h-full z-0">
+                            <div className="absolute inset-0 grid grid-cols-[180px_1fr] xl:grid-cols-[210px_1fr] gap-0 pointer-events-none pb-8 h-full z-0">
                                 <div></div>
                                 <div className={`grid grid-cols-4 w-full h-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'}`}>
                                     <div className="border-l border-dotted border-slate-300"></div>
@@ -90,7 +90,7 @@ const VaccinePipeline = () => {
                                     return (
                                         <div 
                                             key={idx} 
-                                            className={`grid grid-cols-[160px_1fr] xl:grid-cols-[180px_1fr] items-stretch min-h-[120px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
+                                            className={`grid grid-cols-[180px_1fr] xl:grid-cols-[210px_1fr] items-stretch min-h-[105px] w-full ${isAlternate ? 'bg-slate-50' : 'bg-transparent'}`}
                                         >
                                             {/* Text Label */}
                                             <div className={`px-4 xl:px-6 flex items-center ${isRTL ? 'justify-start text-left' : 'justify-end text-right'} text-[14px] xl:text-[15px] font-medium text-black py-4 border-r border-transparent`}>
@@ -99,7 +99,7 @@ const VaccinePipeline = () => {
 
                                             {/* Tracking Line Area */}
                                             <div className={`relative flex items-center py-6 w-full ${isRTL ? 'pl-12 pr-0' : 'pr-12 pl-0'} pointer-events-none`}>
-                                                <div className="relative w-full h-24 flex items-center">
+                                                <div className="relative w-full h-20 flex items-center">
                                                     
                                                     {/* Central tracking line connecting nodes */}
                                                     <motion.div 

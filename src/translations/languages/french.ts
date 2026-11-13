@@ -39,6 +39,9 @@ export const french = {
         "csr": "CSR",
         "awardsCertifications": "Récompenses et certifications",
         "announcements": [
+            "🤝 Apportant une perspective industrielle au dialogue national, notre PDG, Syed Ahmed, a participé au forum de consultation consacré à l'avancement de la science des adjuvants vaccinaux en Inde.",
+            "🤝 Notre PDG, Syed Ahmed, et notre directrice associée, Safia Syeda, ont participé au World Vaccine Congress Europe 2026 à Amsterdam afin d'explorer des partenariats stratégiques dans le domaine des nouveaux adjuvants vaccinaux pour le portefeuille de projets liés à la résistance aux antimicrobiens (RAM).",
+            "📈 TechInvention enregistre une hausse de son score de risque PME Dun & Bradstreet pour la troisième année consécutive, passant de 81 % en 2024 à 83 % en 2026.",
             "🏆 TechInvention a été reconnue dans Forbes India Select 200 et mise en avant parmi les entreprises présentant un potentiel commercial mondial, reflétant la croissance rapide et le leadership de l'entreprise dans l'industrie.",
             "🏆 Honorée par le prix « Meilleurs efforts en matière de vaccins de l'année » lors des BioSpectrum India Excellence Awards 2025.",
             "🤝 Fiers de bénéficier du soutien du Conseil de Développement Technologique (TDB) pour notre initiative de vaccins NexGen.",
@@ -758,27 +761,12 @@ export const french = {
         },
         "items": [
             {
-                "name": "Vaccin conjugué contre le pneumocoque (16-valent)",
-                "progress": 75,
+                "name": "Vaccin contre le méningocoque B",
+                "progress": 65,
                 "color": "#1955A6"
             },
             {
-                "name": "Vaccin hexavalent contre le méningocoque (ABCYWX)",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Vaccin pan-salmonella",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Vaccin contre Shigella",
-                "progress": 50,
-                "color": "#129B9C"
-            },
-            {
-                "name": "Vaccin contre le méningocoque B",
+                "name": "Vaccin hexavalent contre le méningocoque",
                 "progress": 50,
                 "color": "#129B9C"
             },
@@ -790,6 +778,26 @@ export const french = {
             {
                 "name": "Vaccin contre la tuberculose",
                 "progress": 50,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vaccin pan-salmonella",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vaccin contre Shigella - Salmonella",
+                "progress": 45,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vaccin contre le VRS",
+                "progress": 23,
+                "color": "#129B9C"
+            },
+            {
+                "name": "Vaccin contre l'hépatite B",
+                "progress": 23,
                 "color": "#129B9C"
             }
         ],
@@ -2333,13 +2341,14 @@ export const french = {
             }
         ],
         "pipelineItems": [
-            "Vaccin conjugué contre le pneumocoque (16-valent)",
-            "Vaccin hexavalent contre le méningocoque (ABCYWX)",
-            "Vaccin pan-salmonella",
-            "Vaccin contre Shigella",
             "Vaccin contre le méningocoque B",
+            "Vaccin hexavalent contre le méningocoque",
             "Vaccin contre le paludisme",
-            "Vaccin contre la tuberculose"
+            "Vaccin contre la tuberculose",
+            "Vaccin pan-salmonella",
+            "Vaccin contre Shigella - Salmonella",
+            "Vaccin contre le VRS",
+            "Vaccin contre l'hépatite B"
         ],
         "pilotGmpTitle": "Caractéristiques du site pilote conforme aux normes GMP",
         "ecoTitle": "Empreinte écologique",
