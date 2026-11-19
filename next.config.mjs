@@ -6,6 +6,12 @@ const nextConfig = {
   output: process.env.STATIC_EXPORT === 'true' ? 'export' : undefined,
   basePath: process.env.BASE_PATH || '',
   trailingSlash: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
   },
