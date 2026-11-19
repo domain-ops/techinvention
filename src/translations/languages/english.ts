@@ -988,7 +988,9 @@ export const english = {
             "title": "Location & Address",
             "desc": "Visit our corporate office or connect with us directly for partnership discussions, product enquiries, strategic collaborations and institutional communication.",
             "gcmcTitle": "Corporate Office & Manufacturing Site (GCMC)",
-            "horizonTitle": "R&D Centre (HORIZON)"
+            "gcmcAddress": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710",
+            "horizonTitle": "R&D Centre (HORIZON)",
+            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"
         },
         "introP1": "Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you.",
         "introP2": "TechInvention works with partners across global health systems to move science closer to meaningful public health impact.",
@@ -1855,9 +1857,9 @@ export const english = {
     "contactDocs": {
         "connectDesc": "Whether you are exploring partnerships, product enquiries, R&D collaborations, scale-up and manufacturing opportunities or consultancy support for capacity building, our team would be pleased to hear from you. TechInvention works with partners across global health systems to move science closer to meaningful public health impact.",
         "address1Title": "Corporate Office and Manufacturing Site",
-        "address1": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
+        "address1": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710",
         "address2Title": "Bio-Innovation Centre (HORIZON)",
-        "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
+        "address2": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710",
         "phone": "+91 22 4005 2123",
         "email": "connect@techinvention.com",
         "title": "Product & Technical Documentation Request",

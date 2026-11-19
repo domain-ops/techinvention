@@ -1011,11 +1011,11 @@ export const arabic = {
             "horizonTitle": "مركز البحث والتطوير (HORIZON)",
             "corporate": {
                 "title": "المكتب الرئيسي وموقع التصنيع (مركز جي سي إم سي)",
-                "address": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710"
+                "address": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"
             },
             "rnd": {
                 "title": "مركز البحث والتطوير (R&D) (هورايزون)",
-                "address": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"
+                "address": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"
             },
             "phoneLabel": "الاستفسارات الهاتفية\r\n+91 22 4005 2123",
             "emailLabel": "البريد الإلكتروني\r\nconnect@techinvention.com"

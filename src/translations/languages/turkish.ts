@@ -1022,16 +1022,16 @@ export const turkish = {
             "title": "Konum ve Adres",
             "desc": "İş ortaklığı görüşmeleri, ürün talepleri, stratejik iş birlikleri ve kurumsal iletişim için kurumsal ofisimizi ziyaret edebilir veya doğrudan bizimle iletişime geçebilirsiniz.",
             "gcmcTitle": "Kurumsal Ofis ve Üretim Tesisi (GCMC)",
-            "gcmcAddress": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
+            "gcmcAddress": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710",
             "horizonTitle": "R&D Merkezi (HORIZON)",
-            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra",
+            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710",
             "corporate": {
                 "title": "Kurumsal Ofis ve Üretim Tesisi (GCMC)",
-                "address": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710"
+                "address": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"
             },
             "rnd": {
                 "title": "R&D Merkezi (HORIZON)",
-                "address": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"
+                "address": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"
             },
             "phoneLabel": "Telefonla İletişim",
             "emailLabel": "E-posta Adresi"

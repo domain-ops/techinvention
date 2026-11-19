@@ -1016,16 +1016,16 @@ export const french = {
             "title": "Localisation et adresse",
             "desc": "Rendez-vous à notre siège social ou contactez-nous directement pour discuter de partenariats, poser des questions sur nos produits, établir des collaborations stratégiques ou communiquer avec les institutions.",
             "gcmcTitle": "Siège social et site de production (GCMC)",
-            "gcmcAddress": "Parcelle n° EL-40, Mahape MIDC Electric Zone, Zone industrielle MIDC, village de Mahape, Navi Mumbai, Thane, Maharashtra, 400710",
+            "gcmcAddress": "Parcelle n° EL-40, Mahape MIDC Electric Zone, Zone industrielle MIDC, village de Mahape, Navi Mumbai, Maharashtra, 400710",
             "horizonTitle": "Centre de R&D (HORIZON)",
-            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, Zone industrielle MIDC, Village de Mahape, Navi Mumbai, Thane, Maharashtra",
+            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, Zone industrielle MIDC, Village de Mahape, Navi Mumbai, Maharashtra, 400710",
             "corporate": {
                 "title": "Siège social et site de production (GCMC)",
-                "address": "Parcelle n° EL-40, Mahape MIDC Electric Zone, Zone industrielle MIDC, village de Mahape, Navi Mumbai, Thane, Maharashtra, 400710"
+                "address": "Parcelle n° EL-40, Mahape MIDC Electric Zone, Zone industrielle MIDC, village de Mahape, Navi Mumbai, Maharashtra, 400710"
             },
             "rnd": {
                 "title": "Centre de R&D (HORIZON)",
-                "address": "EL-125, Mahape MIDC Electric Zone, Zone industrielle MIDC, Village de Mahape, Navi Mumbai, Thane, Maharashtra"
+                "address": "EL-125, Mahape MIDC Electric Zone, Zone industrielle MIDC, Village de Mahape, Navi Mumbai, Maharashtra, 400710"
             }
         }
     },

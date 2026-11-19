@@ -1,5 +1,51 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # 301 Redirects from techinvention.biz to techinvention.com
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?disclaimer/?$ https://techinvention.com/disclaimer/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?cdmo/?$ https://techinvention.com/cdmo/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?rnd/?$ https://techinvention.com/rnd/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?terms-and-conditions/?$ https://techinvention.com/terms-and-conditions/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?products/?$ https://techinvention.com/products/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?contact-us/?$ https://techinvention.com/contact-us/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?about/csr-initiatives/?$ https://techinvention.com/about/csr-initiatives/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?about/awards-certifications/?$ https://techinvention.com/about/awards-certifications/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?about/?$ https://techinvention.com/about/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?gmp-training/?$ https://techinvention.com/gmp-training/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?careers/?$ https://techinvention.com/careers/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(techinvention/)?consulting/?$ https://techinvention.com/consulting/ [R=301,L]
+
+  # Catch-all 301 redirect for all other techinvention.biz requests
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^techinvention/(.*)$ https://techinvention.com/$1 [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^(www\.)?techinvention\.biz$ [NC]
+  RewriteRule ^(.*)$ https://techinvention.com/$1 [R=301,L]
+
+  # Internal rewrite for SPA / Static Export on Hostinger
   RewriteBase /techinvention/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f

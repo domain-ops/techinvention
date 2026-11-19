@@ -329,7 +329,7 @@ const ContactSection = () => {
                                         <span>{t('contact.locations.gcmcTitle') || "Corporate Office & Manufacturing Site (GCMC)"}</span>
                                     </h5>
                                     <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
-                                        {t('contact.locations.gcmcAddress') || t('contact.locations.corporate.address') || "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710"}
+                                        {t('contact.locations.gcmcAddress') || t('contact.locations.corporate.address') || "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"}
                                     </p>
                                 </div>
                             </div>
@@ -339,7 +339,7 @@ const ContactSection = () => {
                                 <h4 className="text-[13px] md:text-[14px] font-bold text-[#1955A6] uppercase tracking-wider text-center lg:text-left">{t('contact.locations.horizonTitle') || "R&D Centre (HORIZON)"}</h4>
                                 <div className="w-full h-[300px] sm:h-[350px] overflow-hidden border border-slate-200/60 shadow-sm">
                                     <iframe
-                                        src="https://maps.google.com/maps?q=Horizon%20by%20Techinvention%20Lifecare,%20EL-125,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Thane,%20Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                        src="https://maps.google.com/maps?q=Horizon%20by%20Techinvention%20Lifecare,%20EL-125,%20Mahape%20MIDC%20Electric%20Zone,%20MIDC%20Industrial%20Area,%20Mahape%20Village,%20Navi%20Mumbai,%20Maharashtra%20400710&t=&z=16&ie=UTF8&iwloc=&output=embed"
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0, display: 'block' }}
@@ -354,7 +354,7 @@ const ContactSection = () => {
                                         <span>{t('contact.locations.horizonTitle') || "R&D Centre (HORIZON)"}</span>
                                     </h5>
                                     <p className="text-[#1955A6] text-[13px] leading-relaxed font-medium max-w-md">
-                                        {t('contact.locations.horizonAddress') || t('contact.locations.rnd.address') || "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"}
+                                        {t('contact.locations.horizonAddress') || t('contact.locations.rnd.address') || "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"}
                                     </p>
                                 </div>
                             </div>

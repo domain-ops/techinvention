@@ -1011,9 +1011,9 @@ export const russian = {
             "title": "Адрес и расположение",
             "desc": "Посетите наш корпоративный офис или свяжитесь с нами для обсуждения партнерств, продуктовых запросов, стратегических проектов и институционального взаимодействия.",
             "gcmcTitle": "Корпоративный офис и производственная площадка (GCMC)",
-            "gcmcAddress": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra, 400710",
+            "gcmcAddress": "Plot No. EL-40, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710",
             "horizonTitle": "R&D-Центр (HORIZON)",
-            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Thane, Maharashtra"
+            "horizonAddress": "EL-125, Mahape MIDC Electric Zone, MIDC Industrial Area, Mahape Village, Navi Mumbai, Maharashtra, 400710"
         }
     },
     "awards": {
