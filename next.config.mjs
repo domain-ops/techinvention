@@ -108,20 +108,78 @@ const nextConfig = {
         },
       ] : [];
 
-      const bizRedirects = [
-        {
-          source: '/:path*',
+      const specificBizPages = [
+        'disclaimer',
+        'cdmo',
+        'rnd',
+        'terms-and-conditions',
+        'products',
+        'contact-us',
+        'about/csr-initiatives',
+        'about/awards-certifications',
+        'about',
+        'gmp-training',
+        'careers',
+        'consulting',
+      ];
+
+      // Exact 301 redirects for the client's mapped pages (both with and without trailing slash)
+      const bizPageRedirects = [];
+      specificBizPages.forEach((page) => {
+        bizPageRedirects.push({
+          source: `/${page}/`,
           has: [
             {
               type: 'host',
               value: '(?:www\\.)?techinvention\\.biz',
             },
           ],
-          destination: 'https://techinvention.com/:path*',
-          permanent: true,
+          destination: `https://techinvention.com/${page}/`,
+          statusCode: 301,
           basePath: false,
-        },
-      ];
+        });
+        bizPageRedirects.push({
+          source: `/${page}`,
+          has: [
+            {
+              type: 'host',
+              value: '(?:www\\.)?techinvention\\.biz',
+            },
+          ],
+          destination: `https://techinvention.com/${page}/`,
+          statusCode: 301,
+          basePath: false,
+        });
+      });
+
+      const bizRootRedirect = {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: '(?:www\\.)?techinvention\\.biz',
+          },
+        ],
+        destination: 'https://techinvention.com/',
+        statusCode: 301,
+        basePath: false,
+      };
+
+      // Catch-all 301 redirect for any other techinvention.biz path
+      const bizCatchAllRedirect = {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: '(?:www\\.)?techinvention\\.biz',
+          },
+        ],
+        destination: 'https://techinvention.com/:path*/',
+        statusCode: 301,
+        basePath: false,
+      };
+
+      const bizRedirects = [...bizPageRedirects, bizRootRedirect, bizCatchAllRedirect];
 
       return [...devRedirects, ...bizRedirects];
     }

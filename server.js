@@ -14,7 +14,12 @@ app.prepare().then(() => {
     const host = (Array.isArray(rawHost) ? rawHost[0] : rawHost).split(':')[0].toLowerCase();
 
     if (host === 'techinvention.biz' || host === 'www.techinvention.biz') {
-      const targetUrl = `https://techinvention.com${req.url || '/'}`;
+      let targetPath = req.url || '/';
+      const [pathWithoutQuery, queryString] = targetPath.split('?');
+      if (!pathWithoutQuery.includes('.') && !pathWithoutQuery.endsWith('/')) {
+        targetPath = `${pathWithoutQuery}/${queryString ? `?${queryString}` : ''}`;
+      }
+      const targetUrl = `https://techinvention.com${targetPath}`;
       res.writeHead(301, {
         Location: targetUrl,
       });
