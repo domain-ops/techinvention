@@ -9,6 +9,19 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   createServer((req, res) => {
+    // 301 Redirect all traffic from techinvention.biz to techinvention.com
+    const rawHost = req.headers['x-forwarded-host'] || req.headers.host || '';
+    const host = (Array.isArray(rawHost) ? rawHost[0] : rawHost).split(':')[0].toLowerCase();
+
+    if (host === 'techinvention.biz' || host === 'www.techinvention.biz') {
+      const targetUrl = `https://techinvention.com${req.url || '/'}`;
+      res.writeHead(301, {
+        Location: targetUrl,
+      });
+      res.end();
+      return;
+    }
+
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
   }).listen(port, (err) => {

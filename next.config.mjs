@@ -72,10 +72,10 @@ const nextConfig = {
     return config;
   },
 
-  // Only redirect from root '/' to '/techinvention/' in development
-  ...(process.env.NODE_ENV === 'development' ? {
+  // Redirects configuration
+  ...(process.env.STATIC_EXPORT !== 'true' ? {
     async redirects() {
-      return [
+      const devRedirects = process.env.NODE_ENV === 'development' ? [
         {
           source: '/',
           destination: '/techinvention/',
@@ -106,7 +106,24 @@ const nextConfig = {
           basePath: false,
           permanent: false,
         },
+      ] : [];
+
+      const bizRedirects = [
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: '(?:www\\.)?techinvention\\.biz',
+            },
+          ],
+          destination: 'https://techinvention.com/:path*',
+          permanent: true,
+          basePath: false,
+        },
       ];
+
+      return [...devRedirects, ...bizRedirects];
     }
   } : {})
 };
