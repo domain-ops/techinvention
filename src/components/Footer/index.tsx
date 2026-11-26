@@ -48,9 +48,31 @@ const Footer = () => {
                                 className="h-16 w-auto object-contain"
                             />
                         </div>
-                        <p className="text-black text-[13px] 2xl:text-[14px] font-semibold tracking-wide leading-relaxed max-w-xs">
+                        <p className="text-black text-[13px] 2xl:text-[14px] font-semibold tracking-wide leading-relaxed max-w-xs mb-6">
                             {t('footer.desc')}
                         </p>
+
+                        {/* D&B D-U-N-S Registered Trust Seal */}
+                        <div className="pt-4 border-t border-brand-gray-light/10">
+                            {/* D&B Trust Seal Script as per D&B integration guidelines */}
+                            <script src="https://dunsregistered.dnb.com" type="text/javascript" async />
+                            <div className="w-[114px] h-[97px] overflow-hidden">
+                                <iframe
+                                    id="Iframe1"
+                                    src="https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=1"
+                                    width="114px"
+                                    height="97px"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    allowTransparency={true}
+                                    title="D&B D-U-N-S Registered Seal"
+                                    className="border-0 overflow-hidden"
+                                />
+                            </div>
+                            <p className="text-[11px] text-brand-gray-light font-semibold tracking-wider mt-1">
+                                D-U-N-S® 860394435
+                            </p>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12 md:w-3/4">
