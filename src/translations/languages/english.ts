@@ -503,7 +503,7 @@ export const english = {
         "title": "High-Impact Projects"
     },
     "horizon": {
-        "title": "High-impact One Health Research & Innovation ZONe (HORIZON)",
+        "title": "Vaccine Development and R&D at HORIZON, Our BSL-2 Pilot-GMP Facility",
         "subtitle": "Research & Development (R&D)",
         "desc": "TechInvention's state-of-the-art R&D facility, the High-impact One Health Research & Innovation ZONe (HORIZON), is designed to accelerate vaccine innovation by supporting end-to-end research from proof-of-concept development through preclinical advancement for priority infectious diseases and antimicrobial resistance (AMR)-associated pathogens.",
         "gcmcTitle": "Global Collaborative Centre for Medical Countermeasures (GCMC)",
@@ -1200,7 +1200,7 @@ export const english = {
     },
     "strategicAdvisory": {
         "tag": "Strategic Technical Advisory",
-        "title": "Strategic Advisory & Tech Consulting",
+        "title": "Biopharma Consulting and GMP Facility Design Consultants",
         "intro": "Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution.",
         "sections": [
             {
@@ -1325,6 +1325,7 @@ export const english = {
         ]
     },
     "cdmo": {
+        "tag": "Vaccine Biopharma and Pharmaceutical CDMO Manufacturing",
         "title": "Global Collaborative Centre for Medical Countermeasures (GCMC)",
         "subtitle": "Integrated Full-Cycle Vaccine Development & Manufacturing Facility",
         "description": "TechInvention's Global Collaborative Centre for Medical Countermeasures (GCMC) is an Integrated Full-Cycle Vaccine Development & Manufacturing Facility designed to accelerate the journey from scientific discovery to global health impact.\n\nDeveloped in alignment with international GMP standards, GCMC brings together vaccine process development, manufacturing scale-up, technology transfer, analytical testing, quality systems, regulatory support, drug product manufacturing, digital innovation, and sustainable infrastructure within one integrated facility.",

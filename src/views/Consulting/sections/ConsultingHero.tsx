@@ -20,8 +20,8 @@ export default function ConsultingHero() {
                 {/* Text Section - Stacked at the top */}
                 <div className="w-full text-left mb-12 lg:mb-16">
                     <ScrollReveal direction="up">
-                        <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] lg:whitespace-nowrap font-medium tracking-wide mb-6 leading-[1.15]">
-                            <SplitTitle title={t('strategicAdvisory.title') || "Strategic Advisory & Tech Consulting"} />
+                        <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] font-medium tracking-wide mb-6 leading-[1.15]">
+                            <SplitTitle title={t('strategicAdvisory.title') || "Biopharma Consulting and GMP Facility Design Consultants"} />
                         </h1>
                         <h2 className="text-xl md:text-[24px] font-normal text-slate-800 leading-snug mb-4 w-full">
                             {t('strategicAdvisory.intro') || "Building resilient healthcare and biomanufacturing ecosystems through strategy, science and execution."}
